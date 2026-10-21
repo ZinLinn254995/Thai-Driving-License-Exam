@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thai Driving Test Practice · EN + မြန်မာ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ea;--sf:#fff;--tx:#1d2420;--mu:#5d675f;--gr:#0b5d3b;--gr2:#dff1e6;--rd:#b3261e;--rd2:#fbe3e0;--ye:#f2b705;--bd:#d9d6cb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181a;--sf:#1e2427;--tx:#eef1ee;--mu:#a2ada5;--gr:#4cc38a;--gr2:#173a2a;--rd:#ff8a80;--rd2:#3d1f1d;--bd:#34403a}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:16px/1.45 "Noto Sans",system-ui,sans-serif;min-height:100%}
+.my{font-family:"Noto Sans Myanmar","Padauk","Myanmar Text",sans-serif;color:var(--mu);font-size:.92em;line-height:1.7}
+main{max-width:620px;margin:0 auto;padding:14px 14px 40px}
+.sign{background:#0b5d3b;color:#fff;border-radius:14px;padding:18px;border:3px solid #fff;outline:3px solid #0b5d3b}
+.sign h1{margin:0 0 4px;font-size:1.5rem}.sign .my{color:#cfe9da}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-top:14px}
+button{font:inherit;cursor:pointer}
+.go{width:100%;margin-top:16px;padding:14px;border:0;border-radius:12px;background:var(--ye);color:#1d2420;font-weight:700}
+.go:focus-visible,.opt:focus-visible{outline:3px solid var(--tx);outline-offset:2px}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--gr);transition:width .3s}
+.top{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:8px}
+.q{font-size:1.15rem;font-weight:600;margin:14px 0 2px}
+.opt{display:block;width:100%;text-align:left;margin-top:10px;padding:12px 14px;border:2px solid var(--bd);border-radius:12px;background:var(--sf);color:var(--tx)}
+.opt b{display:inline-block;width:1.6em;color:var(--mu)}
+.opt.ok{border-color:var(--gr);background:var(--gr2)}.opt.no{border-color:var(--rd);background:var(--rd2)}
+.opt:disabled{cursor:default}
+.res{margin-top:14px;padding:12px 14px;border-radius:12px;font-weight:600}
+.res.ok{background:var(--gr2);color:var(--gr)}.res.no{background:var(--rd2);color:var(--rd)}
+.res .my{color:inherit;font-weight:400}
+.score{font-size:3rem;font-weight:700;line-height:1}
+.rv{border-top:1px solid var(--bd);padding:12px 0}
+.mute{color:var(--mu);font-size:.85rem;margin-top:16px}
+</style></head><body><main id="app"></main>
+<script>
+// ---- Question bank (correct answer listed first, options are shuffled at run time) ----
+const MM="၀၁၂၃၄၅၆၇၈၉",mm=n=>String(n).replace(/\d/g,d=>MM[d]);
+const Q=(en,my,c,w)=>({en,my,o:[c,...w]});
+const D=(en,my,c,w,ue,um)=>Q(en,my,[c+" "+ue,mm(c)+" "+um],w.map(x=>[x+" "+ue,mm(x)+" "+um]));
+const Y=["Yes","မောင်းနိုင်ပါသည်"],N=["Not advisable","မမောင်းသင့်ပါ"],P=["Private vehicles only","ကိုယ်ပိုင်ယာဉ်သာ"],U=["Public vehicles only","အများသုံးယာဉ်သာ"];
+const M=(en,my,yes)=>{const c=yes?Y:N;return Q(en,my,c,[Y,N,P,U].filter(x=>x!==c))};
+const day=["days","ရက်"],kmh=["km/h","ကီလိုမီတာ/နာရီ"],m=["metres","မီတာ"],yr=["years","နှစ်"];
+const BANK=[
+D("If a driving licence is damaged or lost, within how many days must you apply for a replacement?","ယာဉ်မောင်းလိုင်စင် ပျက်စီး/ပျောက်ဆုံးလျှင် ဘယ်နှစ်ရက်အတွင်း အစားထိုးလျှောက်ရမည်နည်း။",15,[7,20,30],...day),
+D("In Bangkok, Pattaya or a municipality, what is the maximum speed for a private car?","ဘန်ကောက်၊ ပတ္တရာ သို့မဟုတ် မြူနီစီပယ်နယ်မြေအတွင်း ကိုယ်ပိုင်ကား၏ အမြင့်ဆုံးအမြန်နှုန်းမှာ ဘယ်လောက်နည်း။",60,[80,90,100],...kmh),
+D("Outside Bangkok, Pattaya or a municipality, what is the maximum speed for a private car?","ဘန်ကောက်၊ ပတ္တရာ၊ မြူနီစီပယ်နယ်မြေပြင်ပတွင် ကိုယ်ပိုင်ကား၏ အမြင့်ဆုံးအမြန်နှုန်းမှာ ဘယ်လောက်နည်း။",90,[80,100,120],...kmh),
+D("After receiving a traffic ticket, within how many days must the fine be paid?","လမ်းသွားလမ်းလာ ဥပဒေချိုးဖောက်ပြီး ပြစ်ဒဏ်စာရလျှင် ဘယ်နှစ်ရက်အတွင်း ဒဏ်ကြေးပေးရမည်နည်း။",15,[7,10,30],...day),
+D("Within how many days must you notify the registrar when moving a vehicle's location?","ယာဉ်ထားရှိရာနေရာ ပြောင်းလျှင် မှတ်ပုံတင်အရာရှိထံ ဘယ်နှစ်ရက်အတွင်း အကြောင်းကြားရမည်နည်း။",15,[20,25,30],...day),
+D("Within how many days must you notify the registrar after changing a vehicle's colour?","ယာဉ်အရောင်ပြောင်းလျှင် မှတ်ပုံတင်အရာရှိထံ ဘယ်နှစ်ရက်အတွင်း အကြောင်းကြားရမည်နည်း။",15,[7,10,20],...day),
+D("Within how many days must a vehicle ownership transfer be reported to the registrar?","ယာဉ်ပိုင်ဆိုင်မှု လွှဲပြောင်းလျှင် မှတ်ပုံတင်အရာရှိထံ ဘယ်နှစ်ရက်အတွင်း အကြောင်းကြားရမည်နည်း။",15,[20,30,45],...day),
+D("When parking, the vehicle must be no more than how far from the kerb?","ယာဉ်ရပ်နားရာတွင် လမ်းဘေးကွေ့မှ အများဆုံး ဘယ်လောက်ဝေးရမည်နည်း။",25,[30,35,40],"cm","စင်တီမီတာ"),
+D("A motorcycle must pass a vehicle inspection before annual tax once it reaches what age?","မော်တော်ဆိုင်ကယ်သည် ဘယ်နှစ်နှစ်ပြည့်လျှင် နှစ်စဉ်အခွန်မပေးမီ စစ်ဆေးမှုခံရမည်နည်း။",5,[1,2,3],...yr),
+D("A car must pass a vehicle inspection before annual tax once it reaches what age?","ကားသည် ဘယ်နှစ်နှစ်ပြည့်လျှင် နှစ်စဉ်အခွန်မပေးမီ စစ်ဆေးမှုခံရမည်နည်း။",7,[3,5,6],...yr),
+D("How many years is a temporary driving licence valid?","ယာယီယာဉ်မောင်းလိုင်စင်သည် ဘယ်နှစ်နှစ် သက်တမ်းရှိသနည်း။",2,[1,3,4],...yr),
+D("Headlights and rear lights must be visible to other drivers from at least how far?","ရှေ့မီးနှင့် နောက်မီးကို အခြားယာဉ်မောင်းများ အနည်းဆုံး ဘယ်လောက်အကွာမှ မြင်ရမည်နည်း။",150,[60,100,120],...m),
+D("Overtaking is forbidden when fog, dust, rain or smoke limits visibility ahead to less than…","မြူ၊ ဖုန်မှုန့်၊ မိုး သို့မဟုတ် မီးခိုးကြောင့် ရှေ့သို့ မည်မျှအောက် မြင်ရလျှင် ကျော်တက်ခြင်း မလုပ်ရ။",60,[70,80,90],...m),
+D("To turn left, you must be in the left lane at least how far before the turn?","ဘယ်ဘက်ကွေ့ရန် ကွေ့မည့်နေရာမတိုင်မီ အနည်းဆုံး ဘယ်လောက်ကတည်းက ဘယ်ဘက်လမ်းကြောတွင် ရှိနေရမည်နည်း။",30,[15,20,25],...m),
+D("What is the legal limit for breath alcohol level for a driver?","ယာဉ်မောင်းသူ၏ အသက်ရှူထုတ်လေထဲရှိ အရက်ပမာဏ ကန့်သတ်ချက်မှာ အများဆုံး ဘယ်လောက်နည်း။",50,[60,70,80],"mg%","မီလီဂရမ်ရာခိုင်နှုန်း"),
+Q("What is the surcharge for not paying annual vehicle tax on time?","နှစ်စဉ်ယာဉ်အခွန်ကို အချိန်မီမပေးလျှင် ထပ်ဆောင်းကြေးမှာ ဘယ်လောက်နည်း။",["1% per month","တစ်လလျှင် ၁ ရာခိုင်နှုန်း"],[["10% per month","တစ်လလျှင် ၁၀ ရာခိုင်နှုန်း"],["20% per year","တစ်နှစ်လျှင် ၂၀ ရာခိုင်နှုန်း"],["1% per year","တစ်နှစ်လျှင် ၁ ရာခိုင်နှုန်း"]]),
+Q("Who is exempt from wearing a helmet as a motorcycle passenger?","မော်တော်ဆိုင်ကယ်စီးနင်းသူများအနက် ဦးထုပ်ဆောင်းရန် ကင်းလွတ်ခွင့်ရသူမှာ အဘယ်သူနည်း။",["Monks and novices","ဘုန်းကြီးနှင့် သာမဏေများ"],[["Any passenger","ခရီးသည်မည်သူမဆို"],["Children","ကလေးများ"],["The rider","ယာဉ်မောင်းသူ"]]),
+Q("While driving, which document must you carry together with your licence?","မောင်းနေစဉ် လိုင်စင်နှင့်အတူ ဆောင်ထားရမည့်စာရွက်စာတမ်းမှာ အဘယ်နည်း။",["A copy of the vehicle registration book","ယာဉ်မှတ်ပုံတင်စာအုပ်၏ မိတ္တူ"],[["ID card","မှတ်ပုံတင်ကတ်"],["Social security card","လူမှုဖူလုံရေးကတ်"],["House registration copy","အိမ်ထောင်စုစာရင်း မိတ္တူ"]]),
+Q("How must you stop at an intersection?","လမ်းဆုံတွင် ရပ်ရလျှင် မည်သို့ ရပ်ရမည်နည်း။",["Stop behind the stop line","ရပ်တန့်မျဉ်း၏ နောက်တွင် ရပ်ရမည်"],[["Stop on the stop line","ရပ်တန့်မျဉ်းပေါ်တွင် ရပ်ရမည်"],["Stop past the stop line","ရပ်တန့်မျဉ်းကို ကျော်၍ ရပ်ရမည်"],["Stop past the stop sign","ရပ်တန့်ဆိုင်းဘုတ်ကို ကျော်၍ ရပ်ရမည်"]]),
+Q("How far behind the vehicle ahead must you drive?","ရှေ့ယာဉ်နှင့် ဘယ်လောက်ခြားပြီး မောင်းရမည်နည်း။",["A distance that lets you stop safely","လုံခြုံစွာ ရပ်နိုင်သည့် အကွာအဝေး"],[["At least 3 metres","အနည်းဆုံး ၃ မီတာ"],["At least 2 metres","အနည်းဆုံး ၂ မီတာ"],["At least 1 metre","အနည်းဆုံး ၁ မီတာ"]]),
+Q("Where is overtaking allowed?","ကျော်တက်ခြင်းကို မည်သည့်နေရာတွင် ခွင့်ပြုသနည်း။",["Where road markings permit overtaking","ကျော်တက်ခွင့်ပြုသည့် လမ်းမျဉ်းအမှတ်အသားရှိသည့်နေရာ"],[["At a junction","လမ်းဆုံတွင်"],["On a one-way bridge","တစ်လမ်းသွားတံတားပေါ်တွင်"],["On a sharp narrow bend","ကွေ့ကောက်ကျဉ်းမြောင်းသည့်နေရာတွင်"]]),
+Q("A U-turn is prohibited at a junction, but a traffic officer allows it. What do you do?","လမ်းဆုံတွင် ပြန်လှည့်ခြင်းကို တားမြစ်ထားသော်လည်း ယာဉ်ထိန်းအရာရှိက ခွင့်ပြုလျှင် မည်သို့လုပ်ရမည်နည်း။",["U-turn as the officer directs","အရာရှိ၏ ညွှန်ကြားချက်အတိုင်း ပြန်လှည့်နိုင်သည်"],[["You may not U-turn","ပြန်လှည့်၍မရ"],["Only if it is not a junction","လမ်းဆုံမဟုတ်မှသာ ရသည်"],["Only if no prohibition sign","တားမြစ်ဆိုင်းဘုတ်မရှိမှသာ ရသည်"]]),
+Q("When carrying a load, what is correct?","ကုန်တင်ဆောင်ရာတွင် မည်သည်မှာ မှန်ကန်သနည်း။",["It may extend beyond the rear by at most 2.50 m","နောက်ဘက်သို့ အများဆုံး ၂.၅၀ မီတာအထိ ထွက်နိုင်သည်"],[["Height over 5 m measured from the load","ကုန်ပစ္စည်းမှတိုင်းပြီး ၅ မီတာကျော်မြင့်နိုင်သည်"],["1 m wider than the vehicle on each side","ယာဉ်ထက် တစ်ဖက်စီ ၁ မီတာပိုကျယ်နိုင်သည်"],["It may extend beyond the front by 2.50 m","ရှေ့ဘက်သို့ ၂.၅၀ မီတာထွက်နိုင်သည်"]]),
+Q("What must a slow-moving vehicle do?","အမြန်နှုန်းနိမ့်သော ယာဉ်သည် မည်သို့ မောင်းရမည်နည်း။",["Keep to the left edge of the road","လမ်း၏ ဘယ်ဘက်ကမ်းစပ်ကို ကပ်၍ မောင်းရမည်"],[["Drive on the shoulder","လမ်းပခုံးပေါ်တွင် မောင်းရမည်"],["Drive on either left or right","ဘယ်/ညာ မည်သည့်ဘက်မဆို မောင်းနိုင်သည်"],["Keep to the right edge","ညာဘက်ကမ်းစပ်ကို ကပ်၍ မောင်းရမည်"]]),
+Q("The traffic light turns yellow. What should you do?","မီးပွိုင့်မီး အဝါရောင်ပြောင်းလာလျှင် မည်သို့လုပ်ရမည်နည်း။",["Brake gently to warn followers and prepare to stop","နောက်ယာဉ်များကို သတိပေးရန် ဖြည်းဖြည်းဘရိတ်နင်းပြီး ရပ်ရန်ပြင်ဆင်ရမည်"],[["Speed up and drive through","အရှိန်မြှင့်၍ ဖြတ်မောင်းမည်"],["Brake hard and stop at once","ဘရိတ်ကို အပြင်းနင်း၍ ချက်ချင်းရပ်မည်"],["Honk and drive through","ဟွန်းတီး၍ ဖြတ်မောင်းမည်"]]),
+Q("Who is exempt from wearing a seat belt?","ခါးပတ်တပ်ရန် ကင်းလွတ်ခွင့်ရသူမှာ အဘယ်သူနည်း။",["Someone with a medical exemption","ဆေးဘက်ဆိုင်ရာအကြောင်းပြချက်ဖြင့် ကင်းလွတ်ခွင့်ရသူ"],[["Children under 14","အသက် ၁၄ နှစ်အောက် ကလေးများ"],["Anyone in the back seat","နောက်ခန်းထိုင်သူမည်သူမဆို"],["Children under 1.50 m tall","အမြင့် ၁.၅၀ မီတာအောက် ကလေးများ"]]),
+Q("Which overtaking should a driver NOT do?","မည်သည့်ကျော်တက်ခြင်းကို မလုပ်သင့်သနည်း။",["Overtaking across a solid line","မျဉ်းဆက်ကို ဖြတ်ကျော်၍ ကျော်တက်ခြင်း"],[["Overtaking a big truck when safe","လုံခြုံလျှင် ထရပ်ကားကြီးကို ကျော်တက်ခြင်း"],["Overtaking over a dashed line when safe","လုံခြုံလျှင် မျဉ်းပြတ်ပေါ်တွင် ကျော်တက်ခြင်း"],["Overtaking on the left when the car ahead turns right","ရှေ့ကားညာကွေ့လျှင် ဘယ်ဘက်မှ ကျော်တက်ခြင်း"]]),
+Q("What causes the most road accidents?","လမ်းမတော်တဆမှုများ အများဆုံးဖြစ်စေသည့်အကြောင်းရင်းမှာ အဘယ်နည်း။",["Driving over the legal speed limit","ဥပဒေကန့်သတ်အမြန်နှုန်းထက် ပိုမောင်းခြင်း"],[["Tailgating","ရှေ့ကားကို ကပ်မောင်းခြင်း"],["Overtaking where prohibited","တားမြစ်နေရာတွင် ကျော်တက်ခြင်း"],["Cutting in closely","အနီးကပ် ဖြတ်ဝင်ခြင်း"]]),
+Q("A 13-year-old passenger rides with a parent. Who is responsible for checking the seat belt is fastened?","အသက် ၁၃ နှစ်ကလေးသည် မိဘနှင့်အတူစီးနင်းလျှင် ခါးပတ်တပ်ထားခြင်း ရှိမရှိ စစ်ဆေးရန် တာဝန်ရှိသူမှာ အဘယ်သူနည်း။",["The driver","ယာဉ်မောင်းသူ"],[["The child","ကလေးကိုယ်တိုင်"],["The parent","မိဘ"],["The front passenger","ရှေ့ခန်းခရီးသည်"]]),
+Q("Can a person with diabetes drive?","ဆီးချိုရောဂါရှိသူ မောင်းနိုင်ပါသလား။",["Yes, if no risk of fainting or losing control","ရပါသည်၊ သတိလစ်ခြင်း/ထိန်းချုပ်မှုဆုံးရှုံးခြင်း အန္တရာယ်မရှိလျှင်"],[["Only after stopping all medication","ဆေးအားလုံးရပ်ပြီးမှသာ"],["Not advisable","မမောင်းသင့်ပါ"],["None of the above","အထက်ပါတို့ မမှန်ပါ"]]),
+Q("Can a person with an irregular heartbeat drive?","နှလုံးခုန်ချက်မမှန်သူ မောင်းနိုင်ပါသလား။",["Yes, if no symptoms affect vehicle control","ရပါသည်၊ ယာဉ်ထိန်းချုပ်မှုကို ထိခိုက်စေသည့်လက္ခဏာမရှိလျှင်"],[["Not advisable","မမောင်းသင့်ပါ"],["Private vehicles only","ကိုယ်ပိုင်ယာဉ်သာ"],["Public vehicles only","အများသုံးယာဉ်သာ"]]),
+Q("Can a person who lost their right arm drive?","ညာလက်မရှိသူ မောင်းနိုင်ပါသလား။",["Yes, but must show good control to an officer","ရပါသည်၊ သို့သော် အရာရှိအား ကောင်းစွာထိန်းချုပ်နိုင်ကြောင်း ပြသရမည်"],[["Never","လုံးဝမရ"],["Yes, in all cases","မည်သည့်အခြေအနေတွင်မဆို ရသည်"],["Private vehicles only","ကိုယ်ပိုင်ယာဉ်သာ"]]),
+M("Can a person with high blood pressure who is taking medication drive?","သွေးတိုးရောဂါရှိ၍ ဆေးသောက်နေသူ မောင်းနိုင်ပါသလား။",1),
+M("Can a person whose vision problem is corrected with glasses drive?","မျက်မှန်တပ်၍ မျက်စိအားကောင်းသွားသူ မောင်းနိုင်ပါသလား။",1),
+M("Can a person who lost one eye but has normal vision (confirmed by an eye doctor) drive?","မျက်စိတစ်ဖက်ဆုံးရှုံးသော်လည်း မျက်စိဆရာဝန်က အမြင်ပုံမှန်ဟု အတည်ပြုထားသူ မောင်းနိုင်ပါသလား။",1),
+M("Can a person with abnormal vision in one eye but normal vision in the other drive?","မျက်စိတစ်ဖက်အမြင်ချို့ယွင်း၍ တစ်ဖက်ပုံမှန်သူ မောင်းနိုင်ပါသလား။",1),
+M("Can a person who is mute drive?","စကားမပြောနိုင်သူ (ဆွံ့အသူ) မောင်းနိုင်ပါသလား။",1),
+M("Can a person who is both mute and deaf drive?","ဆွံ့အပြီး နားမကြားသူ မောင်းနိုင်ပါသလား။",1),
+M("Should a person with epilepsy drive?","ဝက်ရူးပြန်ရောဂါရှိသူ မောင်းနိုင်ပါသလား။",0),
+M("Should a person with muscle weakness disease drive?","ကြွက်သားအားနည်းရောဂါရှိသူ မောင်းနိုင်ပါသလား။",0),
+M("Should someone taking sleeping pills or anti-anxiety drugs drive?","အိပ်ဆေးသို့မဟုတ် စိတ်ပူပန်မှုလျှော့ဆေးသောက်ထားသူ မောင်းသင့်ပါသလား။",0),
+M("Should a person with narrowed coronary arteries drive?","နှလုံးသွေးကြောကျဉ်းရောဂါရှိသူ မောင်းသင့်ပါသလား။",0),
+M("Should a person with Parkinson's disease (hand tremor) drive?","ပါကင်ဆင်ရောဂါ (လက်တုန်) ရှိသူ မောင်းသင့်ပါသလား။",0),
+M("Should a person with a brain tumour drive?","ဦးနှောက်ကင်ဆာရှိသူ မောင်းသင့်ပါသလား။",0),
+M("Should a person with chest pain suspected to be heart-related drive?","နှလုံးကြောင့်ဟု သံသယရှိသည့် ရင်ဘတ်နာကျင်မှုရှိသူ မောင်းသင့်ပါသလား။",0)
+];
+// ---- App ----
+const $=document.getElementById("app"),L="ABCD",PASS=.9;
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const bi=(p,c="")=>`<div>${p[0]}</div><div class="my">${p[1]}</div>`;
+let qs,i,score,log;
+function home(){$.innerHTML=`<div class="sign"><h1>Thai Driving Test Practice</h1><div class="my">ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲ လေ့ကျင့်ရန်</div></div>
+<div class="card"><p><b>${Math.min(50,BANK.length)} random questions</b> from ${BANK.length} in the bank. After each answer you see right or wrong and the correct answer straight away.</p><p class="my">မေးခွန်းအားလုံးမှ ကျပန်း ${mm(Math.min(50,BANK.length))} ခု။ တစ်ခုဖြေတိုင်း မှန်/မှားနှင့် အဖြေမှန်ကို ချက်ချင်းပြမည်။</p>
+<button class="go" id="s">Start · စတင်မည်</button></div>
+<p class="mute">Unofficial practice tool, not affiliated with the Department of Land Transport. Questions adapted from thaidriveexam.com (text-only questions). Translations are study aids; Thai law and the real exam prevail.</p>`;
+document.getElementById("s").onclick=start}
+function start(){qs=sh(BANK).slice(0,50).map(q=>({...q,o:sh(q.o.map((p,k)=>({p,ok:!k})))}));i=0;score=0;log=[];show()}
+function show(){const q=qs[i],pc=i/qs.length*100;
+$.innerHTML=`<div class="card" style="margin-top:0"><div class="top"><span>Question ${i+1} / ${qs.length} · <span class="my">မေးခွန်း ${mm(i+1)}</span></span><span>Score ${score} · <span class="my">ရမှတ် ${mm(score)}</span></span></div><div class="bar"><i style="width:${pc}%"></i></div>
+<div class="q">${q.en}</div><div class="my">${q.my}</div><div id="os">${q.o.map((x,k)=>`<button class="opt" data-k="${k}"><b>${L[k]}</b>${bi(x.p).replace("<div>","<span style='display:inline-block;vertical-align:top;width:calc(100% - 2em)'><div>").replace(/<\/div>$/,"</div></span>")}</button>`).join("")}</div><div id="r"></div></div>`;
+$.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(+b.dataset.k))}
+function pick(k){const q=qs[i],good=q.o[k].ok;if(good)score++;log.push({q,k,good});
+$.querySelectorAll(".opt").forEach((b,n)=>{b.disabled=true;if(q.o[n].ok)b.classList.add("ok");else if(n==k)b.classList.add("no")});
+const c=q.o.findIndex(x=>x.ok);
+document.getElementById("r").innerHTML=`<div class="res ${good?"ok":"no"}" role="status">${good?"✔ Correct!":"✘ Wrong."}<div class="my">${good?"မှန်ပါသည်!":"မှားပါသည်။"}</div>${good?"":`<div style="margin-top:6px;font-weight:400">Correct answer: <b>${L[c]}. ${q.o[c].p[0]}</b></div><div class="my">အဖြေမှန်: ${L[c]}. ${q.o[c].p[1]}</div>`}</div>
+<button class="go" id="n">${i+1<qs.length?"Next · ဆက်သွားမည်":"See result · ရလဒ်ကြည့်မည်"}</button>`;
+const n=document.getElementById("n");n.focus();n.onclick=()=>{i++;i<qs.length?show():end()}}
+function end(){const t=qs.length,pct=Math.round(score/t*100),ps=score/t>=PASS,bad=log.filter(l=>!l.good);
+$.innerHTML=`<div class="sign"><div class="my">ရမှတ်</div><div class="score">${score} / ${t}</div><div>${pct}% · ${ps?"Passed (90%+)":"Not passed yet (90% needed)"}</div><div class="my">${ps?"အောင်မြင်သည်":"မအောင်သေးပါ (၉၀% လိုသည်)"}</div></div>
+<div class="card"><b>Review mistakes · မှားသောမေးခွန်းများ (${bad.length})</b>${bad.map(l=>{const c=l.q.o.find(x=>x.ok).p;return`<div class="rv"><div>${l.q.en}</div><div class="my">${l.q.my}</div><div style="color:var(--gr);margin-top:6px">✔ ${c[0]}</div><div class="my">${c[1]}</div><div style="color:var(--rd);margin-top:4px">✘ ${l.q.o[l.k].p[0]}</div></div>`}).join("")||"<p>Perfect score! · အမှတ်အပြည့်!</p>"}</div>
+<button class="go" id="a">Try again · ထပ်ဖြေမည်</button>`;
+document.getElementById("a").onclick=start;scrollTo(0,0)}
+home();
+</script></body></html>

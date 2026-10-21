@@ -1,0 +1,82 @@
+import { GoogleGenAI } from '@google/genai';
+import fs from 'fs';
+
+const ai = new GoogleGenAI();
+const qs = JSON.parse(fs.readFileSync('questions_th.json', 'utf8'));
+
+// 1. Collect all 15 question texts
+const qTexts = Array.from(new Set(qs.map(q => q.q_th)));
+
+// 2. Collect all unique option texts
+const optTexts = Array.from(new Set(qs.flatMap(q => q.options.map(o => o.th))));
+
+console.log(`Unique questions: ${qTexts.length}`);
+console.log(`Unique options: ${optTexts.length}`);
+
+// We can pre-translate the 15 questions directly
+const questionMap = {
+  "จากภาพเส้นแบ่งช่องทางบนพื้นถนน หมายความว่าอย่างไร": {
+    en: "From the image, what does the lane dividing line on the road surface mean?",
+    my: "ပုံပါ လမ်းမျက်နှာပြင်ပေါ်ရှိ ယာဉ်ကြောခွဲမျဉ်းအမှတ်အသားသည် မည်သို့ဆိုလိုသနည်း။"
+  },
+  "เมื่อพบเครื่องหมายนี้ ผู้ขับขี่ต้องปฏิบัติอย่างไร": {
+    en: "When encountering this sign, what must the driver do?",
+    my: "ဤဆိုင်းဘုတ်အမှတ်အသားကို တွေ့ရှိပါက ယာဉ်မောင်းသူ မည်သို့လိုက်နာဆောင်ရွက်ရမည်နည်း။"
+  },
+  "เมื่อพบเครื่องหมายนี้ ผู้ขับขี่ควรปฏิบัติอย่างไร": {
+    en: "When encountering this sign, what should the driver do?",
+    my: "ဤဆိုင်းဘုတ်အမှတ်အသားကို တွေ့ရှိပါက ယာဉ်မောင်းသူ မည်သို့ဆောင်ရွက်သင့်သနည်း။"
+  },
+  "เมื่อพบเครื่องหมายนี้ ผู้ขับขี่ควรปฏิบัติอย่างไร ?": {
+    en: "When encountering this sign, what should the driver do?",
+    my: "ဤဆိုင်းဘုတ်အမှတ်အသားကို တွေ့ရှိပါက ယာဉ်မောင်းသူ မည်သို့ဆောင်ရွက်သင့်သနည်း။"
+  },
+  "เครื่องหมายนี้ หมายความว่าอย่างไร": {
+    en: "What does this sign / marking mean?",
+    my: "ဤအမှတ်အသားသည် မည်သည့်အဓိပ္ပာယ်ကို ဆိုလိုသနည်း။"
+  },
+  "เครื่องหมายนี้หมายความว่าอะไร": {
+    en: "What does this sign / marking mean?",
+    my: "ဤအမှတ်အသားသည် မည်သည့်အဓိပ္ပာယ်နည်း။"
+  },
+  "เครื่องหมายนี้ หมายความอย่างไร": {
+    en: "What does this sign / marking mean?",
+    my: "ဤအမှတ်အသားသည် မည်သို့ဆိုလိုသနည်း။"
+  },
+  "เครื่องหมายขอบทางสีขาว-แดง หมายความว่าอะไร": {
+    en: "What does the red-and-white curb marking mean?",
+    my: "အနီ-အဖြူ လမ်းဘေးဘောင်အမှတ်အသားသည် မည်သည့်အဓိပ္ပာယ်နည်း။"
+  },
+  "เครื่องหมายนี้ (เส้นสีขาว) คือเครื่องหมายอะไร": {
+    en: "What is this marking (white line)?",
+    my: "ဤအမှတ်အသား (အဖြူရောင်မျဉ်း) သည် မည်သည့်အမှတ်အသားနည်း။"
+  },
+  "เครื่องหมายนี้ คือเครื่องหมายอะไร": {
+    en: "What sign is this?",
+    my: "ဤဆိုင်းဘုတ်သည် မည်သည့်ဆိုင်းဘုတ်အမျိုးအစားနည်း။"
+  },
+  "จากภาพผู้ขับขี่ต้องปฏิบัติอย่างไร": {
+    en: "From the image, what must the driver do?",
+    my: "ပုံအရ ယာဉ်မောင်းသူသည် မည်သို့လိုက်နာဆောင်ရွက်ရမည်နည်း။"
+  },
+  "เส้นทึบข้างทางแสดงว่าอะไร": {
+    en: "What does the solid edge line indicate?",
+    my: "လမ်းဘေးမျဉ်းဆက်သည် မည်သည်ကို ဖော်ပြသနည်း။"
+  },
+  "เมื่อต้องขับรถเข้าใกล้ทางรถไฟที่ไม่มีเครื่องกั้น ข้อใดต่อไปนี้กล่าวถูกต้อง": {
+    en: "When driving near an unguarded railway crossing, which of the following is correct?",
+    my: "အတားအဆီးမရှိသော မီးရထားလမ်းကူးအနီးသို့ မောင်းနှင်သည့်အခါ အောက်ပါတို့အနက် မည်သည်မှာ မှန်ကန်သနည်း။"
+  },
+  "เมื่อขับผ่านทางที่มีป้ายเตือนว่า “ระวังหินร่วง” ท่านควรปฏิบัติอย่างไร": {
+    en: "When driving past a warning sign that says 'Watch for Falling Rocks', what should you do?",
+    my: "'ကျောက်တုံးများ ပြုတ်ကျနိုင်သည်ကို သတိပြုရန်' သတိပေးဆိုင်းဘုတ်ရှိသော လမ်းကို ဖြတ်မောင်းသည့်အခါ မည်သို့ဆောင်ရွက်သင့်သနည်း။"
+  },
+  "เมื่อท่านขับรถมองเห็นเครื่องหมายบนพื้นทาง (เส้นชะลอความเร็ว Rumble Strips) ตามภาพ ท่านต้องปฏิบัติอย่างไร": {
+    en: "When you see the rumble strips marking on the road surface as shown in the picture, what must you do?",
+    my: "ပုံပါ လမ်းမျက်နှာပြင်ပေါ်ရှိ အရှိန်လျှော့တုန်ခါမျဉ်း (Rumble Strips) ကို မြင်တွေ့ရပါက သင်မည်သို့ ဆောင်ရွက်ရမည်နည်း။"
+  }
+};
+
+fs.writeFileSync('scripts/question_map.json', JSON.stringify(questionMap, null, 2));
+fs.writeFileSync('scripts/options_unique.json', JSON.stringify(optTexts, null, 2));
+console.log('Saved question_map.json and options_unique.json');

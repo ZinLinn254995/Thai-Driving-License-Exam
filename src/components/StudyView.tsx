@@ -1,0 +1,316 @@
+import React, { useState, useMemo } from 'react';
+import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers } from 'lucide-react';
+import { QuestionItem } from '../data/questions';
+import { LanguageMode, QuestionCategory } from '../types';
+import { toMyanmarNumber } from '../utils/helpers';
+
+interface StudyViewProps {
+  questions: QuestionItem[];
+  lang: LanguageMode;
+  bookmarkedIds: number[];
+  onToggleBookmark: (questionId: number) => void;
+  initialCategory?: string;
+}
+
+const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
+
+export const StudyView: React.FC<StudyViewProps> = ({
+  questions,
+  lang,
+  bookmarkedIds,
+  onToggleBookmark,
+  initialCategory
+}) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState<'all' | 'traffic_signs' | 'traffic_laws' | 'bookmarked'>(
+    (initialCategory as 'all' | 'traffic_signs' | 'traffic_laws') || 'all'
+  );
+
+  const signsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_signs').length, [questions]);
+  const lawsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_laws').length, [questions]);
+
+  const filteredQuestions = useMemo(() => {
+    let list = questions;
+
+    if (categoryFilter === 'traffic_signs') {
+      list = list.filter((q) => q.category === 'traffic_signs');
+    } else if (categoryFilter === 'traffic_laws') {
+      list = list.filter((q) => q.category === 'traffic_laws');
+    } else if (categoryFilter === 'bookmarked') {
+      list = list.filter((q) => bookmarkedIds.includes(q.id));
+    }
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      list = list.filter((item) => {
+        const matchesNum = String(item.id) === q || toMyanmarNumber(item.id) === q;
+        const matchesBurmese = item.q_my.toLowerCase().includes(q) || item.options.some((o) => o.my.toLowerCase().includes(q));
+        const matchesThai = item.q_th.toLowerCase().includes(q) || item.options.some((o) => o.th.toLowerCase().includes(q));
+        const matchesEnglish = item.q_en.toLowerCase().includes(q) || item.options.some((o) => o.en.toLowerCase().includes(q));
+        return matchesNum || matchesBurmese || matchesThai || matchesEnglish;
+      });
+    }
+
+    return list;
+  }, [questions, categoryFilter, bookmarkedIds, searchQuery]);
+
+  return (
+    <div className="max-w-3xl mx-auto space-y-5">
+      {/* Search & Filter Header Bar */}
+      <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs space-y-4">
+        <div>
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-myanmar">
+            မေးခွန်း ၁၉၁ ခုလုံး လေ့လာဖတ်ရှုရန်
+          </h2>
+          <p className="text-xs text-slate-500 font-myanmar">
+            Traffic Signs (၁၁၇ ခု) နှင့် Traffic Laws (၇၄ ခု) ၏ မေးခွန်းနှင့် အဖြေမှန်များ
+          </p>
+        </div>
+
+        {/* Filter Pills for Categories */}
+        <div className="flex items-center flex-wrap gap-1.5 bg-slate-100 p-1.5 rounded-xl text-xs font-semibold">
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('all')}
+            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
+              categoryFilter === 'all'
+                ? 'bg-white text-slate-900 shadow-xs'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Layers size={13} />
+            <span>အားလုံး ({questions.length})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('traffic_signs')}
+            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
+              categoryFilter === 'traffic_signs'
+                ? 'bg-white text-emerald-900 shadow-xs font-bold'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <ShieldCheck size={13} className="text-emerald-700" />
+            <span>Traffic Signs ({signsCount})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('traffic_laws')}
+            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
+              categoryFilter === 'traffic_laws'
+                ? 'bg-white text-blue-900 shadow-xs font-bold'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Scale size={13} className="text-blue-700" />
+            <span>Traffic Laws ({lawsCount})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('bookmarked')}
+            className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-colors ${
+              categoryFilter === 'bookmarked'
+                ? 'bg-white text-amber-900 shadow-xs font-bold'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Bookmark size={13} className={bookmarkedIds.length > 0 ? 'fill-current text-amber-500' : ''} />
+            <span>မှတ်သားထား ({bookmarkedIds.length})</span>
+          </button>
+        </div>
+
+        {/* Search Input */}
+        <div className="relative">
+          <Search size={17} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="မေးခွန်း၊ ဥပဒေ၊ နံပါတ် စသည်ဖြင့် ရှာဖွေပါ (Search in Thai, English, or Myanmar)..."
+            className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0b5d3b]/30 focus:border-[#0b5d3b] bg-slate-50/50"
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+            >
+              <X size={15} />
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Results Count */}
+      <div className="flex items-center justify-between text-xs font-semibold text-slate-600 px-1">
+        <span>
+          ရှာဖွေတွေ့ရှိသော မေးခွန်း:{' '}
+          <strong className="text-slate-900 font-bold">{toMyanmarNumber(filteredQuestions.length)}</strong> ခု
+        </span>
+      </div>
+
+      {/* Questions Cards List */}
+      <div className="space-y-4">
+        {filteredQuestions.length > 0 ? (
+          filteredQuestions.map((q) => {
+            const isBookmarked = bookmarkedIds.includes(q.id);
+
+            return (
+              <div
+                key={q.id}
+                className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs hover:border-slate-300 transition-all space-y-3"
+              >
+                {/* Header: Category Badge and Bookmark */}
+                <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                  <div className="flex items-center gap-2">
+                    {q.category === 'traffic_signs' ? (
+                      <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 flex items-center gap-1">
+                        <ShieldCheck size={12} />
+                        <span>Traffic Signs and markings</span>
+                      </span>
+                    ) : (
+                      <span className="text-[11px] font-bold text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200 flex items-center gap-1">
+                        <Scale size={12} />
+                        <span>Traffic laws</span>
+                      </span>
+                    )}
+                    <span className="text-xs font-semibold text-slate-400">
+                      #{q.id}
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => onToggleBookmark(q.id)}
+                    className={`p-1.5 rounded-lg transition-colors ${
+                      isBookmarked
+                        ? 'text-amber-500 bg-amber-50'
+                        : 'text-slate-400 hover:bg-slate-100 hover:text-slate-600'
+                    }`}
+                    title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+                  >
+                    <Bookmark size={16} className={isBookmarked ? 'fill-current' : ''} />
+                  </button>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  {/* Question Image (if present) */}
+                  {q.image && (
+                    <div className="w-28 h-28 sm:w-32 sm:h-32 bg-slate-50 rounded-xl border border-slate-100 p-2 flex items-center justify-center shrink-0 self-center sm:self-start">
+                      <img
+                        src={q.image}
+                        alt={`Question ${q.id}`}
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  {/* Question and Options */}
+                  <div className="flex-1 space-y-3 w-full">
+                    {/* Question text: Large Primary Text with Myanmar Subtitle */}
+                    {lang === 'th_my' ? (
+                      <div>
+                        <h3 className="font-bold text-sm sm:text-base text-slate-900 font-thai leading-snug">
+                          {q.q_th}
+                        </h3>
+                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
+                          {q.q_my}
+                        </p>
+                      </div>
+                    ) : (
+                      <div>
+                        <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">
+                          {q.q_en}
+                        </h3>
+                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
+                          {q.q_my}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* 4 Choices with Correct Answer highlighted */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      {q.options.map((opt, optIdx) => {
+                        const letter = OPTION_LETTERS[optIdx];
+                        return (
+                          <div
+                            key={optIdx}
+                            className={`p-2.5 rounded-xl border transition-all ${
+                              opt.isCorrect
+                                ? 'bg-emerald-50 border-emerald-300 text-emerald-950 font-semibold ring-1 ring-emerald-400/40'
+                                : 'bg-slate-50/70 border-slate-200 text-slate-600'
+                            }`}
+                          >
+                            <div className="flex items-start gap-1.5">
+                              <span
+                                className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 ${
+                                  opt.isCorrect
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-slate-200 text-slate-600'
+                                }`}
+                              >
+                                {letter}
+                              </span>
+
+                              <div className="flex-1 space-y-1">
+                                {opt.image && (
+                                  <div className="mb-1 p-1 bg-white rounded border border-slate-200 inline-block">
+                                    <img
+                                      src={opt.image}
+                                      alt={`Option ${letter}`}
+                                      className="max-h-20 w-auto object-contain"
+                                    />
+                                  </div>
+                                )}
+
+                                {lang === 'th_my' ? (
+                                  <div>
+                                    <div className="font-thai font-semibold leading-tight text-slate-900">
+                                      {opt.th}
+                                    </div>
+                                    <div className="font-myanmar text-[11px] text-slate-500 leading-tight mt-0.5">
+                                      {opt.my}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div>
+                                    <div className="font-semibold leading-tight text-slate-900">
+                                      {opt.en}
+                                    </div>
+                                    <div className="font-myanmar text-[11px] text-slate-500 leading-tight mt-0.5">
+                                      {opt.my}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+
+                              {opt.isCorrect && (
+                                <CheckCircle2 size={15} className="text-emerald-600 shrink-0 mt-0.5" />
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <div className="bg-white rounded-2xl p-8 text-center text-slate-500 font-myanmar border border-slate-200">
+            <BookOpen size={32} className="mx-auto text-slate-300 mb-2" />
+            <p className="font-bold text-slate-700">ရှာမတွေ့ပါ</p>
+            <p className="text-xs text-slate-500 mt-1">
+              ရှာဖွေမှုစကားလုံး အစားထိုး၍ ပြန်လည်စစ်ဆေးကြည့်ပါ။
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
