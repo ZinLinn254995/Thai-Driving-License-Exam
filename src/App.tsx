@@ -243,22 +243,15 @@ export default function App() {
 
       {/* Footer */}
       <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
-        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>
-            ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ၁၉၁ ပုဒ် (Traffic Signs 117 + Traffic Laws 74)
-          </div>
-          <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">DLT Pass: 90% (45/50)</span>
-            <span>·</span>
-            <a
-              href="https://thaidriveexam.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 underline"
-            >
-              thaidriveexam.com
-            </a>
-          </div>
+        <div className="max-w-4xl mx-auto px-4 flex flex-col items-center gap-2">
+          <p>လေ့ကျင့်ရေးမေးခွန်း {QUESTIONS_BANK.length} ခု · လွတ်လပ်သော သင်ယူရေးအထောက်အကူ</p>
+          <p className="max-w-3xl">ဤ Website သည် ထိုင်း Department of Land Transport (DLT) ၏ တရားဝင်ဝန်ဆောင်မှု မဟုတ်ပါ။ လက်ရှိတရားဝင်လမ်းညွှန်ချက်များကို အမြဲစစ်ဆေးပါ။</p>
+          <nav aria-label="Legal and information links" className="flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
+            <a href="/about.html" className="underline hover:text-slate-900">About</a>
+            <a href="/privacy.html" className="underline hover:text-slate-900">Privacy Policy</a>
+            <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
+            <a href="/contact.html" className="underline hover:text-slate-900">Contact</a>
+          </nav>
         </div>
       </footer>
     </div>
