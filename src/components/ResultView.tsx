@@ -27,7 +27,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   const total = questions.length;
   const correctCount = answers.filter((a) => a.isCorrect).length;
   const percentage = Math.round((correctCount / total) * 100);
-  const passed = percentage >= 90; // Official Thai DLT pass criteria: 90% (45/50)
+  const passed = percentage >= 90; // This app uses a 90% practice target; verify current DLT exam rules separately.
 
   // Find mistake questions
   const mistakes = answers
@@ -46,7 +46,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
-      {/* Official Result Banner */}
+      {/* Practice Result Banner */}
       <div
         className={`rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg border-4 border-white outline-4 relative overflow-hidden ${
           passed
@@ -57,7 +57,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         <div className="space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
             {passed ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-            <span>{passed ? 'Official Standard: Passed' : 'Official Standard: Failed'}</span>
+            <span>{passed ? 'Practice Target: Reached' : 'Practice Target: Not Reached'}</span>
           </div>
 
           {/* Big Score */}
