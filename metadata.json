@@ -1,6 +1,6 @@
 {
   "name": "Thai Driving Test Practice · မြန်မာ",
-  "description": "Thai driving license exam practice with 440 official exam questions covering traffic signs (117), traffic laws (74), and safe driving (249) in Burmese, Thai, and English.",
+  "description": "Independent Thai driving theory practice tool covering traffic signs, traffic laws and safe driving in Thai, English and Burmese. Not affiliated with Thailand's Department of Land Transport.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
