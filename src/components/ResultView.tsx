@@ -73,7 +73,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
           {/* Pass / Fail Status Text */}
           <div className="space-y-0.5">
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
-              {passed ? 'ဂုဏ်ယူပါသည်! စာမေးပွဲ အောင်မြင်ပါသည်' : 'မအောင်မြင်သေးပါ၊ ထပ်မံကြိုးစားပါ'}
+              {passed ? 'ဂုဏ်ယူပါသည်! လေ့ကျင့်ခန်း ရည်မှန်းချက် ပြည့်မီပါသည်' : 'လေ့ကျင့်ခန်းကို ထပ်မံကြိုးစားပါ'}
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
               {passed
@@ -112,7 +112,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
           className="py-3 px-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold flex items-center justify-center gap-2 transition-colors text-xs sm:text-sm"
         >
           <BookOpen size={16} />
-          <span>၁၉၁ ခုလုံး လေ့လာဖတ်ရှုမည်</span>
+          <span>{toMyanmarNumber(total)} ခုလုံး လေ့လာဖတ်ရှုမည်</span>
         </button>
 
         <button
