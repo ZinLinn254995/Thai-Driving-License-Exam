@@ -284,7 +284,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Clock size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                Official Standard · စာမေးပွဲအစစ်ပုံစံ
+                Practice Simulation · စာမေးပွဲလေ့ကျင့်မှုပုံစံ
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
