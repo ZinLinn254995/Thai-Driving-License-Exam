@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Bookmark, Flag, CheckCircle2, XCircle, ArrowLeft, ArrowRight, Clock, HelpCircle, Grid, X, ShieldCheck, Scale } from 'lucide-react';
+import { Bookmark, Flag, CheckCircle2, XCircle, ArrowLeft, ArrowRight, Clock, HelpCircle, Grid, X, ShieldCheck, Scale, Car } from 'lucide-react';
 import { QuizQuestion, LanguageMode, ExamMode, UserAnswer } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
 import { sounds } from '../utils/sound';
@@ -221,6 +221,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
               <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
                 <ShieldCheck size={12} />
                 <span>Traffic Signs and markings</span>
+              </span>
+            ) : currentQ.category === 'safe_driving' ? (
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+                <Car size={12} />
+                <span>Safe driving</span>
               </span>
             ) : (
               <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200">

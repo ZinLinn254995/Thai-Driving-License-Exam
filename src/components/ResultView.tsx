@@ -168,6 +168,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
                               Traffic Signs
                             </span>
+                          ) : question.category === 'safe_driving' ? (
+                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+                              Safe Driving
+                            </span>
                           ) : (
                             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
                               Traffic Laws

@@ -1,8 +1,9 @@
-// Auto-generated 191 Thai Driving Test Questions
+// Auto-generated 440 Thai Driving Test Questions
 // Topic 1: Traffic Signs and Markings (117 Questions) - https://thaidriveexam.com/article-1000000000015
 // Topic 2: Traffic Laws (74 Questions) - https://thaidriveexam.com/article-1000000000016
+// Topic 3: Safe Driving (249 Questions) - https://thaidriveexam.com/article-1000000000022
 
-export type QuestionCategory = 'traffic_signs' | 'traffic_laws';
+export type QuestionCategory = 'traffic_signs' | 'traffic_laws' | 'safe_driving';
 
 export interface QuestionOption {
   th: string;
@@ -32,6 +33,11 @@ export const CATEGORY_LABELS: Record<QuestionCategory, { en: string; my: string;
     en: 'Traffic Laws',
     my: 'ယာဉ်စည်းကမ်း လမ်းစည်းကမ်း ဥပဒေများ',
     th: 'กฎหมายจราจร'
+  },
+  safe_driving: {
+    en: 'Safe Driving',
+    my: 'အန္တရာယ်ကင်းစွာ မောင်းနှင်ခြင်း',
+    th: 'การขับขี่ปลอดภัย'
   }
 };
 
@@ -7291,6 +7297,9468 @@ export const QUESTIONS_BANK: QuestionItem[] = [
         "my": "ယာဉ်မောင်းသူ",
         "image": null,
         "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนจะแซงหรือเปลี่ยนช่องทางเดินรถ ต้องปฏิบัติอย่างไร?",
+    "q_en": "Before overtaking or changing lanes. What must be done?",
+    "q_my": "ကျော်တက်ခြင်း သို့မဟုတ် လမ်းကြောမပြောင်းမီ။ ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "รีบเร่งเครื่องแซงอย่างรวดเร็ว",
+        "en": "Hurry to overtake the machine quickly.",
+        "my": "စက်ကို မြန်မြန်ကျော်ဖို့ မြန်မြန်လုပ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ต้องให้สัญญาณแก่ผู้อื่นรับรู้",
+        "en": "You must give a signal to others.",
+        "my": "တခြားသူတွေကို အချက်ပြရမယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รีบเปลี่ยนช่องทางอย่างรวดเร็ว",
+        "en": "Quickly change channels",
+        "my": "ချန်နယ်များကို အမြန်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงแล้วเหยียบเบรกทันที",
+        "en": "Pass and immediately step on the brakes.",
+        "my": "ကျော်ဖြတ်ပြီး ဘရိတ်ကို ချက်ချင်းနင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การปฏิบัติตนข้อใดไม่ถูกต้อง",
+    "q_en": "Which behavior is incorrect?",
+    "q_my": "ဘယ်အပြုအမူက မမှန်တာလဲ။",
+    "options": [
+      {
+        "th": "จอดรถบริเวณทางร่วมทางแยก",
+        "en": "Park at the intersection.",
+        "my": "လမ်းဆုံမှာ ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลดความเร็วเมื่อถึงวงเวียน",
+        "en": "Reduce your speed when reaching a roundabout.",
+        "my": "အဝိုင်းသို့ရောက်သောအခါ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วเมื่อมีคนข้ามถนน",
+        "en": "Reduce your speed when people cross the road.",
+        "my": "လူတွေ လမ်းဖြတ်ကူးတဲ့အခါ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วเมื่อถึงที่คับขัน",
+        "en": "Reduce your speed when reaching a tight spot.",
+        "my": "တင်းကျပ်တဲ့နေရာကိုရောက်တဲ့အခါ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นการเปิดไฟหน้ารถที่ไม่ถูกต้อง?",
+    "q_en": "Which of the following is incorrect turning on the car's headlights?",
+    "q_my": "အောက်ဖော်ပြပါအရာများထဲမှ မည်သည့်အရာသည် ကားရှေ့မီးဖွင့်ခြင်း မှားယွင်းနေသနည်း။",
+    "options": [
+      {
+        "th": "เมื่อฝนตกหนัก",
+        "en": "When it rains heavily",
+        "my": "မိုးသည်းထန်စွာရွာသောအခါ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อไม่สามารถมองเห็นทางในระยะต่ำกว่า 150 เมตร",
+        "en": "When the road cannot be seen at a distance of less than 150 meters.",
+        "my": "လမ်းကို မီတာ ၁၅၀ အောက် အကွာအဝေးမှာ မမြင်ရဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อเร่งรีบไปทำงาน",
+        "en": "When rushing to work",
+        "my": "အလုပ်သို့ အပြေးအလွှား သွားသောအခါ၊",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เมื่อมีควันไฟปกคลุมถนน",
+        "en": "When smoke covers the road",
+        "my": "မီးခိုးတွေက လမ်းကို ဖုံးလွှမ်းသွားတဲ့အခါ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000007.webp",
+    "q_th": "ผู้ขับขี่รถ ก ต้องการจะเลี้ยวขวาและมีรถทางตรงวิ่งสวนมาต้องปฏิบัติอย่างไร",
+    "q_en": "The driver of Car A wants to turn right and there is a car coming in the opposite direction. What should he do?",
+    "q_my": "ကား A ၏ ယာဉ်မောင်းသည် ညာဘက်ကွေ့လိုပြီး ဆန့်ကျင်ဘက်သို့ ကားတစ်စီး ဝင်လာသည်။ သူဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "หยุดรถให้รถทางขวามือผ่านไปก่อนจึงเลี้ยวขวาได้",
+        "en": "Stop the car to let the car on your right pass before you can turn right.",
+        "my": "ညာဘက်သို့မကွေ့မီ ကားကိုညာဘက်မှဖြတ်သွားစေရန် ကားကိုရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ห้ามเลี้ยวรถ",
+        "en": "Do not turn the car.",
+        "my": "ကားကို လှည့်မကြည့်ပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้รถทางตรงวิ่งสวนมาก่อนจึงเลี้ยวขวาได้",
+        "en": "Stop the car to allow oncoming traffic before turning right.",
+        "my": "ညာဘက်မကွေ့မီ လာနေသော ယာဉ်ကြောပိတ်ဆို့မှုကို ခွင့်ပြုရန် ကားကို ရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เลี้ยวขวาได้ทันที",
+        "en": "You can turn right immediately.",
+        "my": "ချက်ချင်း ညာဘက်ကို ကွေ့နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การจับพวงมาลัยนิ้วมือควรอยู่ในลักษณะใด",
+    "q_en": "How should your fingers grip the steering wheel?",
+    "q_my": "၎) လက်ချောင်းတွေက စတီယာရင်ကို ဘယ်လို ချုပ်ကိုင်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้นิ้วหัวแม่มือและนิ้วชี้จับพวงมาลัยเพียงสองนิ้ว",
+        "en": "Keep only two fingers on the steering wheel with your thumb and forefinger.",
+        "my": "စတီယာရင်ဘီးပေါ်တွင် လက်နှစ်ချောင်းကိုသာ လက်မနှင့် လက်ညှိုးဖြင့် ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นิ้วมือทั้งห้ากำพวงมาลัยให้แน่นที่สุด",
+        "en": "All five fingers grip the steering wheel as tightly as possible.",
+        "my": "လက်ငါးချောင်းစလုံးသည် စတီယာရင်ဘီးကို တတ်နိုင်သမျှ တင်းတင်းကျပ်ကျပ် ဆုပ်ကိုင်ထားသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นิ้วมือทั้งห้าแตะที่พวงมาลัย สามารถหมุนพวงมาลัยด้วยมือข้างเดียว",
+        "en": "All five fingers touch the steering wheel. Can turn the steering wheel with one hand.",
+        "my": "လက်ငါးချောင်းစလုံးသည် စတီယာရင်ဘီးကို ထိသည်။ စတီယာရင်ကို လက်တစ်ဖက်တည်းဖြင့် လှည့်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นิ้วมือทั้งห้า จับพวงมาลัยให้กระชับ สามารถหมุนได้คล่องตัว",
+        "en": "five fingers Hold the steering wheel firmly. Can rotate flexibly",
+        "my": "လက်ငါးချောင်းဖြင့် စတီယာရင်ကို မြဲမြံစွာ ကိုင်ထားပါ။ လိုက်လျောညီထွေ လှည့်လို့ရတယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดกล่าวถูกต้อง",
+    "q_en": "Which of the following is correct?",
+    "q_my": "အောက်ပါအချက်များထဲမှ ဘယ်ဟာမှန်ပါသလဲ။",
+    "options": [
+      {
+        "th": "รถเก่า แรงน้อย ต้องหลบซ้าย",
+        "en": "Old car, low power, must duck to the left.",
+        "my": "ကားဟောင်း၊ ပါဝါနည်းပါးပြီး ဘယ်ဘက်ခြမ်းမှာ ပါရမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถวิ่งเร็วต้องเปิดไฟสูงตลอดเวลา",
+        "en": "Cars traveling fast must have their high beams on at all times.",
+        "my": "အမြန်ခရီးသွားသောကားများသည် အလင်းတန်းများကို အချိန်တိုင်းတွင် တပ်ဆင်ထားရပါမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถทุกคันต้องวิ่งตามความเร็วที่กฎหมายกำหนด",
+        "en": "All vehicles must follow the legal speed limit.",
+        "my": "ယာဉ်အားလုံးသည် ဥပဒေအရ အမြန်နှုန်း ကန့်သတ်ချက်ကို လိုက်နာရမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รถใหม่ราคาแพง ต้องชิดขวา",
+        "en": "Expensive new car. Must keep to the right.",
+        "my": "ဈေးကြီးတဲ့ကားအသစ်။ ညာဘက်ကို ထိန်းထားရမယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดถูกต้อง",
+    "q_en": "Which is correct?",
+    "q_my": "ဘယ်ဟာမှန်လဲ။",
+    "options": [
+      {
+        "th": "รถจักรยานยนต์ต้องขับในช่องซ้ายสุด",
+        "en": "Motorcycles must drive in the leftmost lane.",
+        "my": "မော်တော်ဆိုင်ကယ်များသည် ဘယ်ဘက်ဆုံးလမ်းကြားတွင် မောင်းနှင်ရမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "การเปลี่ยนช่องทางเดินรถไปซ้ายหรือขวาไม่ต้องดูกระจกด้านซ้ายหรือขวา",
+        "en": "Changing lanes to the left or right does not require looking at the left or right mirror.",
+        "my": "လမ်းကြောများကို ဘယ် သို့မဟုတ် ညာသို့ ပြောင်းခြင်းသည် ဘယ် သို့မဟုတ် ညာမှန်ကို ကြည့်ရန် မလိုအပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุกสิ่งของต้องขับช่องขวาสุด",
+        "en": "Trucks carrying goods must drive in the rightmost lane.",
+        "my": "ကုန်တင်ကားများသည် ညာဘက်ဆုံးလမ်းကြားတွင် မောင်းနှင်ရမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุกคนโดยสารต้องขับช่องขวาสุด",
+        "en": "Trucks with passengers must drive in the rightmost lane.",
+        "my": "ခရီးသည်များပါရှိသော ကုန်တင်ကားများသည် ညာဘက်ဆုံးလမ်းကြားတွင် မောင်းနှင်ရမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ควรปฏิบัติในขณะขับรถเข้าโค้งในตอนกลางคืน",
+    "q_en": "Which thing should not be done while driving around a curve at night?",
+    "q_my": "ညဘက် ကွေ့ပတ်ပြီး ကားမောင်းရင် ဘယ်အရာက မလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "บีบแตรเตือนหลายๆ ครั้งก่อนถึงโค้ง",
+        "en": "Honk the horn several times. The time before the curve",
+        "my": "ဟွန်း အကြိမ်ကြိမ် ဟွန်း။ မျဉ်းကွေး မရောက်မီအချိန်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ชะลอความเร็วให้เหมาะสมกับโค้ง",
+        "en": "Slow down to suit the curve.",
+        "my": "မျဉ်းကွေးနှင့်ကိုက်ညီစေရန် နှေးကွေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เตือนด้วยการเปิดไฟสูง-ต่ำ",
+        "en": "Warning by turning on high-low beams",
+        "my": "မြင့်မားသောအနိမ့်တန်းများကိုဖွင့်ခြင်းဖြင့်သတိပေးသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความระมัดระวังมากขึ้น",
+        "en": "Drive more carefully.",
+        "my": "ပိုသတိထားမောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000022.webp",
+    "q_th": "เมื่อคันข้างหน้าให้สัญญาณจะเลี้ยวรถหรือเปลี่ยนช่องทางเดินรถ ผู้ขับขี่ที่ขับรถตามหลังต้องปฏิบัติอย่างไร",
+    "q_en": "When the vehicle in front gives a signal to turn or change lanes. What must the driver driving behind do?",
+    "q_my": "ရှေ့မှယာဉ်သည် ကွေ့ရန် သို့မဟုတ် လမ်းသွားပြောင်းရန် အချက်ပြသည့်အခါ။ နောက်က ယာဉ်မောင်းက ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "ชะลอความเร็วและให้ทางแก่เขาไปก่อน",
+        "en": "Slow down and give him the go-ahead.",
+        "my": "အရှိန်လျှော့ပြီး သူ့ကို ရှေ့ကို တိုးပေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็วเพื่อจะไปก่อน",
+        "en": "Accelerate to go first.",
+        "my": "အရှိန်မြှင့်ပြီး အရင်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถ",
+        "en": "Stop the car",
+        "my": "ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถ",
+        "en": "park the car",
+        "my": "ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "พฤติกรรมการขับรถข้อใดไม่ปลอดภัย",
+    "q_en": "Which driving behavior is unsafe?",
+    "q_my": "ဘယ်ကားမောင်းတဲ့အပြုအမူက အန္တရာယ်ကင်းလဲ။",
+    "options": [
+      {
+        "th": "ขับรถในเขตเทศบาลใช้ความเร็วไม่เกิน 80 กิโลเมตรต่อชั่วโมง",
+        "en": "Driving in municipal areas must not exceed 80 kilometers per hour.",
+        "my": "စည်ပင်သာယာနယ်နိမိတ်အတွင်း မောင်းနှင်ရာတွင် တစ်နာရီ ကီလိုမီတာ ၈၀ ထက်မပိုစေရပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถตามความพอใจของตัวเอง",
+        "en": "Drive according to your own satisfaction.",
+        "my": "ကိုယ့်စိတ်ကျေနပ်မှုအတိုင်း မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับช้าและชิดด้านซ้าย",
+        "en": "Drive slowly and keep to the left.",
+        "my": "ဖြည်းဖြည်းမောင်းပြီး ဘယ်ဘက်ကို ဆက်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถนอกเขตเทศบาลใช้ความเร็วไม่เกิน 90 กิโลเมตรต่อชั่วโมง",
+        "en": "Driving outside the municipality does not exceed 90 kilometers per hour.",
+        "my": "မြို့တော်အပြင်ဘက်တွင် တစ်နာရီလျှင် ကီလိုမီတာ ၉၀ ထက်မကျော်လွန်ဘဲ မောင်းနှင်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถตามข้อใดปฏิบัติได้ถูกต้อง",
+    "q_en": "Driving according to which of the following is correct?",
+    "q_my": "၎) အောက်ဖော်ပြပါအချက်များအတိုင်း မောင်းနှင်ခြင်းသည် မည်သည့်အရာမှန်သနည်း။",
+    "options": [
+      {
+        "th": "ขับรถคร่อมเส้นแบ่งช่องทางเดินรถ",
+        "en": "Drive astride the lane divider.",
+        "my": "လမ်းဆုံလမ်းခွကို ဖယ်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงรถในอุโมงค์",
+        "en": "Overtaking cars in the tunnel",
+        "my": "ဥမင်လိုဏ်ခေါင်းထဲတွင် ကားများကို ကျော်တက်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถใช้ความเร็วไม่เกินอัตราที่กฎหมายกำหนด",
+        "en": "Drive at a speed not exceeding the speed specified by law.",
+        "my": "ဥပဒေအရ သတ်မှတ်ထားသည့် အမြန်နှုန်းထက် မကျော်လွန်ဘဲ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถกีดขวางการจราจร",
+        "en": "Driving obstructing traffic",
+        "my": "ယာဉ်ကြောပိတ်ဆို့ မောင်းနှင်ခြင်း။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเกิดอุบัติเหตุและมีผู้บาดเจ็บ ผู้ขับขี่ควรคำนึงถึงสิ่งใดเป็นอันดับแรก",
+    "q_en": "When there is an accident and someone is injured. What should drivers consider first?",
+    "q_my": "မတော်တဆ ထိခိုက်ဒဏ်ရာရရှိတဲ့အခါ၊ ယာဉ်မောင်းတွေက ဘာတွေကို အရင်စဉ်းစားသင့်လဲ။",
+    "options": [
+      {
+        "th": "รอพบเจ้าหน้าที่ตำรวจ",
+        "en": "Waiting to see the police",
+        "my": "ရဲကိုတွေ့ဖို့စောင့်နေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การเคลื่อนย้ายรถที่เกิดเหตุ",
+        "en": "Moving the vehicle at the scene",
+        "my": "အခင်းဖြစ်ရာနေရာသို့ မော်တော်ယာဉ်ကို ရွှေ့ပြောင်းပေးခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอประกันภัย",
+        "en": "Waiting for insurance",
+        "my": "အာမခံကို စောင့်နေပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การช่วยเหลือผู้บาดเจ็บ",
+        "en": "Helping the injured",
+        "my": "ဒဏ်ရာရသူတွေကို ကူညီတယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การปลูกจิตสำนึกความปลอดภัยในการใช้รถใช้ถนนควรกระทำที่บุคคลใดมากที่สุด",
+    "q_en": "Cultivating road safety awareness should be done to which person?",
+    "q_my": "၎) လမ်းအန္တရာယ်ကင်းရှင်းရေး အသိပညာကို ပြုစုပျိုးထောင်ရာတွင် မည်သည့်ပုဂ္ဂိုလ်အား လုပ်ဆောင်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "คนขับรถเท่านั้น",
+        "en": "Driver only",
+        "my": "ယာဉ်မောင်းသာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บุคคลทุกคน",
+        "en": "every person",
+        "my": "လူတိုင်း",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "คนเดินเท้าเท่านั้น",
+        "en": "Pedestrians only",
+        "my": "လမ်းသွားလမ်းလာများသာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้โดยสารเท่านั้น",
+        "en": "Passengers only",
+        "my": "ခရီးသည်များသာ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนขับรถเข้าโค้งหรือมุมเลี้ยว ควรใช้ความเร็วอย่างไร",
+    "q_en": "Before driving into a curve or turning corner. What speed should I use?",
+    "q_my": "လမ်းကွေ့ သို့မဟုတ် ကွေ့ထောင့်သို့ မမောင်းမီ။ ဘယ်အမြန်နှုန်းကို သုံးရမလဲ။",
+    "options": [
+      {
+        "th": "เพิ่มความเร็วให้มากขึ้นกว่าเดิม",
+        "en": "Increase speed more than before",
+        "my": "အရင်ကထက် အရှိန်မြှင့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลงให้มากที่สุด",
+        "en": "Reduce your speed as much as possible.",
+        "my": "အရှိန်ကို တတ်နိုင်သမျှ လျှော့ချပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ความเร็วคงที่",
+        "en": "Use a constant speed",
+        "my": "အဆက်မပြတ်အမြန်နှုန်းကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควบคุมความเร็วให้เหมาะสมกับโค้งหรือมุมเลี้ยว",
+        "en": "Control the speed to suit the curve or turning angle.",
+        "my": "မျဉ်းကွေး သို့မဟုတ် ကွေ့ထောင့်နှင့် ကိုက်ညီစေရန် အမြန်နှုန်းကို ထိန်းချုပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000056.webp",
+    "q_th": "กรณีรถเลี้ยวซ้ายและเลี้ยวขวาพร้อมกันในเส้นทางเดียวกันผู้ขับขี่ต้องทำอย่างไร",
+    "q_en": "In the case of a car turning left and turning right at the same time on the same route, what should the driver do?",
+    "q_my": "၎) လမ်းကြောင်းတစ်ခုတည်းမှာ ဘယ်ညာကွေ့ပြီး ညာဘက်ကွေ့ရင် ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ห้ามเลี้ยวซ้าย",
+        "en": "Do not turn left",
+        "my": "ဘယ်ဘက်သို့ မလှည့်ပါနှင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ที่จะเลี้ยวซ้ายต้องหยุดให้ทางแก่รถที่เลี้ยวมาจากทางขวาก่อน",
+        "en": "Those turning left must first stop to give way to vehicles turning from the right.",
+        "my": "လက်ယာမှ ကွေ့နေသော ယာဉ်များကို လမ်းပေးရန်အတွက် လက်ဝဲကွေ့ကို ဦးစွာ ရပ်တန့်ရမည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ผู้ที่จะเลี้ยวขวาต้องหยุดให้ทางแก่รถที่เลี้ยวมาจากทางซ้ายก่อน",
+        "en": "Those turning right must first stop to give way to vehicles turning from the left.",
+        "my": "ညာကွေ့သူများသည် လက်ဝဲဘက်မှ ကွေ့နေသောယာဉ်များကို ဦးစွာရပ်တန့်ရပါမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ที่จะเลี้ยวซ้ายเลี้ยวได้ทันที",
+        "en": "Those who wish to turn left can turn immediately.",
+        "my": "ဘယ်ဘက်ကွေ့ချင်သူတွေ ချက်ချင်းကွေ့နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "อุบัติเหตุบนท้องถนนส่วนใหญ่เกิดจากอะไร",
+    "q_en": "What causes most road accidents?",
+    "q_my": "၎) ယာဉ်မတော်တဆမှု အများဆုံးဖြစ်စေသည့်အရာများ။",
+    "options": [
+      {
+        "th": "สิ่งแวดล้อม",
+        "en": "Environment",
+        "my": "ပတ်ဝန်းကျင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถนน",
+        "en": "road",
+        "my": "လမ်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ขับขี่",
+        "en": "rider",
+        "my": "မြင်းစီးသူ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รถ",
+        "en": "car",
+        "my": "ကား",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "พฤติกรรมใดเป็นการเปิดไฟสูงที่ถูกต้อง",
+    "q_en": "Which behavior is the correct way to turn on the high beams?",
+    "q_my": "အမြင့်တန်းများကိုဖွင့်ရန် မည်သည့်အပြုအမူသည် မှန်ကန်သောနည်းလမ်းဖြစ်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟสูงขณะรถสวนกัน",
+        "en": "Turn on the high beams when cars pass each other.",
+        "my": "ကားတွေဖြတ်သွားတဲ့အခါ high beam ကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟสูงขณะที่ไม่มีรถสวนทางมา",
+        "en": "Turn on your high beams when there are no cars coming in the opposite direction.",
+        "my": "ဆန့်ကျင်ဘက်ဦးတည်လာသောကားများမရှိသောအခါ သင်၏အမြင့်တန်းများကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟสูงขณะขับรถตามหลังรถคันอื่น",
+        "en": "Turn on your high beams while driving behind another vehicle.",
+        "my": "အခြားယာဉ်နောက်မှ မောင်းနှင်နေစဉ် သင်၏အမြင့်တန်းများကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟสูงเพื่อไล่รถคันหน้า",
+        "en": "Turn on your high beams to catch the car ahead.",
+        "my": "ရှေ့ကားကိုဖမ်းရန် သင်၏အမြင့်တန်းများကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในช่องทางเดินรถตั้งแต่สองช่องทางขึ้นไปในทิศทางเดียวกัน ผู้ขับขี่รถจักรยานยนต์ ต้องปฏิบัติอย่างไร",
+    "q_en": "In two or more lanes going in the same direction. motorcycle rider What must be done?",
+    "q_my": "တူညီသော ဦးတည်ရာသို့ သွားနေသော လမ်းနှစ်သွယ် သို့မဟုတ် ထို့ထက်ပိုသော လမ်းသွယ်။ မော်တော်ဆိုင်ကယ်စီးသူ ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "ต้องขับคร่อมเส้นแบ่งช่องทางเดินรถ",
+        "en": "Must drive across the lane divider.",
+        "my": "လမ်းသွယ်မျဉ်းကို ဖြတ်ကျော်မောင်းနှင်ရမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ต้องขับรถชิดด้านขวาสุด",
+        "en": "Must drive on the far right side.",
+        "my": "ညာဘက်အစွန်ဘက် မောင်းနှင်ရမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ต้องขับรถชิดด้านซ้ายสุด",
+        "en": "Must drive on the far left side.",
+        "my": "ဘယ်ဘက်အစွန်ဆုံး မောင်းနှင်ရမည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ต้องขับรถอยู่ในช่องทางที่ให้ขับตรงไป",
+        "en": "Must drive in the lane that allows driving straight.",
+        "my": "ဖြောင့်ဖြောင့် မောင်းနှင်နိုင်စေမည့် လမ်းကြားတွင် မောင်းနှင်ရမည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะขับรถ ถ้ากระจกบังลมหน้าแตกร้าวควรปฏิบัติอย่างไร",
+    "q_en": "While driving, if the windshield is cracked, what should you do?",
+    "q_my": "၎) ကားမောင်းနေစဉ် လေကာမှန်ကွဲသွားပါက ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ตั้งสติ ลดความเร็ว จอดรถข้างทาง เปิดไฟฉุกเฉิน",
+        "en": "Stay calm, reduce your speed, park on the side of the road, turn on your emergency lights.",
+        "my": "ငြိမ်ငြိမ်နေပါ၊ အရှိန်လျှော့ပါ၊ လမ်းဘေးမှာ ရပ်ပါ၊ အရေးပေါ်မီးတွေကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตั้งสติ เปิดไฟฉุกเฉิน และหยุดรถทันที",
+        "en": "Stay calm and turn on emergency lights. and stop the car immediately",
+        "my": "ငြိမ်ငြိမ်ထားပြီး အရေးပေါ်မီးများဖွင့်ပါ။ ပြီးတော့ ကားကို ချက်ချင်းရပ်လိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ เปิดไฟฉุกเฉิน และขับรถต่อไป",
+        "en": "Stay calm and turn on emergency lights. and keep driving",
+        "my": "ငြိမ်ငြိမ်ထားပြီး အရေးပေါ်မီးများဖွင့်ပါ။ ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ จอดรถข้างทาง",
+        "en": "Be mindful and park on the side of the road.",
+        "my": "သတိထားပြီး လမ်းဘေးမှာ ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000082.webp",
+    "q_th": "เมื่อการจราจรติดขัด รถคัน ข. ไม่สามารถเคลื่อนตัวข้างหน้าได้ ผู้ขับขี่รถคัน ก. ต้องการจะขับตรงไป จะต้องปฏิบัติอย่างไร",
+    "q_en": "When traffic is congested, Car B cannot move forward. The driver of Car A wants to drive straight. What must be done?",
+    "q_my": "၎) ယာဉ်ကြော ပိတ်ဆို့မှု ဖြစ်သောအခါ ကား B သည် ရှေ့သို့ မရွေ့နိုင်ပါ။ ကားမောင်းသူက ဖြောင့်ဖြောင့်မောင်းချင်သည်။ ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "หยุดรถให้รถคัน ข. ขับผ่านไปก่อน",
+        "en": "Stop the car to let Car B pass by first.",
+        "my": "ကား B ဖြတ်သွားနိုင်အောင် ကားကို အရင်ရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถไปต่อท้ายรถคัน ข. เพื่อไม่ให้เกิดช่องว่าง",
+        "en": "Drive to the back of Car B so as not to create a gap.",
+        "my": "ကွာဟချက်မဖြစ်အောင် Car B ၏နောက်ဘက်သို့ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถไปต่อท้ายรถคัน ข. และเปิดไฟฉุกเฉิน",
+        "en": "Drive to the back of Car B and turn on the emergency lights.",
+        "my": "Car B နောက်ဘက်သို့ မောင်းပြီး အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถไปจอดคู่กับรถคัน ข. ทางด้านขวา",
+        "en": "Drive to park alongside car B on the right.",
+        "my": "ညာဘက်တွင် ကား B နှင့် တွဲရပ်ရန် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เหตุใดขณะขับรถลุยน้ำต้องเลี้ยงคลัทช์และเร่งเครื่องยนต์มากกว่าปกติเล็กน้อย",
+    "q_en": "Why do I have to engage the clutch and accelerate the engine a little more than normal while driving through water?",
+    "q_my": "အဘယ်ကြောင့် ကျွန်ုပ်သည် clutch ကို ချိတ်ဆက်ပြီး အင်ဂျင်ကို ပုံမှန်ထက် အနည်းငယ်ပို၍ အရှိန်မြှင့်ရသနည်း ။",
+    "options": [
+      {
+        "th": "เพื่อให้รถมีความเร็วมากขึ้น",
+        "en": "To make the car have more speed",
+        "my": "ကားကို အရှိန်ပိုရစေရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อให้เครื่องยนต์ร้อน",
+        "en": "to keep the engine hot",
+        "my": "အင်ဂျင်ပူနေစေရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อให้ความร้อนของเครื่องยนต์สูงกว่าปกติ",
+        "en": "To make the engine heat higher than normal",
+        "my": "အင်ဂျင်အပူကို သာမာန်ထက် မြင့်အောင် လုပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อป้องกันไม่ให้เครื่องยนต์ดับ",
+        "en": "To prevent the engine from shutting down",
+        "my": "အင်ဂျင်ပိတ်ခြင်းမှကာကွယ်ရန်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เพื่อความปลอดภัยก่อนขับรถ ผู้ขับขี่ควรเตรียมตัวอย่างไร",
+    "q_en": "For safety before driving How should drivers prepare?",
+    "q_my": "ကားမမောင်းမီ ဘေးကင်းစေရန် ယာဉ်မောင်းများ မည်သို့ ပြင်ဆင်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "นอนหลับพักผ่อนให้เพียงพอ",
+        "en": "Get enough sleep.",
+        "my": "လုံလောက်အောင် အိပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ต่อทะเบียนรถให้เรียบร้อย",
+        "en": "Complete your vehicle registration.",
+        "my": "သင်၏ယာဉ်မှတ်ပုံတင်ခြင်းကို ဖြည့်စွက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมน้ำมันให้เต็มถัง",
+        "en": "Fill the tank with gas.",
+        "my": "တိုင်ကီကို ဓာတ်ငွေ့ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รับประทานเครื่องดื่มกระตุ้นประสาทชนิดเข้มข้น",
+        "en": "Consume strong stimulating drinks.",
+        "my": "ပြင်းပြင်းထန်ထန် လှုံ့ဆော်ပေးသော အချိုရည်များကို သောက်သုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การหยุดรถอย่างกะทันหัน (รถไม่ใช้เบรก ABS) ควรปฏิบัติอย่างไร",
+    "q_en": "Sudden stopping of the vehicle (The car does not use ABS brakes.) What should I do?",
+    "q_my": "ယာဉ် ရုတ်တရက် ရပ်ခြင်း (ကားသည် ABS ဘရိတ်များ မသုံးပါ။) ကျွန်ုပ် ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เหยียบเบรกแรงๆ โดยไม่ต้องถอนเบรก",
+        "en": "Step on the brakes hard. without removing the brakes",
+        "my": "ဘရိတ်ကို ပြင်းပြင်းထန်ထန် နင်းပါ။ ဘရိတ်မဖြုတ်ဘဲ၊",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบและปล่อยเบรกสลับกัน (ย้ำเบรกซ้ำๆ)",
+        "en": "Pedal and release the brakes alternately. (repeatedly brakes)",
+        "my": "စက်ဘီးနင်းပြီး ဘရိတ်ကို တလှည့်စီ လွှတ်ပါ။ (အကြိမ်ကြိမ် ဘရိတ်အုပ်ခြင်း)",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรกและคลัทช์พร้อมกัน",
+        "en": "Push the brake and clutch at the same time.",
+        "my": "ဘရိတ်နှင့် ကလစ်ကို တချိန်တည်းတွန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบคลัทช์ก่อน แล้วจึงเหยียบเบรก",
+        "en": "Step on the clutch first. Then step on the brake",
+        "my": "ပထမဦးစွာ clutch ကိုတက်ပါ။ ထို့နောက် ဘရိတ်ကို နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ควรปฏิบัติขณะขับรถเมื่อฝนตกหนัก",
+    "q_en": "Which thing should not be done while driving when it is raining heavily?",
+    "q_my": "မိုးသည်းထန်စွာရွာနေချိန် ကားမောင်းရင်း ဘယ်အရာတွေ မလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ลดความเร็วลงและเพิ่มความระมัดระวังให้มากขึ้น",
+        "en": "Slow down and be more careful.",
+        "my": "အရှိန်လျှော့ပြီး ပိုသတိထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ความเร็วไม่เกิน 20 กิโลเมตรต่อชั่วโมง",
+        "en": "Use a speed not exceeding 20 kilometers per hour.",
+        "my": "တစ်နာရီ ကီလိုမီတာ ၂၀ ထက်မပိုသော အမြန်နှုန်းကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรกรถอย่างรุนแรงและรวดเร็ว",
+        "en": "Brake the car hard and quickly.",
+        "my": "ကားကို ပြင်းပြင်းထန်ထန် မြန်မြန်ဘရိတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟหน้ารถในขณะขับรถ",
+        "en": "Turn on your car's headlights while driving.",
+        "my": "မောင်းနှင်နေစဉ် သင့်ကား၏ ရှေ့မီးကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะขับรถลงทางลาดชัน ถ้าเครื่องยนต์ดับควรปฏิบัติอย่างไร",
+    "q_en": "While driving down a steep slope If the engine stops, what should you do?",
+    "q_my": "မတ်စောက်သော တောင်စောင်းတွင် မောင်းနှင်နေစဉ် အင်ဂျင်ရပ်တန့်ပါက ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ปล่อยให้รถไหลไป แล้วค่อยประคองรถ",
+        "en": "let the car flow Then slowly support the car.",
+        "my": "ကားကို စီးဆင်းစေပြီးနောက် ကားကို ဖြည်းညှင်းစွာ ထောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปลี่ยนเป็นเกียร์ต่ำ ดึงเบรกมือ และติดเครื่องใหม่",
+        "en": "Shift into a lower gear, pull the parking brake, and restart the engine.",
+        "my": "အောက်ဂီယာသို့ပြောင်းပါ၊ ပါကင်ဘရိတ်ကိုဆွဲကာ အင်ဂျင်ကိုပြန်လည်စတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบเบรก ดึงเบรกมือ เข้าเกียร์ว่าง และติดเครื่องใหม่",
+        "en": "Step on the brakes, pull the handbrake, and shift into neutral. and install a new engine",
+        "my": "ဘရိတ်ကိုနင်းပါ၊ လက်ဘရိတ်ကိုဆွဲပါ၊ ကြားနေသို့ပြောင်းပါ။ အင်ဂျင်အသစ် တပ်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรก ดึงเบรกมือ และติดเครื่องใหม่",
+        "en": "Step on the brakes, pull the handbrake, and restart the engine.",
+        "my": "ဘရိတ်ကိုနင်းပါ၊ လက်ဘရိတ်ကိုဆွဲပါ၊ အင်ဂျင်ကိုပြန်လည်စတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับรถสวนทางกัน ผู้ขับขี่ต้องปฏิบัติอย่างไร",
+    "q_en": "In driving in the opposite direction. What must the driver do?",
+    "q_my": "ဆန့်ကျင်ဘက်သို့ မောင်းနှင်ခြင်း။ ယာဉ်မောင်းက ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "แซงเข้าไปในช่องเดินรถประจำทางได้",
+        "en": "Can pass into the bus lane.",
+        "my": "ဘတ်စကားလမ်းကြားသို့ ကူးနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้ชะลอความเร็วและขับรถชิดด้านซ้าย",
+        "en": "Slow down and drive on the left side.",
+        "my": "အရှိန်လျှော့ပြီး ဘယ်ဘက်ခြမ်းကို မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ในทางแคบที่ไม่อาจสวนกันได้ ผู้ขับรถคันที่เล็กกว่า ต้องหยุดชิดด้านซ้ายให้รถคันที่ใหญ่กว่าไปก่อน",
+        "en": "In the narrow path that cannot be crossed Driver of a smaller car You must stop on the left side to let larger cars go first.",
+        "my": "ဖြတ်မကူးနိုင်သော ကျဉ်းမြောင်းသောလမ်းတွင် ကားငယ်၏ ယာဉ်မောင်းသည် ပိုကြီးသောကားများကို ဦးစွာသွားခွင့်ပြုရန် ဘယ်ဘက်ခြမ်းတွင် ရပ်ရပါမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ในทางที่มีสิ่งกีดขวางอยู่ข้างหน้าไม่ต้องหยุดรอให้รถที่สวนมาผ่านไปก่อน",
+        "en": "In the road where there are obstacles in front, you do not have to stop and wait for oncoming cars to pass first.",
+        "my": "ရှေ့တွင် အတားအဆီးများရှိနေသောလမ်းတွင် လာမည့်ကားများကို ဦးစွာဖြတ်ရန် စောင့်ဆိုင်းရန် မလိုအပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000121.webp",
+    "q_th": "จากรูป หากท่านต้องการที่จะเลี้ยวขวา ท่านควรระมัดระวังและปฏิบัติอย่างไร",
+    "q_en": "From the picture, if you want to turn right What precautions should you take and take?",
+    "q_my": "၎) ပုံထဲကအတိုင်း ညာဘက်ကွေ့ချင်ရင် ဘာသတိထားရမလဲ။",
+    "options": [
+      {
+        "th": "ขับรถไปในช่องทางด้านขวาเพื่อทำการเลี้ยว",
+        "en": "Drive into the right lane to make a turn.",
+        "my": "ကွေ့ရန် ညာဘက်လမ်းကြားသို့ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วเพื่อเลี้ยวขวาทันที",
+        "en": "Immediately accelerate to turn right.",
+        "my": "ညာဘက်ကို ကွေ့ဖို့ ချက်ချင်းအရှိန်မြှင့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรเลี้ยวให้ทันทีเนื่องจากมีรถคันใหญ่ขวางรถฝั่งตรงข้าม",
+        "en": "You should turn immediately because there is a large car blocking the car on the opposite side.",
+        "my": "တစ်ဖက်ခြမ်းတွင် ကားကြီးတစ်စီး ပိတ်ဆို့နေသောကြောင့် ချက်ချင်းကွေ့သင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอในตำแหน่งที่จะเลี้ยวและเลี้ยวได้เมื่อปลอดภัย",
+        "en": "Stop and wait in a position to turn and turn when it is safe to do so.",
+        "my": "ထိုသို့ပြုလုပ်ရန် ဘေးကင်းသည့်အခါတွင် ရပ်ပြီး လှည့်ရန် အနေအထားတွင် စောင့်ဆိုင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ต้องการกลับรถต้องปฏิบัติอย่างไร",
+    "q_en": "What should the driver do if he wants to make a U-turn?",
+    "q_my": "ဂငယ်ကွေ့ချင်ရင် ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "กลับรถในบริเวณที่คับขัน",
+        "en": "Make a U-turn in a tight area",
+        "my": "ကြပ်သောနေရာတွင် ဂငယ်ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กลับรถที่บริเวณเส้นทแยงเหลือง",
+        "en": "Make a U-turn at the yellow diagonal line.",
+        "my": "အဝါရောင်ထောင့်ဖြတ်မျဉ်းတွင် ဂငယ်ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กลับรถช่องทางไหนก็ได้",
+        "en": "You can make a U-turn in any lane.",
+        "my": "မည်သည့်လမ်းကြောတွင်မဆို ဂငယ်ကွေ့နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เข้าช่องทางให้ถูกต้องและให้กลับรถได้เมื่อปลอดภัย",
+        "en": "Enter the lane correctly and make a U-turn when it is safe to do so.",
+        "my": "ထိုသို့ပြုလုပ်ရန် အန္တရာယ်ကင်းသည့်အခါ လမ်းကြောကို မှန်ကန်စွာဝင်ပြီး ဂငယ်ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนออกเดินทางข้อใดปฏิบัติไม่ถูกต้อง",
+    "q_en": "Before leaving, which one is incorrect?",
+    "q_my": "မထွက်ခင် ဘယ်ဟာ မှားလဲ။",
+    "options": [
+      {
+        "th": "เตรียมสภาพรถให้พร้อมใช้งาน",
+        "en": "Prepare the car for use.",
+        "my": "ကားအသုံးပြုရန် ပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ศึกษาเส้นทางที่จะไป",
+        "en": "Study the route you will take.",
+        "my": "သင်သွားမည့်လမ်းကြောင်းကို လေ့လာပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดื่มสุราก่อนออกเดินทาง",
+        "en": "Drink alcohol before leaving",
+        "my": "မထွက်ခင် အရက်သောက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เตรียมความพร้อมของร่างกาย",
+        "en": "Prepare your body",
+        "my": "သင့်ခန္ဓာကိုယ်ကိုပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถแซงรถคันหน้าต้องแซงด้านขวามือ ยกเว้นกรณีใดที่สามารถแซงด้านซ้ายมือได้",
+    "q_en": "Driving to pass the car in front must pass on the right-hand side. Except in any case where you can pass on the left hand side.",
+    "q_my": "၎) ရှေ့ကားကိုဖြတ်ရန် ညာဖက်ခြမ်းမှ ဖြတ်သွားရမည်။ ဘယ်ဘက်ခြမ်းကို ဖြတ်သွားနိုင်တဲ့ ကိစ္စကလွဲရင်ပေါ့။",
+    "options": [
+      {
+        "th": "เมื่อรถที่จะถูกแซงกำลังเลี้ยวขวา หรือให้สัญญาณว่าจะเลี้ยวขวา",
+        "en": "When the car that is about to be overtaken is turning right. or give a signal to turn right",
+        "my": "ကျော်တက်မည့်ကားသည် ညာဘက်သို့ကွေ့သည်။ သို့မဟုတ် ညာဘက်ကွေ့ရန် အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงรถคันอื่นทางด้านซ้ายขณะรถวิ่งบนสะพาน",
+        "en": "Passing another vehicle on the left while driving on the bridge.",
+        "my": "တံတားပေါ်တွင် မောင်းနှင်နေစဉ် လက်ဝဲဘက်ရှိ အခြားယာဉ်တစ်စီး ဖြတ်သွားပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงรถคันอื่นทางด้านซ้ายในทางเดินรถช่องทางเดียว",
+        "en": "Passing another vehicle on the left in a single lane roadway",
+        "my": "လမ်းသွားလမ်းကြားတစ်ခုအတွင်း လက်ဝဲဘက်ရှိ အခြားယာဉ်တစ်စီး ဖြတ်သွားခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงรถคันอื่นในช่องทางซ้ายเมื่ออยู่ในเขตชุมชน",
+        "en": "Passing other cars in the left lane when in a community area",
+        "my": "ရပ်ရွာဧရိယာအတွင်း အခြားကားများ ဖြတ်သွားသည့်အခါ လက်ဝဲလမ်းကြား",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ต้องขับรถในทางเดินรถด้านซ้าย ยกเว้นกรณีใดสามารถเดินรถทางขวาหรือ ล้ำกึ่งกลางของทางเดินรถได้",
+    "q_en": "The driver must drive in the left-hand lane. Except in which case can the vehicle be driven on the right? Can cross the middle of the roadway.",
+    "q_my": "၎) ယာဉ်မောင်းသည် ဘယ်ဘက်လမ်းကြားတွင် မောင်းနှင်ရမည်။ ဘယ်အခြေအနေမှာမှ ညာဖက်ကို မောင်းနှင်နိုင်ပါ့မလား။ လမ်းလယ်ကို ဖြတ်လို့ရတယ်။",
+    "options": [
+      {
+        "th": "ทางเดินรถกว้างมาก",
+        "en": "The driveway is very wide.",
+        "my": "ကားလမ်းက အရမ်းကျယ်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ด้านซ้ายของทางเดินรถมีสิ่งกีดขวาง",
+        "en": "There is an obstacle on the left side of the road.",
+        "my": "လမ်းရဲ့ဘယ်ဘက်ခြမ်းမှာ အတားအဆီးတစ်ခုရှိတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่มีรถสวนทางมา",
+        "en": "There are no cars coming in the opposite direction.",
+        "my": "ဆန့်ကျင်ဘက်ဘက်ကို လာတဲ့ကားတွေ မရှိဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทางเดินรถมีน้ำท่วมขัง",
+        "en": "The driveway is flooded.",
+        "my": "ကားလမ်းက ရေမြုပ်နေတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "บริเวณใดสามารถกลับรถได้",
+    "q_en": "In which areas can you make a U-turn?",
+    "q_my": "၎) မည်သည့်နေရာများတွင် ဂငယ်ကွေ့နိုင်သနည်း။",
+    "options": [
+      {
+        "th": "ระยะ 100 เมตร จากทางราบของเชิงสะพาน",
+        "en": "Distance: 100 meters from the level of the foot of the bridge",
+        "my": "အကွာအဝေး- တံတားခြေရင်းမှ မီတာ 100 အကွာအဝေး",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทางเดินรถที่มีเครื่องหมายห้ามกลับรถ",
+        "en": "The road has a sign prohibiting U-turns.",
+        "my": "လမ်းတွင် ဂငယ်ကွေ့ တားသည့် ဆိုင်းဘုတ် ရှိသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เขตปลอดภัย",
+        "en": "safe zone",
+        "my": "လုံခြုံဇုန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บริเวณบนสะพาน",
+        "en": "Area on the bridge",
+        "my": "တံတားပေါ်ရှိ ဧရိယာ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อผู้ขับขี่พบเครื่องหมาย \"เลี้ยวซ้ายผ่านตลอด\" ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When the driver encounters the sign \"Always turn left.\" What should drivers do?",
+    "q_my": "ယာဉ်မောင်းသည် \"အမြဲဘယ်ဘက်သို့ကွေ့ပါ\" ဟူသော ဆိုင်းဘုတ်ကိုတွေ့သောအခါ၊ ယာဉ်မောင်းတွေ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ลดความเร็วของรถลงและเลี้ยวซ้ายผ่านไปได้ทันที",
+        "en": "Slow down the car and turn left immediately.",
+        "my": "ကားကို အရှိန်လျှော့ပြီး ဘယ်ဘက်ကို ချက်ချင်းကွေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เลี้ยวซ้ายผ่านไปได้ทันที",
+        "en": "Turn left and pass immediately.",
+        "my": "ဘယ်ဘက်ကွေ့ပြီး ချက်ချင်းဖြတ်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอจนกว่าจะได้รับสัญญาณไฟเขียวจึงเลี้ยวซ้ายไปได้",
+        "en": "Stop and wait until you get the green light to turn left.",
+        "my": "ဘယ်ဘက်ကွေ့ရန် မီးစိမ်းပြသည်အထိ ရပ်ပြီး စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอให้คนข้ามถนนและรถที่มาจากทางด้านขวามือขับผ่านไปก่อนแล้วจึงเลี้ยวซ้ายผ่านไป",
+        "en": "Stop and wait for pedestrians crossing the road and cars coming from your right to pass before turning left.",
+        "my": "လမ်းဖြတ်ကူးသူတွေကို ရပ်ပြီး ဘယ်ဘက်မကွေ့ခင် လက်ယာဘက်ကလာတဲ့ ကားတွေကို ရပ်ပြီး စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านกำลังขับรถจะออกจากถนนรอง เพราะเหตุใดจึงควรระมัดระวังรถจักรยานยนต์เป็นพิเศษ",
+    "q_en": "When you are driving off the secondary road. Why should you be especially careful with motorcycles?",
+    "q_my": "၎) အလယ်တန်းလမ်းကို ဖြတ်မောင်းတဲ့အခါ။ ဆိုင်ကယ်တွေကို ဘာကြောင့် အထူးသတိထားသင့်လဲ။",
+    "options": [
+      {
+        "th": "รถจักรยานยนต์มักจะใช้ความเร็วมากกว่ารถยนต์",
+        "en": "Motorcycles tend to reach faster speeds than cars.",
+        "my": "မော်တော်ဆိုင်ကယ်များသည် ကားများထက် အရှိန်ပိုမြန်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถจักรยานยนต์มีสิทธิ์ไปก่อน",
+        "en": "Motorcycles have the right to go first.",
+        "my": "ဆိုင်ကယ် အရင်သွားပိုင်ခွင့်ရှိတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถจักรยานยนต์ถูกบดบังจากสิ่งกีดขวางได้ง่าย",
+        "en": "Motorcycles are easily obscured by obstacles.",
+        "my": "မော်တော်ဆိုင်ကယ်များသည် အတားအဆီးများဖြင့် အလွယ်တကူ ဖုံးကွယ်နေပါသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตำรวจสายตรวจมักจะใช้รถจักรยานยนต์",
+        "en": "Police patrols often use motorcycles.",
+        "my": "ရဲတပ်ဖွဲ့ဝင်များသည် မော်တော်ဆိုင်ကယ်များကို မကြာခဏ အသုံးပြုကြသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อถึงทางรถไฟและมีรถไฟกำลังแล่นผ่าน ผู้ขับขี่ต้องปฏิบัติอย่างไร",
+    "q_en": "When you reach the railroad and there is a train passing by. What must the driver do?",
+    "q_my": "၎) ရထားလမ်းကို ရောက်တဲ့အခါ ရထားက ဖြတ်သွားတာရှိတယ်။ ယာဉ်မောင်းက ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "ให้เสียงสัญญาณแตรเตือนและขับผ่านไปได้",
+        "en": "Sound the warning horn and drive past.",
+        "my": "သတိပေးဟွန်းကို တီးပြီး ကျော်ဖြတ်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้ห่างจากทางรถไฟไม่น้อยกว่า 5 เมตร",
+        "en": "Stop the vehicle at least 5 meters away from the railroad tracks.",
+        "my": "ရထားသံလမ်းမှ အနည်းဆုံး 5 မီတာအကွာတွင် ယာဉ်ကို ရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุดรอสัญญาณไฟและเปิดไฟฉุกเฉิน",
+        "en": "Stop, wait for the light and turn on your emergency lights.",
+        "my": "ရပ်ပါ၊ မီးကိုစောင့်ပြီး အရေးပေါ်မီးများကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถผ่านไปโดยเร็ว",
+        "en": "Drive past quickly.",
+        "my": "အမြန်ဖြတ်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเกิดอุบัติเหตุผู้ขับขี่หลบหนีจะมีผลอย่างไร",
+    "q_en": "When an accident occurs, what are the consequences of the driver fleeing?",
+    "q_my": "၎) မတော်တဆမှုတစ်ခု ဖြစ်ပွားသောအခါ ယာဉ်မောင်းထွက်ပြေးခြင်း၏ ဆိုးကျိုးများကား အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "ไม่มีผล เพราะไม่ใช่ฝ่ายผิด",
+        "en": "It has no effect because it is not the party at fault.",
+        "my": "ပါတီရဲ့အပြစ်မဟုတ်တဲ့အတွက် သက်ရောက်မှုမရှိပါဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะได้รับการกันไว้เป็นพยาน",
+        "en": "will be set aside as a witness",
+        "my": "သက်သေအဖြစ် ဖယ်ထားမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สันนิษฐานว่าผู้นั้นเป็นผู้กระทำผิด",
+        "en": "It is assumed that that person is the perpetrator.",
+        "my": "အဲဒီလူက ကျူးလွန်သူလို့ ယူဆတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "มีผลให้เป็นฝ่ายถูก",
+        "en": "Resulting in being right",
+        "my": "ရလာဒ်က မှန်တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเปิดไฟฉุกเฉินได้ถูกต้อง",
+    "q_en": "Which is the correct way to turn on emergency lights?",
+    "q_my": "အရေးပေါ်မီးများဖွင့်ရန် ဘယ်နည်းက မှန်ကန်သနည်း။",
+    "options": [
+      {
+        "th": "มีหมอก",
+        "en": "It's foggy.",
+        "my": "မှိုင်းတွေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถเสียหรือรถเกิดอุบัติเหตุ",
+        "en": "Broken down car or car accident",
+        "my": "ကားပျက် သို့မဟုတ် ယာဉ်တိုက်မှု",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ผ่านทางแยก",
+        "en": "through the intersection",
+        "my": "လမ်းဆုံမှတဆင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปิดได้ตลอดเวลา",
+        "en": "Closed at any time",
+        "my": "အချိန်မရွေး ပိတ်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การลากจูงรถที่ไม่สามารถใช้พวงมาลัยหรือเบรกได้ควรทำอย่างไร",
+    "q_en": "What should I do to tow a car that cannot use the steering wheel or brakes?",
+    "q_my": "စတီယာရင်ဘီး သို့မဟုတ် ဘရိတ်ကို အသုံးမပြုနိုင်သော ကားကို ဆွဲတင်ရန် ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ใช้คนดันไป",
+        "en": "Use someone to push it.",
+        "my": "တွန်းရန်တစ်စုံတစ်ဦးကိုအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้วิธีการยกหน้าหรือยกท้ายลากไป",
+        "en": "Use the method of lifting the front or lifting the rear and dragging it.",
+        "my": "အရှေ့ကို မြှောက်ခြင်း သို့မဟုတ် အနောက်ကို မြှောက်ပြီး ဆွဲယူခြင်းနည်းလမ်းကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้รถดันไป",
+        "en": "Use a car to push it.",
+        "my": "တွန်းဖို့ ကားကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้สายพ่วงลากจูงไป",
+        "en": "Use a tow cable to tow it.",
+        "my": "တွဲဆွဲရန် ကြိုးကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การกระทำของผู้ขับขี่ข้อใด ที่อาจก่อให้เกิดอุบัติเหตุมากที่สุด",
+    "q_en": "Which action of the driver? that may cause the most accidents",
+    "q_my": "ယာဉ်မောင်းရဲ့ လုပ်ရပ်က ဘာလဲ။ မတော်တဆမှု အများဆုံး ဖြစ်စေနိုင်ပါတယ်။",
+    "options": [
+      {
+        "th": "ร้องเพลง",
+        "en": "sing a song",
+        "my": "သီချင်းဆိုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พูดคุยกับคนที่อยู่ข้างๆ",
+        "en": "Talk to the person next to you.",
+        "my": "သင့်ဘေးနားရှိလူနှင့် စကားပြောပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "โทรศัพท์มือถือในขณะขับรถ",
+        "en": "Mobile phone while driving",
+        "my": "ကားမောင်းနေစဉ် လက်ကိုင်ဖုန်း",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดวิทยุฟังเพลง",
+        "en": "Turn on the radio and listen to music.",
+        "my": "ရေဒီယိုကိုဖွင့်ပြီး သီချင်းနားထောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สำนวนใดที่เตือนใจผู้ขับขี่เพื่อให้เกิดความปลอดภัย",
+    "q_en": "Which expression reminds drivers to be safe?",
+    "q_my": "ဘယ်အသုံးအနှုန်းက ယာဉ်မောင်းတွေကို ဘေးကင်းဖို့ သတိပေးသလဲ။",
+    "options": [
+      {
+        "th": "กล้าได้กล้าเสีย",
+        "en": "enterprising",
+        "my": "တက်ကြွသော",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ฆ่าได้แต่หยามไม่ได้",
+        "en": "You can kill but you can't insult.",
+        "my": "သတ်နိုင်ပေမယ့် စော်ကားလို့မရဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความประมาทเป็นบ่อเกิดแห่งความตาย",
+        "en": "Negligence is the root of death.",
+        "my": "ပေါ့ဆခြင်းသည် သေခြင်း၏အမြစ်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "กระต่ายตื่นตูม",
+        "en": "The rabbit was alarmed.",
+        "my": "ယုန်သည် ထိတ်လန့်သွားသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเห็นคนเดินเท้าข้ามถนนผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When you see a pedestrian crossing the road, what should the driver do?",
+    "q_my": "၎) လမ်းဖြတ်ကူးနေတာကို တွေ့ရင် ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "บีบแตรไล่",
+        "en": "Honk the horn",
+        "my": "ဟွန်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถต้องหยุดให้คนเดินเท้าผ่านไปก่อน",
+        "en": "Cars must stop to allow pedestrians to pass first.",
+        "my": "လမ်းသွားလမ်းလာများကို ဦးစွာဖြတ်သန်းခွင့်ပြုရန် မော်တော်ကားများ ရပ်တန့်ထားရမည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับผ่านไปได้โดยไม่ต้องหยุดรถ",
+        "en": "You can drive past without having to stop your car.",
+        "my": "သင့်ကားကို ရပ်စရာမလိုဘဲ ဖြတ်ကျော်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้การวัดใจ",
+        "en": "Use the heart test.",
+        "my": "နှလုံးစမ်းသပ်မှုကို အသုံးပြု.",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถทิ้งระยะห่างจากรถคันหน้ามากเกินไป จะมีผลอย่างไร",
+    "q_en": "Driving leaves too much distance from the car in front. What effect will it have?",
+    "q_my": "၎) မောင်းနှင်ခြင်းသည် ရှေ့ကားနှင့် အလွန်အလှမ်းဝေးသည်။ ဘယ်လိုအကျိုးသက်ရောက်မှုရှိမလဲ။",
+    "options": [
+      {
+        "th": "เกิดปัญหาการจราจรติดขัด",
+        "en": "There was a traffic jam.",
+        "my": "ယာဉ်ကြောပိတ်ဆို့မှုဖြစ်ခဲ့သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลดอุบัติเหตุ",
+        "en": "Reduce accidents",
+        "my": "ယာဉ်မတော်တဆမှုများ လျှော့ချပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การจราจรคล่องตัวมากขึ้น",
+        "en": "Traffic is more fluid.",
+        "my": "အသွားအလာက ပိုအဆင်ပြေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะขับรถด้วยความปลอดภัยมากขึ้น",
+        "en": "will drive with more safety",
+        "my": "ပိုမိုလုံခြုံစွာ မောင်းနှင်နိုင်မည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดที่ผู้ขับขี่ไม่ควรปฏิบัติ",
+    "q_en": "Which thing should drivers not do?",
+    "q_my": "၎) ယာဉ်မောင်းများ မည်သည့်အရာကို မလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขับรถด้วยความระมัดระวังขณะฝนตก ถนนลื่น",
+        "en": "Drive with caution during rain. The roads are slippery.",
+        "my": "မိုးတွင်းမှာ သတိနဲ့မောင်းပါ။ လမ်းတွေက ချောတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณไฟเพื่อขอแซง",
+        "en": "Give a signal to pass.",
+        "my": "ကျော်ဖြတ်ရန် အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วสูงในที่ที่มีการจราจรพลุกพล่าน",
+        "en": "Driving at high speeds in busy traffic.",
+        "my": "စည်ကားနေသော ယာဉ်ကြောပိတ်ဆို့မှုများတွင် အရှိန်ပြင်းပြင်း မောင်းနှင်ခြင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ปฏิบัติตามกฎจราจรอย่างเคร่งครัด",
+        "en": "Strictly follow traffic rules.",
+        "my": "ယာဉ်စည်းကမ်းကို တိကျစွာလိုက်နာပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "มารยาทที่ดีในการจอดรถ คือข้อใด",
+    "q_en": "What is good parking etiquette?",
+    "q_my": "ကောင်းမွန်တဲ့ ကားပါကင်ကျင့်ဝတ်ဆိုတာ ဘာလဲ။",
+    "options": [
+      {
+        "th": "จอดรถขวางทางเข้า-ออก",
+        "en": "Parking is blocking the entrance and exit.",
+        "my": "ကားပါကင်သည် ဝင်ပေါက်နှင့် ထွက်ပေါက်များကို ပိတ်ဆို့ထားသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถซ้อนคัน",
+        "en": "Double parking",
+        "my": "နှစ်ထပ်ပါကင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดบริเวณที่มีเครื่องหมายห้ามจอด",
+        "en": "Park in areas with no parking signs.",
+        "my": "ကားပါကင် ဆိုင်းဘုတ်မရှိသော နေရာများတွင် ရပ်နားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดโดยไม่กีดขวางผู้อื่นและไม่ฝ่าฝืนกฎจราจร",
+        "en": "Park without obstructing others and without violating traffic rules.",
+        "my": "ယာဉ်စည်းကမ်း မဖောက်ဖျက်ဘဲ အခြားသူများကို အတားအဆီးမရှိ ရပ်နားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถขณะฝนตก ข้อใดที่ผู้ขับขี่ไม่ควรปฏิบัติ",
+    "q_en": "Driving while it rains Which thing should drivers not do?",
+    "q_my": "မိုးရွာနေချိန်မှာ ယာဉ်မောင်းတွေ ဘယ်အရာတွေ မလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "เปิดที่ปัดน้ำฝน",
+        "en": "Turn on the windshield wipers.",
+        "my": "လေကာမှန် wipers ကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ความระมัดระวังเพิ่มมากขึ้น",
+        "en": "Use more caution.",
+        "my": "ပိုသတိထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินตลอดเส้นทาง",
+        "en": "Turn on emergency lights along the route.",
+        "my": "လမ်းကြောင်းတစ်လျှောက် အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลดความเร็วของรถลงกว่าปกติ",
+        "en": "Reduce the speed of the car more than normal.",
+        "my": "ကားရဲ့အရှိန်ကို ပုံမှန်ထက် ပိုလျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเกิดรถเสีย ควรปฏิบัติอย่างไร",
+    "q_en": "When a car breaks down What should I do?",
+    "q_my": "၎) ကားပျက်ကျရင် ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "จอดรถทิ้งไว้กลางถนน",
+        "en": "Leave your car in the middle of the road.",
+        "my": "သင့်ကားကို လမ်းလယ်တွင် ထားခဲ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นำรถจอดเข้าข้างทาง, เปิดไฟฉุกเฉิน",
+        "en": "Park the car on the side of the road and turn on the emergency lights.",
+        "my": "ကားကို လမ်းဘေးမှာ ရပ်ပြီး အရေးပေါ် မီးဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "นำกิ่งไม้วางไว้ท้ายรถ",
+        "en": "Put the branch in the back of the car.",
+        "my": "သစ်ကိုင်းကို ကားနောက်ခန်းမှာ ထားလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เผาป่าข้างทางหากเป็นกลางคืน",
+        "en": "Burn the forest beside the road if it's night.",
+        "my": "ညဘက်ဆိုရင် လမ်းဘေးက တောကို မီးရှို့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อผู้ขับขี่ขับรถเสียหลักบนถนนเปียกลื่น ควรปฏิบัติอย่างไร",
+    "q_en": "When the driver loses control on a wet and slippery road. What should I do?",
+    "q_my": "စိုစွတ်ပြီး ချောတဲ့လမ်းမှာ ယာဉ်မောင်းက ထိန်းချုပ်မှု ဆုံးရှုံးသွားတဲ့အခါ။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ถอนคันเร่ง เหยียบเบรกเพื่อใช้เกียร์ต่ำ",
+        "en": "Release the accelerator and step on the brake to shift into a lower gear.",
+        "my": "အရှိန်မြှင့်ပြီး ဂီယာအောက်သို့ပြောင်းရန် ဘရိတ်ကို အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถอนคันเร่ง จับพวงมาลัยให้มั่นประคองรถต่อไป",
+        "en": "Release the accelerator, hold the steering wheel firmly and keep the car steady.",
+        "my": "အရှိန်မြှင့်ပြီး စတီယာရင်ကို မြဲမြဲကိုင်ထားပြီး ကားကို တည်ငြိမ်အောင်ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรกทันที แล้วค่อยๆออกตัวเร่งความเร็วใหม่",
+        "en": "Step on the brakes immediately. Then slowly start to accelerate again.",
+        "my": "ဘရိတ်ကို ချက်ချင်းနင်းပါ။ ထို့နောက် ဖြည်းဖြည်းချင်း ပြန်ပြီး အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติให้มั่น จับพวงมาลัยให้ดี เร่งความเร็วหนีให้พ้นไป",
+        "en": "Stay calm. Hold the steering wheel well. Speed up and get away.",
+        "my": "တည်တည်ငြိမ်ငြိမ်နေပါ။ စတီယာရင်ကို ကောင်းစွာကိုင်ထားပါ။ အရှိန်မြှင့်ပြီး ထွက်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะขับรถ ถ้ากระจกบังลมหน้ารถแตกร้าว ควรปฏิบัติอย่างไร",
+    "q_en": "While driving, if the windshield of the car is cracked. What should I do?",
+    "q_my": "၎) ကားမောင်းနေစဉ် လေကာမှန်ကွဲသွားပါက၊ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ตั้งสติ ลดความเร็ว จอดรถข้างทาง เปิดไฟฉุกเฉิน",
+        "en": "Stay calm, reduce your speed, park on the side of the road, turn on your emergency lights.",
+        "my": "ငြိမ်ငြိမ်နေပါ၊ အရှိန်လျှော့ပါ၊ လမ်းဘေးမှာ ရပ်ပါ၊ အရေးပေါ်မီးတွေကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตั้งสติ จอดรถข้างทาง",
+        "en": "Be mindful and park on the side of the road.",
+        "my": "သတိထားပြီး လမ်းဘေးမှာ ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ เปิดไฟฉุกเฉิน และขับรถต่อไป",
+        "en": "Stay calm and turn on emergency lights. and keep driving",
+        "my": "ငြိမ်ငြိမ်ထားပြီး အရေးပေါ်မီးများဖွင့်ပါ။ ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ เปิดไฟฉุกเฉิน และหยุดรถทันที",
+        "en": "Stay calm and turn on emergency lights. and stop the car immediately",
+        "my": "ငြိမ်ငြိမ်ထားပြီး အရေးပေါ်မီးများဖွင့်ပါ။ ပြီးတော့ ကားကို ချက်ချင်းရပ်လိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การปรับระดับที่นั่งคนขับห่างเกินไป จะมีผลอย่างไร",
+    "q_en": "The driver's seat adjustment is too far away. What effect will it have?",
+    "q_my": "ယာဉ်မောင်းထိုင်ခုံ ချိန်ညှိမှုသည် အဝေးကြီးဖြစ်သည်။ ဘယ်လိုအကျိုးသက်ရောက်မှုရှိမလဲ။",
+    "options": [
+      {
+        "th": "ทำให้เข้าเกียร์ได้ง่าย",
+        "en": "Makes it easy to shift into gear",
+        "my": "ဂီယာပြောင်းရန် လွယ်ကူစေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้เบรกรถสะดวก",
+        "en": "Makes car braking convenient",
+        "my": "ကားဘရိတ်ကို အဆင်ပြေစေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้ทัศนวิสัยในการมองเห็นชัดเจนดีมาก สามารถตัดสินใจได้ดี",
+        "en": "Makes visibility very clear. able to make good decisions",
+        "my": "မြင်နိုင်စွမ်းကို အလွန်ရှင်းလင်းစေသည်။ ကောင်းသောဆုံးဖြတ်ချက်များချနိုင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บังคับพวงมาลัยลําบาก ใช้อุปกรณ์ต่างๆ ไม่สะดวก เกิดเหตุฉุกเฉินไม่สามารถใช้คลัทช์ และเบรกได้",
+        "en": "Difficulty controlling the steering wheel Inconvenient to use various equipment. In an emergency, unable to use the clutch and brake.",
+        "my": "စတီယာရင်ဘီးကို ထိန်းချုပ်ရန် ခက်ခဲခြင်း စက်ပစ္စည်းအမျိုးမျိုးကို အသုံးပြုရန် အဆင်မပြေပါ။ အရေးပေါ်အခြေအနေတွင်၊ clutch နှင့် ဘရိတ်ကို အသုံးမပြုနိုင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถถอยหลังควรใช้ความเร็วระดับใด",
+    "q_en": "What speed should you drive in reverse?",
+    "q_my": "နောက်ပြန်မောင်းရင် ဘယ်အရှိန်နဲ့မောင်းရမလဲ။",
+    "options": [
+      {
+        "th": "ถอยช้าๆ แล้วใช้ความระมัดระวัง",
+        "en": "Back up slowly and use caution.",
+        "my": "ဖြည်းညှင်းစွာ အရန်ကူးပြီး သတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ความเร็วตามสภาพของรถ",
+        "en": "Use the speed according to the condition of the car.",
+        "my": "ကား၏အခြေအနေအရ အရှိန်ကိုအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถอยแบบไหนก็ได้",
+        "en": "You can retreat any way you want.",
+        "my": "ကြိုက်သလို ဆုတ်သွားနိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถอยเหมือนกับเดินหน้า",
+        "en": "Retreat is the same as moving forward.",
+        "my": "ဆုတ်ခွာခြင်း သည် ရှေ့တိုးခြင်း နှင့် အတူတူပင် ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับขี่ขึ้นหรือลงทางลาดชัน ควรใช้เกียร์ใด",
+    "q_en": "Driving up or down a slope What gear should I use?",
+    "q_my": "တောင်စောင်းအတက်အဆင်း မောင်းနှင်ရာတွင် မည်သည့်ဂီယာကို အသုံးပြုသင့်သနည်း။",
+    "options": [
+      {
+        "th": "เกียร์ต่ำ",
+        "en": "low gear",
+        "my": "အနိမ့်ဂီယာ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เกียร์ใดก็ได้",
+        "en": "Any gear",
+        "my": "မည်သည့်ဂီယာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เกียร์สูง",
+        "en": "high gear",
+        "my": "ဂီယာမြင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เกียร์ว่าง",
+        "en": "Neutral gear",
+        "my": "ကြားနေဂီယာ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับขี่ลงทางลาดชัน ผู้ขับขี่ควรใช้เกียร์ต่ำเนื่องจากสาเหตุใด",
+    "q_en": "In driving down a steep slope Why should drivers use a lower gear?",
+    "q_my": "မတ်စောက်သော တောင်စောင်းကို မောင်းနှင်ရာတွင် ယာဉ်မောင်းများသည် အဘယ်ကြောင့် အောက်ဂီယာကို အသုံးပြုသင့်သနည်း။",
+    "options": [
+      {
+        "th": "เพื่อลดความร้อนของเครื่องยนต์",
+        "en": "To reduce the heat of the engine",
+        "my": "အင်ဂျင်၏အပူကိုလျှော့ချရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อเพิ่มกำลังของรถ",
+        "en": "To increase the power of the car",
+        "my": "ကား၏ စွမ်းအားကို မြှင့်တင်ရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อเพิ่มความเร็วของรถ",
+        "en": "to increase the speed of the car",
+        "my": "ကားအရှိန်မြှင့်ဖို့",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อหน่วงความเร็วของรถ",
+        "en": "to slow down the speed of the car",
+        "my": "ကား၏အရှိန်ကိုနှေးကွေးစေရန်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับขี่ลุยน้ำ ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "In driving through water What should the driver do?",
+    "q_my": "၎) ရေထဲမှာ ယာဉ်မောင်းသူ ဘာလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความรวดเร็ว",
+        "en": "drive quickly",
+        "my": "မြန်မြန်မောင်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลง แต่เร่งเครื่องยนต์ให้มากกว่าปกติเล็กน้อย",
+        "en": "Reduce your speed, but rev the engine slightly more than normal.",
+        "my": "အရှိန်လျှော့သော်လည်း အင်ဂျင်ကို ပုံမှန်ထက် အနည်းငယ်ပို၍ လည်ပတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถด้วยความเร็วปกติ",
+        "en": "Drive at normal speed",
+        "my": "ပုံမှန်အရှိန်ဖြင့် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านควรปฏิบัติอย่างไรขณะขับรถผ่านบริเวณน้ำท่วม",
+    "q_en": "What should you do while driving through a flooded area?",
+    "q_my": "ရေမြုပ်နေတဲ့နေရာကို ဖြတ်မောင်းရင်း ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ขับช้าๆ ตามหลังรถคันหน้าในระยะห่างพอสมควร",
+        "en": "Drive slowly, following the car in front at a reasonable distance.",
+        "my": "ရှေ့ကားကို သင့်လျော်သောအကွာအဝေးတွင် ဖြည်းဖြည်းချင်းမောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินตลอดเวลา",
+        "en": "Turn on emergency lights at all times.",
+        "my": "အရေးပေါ်မီးများကို အချိန်တိုင်းဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามไม่ใช้เบรกโดยเด็ดขาด",
+        "en": "Try not to use the brakes at all.",
+        "my": "ဘရိတ်ကို လုံးဝမသုံးဖို့ ကြိုးစားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามขับจี้ท้ายรถคันหน้าตลอดเวลา",
+        "en": "Try to drive behind the car in front all the time.",
+        "my": "ရှေ့က ကားနောက်ကို တစ်ချိန်လုံး မောင်းကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับขี่ในทางลักษณะใดที่ไม่จำเป็นต้องให้สัญญาณไฟเลี้ยว",
+    "q_en": "What type of driving does not require a turn signal?",
+    "q_my": "ဘယ်အမျိုးအစားက ကွေ့အချက်ပြမှု မလိုအပ်တာလဲ။",
+    "options": [
+      {
+        "th": "ทางบังคับเลี้ยว",
+        "en": "Steering path",
+        "my": "စတီယာရင်လမ်းကြောင်း",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทางเลี้ยวซ้ายออกจากซอย",
+        "en": "Turn left out of the alley.",
+        "my": "လမ်းကြားထဲက ဘယ်ဘက်ကွေ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทางเลี้ยวซ้ายเข้าซอย",
+        "en": "Turn left into the alley.",
+        "my": "လမ်းဘေးဝဲယာသို့ ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทางกลับรถ",
+        "en": "U-turn",
+        "my": "ဂငယ်ကွေ့",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การใช้เกียร์เพื่อขึ้นและลงเขาข้อใดถูก",
+    "q_en": "Using gear to go up and down the mountain, which is correct?",
+    "q_my": "တောင်ပေါ်အတက်အဆင်းမှာ ဂီယာသုံးပြီး ဘယ်ဟာမှန်လဲ။",
+    "options": [
+      {
+        "th": "ขึ้นใช้เกียร์ต่ำและลงใช้เกียร์ว่าง",
+        "en": "Go up in low gear and down in neutral.",
+        "my": "ဂီယာအနိမ့်ဖြင့်တက်ပြီး ကြားနေဖြင့်ဆင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นและลงใช้เกียร์ต่ำ",
+        "en": "Go up and down using a low gear.",
+        "my": "အနိမ့်ဂီယာသုံးပြီး အတက်အဆင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขึ้นและลงใช้เกียร์สูง",
+        "en": "Up and down use high gear.",
+        "my": "အတက်အဆင်း မြင့်သောဂီယာကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นใช้เกียร์ต่ำและลงใช้เกียร์สูง",
+        "en": "Go up in a low gear and down in a high gear.",
+        "my": "ဂီယာနိမ့်ဖြင့်တက်ကာ ဂီယာမြင့်သောနေရာတွင်ဆင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนขับรถ ผู้ขับขี่ที่ดีควรเตรียมความพร้อมของตนเองอย่างไร",
+    "q_en": "Before driving, how should a good driver prepare himself?",
+    "q_my": "၎) ကားမမောင်းခင်မှာ ယာဉ်မောင်းကောင်းတစ်ယောက်ဟာ သူ့ကိုယ်သူ ဘယ်လိုပြင်ဆင်သင့်လဲ။",
+    "options": [
+      {
+        "th": "พักผ่อนให้เพียงพอ",
+        "en": "Get enough rest.",
+        "my": "လုံလောက်စွာ အနားယူပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เที่ยวดึก",
+        "en": "Traveling late at night",
+        "my": "ညဉ့်နက်မှ ခရီးသွားခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดื่มเหล้า",
+        "en": "drink alcohol",
+        "my": "အရက်သောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กินยาบ้า",
+        "en": "Take amphetamine",
+        "my": "အမ်ဖီတမင်း သောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นปัจจัยสำคัญที่ก่อให้เกิดอุบัติเหตุทางถนนมากที่สุด",
+    "q_en": "Which is the most important factor causing road accidents?",
+    "q_my": "၎) ယာဉ်မတော်တဆမှုဖြစ်စေတဲ့ အရေးကြီးဆုံးအချက်က ဘာလဲ။",
+    "options": [
+      {
+        "th": "ถนน",
+        "en": "road",
+        "my": "လမ်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไฟส่องถนนบริเวณทางร่วมทางแยก",
+        "en": "Road lights at intersections",
+        "my": "လမ်းဆုံများတွင် လမ်းမီးများ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ขับขี่รถ",
+        "en": "motorist",
+        "my": "ကားသမား",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สัญญาณไฟจราจร",
+        "en": "traffic light",
+        "my": "မီးပွိုင့်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนออกรถจากไหล่ทางด้านซ้าย ผู้ขับขี่ต้องปฏิบัติอย่างไรให้ปลอดภัยมากที่สุด",
+    "q_en": "Before leaving the vehicle from the left shoulder. What must drivers do to be as safe as possible?",
+    "q_my": "ယာဉ်မထွက်ခွာမီ ဘယ်ဘက်ပခုံးမှ ခွာပါ။ ယာဉ်မောင်းများ တတ်နိုင်သမျှ ဘေးကင်းစေရန် ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "มองกระจกมองข้างด้านขวา เปิดไฟเลี้ยวขวา พร้อมกับหันศีรษะมองข้ามไหล่ขวาไปทางด้านหลังก่อนออกรถ",
+        "en": "Look in the right side mirror. Turn on the right turn signal Turn your head and look over your right shoulder to the back before getting out of the car.",
+        "my": "ညာဖက်မှန်ကို ကြည့်လိုက်ပါ။ ညာဘက်အကွေ့အချက်ပြချက်ကိုဖွင့်ပါ သင့်ဦးခေါင်းကိုလှည့်ကာ ကားထဲမှမထွက်မီ သင့်ညာဖက်ပခုံးကို နောက်သို့လှည့်ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "มองกระจกมองข้างด้านขวา",
+        "en": "Look in the right side mirror.",
+        "my": "ညာဖက်မှန်ကို ကြည့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองกระจกมองหลัง",
+        "en": "Looking in the rearview mirror",
+        "my": "နောက်ကြည့်မှန်ကိုကြည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟเลี้ยวซ้าย หันศีรษะไปด้านซ้าย",
+        "en": "Turn on the left turn signal Turn your head to the left.",
+        "my": "ဘယ်ဘက်အလှည့်အချက်ပြကိုဖွင့်ပါ သင့်ခေါင်းကို ဘယ်ဘက်သို့လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 251,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่การมองที่ถูกวิธีในขณะขับรถ",
+    "q_en": "Which is not the correct way to look while driving?",
+    "q_my": "၎) ကားမောင်းနေစဉ် ကြည့်ရှုရန် ဘယ်နည်းက မှန်ကန်ပါသနည်း။",
+    "options": [
+      {
+        "th": "มองไปยังสิ่งที่ไม่เกี่ยวข้องกับการขับรถ",
+        "en": "Look at things not related to driving.",
+        "my": "ကားမောင်းခြင်းနှင့် မသက်ဆိုင်သော အရာများကို ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "การมองถึงสภาพของถนนที่แตกต่างกัน",
+        "en": "Looking at different road conditions",
+        "my": "မတူညီတဲ့ လမ်းအခြေအနေတွေကို ကြည့်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การมองเห็นฝูงสัตว์เลี้ยงกำลังข้ามถนน",
+        "en": "Seeing a herd of pets crossing the road",
+        "my": "လမ်းဖြတ်ကူးနေတဲ့ အိမ်မွေးတိရိစ္ဆာန် တစ်စုကို တွေ့လိုက်ရတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การมองการเคลื่อนไหวของรถและคน",
+        "en": "Looking at the movement of cars and people",
+        "my": "ကားတွေနဲ့ လူတွေရဲ့ လှုပ်ရှားမှုကို ကြည့်တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 252,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดที่ทำให้การหยุดรถต้องใช้ระยะทางมากขึ้นจึงสามารถหยุดรถได้",
+    "q_en": "Which of the following causes the car to need more distance to stop the car?",
+    "q_my": "အောက်ဖော်ပြပါအရာများထဲမှ မည်သည့်အရာများက ကားကိုရပ်တန့်ရန် အကွာအဝေးပိုလိုအပ်သနည်း။",
+    "options": [
+      {
+        "th": "ความเร็วในการเหยียบเบรก",
+        "en": "Brake pedal speed",
+        "my": "ဘရိတ်နင်းအရှိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำหนักบรรทุกเพิ่มมากขึ้น",
+        "en": "The load weight has increased.",
+        "my": "ဝန်အလေးချိန်တိုးလာသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ความรวดเร็วในการตัดสินใจ",
+        "en": "speed of decision",
+        "my": "ဆုံးဖြတ်ချက်၏အရှိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำหนักบรรทุกลดน้อยลง",
+        "en": "The payload weight is reduced.",
+        "my": "ဝန်အလေးချိန် လျော့သွားသည် ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ควรใช้เบรกมือ",
+    "q_en": "Which one should not use the handbrake?",
+    "q_my": "ဘယ်ဟာက လက်ဘရိတ်ကို မသုံးသင့်လဲ။",
+    "options": [
+      {
+        "th": "หยุดรถติดไฟแดง",
+        "en": "Stop traffic at a red light",
+        "my": "မီးနီတွင် မီးပွိုင့်ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดบนทางลาดชัน",
+        "en": "Stop on the slope",
+        "my": "တောင်စောင်းမှာ ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถลงทางลาดชัน",
+        "en": "Drive down the slope",
+        "my": "ကုန်းစောင်းကို မောင်းချပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถ",
+        "en": "park the car",
+        "my": "ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่มีผลให้ระยะการหยุดรถ (ระยะเบรก) ยาวขึ้น",
+    "q_en": "Which of the following does not result in a longer stopping distance (braking distance)?",
+    "q_my": "အောက်ဖော်ပြပါများထဲမှ မည်သည့်အရာသည် ရပ်တန့်ခြင်းအကွာအဝေး (ဘရိတ်ဖမ်းသည့်အကွာအဝေး) ကို မဖြစ်ပေါ်စေပါ။",
+    "options": [
+      {
+        "th": "น้ำมันหล่อลื่น",
+        "en": "Lubricating oil",
+        "my": "ချောဆီ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สภาพพื้นผิวถนน",
+        "en": "Road surface condition",
+        "my": "လမ်းမျက်နှာပြင်အခြေအနေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความเร็วของรถ",
+        "en": "car speed",
+        "my": "ကားအရှိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำหนักบรรทุก",
+        "en": "Payload",
+        "my": "ဝန်ဆောင်ခ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การจอดลงทางลาดชัน ล้อหน้าควรอยู่ในลักษณะใด",
+    "q_en": "Parking down a slope What should the front wheels be like?",
+    "q_my": "ကုန်းစောင်းမှာ ကားရပ်ရင် ရှေ့ဘီးတွေက ဘယ်လိုမျိုးဖြစ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "หันเข้าหาขอบทาง",
+        "en": "Facing the curb",
+        "my": "ကန့်လန့်ကာကို မျက်နှာမူပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หันออกจากขอบทาง",
+        "en": "Turn away from the curb",
+        "my": "ကန့်လန့်ကာမှ လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "อยู่อย่างไรก็ได้",
+        "en": "Live however you want.",
+        "my": "သင်ဆန္ဒအတိုင်းနေထိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรงและขนานกับขอบทางหรือฟุตบาต",
+        "en": "Straight and parallel to the curb or sidewalk.",
+        "my": "လမ်းဆုံ သို့မဟုတ် လမ်းဘေး တည့်တည့်နှင့် အပြိုင်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อควรปฏิบัติขณะขับรถฝ่าหมอกควันหรือฝนคือข้อใด",
+    "q_en": "What should you do while driving through smog or rain?",
+    "q_my": "မီးခိုးမြူတွေ မိုးရွာလို့ ကားမောင်းရင်း ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เปิดไฟส่องสว่างหน้า",
+        "en": "Turn on the front light",
+        "my": "ရှေ့မီးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟหรี่",
+        "en": "Turn on the dimmer lights",
+        "my": "မီးမှိန်မှိန်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถช้าๆ โดยไม่ต้องเปิดไฟ",
+        "en": "Drive slowly without turning on your lights.",
+        "my": "မီးမဖွင့်ဘဲ ဖြည်းဖြည်းမောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรแล้วขับให้เร็วเพื่อป้องกันรถคันหลังชนท้าย",
+        "en": "Honk your horn and drive fast to prevent the car behind you from being rear-ended.",
+        "my": "သင့်နောက်ကားကို နောက်စေ့မဖြစ်အောင် ဟွန်းတီးပြီး အမြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 257,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถยนต์บนทางด่วนที่ถูกต้อง เหมาะสม ควรปฏิบัติอย่างไร",
+    "q_en": "How should driving a car on the expressway be correct and appropriate?",
+    "q_my": "၎) အမြန်လမ်းပေါ်တွင် ကားမောင်းနှင်ခြင်းသည် မည်သို့မှန်ကန်ပြီး သင့်လျော်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขับรถช้าในช่องทางด้านขวา",
+        "en": "Drive slowly in the right lane.",
+        "my": "ညာဘက်လမ်းကြားတွင် ဖြည်းညှင်းစွာ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถอย่างรวดเร็วในช่องทางด้านขวา",
+        "en": "Drive quickly in the right lane.",
+        "my": "ညာဘက်လမ်းကြားတွင် အမြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ขับรถเร็วเกินอัตราที่กฎหมายกำหนด",
+        "en": "Do not drive faster than the speed specified by law.",
+        "my": "ဥပဒေအရ သတ်မှတ်ထားတဲ့ အရှိန်ထက် ပိုမြန်အောင် မမောင်းပါနဲ့။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่ให้ขับรถแซงทางด้านซ้าย",
+        "en": "Do not overtake drivers on the left side.",
+        "my": "ဘယ်ဘက်ခြမ်းက ယာဉ်မောင်းတွေကို မကျော်ပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ไม่ควรรับประทานยานอนหลับก่อนขับขี่ไม่ว่ากรณีใดๆ ใช่หรือไม่",
+    "q_en": "Should drivers not take sleeping pills before driving under any circumstances?",
+    "q_my": "ယာဉ်မောင်းများသည် မည်သည့်အခြေအနေမျိုးတွင်မဆို ကားမမောင်းမီ အိပ်ဆေးမသောက်သင့်ပါ။",
+    "options": [
+      {
+        "th": "ขึ้นอยู่กับอาหารการกิน",
+        "en": "Depends on the food you eat",
+        "my": "သင်စားသောအစားအစာပေါ် မူတည်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นอยู่กับชนิดของยานพาหนะที่ขับขี่",
+        "en": "It depends on the type of vehicle being driven.",
+        "my": "မောင်းနှင်နေတဲ့ ယာဉ်အမျိုးအစားပေါ် မူတည်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ใช่",
+        "en": "No",
+        "my": "မရှိ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช่",
+        "en": "Yes",
+        "my": "ဟုတ်ကဲ့",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถที่มีน้ำหนักบรรทุกมากข้อใดถูกต้องมากที่สุด",
+    "q_en": "When driving a vehicle with a heavy load, which statement is most correct?",
+    "q_my": "၎) လေးလံသောယာဉ်ကို မောင်းနှင်သည့်အခါ မည်သည့်ဖော်ပြချက်သည် အမှန်ကန်ဆုံးလဲ။",
+    "options": [
+      {
+        "th": "เครื่องยนต์ทำงานเต็มประสิทธิภาพ",
+        "en": "The engine works at full efficiency.",
+        "my": "အင်ဂျင်သည် စွမ်းဆောင်ရည်အပြည့်ဖြင့် အလုပ်လုပ်ပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบกันสะเทือนจะนุ่มนวลมากขึ้น",
+        "en": "The suspension will be smoother.",
+        "my": "ဆိုင်းထိန်းစနစ်က ပိုချောလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควันไอเสียจะมากขึ้น",
+        "en": "Exhaust smoke will increase.",
+        "my": "အခိုးအငွေ့တွေ တိုးလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะใช้ระยะในการเบรกยาวขึ้น",
+        "en": "Will use a longer braking distance.",
+        "my": "ပိုကြာတဲ့ ဘရိတ်အကွာအဝေးကို သုံးမယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้เป็นการปฏิบัติที่ไม่ถูกต้อง",
+    "q_en": "Which of the following is an incorrect practice?",
+    "q_my": "အောက်ပါအချက်များထဲမှ မည်သည့်အရာသည် မှားယွင်းသောအလေ့အကျင့်ဖြစ်သနည်း။",
+    "options": [
+      {
+        "th": "เร่งความเร็วขณะที่รถข้างหลังกำลังแซงรถของท่าน",
+        "en": "Accelerate while the car behind is passing your car.",
+        "my": "နောက်ကားက သင့်ကားကိုဖြတ်သွားစဉ် အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่แซงหากมีรถวิ่งสวนมาในระยะใกล้",
+        "en": "Do not overtake if there is a car passing nearby.",
+        "my": "အနီးနားတွင် ကားရှိလျှင် ကျော်မတက်ပါနှင့်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่แซงหากรถคันหน้ากำลังแซงอยู่",
+        "en": "Do not overtake if the car in front is overtaking.",
+        "my": "ရှေ့ကားက ကျော်တက်ရင် မကျော်ပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงได้หากรถข้างหน้าของท่านเปิดไฟเลี้ยวซ้ายและชะลอความเร็วลง",
+        "en": "You can overtake if the car in front of you turns on the left turn signal and slows down.",
+        "my": "ရှေ့ကားက ဘယ်ဘက်ကွေ့အချက်ပြပြီး အရှိန်လျှော့ရင် ကျော်တက်နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการประเมินสถานการณ์อุบัติเหตุที่เกิดขึ้น ไม่ต้องคำนึงถึงข้อใด",
+    "q_en": "In evaluating the accident situation that occurred No need to consider anything.",
+    "q_my": "မတော်တဆ ဖြစ်ပွားမှု အခြေအနေကို အကဲဖြတ်ရာတွင် ဘာမှ ထည့်သွင်းစဉ်းစားရန် မလိုအပ်ပါ။",
+    "options": [
+      {
+        "th": "ช่วงเวลาที่เกิดอุบัติเหตุ",
+        "en": "The time of the accident",
+        "my": "မတော်တဆမှုဖြစ်ချိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พิจารณาผู้ที่ได้รับบาดเจ็บว่ามีกี่คน",
+        "en": "Consider how many people are injured.",
+        "my": "လူမည်မျှ ဒဏ်ရာရသည်ကို သုံးသပ်ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความรุนแรงของอุบัติเหตุที่เกิดขึ้น",
+        "en": "The severity of the accident",
+        "my": "မတော်တဆမှု၏ပြင်းထန်မှု",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ค่าใช้จ่ายที่เกิดจากการรักษาพยาบาล",
+        "en": "Expenses incurred from medical treatment",
+        "my": "ဆေးကုသစရိတ်များ",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สาเหตุสำคัญด้านสิ่งแวดล้อมที่ทำให้การขับรถในเวลากลางคืนมีความเสี่ยงต่อการเกิดอุบัติเหตุสูงกว่าในเวลากลางวันคือข้อใด",
+    "q_en": "What is the main environmental cause that makes driving at night a higher risk of accidents than during the daytime?",
+    "q_my": "နေ့ခင်းဘက်ထက် ညဘက်မောင်းနှင်မှု မတော်တဆဖြစ်နိုင်ခြေ ပိုများစေသည့် အဓိက ပတ်ဝန်းကျင် အကြောင်းရင်းကား အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "คนขับหลับในเนื่องจากเหนื่อยล้า",
+        "en": "The driver fell asleep due to fatigue.",
+        "my": "ယာဉ်မောင်းက ပင်ပန်းနွမ်းနယ်မှုကြောင့် အိပ်ပျော်သွားတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถในขณะมึนเมา",
+        "en": "Driving while intoxicated",
+        "my": "အရက်မူးပြီး ကားမောင်းခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สภาพร่างกายของผู้ขับขี่และสภาพรถไม่พร้อม",
+        "en": "The physical condition of the driver and the vehicle are not ready.",
+        "my": "ယာဉ်မောင်းနှင့် ယာဉ်၏ ပကတိအခြေအနေမှာ အဆင်သင့်မဖြစ်သေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แสงสว่างไม่เพียงพอต่อการมองเห็นในขณะขับรถ",
+        "en": "There is not enough light to see while driving.",
+        "my": "ကားမောင်းနေစဉ် မြင်နိုင်သောအလင်းရောင် လုံလောက်စွာမရှိပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากกระจกแตกขณะขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "If your glass breaks while driving, what should you do?",
+    "q_my": "၎) ကားမောင်းနေရင်း မှန်ကွဲသွားရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ขับรถตรงไปข้างหน้าเพื่อหาศูนย์บริการ",
+        "en": "Drive straight ahead to find a service center.",
+        "my": "ဝန်ဆောင်မှုစင်တာကိုရှာရန် ရှေ့တည့်တည့်ကို မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉินและจอดรถชิดทางด้านซ้าย",
+        "en": "Turn on your emergency lights and park on the left side.",
+        "my": "အရေးပေါ်မီးများကိုဖွင့်ပြီး ဘယ်ဘက်ခြမ်းတွင် ရပ်နားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถถอยหลังเพื่อหาที่จอดรถ",
+        "en": "Drive in reverse to find parking.",
+        "my": "ကားပါကင်ရှာရန် လမ်းပြောင်းပြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชิดทางด้านขวาเพื่อจอดรถ",
+        "en": "Keep to the right to park.",
+        "my": "ကားရပ်ရန် ညာဘက်တွင် ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านต้องขับรถผ่านถนนที่มีระดับน้ำซึ่งมีความลึก ควรปฏิบัติอย่างไร เพื่อให้เบรกทำงานได้เป็นปกติ",
+    "q_en": "When you have to drive through a road with a deep water level. What should I do? so that the brakes can work normally",
+    "q_my": "ရေနက်တဲ့လမ်းကိုဖြတ်ပြီး မောင်းရတဲ့အခါ။ ကျွန်တော်ဘာလုပ်သင့်သလဲ? ဒါမှ ဘရိတ်တွေ ပုံမှန်အတိုင်း အလုပ်လုပ်နိုင်မှာပါ။",
+    "options": [
+      {
+        "th": "หลีกเลี่ยงการใช้เบรกในช่วงระยะทางสั้นๆ",
+        "en": "Avoid using the brakes for short distances.",
+        "my": "တိုတောင်းသောအကွာအဝေးအတွက် ဘရိတ်အသုံးပြုခြင်းကို ရှောင်ကြဉ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถอย่างช้าๆ ในขณะที่ค่อยๆ เหยียบเบรกเรื่อยๆ",
+        "en": "drive slowly while gradually Keep stepping on the brakes.",
+        "my": "ဖြည်းညှင်းစွာ မောင်းနှင်နေစဉ် ဘရိတ်ကို ဖြည်းဖြည်းချင်း နင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็วและรักษาความเร็วให้สูงในช่วงเวลาสั้นๆ",
+        "en": "Accelerate and maintain a high speed for a short period of time.",
+        "my": "အချိန်တိုအတွင်း အရှိန်မြှင့်ပြီး အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถเป็นเวลาอย่างน้อย 1 ชั่วโมงเพื่อให้ระบบเบรกแห้ง",
+        "en": "Stop the vehicle for at least 1 hour to allow the brake system to dry.",
+        "my": "ဘရိတ်စနစ်ခြောက်သွေ့စေရန်အတွက် ယာဉ်ကို အနည်းဆုံး 1 နာရီ ရပ်တန့်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากทราบว่าผู้ขับขี่รถคันข้างหน้าเป็นผู้สูงอายุ ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you know that the driver of the car in front is an elderly person. What should you do?",
+    "q_my": "ရှေ့က ကားကို မောင်းသူက အသက်ကြီးကြီး လို့ သိရင်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "ขับตามหลังในระยะกระชั้นชิด",
+        "en": "Driving closely behind",
+        "my": "နောက်ကနေ နီးနီးကပ်ကပ် မောင်းတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณโดยกะพริบไฟและขับแซงขึ้นหน้าเลย",
+        "en": "Give the signal by flashing your lights and pass in front of you.",
+        "my": "မင်းရဲ့မီးတွေကို မှိတ်တုတ်မှိတ်တုတ်လုပ်ပြီး မင်းရှေ့ကိုဖြတ်ပြီး အချက်ပြပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คาดการณ์ไว้ว่าผู้สูงอายุที่ขับรถอยู่ข้างหน้าท่านอาจขับรถแย่",
+        "en": "It is anticipated that the elderly person driving in front of you may drive poorly.",
+        "my": "သင့်ရှေ့တွင် မောင်းနှင်နေသော သက်ကြီးရွယ်အိုများသည် ဆိုးရွားစွာ မောင်းနှင်နိုင်မည်ဟု ခန့်မှန်းထားသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตระหนักไว้เสมอว่าผู้ขับรถสูงอายุอาจมีปฏิกิริยาตอบสนองไม่ว่องไว",
+        "en": "Keep in mind that elderly drivers may not have quick reflexes.",
+        "my": "သက်ကြီးရွယ်အိုယာဉ်မောင်းများသည် အမြန်တုံ့ပြန်မှုမရရှိနိုင်ကြောင်း သတိပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000294.webp",
+    "q_th": "เมื่อท่านขับรถถึงทางแยก ต้องปฏิบัติอย่างไร",
+    "q_en": "When you drive to an intersection What must be done?",
+    "q_my": "၎) လမ်းဆုံတစ်ခုသို့ မောင်းနှင်သောအခါ ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "หยุดเฉพาะกรณีที่เลี้ยว",
+        "en": "Stop only when turning.",
+        "my": "အလှည့်ရောက်မှသာ ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดเฉพาะเมื่อมีรถบนถนนหลัก",
+        "en": "Stop only when there is a car on the main road.",
+        "my": "လမ်းမကြီးပေါ်တွင် ကားရှိမှသာ ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดหน้าเส้นในจุดที่สามารถมองเห็นได้ชัดเจน",
+        "en": "Stop in front of the line in a place where you can clearly see it.",
+        "my": "ရှင်းရှင်းလင်းလင်းမြင်နိုင်သော နေရာတွင် မျဉ်းရှေ့တွင်ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดหลังเส้น และค่อยๆ เคลื่อนไปข้างหน้าเพื่อให้มองเห็นได้ชัดขึ้น",
+        "en": "Stop behind the line and slowly move forward for better visibility.",
+        "my": "လိုင်းနောက်ကိုရပ်ပြီး ပိုမိုကောင်းမွန်သောမြင်နိုင်စွမ်းအတွက် ရှေ့သို့ ဖြည်းဖြည်းချင်းရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในขณะที่ท่านขับรถและสังเกตเห็นว่าด้านหน้ามีผู้กำลังจะข้ามถนน ท่านจะทำอย่างไร",
+    "q_en": "While you were driving and noticed that there was someone in front of you who was about to cross the road. What will you do?",
+    "q_my": "သင်ကားမောင်းနေစဉ် လမ်းဖြတ်ကူးတော့မည့် သင့်ရှေ့တွင် တစ်စုံတစ်ယောက်ရှိနေသည်ကို သတိပြုမိလိုက်သည်။ သင်ဘာလုပ်မလဲ?",
+    "options": [
+      {
+        "th": "บีบแตรเสียงดัง และขับรถผ่านไปอย่างรวดเร็ว",
+        "en": "Honk loudly and drove past quickly.",
+        "my": "ကျယ်လောင်စွာ ဟွန်းတီးကာ အမြန်ဖြတ်မောင်းသွားခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรกหยุดรถอย่างรวดเร็ว เพื่อให้คนข้ามถนน",
+        "en": "The brakes stop the car quickly. to let people cross the road",
+        "my": "ဘရိတ်က ကားကို အမြန်ရပ်လိုက်သည်။ လူတွေကို လမ်းဖြတ်ကူးဖို့၊",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วและหยุดรถด้วยความปลอดภัย เพื่อให้คนข้ามถนน",
+        "en": "Reduce speed and stop your car safely. to let people cross the road",
+        "my": "အရှိန်လျှော့ပြီး သင့်ကားကို ဘေးကင်းစွာ ရပ်ပါ။ လူတွေကို လမ်းဖြတ်ကူးဖို့၊",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "พยายามขับรถผ่านไปอย่างรวดเร็ว",
+        "en": "Try to drive past quickly.",
+        "my": "အမြန်ဖြတ်ကျော်ဖို့ ကြိုးစားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 268,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่ออยู่ในอุโมงค์ หากรถเกิดเพลิงไหม้และไม่สามารถขับรถต่อไปได้ ควรปฏิบัติอย่างไร",
+    "q_en": "When in the tunnel If the car catches fire and cannot be driven further What should I do?",
+    "q_my": "ဥမင်လိုဏ်ခေါင်းထဲမှာ ကားမီးလောင်ပြီး နောက်ထပ်မမောင်းနိုင်ရင် ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "อยู่ในตัวรถและปิดกระจกทั้งหมด",
+        "en": "Stay inside the vehicle and close all windows.",
+        "my": "ကားအတွင်း၌နေ၍ ပြတင်းပေါက်များအားလုံးကို ပိတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปล่อยให้เครื่องยนต์ทำงาน",
+        "en": "Let the engine run.",
+        "my": "အင်ဂျင်လည်ပတ်ပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปิดไฟทั้งหมด",
+        "en": "Turn off all lights",
+        "my": "မီးအားလုံးကိုပိတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 269,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อพบผู้สูงวัยกำลังจะข้ามถนนควรปฏิบัติอย่างไร",
+    "q_en": "When encountering an elderly person about to cross the road, what should you do?",
+    "q_my": "၎) လမ်းဖြတ်ကူးတော့မယ့် သက်ကြီးရွယ်အိုတစ်ယောက်နဲ့ တွေ့တဲ့အခါ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "หยุดรถและโบกมือให้ข้ามถนน",
+        "en": "Stop the car and wave to cross the road.",
+        "my": "ကားကိုရပ်ပြီး လမ်းဖြတ်ကူးဖို့ ဝှေ့ယမ်းလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คาดหวังว่าผู้สูงอายุจะรอ ให้รถผ่านไปก่อนจึงข้าม",
+        "en": "It is expected that the elderly will wait. Let the car pass first before crossing.",
+        "my": "သက်ကြီးရွယ်အိုများ စောင့်ဆိုင်းနေမည်ဟု မျှော်လင့်ရသည်။ မဖြတ်ခင် ကားကို အရင်ဖြတ်ပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วเพื่อให้ผ่านไปโดยเร็วที่สุด",
+        "en": "Accelerate to get through as quickly as possible.",
+        "my": "မြန်နိုင်သမျှ မြန်မြန် ကျော်ဖြတ်နိုင်ပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระมัดระวังเพราะผู้สูงวัยอาจจะประมาณความเร็วของรถผิดพลาด",
+        "en": "Be careful because elderly people may misjudge the speed of the vehicle.",
+        "my": "သက်ကြီးရွယ်အိုများသည် ယာဉ်၏အရှိန်ကို လွဲမှားစေနိုင်သောကြောင့် သတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านรับประทานยาแก้ไอที่ได้จากเพื่อน ก่อนขับรถควรปฏิบัติอย่างไร",
+    "q_en": "When you take cough medicine given by a friend. What should you do before driving?",
+    "q_my": "၎) ချောင်းဆိုးပျောက်ဆေးကို သူငယ်ချင်းတစ်ယောက်ဆီက သောက်တယ်။ ကားမမောင်းခင် ဘာတွေလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ดื่มกาแฟสูตรเข้มข้น 1 ชั่วโมงก่อนการขับรถ",
+        "en": "Drink strong coffee 1 hour before driving.",
+        "my": "ကားမမောင်းခင် 1 နာရီ ကော်ဖီပြင်းပြင်း သောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับเป็นระยะสั้นๆ เพื่อสังเกตดูว่ายาที่ใช้มีผลต่อการขับรถหรือไม่",
+        "en": "Drive for a short distance. To observe whether the medicine used affects driving or not.",
+        "my": "မလှမ်းမကမ်းကို မောင်းပါ။ အသုံးပြုသောဆေးသည် ကားမောင်းနှင်ခြင်းနှင့် သက်ဆိုင်ခြင်း ရှိ၊ မရှိ စောင့်ကြည့်ရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถามเพื่อนว่ายาที่รับประทานมีผลต่อการขับรถหรือไม่",
+        "en": "Ask a friend if the medications you take affect your driving.",
+        "my": "သင်သောက်သောဆေးများသည် သင့်ကားမောင်းခြင်းကို အကျိုးသက်ရောက်မှုရှိမရှိ သူငယ်ချင်းတစ်ဦးအား မေးမြန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจสอบฉลากว่ายาที่ใช้มีผลต่อการขับรถหรือไม่",
+        "en": "Check the label to see if the medicine you use affects driving.",
+        "my": "သင်အသုံးပြုသောဆေးသည် ကားမောင်းနှင်ခြင်းကို အကျိုးသက်ရောက်မှုရှိမရှိ စစ်ဆေးရန် အညွှန်းကိုစစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 271,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000301.webp",
+    "q_th": "รถคันสีแดงเปิดสัญญาณไฟเลี้ยวขวาขอทางเพราะด้านซ้ายมีรถเสียจอดกีดขวาง รถคันสีเหลืองต้องปฏิบัติอย่างไร",
+    "q_en": "A red car turned on its right turn signal to ask for directions because on the left side there was a broken down car blocking the road. What must you do with a yellow car?",
+    "q_my": "လမ်းဘေးဝဲယာမှာ ကျိုးကျနေတဲ့ ကားတစ်စီးက လမ်းပိတ်ဆို့နေတာကြောင့် ညာဘက်အကွေ့မှာ ကားအနီက ညာဘက်အကွေ့အချက်ပြ ညွှန်ပြခဲ့ပါတယ်။ အဝါရောင်ကားနဲ့ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้สัญญาณแตรเสียงยาว",
+        "en": "Give a long horn signal.",
+        "my": "ဟွန်းရှည်အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับไปจอดต่อท้ายรถที่เสียพร้อมกับเปิดสัญญาณไฟฉุกเฉิน",
+        "en": "Drove to the back of the broken down car with the emergency lights turned on.",
+        "my": "အရေးပေါ်အချက်ပြမီးဖွင့်ထားသဖြင့် ကျိုးကျနေသော ကားနောက်ဘက်သို့ မောင်းသွားခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับไปจอดต่อท้ายให้ชิดกับรถคันหน้ามากที่สุด",
+        "en": "Drive and park as close to the car in front as possible.",
+        "my": "ရှေ့ကားကို တတ်နိုင်သမျှ နီးအောင် မောင်းပြီး ရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้รถที่เปิดสัญญาณไฟเลี้ยวขวาไปก่อน",
+        "en": "Stop the car and let the car with the right turn signal on first.",
+        "my": "ကားကိုရပ်ပြီး ညာဖက်အချက်ပြမီးကို ဦးစွာဖွင့်ထားလိုက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "กรณีที่ท่านเห็นรถคันอื่นให้สัญญาณเพื่อเลี้ยวรถหรือเปลี่ยนช่องทางการเดินรถ ท่านต้องปฏิบัติอย่างไร",
+    "q_en": "In the event that you see another vehicle giving a signal to turn or change the driving lane. What must you do?",
+    "q_my": "အခြားယာဉ်သည် ကွေ့ရန် သို့မဟုတ် မောင်းနှင်ရန် လမ်းပြောင်းရန် အချက်ပြပေးနေသည်ကို သင်တွေ့သောအခါ။ သင်ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "จอดรถ",
+        "en": "park the car",
+        "my": "ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถ",
+        "en": "Stop the car",
+        "my": "ကားရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วเพื่อจะไปก่อน",
+        "en": "Accelerate to go first.",
+        "my": "အရှိန်မြှင့်ပြီး အရင်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอความเร็วและให้ทาง",
+        "en": "Slow down and give way.",
+        "my": "အရှိန်လျှော့ပြီး လမ်းပေးပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เพราะเหตุใดคนขับรถจักรยานยนต์ควรมองข้ามหลังตนเองก่อนการเลี้ยวขวา",
+    "q_en": "Why should motorcycle drivers look behind themselves before making a right turn?",
+    "q_my": "မော်တော်ဆိုင်ကယ်မောင်းသူများသည် ညာဘက်အကွေ့တွင် အဘယ်ကြောင့် မိမိတို့ကိုယ်ကို အနောက်မှကြည့်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เพื่อตรวจสอบจุดบอดด้านหลัง",
+        "en": "To check rear blind spots",
+        "my": "နောက်ဘက် ကန်းကွက်များကို စစ်ဆေးရန်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพื่อฟังเสียงรถที่วิ่งตามมา",
+        "en": "To listen to the sound of cars running behind",
+        "my": "နောက်က ပြေးလာတဲ့ ကားသံကို နားထောင်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อสามารถทรงตัวได้เมื่อทำการเลี้ยว",
+        "en": "To be able to maintain balance when making turns.",
+        "my": "အလှည့်ကျတဲ့အခါ ဟန်ချက်ညီအောင် ထိန်းသိမ်းနိုင်ရမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถจักรยานยนต์ไม่มีกระจก",
+        "en": "Motorcycles do not have mirrors.",
+        "my": "ဆိုင်ကယ်တွေမှာ မှန်တွေ မရှိဘူး။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 274,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านควรปฏิบัติอย่างไรต่อคนขับรถที่อ่อนประสบการณ์",
+    "q_en": "How should you treat inexperienced drivers?",
+    "q_my": "အတွေ့အကြုံမရှိသော ယာဉ်မောင်းများကို မည်သို့ ဆက်ဆံသင့်သနည်း။",
+    "options": [
+      {
+        "th": "อดทนและเตรียมพร้อม เนื่องจากคนขับอาจตอบสนองได้ช้า",
+        "en": "Be patient and prepared. This is because the driver may be slow to respond.",
+        "my": "စိတ်ရှည်ရှည်ထားပြီး ပြင်ဆင်ပါ။ အဘယ်ကြောင့်ဆိုသော် ယာဉ်မောင်းသည် တုံ့ပြန်ရန် နှေးကွေးနေခြင်းကြောင့်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "กะพริบไฟเพื่อบอกคนขับรถว่าปลอดภัยที่จะไปได้",
+        "en": "Flashes lights to tell the driver it's safe to go.",
+        "my": "မောင်းသွားရင် အန္တရာယ်ကင်းတယ်လို့ ပြောဖို့ မီးရောင်တွေ လင်းနေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงให้เร็วที่สุดเท่าที่ทำได้",
+        "en": "Overtake as fast as you can.",
+        "my": "တတ်နိုင်သမျှ မြန်မြန်ကျော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรเพื่อเตือนว่ามีรถอยู่",
+        "en": "Honk the horn to warn of the presence of a car.",
+        "my": "ကားတစ်စီးရှိနေတာကိုသတိပေးဖို့ ဟွန်းတီးတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 275,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นพฤติกรรมที่ถูกต้องและแสดงมารยาทที่ดีของผู้ขับรถ",
+    "q_en": "Which is correct behavior and shows good manners for drivers?",
+    "q_my": "ဘယ်ဟာက မှန်ကန်တဲ့ အပြုအမူဖြစ်ပြီး ယာဉ်မောင်းတွေအတွက် ကောင်းမွန်တဲ့ အမူအကျင့်တွေ ပြသမလဲ ။",
+    "options": [
+      {
+        "th": "ต้องการไปทางตรงแต่ขับรถในช่องจราจรเลี้ยวซ้ายหรือเลี้ยวขวาหรือกลับรถ",
+        "en": "Want to go straight but drive in the traffic lane, turn left or right, or make a U-turn?",
+        "my": "ဖြောင့်ဖြောင့်သွားချင်သော်လည်း ယာဉ်ကြောလမ်းကြားတွင် မောင်း၊ ဘယ် သို့မဟုတ် ညာကွေ့ချင် သို့မဟုတ် ဂငယ်ကွေ့ချင်ပါသလား။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ใช่ผู้พิการแต่จอดรถในพื้นที่จอดรถของผู้พิการ",
+        "en": "Not disabled but parked in a disabled parking space",
+        "my": "မသန်စွမ်းသော်လည်း မသန်စွမ်းကားပါကင်တွင် ရပ်ထားသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถขวางรถคันอื่นโดยเข้าเกียร์และเบรกมือ",
+        "en": "Park your car in front of another car with the car in gear and the handbrake on.",
+        "my": "သင့်ကားကို အခြားကားရှေ့တွင် ဂီယာပါရှိထားပြီး လက်ဘရိတ်ဖြင့် ကားကိုရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กลับรถที่จุดกลับรถทุกครั้งแม้จะอยู่ไกล",
+        "en": "Always make a U-turn at the U-turn point, even if it is far away.",
+        "my": "ဝေးနေရင်တောင် ဂငယ်ကွေ့မှာ အမြဲတမ်း ဂငယ်ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 276,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ยาแก้เวียนศีรษะเมารถ มีผลข้างเคียงที่รบกวนต่อการขับขี่หรือไม่",
+    "q_en": "Medicine to cure dizziness and motion sickness Are there any side effects that interfere with driving?",
+    "q_my": "မူးဝေခြင်း နှင့် လှုပ်ရှားမှု ဖျားနာခြင်းကို ကုသရန် ဆေးဝါးများသည် ကားမောင်းခြင်းကို အနှောင့်အယှက်ဖြစ်စေသော ဘေးထွက်ဆိုးကျိုးများ ရှိပါသလား။",
+    "options": [
+      {
+        "th": "มี แต่ไม่เกี่ยวข้องกับการขับขี่",
+        "en": "Yes, but not related to driving.",
+        "my": "ဟုတ်တယ်၊ ဒါပေမယ့် ကားမောင်းတာနဲ့ မဆိုင်ဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นกับความรุนแรงของโรค",
+        "en": "Depending on the severity of the disease",
+        "my": "ရောဂါ၏ပြင်းထန်မှုပေါ် မူတည်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มี เช่น มึนงง เวียนศีรษะ มองเห็นไม่ชัด",
+        "en": "There are things like drowsiness, dizziness, and blurred vision.",
+        "my": "အိပ်ငိုက်ခြင်း၊ မူးဝေခြင်းနှင့် အမြင်မှုန်ဝါးခြင်းစသည့်အရာများ ရှိပါသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่มี",
+        "en": "None",
+        "my": "တစ်ခုမှ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 277,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับตามรถบรรทุกเข้าสู่ทางแยก คนขับรถบรรทุกให้สัญญาณเลี้ยวซ้าย ควรปฏิบัติอย่างไร",
+    "q_en": "When you follow the truck into an intersection Truck driver signals to turn left What should I do?",
+    "q_my": "လမ်းဆုံတစ်ခုသို့ ကုန်တင်ကားနောက်လိုက်သည့်အခါ ဘယ်ဘက်ကွေ့ရန် အချက်ပြပြီး ထရပ်ကားမောင်းသူက ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "แซงรถบรรทุก หากมีพื้นที่มากพอ",
+        "en": "Overtake trucks if you have enough space.",
+        "my": "နေရာအလုံအလောက်ရှိလျှင် ထရပ်ကားများကို ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ห้ามแซงรถบรรทุกขณะอยู่ที่ทางแยก",
+        "en": "Do not overtake trucks while at intersections.",
+        "my": "လမ်းဆုံများတွင် ကုန်တင်ယာဉ်များကို ကျော်တက်ခြင်း မပြုပါနှင့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงรถบรรทุกเฉพาะในกรณีที่ไม่มีรถสวน",
+        "en": "Overtake trucks only if there are no oncoming vehicles.",
+        "my": "လာမည့်ယာဉ်များမရှိမှသာ ထရပ်ကားများကို ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ห้ามแซงรถบรรทุกจนกว่ารถบรรทุกจะเริ่มเลี้ยว",
+        "en": "Do not overtake a truck until the truck has begun to turn.",
+        "my": "ကုန်တင်ကားကို ကွေ့ပြီးသည်အထိ ထရပ်ကားကို မကျော်ပါနှင့်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "แอลกอฮอล์มีผลอย่างไรกับผู้ขับรถ",
+    "q_en": "What effect does alcohol have on drivers?",
+    "q_my": "အရက်သည် ယာဉ်မောင်းများအပေါ် မည်သို့အကျိုးသက်ရောက်မှုရှိသနည်း။",
+    "options": [
+      {
+        "th": "ปฏิกิริยาการตอบสนองต่อเหตุการณ์ช้าลง",
+        "en": "Slow reactions to events",
+        "my": "ဖြစ်ရပ်များအပေါ် တုံ့ပြန်မှု နှေးကွေးခြင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้สามารถรับรู้สถานการณ์เพิ่มขึ้น",
+        "en": "Makes it possible to be more aware of the situation",
+        "my": "အခြေအနေကို ပိုသတိထားနိုင်စေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วยเร่งปฏิกิริยาการตอบสนองต่อเหตุการณ์",
+        "en": "Helps speed up reactions to events.",
+        "my": "အဖြစ်အပျက်များကို တုံ့ပြန်မှုများကို မြန်ဆန်စေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วยพัฒนาปฏิสัมพันธ์กับสภาวะรอบตัว",
+        "en": "Helps develop interactions with surrounding conditions.",
+        "my": "ပတ်ဝန်းကျင်အခြေအနေများနှင့် အပြန်အလှန်ဆက်သွယ်မှုကို တိုးတက်စေရန် ကူညီပေးသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 279,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านจะทำการแซงรถจักรยาน ควรเว้นระยะห่างให้มาก เพราะเหตุใด",
+    "q_en": "When you will overtake a bicycle. Why should you keep a large distance?",
+    "q_my": "၎) စက်ဘီးကို ကျော်တက်တဲ့အခါ ဘာကြောင့် အကွာအဝေးကြီးကို ထားသင့်တာလဲ။",
+    "options": [
+      {
+        "th": "ผู้ใช้รถจักรยาน อาจลงจากรถ",
+        "en": "Bicycle users may get out of their vehicles.",
+        "my": "စက်ဘီးအသုံးပြုသူများသည် ၎င်းတို့၏ယာဉ်များမှ ထွက်သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ใช้รถจักรยาน อาจหักเลี้ยวกะทันหัน",
+        "en": "Bicycle users May swerve suddenly",
+        "my": "စက်ဘီးအသုံးပြုသူများသည် ရုတ်တရက် ကွေ့ပတ်သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ผู้ใช้รถจักรยาน อาจจำเป็นต้องเลี้ยวซ้าย",
+        "en": "Bicycle users It may be necessary to turn left.",
+        "my": "စက်ဘီးအသုံးပြုသူများသည် ဘယ်ဘက်သို့ လှည့်ရန် လိုအပ်ပေမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ใช้รถจักรยาน อาจเร่งความเร็ว",
+        "en": "Bicycle users may speed up",
+        "my": "စက်ဘီးအသုံးပြုသူများသည် အရှိန်မြှင့်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถผ่านทางร่วมทางแยกต้องปฏิบัติอย่างไร",
+    "q_en": "What must you do when driving through an intersection?",
+    "q_my": "၎) လမ်းဆုံကိုဖြတ်မောင်းရင် ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "หากไม่มีสัญญาณไฟจราจรให้รถคันที่ใหญ่กว่าผ่านทางร่วมทางแยกไปก่อน",
+        "en": "If there is no traffic light, allow larger vehicles to pass through the intersection first.",
+        "my": "မီးပွိုင့်မရှိပါက လမ်းဆုံလမ်းခွမှ ယာဉ်ကြီးများကို ဦးစွာဖြတ်သန်းခွင့်ပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้รถที่มีอยู่ในทางร่วมทางแยกขับผ่านไปก่อน",
+        "en": "Let existing vehicles at the intersection drive past first.",
+        "my": "လမ်းဆုံမှာ ရှိပြီးသားယာဉ်တွေကို အရင်ဖြတ်ကျော်ပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เมื่อพบป้ายเตือนสัญญาณไฟบริเวณทางร่วมทางแยกให้ขับรถไปตามปกติ",
+        "en": "When you see a warning sign at an intersection, drive as normal.",
+        "my": "လမ်းဆုံမှာသတိပေးဆိုင်းဘုတ်တွေ့ရင် ပုံမှန်အတိုင်း မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อพบป้ายเตือนทางร่วมทางแยกให้ขับรถด้วยความเร็วปกติ",
+        "en": "When you see a warning sign at an intersection, drive at normal speed.",
+        "my": "လမ်းဆုံတွင်သတိပေးသည့် ဆိုင်းဘုတ်တွေ့ပါက ပုံမှန်အရှိန်ဖြင့် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 281,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่หลักการเคลื่อนย้ายผู้ป่วยที่ควรปฏิบัติ",
+    "q_en": "Which is not a principle for patient transport that should be followed?",
+    "q_my": "ဘယ်ဟာက လူနာသယ်ယူပို့ ဆောင်ရေးမှာ လိုက်နာသင့် တဲ့ နိယာမလဲ။",
+    "options": [
+      {
+        "th": "ต้องให้การปฐมพยาบาลก่อนการเคลื่อนย้าย",
+        "en": "First aid must be given before moving.",
+        "my": "မရွေ့မီ ရှေးဦးသူနာပြုစုရပါမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ต้องเคลื่อนย้ายอย่างถูกต้อง",
+        "en": "must be moved correctly",
+        "my": "မှန်ကန်စွာ ရွှေ့ပြောင်းရပါမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ต้องเคลื่อนย้ายทันทีไม่ต้องดูอาการ",
+        "en": "Must be moved immediately, no symptoms required.",
+        "my": "ရောဂါလက္ခဏာမပြဘဲ ချက်ချင်းရွှေ့ရပါမယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ต้องทราบว่าผู้บาดเจ็บได้รับบาดเจ็บบริเวณไหน",
+        "en": "You must know where the injured person was injured.",
+        "my": "ဒဏ်ရာရသူသည် ဒဏ်ရာရသည့်နေရာကို သိရမည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 282,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อต้องการแซงรถบรรทุกที่วิ่งช้าบนถนนที่มีการจราจรหนาแน่นควรปฏิบัติอย่างไร",
+    "q_en": "What should you do when you want to overtake a slow truck on a road with heavy traffic?",
+    "q_my": "ယာဉ်ကြောထူထပ်တဲ့လမ်းမှာ အနှေးထရပ်ကားကို ကျော်တက်ချင်ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เว้นระยะให้ห่างจากรถบรรทุกเพื่อที่จะสามารถเห็นด้านหน้าว่าสามารถแซงได้หรือไม่",
+        "en": "Keep your distance from the truck so that you can see in front of you whether you can overtake it or not.",
+        "my": "ကျော်တက်နိုင်သည်ဖြစ်စေ မကျော်နိုင်သည်ကို ရှေ့မှမြင်နိုင်စေရန် ထရပ်ကားနှင့် အကွာအဝေးကို ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตามหลังอย่างกระชั้นชิดและคอยเคลื่อนที่ออกเพื่อมองถนนข้างหน้า",
+        "en": "Follow closely behind and keep moving to look at the road ahead.",
+        "my": "နောက်သို့ အနီးကပ်လိုက်ကာ ရှေ့သွားမည့်လမ်းကို လှမ်းကြည့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กะพริบไฟเพื่อให้รถที่สวนมาให้ทาง",
+        "en": "Flash your lights to let oncoming vehicles give way.",
+        "my": "လာမည့်ကားများကို လမ်းလွှဲနိုင်စေရန် သင့်မီးများကို မီးညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอด้านหลังรถบรรทุก จนกว่าคนขับจะโบกมือให้สัญญาณว่าผ่านได้",
+        "en": "Waiting behind the truck until the driver waves to signal that they can pass.",
+        "my": "ယာဉ်မောင်းက ဖြတ်သွားနိုင်ကြောင်း အချက်ပြသည့်အထိ ထရပ်ကားနောက်တွင် စောင့်နေသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 283,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับรถช่วงเวลากลางคืน ควรที่จะมีการใช้ไฟหน้ารถอย่างไร",
+    "q_en": "In driving at night How should car headlights be used?",
+    "q_my": "၎) ညဘက်မောင်းနှင်ရာတွင် ကားရှေ့မီးကို မည်သို့အသုံးပြုသင့်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟสูง ตลอดเวลาที่ขับขี่",
+        "en": "Turn on the high beams all the time while driving.",
+        "my": "ကားမောင်းနေစဉ် အမြင့်တန်းများကို အမြဲဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟต่ำเมื่อมีรถอยู่ด้านหน้าและรถสวนทางมา",
+        "en": "Turn on low beam when there is a car in front of you and traffic coming in the opposite direction.",
+        "my": "သင့်ရှေ့တွင် ကားရှိ၍ ဆန့်ကျင်ဘက်လမ်းကြောင်းသို့ လာသောအခါတွင် low beam ကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดทั้งไฟหน้า และไฟตัดหมอก",
+        "en": "Turn on both the headlights and fog lights.",
+        "my": "ရှေ့မီးနှင့် မြူမီးနှစ်လုံးကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟหน้า ไฟตัดหมอก และไฟกะพริบฉุกเฉิน",
+        "en": "Turn on your headlights, fog lights, and emergency flashers.",
+        "my": "သင့်ရှေ့မီးများ၊ မြူမီးများနှင့် အရေးပေါ် မီးရောင်များကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 284,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ยาทุกชนิดที่มีจำหน่ายในร้านขายยา สามารถรับประทานได้โดยไม่มีผลต่อการขับขี่ใช่หรือไม่",
+    "q_en": "All types of medicines available in pharmacies. Can it be eaten without affecting driving?",
+    "q_my": "၎) ဆေးဆိုင်များတွင် ရနိုင်သော ဆေးဝါးအမျိုးအစားအားလုံး။ ကားမောင်းတာကို မထိခိုက်စေဘဲ စားလို့ရလား။",
+    "options": [
+      {
+        "th": "ใช่",
+        "en": "Yes",
+        "my": "ဟုတ်ကဲ့",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ใช่",
+        "en": "No",
+        "my": "မရှိ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขึ้นอยู่กับชนิดของยานพาหนะที่ขับขี่",
+        "en": "It depends on the type of vehicle being driven.",
+        "my": "မောင်းနှင်နေတဲ့ ယာဉ်အမျိုးအစားပေါ် မူတည်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นอยู่กับอาหารการกิน",
+        "en": "Depends on the food you eat",
+        "my": "သင်စားသောအစားအစာပေါ် မူတည်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 285,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "วิธีปฏิบัติเป็นสิ่งแรกเมื่อรถยางแตกคือข้อใด",
+    "q_en": "What is the first thing to do when your car's tire bursts?",
+    "q_my": "၎) သင့်ကားတာယာကွဲသောအခါ ပထမဆုံးလုပ်ရမည့်အရာကဘာလဲ။",
+    "options": [
+      {
+        "th": "จับพวงมาลัยให้มั่นประคองรถให้ปลอดภัย",
+        "en": "Hold the steering wheel firmly to keep the car safe.",
+        "my": "ကားအန္တရာယ်ကင်းစေရန် စတီယာရင်ကို မြဲမြံစွာကိုင်ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "มองกระจกหลัง",
+        "en": "Look in the rear mirror",
+        "my": "နောက်မှန်ကိုကြည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบคันเร่ง",
+        "en": "Step on the gas pedal.",
+        "my": "ဓာတ်ငွေ့နင်းစက်ကို နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรล็อกประตูรถทุกบาน",
+        "en": "All car doors should be locked.",
+        "my": "ကားတံခါးအားလုံးကို သော့ခတ်ထားသင့်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 286,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อผู้โดยสารเป็นเด็ก 5 ขวบที่มีความสูงน้อยกว่า 1.35 เมตร หากไม่มีที่นั่งสำหรับเด็กให้เด็กนั่งอย่างไร",
+    "q_en": "When the passenger is a 5-year-old child whose height is less than 1.35 meters, if there is no child seat, how can the child sit?",
+    "q_my": "ခရီးသည်သည် အရပ် 1.35 မီတာအောက်ရှိသော အသက် 5 နှစ်အရွယ် ကလေးဖြစ်သောအခါ ကလေးထိုင်ခုံမရှိပါက ကလေးသည် မည်သို့ထိုင်နိုင်မည်နည်း။",
+    "options": [
+      {
+        "th": "ให้เด็กนั่งที่นั่งปกติและคาดเข็มขัดนิรภัยร่วมกับผู้ใหญ่",
+        "en": "Place your child in a normal seat and wear a seat belt with an adult.",
+        "my": "သင့်ကလေးကို ပုံမှန်ထိုင်ခုံတွင် ထားကာ လူကြီးတစ်ဦးနှင့် ထိုင်ခုံခါးပတ်ကို ဝတ်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้เด็กนั่งที่นั่งปกติและคาดเข็มขัดนิรภัยสำหรับผู้ใหญ่",
+        "en": "Put the child in a regular seat and fasten the adult seat belt.",
+        "my": "ကလေးကို ပုံမှန်ထိုင်ခုံမှာထားပြီး လူကြီးထိုင်ခုံခါးပတ်ကို ပတ်ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "นั่งระหว่างเด็กคนอื่นๆ",
+        "en": "Sit between other children",
+        "my": "တခြားကလေးတွေကြားမှာ ထိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นั่งหลังที่นั่งผู้โดยสาร",
+        "en": "Sit behind the passenger seat",
+        "my": "ခရီးသည်ထိုင်ခုံနောက်မှာ ထိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "พฤติกรรมใดที่ผู้ขับขี่ไม่ควรปฏิบัติขณะขับขี่บนถนน",
+    "q_en": "What behavior should drivers not do while driving on the road?",
+    "q_my": "၎) လမ်းပေါ်မှာ ကားမောင်းရင်း ယာဉ်မောင်းတွေ ဘာတွေ မလုပ်သင့်ဘူး။",
+    "options": [
+      {
+        "th": "ไม่ขับรถจี้หลังกระชั้นชิด",
+        "en": "Don't drive too close behind.",
+        "my": "နောက်ကနေ အရမ်းမမောင်းပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้สัญญาณไฟเลี้ยวเมื่อต้องการเลี้ยวหรือเปลี่ยนเลน",
+        "en": "Use your turn signal when turning or changing lanes.",
+        "my": "ကွေ့ရန် သို့မဟုတ် လမ်းများပြောင်းသည့်အခါ သင့်အလှည့်အချက်ပြကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินเพื่อวิ่งตรงบนทางแยก",
+        "en": "Turn on your emergency lights to drive straight at the intersection.",
+        "my": "လမ်းဆုံတွင် ဖြောင့်တန်းစွာ မောင်းနှင်ရန် သင်၏ အရေးပေါ်မီးများကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่แซงกระชั้นชิด",
+        "en": "Not overtaking too closely",
+        "my": "အရမ်းမလွန်ပါဘူး။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 288,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000327.webp",
+    "q_th": "จากรูป ในขณะสัญญาณไฟเขียว หากท่านต้องการจะขับตรงไป แต่ท่านได้ยินสัญญาณรถพยาบาลมาทางขวามือของท่าน ท่านควร",
+    "q_en": "From the picture at the time of the green light If you want to drive straight But you hear an ambulance signal coming to your right. You should",
+    "q_my": "မီးစိမ်းနေတဲ့အချိန်မှာ ပုံထဲကအတိုင်း တည့်တည့် မောင်းချင်ရင် လူနာတင်ယာဉ် အချက်ပြသံ ကြားလိုက်ရတယ်။ လုပ်သင့်တယ်။",
+    "options": [
+      {
+        "th": "ขับผ่านไปตามปกติ",
+        "en": "Drive past as usual",
+        "my": "ထုံးစံအတိုင်း ဖြတ်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอรถพยาบาลไปก่อน",
+        "en": "Stop and wait for the ambulance.",
+        "my": "ရပ်ပြီး လူနာတင်ကားကို စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้สัญญาณแตรเพื่อเตือนรถพยาบาลให้รู้ว่าท่านจะไปก่อน",
+        "en": "Use your horn to alert the ambulance that you will go first.",
+        "my": "မင်းအရင်သွားရမယ့် လူနာတင်ကားကို သတိပေးဖို့ မင်းရဲ့ဟွန်းကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รีบๆ ขับผ่านไปจะได้ไม่ขวางทางรถพยาบาล",
+        "en": "Hurry and drive past so you don't get in the way of the ambulance.",
+        "my": "မြန်မြန်ကျော်ပြီး လူနာတင်ကားပေါ်မတက်စေနဲ့။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 289,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านต้องการเลี้ยวซ้ายจากถนนรองเข้าถนนหลัก มีรถบรรทุกวิ่งมาทางด้านขวา เพราะเหตุใดจึงควรหยุดรอแม้ว่ามีเวลาพอที่จะเลี้ยวเข้าทางหลัก",
+    "q_en": "When you want to turn left from the secondary road onto the main road. There's a truck coming to the right. Why is it a good idea to stop and wait even if there is enough time to turn onto the main road?",
+    "q_my": "အလယ်တန်းလမ်းကနေ ဘယ်ဘက်ကွေ့ချင်တဲ့အခါ လမ်းမကြီးပေါ်တက်ပါ။ ညာဘက်တွင် ထရပ်ကားတစ်စီး ရောက်လာသည်။ လမ်းမကြီးပေါ်တက်ဖို့ အချိန်အလုံအလောက်ရှိရင်တောင် ရပ်ပြီး စောင့်ဖို့ ဘာကြောင့် စိတ်ကူးကောင်းလဲ။",
+    "options": [
+      {
+        "th": "รถบรรทุกอาจบดบังรถทางด้านซ้ายได้",
+        "en": "Trucks may block vehicles on the left.",
+        "my": "ထရပ်ကားများသည် ဘယ်ဘက်ရှိ ယာဉ်များကို ပိတ်ဆို့နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุกอาจเลี้ยวในทันทีทันใด",
+        "en": "The truck may suddenly turn.",
+        "my": "ထရပ်ကား ရုတ်တရက် ကွေ့သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุกควบคุมได้ยากในทางตรง",
+        "en": "The truck is difficult to control in a straight line.",
+        "my": "ထရပ်ကားသည် မျဉ်းဖြောင့်အတိုင်း ထိန်းချုပ်ရန် ခက်ခဲသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุกอาจบดบังรถยนต์ที่ทำการแซงได้",
+        "en": "Trucks may block overtaking cars.",
+        "my": "ထရပ်ကားများသည် ကျော်တက်ကားများကို ပိတ်ဆို့နိုင်သည်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถตามหลังรถบรรทุกโดยเว้นระยะห่างไว้ แต่มีรถยนต์เข้ามาแทรกในระยะห่างนั้น ควรปฏิบัติอย่างไร",
+    "q_en": "When you drive behind a truck, keeping a distance But there were cars inserted in that distance. What should I do?",
+    "q_my": "ထရပ်ကားနောက်က လိုက်မောင်းတဲ့အခါ အကွာအဝေးကို ထိန်းထားပေမယ့် အဲဒီအကွာအဝေးမှာ ကားတွေ ပါ၀င်ပါတယ်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "บีบแตร",
+        "en": "Honk the horn",
+        "my": "ဟွန်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เริ่มทำการแซง",
+        "en": "Start overtaking",
+        "my": "စတင်ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เว้นระยะห่างออกไปอีก",
+        "en": "Keep the distance further apart.",
+        "my": "အကွာအဝေးကို ခပ်ခွာခွာထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "กะพริบไฟ",
+        "en": "Flashing lights",
+        "my": "မှိတ်တုတ်မှိတ်တုတ်မီးများ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 291,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สาเหตุของการเกิดอุบัติเหตุ",
+    "q_en": "Cause of the accident",
+    "q_my": "ယာဉ်တိုက်မှုဖြစ်ရတဲ့အကြောင်းရင်း",
+    "options": [
+      {
+        "th": "คน รถ ถนน",
+        "en": "people car road",
+        "my": "လူတွေ ကားလမ်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คน รถ",
+        "en": "people car",
+        "my": "လူကား",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คน",
+        "en": "people",
+        "my": "လူတွေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คน รถ ถนน สิ่งแวดล้อม",
+        "en": "people, cars, roads, environment",
+        "my": "လူ၊ ကား၊ လမ်း၊ ပတ်ဝန်းကျင်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 292,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000333.webp",
+    "q_th": "เมื่อท่านขับรถขณะจะเลี้ยวซ้ายตรงทางแยกและมีคนกำลังข้ามถนน ควรปฏิบัติอย่างไร",
+    "q_en": "When you are driving while turning left at an intersection and someone is crossing the road. What should I do?",
+    "q_my": "၎) လမ်းဆုံမှာ ဘယ်ဘက်ကွေ့ပြီး တစ်စုံတစ်ယောက် လမ်းဖြတ်ကူးနေချိန် ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "เลี้ยวซ้ายและเว้นระยะห่างจากคนข้ามถนนไว้",
+        "en": "Turn left and keep your distance from pedestrians.",
+        "my": "ဘယ်ဘက်ကွေ့ပြီး လမ်းသွားလမ်းလာတွေနဲ့ ခပ်လှမ်းလှမ်းမှာထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดและโบกมือให้คนข้ามถนนข้ามไปก่อน",
+        "en": "Stop and wave to pedestrians to cross the road first.",
+        "my": "လမ်းဖြတ်ကူးဖို့ လမ်းသွားလမ်းလာတွေကို ရပ်ပြီး လက်ဝှေ့ယမ်းပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้ทางแก่คนข้ามถนน",
+        "en": "Give way to people crossing the road",
+        "my": "လမ်းဖြတ်ကူးသူတွေကို လမ်းပေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บีบแตรและทำการเลี้ยว",
+        "en": "Honk the horn and make a turn.",
+        "my": "ဟွန်းတီးပြီး လှည့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 293,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อขับรถในช่วงที่มีการจราจรเคลื่อนตัวช้า ก่อนเปลี่ยนช่องทางเดินรถควรปฏิบัติอย่างไร",
+    "q_en": "When driving during slow-moving traffic What should you do before changing the bus lane?",
+    "q_my": "အနှေးယာဉ်ကြောမှာ မောင်းနှင်တဲ့အခါ ဘတ်စ်ကားလမ်းကြောမပြောင်းခင် ဘာတွေလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้สัญญาณมือ 'ขับช้าลง'",
+        "en": "Give the hand signal 'drive more slowly'.",
+        "my": "လက်အချက်ပြပြီး 'ဖြည်းဖြည်းမောင်းပါ'။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปลี่ยนเป็นเกียร์ 1",
+        "en": "Change to 1st gear",
+        "my": "1st gear သို့ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรและกะพริบไฟ",
+        "en": "Honk the horn and flash the lights.",
+        "my": "ဟွန်းကို ဟွန်းတီးပြီး မီးညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจดูรถจักรยานยนต์ที่แทรกตามช่องว่างระหว่างรถ",
+        "en": "Check the motorcycles that are inserted into the gaps between the vehicles.",
+        "my": "ယာဉ်များကြားရှိ ကွက်လပ်များတွင် ထည့်သွင်းထားသော ဆိုင်ကယ်များကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 294,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อต้องการเลี้ยวขวาจากทางหลักเข้าสู่ทางรอง ควรปฏิบัติอย่างไรก่อนทำการเลี้ยว",
+    "q_en": "When you want to turn right from the main road onto the secondary road. What should you do before making a turn?",
+    "q_my": "လမ်းမကြီးမှ ညာဘက်သို့ ကွေ့လိုသောအခါ အလယ်တန်းလမ်းပေါ်သို့ တက်ပါ။ အလှည့်မကျခင် ဘာတွေလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ใช้เกียร์ 1",
+        "en": "Use 1st gear",
+        "my": "1st gear ကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจดูว่ามีรถที่กำลังจะแซงหรือไม่",
+        "en": "Check to see if there is a car that is about to overtake you.",
+        "my": "သင့်အား ကျော်တက်မည့် ကားရှိမရှိ စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุดและใช้เบรกมือ",
+        "en": "Stop and use the handbrake.",
+        "my": "ရပ်ပြီး လက်ဘရိတ်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปิดไฟเลี้ยวขวา",
+        "en": "Turn off the right turn signal",
+        "my": "ညာဘက်ကွေ့ အချက်ပြကို ပိတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 295,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เพราะเหตุใดจึงจำเป็นต้องหมุนกระจกให้น้ำไหลเข้าในรถ เมื่อขับรถตกน้ำ",
+    "q_en": "Why is it necessary to turn the window to let water flow into the car? When driving into water",
+    "q_my": "၎) ကားထဲကို ရေစီးဝင်အောင် ပြတင်းပေါက်ကို လှည့်ဖို့ ဘာကြောင့် လိုအပ်တာလဲ။ ရေထဲ မောင်းတဲ့အခါ",
+    "options": [
+      {
+        "th": "เพื่อดูดอากาศหายใจให้เข้าปอดมากที่สุด",
+        "en": "To suck inhaled air into the lungs as much as possible",
+        "my": "အဆုတ်ထဲကို တတ်နိုင်သမျှ ရှူသွင်းတဲ့လေကို စုပ်ယူပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อปรับความดันในรถและนอกรถให้เท่ากัน",
+        "en": "To equalize the pressure in the car and outside the car.",
+        "my": "ကားအတွင်းနှင့် ကားအပြင်ဘက်ရှိ ဖိအားကို ညီမျှစေရန်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพื่อเป็นทางออกสำหรับผู้ติดอยู่ในรถ",
+        "en": "To provide a solution for people stuck in cars.",
+        "my": "ကားပိတ်နေသူများအတွက် ဖြေရှင်းချက်ပေးရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อไม่ให้กระจกรถแตก",
+        "en": "To prevent the car window from breaking",
+        "my": "ကားပြတင်းပေါက် ကွဲမရအောင်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 296,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000337.webp",
+    "q_th": "เมื่อเข้าสู่วงเวียนขนาดเล็ก หากเห็นรถบรรทุกให้สัญญาณไฟเลี้ยวซ้ายแต่ขับชิดขวา ควรทำอย่างไร",
+    "q_en": "When entering a small roundabout If you see a truck giving a left turn signal but driving on the right, what should you do?",
+    "q_my": "အဝိုင်းသေးသေးလေးထဲကို ဝင်တဲ့ ထရပ်ကားက ဘယ်ကွေ့အချက်ပြပေမယ့် ညာဘက်ကို မောင်းနေတာတွေ့ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "บีบแตร",
+        "en": "Honk the horn",
+        "my": "ဟွန်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำตามรถบรรทุก",
+        "en": "Follow the truck",
+        "my": "ထရပ်ကားနောက်ကိုလိုက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เว้นระยะห่าง",
+        "en": "keep distance",
+        "my": "အကွာအဝေးထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงจากทางด้านซ้าย",
+        "en": "Passing from the left",
+        "my": "ဘယ်ဘက်မှ ဖြတ်သွားသည်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 297,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000338.webp",
+    "q_th": "จากรูป หากท่านต้องการที่จะเลี้ยวขวาที่ทางแยกรูปตัว T ท่านจะต้องปฏิบัติอย่างไร",
+    "q_en": "From the picture, if you want to turn right at a T-shaped intersection, what should you do?",
+    "q_my": "ပုံထဲက T ပုံသဏ္ဍာန်လမ်းဆုံမှာ ညာဘက်ကွေ့ချင်ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้ทั้งรถทางขวาและซ้ายไปก่อน",
+        "en": "Let both cars on the right and left go first.",
+        "my": "ညာဖက်နဲ့ ဘယ်ဘက် ကားနှစ်စီးစလုံး အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้รถทางซ้ายไปก่อน",
+        "en": "Let the car on the left go first.",
+        "my": "ဘယ်ဘက်ခြမ်းက ကားကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เลี้ยวขวาได้ทันที",
+        "en": "You can turn right immediately.",
+        "my": "ချက်ချင်း ညာဘက်ကို ကွေ့နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้รถทางขวาไปก่อน",
+        "en": "Let the car on the right go first.",
+        "my": "ညာဘက်က ကားကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 298,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000339.webp",
+    "q_th": "จากรูป รถคันใดจะต้องให้ทาง",
+    "q_en": "From the picture, which car must give way?",
+    "q_my": "ပုံထဲက ဘယ်ကားက ပေးရမလဲ။",
+    "options": [
+      {
+        "th": "รถคันสีแดง",
+        "en": "red car",
+        "my": "ကားအနီ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถคันสีขาว",
+        "en": "white car",
+        "my": "ကားအဖြူ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รถที่มีความเร็วสูงกว่า",
+        "en": "Cars with higher speeds",
+        "my": "မြန်နှုန်းမြင့်ကားများ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถที่มีความเร็วต่ำกว่า",
+        "en": "Cars with a lower speed",
+        "my": "အရှိန်လျှော့ထားသော ကားများ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 299,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000340.webp",
+    "q_th": "จากรูป หากท่านกำลังขับขี่เข้าสู่บริเวณทางข้ามท่านควรปฏิบัติอย่างไร",
+    "q_en": "From the picture, if you are driving into the crossing area, what should you do?",
+    "q_my": "၎) ပုံမှာပြထားတဲ့အတိုင်း လမ်းဖြတ်ကူးတဲ့နေရာမှာ ကားမောင်းရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เพิ่มความเร็ว",
+        "en": "increase speed",
+        "my": "အရှိန်မြှင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับด้วยความเร็วเท่าเดิม",
+        "en": "Drive at the same speed as before.",
+        "my": "အရင်ကလို အရှိန်နဲ့ မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอความเร็วและเตรียมพร้อมที่จะหยุดรถ",
+        "en": "Slow down and prepare to stop.",
+        "my": "အရှိန်လျှော့ပြီး ရပ်ရန် ပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บีบแตรเพื่อเร่งให้คนรีบเดิน",
+        "en": "Honk the horn to hasten people to walk.",
+        "my": "လမ်းလျှောက်ဖို့ လူတွေကို အရှိန်မြှင့်ဖို့ ဟွန်းတီးတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านคิดว่าข้อใดเป็นการขับขี่ที่ไร้ซึ่งมารยาทอย่างมาก",
+    "q_en": "What do you think is the most rude driving behavior?",
+    "q_my": "အရိုင်းစိုင်းဆုံး ကားမောင်းတဲ့ အပြုအမူက ဘာထင်လဲ။",
+    "options": [
+      {
+        "th": "ขับรถชิดซ้าย หรือให้ทางแก่รถฉุกเฉิน",
+        "en": "Drive on the left or give way to emergency vehicles.",
+        "my": "ဘယ်ဘက်တွင် မောင်းနှင်ပါ သို့မဟုတ် အရေးပေါ်ယာဉ်များဆီသို့ လမ်းပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ความเร็วรถปกติ เมื่อมีรถคันอื่นกะพริบไฟขอทาง",
+        "en": "Use normal vehicle speed. When another car flashes its lights asking for directions",
+        "my": "ပုံမှန်ယာဉ်အမြန်နှုန်းကို အသုံးပြုပါ။ အခြားကားက မီးမှိတ်တုတ်မှိတ်တုတ် ညွှန်ပြသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถจี้ท้าย และบีบแตรไล่บนทางด่วน",
+        "en": "Driving behind the scenes and honking the horn on the expressway.",
+        "my": "ကားနောက်ကနေ ကားမောင်းပြီး အမြန်လမ်းပေါ်မှာ ဟွန်းဟွန်းတီးတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ชะลอความเร็วให้รถคันอื่นแซง",
+        "en": "Slow down to allow other cars to pass.",
+        "my": "အခြားကားများ ဖြတ်သန်းခွင့်ပြုရန် အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 301,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อพบคนเดินเท้า ข้อใดที่ผู้ขับขี่ไม่ควรปฏิบัติ",
+    "q_en": "When meeting a pedestrian Which thing should drivers not do?",
+    "q_my": "၎) လမ်းသွားလမ်းလာတွေနဲ့ တွေ့ဆုံတဲ့အခါ ဘယ်ယာဉ်မောင်းတွေ မလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "บีบแตรเพื่อไล่คนเดินเท้า",
+        "en": "Honk your horn to chase away pedestrians.",
+        "my": "လမ်းသွားလမ်းလာများကို မောင်းထုတ်ရန် သင့်ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพิ่มความระมัดระวังในการขับรถ",
+        "en": "Increase caution when driving",
+        "my": "ကားမောင်းတဲ့အခါ သတိထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้คนเดินเท้าข้าม",
+        "en": "Stop the car to let pedestrians cross.",
+        "my": "လမ်းသွားလမ်းလာတွေကို ဖြတ်ကျော်ဖို့ ကားကို ရပ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอความเร็ว",
+        "en": "slow down",
+        "my": "နှေးကွေး",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากต้องขับรถผ่านผิวการจราจรชำรุด ผู้ขับขี่ไม่ควรปฏิบัติอย่างไร",
+    "q_en": "If you have to drive through damaged traffic surfaces What should drivers not do?",
+    "q_my": "ပျက်စီးနေသော ယာဉ်ကြောမျက်နှာပြင်များကို ဖြတ်ကျော်မောင်းနှင်ရပါက ယာဉ်မောင်းများ ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขับขี่อย่างระมัดระวัง",
+        "en": "Drive carefully.",
+        "my": "ဂရုတစိုက်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วสูง",
+        "en": "Driving at high speed",
+        "my": "အရှိန်ပြင်းပြင်းနဲ့ မောင်းတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ความเร็วต่ำ",
+        "en": "Use low speed",
+        "my": "အနိမ့်အမြန်နှုန်းကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่เบรกกะทันหันระหว่างที่ขับขี่อยู่บริเวณที่มีผิวทางชำรุด",
+        "en": "Do not brake suddenly while driving in areas with damaged pavement.",
+        "my": "ပျက်စီးနေသော အခင်းဖြစ်နေရာများတွင် မောင်းနှင်နေစဉ် ရုတ်တရက် ဘရိတ်မတိုက်ပါနှင့်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับรถข้ามทางรถไฟที่ไม่มีเครื่องกั้นเมื่อคันด้านหน้าขับข้ามทางรถไฟไปแล้วท่านควรปฏิบัติอย่างไร",
+    "q_en": "When driving across the railroad without a barrier, what should you do when the vehicle in front of you has already crossed the railroad?",
+    "q_my": "အတားအဆီးမရှိဘဲ ရထားလမ်းကို ဖြတ်ကျော်မောင်းနှင်တဲ့အခါ ရှေ့ကယာဉ်က ရထားလမ်းကို ဖြတ်ကျော်ပြီးတဲ့အခါ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "รอสัญญาณไฟเขียว",
+        "en": "Waiting for the green light",
+        "my": "မီးစိမ်းကို စောင့်နေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอเจ้าหน้าที่ให้สัญญาณ",
+        "en": "Stop and wait for the officer to give the signal.",
+        "my": "ရပ်ပြီး အရာရှိက အချက်ပြပေးမယ့်သူကို စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ก่อนข้ามทางรถไฟต้องตรวจสอบความปลอดภัยอีกครั้ง",
+        "en": "Before crossing the railway line, safety must be checked again.",
+        "my": "မီးရထားလမ်းကို မဖြတ်ခင် လုံခြုံရေးကို ထပ်ပြီး စစ်ဆေးရပါမယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับตามคันด้านหน้าไปได้เลย",
+        "en": "You can follow the car in front.",
+        "my": "ရှေ့က ကားနောက်ကို လိုက်နိုင်တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000345.webp",
+    "q_th": "เมื่อท่านพบรถประจำทางเปิดไฟเลี้ยวขวาเพื่อออกจากป้ายรถเมล์ ท่านควรปฏิบัติอย่างไร",
+    "q_en": "When you see a bus, turn on your right turn signal to leave the bus stop. What should you do?",
+    "q_my": "ဘတ်စ်ကားတစ်စီးကိုတွေ့သောအခါ၊ ဘတ်စ်ကားမှတ်တိုင်မှထွက်ခွာရန် သင်၏ညာဘက်အလှည့်အချက်ပြကိုဖွင့်ပါ။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "ไม่ต้องสนใจและขับแซงรถประจำทางไปในทันที",
+        "en": "Ignore it and immediately overtake the bus.",
+        "my": "အဲဒါကို လျစ်လျူရှုပြီး ဘတ်စ်ကားကို ချက်ချင်းကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉิน เพื่อบอกให้รถประจำทางไปก่อน",
+        "en": "Turn on the emergency lights to tell the bus to go first",
+        "my": "ဘတ်စ်ကားကို အရင်သွားခိုင်းဖို့ အရေးပေါ်မီးတွေဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอความเร็วและให้รถประจำทางไปก่อน",
+        "en": "Slow down and let the bus go first.",
+        "my": "အရှိန်လျှော့ပြီး ဘတ်စ်ကားကို အရင်လွှတ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บีบแตรหรือกะพริบไฟสูง",
+        "en": "Honk your horn or flash your high beams.",
+        "my": "မင်းရဲ့ဦးချိုကို ဟွန်းတီးလိုက် ဒါမှမဟုတ် မင်းရဲ့အမြင့်တန်းတွေကို မီးညှိလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 305,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สิ่งใดต่อไปนี้ช่วยลดการบาดเจ็บที่คอได้เมื่อเกิดการชน",
+    "q_en": "Which of the following can help reduce neck injuries in a crash?",
+    "q_my": "ယာဉ်တိုက်မှုတွင် လည်ပင်းဒဏ်ရာများကို လျှော့ချပေးနိုင်သည့် အောက်ပါအချက်များ",
+    "options": [
+      {
+        "th": "ระบบเบรก ABS",
+        "en": "ABS braking system",
+        "my": "ABS ဘရိတ်စနစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หมอนรองศีรษะที่ปรับระดับได้เหมาะสม",
+        "en": "Adjustable headrest pillow",
+        "my": "ချိန်ညှိနိုင်သော ခေါင်းအုံး",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เบาะสปริงลม",
+        "en": "air spring cushion",
+        "my": "air spring ကူရှင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แกนพวงมาลัยแบบยุบตัวได้",
+        "en": "Collapsible steering shaft",
+        "my": "ခေါက်သိမ်းနိုင်သော စတီယာရင်ရှပ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 306,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สถานการณ์ใดใช้ไฟฉุกเฉินได้อย่างเหมาะสม",
+    "q_en": "In what situations can emergency lights be used appropriately?",
+    "q_my": "၎) အရေးပေါ်မီးများကို မည်သည့်အခြေအနေများတွင် သင့်လျော်စွာအသုံးပြုနိုင်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟฉุกเฉินเมื่อกำลังจะเลี้ยวซ้ายบริเวณทางแยกที่ไม่มีสัญญาณไฟจราจร",
+        "en": "Turn on your emergency lights when turning left at an intersection where there are no traffic lights.",
+        "my": "မီးပွိုင့်မရှိသော လမ်းဆုံတွင် ဘယ်ဘက်သို့ ကွေ့သောအခါတွင် သင်၏ အရေးပေါ်အချက်ပြမီးများကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินเมื่อรถจอดเสียอยู่บริเวณไหล่ทาง",
+        "en": "Turn on emergency lights when the car breaks down on the shoulder of the road.",
+        "my": "ကားသည် လမ်းပခုံးပေါ်မှ ပြုတ်ကျသောအခါ အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินในขณะที่หมอกลงจัด",
+        "en": "Turn on emergency lights during heavy fog.",
+        "my": "မြူထူထပ်နေချိန်တွင် အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินเพื่อให้ผู้ขับขี่ท่านอื่นทราบว่าตนจะวิ่งตรงไป",
+        "en": "Turn on your emergency lights to let other drivers know you will be moving straight ahead.",
+        "my": "သင်သည် ရှေ့တည့်တည့်သို့ ရွေ့နေမည်ကို အခြားယာဉ်မောင်းများအား အသိပေးရန်အတွက် သင်၏ အရေးပေါ်မီးများကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 307,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อกำลังจะเดินทางกลับบ้านหลังจากช่วงวันหยุดหลายวัน หากท่านไม่สบายและแพทย์สั่งยาที่มีผลต่อการขับรถ ควรปฏิบัติอย่างไร",
+    "q_en": "When returning home after several holidays. If you are sick and your doctor prescribes medicine that affects your driving. What should I do?",
+    "q_my": "အားလပ်ရက်များစွာကြာပြီးနောက် အိမ်သို့ပြန်လာသည်။ အကယ်၍ သင်သည် နေမကောင်းဖြစ်ပြီး သင့်ကားမောင်းခြင်းကို ထိခိုက်စေသော ဆေးကို သင့်ဆရာဝန်က ညွှန်ကြားသည်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ไม่ขับรถเกินกว่า 50 กิโลเมตรต่อชั่วโมง",
+        "en": "Do not drive more than 50 kilometers per hour.",
+        "my": "တစ်နာရီ ကီလိုမီတာ ၅၀ ထက် ပိုမမောင်းပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้ผู้อื่นขับรถแทน",
+        "en": "Let someone else drive instead.",
+        "my": "အစား တခြားသူကို မောင်းပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หลีกเลี่ยงการขับรถบนทางหลวงพิเศษ",
+        "en": "Avoid driving on expressways.",
+        "my": "အမြန်လမ်းများပေါ်တွင် မောင်းနှင်ခြင်းမှ ရှောင်ကြဉ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถได้เมื่อมีคนโดยสารไปด้วยเท่านั้น",
+        "en": "You can drive only when you have a passenger.",
+        "my": "သင့်တွင် ခရီးသည်ရှိမှသာ မောင်းနှင်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 308,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ควรปฏิบัติหากพบอุบัติเหตุข้างหน้า",
+    "q_en": "Which thing should not be done if there is an accident ahead?",
+    "q_my": "ရှေ့တွင် မတော်တဆဖြစ်လျှင် မည်သည့်အရာကို မလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "โทรเรียกสายด่วนรถพยาบาล",
+        "en": "Call the ambulance hotline.",
+        "my": "လူနာတင်ယာဉ် hotline ကိုခေါ်ဆိုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สังเกตการณ์อยู่บนรถ หากไม่ใช่คนรู้จักจึงขับรถไปต่อ",
+        "en": "Observe in the car If it's not someone you know, then drive on.",
+        "my": "ကားထဲမှာ သင်သိတဲ့လူမဟုတ်ရင် ကားပေါ်ကို သတိပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ชะลอความเร็วและให้การช่วยเหลือเบื้องต้น",
+        "en": "Slow down and provide first aid.",
+        "my": "နှေးကွေးပြီး ရှေးဦးသူနာပြုစုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถข้างทางแสดงสัญลักษณ์เตือนให้ระมัดระวัง",
+        "en": "Parking on the side of the road shows signs warning you to be careful.",
+        "my": "လမ်းဘေးမှာ ကားရပ်ရင် သတိထားဖို့ ဆိုင်းဘုတ်တွေ ပြထားတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 309,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากผู้ขับขี่ทานยาแก้แพ้ ยาแก้เมารถ แล้วมีอาการเวียนศีรษะ มึนงง ควรปฏิบัติอย่างไร",
+    "q_en": "If the driver takes antihistamines and motion sickness medication and feels dizzy and dizzy, what should he do?",
+    "q_my": "၎) ယာဉ်မောင်းသူသည် antihistamines နှင့် motion sickness ဆေးသောက်ပြီး မူးဝေမူးဝေ ခံစားရပါက ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "นั่งพัก 10 นาทีจึงสามารถขับขี่รถได้",
+        "en": "Sit and rest for 10 minutes before you can drive.",
+        "my": "ကားမမောင်းခင် 10 မိနစ်လောက် ထိုင်ပြီး အနားယူပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "งดเว้นการขับขี่ เนื่องจากมีอาการง่วง",
+        "en": "refrain from driving Due to feeling sleepy",
+        "my": "အိပ်ငိုက်ခြင်းကြောင့် ကားမောင်းခြင်းမှ ရှောင်ကြဉ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สามารถขับขี่รถได้ปกติ",
+        "en": "Can drive normally",
+        "my": "ပုံမှန်အတိုင်း မောင်းနှင်နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับได้แต่ต้องดื่มน้ำตามเยอะๆ",
+        "en": "You can drive but you must drink lots of water.",
+        "my": "ကားမောင်းနိုင်ပေမယ့် ရေများများသောက်ရပါမယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดคือความสำคัญของการจัดตำแหน่งที่หมอนรองศีรษะให้เหมาะสม",
+    "q_en": "What is the importance of proper positioning of the head restraint?",
+    "q_my": "၎) ဦးခေါင်းအထိန်းအချုပ်ကို မှန်ကန်စွာနေရာချခြင်း၏ အရေးကြီးမှုသည် အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "ช่วยทำให้รักษาตำแหน่งท่าในการขับรถได้ดีขึ้น",
+        "en": "Helps maintain a better driving position.",
+        "my": "ပိုမိုကောင်းမွန်သော မောင်းနှင်မှုအနေအထားကို ထိန်းသိမ်းရန် ကူညီပေးသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วยทำให้ผ่อนคลาย",
+        "en": "Helps to relax",
+        "my": "အပန်းဖြေရန် ကူညီပေးသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วยลดอาการบาดเจ็บที่คอกรณีเกิดอุบัติเหตุ",
+        "en": "Helps reduce neck injuries in the event of an accident.",
+        "my": "မတော်တဆမှုဖြစ်တဲ့အခါ လည်ပင်းဒဏ်ရာတွေကို လျော့ပါးစေပါတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ช่วยทำให้สบายมากขึ้น",
+        "en": "Helps make you more comfortable.",
+        "my": "သင့်ကို ပိုသက်တောင့်သက်သာဖြစ်စေပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 311,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การจอดรถขวางทางคันอื่น ควรปฏิบัติอย่างไร",
+    "q_en": "Parking in the way of other cars. What should I do?",
+    "q_my": "၎) အခြားကားများလမ်းတွင် ရပ်နားပါ။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ใส่เกียร์เดินหน้า",
+        "en": "Put the gear forward",
+        "my": "ဂီယာကို ရှေ့သို့ချထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใส่เกียร์ถอยหลัง",
+        "en": "Put the gear in reverse.",
+        "my": "ဂီယာကို ပြောင်းပြန်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใส่เบรกมือไว้",
+        "en": "Put the handbrake on.",
+        "my": "လက်ဘရိတ်ကိုတပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปลดเกียร์ว่าง ไม่ใช้เบรกมือ",
+        "en": "Put the gear in neutral. Do not use the handbrake",
+        "my": "ဂီယာကို neutral ထားပါ။ လက်ဘရိတ်ကို မသုံးပါနှင့်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 312,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สิ่งใดที่ผู้ขับรถไม่ควรทำเมื่อได้รับสัญญาณไฟเขียวให้ขับเคลื่อนรถไปได้",
+    "q_en": "What should drivers not do when given the green light to drive?",
+    "q_my": "ယာဉ်မောင်းများ မောင်းနှင်ရန် မီးစိမ်းပြသောအခါ ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ตรวจสอบรถในทางแยกอื่นที่อาจวิ่งออกมาก่อนที่จะขับเข้าสู่ทางแยกด้านหน้า",
+        "en": "Check for vehicles in other intersections that may exit before entering the front intersection.",
+        "my": "ရှေ့လမ်းဆုံသို့မဝင်မီ အခြားလမ်းဆုံများတွင် ထွက်နိုင်သောယာဉ်များကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรเร่งรถคันหน้าให้เคลื่อนตัวออกโดยเร็ว",
+        "en": "Honk the horn and accelerate the car in front to move away quickly.",
+        "my": "ဟွန်းကို ဟွန်းတီးပြီး ရှေ့က ကားကို အရှိန်မြှင့်ပြီး အဝေးကို အမြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ค่อยๆ เคลื่อนรถออกโดยทิ้งช่วงห่างกับคันหน้าพอสมควร",
+        "en": "Slowly move the car away, leaving a considerable distance from the vehicle in front.",
+        "my": "ကားကို ဖြည်းညှင်းစွာ ရွှေ့ပြီး ရှေ့ယာဉ်နှင့် အတော်အတန်အကွာအဝေးကို ချန်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอให้รถจักรยานยนต์หรือรถยนต์ที่อยู่ด้านหน้าเคลื่อนออกไปก่อน",
+        "en": "Slow down to allow the motorcycle or car in front to move away first.",
+        "my": "ရှေ့မှ မော်တော်ဆိုင်ကယ် သို့မဟုတ် ကားကို အဝေးသို့ ဦးစွာရွှေ့ခွင့်ပြုရန် အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 313,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อรถที่ขับตามหลังมาให้สัญญาณขอแซง มารยาทที่ดีเพื่อแสดงการตอบรับว่ายินยอมให้แซง คือ",
+    "q_en": "When a car driving behind gives a signal to overtake. Good manners to express your consent to overtaking are:",
+    "q_my": "၎) နောက်က မောင်းလာတဲ့ ကားက ကျော်တက်ဖို့ အချက်ပြပေးတယ်။ ကျော်တက်ရန် သင်၏သဘောတူချက်ကို ဖော်ပြရန် အမူအကျင့်ကောင်းများမှာ-",
+    "options": [
+      {
+        "th": "ให้สัญญาณไฟเลี้ยวซ้าย ชิดซ้าย และลดความเร็วลง",
+        "en": "Give the left turn signal, keep to the left and reduce your speed.",
+        "my": "ဘယ်ဘက်အလှည့်အချက်ပြပါ၊ ဘယ်ဘက်ကိုဆက်ပြီး အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้สัญญาณแตร และลดความเร็วลง",
+        "en": "Give the horn signal and reduce speed.",
+        "my": "ဟွန်းအချက်ပြပြီး အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณไฟสูง และลดความเร็วลง",
+        "en": "Give a high signal and reduce speed",
+        "my": "မြင့်မားသောအချက်ပြပြီး အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณไฟฉุกเฉิน",
+        "en": "Give emergency light signal",
+        "my": "အရေးပေါ် မီးအချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 314,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000364.webp",
+    "q_th": "ท่านกำลังขับขี่ผ่านบริเวณที่มีรถจอดอยู่ข้างทาง แต่ท่านสังเกตเห็นลูกบอลกลิ้งออกมา ท่านควรปฏิบัติอย่างใด",
+    "q_en": "You are driving through an area where there are cars parked on the side of the road. But he noticed the ball rolling out. What should you do?",
+    "q_my": "မင်းလမ်းဘေးမှာ ကားတွေရပ်ထားတဲ့နေရာကို ဖြတ်မောင်းနေတာ။ ဒါပေမယ့် သူက ဘောလုံးထွက်နေတာကို သတိထားမိတယ်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "ลดความเร็วลงและเตรียมที่จะหยุดรถ",
+        "en": "Slow down and prepare to stop.",
+        "my": "အရှိန်လျှော့ပြီး ရပ်ရန် ပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถและโบกมือให้เด็กไปเก็บลูกบอล",
+        "en": "Park the car and wave to the child to go collect the ball.",
+        "my": "ကားကိုရပ်ပြီး ဘောလုံးသွားယူဖို့ ကလေးကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วเท่าเดิมและให้สัญญาณไฟสูง",
+        "en": "Drive at the same speed and keep your lights on.",
+        "my": "တူညီသော အရှိန်ဖြင့် မောင်းနှင်ပြီး မီးကို ဖွင့်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วเท่าเดิมและให้สัญญาณแตร",
+        "en": "Drive at the same speed and signal your horn.",
+        "my": "တူညီသောအမြန်နှုန်းဖြင့်မောင်းပြီး သင်၏ဟွန်းကို အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 315,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ต้องระมัดระวังทิศทางใดบ้างในระหว่างการขับขี่",
+    "q_en": "What direction must drivers be careful while driving?",
+    "q_my": "၎) ယာဉ်မောင်းများ မောင်းနှင်ရာတွင် မည်သည့်လမ်းကြောင်းကို သတိထားရမည်နည်း။",
+    "options": [
+      {
+        "th": "ด้านการขับขี่",
+        "en": "Driving side",
+        "my": "ကားမောင်းသွားတာပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ด้านข้างๆ",
+        "en": "On the side",
+        "my": "ဘက်မှာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ด้านความปลอดภัย",
+        "en": "Safety",
+        "my": "ဘေးကင်းရေး",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ด้านหน้า หลัง ซ้าย ขวา",
+        "en": "front, back, left, right",
+        "my": "ရှေ့၊နောက်၊ဘယ်၊ညာ",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000366.webp",
+    "q_th": "จากรูป เมื่อรถคันสีเหลืองต้องการที่จะขับตรงไป ควรปฏิบัติอย่างไร",
+    "q_en": "From the picture, when the yellow car wants to drive straight. What should I do?",
+    "q_my": "ပုံထဲက အဝါရောင်ကားက တည့်တည့် မောင်းချင်တဲ့အခါ။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "หยุดรอจนกว่ารถที่ขวางทางจะผ่านไป",
+        "en": "Stop and wait until the vehicle blocking your way has passed.",
+        "my": "သင့်လမ်းကို ပိတ်ဆို့နေသော ယာဉ်သည် ကျော်သွားသည်အထိ ရပ်ပြီး စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟสัญญาณไฟฉุกเฉิน",
+        "en": "Turn on the emergency light",
+        "my": "အရေးပေါ်မီးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรอย่างต่อเนื่อง",
+        "en": "honk continuously",
+        "my": "ဟွန်း အဆက်မပြတ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรไล่และพยายามขับเบียดแทรกอย่างรวดเร็ว",
+        "en": "Honk your horn and try to drive in quickly.",
+        "my": "မင်းရဲ့ဟွန်းကို ဟွန်းတီးပြီး မြန်မြန်မောင်းဝင်ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 317,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นการขับรถเข้าทางโค้งอย่างปลอดภัย",
+    "q_en": "Which is the safest way to drive into a curve?",
+    "q_my": "လမ်းကွေ့တစ်ခုသို့ မောင်းနှင်ရန် ဘယ်လမ်းက အလုံခြုံဆုံးလဲ။",
+    "options": [
+      {
+        "th": "เปลี่ยนเกียร์ขณะเข้าทางโค้ง",
+        "en": "Change gear while entering a curve.",
+        "my": "မျဉ်းကွေးသို့ဝင်စဉ် ဂီယာပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วก่อนเข้าโค้ง",
+        "en": "Reduce speed before entering a curve.",
+        "my": "မျဉ်းကွေးမဝင်မီ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรกกะทันหันขณะเข้าทางโค้ง",
+        "en": "Slam on the brakes suddenly while entering a curve.",
+        "my": "မျဉ်းကွေးတစ်ခုထဲသို့ ဝင်ရောက်စဉ် ဘရိတ်ကို ရုတ်တရက် ဆောင့်တိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ความเร็วสูงกว่าที่กำหนด",
+        "en": "Use a higher speed than specified.",
+        "my": "သတ်မှတ်ထားသည်ထက် မြင့်မားသော မြန်နှုန်းကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 318,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000374.webp",
+    "q_th": "หากท่านขับรถในตำแหน่งของรถคันสีเทา (ลูกศรชี้) ควรระมัดระวังสิ่งใดมากที่สุด",
+    "q_en": "If you drive in the position of the gray car (pointed by the arrow), what should you be most careful of?",
+    "q_my": "မီးခိုးရောင်ကား (မြှားဖြင့်ညွှန်ပြသော) နေရာတွင် မောင်းနှင်ပါက အဘယ်အရာကို သတိထားသင့်သနည်း။",
+    "options": [
+      {
+        "th": "รถที่จอดอยู่อาจเปิดประตู",
+        "en": "Parked cars may open their doors.",
+        "my": "ရပ်ထားသောကားများသည် တံခါးဖွင့်နိုင်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ที่จอดรถที่ว่างอยู่",
+        "en": "Vacant parking lot",
+        "my": "ကားပါကင် လစ်လပ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พื้นผิวถนนที่ขรุขระ",
+        "en": "rough road surface",
+        "my": "ကြမ်းတမ်းသောလမ်းမျက်နှာပြင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถที่ตามหลังมา",
+        "en": "The car following behind",
+        "my": "ကားနောက်ကလိုက်သွားတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 319,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อมีผู้อื่นแบ่งปันน้ำใจในการใช้รถใช้ถนนให้ท่าน ข้อใดไม่ควรปฏิบัติ",
+    "q_en": "When others share kindness in using the road for you. Which thing should not be done?",
+    "q_my": "၎) သင့်အတွက် လမ်းကိုအသုံးပြုရာတွင် အခြားသူများကို ကြင်နာမှုပေးသောအခါ။ မည်သည့်အရာကို မလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "โค้งศีรษะแสดงความขอบคุณ",
+        "en": "Bow your head in gratitude",
+        "my": "ကျေးဇူးသိစိတ်ဖြင့် ခေါင်းညွှတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยกมือขวาขึ้นระดับคิ้วแสดงการขอบคุณ",
+        "en": "Raise your right hand to eyebrow level to express your thanks.",
+        "my": "ကျေးဇူးတင်ကြောင်းဖော်ပြရန် သင်၏ညာလက်ကို မျက်ခုံးမွေးအဆင့်သို့ မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟสูงแสดงการขอบคุณ",
+        "en": "Turn on your high beams to show your appreciation.",
+        "my": "သင်၏တန်ဖိုးထားမှုကိုပြသရန် သင်၏အမြင့်တန်းများကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ส่งยิ้มแสดงการขอบคุณ",
+        "en": "Send a smile to express your thanks.",
+        "my": "ကျေးဇူးတင်ကြောင်းဖော်ပြရန် အပြုံးတစ်ခုပေးပို့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ไม่ควรดื่มแอลกอฮอล์ก่อนการขับขี่ ไม่ว่ากรณีใดๆ ใช่หรือไม่",
+    "q_en": "Drivers should not drink alcohol before driving. In any case, yes or no?",
+    "q_my": "ယာဉ်မောင်းများသည် ကားမမောင်းမီ အရက်မသောက်သင့်ပါ။ မည်သို့ပင်ဆိုစေ၊ ဟုတ်သည်ဖြစ်စေ၊ မဟုတ်သည်ဖြစ်စေ။",
+    "options": [
+      {
+        "th": "ขึ้นอยู่กับชนิดของยานพาหนะที่ขับขี่",
+        "en": "It depends on the type of vehicle being driven.",
+        "my": "မောင်းနှင်နေတဲ့ ယာဉ်အမျိုးအစားပေါ် မူတည်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช่ เพราะทำให้ร่างกายตอบสนองช้า",
+        "en": "Yes, because it makes the body respond slowly.",
+        "my": "ဟုတ်တယ်၊ ဘာကြောင့်လဲဆိုတော့ ခန္ဓာကိုယ်က တုံ့ပြန်မှုကို နှေးကွေးစေလို့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขึ้นอยู่กับอาหารการกิน",
+        "en": "Depends on the food you eat",
+        "my": "သင်စားသောအစားအစာပေါ် မူတည်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ใช่",
+        "en": "No",
+        "my": "မရှိ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 321,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "อุบัติเหตุบนถนนที่เกิดจากการแซง มักจะเกิดการชนแบบใด",
+    "q_en": "Road accidents caused by overtaking What kind of collisions usually occur?",
+    "q_my": "ကျော်တက်ခြင်းကြောင့် ဖြစ်ပေါ်လာသော ယာဉ်မတော်တဆမှုများသည် မည်သို့သော ယာဉ်တိုက်မှုမျိုး ဖြစ်ပွားလေ့ရှိသနည်း။",
+    "options": [
+      {
+        "th": "ชนจากทางด้านข้าง",
+        "en": "Hit from the side",
+        "my": "ဘေးကနေရိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชนฟุตบาทหรือริมถนน",
+        "en": "Hitting the sidewalk or roadside",
+        "my": "လမ်းဘေး သို့မဟုတ် လမ်းဘေးကို တိုက်မိခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชนคนเดินเท้า",
+        "en": "Hit a pedestrian",
+        "my": "လမ်းသွားလမ်းလာကို ဝင်တိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชนแบบประสานงา",
+        "en": "A coordinated collision",
+        "my": "ညှိနှိုင်းနေမြဲ",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 322,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะที่ขับรถกลับบ้าน ถ้าท่านรู้สึกเหนื่อยและปวดหัวอย่างมาก ควรปฏิบัติอย่างไรเพื่อให้เกิดความปลอดภัยในการขับรถมากที่สุด",
+    "q_en": "While driving home If you feel extremely tired and have a headache What should be done to ensure the greatest safety in driving?",
+    "q_my": "အိမ်ကားမောင်းနေစဉ် အလွန်ပင်ပန်းနွမ်းနယ်ပြီး ခေါင်းကိုက်ပါက ကားမောင်းရာတွင် ဘေးကင်းစေရန်အတွက် ဘာတွေလုပ်ဆောင်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขับรถกลับบ้าน ถ้ายังมีสติ",
+        "en": "Drive home if you're still conscious.",
+        "my": "သတိရှိနေရင် အိမ်ပြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอเป็นระยะเวลาสั้นๆ แล้วค่อยๆขับรถกลับบ้าน",
+        "en": "Wait for a short period of time. Then slowly drove home",
+        "my": "အချိန်တိုအတွင်း စောင့်ပါ။ ထို့နောက် အိမ်သို့ ဖြည်းညှင်းစွာ မောင်းလာခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รับประทานยาแก้ปวด แล้วขับรถกลับบ้าน",
+        "en": "Take painkillers then drive home",
+        "my": "အကိုက်အခဲပျောက်ဆေးသောက်ပြီး အိမ်ပြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอจนกระทั่งร่างกายมีความพร้อมในการขับรถ",
+        "en": "Wait until your body is ready to drive.",
+        "my": "ကားမောင်းရန် အသင့်ဖြစ်သည်အထိ စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 323,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถที่มีระบบเบรก ABS ควรเหยียบเบรกอย่างไรในกรณีที่ต้องการหยุดเมื่อเกิดเหตุฉุกเฉิน",
+    "q_en": "When you drive a car with an ABS braking system, how should you apply the brakes in case you want to stop in an emergency?",
+    "q_my": "ABS ဘရိတ်စနစ်နဲ့ ကားတစ်စီးကို မောင်းနှင်တဲ့အခါ အရေးပေါ်အခြေအနေမှာ ရပ်ချင်ရင် ဘရိတ်ကို ဘယ်လိုအသုံးပြုသင့်လဲ။",
+    "options": [
+      {
+        "th": "เหยียบเบรกอย่างช้าๆ แต่เต็มที่",
+        "en": "Apply the brakes slowly but fully.",
+        "my": "ဘရိတ်ကို ဖြည်းဖြည်းချင်း အပြည့်သွင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบเบรกอย่างค่อยๆ และช้าๆ",
+        "en": "Step on the brakes gently and slowly.",
+        "my": "ဘရိတ်ကို ဖြည်းညှင်းစွာ ဖြည်းဖြည်းချင်းနင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบเบรกอย่างรวดเร็วและเต็มที่",
+        "en": "Apply the brakes quickly and fully.",
+        "my": "ဘရိတ်ကို လျင်မြန်ပြီး အပြည့်သုံးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรกอย่างค่อยๆ อย่างรวดเร็ว",
+        "en": "Apply the brakes slowly and quickly.",
+        "my": "ဘရိတ်ကို ဖြည်းညှင်းစွာနှင့် မြန်မြန် ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 324,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สิ่งที่ผู้ขับรถควรทำเมื่อเห็นคนยืนบนฟุตบาทและแสดงท่าทีจะข้ามถนนตรงทางข้าม",
+    "q_en": "What should a driver do when he sees someone standing on the sidewalk and showing signs of crossing the road at a pedestrian crossing?",
+    "q_my": "၎) လမ်းဖြတ်ကူးသူတစ်ဦးက လမ်းဖြတ်ကူးတဲ့ လက္ခဏာတွေပြပြီး လမ်းဘေးမှာ ရပ်နေတဲ့ ယာဉ်မောင်းတစ်ယောက်ကို တွေ့တဲ့အခါ ဘာလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "ขับรถตามหลังท้ายคันหน้าอย่างกระชั้นชิดโดยไม่หยุดให้คนข้ามถนน",
+        "en": "Driving closely behind the car in front without stopping to let people cross the road.",
+        "my": "လူတွေကို လမ်းဖြတ်ကူးဖို့ မရပ်ဘဲ ရှေ့ကားနောက်ကို အနီးကပ် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรเตือนคนที่จะข้ามถนนและเร่งความเร็วผ่านไป",
+        "en": "Honk your horn to warn people crossing the road and speeding past.",
+        "my": "လမ်းဖြတ်ကူးသူများနှင့် အရှိန်လွန်နေသူများကို သတိပေးရန် သင့်ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แตะเบรกเตือนให้รถหลังรู้ว่าท่านกำลังจะหยุดรถ และหยุดรถตรงทางข้าม",
+        "en": "Tap the brakes to alert the vehicle behind you that you are about to stop. and stopped the car at the crossing",
+        "my": "သင်ရပ်တန့်တော့မည့်ယာဉ်ကို သင့်နောက်မှသတိပေးရန်အတွက် ဘရိတ်ကို တို့ပါ။ လမ်းဖြတ်ကူးတဲ့နေရာမှာ ကားကိုရပ်လိုက်တယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถแซงคันที่จอดรถให้คนข้ามและขับผ่านไปโดยเร็ว",
+        "en": "Drive past cars that are parking to let people cross and drive past quickly.",
+        "my": "လူများဖြတ်ကျော်ပြီး အမြန်ဖြတ်ကျော်နိုင်စေရန် ပါကင်ထိုးထားသော အတိတ်ကားများကို မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 325,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อขับเข้าใกล้บริเวณทางข้ามหน้าโรงเรียน ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When driving near the crossing area in front of the school. What should the driver do?",
+    "q_my": "၎) ကျောင်းရှေ့လမ်းကူး အနီးတွင် ကားမောင်းသည့်အခါ၊ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ลดความเร็วลงและเพิ่มความระมัดระวัง",
+        "en": "Slow down and be more careful.",
+        "my": "အရှိန်လျှော့ပြီး ပိုသတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "พยายามใช้ความเร็วคงที่ในการผ่านบริเวณนั้น",
+        "en": "Try to use a constant speed to pass through the area.",
+        "my": "ဧရိယာဖြတ်ကျော်ရန် အဆက်မပြတ်အရှိန်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณเตือนผู้คนในละแวกนั้น",
+        "en": "Give a warning to people in the area.",
+        "my": "ရပ်ကွက်နေပြည်သူများအား သတိပေးချက်ထုတ်ပြန်ထားသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถชิดขอบทางด้านซ้ายด้วยความระมัดระวัง",
+        "en": "Drive carefully to the left edge.",
+        "my": "ဘယ်ဘက်အစွန်းကို ဂရုတစိုက်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 326,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากไปถึงที่เกิดเหตุเป็นคนแรกในสถานการณ์ที่มีคนบาดเจ็บรุนแรง เมื่อได้ทำการเปิดไฟฉุกเฉินและตรวจสอบว่าเครื่องยนต์ดับเรียบร้อยแล้ว ควรปฏิบัติอย่างไรต่อไป",
+    "q_en": "If you are the first to arrive at the scene of a situation where someone is seriously injured. When turning on the emergency lights and checking that the engine has turned off. What should I do next?",
+    "q_my": "အကယ်၍ သင်သည် တစ်စုံတစ်ဦး အပြင်းအထန် ဒဏ်ရာရသွားသော အခင်းဖြစ်ပွားရာနေရာကို ပထမဆုံးရောက်ရှိသူဖြစ်ပါက။ အရေးပေါ်မီးများကိုဖွင့်ပြီး အင်ဂျင်ပိတ်သွားသည့်အခါ စစ်ဆေးပါ။ ငါဘာဆက်လုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "เคลื่อนย้ายผู้บาดเจ็บออกจากรถ",
+        "en": "Move the injured person out of the vehicle.",
+        "my": "ဒဏ်ရာရသူအား ကားပေါ်မှ ရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ติดต่อรถช่วยเหลือฉุกเฉิน",
+        "en": "Contact emergency assistance",
+        "my": "အရေးပေါ်အကူအညီကို ဆက်သွယ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุดรถคันอื่นๆ และขอความช่วยเหลือจากคนขับรถ",
+        "en": "Stop other cars and ask for help from the driver",
+        "my": "အခြားကားများကို ရပ်ပြီး ယာဉ်မောင်းထံမှ အကူအညီတောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามให้ผู้บาดเจ็บดื่มอะไรบางอย่าง",
+        "en": "Try to get the injured person to drink something.",
+        "my": "ဒဏ်ရာရသူကို တစ်ခုခုသောက်ခိုင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 327,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะที่ขับรถอยู่นั้น หากมีรถขับตามหลังมาในระยะกระชั้นชิดท่านควรปฏิบัติอย่างไร",
+    "q_en": "While driving If there is a car driving behind at a close distance, what should you do?",
+    "q_my": "၎) ကားမောင်းနေစဉ် အနီးကပ်အကွာအဝေးတွင် ကားနောက်မှ မောင်းနှင်လာပါက ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟเลี้ยวซ้าย และโบกมือให้รถทางด้านหลังแซง",
+        "en": "Turn on the left turn signal and waved his hand to let the car behind him pass.",
+        "my": "ဘယ်ဘက်အကွေ့အချက်ပြကိုဖွင့်ပြီး သူ့နောက်ကကားကို ဖြတ်သွားနိုင်အောင် လက်ကိုဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลง โดยเพิ่มระยะห่างจากรถด้านหน้าเพื่อให้มีระยะหยุดรถเพียงพอ",
+        "en": "Reduce your speed, increasing your distance from the vehicle in front to allow sufficient stopping distance.",
+        "my": "လုံလောက်သော ရပ်တန့်ထားသော အကွာအဝေးကို ခွင့်ပြုရန် သင့်အမြန်နှုန်းကို လျှော့ချပါ၊ ရှေ့ယာဉ်နှင့် အကွာအဝေးကို တိုးမြှင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เคลื่อนที่ไปติดด้านซ้ายและเส้นกลางของถนน",
+        "en": "Move to the left and center lines of the road.",
+        "my": "လမ်း၏ ဘယ်ဘက်နှင့် အလယ်မျဉ်းများကို ရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพิกเฉยต่อคนขับรถด้านหลัง และขับต่อไปด้วยความเร็วภายใต้ที่กฎหมายกำหนด",
+        "en": "Ignore the driver behind you. and continue driving at a speed within the limits of the law",
+        "my": "သင့်နောက်ကယာဉ်မောင်းကို လျစ်လျူရှုပါ။ ဥပဒေဘောင်အတွင်းမှ အရှိန်ဖြင့် ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000393.webp",
+    "q_th": "เมื่อรถคันสีขาวเปิดไฟเลี้ยวขวาเพื่อขอทางดังรูป รถคันสีแดงต้องปฏิบัติอย่างไร",
+    "q_en": "When the white car turns on the right turn signal to ask for directions as shown in the picture. What should you do with a red car?",
+    "q_my": "အဖြူရောင်ကားသည် ညာဖက်လှည့်အချက်ပြသည့်အခါ ပုံတွင်ပြထားသည့်အတိုင်း လမ်းညွှန်ချက်တောင်းပါ။ ကားအနီနဲ့ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ใช้สัญญาณแตรเตือน",
+        "en": "Use the warning horn signal.",
+        "my": "သတိပေးဟွန်းအချက်ပြကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วขึ้น",
+        "en": "speed up",
+        "my": "အရှိန်မြှင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลง",
+        "en": "slow down",
+        "my": "နှေးကွေး",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดไฟสูงเตือน",
+        "en": "Turn on high beam warning",
+        "my": "မြင့်မားသောအလင်းသတိပေးချက်ကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 329,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดคือการกระทำที่ถูกต้องก่อนขับรถ",
+    "q_en": "Which is the correct action before driving?",
+    "q_my": "ကားမမောင်းခင် ဘယ်ဟာက မှန်ကန်သလဲ။",
+    "options": [
+      {
+        "th": "นางสาว ค. อดนอนก่อนขับรถ",
+        "en": "Miss K. lacked sleep before driving.",
+        "my": "Miss K. ကားမမောင်းခင် အိပ်ရေးပျက်ခဲ့တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นางสาว ก. ดื่มเครื่องดื่มแอลกอฮอล์ก่อนขับรถ",
+        "en": "Miss A. drank alcohol before driving.",
+        "my": "A. ကားမမောင်းခင် အရက်သောက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นาย ข ได้ยาเบาหวานแบบฉีดจึงหยุดขับรถ",
+        "en": "Mr. B received injections of diabetes medicine and stopped driving.",
+        "my": "မစ္စတာ B သည် ဆီးချိုဆေးကို ထိုးပေးပြီး ကားမမောင်းဘဲ ရပ်လိုက်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "นางสาว ข. ทานยาแก้แพ้ก่อนขับรถ",
+        "en": "Miss K. took antihistamines before driving.",
+        "my": "ကားမမောင်းခင် Miss K.",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 330,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้ หากผู้ขับขี่ปฏิบัติจะไม่ช่วยลดจุดบอดได้",
+    "q_en": "Which of the following? If the driver does this, it will not help reduce blind spots.",
+    "q_my": "၎) အောက်ပါတို့ထဲမှ ဘယ်ဟာလဲ။ ယာဉ်မောင်းက ဒီလိုလုပ်ရင် မျက်မမြင်အစက်အပြောက်တွေကို လျော့ပါးစေမှာ မဟုတ်ပါဘူး။",
+    "options": [
+      {
+        "th": "ติดตั้งเบรกที่มีสมรรถนะสูง",
+        "en": "Equipped with high performance brakes.",
+        "my": "စွမ်းဆောင်ရည်မြင့် ဘရိတ်များ တပ်ဆင်ထားသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขณะถอยหลัง ควรให้แน่ใจว่าไม่มีคนหรือสิ่งของอยู่ข้างหลัง",
+        "en": "When reversing, make sure there are no people or objects behind you.",
+        "my": "နောက်ပြန်လှည့်သည့်အခါ၊ သင့်နောက်တွင် လူ သို့မဟုတ် အရာဝတ္ထုများ မရှိကြောင်း သေချာပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปรับกระจกมองข้างและมองหลังให้เหมาะสม",
+        "en": "Adjust the side and rear view mirrors appropriately.",
+        "my": "ဘေးနှင့် နောက်ကြည့်မှန်များကို သင့်လျော်သလို ချိန်ညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นั่งท่าขับรถที่ถูกต้อง",
+        "en": "Sit in the correct driving position.",
+        "my": "မှန်ကန်သော အနေအထားတွင် ထိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 331,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะที่รถบรรทุกขนาดใหญ่กำลังจะแซงรถของท่าน ท่านควรปฏิบัติอย่างไร",
+    "q_en": "While a large truck is about to overtake your car. What should you do?",
+    "q_my": "ကုန်တင်ကားကြီးတစ်စီးက သင့်ကားကိုဖြတ်သွားတော့မည်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "เร่งความเร็ว",
+        "en": "Accelerate",
+        "my": "အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รักษาความเร็วให้คงที่",
+        "en": "Maintain a constant speed",
+        "my": "အဆက်မပြတ် အရှိန်ထိန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็ว",
+        "en": "reduce speed",
+        "my": "အရှိန်လျှော့",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปลี่ยนทิศทาง",
+        "en": "change direction",
+        "my": "ဦးတည်ချက်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 332,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากท่านขับรถอยู่ในความเร็วที่กฎหมายกำหนดและมีรถด้านหลังพยายามจะทำการแซง ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you are driving at the legal speed and a car behind is trying to overtake you. What should you do?",
+    "q_my": "အကယ်၍ သင်သည် ဥပဒေအတိုင်း အရှိန်ဖြင့် မောင်းနှင်နေပါက နောက်မှ ကားသည် သင့်အား ကျော်တက်ရန် ကြိုးစားနေပါသည်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "เร่งความเร็วเพื่อทิ้งระยะจากรถด้านหลัง",
+        "en": "Accelerate to gain distance from the car behind you.",
+        "my": "သင့်နောက်မှ ကားနှင့် အကွာအဝေးရရှိရန် အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถเข้าใกล้รถคันหน้า เพื่อให้รถด้านหลังไม่มีพื้นที่ในการแซง",
+        "en": "Driving close to the car in front So that the car behind has no space to overtake.",
+        "my": "ရှေ့ကားနှင့် နီးကပ်စွာ မောင်းနှင်ပါက နောက်ကားသည် ကျော်တက်ရန် နေရာမရှိပေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รักษาระยะและให้รถด้านหลังทำการแซง",
+        "en": "Keep your distance and allow the car behind you to overtake.",
+        "my": "သင်၏အကွာအဝေးကိုထိန်းပြီး သင့်နောက်မှကားကို ကျော်တက်ခွင့်ပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "โบกมือให้รถด้านหลังแซงได้เมื่อเห็นว่าปลอดภัย",
+        "en": "Wave your hand to allow vehicles behind you to pass when it is safe to do so.",
+        "my": "ထိုသို့ပြုလုပ်ရန် အန္တရာယ်ကင်းသည့်အချိန်တွင် သင့်နောက်မှယာဉ်များကို ဖြတ်သန်းခွင့်ပြုရန် သင့်လက်ကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 333,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การเคลื่อนย้ายผู้บาดเจ็บโดยผู้ช่วยเหลือสองคน เหมาะกับผู้ป่วยแบบใด",
+    "q_en": "Moving the injured person by two helpers. Suitable for what kind of patients?",
+    "q_my": "ဒဏ်ရာရသူအား ကူညီသူနှစ်ဦးဖြင့် ရွှေ့ပြောင်းပေးခြင်းသည် မည်သို့သော လူနာများအတွက် သင့်လျော်သနည်း။",
+    "options": [
+      {
+        "th": "สำหรับผู้บาดเจ็บที่ไม่รู้สึกตัว",
+        "en": "For injured people who are unconscious",
+        "my": "သတိလစ် ဒဏ်ရာရသူတွေ အတွက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหมาะสำหรับผู้ป่วยที่รู้สึกตัวดี",
+        "en": "Suitable for patients who feel well.",
+        "my": "ဝေဒနာရှင်များအတွက် သင့်လျော်ပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้บาดเจ็บที่มีน้ำหนักน้อย",
+        "en": "The injured person is underweight.",
+        "my": "ဒဏ်ရာရသူသည် ကိုယ်အလေးချိန်မပြည့်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหมาะที่จะใช้ในกรณีฉุกเฉิน",
+        "en": "Suitable for use in emergencies.",
+        "my": "အရေးပေါ်အခြေအနေများတွင် အသုံးပြုရန် သင့်တော်ပါသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 334,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากเห็นคนพิการกำลังข้ามถนน ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "If you see a disabled person crossing the road What should the driver do?",
+    "q_my": "၎) မသန်စွမ်းသူတစ်ဦး လမ်းဖြတ်ကူးနေတာကို တွေ့ရင် ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ลดความเร็วและกะพริบไฟสูงใส่คนพิการ",
+        "en": "Slow down and flash your high beams at a disabled person.",
+        "my": "မသန်စွမ်းသူတစ်ဦးကို အရှိန်လျှော့ပြီး အမြင့်တန်းများကို မီးညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดและให้สัญญาณแตรจนกว่าคนพิการข้ามจนพ้นทาง",
+        "en": "Stop and signal the horn until the disabled person is clear of the crossing.",
+        "my": "မသန်စွမ်းသူသည် လမ်းဖြတ်ကူးခြင်းမှ ကင်းစင်သည်အထိ ရပ်ပြီး ဟွန်းကို အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้คนพิการข้ามผ่านทางไปก่อน",
+        "en": "Stop the car to let the disabled person cross the road first.",
+        "my": "မသန်စွမ်းသူကို လမ်းဖြတ်ကူးရန် ကားကိုရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็วและขับอ้อมไปทางด้านขวาของคนพิการ",
+        "en": "Accelerate and drive around the right side of the disabled person.",
+        "my": "မသန်စွမ်းသူ၏ ညာဘက်ခြမ်းကို အရှိန်မြှင့်ပြီး မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 335,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "วิธีเคลื่อนย้ายผู้บาดเจ็บ แบบนั่งบนมือทั้งสี่ที่จับประสานกันเป็นแคร่หรือยกโดยใช้เก้าอี้ เหมาะสำหรับผู้บาดเจ็บแบบใด",
+    "q_en": "How to move the injured person Sitting on four hands held together to form a litter or being lifted using a chair. Suitable for what kind of injuries?",
+    "q_my": "ဒဏ်ရာရသူအား အမှိုက်ပုံသဏ္ဍာန်ပြုလုပ်ရန် လက်လေးချောင်းပေါ်တွင် ချိတ်တွဲ၍ထိုင်ခြင်း သို့မဟုတ် ကုလားထိုင်ကို အသုံးပြု၍ မြှောက်ခြင်းအား မည်ကဲ့သို့ ရွှေ့ရမည်နည်း။ ဘယ်လိုဒဏ်ရာမျိုးနဲ့ သင့်တော်လဲ။",
+    "options": [
+      {
+        "th": "ผู้บาดเจ็บที่ไม่รู้สึกตัว",
+        "en": "injured person who is unconscious",
+        "my": "သတိလစ် ဒဏ်ရာရရှိသူ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้บาดเจ็บที่ลำตัว หรือกระดูกหัก",
+        "en": "injured person in the torso or broken bones",
+        "my": "ဒဏ်ရာရသူ သို့မဟုတ် အရိုးကျိုးခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้บาดเจ็บในกรณีฉุกเฉิน",
+        "en": "injured person in emergency",
+        "my": "ဒဏ်ရာရသူ အရေးပေါ်အခြေအနေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้บาดเจ็บที่ขาเจ็บ แต่รู้สึกตัวดี และสามารถใช้แขนทั้งสองข้างได้",
+        "en": "injured person with injured leg But I feel good. and can use both arms",
+        "my": "ဒဏ်ရာရသူ ခြေထောက် ဒဏ်ရာရပေမယ့် နေလို့ကောင်းတယ်။ လက်နှစ်ဖက်စလုံးကို အသုံးပြုနိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 336,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านควรใช้สัญญาณไฟฉุกเฉินในกรณีใด",
+    "q_en": "In which cases should you use emergency lights?",
+    "q_my": "၎) အရေးပေါ်မီးများကို မည်သည့်ကိစ္စများတွင် အသုံးပြုသင့်သနည်း။",
+    "options": [
+      {
+        "th": "เมื่อท่านต้องการขับผ่านสี่แยกไปในทิศทางตรง",
+        "en": "When you want to drive through an intersection in a straight direction.",
+        "my": "လမ်းဆုံလမ်းခွကို ဖြတ်ကျော်ချင်တဲ့အခါ ဖြောင့်ဖြောင့်တန်းတန်း မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อท่านขับรถด้วยความเร็วต่ำขณะที่กำลังหลงทาง",
+        "en": "When you drive at low speed while lost.",
+        "my": "အရှိန်နည်းနည်းနဲ့ မောင်းတဲ့အခါ ပျောက်သွားတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อท่านขับรถด้วยความเร็วต่ำเนื่องจากฝนตกหนัก",
+        "en": "When you drive at low speed due to heavy rain.",
+        "my": "မိုးသည်းထန်မှုကြောင့် အရှိန်နည်းနည်းနဲ့ မောင်းတဲ့အခါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อรถของท่านเสีย หรือ เกิดอุบัติเหตุ",
+        "en": "When your car breaks down or has an accident.",
+        "my": "သင့်ကား ပြိုကျချိန် သို့မဟုတ် မတော်တဆမှုဖြစ်သည့်အခါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 337,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ความหมายของคำว่า \"ความเร็วที่ปลอดภัย\" ข้อใดถูกต้องที่สุด",
+    "q_en": "The meaning of the word Which \"safe speed\" is the most accurate?",
+    "q_my": "ဟူသော စကားလုံး၏ အဓိပ္ပါယ်မှာ မည်သည့် \"လုံခြုံသော မြန်နှုန်း\" သည် အမှန်ကန်ဆုံးဖြစ်သနည်း။",
+    "options": [
+      {
+        "th": "ความเร็วที่เหมาะสมกับสภาพถนน สภาพอากาศ สภาพการจราจร ซึ่งเป็นความเร็วที่ไม่ก่ออันตรายแก่ผู้อื่น",
+        "en": "A speed that is appropriate for road conditions, weather conditions, and traffic conditions, which is a speed that does not cause harm to others.",
+        "my": "လမ်းအခြေအနေ၊ ရာသီဥတုအခြေအနေနှင့် ယာဉ်အသွားအလာအခြေအနေများအတွက် သင့်လျော်သောအမြန်နှုန်းဖြစ်ပြီး အခြားသူများကို အန္တရာယ်မဖြစ်စေသော အမြန်နှုန်းတစ်ခုဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ความเร็วสูงสุดที่สามารถขับได้",
+        "en": "Maximum speed that can be driven",
+        "my": "မောင်းနှင်နိုင်သော အမြင့်ဆုံးအမြန်နှုန်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความเร็วที่ผู้ขับขี่คิดว่าปลอดภัย",
+        "en": "The speed that the driver considers safe",
+        "my": "ယာဉ်မောင်းသူသည် အန္တရာယ်ကင်းသည်ဟု ယူဆသော အရှိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความเร็วที่กฎหมายกำหนด",
+        "en": "Speed set by law",
+        "my": "ဥပဒေအရ သတ်မှတ်ထားတဲ့ အရှိန်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 338,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่มารยาทที่ดีในการแซงหรือเปลี่ยนช่องทางเดินรถ",
+    "q_en": "Which is not good etiquette for overtaking or changing lanes?",
+    "q_my": "ကျော်တက်ခြင်း သို့မဟုတ် လမ်းပြောင်းခြင်းအတွက် ဘယ်ဟာက မကောင်းတဲ့ ကျင့်ဝတ်လဲ။",
+    "options": [
+      {
+        "th": "ถนนยิ่งแคบยิ่งต้องขับช้าๆ และแซงด้วยความระมัดระวัง",
+        "en": "The narrower the road, the more slowly you have to drive. and overtake with caution",
+        "my": "လမ်းကျဉ်းလေလေ ဖြည်းညင်းစွာ မောင်းနှင်ရလေဖြစ်သည်။ သတိနှင့် ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่แซงในที่คับขันหรือเขตห้ามแซง",
+        "en": "Do not overtake in tight places or overtaking zones.",
+        "my": "ကြပ်သောနေရာများနှင့် ကျော်တက်သည့်နေရာများတွင် မကျော်ပါနှင့်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณไฟเลี้ยว ก่อนแซงทุกครั้ง",
+        "en": "Give a turn signal before overtaking every time",
+        "my": "အချိန်တိုင်းမကျော်မီ ကွေ့အချက်ပြပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อแซงรถคันหน้าแล้วปาดหน้าชิดซ้ายทันที",
+        "en": "When overtaking the car in front, immediately cut in front of you to the left.",
+        "my": "ရှေ့ကားကို ကျော်တက်သောအခါ၊ ရှေ့မှ ဘယ်ဘက်သို့ ချက်ချင်းဖြတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 339,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ทัศนคติและจิตสำนึกในการขับรถอย่างปลอดภัยของผู้ขับรถคืออะไร",
+    "q_en": "What is the driver's attitude and conscience for safe driving?",
+    "q_my": "အန္တရာယ်ကင်းစွာ မောင်းနှင်နိုင်ရေးအတွက် ယာဉ်မောင်း၏ သဘောထားနှင့် ကြံဆမှုကား အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "ขับรถช้า ใจเย็น",
+        "en": "Drive slowly, be calm.",
+        "my": "ဖြည်းဖြည်းမောင်းပါ၊ စိတ်အေးအေးထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถดีไม่เกิดอุบัติเหตุ",
+        "en": "Drive well, no accidents.",
+        "my": "ကောင်းစွာ မောင်းနှင်ပါ၊ ယာဉ်တိုက်မှု မရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถเก่งคล่องแคล่ว",
+        "en": "Driving skillfully",
+        "my": "ကျွမ်းကျင်စွာ မောင်းနှင်ခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถอย่างมีสติเคร่งครัดวินัยจราจรแสดงออกถึงมารยาทและน้ำใจ",
+        "en": "Drive mindfully and strictly adhere to traffic discipline, showing manners and consideration.",
+        "my": "ယာဉ်စည်းကမ်း၊ အမူအကျင့်၊ အမူအကျင့်များကို ပြသ၍ သတိရှိရှိ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 340,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดถูกต้อง",
+    "q_en": "Which is correct?",
+    "q_my": "ဘယ်ဟာမှန်လဲ။",
+    "options": [
+      {
+        "th": "ไม่ควรเติมน้ำมันหล่อลื่นลงไปผสมในน้ำมันเชื้อเพลิง",
+        "en": "Lubricating oil should not be added to the fuel.",
+        "my": "လောင်စာဆီတွင် ချောဆီမထည့်သင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "การเติมน้ำมันควรเติมในช่วงกลางวันเท่านั้น",
+        "en": "Refueling should only be done during the daytime.",
+        "my": "နေ့ခင်းဘက်တွင်သာ ဆီဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำมันที่แพงคือน้ำมันที่ดีที่สุด",
+        "en": "Expensive oil is the best oil.",
+        "my": "စျေးကြီးသောဆီသည် အကောင်းဆုံးဆီဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมน้ำมันค่าออกเทน 95 แทนออกเทน 91 ไม่ได้",
+        "en": "Can't fill up with 95 octane gas instead of 91 octane.",
+        "my": "91 octane အစား 95 octane ဓာတ်ငွေ့ဖြင့် မဖြည့်နိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 341,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดกล่าวถูกต้อง",
+    "q_en": "Which of the following is correct?",
+    "q_my": "အောက်ပါအချက်များထဲမှ ဘယ်ဟာမှန်ပါသလဲ။",
+    "options": [
+      {
+        "th": "ผู้ป่วยโรคเบาหวาน ไม่สามารถขับรถยนต์ส่วนตัวได้",
+        "en": "Diabetics Unable to drive a personal car",
+        "my": "ဆီးချိုသမားများသည် ကိုယ်ပိုင်ကားမမောင်းနိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ป่วยที่มีสายตาสั้น ไม่สามารถขับรถยนต์สาธารณะได้",
+        "en": "Patients with nearsightedness Unable to drive public vehicles",
+        "my": "အနီးမှုန်သောလူနာများသည် အများသူငှာယာဉ်များ မမောင်းနှင်နိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ป่วยที่ติดเชื้อ HIV ไม่สามารถขับรถได้",
+        "en": "HIV-infected patients cannot drive.",
+        "my": "HIV ပိုးရှိသူများသည် ကားမမောင်းနိုင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ผู้ป่วยโรคความดันโลหิตสูงขณะปรากฏอาการไม่ควรขับรถ",
+        "en": "Patients with high blood pressure when symptoms appear should not drive.",
+        "my": "လက္ခဏာများပေါ်လာသောအခါ သွေးတိုးလူနာများ ကားမမောင်းသင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 342,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ก่อนทำการแซงรถบรรทุก ควรเว้นระยะห่างให้มากเพราะเหตุใด",
+    "q_en": "Before overtaking the truck. Why should you keep a large distance?",
+    "q_my": "ထရပ်ကားကို မကျော်မှီ။ ဘာလို့ အကွာအဝေးကြီးကို ထားသင့်တာလဲ။",
+    "options": [
+      {
+        "th": "เพื่อให้มีพื้นที่ให้รถคันอื่นสามารถแซงได้",
+        "en": "To allow space for other cars to overtake.",
+        "my": "အခြားကားများကို ကျော်တက်ရန် နေရာလွတ်များ ထားရှိရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อทัศนวิสัยในการมองเห็นได้ดีที่สุด",
+        "en": "For the best visibility",
+        "my": "အကောင်းဆုံးမြင်နိုင်စွမ်းအတွက်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพื่อให้มีพื้นที่ในกรณีที่รถบรรทุกหยุด",
+        "en": "To provide space in case the truck stops.",
+        "my": "ထရပ်ကားရပ်သည့်အခါ နေရာလွတ်ပေးရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อให้มีพื้นที่ในการเร่งความเร็ว โดยจะช่วยให้ทำการแซงได้เร็วขึ้นในช่วงทางโค้งที่เป็นจุดบอด",
+        "en": "To have space to accelerate It will help make overtaking faster during curves that are blind spots.",
+        "my": "အရှိန်မြှင့်ရန် နေရာရှိရန် ၎င်းသည် မျက်မမြင်အစက်အပြောက်များဖြစ်သည့် လမ်းကွေ့များအတွင်း အမြန်ကျော်တက်ရန် ကူညီပေးပါမည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 343,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากมีผู้ขับรถกำลังกลับรถเข้ามาในช่องทางที่ท่านขับรถอยู่ ท่านจะตัดสินใจทำอย่างไร",
+    "q_en": "If there is a driver making a U-turn into the lane in which you are driving. What will you decide to do?",
+    "q_my": "၎) ယာဉ်မောင်းသည် သင်မောင်းနှင်နေသည့်လမ်းကြားသို့ ဂငယ်ကွေ့ကွေ့၍ဖြစ်စေ၊ ဘာလုပ်ဖို့ ဆုံးဖြတ်မှာလဲ။",
+    "options": [
+      {
+        "th": "หงุดหงิด บีบแตรไล่ แต่หยุดรถให้",
+        "en": "Irritated, I honked my horn but stopped the car.",
+        "my": "စိတ်တိုတိုနဲ့ ဟွန်း ဟွန်းတီးပေမယ့် ကားကို ရပ်လိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หลบรถโดยแซงไปอีกช่องทางหนึ่ง",
+        "en": "Dodge the car by passing in another lane.",
+        "my": "အခြားလမ်းကြားတွင် ဖြတ်သန်းကာ ကားကိုရှောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วเพื่อขอทางไม่ให้กลับรถ",
+        "en": "Accelerate to ask for directions so as not to make a U-turn.",
+        "my": "ဂငယ်ကွေ့မကွေ့မိစေရန် လမ်းညွှန်ချက်တောင်းရန် အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มีน้ำใจชะลอความเร็วและให้ทางแก่ผู้กลับรถ",
+        "en": "Be considerate in slowing down and giving way to those making a U-turn.",
+        "my": "ဂငယ်ကွေ့ကွေ့သူများကို အရှိန်လျှော့၍ လမ်းပေးရာတွင် သတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 344,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถเข้าสู่ทางม้าลายแล้วพบว่ามีคนนั่งรถเข็นรอข้ามถนน ท่านควรปฏิบัติอย่างไร",
+    "q_en": "When you drive into a zebra crossing and find that there is a person in a wheelchair waiting to cross the road. What should you do?",
+    "q_my": "သင်မြင်းကျားလမ်းကူးသို့ မောင်းလာသောအခါ လမ်းဖြတ်ကူးရန် ဘီးတပ်ကုလားထိုင်ဖြင့် လူတစ်ယောက် ရှိနေသည်ကို တွေ့ရှိရသည်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "โบกมือให้คนนั่งรถเข็นหยุดรอ",
+        "en": "Wave to the person in the wheelchair to stop and wait.",
+        "my": "ရပ်ပြီး စောင့်ဆိုင်းရန် ဘီးတပ်ကုလားထိုင်ရှိလူကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เตรียมพร้อมที่จะหยุด",
+        "en": "Get ready to stop",
+        "my": "ရပ်ရန် အသင့်ပြင်ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับต่อไป",
+        "en": "Keep driving.",
+        "my": "ဆက်မောင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "โบกมือให้คนนั่งรถเข็นข้ามได้",
+        "en": "Wave to people in wheelchairs to cross.",
+        "my": "ဖြတ်ကူးဖို့ ဘီးတပ်ကုလားထိုင်နဲ့ လူတွေကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 345,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การแก้ไขสถานการณ์ จะต้องตั้งสมมุติฐานไว้ตามข้อใด",
+    "q_en": "Resolving the situation What assumptions must be made?",
+    "q_my": "အခြေအနေတွေကို ဖြေရှင်းရာမှာ ဘယ်လိုယူဆချက်တွေကို လုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "การป้องกันไว้ก่อน เพื่อตัดสินใจแก้ไขสถานการณ์",
+        "en": "precaution to decide to resolve the situation",
+        "my": "အခြေအနေကို ဖြေရှင်းရန် ကြိုတင်သတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่จำเป็นต้องคิดอะไร เพื่อจะเกิดอุบัติเหตุค่อยแก้ไขปัญหาทันที",
+        "en": "No need to think about anything. In order to have an accident, solve the problem immediately.",
+        "my": "ဘာမှ စဉ်းစားနေဖို့ မလိုပါဘူး။ မတော်တဆမှုဖြစ်ဖို့အတွက် ပြဿနာကို ချက်ချင်းဖြေရှင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะต้องปลอดภัยไว้ก่อน โดยไม่นึกถึงรถคันอื่นบนท้องถนน",
+        "en": "Must be safe first. without thinking of other cars on the road",
+        "my": "လုံခြုံအောင် အရင်လုပ်ရမယ်။ လမ်းမှာ တခြားကားတွေကို မစဉ်းစားဘဲနဲ့",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถไปตามปกติเพราะรถเรามีการป้องกันอุบัติเหตุที่ดีอยู่แล้ว",
+        "en": "Drive normally because our cars already have good accident prevention.",
+        "my": "ကျွန်ုပ်တို့၏ကားများသည် ယာဉ်မတော်တဆမှုကို ကြိုတင်ကာကွယ်ပြီးသားဖြစ်သောကြောင့် ပုံမှန်အတိုင်းမောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 346,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่ออยู่ในสถานที่เกิดเหตุ สามารถช่วยผู้บาดเจ็บที่หมดสติได้อย่างไร",
+    "q_en": "When at the scene of the incident How can one help an injured person who is unconscious?",
+    "q_my": "၎) အခင်းဖြစ်ပွားတဲ့နေရာမှာ သတိလစ်နေတဲ့ ဒဏ်ရာရသူတွေကို ဘယ်လိုကူညီမလဲ။",
+    "options": [
+      {
+        "th": "ตรวจสอบว่าหายใจเป็นปกติหรือไม่",
+        "en": "Check if breathing is normal.",
+        "my": "အသက်ရှုပုံမှန်ရှိမရှိ စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ถ่ายรูปสถานที่เกิดเหตุ",
+        "en": "Take photos of the crime scene",
+        "my": "မှုခင်းမြင်ကွင်းဓာတ်ပုံရိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้น้ำเย็นสาดใส่หน้าผู้บาดเจ็บ",
+        "en": "Use cold water to splash the injured person's face.",
+        "my": "ဒဏ်ရာရသူ၏ မျက်နှာကို ရေအေးဖြင့် ဖြန်းပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เคลื่อนย้ายผู้บาดเจ็บไปยังที่ที่สบายกว่า",
+        "en": "Move the injured person to a more comfortable location.",
+        "my": "ဒဏ်ရာရသူကို ပိုသက်တောင့်သက်သာရှိတဲ့ နေရာကို ရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 347,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ควรปฏิบัติในการขับรถให้ถึงจุดหมายปลายทางอย่างปลอดภัย",
+    "q_en": "Which thing should not be done to drive the car to reach the destination safely?",
+    "q_my": "၎) လိုရာခရီးကို အန္တရာယ်ကင်းစွာ မောင်းနှင်ဖို့ ဘယ်အရာက မလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "ทำความคุ้นเคยกับรถที่จะขับขี่ ในกรณีที่เป็นรถที่ไม่เคยขับขี่มาก่อน",
+        "en": "Familiarize yourself with the vehicle you will be driving. In the case of a car that has never been driven before",
+        "my": "သင်မောင်းနှင်မည့်ယာဉ်နှင့် သင့်ကိုယ်သင် ရင်းနှီးပါ။ တခါမှ မမောင်းဖူးတဲ့ ကားမျိုး ဆိုရင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มีจิตสำนึกในการขับขี่อย่างรับผิดชอบ",
+        "en": "Have awareness of driving responsibly",
+        "my": "စည်းကမ်းရှိစွာ မောင်းနှင်ရန် သတိရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พักผ่อนให้เพียงพอและไม่ดื่มสุรา",
+        "en": "Get enough rest and don't drink alcohol.",
+        "my": "လုံလောက်စွာ အနားယူပြီး အရက်မသောက်ပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วสูงเพื่อให้ถึงปลายทางก่อนที่จะมืด",
+        "en": "Drive at high speed to reach your destination before dark.",
+        "my": "မမှောင်မီ သင်၏ဦးတည်ရာသို့ ရောက်ရန် အရှိန်ပြင်းပြင်းဖြင့် မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 348,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อต้องใช้เบาะนั่งสำหรับเด็กแบบหันหน้าเข้าหาเบาะรถบนที่นั่งด้านหน้าซึ่งมีระบบถุงลมนิรภัยติดตั้งอยู่ ต้องปฏิบัติอย่างไรก่อนออกเดินทาง",
+    "q_en": "When using a forward-facing child restraint system in a front seat equipped with an airbag system. What must be done before leaving?",
+    "q_my": "လေအိတ်စနစ်ပါရှိသော ရှေ့ထိုင်ခုံတွင် ရှေ့မျက်နှာစာ ကလေးထိန်းစနစ်ကို အသုံးပြုသည့်အခါ။ မထွက်ခင် ဘာတွေလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "เปลี่ยนเบาะนั่งสำหรับเด็กให้หันออกไปยังหน้ารถ",
+        "en": "Change the child seat to face towards the front of the car.",
+        "my": "ကလေးထိုင်ခုံကို ကားရှေ့သို့ မျက်နှာမူရန် ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขอให้คนโดยสารอุ้มเด็กไว้",
+        "en": "Ask the passenger to hold the child.",
+        "my": "ခရီးသည်ကို ကလေးထိန်းခိုင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้เด็กนั่งที่นั่งปกติและคาดเข็มขัดนิรภัยสำหรับผู้ใหญ่",
+        "en": "Put the child in a regular seat and fasten the adult seat belt.",
+        "my": "ကလေးကို ပုံမှန်ထိုင်ခုံမှာထားပြီး လူကြီးထိုင်ခုံခါးပတ်ကို ပတ်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปิดการใช้ถุงลมนิรภัย",
+        "en": "Disable the airbag.",
+        "my": "လေအိတ်ပိတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 349,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะที่ท่านกำลังรอเพื่อที่จะเคลื่อนรถออกจากข้างทางเพราะเหตุใดท่านต้องระวังรถจักรยานยนต์",
+    "q_en": "While you are waiting to move your vehicle off the side of the road, why do you need to be careful with motorcycles?",
+    "q_my": "သင့်ယာဉ်ကို လမ်းဘေးမှ ရွှေ့ရန် စောင့်ဆိုင်းနေစဉ် မော်တော်ဆိုင်ကယ်များကို အဘယ်ကြောင့် သတိထားရန် လိုအပ်သနည်း။",
+    "options": [
+      {
+        "th": "เพราะรถจักรยานยนต์มีสิทธิ์ใช้ทางก่อนรถยนต์เสมอ",
+        "en": "Because motorcycles always have the right of way before cars.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် မော်တော်ဆိုင်ကယ်များသည် ကားများရှေ့တွင် အမြဲတမ်းလမ်းမှန်ရှိသောကြောင့်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะรถจักรยานยนต์อนุญาตให้ต้องวิ่งทางด้านขวา",
+        "en": "Because motorcycles are allowed to run on the right side.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် မော်တော်ဆိုင်ကယ်များကို ညာဘက်ခြမ်းတွင် ပြေးဆွဲခွင့်ရှိသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะรถจักรยานยนต์มีขนาดเล็กและสังเกตเห็นได้ยาก",
+        "en": "Because motorcycles are small and difficult to notice.",
+        "my": "မော်တော်ဆိုင်ကယ်များသည် သေးငယ်ပြီး သတိထားရခက်သောကြောင့် ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพราะตำรวจจราจรมักใช้รถจักรยานยนต์เป็นพาหนะ",
+        "en": "Because traffic police often use motorcycles as vehicles.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် ယာဉ်ထိန်းရဲများသည် မော်တော်ဆိုင်ကယ်များကို ယာဉ်များအဖြစ် အသုံးပြုလေ့ရှိသောကြောင့် ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 350,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สิ่งใดที่ผู้ขับรถควรทำเมื่อได้รับสัญญาณไฟเหลือง",
+    "q_en": "What should drivers do when they receive a yellow light?",
+    "q_my": "၎) ယာဉ်မောင်းများသည် အဝါရောင်အလင်းတန်းတစ်ခုရသောအခါ ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ชะลอรถและหยุดรถหลังเส้นให้หยุดรถ",
+        "en": "Slow down and stop behind the stop line.",
+        "my": "အရှိန်လျှော့ပြီး မှတ်တိုင်အနောက်မှာ ရပ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับเปลี่ยนเลนเพื่อแซงรถขึ้นไปให้พ้นสัญญาณไฟแดง",
+        "en": "Change lanes to pass the car and get past the red light.",
+        "my": "ကားကိုဖြတ်ပြီး မီးနီကိုဖြတ်ရန် လမ်းပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับตามคันหน้าไปโดยฝ่าสัญญาณไฟแดง",
+        "en": "Follow the vehicle in front, passing the red light.",
+        "my": "မီးနီကိုဖြတ်ပြီး ရှေ့ကယာဉ်နောက်ကို လိုက်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรเร่งรถคันหน้าให้ขับเร็วขึ้น",
+        "en": "Honk the horn and accelerate the car in front to drive faster.",
+        "my": "ကားဟွန်းကို ဟွန်းတီးပြီး အရှိန်မြှင့်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 351,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการตรวจสอบสิ่งอันตรายต่างๆ รอบตัวรถขณะขับรถ ข้อใดไม่ใช่ข้อที่ควรปฏิบัติ",
+    "q_en": "To check for various hazards Around the car while driving Which is not a thing that should be done?",
+    "q_my": "ကားမောင်းနေစဉ် ကားပတ်ပတ်လည်တွင် အန္တရာယ်အမျိုးမျိုးကို စစ်ဆေးရန် မည်သည့်အရာက မလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ตรวจสอบจุดบอดของรถเป็นระยะๆ",
+        "en": "Check your car's blind spots periodically.",
+        "my": "သင့်ကား၏ မမြင်နိုင်သောနေရာများကို အခါအားလျော်စွာ စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดูกระจกเป็นระยะ",
+        "en": "Look in the mirror periodically.",
+        "my": "မှန်ထဲမှာ ခဏခဏကြည့်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองไปข้างหน้าในระยะไกล 200-300 เมตร",
+        "en": "Look ahead at a distance of 200-300 meters.",
+        "my": "မီတာ 200-300 အကွာအဝေးကို ကြိုကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองป้ายโฆษณาบริเวณข้างทาง",
+        "en": "Look at the billboards on the side of the road.",
+        "my": "လမ်းဘေးက ကြော်ငြာဘုတ်တွေကို ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 352,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สิ่งสำคัญที่สุดเมื่อเกิดอุบัติเหตุรถไฟไหม้คือข้อใด",
+    "q_en": "What is the most important thing in the event of a car fire accident?",
+    "q_my": "၎) ကားမီးလောင်မှုဖြစ်စဉ်မှာ အရေးကြီးဆုံးက ဘာလဲ။",
+    "options": [
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ รีบออกจากตัวรถทันที",
+        "en": "Remain calm and get out of the car immediately.",
+        "my": "ငြိမ်ငြိမ်လေးနေပြီး ကားပေါ်ကနေ ချက်ချင်းဆင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถข้างทาง",
+        "en": "Parking on the side of the road",
+        "my": "လမ်းဘေးမှာ ကားရပ်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถอดขั้วแบตเตอรี่",
+        "en": "Remove the battery terminals.",
+        "my": "ဘက်ထရီ terminals များကိုဖယ်ရှားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 353,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดคือวิธีป้องกันอุบัติเหตุ หากกำลังมีคนข้ามถนน",
+    "q_en": "Which is a way to prevent accidents? If someone is crossing the road",
+    "q_my": "ဘယ်လမ်းက မတော်တဆမှုမှ ကာကွယ်နိုင်မလဲ။ တစ်ယောက်ယောက်က လမ်းဖြတ်ကူးရင်",
+    "options": [
+      {
+        "th": "จอดรถทันที",
+        "en": "Park the car immediately.",
+        "my": "ကားကို ချက်ချင်းရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพิ่มความเร็วขึ้น",
+        "en": "speed up",
+        "my": "အရှိန်မြှင့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การลดความเร็วลง",
+        "en": "slowing down",
+        "my": "အရှိန်လျှော့",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับตามปกติ",
+        "en": "Drive normally",
+        "my": "ပုံမှန်အတိုင်း မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 354,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000437.webp",
+    "q_th": "จากรูป หากท่านต้องการแซงรถข้างหน้า ท่านจะต้องให้สัญญาณไฟอย่างไร",
+    "q_en": "From the picture, if you want to overtake the car in front How do you signal the light?",
+    "q_my": "ပုံထဲကအတိုင်း ရှေ့ကားကို ကျော်တက်ချင်ရင် မီးကို ဘယ်လို အချက်ပြမလဲ။",
+    "options": [
+      {
+        "th": "เปิดสัญญาณไฟเลี้ยวซ้ายขณะแซง",
+        "en": "Turn on the left turn signal while overtaking.",
+        "my": "ကျော်တက်နေစဉ် ဘယ်ဘက်ကွေ့အချက်ပြကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่จำเป็นต้องเปิดสัญญาณไฟหากรถคันหน้าขับด้วยความเร็วต่ำ",
+        "en": "There is no need to turn on the lights if the vehicle in front is driving at a low speed.",
+        "my": "ရှေ့ယာဉ်သည် အရှိန်အဟုန်ဖြင့် မောင်းနှင်နေပါက မီးဖွင့်ရန် မလိုအပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟเลี้ยวขวาก่อนและตามด้วยสัญญาณไฟเลี้ยวซ้ายขณะแซง",
+        "en": "Turn on the right turn signal first and then the left turn signal when overtaking.",
+        "my": "ညာကွေ့အချက်ပြကို အရင်ဖွင့်ပြီးမှ ကျော်တက်တဲ့အခါ ဘယ်ဘက်ကွေ့အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟเลี้ยวขวา และแซงได้เมื่อปลอดภัย",
+        "en": "Turn on the right turn signal and can overtake when safe",
+        "my": "ညာဘက်ကွေ့အချက်ပြကိုဖွင့်ပြီး အန္တရာယ်ကင်းသည့်အချိန်တွင် ကျော်တက်နိုင်သည်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 355,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000438.webp",
+    "q_th": "ในขณะที่ท่านกำลังหยุดรอสัญญาณไฟอยู่ที่ทางแยก แล้วไฟจราจรเปลี่ยนเป็นสีเขียว ท่านควรปฏิบัติอย่างไร",
+    "q_en": "While you are stopping and waiting for the light at an intersection. Then the traffic light changed to green. What should you do?",
+    "q_my": "၎) လမ်းဆုံတစ်ခုတွင် ရပ်ပြီး အလင်းရောင်ကို စောင့်နေစဉ်။ နောက်တော့ မီးပွိုင့်က အစိမ်းရောင်ပြောင်းသွားတယ်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "รอจนกว่ารถคันข้างหลังของท่านจะให้สัญญาณแตร แล้วจึงออกรถ",
+        "en": "Wait until the vehicle behind you signals its horn and then pull out.",
+        "my": "မင်းနောက်ကကားက ဟွန်းအချက်ပြပြီး ထွက်လာတဲ့အထိ စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปฏิบัติอย่างไรก็ได้ แล้วแต่ผู้ขับขี่",
+        "en": "You can do whatever you want. It depends on the driver.",
+        "my": "မင်းလုပ်ချင်တာလုပ်လို့ရတယ်။ ယာဉ်မောင်းအပေါ် မူတည်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถผ่านทางแยกไปโดยเร็ว เพื่อไม่ให้รถคันหลังเสียเวลา",
+        "en": "Drive through the intersection quickly. So as not to waste time on the car behind you.",
+        "my": "လမ်းဆုံကို အမြန်ဖြတ်မောင်းပါ။ သင့်နောက်က ကားပေါ်မှာ အချိန်မဖြုန်းဖို့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจสอบการจราจรรอบๆ ข้างก่อน เมื่อปลอดภัยจึงออกรถ",
+        "en": "Check surrounding traffic before driving off when it is safe.",
+        "my": "အန္တရာယ်ကင်းသည့်အခါ မမောင်းမီ အနီးပတ်ဝန်းကျင်ရှိ ယာဉ်ကြောများကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 356,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดแสดงถึงการมีจิตสำนึกในการขับขี่อย่างปลอดภัย โดยหลีกเลี่ยงพฤติกรรมเสี่ยงภัย",
+    "q_en": "Which of the following shows having awareness of safe driving? By avoiding risky behavior",
+    "q_my": "ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်းဆိုင်ရာ သတိရှိခြင်းကို ဖော်ပြပါရှိသည့် မည်သည့်အရာများ။ အန္တရာယ်ရှိသော အပြုအမူကို ရှောင်ကြဉ်ခြင်းဖြင့်၊",
+    "options": [
+      {
+        "th": "ปรับแต่งท่อรถให้มีเสียงดังเกินกว่าที่กฎหมายกำหนด",
+        "en": "Adjust the car's exhaust pipes to make the noise exceed the legal limit.",
+        "my": "တရားဝင် ကန့်သတ်ချက်ထက် ကျော်လွန်၍ အသံဆူညံစေရန် ကား၏ အိပ်ဇောပိုက်များကို ချိန်ညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉิน เมื่อจอดรถในที่ห้ามจอด",
+        "en": "Turn on emergency lights When parking in a prohibited area",
+        "my": "တားမြစ်ထားသောနေရာ၌ ကားရပ်သည့်အခါ အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดัดแปลงไฟหน้ารถให้สว่างโดยผิดจากที่กฎหมายกำหนด",
+        "en": "Modifying car headlights to make them brighter than what is required by law.",
+        "my": "ကားရှေ့မီးများကို ဥပဒေအရ လိုအပ်သည်ထက် ပိုမိုတောက်ပစေရန် ပြုပြင်ခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปฏิบัติตามกฎจราจรตลอดเวลาที่ขับขี่โดยไม่ต้องรอให้ตำรวจจราจรบังคับ",
+        "en": "Follow traffic rules at all times while driving without waiting for the traffic police to enforce you.",
+        "my": "ယာဉ်ထိန်းရဲများ လိုက်နာရမည့်အချိန်ကို စောင့်မနေဘဲ ယာဉ်စည်းကမ်း လမ်းစည်းကမ်းကို အချိန်တိုင်း လိုက်နာပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 357,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นพฤติกรรมที่ควรปฏิบัติเมื่ออยู่บนถนน",
+    "q_en": "Which is the behavior that should be followed when on the road?",
+    "q_my": "၎) လမ်းမှာ လျှောက်ရမယ့် အကျင့်က ဘယ်ဟာလဲ။",
+    "options": [
+      {
+        "th": "ขับรถย้อนศรเพื่อประหยัดน้ำมัน",
+        "en": "Drive in reverse to save gas.",
+        "my": "ဂက်စ်ချွေတာရန် နောက်ပြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถแล้วเจอแสงแดด ยกมือขึ้นมาป้องเพื่อป้องกันแสงเข้าตา",
+        "en": "Driving and seeing sunlight Raise your hand to prevent light from entering your eyes.",
+        "my": "ကားမောင်းခြင်းနှင့် နေရောင်ခြည်ကိုမြင်ခြင်း သင့်မျက်လုံးထဲသို့ အလင်းရောင်ဝင်ရောက်ခြင်းမှ ကာကွယ်ရန် သင့်လက်ကို မြှောက်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถจี้ท้ายรถบรรทุกขนาดใหญ่ เพื่อป้องกันรถอื่นวิ่งสวนทางเข้ามาชน",
+        "en": "Driving in the back of a large truck To prevent other cars running in the opposite direction from colliding.",
+        "my": "ကုန်တင်ကားကြီး၏ နောက်ဘက်တွင် မောင်းနှင်နေသော အခြားကားများ တိုက်မိခြင်းမှ တားဆီးရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วไม่เกินที่กำหนด และปฏิบัติตามเครื่องหมายจราจร",
+        "en": "Driving at a speed not exceeding the speed limit and follow traffic signs",
+        "my": "သတ်မှတ်အမြန်နှုန်းထက် မကျော်လွန်ဘဲ အရှိန်ဖြင့် မောင်းနှင်ပြီး ယာဉ်ထိန်းအမှတ်အသားများကို လိုက်နာပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 358,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นการขับรถอย่างปลอดภัย",
+    "q_en": "Which is safe driving?",
+    "q_my": "၎) ဘယ်ဟာ လုံခြုံစွာ မောင်းနှင်မလဲ။",
+    "options": [
+      {
+        "th": "เปิดไฟสูงตลอดเวลาในการขับรถเวลากลางคืน",
+        "en": "Always turn on your high beams when driving at night.",
+        "my": "ညဘက် ကားမောင်းတဲ့အခါ အမြင့်တန်းတွေကို အမြဲဖွင့်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เว้นระยะห่างจากรถคันหน้าในระยะที่ผู้ขับขี่สามารถหยุดรถได้ทัน",
+        "en": "Keep a distance from the vehicle in front that allows the driver to stop in time.",
+        "my": "ယာဉ်မောင်းကို အချိန်မီရပ်တန့်နိုင်စေမည့် ရှေ့ကားနှင့် အကွာအဝေးထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงรถคันข้างหน้าขณะเข้าโค้ง",
+        "en": "Overtake the vehicle in front while entering a curve.",
+        "my": "မျဉ်းကွေးတစ်ခုထဲသို့ ဝင်စဉ် ရှေ့ယာဉ်ကို ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงด้านซ้ายในถนน 2 ช่องจราจร เมื่อรถคันหน้าขับช้า",
+        "en": "Passing on the left in a 2-lane road when the vehicle in front is driving slowly.",
+        "my": "ရှေ့မှ မော်တော်ကားသည် ဖြည်းညှင်းစွာ မောင်းနှင်လာသောအခါ (၂) လမ်းသွားလမ်းတွင် လက်ဝဲဘက်သို့ ဖြတ်သန်းသွားသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 359,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ถูกต้องเกี่ยวกับการเปิดประตูเมื่อรถยนต์ตกน้ำ",
+    "q_en": "Which is incorrect regarding opening the door when a car falls into the water?",
+    "q_my": "ကားရေထဲကျသွားတဲ့အခါ တံခါးဖွင့်တာနဲ့ ပတ်သက်ပြီး ဘယ်ဟာက မှားနေလဲ။",
+    "options": [
+      {
+        "th": "หมุนกระจกให้น้ำไหลเข้ารถเพื่อปรับความดันให้เท่ากับภายนอกรถ",
+        "en": "Turn the window to let water flow into the car to equalize the pressure outside the car.",
+        "my": "ကားအပြင်ဘက်ရှိ ဖိအားကို ညီမျှစေရန် ကားထဲသို့ ရေစီးဝင်စေရန် ပြတင်းပေါက်ကို လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปลดล็อกประตูทุกบาน",
+        "en": "Unlock all doors",
+        "my": "တံခါးအားလုံးကိုသော့ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดประตูเมื่อความดันภายในและภายนอกรถเท่ากัน",
+        "en": "Open the door when the pressure inside and outside the vehicle is equal.",
+        "my": "ယာဉ်အတွင်းနှင့် အပြင်ဘက် ဖိအားညီမျှနေသောအခါ တံခါးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามสตาร์ทเครื่องยนต์",
+        "en": "Try to start the engine",
+        "my": "အင်ဂျင်ကိုစတင်ရန်ကြိုးစားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 360,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในกรณีที่ท่านขับรถทางตรงผ่านซอย ที่มีรถรอออกเป็นจำนวนมากควรปฏิบัติอย่างไร",
+    "q_en": "In the case that you drive directly through the alley. Where there are a lot of cars waiting to leave, what should be done?",
+    "q_my": "လမ်းကြားကိုတိုက်ရိုက်မောင်းတဲ့ကိစ္စ။ ထွက်ဖို့ စောင့်နေတဲ့ ကားတွေ အများကြီးရှိတဲ့ နေရာတွေမှာ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "พยายามขับให้ชิดคันหน้าเพื่อไม่ให้รถในซอยแทรกออกมา",
+        "en": "Try to drive close to the car in front so that cars in the alley don't come out.",
+        "my": "လမ်းကြားရှိ ကားများ မထွက်စေရန် ရှေ့ကားနှင့် နီးကပ်စွာ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถผ่านซอยด้วยความเร็วเพื่อส่งสัญญาณว่าขอไปก่อน",
+        "en": "Drive through the alley at speed to signal that you want to go first.",
+        "my": "သင်သွားလိုကြောင်း အချက်ပြရန် လမ်းကြားကို အရှိန်ဖြင့် ဖြတ်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดทางให้รถออกจากซอยได้บ้างสลับกับรถทางตรง",
+        "en": "Open the way for cars to leave the alley, alternating with cars going straight.",
+        "my": "လမ်းကြားမှ မော်တော်ကားများ ထွက်ခွာရန် လမ်းဖွင့်ထားပြီး တည့်တည့်သွားနေသည့် ကားများ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บีบแตรหรือให้สัญญาณไฟเตือนรถที่จะออกจากซอยก่อนขับผ่านไป",
+        "en": "Honk your horn or signal your lights to warn cars about to leave the alley before driving past.",
+        "my": "ကားများမမောင်းမီ လမ်းကြားမှ ထွက်ခွာမည့် ကားများကို သတိပေးရန် သင့်ဟွန်းကို ဟွန်းတီးပါ သို့မဟုတ် မီးအချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 361,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในการขับรถลงทางลาดชัน ท่านควรปฏิบัติอย่างไรเพื่อควบคุมความเร็วของรถให้มีความปลอดภัย",
+    "q_en": "In driving down a steep slope What should you do to control your car's speed to be safe?",
+    "q_my": "မတ်စောက်သော တောင်စောင်းကို မောင်းနှင်ရာတွင် သင့်ကား၏အရှိန်ကို လုံခြုံစေရန် သင်ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ใช้เกียร์สูงและเหยียบเบรกเต็มที่",
+        "en": "Use a high gear and apply the brakes fully.",
+        "my": "မြင့်မားသောဂီယာကိုအသုံးပြုပြီး ဘရိတ်ကို အပြည့်အဝအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เกียร์ต่ำและค่อยๆเหยียบเบรก",
+        "en": "Use a low gear and slowly apply the brakes.",
+        "my": "ဂီယာအနိမ့်ကိုသုံး၍ ဘရိတ်ကို ဖြည်းညှင်းစွာ အသုံးချပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้เกียร์ต่ำและหลีกเลี่ยงการใช้เบรก",
+        "en": "Use a low gear and avoid using the brakes.",
+        "my": "ဂီယာအနိမ့်ကို အသုံးပြုပြီး ဘရိတ်ကို ရှောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เกียร์สูงและค่อยๆเหยียบเบรก",
+        "en": "Use a high gear and slowly apply the brakes.",
+        "my": "ဂီယာအမြင့်ကိုသုံး၍ ဘရိတ်ကို ဖြည်းညှင်းစွာအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 362,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้ถูกต้อง",
+    "q_en": "Which of the following is correct?",
+    "q_my": "အောက်ပါအချက်များထဲမှ ဘယ်ဟာမှန်ပါသလဲ။",
+    "options": [
+      {
+        "th": "หากพบรถที่ขับขี่ผิดปกติ ชะลอความเร็ว เว้นระยะห่างจากรถ ไม่เข้าใกล้หรือแซงระยะกระชั้นชิด",
+        "en": "If you encounter a vehicle driving erratically, slow down and keep your distance from the vehicle. Do not approach or overtake in close distance.",
+        "my": "အကယ်၍ သင်သည် မှားယွင်းစွာ မောင်းနှင်နေသည့် ယာဉ်ကို ကြုံတွေ့ရပါက၊ အရှိန်လျှော့ပြီး ယာဉ်နှင့် အကွာအဝေးကို ထားပါ။ အနီးကပ်အကွာအဝေးတွင် ချဉ်းကပ်ခြင်း သို့မဟုတ် မကျော်ပါနှင့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เมื่อผ่านสี่แยกในช่วงกลางคืน หากพบว่าไม่มีรถ ควรรีบเร่งความเร็วให้พ้นสี่แยก เพื่อไม่ให้เสียเวลา",
+        "en": "When passing through an intersection at night If you find that there is no car You should quickly accelerate to get out of the intersection. In order not to waste time",
+        "my": "ညဘက်လမ်းဆုံမှာ ကားမရှိလို့ ဖြတ်သွားတဲ့အခါ လမ်းဆုံကနေ အမြန်ထွက်ဖို့ အရှိန်မြှင့်သင့်တယ်။ အချိန်မဖြုန်းမိစေရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หากพบเห็นผู้ที่เมาแล้วขับให้ขับขึ้นไปปาดหน้า",
+        "en": "If you see someone driving drunk, drive up and cut them off.",
+        "my": "အရက်မူးပြီး ကားမောင်းတာတွေ့ရင် ကားပေါ်တက်ပြီး ဖြတ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถตามหลังอย่างกระชั้นชิด",
+        "en": "Driving closely behind",
+        "my": "နောက်ကနေ နီးနီးကပ်ကပ် မောင်းတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 363,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากท่านกำลังขับรถตามหลังรถขนาดใหญ่ที่กำลังเปิดสัญญาณไฟเลี้ยวซ้ายแต่ตัวรถค่อยๆ เคลื่อนตัวไปทางขวา ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you are driving behind a large vehicle that is turning on the left turn signal but the vehicle slowly Move to the right What should you do?",
+    "q_my": "၎) ဘယ်ဘက်အချက်ပြမီးဖွင့်ထားတဲ့ ယာဉ်ကြီးတစ်စီးနောက်မှာ မောင်းနှင်နေပေမယ့် ယာဉ်ကို ညာဘက်ကို ဖြည်းဖြည်းချင်းရွှေ့ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "รักษาระยะห่างในระยะปลอดภัย",
+        "en": "Keep a safe distance.",
+        "my": "ဘေးကင်းသောအကွာအဝေးကိုထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงไปทางด้านซ้าย",
+        "en": "Overtake to the left",
+        "my": "ဘယ်ဘက်သို့ ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับตามรถใหญ่ในระยะกระชั้นชิด",
+        "en": "Follow a large vehicle in close proximity.",
+        "my": "မလှမ်းမကမ်းတွင် ယာဉ်ကြီးတစ်စီးနောက်ကို လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณแตร",
+        "en": "Give the horn signal",
+        "my": "ဟွန်းအချက်ပြပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 364,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การชะลอและหยุดรถทันทีเมื่อมีคนเดินข้ามถนน เป็นการป้องกันอุบัติเหตุอย่างไร",
+    "q_en": "Slowing down and stopping the car immediately when someone walks across the road. How is it to prevent accidents?",
+    "q_my": "လမ်းကိုဖြတ်ပြီး လူတစ်ယောက် လမ်းလျှောက်လာတဲ့အခါ အရှိန်လျှော့ပြီး ကားကို ချက်ချင်းရပ်လိုက်ပါ။ မတော်တဆမှုတွေ ဘယ်လိုကာကွယ်ရမလဲ။",
+    "options": [
+      {
+        "th": "ป้องกันการแซง",
+        "en": "Prevent overtaking",
+        "my": "ကျော်တက်ခြင်းကို တားဆီးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ป้องกันการชนกรณีคนวิ่งข้ามตัดหน้ารถ",
+        "en": "Prevent collisions in the case of people crossing in front of the car.",
+        "my": "ကားရှေ့ကလူဖြတ်ကူးတဲ့ကိစ္စမှာ ယာဉ်တိုက်မှုမဖြစ်ရအောင်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ป้องกันรถสวนทางมา",
+        "en": "Protect against oncoming cars",
+        "my": "ဝင်လာသောကားများကိုကာကွယ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ป้องกันรถจักรยานยนต์ตัดหน้า",
+        "en": "Prevents motorcycles from cutting in front",
+        "my": "ဆိုင်ကယ်ရှေ့ဖြတ်မရအောင်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 365,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถผ่านรถที่จอดอยู่และสังเกตเห็นว่ามีล้อจักรยานยื่นออกมา ควรปฏิบัติอย่างไร",
+    "q_en": "When you drive past a parked car and notice that a bicycle wheel is sticking out. What should I do?",
+    "q_my": "ရပ်ထားသည့်ကားကို ဖြတ်မောင်းပြီး စက်ဘီးဘီးပေါက်နေသည်ကို သတိပြုမိသည်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ลดความเร็วและเตรียมหยุดให้รถจักรยานไปก่อน",
+        "en": "Reduce your speed and prepare to stop for the bicycle.",
+        "my": "အရှိန်လျှော့ပြီး စက်ဘီးရပ်ရန် ပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลดความเร็วและโบกมือให้ผู้ใช้รถจักรยานข้ามไป",
+        "en": "Slow down and wave to bicyclists to cross.",
+        "my": "အရှိန်လျှော့ပြီး ဖြတ်ကျော်ဖို့ စက်ဘီးစီးသူတွေကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรกอย่างรวดเร็วและกะพริบไฟ",
+        "en": "Brake quickly and flash the lights.",
+        "my": "လျင်မြန်စွာ ဘရိတ်အုပ်ပြီး မီးကို နှိပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วผ่านไปและบีบแตรเตือน",
+        "en": "Speed past and honk the warning horn.",
+        "my": "အရှိန်လွန်ပြီး သတိပေးဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 366,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านไม่ควรพยายามขับแซงรถจักรยานในเหตุการณ์ใด",
+    "q_en": "Under no circumstances should you attempt to overtake a bicycle.",
+    "q_my": "စက်ဘီးကို ကျော်တက်ဖို့ ဘယ်လိုအခြေအနေမျိုးမှာမှ မလုပ်သင့်ပါဘူး။",
+    "options": [
+      {
+        "th": "ขณะขับบนถนนที่รถขับสวนทางกัน",
+        "en": "While driving on a road where cars are driving in opposite directions",
+        "my": "ကားတွေ ဆန့်ကျင်ဘက် မောင်းနှင်နေတဲ့ လမ်းမပေါ်မှာ မောင်းနှင်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะขับบนถนนเดินทางเดียว",
+        "en": "While driving on a one-way road",
+        "my": "တစ်လမ်းမောင်းတွင် ကားမောင်းနေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะขับในทางตรง",
+        "en": "while driving in a straight direction",
+        "my": "ဖြောင့်ဖြောင့်မောင်းနှင်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะที่กำลังจะเลี้ยวซ้าย",
+        "en": "While turning left",
+        "my": "လက်ဝဲဘက်လှည့်နေစဉ်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 367,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดกล่าวไม่ถูกต้อง",
+    "q_en": "Which of the above is incorrect?",
+    "q_my": "အထက်ပါအချက်များ သည် မည်သည့်အရာများ မှားယွင်းနေသနည်း။",
+    "options": [
+      {
+        "th": "เมื่อมีรถวิ่งสวนมาเวลากลางคืนควรใช้ไฟต่ำ",
+        "en": "When there are cars passing by at night, you should use low beam lights.",
+        "my": "ညဘက် ဖြတ်သွားသည့် ကားများရှိပါက အလင်းတန်းနိမ့် မီးများကို အသုံးပြုသင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การขับรถในเขตชุมชนต้องใช้ความระมัดระวังมากกว่าปกติ",
+        "en": "Driving in a community area requires more caution than usual.",
+        "my": "ရပ်ရွာဧရိယာအတွင်း ကားမောင်းခြင်းသည် ပုံမှန်ထက် ပိုမိုသတိရှိရန် လိုအပ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วงเวลากลางคืน จะต้องใช้ความระมัดระวังมากกว่าปกติ",
+        "en": "night time More caution than usual will be required.",
+        "my": "ညအချိန် ခါတိုင်းထက်ပို၍ သတိထားရန် လိုအပ်ပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อวิ่งตามหลังรถคันหน้าสามารถเปิดไฟสูงได้ เพราะไม่มีผลต่อการขับขี่ของรถคันหน้า",
+        "en": "When running behind the car in front, you can turn on your high beams. Because it does not affect the driving of the car in front.",
+        "my": "ရှေ့က ကားနောက်ကို ပြေးတဲ့အခါ မင်းရဲ့ high beam တွေကို ဖွင့်နိုင်တယ်။ အဘယ်ကြောင့်ဆိုသော် ရှေ့ကား၏ မောင်းနှင်မှုကို မထိခိုက်စေပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 368,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อรู้สึกตาพร่าจากแสงจากรถทางด้านหลังในตอนกลางคืน ควรปฏิบัติอย่างไร",
+    "q_en": "When you feel dazzled by the light from the car behind you at night. What should I do?",
+    "q_my": "ညဘက် ကားနောက်က အလင်းရောင်ကြောင့် စူးစူးဝါးဝါး ခံစားရချိန်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ตั้งกระจกให้อยู่ในตำแหน่งที่ไม่ทำให้ตาพร่า",
+        "en": "Set the mirror in a position where it won't dazzle.",
+        "my": "မှန်ကို မှိန်မသွားစေမယ့် အနေအထားမှာထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดปิดไฟข้างไปมา",
+        "en": "Turn the side light on and off.",
+        "my": "ဘေးဘက်မီးကို အဖွင့်အပိတ်လုပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหยียบเบรกอย่างรวดเร็วเพื่อหยุดรถ",
+        "en": "Press the brakes quickly to stop the car.",
+        "my": "ကားရပ်ရန် ဘရိတ်ကို အမြန်နှိပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งกระจกสะท้อนไปยังคนขับรถคันอื่น",
+        "en": "Set mirrors to reflect other drivers.",
+        "my": "အခြားယာဉ်မောင်းများကို ထင်ဟပ်စေရန် မှန်များကို သတ်မှတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 369,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากกำลังขับขี่รถอยู่บนถนน แล้วฝนเริ่มตกผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "If driving on the road And when it starts to rain, what should drivers do?",
+    "q_my": "၎) လမ်းမှာ ကားမောင်းရင် မိုးရွာတဲ့အခါ ယာဉ်မောင်းတွေက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ลดความเร็วของรถลง",
+        "en": "Reduce the speed of the car.",
+        "my": "ကားအရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็วของรถเพื่อให้ผ่านฝนไปให้เร็ว",
+        "en": "Accelerate your car to make it through the rain quickly.",
+        "my": "မိုးကို အမြန်ဖြတ်ဖို့ သင့်ကားကို အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถข้างทางทันที",
+        "en": "Stop the car on the side of the road immediately.",
+        "my": "လမ်းဘေးမှာ ကားကို ချက်ချင်းရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินและรีบขับผ่านบริเวณนั้นไป",
+        "en": "Turn on your emergency lights and drive quickly through the area.",
+        "my": "သင့်အရေးပေါ်မီးများကိုဖွင့်ပြီး ဧရိယာတစ်လျှောက် အမြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 370,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้กล่าวได้ถูกต้องเกี่ยวกับการแซงรถคันหน้าที่เคลื่อนตัวด้วยความเร็วที่ใกล้เคียงกัน",
+    "q_en": "Which of the following statements is correct regarding overtaking cars in front that are moving at similar speeds?",
+    "q_my": "အလားတူ အရှိန်ဖြင့် ရွေ့နေသော ရှေ့ကားများကို ကျော်တက်ခြင်းနှင့် ပတ်သက်သော အောက်ပါဖော်ပြချက် များထဲမှ မည်သည့်စကားများ မှန်ကန်သနည်း။",
+    "options": [
+      {
+        "th": "ใช้ระยะทางเท่าเดิม เวลาในการแซงมากขึ้น",
+        "en": "Use the same distance as before. More time for overtaking",
+        "my": "ယခင်အတိုင်း အကွာအဝေးကို အသုံးပြုပါ။ ကျော်တက်ဖို့ အချိန်ပိုရတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ระยะทางมากขึ้น เวลาในการแซงเท่าเดิม",
+        "en": "Use more distance Overtaking time remains the same.",
+        "my": "အကွာအဝေးကို ပိုသုံးပါ Overtaking time သည် အတူတူပင်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ระยะทางและเวลาในการแซงมากขึ้น",
+        "en": "Use more distance and time for overtaking.",
+        "my": "ကျော်တက်ရန်အတွက် အကွာအဝေးနှင့် အချိန်ပိုသုံးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ระยะทางและเวลาในการแซงน้อยลง",
+        "en": "Use less distance and time for overtaking.",
+        "my": "ကျော်တက်ရန်အတွက် အကွာအဝေးနှင့် အချိန်ကို လျှော့သုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 371,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดเป็นพฤติกรรมที่มีมารยาทที่ควรปฏิบัติเมื่ออยู่บนถนน",
+    "q_en": "Which is a polite behavior that should be followed when on the road?",
+    "q_my": "၎) လမ်းပေါ်ရောက်တဲ့အခါ လိုက်နာရမယ့် ယဉ်ကျေးသိမ်မွေ့တဲ့ အမူအကျင့်တစ်ခုပါ။",
+    "options": [
+      {
+        "th": "ทิ้งขยะบนไหล่ทางหรือเกาะกลางถนน",
+        "en": "Dump garbage on the shoulder or in the middle of the road.",
+        "my": "ပခုံးပေါ် သို့မဟုတ် လမ်းလယ်တွင် အမှိုက်များ စွန့်ပစ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ใช้เสียงแตรไล่คนเดินเท้า",
+        "en": "Do not use the horn to chase away pedestrians.",
+        "my": "လမ်းသွားလမ်းလာများကို မောင်းထုတ်ရန် ဟွန်းကို မသုံးပါနှင့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขว้างกระป๋องเครื่องดื่มออกนอกตัวรถขณะรถวิ่ง",
+        "en": "Throwing a beverage can outside the vehicle while driving",
+        "my": "ကားမောင်းနေစဉ်အတွင်း အဖျော်ယမကာကို ကားအပြင်သို့ ပစ်ချနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดเพลงเสียงดังแล้วเปิดกระจกรถรบกวนผู้อื่น",
+        "en": "Turn up the music loudly and open the car windows to disturb others.",
+        "my": "သီချင်းကို ကျယ်လောင်စွာဖွင့်ပြီး အခြားသူများကို နှောင့်ယှက်ရန် ကားပြတင်းပေါက်များကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 372,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากช่องทางด้านซ้ายมีสิ่งกีดขวางและมีรถวิ่งสวนมา ท่านต้องปฏิบัติอย่างไร",
+    "q_en": "If the left lane has an obstacle and there is a car passing by. What must you do?",
+    "q_my": "၎) ဘယ်ဘက်လမ်းကြားတွင် အတားအဆီးတစ်ခုရှိပြီး ကားဖြတ်သန်းသွားပါက၊ သင်ဘာလုပ်ရမည်နည်း။",
+    "options": [
+      {
+        "th": "หยุดรอให้รถที่ขับสวนมาผ่านไปก่อนแล้วค่อยขับผ่านไปได้",
+        "en": "Stop and wait for oncoming traffic to pass before you can drive past.",
+        "my": "ရပ်တန့်ပြီး ဖြတ်ကျော်သွားမည့် ယာဉ်ကြောပိတ်ဆို့မှုကို စောင့်ဆိုင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หากท่านคิดว่าท่านขับได้เร็วกว่ารถที่สวนมาแล้ว จึงทำการแซงได้ทันที",
+        "en": "If you think you can drive faster than the oncoming car. Therefore overtaking can be done immediately.",
+        "my": "အကယ်၍ သင်သည် လာမည့်ကားထက် ပိုမြန်အောင် မောင်းနှင်နိုင်သည်ဟု သင်ယူဆပါက။ ထို့ကြောင့် ချက်ချင်း ကျော်တက်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับผ่านไปได้เลยโดยไม่ต้องสนใจรถที่สวนมา",
+        "en": "You can drive past without paying attention to oncoming cars.",
+        "my": "လာမည့်ကားများကို ဂရုမစိုက်ဘဲ ကျော်ဖြတ်မောင်းနှင်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉินแล้วแซงไปได้เลย",
+        "en": "Turn on your emergency lights and pass.",
+        "my": "သင်၏အရေးပေါ်မီးများကိုဖွင့်ပြီး ဖြတ်သန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 373,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ทำไมผู้ขับรถจึงต้องคอยสังเกตรถจักรยานยนต์และรถจักรยานเป็นพิเศษเมื่อมาถึงทางแยก",
+    "q_en": "Why do drivers need to pay special attention to motorcycles and bicycles at intersections?",
+    "q_my": "ယာဉ်မောင်းများသည် လမ်းဆုံများတွင် ဆိုင်ကယ်နှင့် စက်ဘီးများကို အဘယ်ကြောင့် အထူးဂရုပြုရန် လိုအပ်သနည်း။",
+    "options": [
+      {
+        "th": "เพราะรถจักรยานและรถจักรยานยนต์อาจต้องการจะเลี้ยวเข้าข้างทางได้",
+        "en": "Because bicycles and motorcycles may want to turn onto the side of the road.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် စက်ဘီးနှင့်ဆိုင်ကယ်များသည် လမ်းဘက်သို့ ကွေ့ချင်နေပေလိမ့်မည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะรถจักรยานและรถจักรยานยนต์อาจจะลดความเร็วเพื่อให้ท่านเลี้ยวไปก่อนได้",
+        "en": "Bicycles and motorcycles may slow down to allow you to turn first.",
+        "my": "သင့်အား ဦးစွာကွေ့နိုင်စေရန် စက်ဘီးနှင့် ဆိုင်ကယ်များသည် နှေးကွေးသွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะรถจักรยานและรถจักรยานยนต์เป็นรถที่สังเกตเห็นได้ยากเนื่องจากขนาดเล็ก",
+        "en": "Because bicycles and motorcycles are difficult to notice due to their small size.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် စက်ဘီးနှင့် မော်တော်ဆိုင်ကယ်များသည် အရွယ်အစားသေးငယ်သောကြောင့် သတိထားရန်ခက်ခဲသောကြောင့်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพราะรถจักรยานและรถจักรยานยนต์อาจจะไม่เห็นว่าท่านต้องการเลี้ยว",
+        "en": "Because bicycles and motorcycles may not see that you want to turn.",
+        "my": "ဘာဖြစ်လို့လဲဆိုတော့ စက်ဘီးနဲ့ဆိုင်ကယ်ကို လှည့်မကြည့်ချင်ဘူး။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 374,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000468.webp",
+    "q_th": "ในสถานการณ์ใดที่เสากระจกกันลมด้านหน้า (A pillars) จะบดบังทัศนวิสัยในการมองเห็น",
+    "q_en": "In what situations will the front windshield pillars (A pillars) obstruct visibility?",
+    "q_my": "ရှေ့လေကာမှန်တိုင်များ (A pillars) သည် မြင်နိုင်စွမ်းကို အဟန့်အတားဖြစ်စေမည့် အခြေအနေမျိုးတွင် ရှိပါသလား။",
+    "options": [
+      {
+        "th": "เมื่อขับรถอยู่บนทางคู่",
+        "en": "When driving on a double track",
+        "my": "နှစ်ထပ်လမ်းပေါ် မောင်းနှင်သောအခါ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อขับรถอยู่บนทางหลวงพิเศษ",
+        "en": "When driving on the expressway",
+        "my": "အမြန်လမ်းပေါ်မှာ မောင်းတဲ့အခါ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อเข้าสู่ทางโค้งและทางแยก",
+        "en": "When entering curves and intersections",
+        "my": "လမ်းကွေ့များနှင့် လမ်းဆုံများ အတွင်းသို့ ဝင်ရောက်သည့်အခါ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เมื่อเข้าสู่ถนนเดินรถทางเดียว  (one-way)",
+        "en": "When entering a one-way road (one-way)",
+        "my": "တစ်လမ်းမောင်း (တစ်လမ်းမောင်း) ဝင်တဲ့အခါ၊",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 375,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้กล่าวไม่ถูกต้องสำหรับการเปิดสัญญาณไฟฉุกเฉินตลอดเวลา",
+    "q_en": "Which of the following is incorrect for keeping the emergency lights on at all times?",
+    "q_my": "အရေးပေါ်မီးများကို အချိန်တိုင်းဖွင့်ထားခြင်းကြောင့် အောက်ပါတို့ထဲမှ မည်သည့်အရာသည် မှားယွင်းနေသနည်း။",
+    "options": [
+      {
+        "th": "ทำให้ผู้ขับขี่คันอื่นสับสนว่ารถคันที่เปิดไฟฉุกเฉินกำลังเลี้ยวไปด้านใดด้านหนึ่ง",
+        "en": "This causes other drivers to become confused as to whether the car with its emergency lights on is turning to one side or the other.",
+        "my": "၎င်းသည် အရေးပေါ်အချက်ပြမီးဖွင့်ထားသည့် ကားသည် တစ်ဖက်သို့ တစ်ဖက်သို့ လှည့်နေသလားဟု အခြားယာဉ်မောင်းများ စိတ်ရှုပ်ထွေးစေပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้ผู้ขับขี่คันอื่นคิดว่ารถกำลังเกิดอุบัติเหตุ",
+        "en": "This makes other drivers think that their car is about to have an accident.",
+        "my": "ယင်းကြောင့် အခြားယာဉ်မောင်းများက ၎င်းတို့၏ကား မတော်တဆဖြစ်တော့မည်ဟု ထင်စေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้ผู้ขับขี่คันอื่นเข้าใจว่าเป็นรถที่ขับเร็ว",
+        "en": "Make other drivers understand that the car is driving fast.",
+        "my": "ကားက အမြန်မောင်းနေတယ်ဆိုတာ တခြားယာဉ်မောင်းတွေကို နားလည်အောင်လုပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้ผู้ขับขี่คันอื่นคิดว่าเป็นรถที่จอดนิ่งอยู่",
+        "en": "causing other drivers to think it was a stationary vehicle",
+        "my": "အခြားယာဉ်မောင်းများက ၎င်းကို ရပ်တန့်ထားသော ယာဉ်ဟု ထင်စေခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 376,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่ความหมายของคำว่า \"ความเร็วที่ควรใช้\" ถูกต้องที่สุด",
+    "q_en": "Which is not the meaning of the word The \"speed that should be used\" is the most accurate.",
+    "q_my": "ဟူသော စကားလုံး၏ အဓိပ္ပါယ်မဟုတ်သော \"အမြန်နှုန်းကို အသုံးပြုသင့်သည်\" သည် အမှန်ကန်ဆုံးဖြစ်သည်။",
+    "options": [
+      {
+        "th": "ความเร็วที่สามารถหยุดรถได้ทัน",
+        "en": "Speed ​​at which the car can be stopped in time",
+        "my": "ကားကို အချိန်မီ ရပ်တန့်နိုင်တဲ့ အရှိန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความเร็วที่เหมาะสมกับสภาพแวดล้อม ถนน",
+        "en": "Speed ​​appropriate to the road environment",
+        "my": "အရှိန်အဟုန်ဖြင့် သင့်လျော်သော လမ်းပတ်ဝန်းကျင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความเร็วตามความพึงพอใจ",
+        "en": "Satisfactory speed",
+        "my": "ကျေနပ်လောက်တဲ့အရှိန်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ความเร็วจำกัดตามป้ายสัญญาณ",
+        "en": "Speed limit according to signs",
+        "my": "ဆိုင်းဘုတ်များအလိုက် အမြန်နှုန်းကန့်သတ်ချက်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 377,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การให้สัญญาณไฟที่ถูกต้องเมื่อขับรถเข้าสู่ทางร่วมทางแยก",
+    "q_en": "Providing correct signal lights when driving into an intersection.",
+    "q_my": "လမ်းဆုံသို့ မောင်းနှင်သည့်အခါ မှန်ကန်သော အချက်ပြမီးများ ပေးဆောင်ခြင်း။",
+    "options": [
+      {
+        "th": "ให้สัญญาณไฟทุกครั้งเมื่อต้องการเลี้ยวซ้ายหรือขวา",
+        "en": "Always give a signal when turning left or right.",
+        "my": "ဘယ် သို့မဟုတ် ညာကွေ့သည့်အခါ အမြဲတမ်း အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้สัญญาณไฟเฉพาะเลี้ยวขวาเท่านั้น",
+        "en": "Give the signal only to turn right.",
+        "my": "ညာဘက်ကွေ့ရန်သာ အချက်ပြပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่จำเป็นต้องให้สัญญาณไฟเลี้ยวขวาหรือซ้าย",
+        "en": "There is no need to give a right or left turn signal.",
+        "my": "ညာဘက် သို့မဟုတ် ဘယ်ဘက်ကွေ့ရန် အချက်ပြရန် မလိုအပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณไฟฉุกเฉินเมื่อต้องการขับรถตรงไป",
+        "en": "Give emergency lights when driving straight.",
+        "my": "ဖြောင့်တန်းမောင်းနှင်သောအခါတွင် အရေးပေါ်မီးများ ပေးဆောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 378,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากท่านขับรถด้วยความเร็ว 90 กิโลเมตรต่อชั่วโมงแต่ท่านรู้สึกว่าเร็วเกินไปท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you drive at a speed of 90 kilometers per hour but you feel that it is too fast, what should you do?",
+    "q_my": "တစ်နာရီကို ကီလိုမီတာ ၉၀ နှုန်းနဲ့ မောင်းပေမယ့် အရမ်းမြန်တယ်လို့ ခံစားရရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ออกจากเส้นทางนั้น",
+        "en": "Get off that path.",
+        "my": "အဲဒီလမ်းကနေ ထွက်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ชะลอความเร็วลงจนท่านคิดว่าปลอดภัย",
+        "en": "Slow down until you think it is safe.",
+        "my": "ဘေးကင်းသည်ဟု သင်ထင်သည်အထိ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุดรถของท่านทันที",
+        "en": "Stop your car immediately.",
+        "my": "သင့်ကားကို ချက်ချင်းရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับให้ใกล้เคียง 100 กม.ต่อชั่วโมง",
+        "en": "Drive close to 100 km per hour.",
+        "my": "တစ်နာရီကို ကီလိုမီတာ 100 နီးပါး မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 379,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถผ่านบริเวณทางแยก ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "Driving through an intersection What should the driver do?",
+    "q_my": "၎) လမ်းဆုံကိုဖြတ်၍ မောင်းနှင်ပါက ယာဉ်မောင်း ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ชะลอรถแล้วมองซ้าย-ขวา",
+        "en": "Slow down the car and look left-right.",
+        "my": "ကားကို အရှိန်လျှော့ပြီး ဘယ်ညာကြည့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ยกมือขอทาง",
+        "en": "Raise your hand to ask for directions.",
+        "my": "လမ်းညွှန်ချက်တောင်းရန် လက်ကို မြှောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วแล้วบีบแตรขอทาง",
+        "en": "Accelerate and honk your horn to ask for directions.",
+        "my": "လမ်းညွှန်ချက်တောင်းရန် အရှိန်မြှင့်ပြီး ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 380,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อขับรถเข้าใกล้บริเวณทางข้าม แต่ไม่มีคนข้ามทาง ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When driving near the crossing area But no one crossed the path. What should the driver do?",
+    "q_my": "လမ်းဖြတ်ကူးသည့်နေရာအနီးတွင် ကားမောင်းလာသောအခါ လမ်းဖြတ်ကူးသူ တစ်ယောက်မှမရှိပေ။ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ชะลอความเร็วลง และสังเกตซ้ายขวาเพื่อความปลอดภัย",
+        "en": "slow down and observe left and right for safety",
+        "my": "အရှိန်လျှော့ပြီး ဘေးကင်းစေရန် ဘယ်ညာ သတိပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้สัญญาณแตรเสียงสั้นเพื่อเตือน",
+        "en": "Use a short horn signal to warn.",
+        "my": "သတိပေးရန် ဟွန်းအတိုကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้สัญญาณแตรเสียงยาวเพื่อเตือน",
+        "en": "Use a long horn signal to warn.",
+        "my": "သတိပေးရန် ဟွန်းရှည်အချက်ပြမှုကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้สัญญาณไฟสูงเพื่อเตือน",
+        "en": "Use a high beam signal to warn.",
+        "my": "သတိပေးရန် high beam signal ကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 381,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากพบว่ารถจักรยานยนต์แซงขณะที่รถกำลังสวนทางมา ผู้ขับขี่ควรแก้ไขอย่างไร",
+    "q_en": "If you find that a motorcycle is overtaking while a car is coming in the opposite direction. How should the driver fix this?",
+    "q_my": "၎) မော်တော်ဆိုင်ကယ်သည် ဆန့်ကျင်ဘက်သို့ ဦးတည်လာနေချိန်တွင် ဆိုင်ကယ်ကျော်တက်နေသည်ကို တွေ့ရှိပါက၊ ယာဉ်မောင်းက ဒါကို ဘယ်လိုပြင်သင့်လဲ။",
+    "options": [
+      {
+        "th": "จอดรถทันที",
+        "en": "Park the car immediately.",
+        "my": "ကားကို ချက်ချင်းရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลง ชิดซ้าย เปิดช่องทางให้แซง",
+        "en": "Reduce your speed, stay to the left, open the lane for passing.",
+        "my": "အရှိန်လျှော့ပါ၊ ဘယ်ဘက်တွင်နေ၊ ဖြတ်သန်းရန်အတွက် လမ်းသွားဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รีบเปลี่ยนช่องทางเดินรถ",
+        "en": "Hurry and change lanes.",
+        "my": "အမြန်လမ်းပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตร และให้สัญญาณไฟกะพริบรถคันที่สวนทางมา",
+        "en": "Honk your horn and flash your lights on cars coming in the opposite direction.",
+        "my": "မင်းဟွန်းကို ဟွန်းတီးပြီး ဆန့်ကျင်ဘက် ဦးတည်လာတဲ့ ကားတွေကို မီးညှိလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 382,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เทคนิคในการคาดการณ์นอกจากการคาดการณ์การเคลื่อนไหวของรถคันอื่นแล้ว ผู้ใช้ถนนควรคาดคะเนข้อใดด้วย",
+    "q_en": "Techniques for forecasting besides predicting the movement of other cars. What should road users expect?",
+    "q_my": "အခြားကားများ၏ ရွေ့လျားမှုကို ခန့်မှန်းခြင်းအပြင် ကြိုတင်ခန့်မှန်းခြင်းအတွက် နည်းပညာများ။ လမ်းအသုံးပြုသူများ ဘာမျှော်လင့်သင့်လဲ။",
+    "options": [
+      {
+        "th": "คาดคะเนว่าคนที่ใช้ถนนจะเคลื่อนไหวไปอย่างไร",
+        "en": "Predict how people using the road will move.",
+        "my": "လမ်းအသုံးပြုသူများ မည်ကဲ့သို့ ရွေ့လျားမည်ကို ခန့်မှန်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "คาดคะเนว่าเราขับรถอย่างไร",
+        "en": "Predict how we drive.",
+        "my": "ဘယ်လိုမောင်းရမလဲဆိုတာကို ခန့်မှန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คาดคะเนว่าเราจะเลี้ยวไปทางไหน",
+        "en": "Predict where we will turn.",
+        "my": "ဘယ်ကို လှည့်မလဲဆိုတာ ခန့်မှန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คาดคะเนว่ารถเราจะเกิดอุบัติเหตุไหม",
+        "en": "Predict if our car will have an accident?",
+        "my": "ကျွန်ုပ်တို့၏ကား မတော်တဆဖြစ်မည်ကို ခန့်မှန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 383,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านต้องการเลี้ยวขวาบนถนนที่มีรถวิ่งสวนทาง (มีเกาะกลางถนน) ข้อใดต่อไปนี้ถูกต้องที่สุด",
+    "q_en": "When you want to turn right on a road with cars moving in the opposite direction. (There is an island in the middle of the road.) Which of the following is most correct?",
+    "q_my": "၎) ဆန့်ကျင်ဘက်သို့ ရွေ့လျားနေသော ကားလမ်းပေါ်တွင် ညာဘက်ကွေ့လိုသောအခါ၊ (လမ်းအလယ်တွင် ကျွန်းတစ်ကျွန်းရှိသည်။) အောက်ပါတို့အနက် ဘယ်ဟာမှန်ဆုံးလဲ။",
+    "options": [
+      {
+        "th": "เว้นระยะจากรถด้านหลังให้เพียงพอ",
+        "en": "Leave enough distance from the vehicle behind.",
+        "my": "ယာဉ်နောက်မှ လုံလောက်သောအကွာအဝေးကို ချန်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถให้อยู่ในตำแหน่งด้านซ้ายของถนน",
+        "en": "Drive in a position on the left side of the road.",
+        "my": "လမ်း၏ ဘယ်ဘက်ခြမ်းတွင် အနေအထားဖြင့် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถ โดยให้ส่วนหน้าของรถต้องไม่ล้ำเข้าไปในช่องทางเดินรถที่สวนทางกัน",
+        "en": "Stop the vehicle so that the front of the vehicle does not enter the opposite lane.",
+        "my": "ယာဉ်၏ ရှေ့သည် ဆန့်ကျင်ဘက်လမ်းကြားသို့ မဝင်စေရန် ယာဉ်ကို ရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุด จากนั้นใช้เบรกมือและเลือกใช้เกียร์ต่ำ",
+        "en": "Stop, then apply the parking brake and select a low gear.",
+        "my": "ရပ်ပါ၊ ထို့နောက် ပါကင်ဘရိတ်ကို အသုံးပြုပြီး ဂီယာနိမ့်ကို ရွေးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 384,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อขับรถในเวลากลางคืน ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When driving at night What should the driver do?",
+    "q_my": "၎) ညဘက် ကားမောင်းတဲ့အခါ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "พยายามขับรถเข้าไปให้ใกล้กับรถคันหน้าเพื่อให้รถคันหน้าเห็นรถเราได้ชัดเจน",
+        "en": "Try to drive closer to the car in front so that the car in front can clearly see your car.",
+        "my": "ရှေ့ကားက သင့်ကားကို ရှင်းရှင်းလင်းလင်းမြင်နိုင်စေရန် ရှေ့ကားနှင့် ပိုနီးအောင် မောင်းကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ไฟสูงตลอดทางของการขับรถ",
+        "en": "Use high beams throughout the entire drive.",
+        "my": "Drive တစ်ခုလုံးတွင် high beam ကိုအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินขณะทำการแซงรถคันหน้า",
+        "en": "Turn on emergency lights while overtaking the vehicle in front.",
+        "my": "ရှေ့မှယာဉ်ကို ကျော်တက်နေစဉ် အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทิ้งระยะห่างระหว่างรถคันหน้าให้มากกว่าปกติ",
+        "en": "Leave more distance between the car in front than normal.",
+        "my": "ကားရှေ့ကို ပုံမှန်ထက် အကွာအဝေးပိုထားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 385,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถถอยหลังเข้าสู่ถนนรองและมีคนกำลังรอข้ามถนนอยู่ ควรปฏิบัติอย่างไร",
+    "q_en": "When you drive in reverse onto a secondary road and there are people waiting to cross the road. What should I do?",
+    "q_my": "၎) အလယ်တန်းလမ်းကို ပြောင်းပြန်မောင်းတဲ့အခါ လမ်းဖြတ်ကူးဖို့ စောင့်နေတဲ့ လူတွေရှိတယ်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "บีบแตรเพื่อเตือนคนข้ามถนน",
+        "en": "Honk your horn to warn people crossing the road.",
+        "my": "လမ်းဖြတ်ကူးသူတွေကို သတိပေးဖို့ မင်းရဲ့ဟွန်းကို ဟွန်းတီးလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้ทางแก่คนข้ามถนน",
+        "en": "Give way to people crossing the road",
+        "my": "လမ်းဖြတ်ကူးသူတွေကို လမ်းပေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ถอยหลังเข้าก่อนที่คนข้ามถนนจะเริ่มข้าม",
+        "en": "Back in before pedestrians start crossing.",
+        "my": "လမ်းသွားလမ်းလာတွေ မဖြတ်ခင် ပြန်ရောက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "โบกมือให้คนข้ามถนนหยุดรอ",
+        "en": "Wave your hand to stop the person crossing the street.",
+        "my": "လမ်းဖြတ်ကူးသူကို ရပ်ရန် လက်ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 386,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่วิธีการขับรถที่ปลอดภัยในขณะที่ฝนตก",
+    "q_en": "Which is not a safe way to drive while it is raining?",
+    "q_my": "မိုးရွာနေချိန်မှာ ဘယ်လမ်းက မောင်းရမလုံခြုံဘူး။",
+    "options": [
+      {
+        "th": "เปิดไฟหน้า",
+        "en": "Turn on the headlights",
+        "my": "ရှေ့မီးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินตลอดเวลาที่ฝนตก",
+        "en": "Turn on emergency lights at all times when it rains.",
+        "my": "မိုးရွာချိန်တိုင်း အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทิ้งช่วงห่างจากรถคันหน้า เผื่อไว้มากๆ",
+        "en": "Leave plenty of distance from the car in front, just in case.",
+        "my": "ကားရှေ့ကနေ အကွာအဝေးများများ ချန်ထားပေးပါ၊",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้อัตราความเร็วที่ปลอดภัย",
+        "en": "Use a safe speed.",
+        "my": "လုံခြုံသောအမြန်နှုန်းကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 387,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อมีสัญญาณไฟเหลืองกะพริบอยู่ใต้เครื่องหมายเตือนว่าเข้าใกล้บริเวณโรงเรียน ผู้ขับรถควรปฏิบัติอย่างไร",
+    "q_en": "When there is a flashing yellow light under the warning sign that is approaching the school area. What should the driver do?",
+    "q_my": "ကျောင်းအနီးသို့ ချဉ်းကပ်လာသော သတိပေးဆိုင်းဘုတ်အောက်တွင် အဝါရောင်အလင်းတန်းတစ်ခု ပေါ်လာသောအခါ၊ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "หยุดรอที่สัญญาณไฟจนกว่าสัญญาณไฟจะเปลี่ยนเป็นสีเขียว",
+        "en": "Stop and wait at the light until the light turns green.",
+        "my": "မီးစိမ်းသွားတဲ့အထိ ရပ်ပြီး မီးရောင်မှာ စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็ว จนกว่าจะแน่ใจว่าไม่มีเด็กข้ามถนนแล้วจึงไปต่อ",
+        "en": "Reduce your speed until you are sure there are no children crossing the road and then continue.",
+        "my": "လမ်းဖြတ်ကူးသည့်ကလေးများ မရှိကြောင်း သေချာသည်အထိ အရှိန်လျှော့ပြီး ရှေ့ဆက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รักษาความเร็วเดิมและให้สัญญาณแตร",
+        "en": "Maintain the same speed and signal the horn.",
+        "my": "တူညီသောအရှိန်ကိုထိန်းပြီး ဟွန်းကို အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วเพื่อให้ผ่านทางข้ามไปให้เร็วที่สุด",
+        "en": "Accelerate to get through the crossing as quickly as possible.",
+        "my": "အမြန်ဖြတ်ကူးရန် အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 388,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ท่านได้แวะรับประทานอาหารในร้านที่มีสุราบริการด้วย ก่อนจะขับรถเดินทางไกล ท่านควรทำอย่างไร",
+    "q_en": "You stopped to eat at a restaurant that also served liquor. Before driving on a long trip What should you do?",
+    "q_my": "အရက်သောက်တဲ့ စားသောက်ဆိုင်မှာ မင်းမစားတော့ဘူး။ ခရီးဝေးမမောင်းခင် ဘာတွေလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ห้ามดื่มเครื่องดื่มแอลกอฮอล์โดยเด็ดขาด",
+        "en": "Drinking alcoholic beverages is strictly prohibited.",
+        "my": "အရက်သေစာ သောက်သုံးခြင်းကို တင်းတင်းကျပ်ကျပ် တားမြစ်ထားသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทานอาหารร้อน ๆ ร่วมกับเครื่องดื่มแอลกอฮอล์",
+        "en": "Eat hot food with alcoholic beverages.",
+        "my": "ပူသောအစာကို အရက်ယမကာဖြင့် စားသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดื่มเครื่องดื่มชูกำลังร่วมกับเครื่องดื่มแอลกอฮอล์",
+        "en": "Drink energy drinks with alcohol.",
+        "my": "အားဖြည့်အချိုရည်များကို အရက်နှင့်အတူ သောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดื่มนมก่อนดื่มเครื่องดื่มแอลกอฮอล์",
+        "en": "Drink milk before drinking alcohol.",
+        "my": "အရက်မသောက်ခင် နွားနို့သောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 389,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในขณะที่ท่านเติมน้ำมันเชื้อเพลิงท่านควรปฏิบัติอย่างไร",
+    "q_en": "While you are refueling, what should you do?",
+    "q_my": "ဆီဖြည့်နေတုန်း ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ดับเครื่องยนต์",
+        "en": "Turn off the engine.",
+        "my": "အင်ဂျင်ကိုပိတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลงจากรถและเดินออกให้ไกล",
+        "en": "Get out of the car and walk far away.",
+        "my": "ကားပေါ်ကဆင်းပြီး အဝေးကို လမ်းလျှောက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ติดเครื่องยนต์ไว้",
+        "en": "Put the engine on.",
+        "my": "အင်ဂျင်တပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ต้องทำอะไร",
+        "en": "Don't have to do anything.",
+        "my": "ဘာမှလုပ်စရာမလိုဘူး။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 390,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อการจราจรติดขัดในเวลากลางคืน ต้องปฏิบัติอย่างไรเพื่อไม่ให้แสงจากไฟเบรกรถของท่านทำให้คนขับรถที่อยู่คันหลังตาพร่า",
+    "q_en": "When traffic is congested at night What must you do so that the light from your car's brake lights does not dazzle the drivers behind you?",
+    "q_my": "ညဘက် ယာဉ်ကြောပိတ်ဆို့မှုဖြစ်တဲ့အခါ သင့်ကားရဲ့ဘရိတ်မီးတွေက သင့်နောက်ကယာဉ်မောင်းတွေကို မှိန်မသွားအောင် ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "ใช้ทั้งเบรกมือและเบรกเท้า",
+        "en": "Use both the hand brake and the foot brake.",
+        "my": "လက်ဘရိတ်နှင့် ခြေဘရိတ် နှစ်မျိုးလုံးကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ครัชร่วมกับคันเร่ง",
+        "en": "Use the clutch in conjunction with the accelerator.",
+        "my": "အရှိန်မြှင့်စက်နှင့် တွဲဖက်၍ ကလစ်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เบรกมือเท่านั้น",
+        "en": "Only use the handbrake.",
+        "my": "လက်ဘရိတ်ကိုသာသုံးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้เบรกเท้าเท่านั้น",
+        "en": "Use the foot brake only.",
+        "my": "ခြေဘရိတ်ကိုသာ အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 391,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถเข้าวงเวียนที่ไม่มีสัญญาณไฟจราจรควรปฏิบัติอย่างไร",
+    "q_en": "What should you do when driving into a roundabout with no traffic lights?",
+    "q_my": "၎) မီးပွိုင့်မရှိသော အဝိုင်းသို့ မောင်းနှင်သည့်အခါ ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ให้รถทางขวามือของเราที่อยู่ในวงเวียนไปก่อน",
+        "en": "Let the car on our right that is in the roundabout go first.",
+        "my": "အဝိုင်းမှာရှိတဲ့ ငါတို့ညာဘက်က ကားကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้รถทางซ้ายมือของเราที่อยู่ในวงเวียนไปก่อน",
+        "en": "Let the car on our left that is in the roundabout go first.",
+        "my": "အဝိုင်းမှာရှိတဲ့ ငါတို့ ဘယ်ဘက်ခြမ်းက ကားကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้รถที่เข้าวงเวียนและจะตรงไปให้ไปก่อน",
+        "en": "Let cars entering the roundabout and going straight go first.",
+        "my": "အဝိုင်းထဲသို့ဝင်၍ ဖြောင့်သွားသောကားများကို ဦးစွာသွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้รถที่เข้าวงเวียนและจะเลี้ยวซ้ายไปก่อน",
+        "en": "Let cars entering the roundabout and turning left go first.",
+        "my": "အဝိုင်းထဲကိုဝင်ပြီး ဘယ်ဘက်ကွေ့တဲ့ကားတွေကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 392,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถตามหลังและไม่มั่นใจว่ารถจักรยานยนต์ที่ขับด้านหน้าจะขับรถไปในทิศทางใด ควรปฏิบัติอย่างไร",
+    "q_en": "When you are driving behind and are not sure which direction the motorcycle in front will drive. What should I do?",
+    "q_my": "၎) နောက်ကနေ မောင်းလာတဲ့အခါ ရှေ့က ဆိုင်ကယ်က ဘယ်ကို ဦးတည်မောင်းမယ်ဆိုတာ မသေချာဘူး။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ขับตามหลัง",
+        "en": "drive behind",
+        "my": "နောက်ကနေ မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงทางด้านซ้าย",
+        "en": "Overtaking on the left",
+        "my": "ဘယ်ဘက်တွင် ကျော်တက်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงทางด้านขวา",
+        "en": "Overtaking on the right",
+        "my": "ညာဘက်တွင် ကျော်တက်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เคลื่อนที่เข้าใกล้ขึ้น",
+        "en": "Move closer",
+        "my": "နီးကပ်စွာ ရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 393,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อพบนักขี่จักรยาน ผู้ขับขี่ไม่ควรปฏิบัติตามข้อใด",
+    "q_en": "When meeting a cyclist What should the driver not do?",
+    "q_my": "၎) စက်ဘီးသမားနဲ့တွေ့တဲ့အခါ ယာဉ်မောင်းက ဘာလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "เพิ่มความระมัดระวังเป็นพิเศษ",
+        "en": "Be extra careful.",
+        "my": "အထူးသတိထားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรสังเกตจากทั้งบนถนนและทางเท้าเป็นพิเศษ",
+        "en": "It should be especially noted from both the road and the sidewalk.",
+        "my": "အထူးသတိပြုသင့်သည်မှာ လမ်းနှင့် လူသွားလမ်းများဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรทักทาย",
+        "en": "Honk your horn to say hello.",
+        "my": "နှုတ်ဆက်စကားပြောဖို့ မင်းရဲ့ဟွန်းကို ဟွန်းလိုက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เว้นระยะห่างให้เพียงพอ",
+        "en": "Leave enough distance.",
+        "my": "လုံလောက်သောအကွာအဝေးကိုချန်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 394,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ปัจจัยใดต่อไปนี้มีผลต่อการเกิดสถานการณ์อุบัติเหตุมากที่สุด",
+    "q_en": "Which of the following factors has the greatest effect on the occurrence of an accident situation?",
+    "q_my": "အောက်ဖော်ပြပါအချက်များထဲမှ မည်သည့်အချက်များသည် မတော်တဆမှုဖြစ်ပွားမှုအခြေအနေအပေါ် အကြီးမားဆုံးအကျိုးသက်ရောက်မှုရှိသနည်း။",
+    "options": [
+      {
+        "th": "การเคลื่อนที่ของรถ หรือคนเดินเท้า",
+        "en": "car movement or pedestrians",
+        "my": "ကားလှုပ်ရှားမှု သို့မဟုတ် လမ်းသွားလမ်းလာများ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความไม่พร้อมของผู้ขับขี่",
+        "en": "Driver's unpreparedness",
+        "my": "ယာဉ်မောင်း၏ ကြိုတင်ပြင်ဆင်မှု",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สภาพผิวจราจร",
+        "en": "Road surface condition",
+        "my": "လမ်းမျက်နှာပြင်အခြေအနေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลักษณะทางภูมิประเทศ",
+        "en": "topographical features",
+        "my": "မြေမျက်နှာသွင်ပြင်လက္ခဏာများ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 395,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อพบคนบาดเจ็บ ข้อใดไม่ควรปฏิบัติ",
+    "q_en": "When finding an injured person Which thing should not be done?",
+    "q_my": "ထိခိုက်ဒဏ်ရာရသူကိုရှာတဲ့အခါ ဘယ်အရာက မလုပ်သင့်သလဲ။",
+    "options": [
+      {
+        "th": "ผู้ช่วยเหลือต้องแน่ใจว่าเราปลอดภัย",
+        "en": "Helpers make sure we are safe.",
+        "my": "အကူအညီပေးသူများသည် ကျွန်ုပ်တို့ ဘေးကင်းကြောင်း သေချာပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เคลื่อนย้ายผู้บาดเจ็บโดยทันที",
+        "en": "Move the injured person immediately.",
+        "my": "ဒဏ်ရာရသူကို ချက်ချင်း ရွှေ့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ประเมินผู้บาดเจ็บและเสียชีวิต มีจำนวนเท่าใด",
+        "en": "Assessing the injured and deceased How many?",
+        "my": "ဒဏ်ရာရသူနှင့် သေဆုံးသူ မည်မျှရှိသည်ကို အကဲဖြတ်ခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ประเมินสถานการณ์สงบสติอารมณ์",
+        "en": "Assess the situation, stay calm.",
+        "my": "အခြေအနေကို အကဲဖြတ်ပြီး စိတ်အေးအေးထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 396,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หลังจากขับรถลุยน้ำ เมื่อเราขึ้นที่แห้งแล้วควรปฏิบัติเช่นไรเป็นอันดับแรก",
+    "q_en": "After driving through water When we reach dry land, what should we do first?",
+    "q_my": "၎) ရေဖြတ်မောင်းပြီး ခြောက်သွေ့တဲ့မြေကို ရောက်တဲ့အခါ ဘာကို အရင်လုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ทดสอบไฟเลี้ยวหลาย ๆ ครั้ง",
+        "en": "Test the turn signal several times.",
+        "my": "ကွေ့အချက်ပြခြင်းကို အကြိမ်များစွာ စမ်းသပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทดสอบสัญญาณแตร",
+        "en": "Horn signal test",
+        "my": "ဟွန်းအချက်ပြစမ်းသပ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทดสอบไฟสูงต่ำ",
+        "en": "Test high and low beams",
+        "my": "အမြင့်နှင့် အနိမ့်တန်းများကို စမ်းသပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทดสอบเบรกหลาย ๆ ครั้ง",
+        "en": "Test the brakes several times.",
+        "my": "ဘရိတ်ကို အကြိမ်ကြိမ် စမ်းသပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 397,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ช่วงที่ท่านกำลังป่วย ความสามารถในการขับรถจะถดถอยลง ท่านต้อง",
+    "q_en": "While you are sick Your ability to drive will deteriorate. You must",
+    "q_my": "နေမကောင်းဖြစ်နေချိန်မှာ မောင်းနှင်နိုင်မှု အားနည်းလာမယ်။ သင် ... ရမည်",
+    "options": [
+      {
+        "th": "นำยาติดตัวไปด้วยทั้งหมดเมื่อท่านขับรถ",
+        "en": "Take all your medicine with you when you drive.",
+        "my": "ကားမောင်းတဲ့အခါ ဆေးတွေအကုန်ယူသွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถตามปกติ",
+        "en": "Drive normally",
+        "my": "ပုံမှန်အတိုင်း မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ขับรถหลังจากทานยาที่ทำให้เกิดอาการง่วง",
+        "en": "Do not drive after taking medicine that causes drowsiness.",
+        "my": "ငိုက်မျဉ်းစေသော ဆေးသောက်ပြီးနောက် ကားမမောင်းပါနှင့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ลดปริมาณยาที่ทานลง",
+        "en": "Reduce the amount of medicine you take.",
+        "my": "သင်သောက်သောဆေးပမာဏကို လျှော့ချပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 398,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเราจะขับรถแซงรถคันหน้า เราควรปฏิบัติเช่นไรเป็นอันดับแรก",
+    "q_en": "When we drive to pass the car in front. What should we do first?",
+    "q_my": "ရှေ့က ကားကို ကျော်ဖြတ်မောင်းတဲ့အခါ။ ငါတို့ဘာအရင်လုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้สัญญาณไฟก่อน",
+        "en": "Give the light signal first.",
+        "my": "ဦးစွာ မီးအချက်ပြပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินแล้วแซงได้เลย",
+        "en": "Turn on your emergency lights and pass.",
+        "my": "သင်၏အရေးပေါ်မီးများကိုဖွင့်ပြီး ဖြတ်သန်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รีบเร่งเครื่องแล้วแซงได้เลย",
+        "en": "Hurry and accelerate the engine and overtake.",
+        "my": "အင်ဂျင်ကို အရှိန်မြှင့်ပြီး ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้ดูกระจกก่อน ทั้งด้านข้างและด้านหลังเพื่อตรวจสอบจุดบอด",
+        "en": "Let's look in the mirror first. Both sides and rear to check blind spots",
+        "my": "မှန်ထဲမှာ အရင်ကြည့်ရအောင်။ နှစ်ဖက်စလုံးနှင့် အနောက်ဘက် ကန်းကွက်များကို စစ်ဆေးရန်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 399,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่ผลที่เกิดจากการขับรถด้วยความเร็ว",
+    "q_en": "Which is not a result of driving at speed?",
+    "q_my": "အရှိန်လွန်မောင်းနှင်မှုကြောင့် ဖြစ်ပေါ်လာသည့် ရလဒ်ကား အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "สามารถหยุดรถได้ทันท่วงที",
+        "en": "Can stop the car in time.",
+        "my": "ကားကို အချိန်မီရပ်နိုင်ပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สิ้นเปลืองพลังงาน",
+        "en": "Wastes energy",
+        "my": "စွမ်းအင်ကို ဖြုန်းတီးတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มีโอกาสในการเกิดอุบัติเหตุสูง",
+        "en": "There is a high chance of accidents.",
+        "my": "ယာဉ်တိုက်မှုဖြစ်နိုင်ခြေ မြင့်မားပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความรุนแรงในการบาดเจ็บหากเกิดอุบัติเหตุมากขึ้น",
+        "en": "The severity of injuries in the event of an accident increases.",
+        "my": "မတော်တဆ ထိခိုက်ဒဏ်ရာရမှု ပြင်းထန်မှု ပိုများလာသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 400,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากเกิดอุบัติเหตุขับรถชนคนเดินถนนที่ความเร็ว 30 กิโลเมตรต่อชั่วโมง จะส่งผลอย่างไร",
+    "q_en": "If there is an accident, the car hits a pedestrian at a speed of 30 kilometers per hour. What will be the effect?",
+    "q_my": "၎) မတော်တဆမှုဖြစ်လျှင် ကားသည် တစ်နာရီလျှင် ကီလိုမီတာ ၃၀ အရှိန်ဖြင့် လမ်းသွားလမ်းလာကို ဝင်တိုက်သည်။ အကျိုးသက်ရောက်မှုက ဘာဖြစ်မလဲ။",
+    "options": [
+      {
+        "th": "คนผู้นั้นจะไม่เป็นอะไรเลย",
+        "en": "That person will be nothing.",
+        "my": "အဲဒီလူက ဘာမှမဖြစ်ဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คนผู้นั้นมีโอกาสสูงที่จะเสียชีวิต",
+        "en": "That person has a high chance of dying.",
+        "my": "အဲဒီလူက သေဖို့ အခွင့်အလမ်း များတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คนผู้นั้นมีโอกาสเจ็บแต่ไม่เสียชีวิต",
+        "en": "That person is likely to be hurt but not killed.",
+        "my": "အဲဒီလူဟာ ဒဏ်ရာ ရနိုင်ပေမယ့် မသေပါဘူး။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "คนผู้นั้นจะเสียชีวิตทันที",
+        "en": "That person will die immediately.",
+        "my": "အဲဒီလူက ချက်ချင်းသေလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 401,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเห็นรถด้านหน้าหยุดบริเวณทางร่วมทางแยกที่ไม่มีสัญญาณไฟจราจรขณะถนนโล่ง ควรปฏิบัติอย่างไร",
+    "q_en": "When you see a car in front stopping at an intersection with no traffic lights while the road is clear. What should I do?",
+    "q_my": "၎) လမ်းရှင်းနေချိန်တွင် မီးပွိုင့်မရှိသော လမ်းဆုံတွင် ရပ်နေသော ရှေ့ကားတစ်စီးကို တွေ့သောအခါ၊ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "บีบแตรเพื่อให้รถคันหน้าเคลื่อนตัว",
+        "en": "Honk the horn to make the car in front move.",
+        "my": "ရှေ့ကားကို ရွေ့သွားစေရန် ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงโดยทันที",
+        "en": "overtake immediately",
+        "my": "ချက်ချင်းကျော်တက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ห้ามแซงโดยเด็ดขาด",
+        "en": "Overtaking is strictly prohibited.",
+        "my": "ကျော်တက်ခြင်းကို တင်းတင်းကျပ်ကျပ် တားမြစ်ထားသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ชะลอรถและแซง",
+        "en": "Slow down and overtake",
+        "my": "အရှိန်လျှော့ပြီး ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 402,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถเข้าใกล้รถที่จอดอยู่ข้างทาง ท่านควรปฏิบัติอย่างไรจึงจะเหมาะสมที่สุด",
+    "q_en": "When you drive near a car parked on the side of the road What should you do to be most appropriate?",
+    "q_my": "၎) လမ်းဘေးမှာ ရပ်ထားတဲ့ ကားအနီးကို ကားမောင်းတဲ့အခါ အသင့်တော်ဆုံးဖြစ်အောင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้สัญญาณไฟสูงเพียงอย่างเดียวก็เพียงพอ",
+        "en": "A high beam signal alone is sufficient.",
+        "my": "High beam signal တစ်ခုတည်းနဲ့ လုံလောက်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับต่อไปโดยไม่ต้องระวังสิ่งใด",
+        "en": "Continue driving without any caution.",
+        "my": "သတိမရှိဘဲ ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งความเร็วผ่านไปทันที",
+        "en": "Accelerate immediately.",
+        "my": "ချက်ချင်းအရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพิ่มความระมัดระวังมากขึ้น เตรียมพร้อมที่จะหยุดเสมอ",
+        "en": "Be more careful Always be prepared to stop.",
+        "my": "ရပ်တန့်ရန် အမြဲသတိထားပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านมองเห็นว่ารถที่ขับอยู่ด้านหน้าลืมปิดไฟเลี้ยวขวา ควรปฏิบัติอย่างไร",
+    "q_en": "When you see that the car driving in front forgot to turn off the right turn signal. What should I do?",
+    "q_my": "ရှေ့က မောင်းနှင်လာတဲ့ ကားကို တွေ့တဲ့အခါ ညာဘက်ကွေ့ အချက်ပြကို ပိတ်ဖို့ မေ့သွားတယ်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "แซงซ้าย ถ้ามีพื้นที่ให้สามารถแซงได้",
+        "en": "Overtake on the left if there is space to overtake.",
+        "my": "ကျော်တက်ရန် နေရာရှိလျှင် ဘယ်ဘက်တွင် ကျော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กะพริบไฟเพื่อเตือนรถคันข้างหน้า",
+        "en": "Flashes lights to warn cars ahead",
+        "my": "ရှေ့က ကားတွေကို သတိပေးဖို့ မီးရောင်တွေ လင်းနေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรก่อนที่จะแซง",
+        "en": "Honk the horn before passing.",
+        "my": "မဖြတ်ခင် ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับอยู่ข้างหลังต่อไปและไม่ทำการแซง",
+        "en": "Continue driving behind and do not overtake.",
+        "my": "နောက်မှ ဆက်မောင်းပြီး ကျော်မတက်ပါနဲ့။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 404,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในขณะขับรถที่มีลมพัดแรง เพราะเหตุใดจึงควรเว้นระยะห่างจากรถจักรยานยนต์ให้มากขึ้น",
+    "q_en": "While driving with strong wind blowing Why should we keep more distance from motorcycles?",
+    "q_my": "လေပြင်းတွေတိုက်ပြီး မောင်းနေရင်း ဆိုင်ကယ်တွေနဲ့ ဘာကြောင့် ပိုဝေးနေရတာလဲ။",
+    "options": [
+      {
+        "th": "คนขับรถจักรยานยนต์อาจถูกพัดมาด้านหน้ารถ",
+        "en": "The motorcyclist may have been blown in front of the vehicle.",
+        "my": "မော်တော်ဆိုင်ကယ် မောင်းနှင်သူသည် ယာဉ်ရှေ့တွင် လွင့်စင်သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "คนขับรถจักรยานยนต์อาจขับเร็วกว่าปกติ",
+        "en": "Motorcycle drivers may drive faster than normal.",
+        "my": "မော်တော်ဆိုင်ကယ် ယာဉ်မောင်းများသည် ပုံမှန်ထက် ပိုမြန်စွာ မောင်းနှင်နိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คนขับรถจักรยานยนต์อาจหยุดกะทันหัน",
+        "en": "Motorcyclists may stop suddenly.",
+        "my": "ဆိုင်ကယ်စီးသူများ ရုတ်တရက် ရပ်တန့်သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คนขับรถจักรยานยนต์อาจขับออกกะทันหันเพื่อหลีกเลี่ยงลม",
+        "en": "Motorcycle drivers may pull off suddenly to avoid the wind.",
+        "my": "မော်တော်ဆိုင်ကယ် ယာဉ်မောင်းများသည် လေတိုက်ခြင်းကို ရှောင်ရှားရန် ရုတ်တရက် ရပ်တန့်သွားနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 405,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดปฏิบัติถูกต้องในการขับขี่ออกจากซอยไปสู่ถนนใหญ่",
+    "q_en": "Which is the correct practice when driving out of the alley onto the main road?",
+    "q_my": "၎) လမ်းကြားကနေ လမ်းမကြီးပေါ်ကို ကားမောင်းတဲ့အခါ ဘယ်ဟာက မှန်ကန်တဲ့ အလေ့အကျင့်လဲ။",
+    "options": [
+      {
+        "th": "ขับออกไปให้เร็วที่สุดเพื่อที่จะได้ไม่เสียเวลา",
+        "en": "Drive away as quickly as possible so you don't waste time.",
+        "my": "အချိန်မဖြုန်းဘဲ တတ်နိုင်သမျှ မြန်မြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่จำเป็นต้องเปิดไฟเลี้ยวก็ได้",
+        "en": "There is no need to turn on the turn signal.",
+        "my": "turn signal ဖွင့်ရန်မလိုအပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรอให้รถในทางหลักและคนเดินเท้าไปก่อน",
+        "en": "Stop and wait for cars on the main road and pedestrians to go first.",
+        "my": "လမ်းမကြီးပေါ်ရှိ ကားများကိုရပ်ပြီး လမ်းသွားလမ်းလာများကို ဦးစွာသွားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บีบแตรเพื่อขอทางจากรถคันอื่น",
+        "en": "Honk your horn to ask for directions from other cars.",
+        "my": "အခြားကားများထံမှ လမ်းညွှန်ချက်တောင်းရန် သင့်ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 406,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากผู้ขับขี่พบพื้นที่ปรับปรุงผิวถนน ผู้ขับขี่ควรปฏิบัติตามข้อใด",
+    "q_en": "If the driver finds an area to improve the road surface What should the driver do?",
+    "q_my": "ယာဉ်မောင်းသည် လမ်းမျက်နှာပြင်ကို မြှင့်တင်ရန် ဧရိယာတစ်ခုကို တွေ့ရှိပါက ယာဉ်မောင်းသည် ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟฉุกเฉิน ใช้ความเร็วปกติ",
+        "en": "Turn on emergency lights Use normal speed",
+        "my": "အရေးပေါ်မီးများကိုဖွင့်ပါ ပုံမှန်အမြန်နှုန်းကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลงและขับด้วยความระมัดระวัง",
+        "en": "Reduce your speed and drive with caution.",
+        "my": "အရှိန်လျှော့ပြီး သတိနဲ့မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็ว",
+        "en": "Accelerate",
+        "my": "အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถแล้วหลีกเลี่ยงเส้นทางนั้น",
+        "en": "Stop the car and avoid that route.",
+        "my": "ကားကိုရပ်ပြီး ထိုလမ်းကြောင်းကို ရှောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 407,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านกำลังจะเลี้ยวขวาเข้าสู่ถนนรอง ควรตรวจสอบกระจกด้านขวาก่อนเลี้ยวเพราะเหตุใด",
+    "q_en": "When you are about to turn right onto a secondary road. Why should you check your right mirror before turning?",
+    "q_my": "အလယ်တန်းလမ်းပေါ် ညာဘက်ကွေ့တော့မည်။ မလှည့်ခင် ညာဘက်မှန်ကို ဘာကြောင့် စစ်သင့်တာလဲ။",
+    "options": [
+      {
+        "th": "เพื่อมองหาคนข้ามถนนที่กำลังจะข้าม",
+        "en": "To look for people crossing the road who are about to cross.",
+        "my": "လမ်းဖြတ်ကူးမည့်သူများကို ရှာဖွေရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อตรวจดูว่าถนนรองว่าง",
+        "en": "to check that the secondary road is free",
+        "my": "အလယ်တန်းလမ်းကို အခမဲ့စစ်ဆေးရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อตรวจดูรถที่ออกมา",
+        "en": "to inspect the cars coming out",
+        "my": "ထွက်လာသည့်ကားများကို စစ်ဆေးရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อตรวจหารถที่จะทำการแซง",
+        "en": "To detect cars that are about to overtake.",
+        "my": "ကျော်တက်မည့်ကားများကို သိရှိနိုင်စေရန်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 408,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เพราะเหตุใดจึงต้องเว้นระยะห่างที่ปลอดภัยเมื่อขับรถตามหลังรถบรรทุก",
+    "q_en": "Why is it important to keep a safe distance when driving behind a truck?",
+    "q_my": "ထရပ်ကားနောက်မှာ မောင်းနှင်တဲ့အခါ လုံခြုံတဲ့အကွာအဝေးကို ထားဖို့ ဘာကြောင့်အရေးကြီးတာလဲ။",
+    "options": [
+      {
+        "th": "เพื่อให้สามารถกันลมได้ดีขึ้น",
+        "en": "In order to be able to block the wind better",
+        "my": "လေကို ပိတ်ဆို့နိုင်စေရန်အတွက် ပိုမိုကောင်းမွန်ပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อช่วยให้รถบรรทุกหยุดได้ง่ายขึ้น",
+        "en": "To make it easier for trucks to stop",
+        "my": "ကုန်တင်ယာဉ်များ ရပ်တန့်ရန် လွယ်ကူစေရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อให้คนขับรถบรรทุกสามารถมองเห็นรถของท่านจากกระจกได้",
+        "en": "So that the truck driver can see your vehicle from the mirror.",
+        "my": "သို့မှသာ ထရပ်ကားမောင်းသူသည် သင့်ကားကို မှန်မှမြင်နိုင်မည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพื่อป้องกันอันตรายที่อาจเกิดจากแรงดูดระหว่างรถ",
+        "en": "To prevent danger that may arise from the suction force between cars.",
+        "my": "ကားများကြားတွင် စုပ်ယူမှုမှ ဖြစ်ပေါ်လာနိုင်သည့် အန္တရာယ်ကို ကာကွယ်ရန်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 409,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000518.webp",
+    "q_th": "จากรูปรถคันสีน้ำเงิน หรือรถสีเขียวมีสิทธิ์ที่จะผ่านไปก่อน",
+    "q_en": "From the picture of a blue car. Or the green car has the right to pass first?",
+    "q_my": "အပြာကားပုံထဲက။ ဒါမှမဟုတ် အစိမ်းရောင်ကားကို အရင်ဖြတ်သန်းခွင့်ရှိလား။",
+    "options": [
+      {
+        "th": "รถคันไหนไปก่อนก็ได้ หากมาถึงก่อน",
+        "en": "Whichever car can go first is fine if it arrives first.",
+        "my": "ဘယ်ကားက အရင်သွားလို့ရလဲ အရင်ရောက်ရင် ကောင်းပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถคันไหนไปก่อนก็ได้ หากมีความเร็วสูงกว่า",
+        "en": "Which car can go first? If there is a higher speed",
+        "my": "ဘယ်ကားက အရင်သွားနိုင်မလဲ။ အရှိန်မြင့်လာလျှင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้รถคันสีเขียวไปก่อน",
+        "en": "Let the green car go first.",
+        "my": "အစိမ်းရောင်ကားကို အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้รถคันสีน้ำเงินไปก่อน",
+        "en": "Let the blue car go first.",
+        "my": "အပြာကား အရင်သွားပါစေ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 410,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000519.webp",
+    "q_th": "จากรูป ในขณะสัญญาณไฟเขียว หากท่านต้องการจะเลี้ยวขวาแต่ท่านได้ยินสัญญาณรถดับเพลิงมาทางขวามือของท่าน ท่านควร",
+    "q_en": "From the picture at the time of the green light If you want to turn right but you hear a fire truck signal coming to your right, you should",
+    "q_my": "၎) မီးစိမ်းနေတဲ့အချိန်မှာ ပုံထဲကအတိုင်း ညာဘက်ကွေ့ချင်ပေမယ့် ညာဘက်ကို မီးထရပ်ကား အချက်ပြသံကြားရင်၊",
+    "options": [
+      {
+        "th": "เลี้ยวไปได้เลยโดยไม่ต้องสนใจรถดับเพลิง",
+        "en": "Just turn around without paying attention to the fire truck.",
+        "my": "မီးသတ်ကားကို ဂရုမစိုက်ဘဲ လှည့်ကြည့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟเลี้ยวขวาเพื่อให้รถดับเพลิงรู้ว่าท่านจะไปก่อน",
+        "en": "Turn on your right turn signal to let the fire truck know you will go first.",
+        "my": "မီးသတ်ကားကို ဦးစွာသွားမည်ဖြစ်ကြောင်း အသိပေးရန် သင်၏ညာဘက်ကွေ့အချက်ပြကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เลี้ยวขวาไปก่อนรถดับเพลิงจะมาถึง",
+        "en": "Turn right before the fire truck arrives.",
+        "my": "မီးသတ်ကားမရောက်မီ ညာဘက်သို့ကွေ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอให้รถดับเพลิงไปก่อนแล้วจึงเลี้ยว",
+        "en": "Wait for the fire truck to go and then turn.",
+        "my": "မီးသတ်ကား လာစောင့်ပြီးမှ အလှည့်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 411,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000520.webp",
+    "q_th": "จากสถานการณ์ดังรูป ผู้ขับขี่ประสงค์ขับรถออกจากช่องจอดต้องปฏิบัติอย่างไรเป็นลำดับแรก",
+    "q_en": "From the situation as shown in the picture What should a driver who wishes to drive out of a parking space do first?",
+    "q_my": "ပုံတွင်ပြထားသည့်အတိုင်း) ကားပါကင်နေရာမှ မောင်းထုတ်လိုသော ယာဉ်မောင်းသည် အဘယ်အရာကို ဦးစွာလုပ်ဆောင်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉิน",
+        "en": "Turn on the emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจสอบความปลอดภัยทางด้านขวา",
+        "en": "Safety check on the right side",
+        "my": "ညာဘက်ခြမ်းတွင် လုံခြုံရေးစစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถออกจากช่องจอดรถได้ทันที",
+        "en": "Drive out of the parking space immediately.",
+        "my": "ကားပါကင်နေရာမှ ချက်ချင်းမောင်းထွက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดกระจกแล้วโบกมือชะลอความเร็ว",
+        "en": "Lower the window and wave your hand to slow down.",
+        "my": "ပြတင်းပေါက်ကို နှိမ့်ချပြီး အရှိန်လျှော့ရန် သင့်လက်ကို ဝှေ့ယမ်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 412,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000521.webp",
+    "q_th": "เมื่อท่านขับรถเข้าใกล้รถโดยสารประจำทางที่ส่งสัญญาณว่ากำลังจะออกจากป้ายรถโดยสารประจำทาง ควรปฏิบัติอย่างไร",
+    "q_en": "When you drive near a bus that signals that it is about to leave a bus stop. What should I do?",
+    "q_my": "ဘတ်စ်ကားမှတ်တိုင်မှ ထွက်ခွာတော့မည်ဟု အချက်ပြသော ဘတ်စ်ကားအနီးတွင် မောင်းနှင်သောအခါ၊ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "กะพริบไฟเมื่อเข้าใกล้",
+        "en": "Flashes light when approaching",
+        "my": "နီးကပ်လာသောအခါ အလင်းတန်းများ လင်းလက်လာသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยอมให้รถโดยสารประจำทางออกมาก่อน",
+        "en": "Allow the bus to leave first.",
+        "my": "ဘတ်စ်ကားကို အရင်ထွက်ခွင့်ပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้สัญญาณไฟเลี้ยวซ้าย แล้วโบกให้รถโดยสารประจำทางออกไปก่อน",
+        "en": "Give the left turn signal. Then waved for the bus to leave first.",
+        "my": "ဘယ်ဘက်လှည့်အချက်ပြပေးပါ။ ထို့နောက် ဘတ်စ်ကားကို ဦးစွာ ထွက်ခွာရန် လက်ပြလိုက်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รีบแซงก่อนที่รถโดยสารประจำทางจะออกมา",
+        "en": "Hurry and overtake before the bus comes out.",
+        "my": "ဘတ်စကားမထွက်ခင် မြန်မြန်ကျော်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 413,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000522.webp",
+    "q_th": "จากรูป เมื่อท่านขับรถมาถึงทางแยกพบสัญญาณไฟเขียว แต่เกิดจราจรติดขัดในเส้นทางที่ท่านจะสัญจร ท่านควรปฏิบัติอย่างไร",
+    "q_en": "From the picture, when you drive to the intersection you will see a green light. But there was a traffic jam on the route you were traveling on. What should you do?",
+    "q_my": "၎) လမ်းဆုံကို မောင်းနှင်တဲ့အခါ ပုံမှာပြထားတဲ့အတိုင်း မီးစိမ်းပြပါလိမ့်မယ်။ ဒါပေမယ့် သင်သွားနေတဲ့ လမ်းကြောင်းမှာ ယာဉ်ကြောပိတ်ဆို့မှု ဖြစ်ခဲ့ပါတယ်။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "ขับรถเข้าไปตรงกลางแยก แล้วรอจนกว่ารถข้างหน้าจะเคลื่อนตัว",
+        "en": "Drive into the middle of the intersection. Then wait until the car ahead moves.",
+        "my": "လမ်းဆုံအလယ်သို့ မောင်းနှင်ပါ။ ထို့နောက် ရှေ့ကားရွေ့သွားသည်အထိ စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอจนกว่ารถข้างหน้าของท่านจะเคลื่อนตัว แล้วจึงขับรถผ่านไปได้",
+        "en": "Wait until the car in front of you moves. Then you can drive past.",
+        "my": "ရှေ့ကားရွေ့သွားသည်အထိ စောင့်ပါ။ ပြီးရင် ကျော်ဖြတ်မောင်းလို့ရတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับรถเข้าไปต่อคันหน้า",
+        "en": "Drive into the car in front.",
+        "my": "ရှေ့က ကားထဲကို မောင်းဝင်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามขับแทรกไปทางขวาของรถคันหน้า",
+        "en": "Try to drive to the right of the car in front.",
+        "my": "ရှေ့ကား၏ ညာဘက်သို့ မောင်းကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 414,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000524.webp",
+    "q_th": "จากรูป ผู้ขับขี่รถคันสีแดงควรปฏิบัติอย่างไร",
+    "q_en": "From the picture, what should the driver of the red car do?",
+    "q_my": "ပုံထဲက အနီရောင်ကားမောင်းသူ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เร่งความเร็วไปข้างหน้าและรีบเปลี่ยนช่องจราจร",
+        "en": "Accelerate forward and quickly change lanes.",
+        "my": "ရှေ့ကိုအရှိန်မြှင့်ပြီး လမ်းကြောများကို အမြန်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองกระจกข้าง ให้สัญญาณไฟเลี้ยวขวา และเปลี่ยนช่องทางเมื่อปลอดภัย",
+        "en": "Look in the side mirror and signal to turn right. and change channels when safe",
+        "my": "ဘေးမှန်ကိုကြည့်ကာ ညာဘက်ကွေ့ရန် အချက်ပြပါ။ ဘေးကင်းသောအခါတွင် ချန်နယ်များကို ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เร่งความเร็วขึ้นและแซงโดยไม่ต้องมองกระจกข้าง",
+        "en": "Accelerate and pass without looking in the side mirrors.",
+        "my": "အရှိန်မြှင့်ပြီး ဘေးကြည့်မှန်ကို မကြည့်ဘဲ ကျော်သွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองกระจกข้าง ให้สัญญาณไฟฉุกเฉิน และเปลี่ยนช่องทางเมื่อปลอดภัย",
+        "en": "Look in the side mirror and signal the emergency lights. and change channels when safe",
+        "my": "ဘေးမှန်ကိုကြည့်ကာ အရေးပေါ်မီးများကို အချက်ပြပါ။ ဘေးကင်းသောအခါတွင် ချန်နယ်များကို ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 415,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000525.webp",
+    "q_th": "หากท่านกำลังขับตามหลังคนขี่จักรยาน แต่ท่านต้องการที่จะเลี้ยวซ้าย ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you are driving behind a cyclist. But you want to turn left. What should you do?",
+    "q_my": "စက်ဘီးစီးသူနောက်က မောင်းနေရင်။ ဒါပေမယ့် ဘယ်ဘက်ကို လှည့်ချင်လဲ။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "ชะลอความเร็วจนกว่าจักรยานจะผ่านทางเลี้ยว",
+        "en": "Slow down until the bike passes the turn.",
+        "my": "စက်ဘီးကွေ့ပြီးသည်အထိ အရှိန်လျှော့ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำการเลี้ยวโดยไม่ต้องสนใจจักรยาน",
+        "en": "Make turns without paying attention to the bike.",
+        "my": "စက်ဘီးကို ဂရုမစိုက်ဘဲ လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พยายามจะแซงจักรยานก่อนที่จะถึงทางเลี้ยว",
+        "en": "Try to pass the bike before it reaches the turn.",
+        "my": "အကွေ့မရောက်မီ စက်ဘီးကို ကျော်ဖြတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถเพื่อรถคนขี่จักรยานจะผ่านทางเลี้ยว",
+        "en": "Park the car so the cyclist will pass the turn.",
+        "my": "စက်ဘီးစီးသူက အကွေ့ကို ကျော်သွားအောင် ကားကိုရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 416,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000526.webp",
+    "q_th": "จากรูป หากท่านต้องการขับตรงไป ท่านควรระมัดระวังและปฏิบัติอย่างไร",
+    "q_en": "From the picture, if you want to drive straight What precautions should you take and take?",
+    "q_my": "ပုံထဲကအတိုင်း တည့်တည့် မောင်းချင်ရင် ဘယ်လို သတိထားရမလဲ။",
+    "options": [
+      {
+        "th": "บีบแตรเพื่อให้รถคันหน้าเร่งความเร็ว",
+        "en": "Honk the horn to make the car in front speed up.",
+        "my": "ရှေ့ကားကို အရှိန်မြှင့်ရန် ဟွန်းကို ဟွန်းတီးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินและขับผ่านไปด้วยความรวดเร็ว",
+        "en": "Turn on your emergency lights and drive past quickly.",
+        "my": "အရေးပေါ်မီးများကိုဖွင့်ပြီး အမြန်ဖြတ်ကျော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับต่อไปด้วยความเร็วเท่าเดิม",
+        "en": "Continue driving at the same speed.",
+        "my": "တူညီသောအရှိန်ဖြင့် ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วลง และให้ทางแก่รถที่เลี้ยวออกมา",
+        "en": "Slow down and give way to vehicles turning out.",
+        "my": "အရှိန်လျှော့ပြီး ကွေ့နေတဲ့ ယာဉ်တွေကို လမ်းပေးပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 417,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การบีบแตรให้สัญญาณเตือนรถคันอื่น ในขณะเกิดเหตุการณ์คับขัน นับว่าเหมาะสมหรือไม่",
+    "q_en": "Honking the horn to warn other cars. During the critical incident Is that considered appropriate?",
+    "q_my": "အခြားကားများကို သတိပေးရန် ဟွန်းတီးခြင်း။ အရေးကြီးသော အဖြစ်အပျက်အတွင်း ယင်းသည် သင့်လျော်သည်ဟု ယူဆပါသလား။",
+    "options": [
+      {
+        "th": "ไม่เหมาะสม เนื่องจากรบกวนสมาธิในการขับขี่ของผู้ขับอื่นๆ",
+        "en": "It is inappropriate because it disturbs the concentration of other drivers.",
+        "my": "အခြားယာဉ်မောင်းများ၏ အာရုံစူးစိုက်မှုကို နှောင့်ယှက်သောကြောင့် ၎င်းသည် မသင့်လျော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เหมาะสม ควรให้สัญญาณในเวลาที่จำเป็น",
+        "en": "Appropriately, signals should be given when necessary.",
+        "my": "လိုအပ်ပါက အချက်ပြမှုများကို သင့်လျော်စွာ ပေးသင့်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหมาะสม ควรบีบแตรถี่ๆ เพื่อเตือน",
+        "en": "Appropriately, you should honk the horn frequently to warn.",
+        "my": "သင့်လျော်စွာ သတိပေးရန် မကြာခဏ ဟွန်းတီးသင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่เหมาะสม ผู้ขับอื่นๆอาจจะเข้าใจผิด",
+        "en": "It's not appropriate. Other drivers may misunderstand.",
+        "my": "မသင့်တော်ပါဘူး။ အခြားယာဉ်မောင်းများ နားလည်မှုလွဲနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 418,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "สาเหตุหลักในการชนท้ายคืออะไร",
+    "q_en": "What is the main cause of rear-end collisions?",
+    "q_my": "နောက်စေ့ကို တိုက်မိခြင်းရဲ့ အဓိက အကြောင်းရင်းက ဘာလဲ။",
+    "options": [
+      {
+        "th": "สุนัขวิ่งตัดหน้ารถ",
+        "en": "Dog runs in front of car",
+        "my": "ခွေးက ကားရှေ့ပြေးတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถชิดคันหน้ามากเกินไป",
+        "en": "Driving too close to the car in front",
+        "my": "ရှေ့ကားနှင့် အလွန်နီးကပ်စွာ မောင်းနှင်ခြင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เบรกรถที่แยกไม่ทัน",
+        "en": "Braking the car that couldn't separate in time",
+        "my": "အချိန်မီမခွဲနိုင်သောကားကို ဘရိတ်အုပ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หักเลี้ยวเพื่อจอดรถข้างทาง",
+        "en": "Swerve to park on the side of the road.",
+        "my": "လမ်းဘေးမှာ ကားရပ်ဖို့ ကွေ့တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 419,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เหตุใดจึงห้ามเปิดไฟสูงขณะที่ขับรถตามคันหน้าหรือรถที่วิ่งสวนทางมา",
+    "q_en": "Why is it prohibited to turn on the high beams while following the vehicle in front or the vehicle passing in the opposite direction?",
+    "q_my": "ရှေ့မှ ကားနောက်သို့ လိုက်နေစဉ် သို့မဟုတ် ဆန့်ကျင်ဘက်သို့ ဖြတ်သွားသည့် အမြင့်တန်းများကို အဘယ်ကြောင့် ဖွင့်ရန် တားမြစ်ထားသနည်း။",
+    "options": [
+      {
+        "th": "จะทำให้ผู้ขับรถคันหน้าและรถที่วิ่งสวนทางมาหลับใน",
+        "en": "It will cause the driver of the car in front and cars passing in the opposite direction to fall asleep.",
+        "my": "ရှေ့ဘက်သို့ မောင်းနှင်လာသည့် ကားနှင့် ဆန့်ကျင်ဘက်သို့ ဖြတ်သွားသော ကားများသည် အိပ်ပျော်သွားစေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้ผู้ขับรถคันหน้าและรถที่วิ่งสวนทางมามองทางไม่ชัดเจน",
+        "en": "This will cause the driver in front and cars passing in the opposite direction to have a unclear view of the road.",
+        "my": "၎င်းသည် ရှေ့မှ ယာဉ်မောင်းနှင့် ဆန့်ကျင်ဘက်သို့ ဖြတ်သွားသော ကားများသည် လမ်း၏ ရှင်းလင်းပြတ်သားသော မြင်ကွင်းကို ဖြစ်စေသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จะทำให้เรามองทางข้างหน้าไม่ชัดเจน",
+        "en": "It will cause us to see the road ahead unclearly.",
+        "my": "ရှေ့လမ်းကို ရှင်းရှင်းလင်းလင်း မြင်နိုင်စေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้รถที่วิ่งสวนทางมาหลับใน",
+        "en": "It will cause cars passing in the opposite direction to fall asleep.",
+        "my": "ဆန့်ကျင်ဘက်သို့ ဖြတ်သွားသော ကားများ အိပ်ပျော်သွားစေသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ในกรณีที่รถของผู้ขับขี่เสีย ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "In the event that the driver's car breaks down What should the driver do?",
+    "q_my": "ယာဉ်မောင်း၏ ကားပျက်ကျပါက ယာဉ်မောင်းသည် ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "จอดรถกลางถนน และโทรขอความช่วยเหลือ",
+        "en": "Park your car in the middle of the road and call for help.",
+        "my": "သင့်ကားကို လမ်းလယ်တွင်ရပ်ပြီး အကူအညီတောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ประคองรถเข้าข้างทาง และเปิดไฟฉุกเฉิน",
+        "en": "Support the car to the side of the road. and turn on emergency lights",
+        "my": "ကားကို လမ်းဘေးသို့ ထောက်ပါ။ အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถกลางถนน และออกมายืนโบกรถ",
+        "en": "Parked the car in the middle of the road and stood up to hitchhike.",
+        "my": "ကားကို လမ်းလယ်မှာ ရပ်ပြီး ဆိုက်ကားစီးဖို့ ထရပ်လိုက်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถกลางถนน และเปิดไฟฉุกเฉิน",
+        "en": "Park your car in the middle of the road and turn on your emergency lights.",
+        "my": "သင့်ကားကို လမ်းလယ်တွင်ရပ်ပြီး အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 421,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้เป็นการปฏิบัติที่ไม่ถูกต้อง",
+    "q_en": "Which of the following is an incorrect practice?",
+    "q_my": "အောက်ပါအချက်များထဲမှ မည်သည့်အရာသည် မှားယွင်းသောအလေ့အကျင့်ဖြစ်သနည်း။",
+    "options": [
+      {
+        "th": "ไม่แซงหากมีรถวิ่งสวนมาในระยะใกล้",
+        "en": "Do not overtake if there is a car passing nearby.",
+        "my": "အနီးနားတွင် ကားရှိလျှင် ကျော်မတက်ပါနှင့်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่แซงหากรถคันหน้ากำลังแซงอยู่",
+        "en": "Do not overtake if the car in front is overtaking.",
+        "my": "ရှေ့ကားက ကျော်တက်ရင် မကျော်ပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แซงขณะที่รถข้างหลังกำลังจะแซงรถของท่าน",
+        "en": "Overtake while the car behind is about to overtake your car.",
+        "my": "သင့်ကားကို ကျော်တက်ခါနီးတွင် နောက်မှကားကို ကျော်တက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "แซงได้หากรถข้างหน้าของท่านเปิดไฟเลี้ยวซ้ายและชะลอความเร็วลง",
+        "en": "You can overtake if the car in front of you turns on the left turn signal and slows down.",
+        "my": "ရှေ့ကားက ဘယ်ဘက်ကွေ့အချက်ပြပြီး အရှိန်လျှော့ရင် ကျော်တက်နိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 422,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะขับรถหากเกิดคันเร่งค้างควรทำอย่างไร",
+    "q_en": "While driving, if the accelerator pedal happens to be stuck, what should you do?",
+    "q_my": "ကားမောင်းနေစဉ် အရှိန်မြှင့်စက် နင်းမိပါက ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ย้ำคันเร่งหลายๆ ครั้ง",
+        "en": "Press the accelerator pedal several times.",
+        "my": "အရှိန်မြှင့်စက်ကို အကြိမ်များစွာ နှိပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติ ใช้ปลายเท้างัดคันเร่งขึ้นมา",
+        "en": "Stay calm and use the tip of your foot to push the accelerator up.",
+        "my": "တည်တည်ငြိမ်ငြိမ်နေ၍ အရှိန်မြှင့်စက်ကို တွန်းရန် သင်၏ခြေဖျားကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ดึงเบรกมือ",
+        "en": "Pull the handbrake",
+        "my": "လက်ဘရိတ်ကိုဆွဲပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 423,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การเคลื่อนย้ายผู้บาดเจ็บโดยใช้ผ้าห่ม ไม่เหมาะกับผู้ป่วยบริเวณใด",
+    "q_en": "Moving the injured person using a blanket Not suitable for patients in any area",
+    "q_my": "ထိခိုက်ဒဏ်ရာရသူအား စောင်ကိုအသုံးပြု၍ ရွှေ့ပေးခြင်းသည် မည်သည့်နေရာတွင်မဆို လူနာအတွက် မသင့်လျော်ပါ။",
+    "options": [
+      {
+        "th": "ไม่เหมาะกับผู้บาดเจ็บบริเวณแขนและขา",
+        "en": "Not suitable for people with injuries to the arms and legs.",
+        "my": "ခြေလက်များ ထိခိုက်ဒဏ်ရာရသူများအတွက် မသင့်တော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่เหมาะกับผู้บาดเจ็บบริเวณหลัง",
+        "en": "Not suitable for people with back injuries.",
+        "my": "နောက်ကျောဒဏ်ရာရှိသူများအတွက် မသင့်တော်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่เหมาะกับผู้บาดเจ็บบริเวณศรีษะ",
+        "en": "Not suitable for people with head injuries.",
+        "my": "ဦးခေါင်းဒဏ်ရာရှိသူများအတွက် မသင့်တော်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่มีข้อใดถูก",
+        "en": "There is no correct answer.",
+        "my": "အဖြေမှန်မရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 424,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การเปลี่ยนช่องทางจราจร ควรปฏิบัติอย่างไร",
+    "q_en": "Changing traffic lanes What should I do?",
+    "q_my": "ယာဉ်လမ်းကြောတွေပြောင်းရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ดูกระจกมองข้าง เปิดสัญญาณไฟแล้วเปลี่ยนช่องทางเมื่อเห็นว่าปลอดภัย",
+        "en": "Look at the side mirror. Turn on your lights and change lanes when it is safe to do so.",
+        "my": "ဘေးမှန်ကို ကြည့်လိုက်ပါ။ ထိုသို့ပြုလုပ်ရန် အန္တရာယ်ကင်းသောအခါတွင် သင့်မီးများကိုဖွင့်ပြီး လမ်းများပြောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปลี่ยนช่องทางทันที เมื่อความเร็วเหมาะสม",
+        "en": "Change the channel immediately When the speed is appropriate",
+        "my": "မြန်နှုန်းသင့်လျော်သောအခါတွင် ချန်နယ်ကို ချက်ချင်းပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปลี่ยนช่องทางโดยเร็วเพื่อหลบรถคันอื่น",
+        "en": "Change lanes quickly to avoid other cars.",
+        "my": "အခြားကားများကိုရှောင်ရန် လမ်းကြောများကို အမြန်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟแล้วเปลี่ยนช่องทางได้เลย",
+        "en": "Turn on the lights and change channels.",
+        "my": "မီးများကိုဖွင့်ပြီး လိုင်းများပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 425,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ข้อใดคือความหมายที่ถูกต้องของจุดบอดของรถ",
+    "q_en": "What is the correct definition of a car's blind spot?",
+    "q_my": "ကားတစ်စီးရဲ့ ကန်းကွက်ရဲ့ မှန်ကန်တဲ့ အဓိပ္ပါယ်က ဘာလဲ။",
+    "options": [
+      {
+        "th": "บริเวณด้านหลังของรถที่กระจกมองหลัง จับภาพไม่ได้",
+        "en": "The area behind the car that the rearview mirror cannot capture.",
+        "my": "ကားနောက်ကြည့်မှန်က ဖမ်းလို့မရတဲ့ ဧရိယာ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บริเวณที่คนขับไม่สามารถมองเห็นได้ชัดในขณะขับรถ",
+        "en": "An area where the driver cannot see clearly while driving.",
+        "my": "ကားမောင်းနေစဉ် ယာဉ်မောင်းက ရှင်းရှင်းလင်းလင်း မမြင်နိုင်သော ဧရိယာ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "บริเวณด้านซ้ายของรถที่ผู้ขับขี่ไม่สามารถมองเห็นได้",
+        "en": "The area on the left side of the vehicle that the driver cannot see.",
+        "my": "ယာဉ်၏ဘယ်ဘက်ခြမ်းရှိ ဧရိယာသည် ယာဉ်မောင်းမမြင်နိုင်ပေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บริเวณด้านหน้าของรถที่ผู้ขับขี่ไม่สามารถมองเห็นได้",
+        "en": "The area in front of the vehicle that the driver cannot see.",
+        "my": "ယာဉ်မောင်းသူ မမြင်နိုင်သော ယာဉ်ရှေ့ ဧရိယာ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 426,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ไหล่ทาง ใช้สำหรับเหตุการณ์ใด",
+    "q_en": "The shoulder is used for which event?",
+    "q_my": "ပခုံးကို ဘယ်ပွဲအတွက် သုံးတာလဲ။",
+    "options": [
+      {
+        "th": "ในกรณีที่การจราจรหนาแน่น",
+        "en": "In the case of heavy traffic",
+        "my": "ယာဉ်အသွားအလာ ထူထပ်သောကိစ္စ၊",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สำหรับรถเข็นขายของสัญจร",
+        "en": "For traveling sales carts",
+        "my": "နယ်လှည့်အရောင်းတွန်းလှည်းများအတွက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ในกรณีที่มีรถเสีย",
+        "en": "In the event of a car breakdown",
+        "my": "ကားပျက်ကျတဲ့ကိစ္စ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สำหรับรถจักรยานยนต์สัญจร",
+        "en": "For traveling motorcycles",
+        "my": "ခရီးသွား ဆိုင်ကယ်များအတွက်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 427,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อคนกำลังข้ามถนนบริเวณทางข้าม ผู้ขับขี่ต้องปฏิบัติอย่างไร",
+    "q_en": "When people are crossing the road at the crossing. What must the driver do?",
+    "q_my": "လမ်းဖြတ်ကူးတဲ့အခါ လမ်းကူးမှာ။ ယာဉ်မောင်းက ဘာလုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "ตะโกนด่าผู้ขับขี่คันอื่นที่ทำให้ไม่พอใจ",
+        "en": "Shouting at other drivers who offend you.",
+        "my": "မင်းကို စော်ကားတဲ့ တခြားကားသမားတွေကို အော်ငေါက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถให้คนข้ามถนนบริเวณทางข้าม",
+        "en": "Stop cars to let people cross the road at the crossing.",
+        "my": "လမ်းဖြတ်ကူးသူတွေကို လမ်းဖြတ်ကူးဖို့ ကားတွေ ရပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สูบบุหรี่และเขี่ยทิ้งก้นบุหรี่ลงบนถนน",
+        "en": "Smoking cigarettes and throwing cigarette butts on the road",
+        "my": "စီးကရက်သောက်ပြီး စီးကရက်ဘူးတွေကို လမ်းမပေါ် ပစ်ချတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถ่มน้ำลายหรือเสมหะลงบนถนน",
+        "en": "Spitting or phlegm on the road",
+        "my": "လမ်းပေါ်တွင် တံတွေးထွေးခြင်း သို့မဟုတ် ချွဲသလိပ်များ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเกิดสถานการณ์ฉุกเฉิน รถเสียบนทางด่วน ผู้ขับขี่ควรปฏิบัติอย่างไรเป็นอย่างแรก",
+    "q_en": "When an emergency situation occurs Car breaks down on the expressway What should the driver do first?",
+    "q_my": "၎) အရေးပေါ်အခြေအနေ အမြန်လမ်းပေါ်တွင် ကားပျက်ကျပါက ယာဉ်မောင်းက ဘာအရင်လုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ชะลอความเร็ว",
+        "en": "slow down",
+        "my": "နှေးကွေး",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ติดต่อขอความช่วยเหลือ",
+        "en": "Contact for help",
+        "my": "အကူအညီအတွက် ဆက်သွယ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉิน",
+        "en": "Turn on the emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติและขับรถเข้าไหล่ทางด้านซ้ายพร้อมกับให้สัญญาณไฟฉุกเฉิน",
+        "en": "Remain calm and drive onto the left shoulder while flashing your emergency lights.",
+        "my": "ငြိမ်ငြိမ်ထားပြီး အရေးပေါ်မီးမှိတ်တုတ်မှိတ်တုတ်မှိတ်တုတ်ဖြင့် ဘယ်ဘက်ပခုံးပေါ်သို့ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 429,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่จะต้องหันหน้ามองข้ามไหล่ก่อนทำการเปลี่ยนช่องจราจร เพราะเหตุใด",
+    "q_en": "Drivers must look over their shoulders before changing lanes. Why?",
+    "q_my": "လမ်းကြောမပြောင်းမီ ယာဉ်မောင်းများသည် ၎င်းတို့၏ ပခုံးများကို ကျော်ကြည့်ရပါမည်။ ဘာကြောင့်လဲ?",
+    "options": [
+      {
+        "th": "จะทำให้สามารถเปลี่ยนช่องจราจรได้รวดเร็วมากขึ้น",
+        "en": "It will allow you to change traffic lanes more quickly.",
+        "my": "၎င်းသည် သင့်အား ယာဉ်လမ်းကြောင်းများကို ပိုမိုလျင်မြန်စွာ ပြောင်းလဲနိုင်စေမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อเปลี่ยนช่องจราจรในกรณีที่ไม่ต้องการเปิดสัญญาณไฟเลี้ยว",
+        "en": "To change traffic lanes in cases where you do not want to turn on the turn signal.",
+        "my": "ကွေ့အချက်ပြမှု မဖွင့်ချင်သော ကိစ္စများတွင် ယာဉ်လမ်းကြောများ ပြောင်းလဲရန်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อให้สามารถเห็นผู้คนที่เดินอยู่บริเวณทางเดินเท้า",
+        "en": "To be able to see people walking on the sidewalk.",
+        "my": "လမ်းဘေးမှာ လမ်းလျှောက်နေတဲ့လူတွေကို မြင်အောင်ကြည့်ဖို့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อตรวจดูจุดบอดของรถ",
+        "en": "To check the car's blind spots",
+        "my": "ကား၏မမြင်နိုင်သောနေရာများကို စစ်ဆေးရန်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 430,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การขับรถทางไกลเมื่อรู้สึกว่าตนเองง่วงควรปฏิบัติอย่างไร",
+    "q_en": "What should you do when driving long distances when you feel drowsy?",
+    "q_my": "အဝေးပြေးကားမောင်းတဲ့အခါ ငိုက်မျဉ်းနေတဲ့အခါ ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ขับรถหวาดเสียวเพื่อให้ระบบประสาทตื่นตัว",
+        "en": "Take an exciting drive to keep your nervous system alert.",
+        "my": "သင့်အာရုံကြောစနစ်သတိရှိရန် စိတ်လှုပ်ရှားဖွယ်ကောင်းသော မောင်းနှင်မှုတစ်ခုကို ယူပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งเครื่องเพื่อให้ถึงจุดหมายโดยเร็ว",
+        "en": "Accelerate your engine to reach your destination quickly.",
+        "my": "သင့်ပန်းတိုင်ကို မြန်မြန်ရောက်ဖို့ သင့်အင်ဂျင်ကို အရှိန်မြှင့်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดพักนอนหรือยืดเส้นยืดสายตามจุดพัก",
+        "en": "Take breaks to sleep or stretch at resting points.",
+        "my": "အနားယူအိပ်စက်ရန် သို့မဟုတ် အနားယူရန်နေရာများတွင် အနားယူပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "วิ่งแล้วเบรกบ่อยๆ เพื่อให้หายง่วง",
+        "en": "Run and brake often. To relieve sleepiness",
+        "my": "မကြာခဏ ပြေးပြီး ဘရိတ်အုပ်ပါ။ အိပ်ငိုက်ခြင်းကို သက်သာစေရန်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ขับขี่ไม่ควรขับรถขนานตีคู่กับรถชนิดใดเพื่อความปลอดภัย",
+    "q_en": "Drivers should not drive in parallel with any type of vehicle for safety.",
+    "q_my": "ယာဉ်မောင်းများသည် အန္တရာယ်ကင်းစေရန် မည်သည့်ယာဉ်အမျိုးအစားနှင့်မဆို အပြိုင်မမောင်းသင့်ပါ။",
+    "options": [
+      {
+        "th": "รถสามล้อ",
+        "en": "Tricycle",
+        "my": "သုံးဘီးဆိုင်ကယ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถบรรทุก",
+        "en": "truck",
+        "my": "ထရပ်ကား",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รถจักรยานยนต์",
+        "en": "motorcycle",
+        "my": "ဆိုင်ကယ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถกระบะ",
+        "en": "Pickup truck",
+        "my": "ပစ်ကပ်ကား",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 432,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากท่านจอดรถชิดขอบทางทางด้านซ้ายอยู่ และต้องการที่จะเคลื่อนตัวออก ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you park your car on the left side of the road. and want to move out What should you do?",
+    "q_my": "၎) သင့်ကားကို လမ်းရဲ့ဘယ်ဘက်ခြမ်းမှာ ရပ်ထားရင်။ ထွက်သွားချင်ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ให้สัญญาณมือเพื่อขอทาง",
+        "en": "Give hand signals to ask for directions.",
+        "my": "လမ်းညွှန်ချက်တောင်းရန် လက်အချက်ပြမှုများပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "มองกระจกข้างด้านขวาและกระจกมองหลัง เปิดไฟเลี้ยวขวา ออกรถเมื่อปลอดภัย",
+        "en": "Look in the right side mirror and the rearview mirror. Turn on the right turn signal Get out of the car when it's safe.",
+        "my": "ညာဖက်မှန်နဲ့ နောက်ကြည့်မှန်ကို ကြည့်ပါ။ ညာဘက်အကွေ့အချက်ပြပါ ဘေးကင်းသောအခါ ကားထဲမှ ဆင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่จำเป็นต้องหันมองดูรถที่จอดอยู่ข้างหน้า มองแค่รถที่ตามมาก็พอ",
+        "en": "There is no need to turn around and look at the car parked in front of you. Just looking at the car following is enough.",
+        "my": "သင့်ရှေ့မှာ ရပ်ထားတဲ့ ကားကို လှည့်ကြည့်ဖို့ မလိုပါဘူး။ နောက်ကားကိုကြည့်ရုံနဲ့ လုံလောက်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดสัญญาณไฟเพื่อเตือนให้รถคันที่ตามมาชะลอความเร็วลง",
+        "en": "Turn on your lights to warn oncoming vehicles to slow down.",
+        "my": "အရှိန်လျှော့ရန် လာမည့်ယာဉ်များကို သတိပေးရန် သင့်မီးများကို ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 433,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "หากพบรถฉุกเฉินเปิดสัญญาณเสียงไซเรนกำลังวิ่งตามหลัง ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "If you find an emergency vehicle with the siren on and running behind. What should the driver do?",
+    "q_my": "၎) အရေးပေါ်ယာဉ်ကို ဥသြသံဖွင့်ပြီး နောက်ကနေ ပြေးနေတာတွေ့ရင်။ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เปิดช่องทางเดินรถให้รถฉุกเฉินขับผ่านไปได้",
+        "en": "Open the lane for emergency vehicles to drive through.",
+        "my": "အရေးပေါ်ယာဉ်များ ဖြတ်သန်းမောင်းနှင်နိုင်ရန် လမ်းဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปลี่ยนช่องจราจรไปทางด้านขวาทันที",
+        "en": "Immediately change traffic lanes to the right.",
+        "my": "ယာဉ်လမ်းကြောင်းများကို ညာဘက်သို့ ချက်ချင်းပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินและเร่งความเร็วทันที",
+        "en": "Turn on your emergency lights and accelerate immediately.",
+        "my": "အရေးပေါ်မီးများကိုဖွင့်ပြီး ချက်ချင်းအရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟเลี้ยวขวาและขับรถต่อไป",
+        "en": "Turn on your right turn signal and continue driving.",
+        "my": "သင့်ညာဘက်အကွေ့အချက်ပြကိုဖွင့်ပြီး ဆက်လက်မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 434,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถอยู่ในสภาพการจราจรที่หนาแน่นและถนนเปียก ซึ่งอาจมีละอองน้ำทำให้มองเห็นสิ่งรอบข้างไม่ชัดเจน ควรใช้ไฟอย่างไร",
+    "q_en": "When you drive in heavy traffic and wet roads. There may be water mist making the surroundings unclear. How should I use electricity?",
+    "q_my": "ယာဉ်ကြောထူထပ်ပြီး စိုစွတ်သောလမ်းများတွင် မောင်းနှင်သည့်အခါ။ ပတ်ဝန်းကျင်ကို မရှင်းမလင်းဖြစ်စေတဲ့ ရေမြူတွေ ရှိနေနိုင်ပါတယ်။ လျှပ်စစ်ကို ဘယ်လိုသုံးရမလဲ။",
+    "options": [
+      {
+        "th": "ใช้ไฟฉุกเฉิน",
+        "en": "Use emergency power",
+        "my": "အရေးပေါ်ပါဝါသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ไฟต่ำ",
+        "en": "Use low power",
+        "my": "ပါဝါနည်းသုံးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ไฟสูง",
+        "en": "Use high power",
+        "my": "စွမ်းအားမြင့်သုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ไฟข้างเท่านั้น",
+        "en": "Use side lights only.",
+        "my": "ဘေးမီးများကိုသာ အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 435,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ขณะกำลังจะเลี้ยวรถ และมองเห็นคนกำลังข้ามถนน ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "While turning the car and saw people crossing the road What should the driver do?",
+    "q_my": "ကားကို ကွေ့ပြီး လမ်းဖြတ်ကူးတဲ့လူတွေကို တွေ့တော့ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "บีบแตรไล่เพื่อไม่ให้ผู้คนเดินผ่าน",
+        "en": "Honk your horn to keep people from passing by.",
+        "my": "လူများမဖြတ်သွားစေရန် မင်းရဲ့ဟွန်းကို ဟွန်းတီးလိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รอจนกว่าคนเดินเท้าจะเดินผ่านไปแล้วจึงเลี้ยว",
+        "en": "Wait until the pedestrian has passed before turning.",
+        "my": "မကွေ့မီ ခြေကျင်လျှောက်သွားသည်အထိ စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "โบกมือและตะโกนต่อว่าเพื่อเร่งให้ผู้คนเดินผ่านไป",
+        "en": "Waving and yelling to rush people past.",
+        "my": "ဝှေ့ယမ်းပြီး အော်ဟစ်အော်ငေါက်နေပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับเข้าไปใกล้คนเดินเท้าในระยะกระชั้นชิด",
+        "en": "Drive close to pedestrians.",
+        "my": "လမ်းသွားလမ်းလာများနှင့် နီးကပ်စွာ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 436,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "การใช้ไฟฉุกเฉินควรใช้เมื่อใด",
+    "q_en": "When should emergency lighting be used?",
+    "q_my": "အရေးပေါ်အလင်းရောင်ကို ဘယ်အချိန်မှာ အသုံးပြုသင့်လဲ။",
+    "options": [
+      {
+        "th": "เมื่อรถเสียและกีดขวางการจราจร",
+        "en": "When a car breaks down and obstructs traffic",
+        "my": "ကားပျက်ပြီး ယာဉ်ကြောပိတ်ဆို့တဲ့အခါ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เมื่อจอดรถซ้อนคันบนถนนที่มีการเดินรถสวนทาง",
+        "en": "When parking two cars on a road with traffic in the opposite direction",
+        "my": "ဆန့်ကျင်ဘက် လမ်းကြောင်းတစ်ခုတွင် ကားနှစ်စီးကို ရပ်နားသည့်အခါ၊",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อไฟเลี้ยวไม่ทำงาน",
+        "en": "When the turn signal doesn't work",
+        "my": "အကွေ့အချက်ပြအလုပ်မလုပ်သောအခါ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อเตือนรถที่สวนทางว่าคุณกำลังจะหยุดรถ",
+        "en": "To warn oncoming traffic that you are about to stop.",
+        "my": "ရပ်တန့်တော့မည့် ယာဉ်ကြောပိတ်ဆို့မှုကို သတိပေးရန်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 437,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "บริเวณใดสามารถแซงได้",
+    "q_en": "Which areas can be overtaken?",
+    "q_my": "ဘယ်ဒေသတွေကို ကျော်တက်နိုင်မလဲ။",
+    "options": [
+      {
+        "th": "ไหล่ทาง",
+        "en": "shoulder",
+        "my": "ပခုံး",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทางแยก",
+        "en": "crossroads",
+        "my": "လမ်းဆုံများ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทางลงสะพาน",
+        "en": "bridge descent",
+        "my": "တံတားအဆင်း",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ถนน 4 เลนที่มีเส้นแบ่งถนนเป็นเส้นประ",
+        "en": "4 lane road with dotted road dividers.",
+        "my": "အစက်အပြောက်များဖြင့် လမ်းခွဲထားသော 4 လမ်းသွားလမ်း။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 438,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "เมื่อเกิดสถานการณ์ฉุกเฉิน รถยางแตก ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "When an emergency situation occurs, a car's tire bursts, what should the driver do?",
+    "q_my": "၎) အရေးပေါ်အခြေအနေ ဖြစ်ပေါ်လာပါက ကားတာယာကွဲပါက ယာဉ်မောင်း ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ค่อยๆ แตะเบรก",
+        "en": "Gently tap the brakes.",
+        "my": "ဘရိတ်ကို ညင်သာစွာ နှိပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ติดต่อขอความช่วยเหลือ",
+        "en": "Contact for help",
+        "my": "အကူအညီအတွက် ဆက်သွယ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปล่อยรถให้ไหล พร้อมเปิดสัญญาณไฟฉุกเฉิน",
+        "en": "let the car flow Ready to turn on emergency lights",
+        "my": "ကားကို စီးဆင်းပါစေ အရေးပေါ်မီးများဖွင့်ရန် အဆင်သင့်ဖြစ်ပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดสัญญาณไฟฉุกเฉิน",
+        "en": "Turn on the emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 439,
+    "category": "safe_driving",
+    "image": null,
+    "q_th": "ผู้ที่ได้รับการบาดเจ็บและหยุดเคลื่อนไหวเป็นเวลานาน ๆ เช่นใส่เฝือก หลังจากเสร็จสิ้นการรักษา (ถอดเฝือก) จะส่งผลอย่างไร",
+    "q_en": "People who have been injured and have stopped moving for a long time, such as wearing a cast, what will be the effect after treatment (removing the cast) is done?",
+    "q_my": "သွန်းဝတ်ဆင်ခြင်းကဲ့သို့သော အချိန်အကြာကြီး လှုပ်ရှားသွားလာမှု ရပ်တန့်သွားသော ဒဏ်ရာရသူများ၊ ကုသမှုခံယူပြီးနောက် မည်ကဲ့သို့ အကျိုးသက်ရောက်မှုရှိမည်နည်း။",
+    "options": [
+      {
+        "th": "ต้องเปลี่ยนวิธีการขับขี่",
+        "en": "You must change your driving method.",
+        "my": "သင်၏မောင်းနှင်မှုနည်းလမ်းကို ပြောင်းလဲရမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พิการถาวร",
+        "en": "Permanently disabled",
+        "my": "အပြီးတိုင် ပိတ်ထားသည်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่มีผลใดๆ",
+        "en": "No effect",
+        "my": "သက်ရောက်မှုမရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ความสามารถในการควบคุมยานพาหนะลดชั่วคราว",
+        "en": "The ability to control the vehicle is temporarily reduced.",
+        "my": "ယာဉ်ကို ထိန်းချုပ်နိုင်မှု ခေတ္တ လျော့ပါးလာသည်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 440,
+    "category": "safe_driving",
+    "image": "/exam_images/safe/1000000000622.webp",
+    "q_th": "หากท่านเห็นรถบรรทุกที่อยู่ข้างหน้าเปิดไฟเลี้ยวซ้ายแต่กำลังเคลื่อนไปทางขวา ท่านควรปฏิบัติอย่างไร",
+    "q_en": "If you see a truck in front of you with its left turn signal on but moving to the right. What should you do?",
+    "q_my": "၎) ဘယ်ဘက်ကွေ့အချက်ပြပြီး ရှေ့ကထရပ်ကားကိုတွေ့ရင် ညာဘက်ကိုရွှေ့ပါ။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "รักษาระยะห่างไว้และรอให้รถใหญ่เคลื่อนไปในทิศทางที่แน่นอน",
+        "en": "Keep your distance and wait for the big vehicle to move in a certain direction.",
+        "my": "သင့်အကွာအဝေးကို ထိန်းထားပြီး တိကျသော ဦးတည်ရာသို့ ရွေ့လျားသွားမည့် ယာဉ်ကြီးအား စောင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ให้เข้าใจว่าผู้ขับขี่รถใหญ่นั้นเปิดสัญญาณไฟผิด",
+        "en": "Understand that the driver of a large vehicle turned on the wrong light.",
+        "my": "ယာဉ်ကြီးတစ်စင်း၏ ယာဉ်မောင်းသည် မီးလင်းမှားသွားသည်ကို နားလည်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับเข้าไปใกล้ๆ เพื่อเตรียมแซง",
+        "en": "drive closer to prepare to overtake",
+        "my": "ကျော်တက်ရန် ပြင်ဆင်ရန် အနီးကပ် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เตรียมแซงเมื่อรถใหญ่เริ่มชะลอความเร็ว",
+        "en": "Prepare to overtake when large vehicles begin to slow down.",
+        "my": "ယာဉ်ကြီးများ နှေးကွေးလာသောအခါ ကျော်တက်ရန် ပြင်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": false
       }
     ]
   }

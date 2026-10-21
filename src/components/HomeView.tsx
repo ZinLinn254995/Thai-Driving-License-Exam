@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Sparkles, BookOpen, Clock, Award, ShieldCheck, Scale, ArrowRight, Layers } from 'lucide-react';
+import { Play, Sparkles, BookOpen, Clock, Award, ShieldCheck, Scale, ArrowRight, Layers, Car } from 'lucide-react';
 import { LanguageMode, ExamMode, ExamTopicFilter } from '../types';
 import { toMyanmarNumber, ExamHistoryItem } from '../utils/helpers';
 
@@ -8,6 +8,7 @@ interface HomeViewProps {
   totalQuestions: number;
   signsCount: number;
   lawsCount: number;
+  safeDrivingCount: number;
   onStartExam: (mode: ExamMode, topic: ExamTopicFilter) => void;
   onNavigateStudy: (filterCategory?: ExamTopicFilter) => void;
   recentHistory: ExamHistoryItem[];
@@ -19,6 +20,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   totalQuestions,
   signsCount,
   lawsCount,
+  safeDrivingCount,
   onStartExam,
   onNavigateStudy,
   recentHistory,
@@ -47,14 +49,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
               Thai Driving License Practice
             </h1>
             <p className="text-sm sm:text-base text-[#cfe9da] font-myanmar leading-relaxed">
-              ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်နှင့် ယာဉ်စည်းကမ်းဥပဒေ မေးခွန်းများ (၁၉၁ ခု)
+              ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်းနှင့် ဘေးကင်းစွာမောင်းနှင်ခြင်း မေးခွန်းများ ({toMyanmarNumber(totalQuestions)} ခု)
             </p>
           </div>
 
           <div className="flex items-center gap-2 self-start sm:self-auto">
             <div className="bg-[#074028]/80 backdrop-blur-xs p-3 rounded-xl border border-white/15 text-center min-w-[110px]">
               <div className="text-2xl font-black text-[#f2b705] leading-none">
-                191
+                {totalQuestions}
               </div>
               <div className="text-[11px] font-semibold text-white/90 mt-1">
                 မေးခွန်းစုစုပေါင်း
@@ -68,9 +70,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </div>
 
       {/* Categories Overview Pills */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {/* Category 1: Signs */}
-        <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+        <div 
+          onClick={() => onNavigateStudy('traffic_signs')}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all"
+        >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
               <ShieldCheck size={20} />
@@ -83,7 +88,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 ป้ายและเครื่องหมายจราจร
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Traffic Signs & Markings (၁၁၇ ခု)
+                Traffic Signs & Markings ({toMyanmarNumber(signsCount)} ခု)
               </div>
             </div>
           </div>
@@ -93,7 +98,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 2: Laws */}
-        <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+        <div 
+          onClick={() => onNavigateStudy('traffic_laws')}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all"
+        >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
               <Scale size={20} />
@@ -106,12 +114,38 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 กฎหมายว่าด้วยการจราจรทางบก
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Traffic Laws (၇၄ ခု)
+                Traffic Laws ({toMyanmarNumber(lawsCount)} ခု)
               </div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
             {lawsCount}
+          </span>
+        </div>
+
+        {/* Category 3: Safe Driving */}
+        <div 
+          onClick={() => onNavigateStudy('safe_driving')}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+              <Car size={20} />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                Category 3
+              </div>
+              <div className="font-bold text-sm text-slate-900 font-thai">
+                การขับขี่อย่างปลอดภัย
+              </div>
+              <div className="text-xs text-slate-600 font-myanmar">
+                Safe Driving ({toMyanmarNumber(safeDrivingCount)} ခု)
+              </div>
+            </div>
+          </div>
+          <span className="text-xs font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+            {safeDrivingCount}
           </span>
         </div>
       </div>
@@ -130,7 +164,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs font-semibold">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs font-semibold">
           <button
             type="button"
             onClick={() => setSelectedTopic('all')}
@@ -142,7 +176,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">အားလုံး (All Topics)</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ၁၉၁ ခုလုံးထဲမှ ကျပန်း ၅၀
+              {toMyanmarNumber(totalQuestions)} ခုလုံးထဲမှ ကျပန်း ၅၀
             </div>
           </button>
 
@@ -155,9 +189,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 : 'border-slate-200 hover:border-slate-300 text-slate-700'
             }`}
           >
-            <div className="font-bold">Traffic Signs & Markings</div>
+            <div className="font-bold">Traffic Signs</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ဆိုင်းဘုတ် ၁၁၇ ခုထဲမှ ကျပန်း ၅၀
+              ဆိုင်းဘုတ် {toMyanmarNumber(signsCount)} ခု
             </div>
           </button>
 
@@ -172,7 +206,22 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Traffic Laws</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ဥပဒေ ၇၄ ခုထဲမှ ကျပန်း ၅၀
+              ဥပဒေ {toMyanmarNumber(lawsCount)} ခု
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setSelectedTopic('safe_driving')}
+            className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
+              selectedTopic === 'safe_driving'
+                ? 'border-[#0b5d3b] bg-emerald-50/70 text-slate-950 shadow-xs'
+                : 'border-slate-200 hover:border-slate-300 text-slate-700'
+            }`}
+          >
+            <div className="font-bold">Safe Driving</div>
+            <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
+              ဘေးကင်းစွာမောင်းနှင်ခြင်း ({toMyanmarNumber(safeDrivingCount)} ခု)
             </div>
           </button>
         </div>
@@ -268,10 +317,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           <div>
             <h3 className="font-bold text-slate-900">
-              မေးခွန်း ၁၉၁ ခုလုံး လေ့လာဖတ်ရှုရန် (Study Bank)
+              မေးခွန်း {toMyanmarNumber(totalQuestions)} ခုလုံး လေ့လာဖတ်ရှုရန် (Study Bank)
             </h3>
             <p className="text-xs text-slate-600 font-myanmar">
-              ဆိုင်းဘုတ် ၁၁၇ ခု + ယာဉ်စည်းကမ်းဥပဒေ ၇၄ ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။
+              ဆိုင်းဘုတ် ({toMyanmarNumber(signsCount)}) + ယာဉ်စည်းကမ်း ({toMyanmarNumber(lawsCount)}) + Safe Driving ({toMyanmarNumber(safeDrivingCount)}) ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။
             </p>
           </div>
         </div>
@@ -281,7 +330,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           onClick={() => onNavigateStudy()}
           className="px-4 py-2.5 rounded-xl border-2 border-[#0b5d3b] text-[#0b5d3b] hover:bg-[#0b5d3b] hover:text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap"
         >
-          <span>၁၉၁ ခုလုံး ကြည့်ရှုမည်</span>
+          <span>{toMyanmarNumber(totalQuestions)} ခုလုံး ကြည့်ရှုမည်</span>
           <ArrowRight size={15} />
         </button>
       </div>
