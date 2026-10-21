@@ -44,6 +44,10 @@ The app must continue to state clearly that it is independent and not affiliated
 - [ ] Sitemap is submitted in Google Search Console and indexing is monitored.
 - [ ] The user has provided their actual AdSense account/publisher details before any publisher-specific code or `ads.txt` is added. Never invent a publisher ID.
 
+## Question-level tracking
+
+A 440-row review template is maintained at `docs/adsense/question-review-register.csv`. It includes the current question ID, category, Thai/English/Burmese text, image paths, known source URL, and blank fields for rights status, answer-key review, translation review, image licensing, and reviewer notes. Blank fields are intentionally left unverified; do not mark an item cleared without evidence.
+
 ## Recommended remediation order
 
 1. Preserve the current question bank as an internal reference, not as proof of reuse rights.
