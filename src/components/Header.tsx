@@ -119,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <BookOpen size={13} />
-            <span>မေးခွန်း ၁၉၁ ခုလုံး (All Bank)</span>
+            <span>မေးခွန်းအားလုံး (All Bank)</span>
             {bookmarksCount > 0 && (
               <span className="bg-[#f2b705] text-[#19241e] text-[10px] font-bold px-1.5 py-0.2 rounded-full">
                 {bookmarksCount}
