@@ -39,11 +39,11 @@ export const Header: React.FC<HeaderProps> = ({
                   Thai Drive Exam
                 </span>
                 <span className="bg-[#f2b705] text-[#19241e] text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">
-                  440 Questions
+                  521 Questions
                 </span>
               </div>
               <p className="text-xs text-[#cfe9da] font-myanmar -mt-0.5">
-                ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်းလေ့ကျင့်ရန် (၄၄၀ ပုဒ်)
+                ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်းလေ့ကျင့်ရန် (၅၂၁ ပုဒ်)
               </p>
             </div>
           </div>

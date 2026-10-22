@@ -4,9 +4,9 @@ export type LanguageMode = 'th_my' | 'en_my';
 
 export type ExamMode = 'instant' | 'timed';
 
-export type QuestionCategory = 'traffic_signs' | 'traffic_laws' | 'safe_driving';
+export type QuestionCategory = 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance';
 
-export type ExamTopicFilter = 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving';
+export type ExamTopicFilter = 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance';
 
 export interface QuizQuestionOption {
   th: string;

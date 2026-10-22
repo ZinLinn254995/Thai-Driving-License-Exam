@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers, Car } from 'lucide-react';
+import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers, Car, Wrench } from 'lucide-react';
 import { QuestionItem } from '../data/questions';
 import { LanguageMode, QuestionCategory } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
@@ -22,13 +22,14 @@ export const StudyView: React.FC<StudyViewProps> = ({
   initialCategory
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState<'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'bookmarked'>(
-    (initialCategory as 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving') || 'all'
+  const [categoryFilter, setCategoryFilter] = useState<'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance' | 'bookmarked'>(
+    (initialCategory as 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance') || 'all'
   );
 
   const signsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_signs').length, [questions]);
   const lawsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_laws').length, [questions]);
   const safeDrivingCount = useMemo(() => questions.filter((q) => q.category === 'safe_driving').length, [questions]);
+  const maintenanceCount = useMemo(() => questions.filter((q) => q.category === 'vehicle_maintenance').length, [questions]);
 
   const filteredQuestions = useMemo(() => {
     let list = questions;
@@ -39,6 +40,8 @@ export const StudyView: React.FC<StudyViewProps> = ({
       list = list.filter((q) => q.category === 'traffic_laws');
     } else if (categoryFilter === 'safe_driving') {
       list = list.filter((q) => q.category === 'safe_driving');
+    } else if (categoryFilter === 'vehicle_maintenance') {
+      list = list.filter((q) => q.category === 'vehicle_maintenance');
     } else if (categoryFilter === 'bookmarked') {
       list = list.filter((q) => bookmarkedIds.includes(q.id));
     }
@@ -66,7 +69,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             မေးခွန်း {toMyanmarNumber(questions.length)} ခုလုံး လေ့လာဖတ်ရှုရန်
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
-            Traffic Signs ({toMyanmarNumber(signsCount)})၊ Traffic Laws ({toMyanmarNumber(lawsCount)}) နှင့် Safe Driving ({toMyanmarNumber(safeDrivingCount)}) မေးခွန်းနှင့် အဖြေမှန်များ
+            Traffic Signs ({toMyanmarNumber(signsCount)})၊ Traffic Laws ({toMyanmarNumber(lawsCount)})၊ Safe Driving ({toMyanmarNumber(safeDrivingCount)}) နှင့် Maintenance ({toMyanmarNumber(maintenanceCount)}) မေးခွန်းနှင့် အဖြေမှန်များ
           </p>
         </div>
 
@@ -95,7 +98,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <ShieldCheck size={13} className="text-emerald-700" />
-            <span>Traffic Signs ({signsCount})</span>
+            <span>Signs ({signsCount})</span>
           </button>
 
           <button
@@ -108,7 +111,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Scale size={13} className="text-blue-700" />
-            <span>Traffic Laws ({lawsCount})</span>
+            <span>Laws ({lawsCount})</span>
           </button>
 
           <button
@@ -121,7 +124,20 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Car size={13} className="text-amber-700" />
-            <span>Safe Driving ({safeDrivingCount})</span>
+            <span>Safe ({safeDrivingCount})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('vehicle_maintenance')}
+            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
+              categoryFilter === 'vehicle_maintenance'
+                ? 'bg-white text-purple-900 shadow-xs font-bold'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Wrench size={13} className="text-purple-700" />
+            <span>Maintenance ({maintenanceCount})</span>
           </button>
 
           <button
@@ -191,6 +207,11 @@ export const StudyView: React.FC<StudyViewProps> = ({
                       <span className="text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 flex items-center gap-1">
                         <Car size={12} />
                         <span>Safe driving</span>
+                      </span>
+                    ) : q.category === 'vehicle_maintenance' ? (
+                      <span className="text-[11px] font-bold text-purple-800 bg-purple-50 px-2 py-0.5 rounded-md border border-purple-200 flex items-center gap-1">
+                        <Wrench size={12} />
+                        <span>Vehicle maintenance</span>
                       </span>
                     ) : (
                       <span className="text-[11px] font-bold text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200 flex items-center gap-1">

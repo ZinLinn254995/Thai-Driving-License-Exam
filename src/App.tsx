@@ -50,6 +50,7 @@ export default function App() {
   const signsCount = useMemo(() => QUESTIONS_BANK.filter((q) => q.category === 'traffic_signs').length, []);
   const lawsCount = useMemo(() => QUESTIONS_BANK.filter((q) => q.category === 'traffic_laws').length, []);
   const safeDrivingCount = useMemo(() => QUESTIONS_BANK.filter((q) => q.category === 'safe_driving').length, []);
+  const maintenanceCount = useMemo(() => QUESTIONS_BANK.filter((q) => q.category === 'vehicle_maintenance').length, []);
 
   // Load bookmarks & history on mount
   useEffect(() => {
@@ -118,6 +119,8 @@ export default function App() {
       pool = QUESTIONS_BANK.filter((q) => q.category === 'traffic_laws');
     } else if (topic === 'safe_driving') {
       pool = QUESTIONS_BANK.filter((q) => q.category === 'safe_driving');
+    } else if (topic === 'vehicle_maintenance') {
+      pool = QUESTIONS_BANK.filter((q) => q.category === 'vehicle_maintenance');
     }
     startExamWithItems(pool, mode);
   };
@@ -188,6 +191,7 @@ export default function App() {
             signsCount={signsCount}
             lawsCount={lawsCount}
             safeDrivingCount={safeDrivingCount}
+            maintenanceCount={maintenanceCount}
             onStartExam={handleStartExam}
             onNavigateStudy={(cat) => {
               setStudyInitialCategory(cat || 'all');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Sparkles, BookOpen, Clock, Award, ShieldCheck, Scale, ArrowRight, Layers, Car } from 'lucide-react';
+import { Play, Sparkles, BookOpen, Clock, Award, ShieldCheck, Scale, ArrowRight, Layers, Car, Wrench } from 'lucide-react';
 import { LanguageMode, ExamMode, ExamTopicFilter } from '../types';
 import { toMyanmarNumber, ExamHistoryItem } from '../utils/helpers';
 
@@ -9,6 +9,7 @@ interface HomeViewProps {
   signsCount: number;
   lawsCount: number;
   safeDrivingCount: number;
+  maintenanceCount: number;
   onStartExam: (mode: ExamMode, topic: ExamTopicFilter) => void;
   onNavigateStudy: (filterCategory?: ExamTopicFilter) => void;
   recentHistory: ExamHistoryItem[];
@@ -21,6 +22,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   signsCount,
   lawsCount,
   safeDrivingCount,
+  maintenanceCount,
   onStartExam,
   onNavigateStudy,
   recentHistory,
@@ -49,7 +51,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               Thai Driving License Practice
             </h1>
             <p className="text-sm sm:text-base text-[#cfe9da] font-myanmar leading-relaxed">
-              ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်းနှင့် ဘေးကင်းစွာမောင်းနှင်ခြင်း မေးခွန်းများ ({toMyanmarNumber(totalQuestions)} ခု)
+              ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving နှင့် ယာဉ်ထိန်းသိမ်းစောင့်ရှောက်မှု မေးခွန်းများ ({toMyanmarNumber(totalQuestions)} ခု)
             </p>
           </div>
 
@@ -70,7 +72,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </div>
 
       {/* Categories Overview Pills */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Category 1: Signs */}
         <div 
           onClick={() => onNavigateStudy('traffic_signs')}
@@ -148,6 +150,32 @@ export const HomeView: React.FC<HomeViewProps> = ({
             {safeDrivingCount}
           </span>
         </div>
+
+        {/* Category 4: Vehicle Maintenance */}
+        <div 
+          onClick={() => onNavigateStudy('vehicle_maintenance')}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
+              <Wrench size={20} />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                Category 4
+              </div>
+              <div className="font-bold text-sm text-slate-900 font-thai">
+                การบำรุงรักษารถ
+              </div>
+              <div className="text-xs text-slate-600 font-myanmar">
+                Vehicle Maintenance ({toMyanmarNumber(maintenanceCount)} ခု)
+              </div>
+            </div>
+          </div>
+          <span className="text-xs font-black px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
+            {maintenanceCount}
+          </span>
+        </div>
       </div>
 
       {/* Select Topic for 50-Question Exam */}
@@ -164,7 +192,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs font-semibold">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 text-xs font-semibold">
           <button
             type="button"
             onClick={() => setSelectedTopic('all')}
@@ -221,7 +249,22 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Safe Driving</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ဘေးကင်းစွာမောင်းနှင်ခြင်း ({toMyanmarNumber(safeDrivingCount)} ခု)
+              {toMyanmarNumber(safeDrivingCount)} ခု
+            </div>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setSelectedTopic('vehicle_maintenance')}
+            className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
+              selectedTopic === 'vehicle_maintenance'
+                ? 'border-[#0b5d3b] bg-emerald-50/70 text-slate-950 shadow-xs'
+                : 'border-slate-200 hover:border-slate-300 text-slate-700'
+            }`}
+          >
+            <div className="font-bold">Maintenance</div>
+            <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
+              ယာဉ်ထိန်းသိမ်းမှု ({toMyanmarNumber(maintenanceCount)} ခု)
             </div>
           </button>
         </div>
@@ -320,7 +363,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               မေးခွန်း {toMyanmarNumber(totalQuestions)} ခုလုံး လေ့လာဖတ်ရှုရန် (Study Bank)
             </h3>
             <p className="text-xs text-slate-600 font-myanmar">
-              ဆိုင်းဘုတ် ({toMyanmarNumber(signsCount)}) + ယာဉ်စည်းကမ်း ({toMyanmarNumber(lawsCount)}) + Safe Driving ({toMyanmarNumber(safeDrivingCount)}) ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။
+              ဆိုင်းဘုတ် ({toMyanmarNumber(signsCount)}) + ဥပဒေ ({toMyanmarNumber(lawsCount)}) + Safe Driving ({toMyanmarNumber(safeDrivingCount)}) + Maintenance ({toMyanmarNumber(maintenanceCount)}) ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။
             </p>
           </div>
         </div>

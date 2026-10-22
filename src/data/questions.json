@@ -16718,5 +16718,3083 @@
         "isCorrect": false
       }
     ]
+  },
+  {
+    "id": 441,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การเติมน้ำกลั่นควรอยู่ระดับใดของแบตเตอรี่",
+    "q_en": "At what level should I add distilled water to the battery?",
+    "q_my": "ဘက်ထရီထဲကို ပေါင်းခံရေကို ဘယ်အဆင့်မှာ ထည့်ရမလဲ။",
+    "options": [
+      {
+        "th": "เติมให้อยู่ในระดับที่กำหนด",
+        "en": "Fill it to the specified level.",
+        "my": "သတ်မှတ်ထားတဲ့ အဆင့်အထိ ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เติมให้สูงกว่าที่กำหนดเล็กน้อย",
+        "en": "Fill slightly higher than required.",
+        "my": "သတ်မှတ်ထားသည့်ထက် အနည်းငယ်ပိုမြင့်အောင် ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมจนล้นแล้วปิดฝา",
+        "en": "Fill until overflowing and close the lid.",
+        "my": "ရေလျှံသည်အထိ ဖြည့်ပြီး အဖုံးပိတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมให้ต่ำกว่าที่กำหนดเล็กน้อย",
+        "en": "Add slightly less than specified.",
+        "my": "သတ်မှတ်ထားသည့်ထက် အနည်းငယ်လျော့ထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 442,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจสอบความตึงหย่อนของสายพานเครื่องยนต์เบื้องต้น ควรตรวจสอบอย่างไร",
+    "q_en": "Basic inspection of engine belt tension. How should I check?",
+    "q_my": "အင်ဂျင်ခါးပတ်တင်းအားကို အခြေခံစစ်ဆေးခြင်း။ ဘယ်လိုစစ်ဆေးရမလဲ။",
+    "options": [
+      {
+        "th": "ดูด้วยตาเปล่า",
+        "en": "See with the naked eye",
+        "my": "ပကတိမျက်စိနဲ့ကြည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ติดเครื่องฟังเสียงสายพานเครื่องยนต์",
+        "en": "Install a sound machine to listen to the engine belt sound.",
+        "my": "အင်ဂျင်ခါးပတ်သံကို နားထောင်ရန် အသံချဲ့စက်ကို တပ်ဆင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้มือคลำสายพานเครื่องยนต์",
+        "en": "Use your hand to feel the engine belt.",
+        "my": "အင်ဂျင်ခါးပတ်ကို ခံစားရန် သင့်လက်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้นิ้วมือกดสายพานเครื่องยนต์",
+        "en": "Use your fingers to press on the engine belt.",
+        "my": "အင်ဂျင်ခါးပတ်ကို နှိပ်ရန် သင့်လက်ချောင်းများကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 443,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "น้ำที่ใช้เติมแบตเตอรี่ ควรใช้น้ำชนิดใด",
+    "q_en": "Water used to fill batteries What kind of water should I use?",
+    "q_my": "ဘက်ထရီအားဖြည့်အသုံးပြုသောရေသည် မည်သို့သောရေကိုသုံးသင့်သနည်း။",
+    "options": [
+      {
+        "th": "น้ำฝน",
+        "en": "Rain water",
+        "my": "မိုးရေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำสบู่",
+        "en": "Soapy water",
+        "my": "ဆပ်ပြာရေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำกลั่น",
+        "en": "Distilled water",
+        "my": "ပေါင်းခံရေ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "น้ำบาดาล",
+        "en": "Groundwater",
+        "my": "မြေအောက်ရေ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 444,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การเติมน้ำในถังพักหม้อน้ำควรอยู่ในระดับใด",
+    "q_en": "To what level should water be filled in the radiator reservoir?",
+    "q_my": "ရေတိုင်ကီ ရေလှောင်ကန်တွင် ရေကို မည်သည့်အဆင့်ထိ ဖြည့်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ครึ่งถัง",
+        "en": "Half bucket",
+        "my": "တစ်ဝက်ပုံး",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมเท่าไหร่ก็ได้",
+        "en": "You can add as much as you want.",
+        "my": "ကြိုက်သလောက်ထည့်လို့ရပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "อยู่ระหว่างเกณฑ์สูง-ต่ำ ที่กำหนดไว้ข้างถังพักน้ำ",
+        "en": "Between high and low criteria specified next to the water tank",
+        "my": "ရေတိုင်ကီဘေးတွင် သတ်မှတ်ထားသော အမြင့်နှင့် အနိမ့် စံနှုန်းများ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เต็มถัง",
+        "en": "Full tank",
+        "my": "tank အပြည့်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 445,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดใช้คลัทช์ผิดวิธี",
+    "q_en": "Which is the wrong way to use the clutch?",
+    "q_my": "Clutch ကို အသုံးပြုရန် မည်သည့်နည်းမှာ မှားယွင်းသနည်း။",
+    "options": [
+      {
+        "th": "ขณะจะหยุดรถ",
+        "en": "While stopping the car",
+        "my": "ကားရပ်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะขับรถลงทางลาดชัน",
+        "en": "While driving down a steep slope",
+        "my": "မတ်စောက်သော တောင်စောင်းသို့ မောင်းနှင်နေစဉ်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขณะจะเปลี่ยนเกียร์",
+        "en": "While changing gear",
+        "my": "ဂီယာပြောင်းနေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะจะสตาร์ทเครื่อง",
+        "en": "While starting the machine",
+        "my": "စက်စတင်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 446,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ยางที่หมดอายุจะมีลักษณะอย่างไร",
+    "q_en": "What do expired tires look like?",
+    "q_my": "သက်တမ်းလွန်တာယာတွေက ဘယ်လိုပုံစံလဲ။",
+    "options": [
+      {
+        "th": "มีรอยแตกร้าวตามแนวขอบยาง",
+        "en": "There are cracks along the edge of the tire.",
+        "my": "တာယာအစွန်းတလျှောက် အက်ကွဲကြောင်းများရှိသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เวลาเปียกน้ำจะไม่เกาะยาง",
+        "en": "When it's wet, it won't stick to the rubber.",
+        "my": "စိုစွတ်တဲ့အခါ ရော်ဘာနဲ့ ကပ်မနေပါဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางจะมีสีขาวนวล",
+        "en": "The rubber will be soft white.",
+        "my": "ရော်ဘာသည် ပျော့ပျောင်းဖြူလာလိမ့်မည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางจะมีสีดำสนิท",
+        "en": "The rubber will be completely black.",
+        "my": "ရော်ဘာသည် လုံးဝအနက်ရောင်ဖြစ်လိမ့်မည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 447,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจสอบลมยางที่ถูกต้องควรปฏิบัติอย่างไร",
+    "q_en": "How should you check the correct tire pressure?",
+    "q_my": "တာယာလေဖိအားကို ဘယ်လိုစစ်ဆေးသင့်လဲ။",
+    "options": [
+      {
+        "th": "เอาเหล็กมาตีที่หน้ายาง",
+        "en": "Take an iron and hit it on the front of the tire.",
+        "my": "သံကိုယူ၍ တာယာရှေ့ကို ရိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เครื่องวัดลมยาง",
+        "en": "Use a tire pressure gauge.",
+        "my": "တာယာဖိအားတိုင်းကိရိယာကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ดูด้วยตาเปล่า",
+        "en": "See with the naked eye",
+        "my": "ပကတိမျက်စိနဲ့ကြည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้มือคลำ",
+        "en": "Use your hands to feel.",
+        "my": "ခံစားဖို့ လက်ကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 448,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "กรณีออกรถ ถ้าปล่อยคลัทช์เร็วจะมีผลอย่างไร",
+    "q_en": "In the case of starting the car, what will be the effect if the clutch is released quickly?",
+    "q_my": "ကားကိုစပြီးလုပ်တဲ့အခါ Clutch မြန်မြန်ထွက်ရင် ဘယ်လိုအကျိုးသက်ရောက်မှုရှိမလဲ။",
+    "options": [
+      {
+        "th": "ออกตัวได้เร็ว",
+        "en": "Get out quickly",
+        "my": "မြန်မြန်ထွက်သွား",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รถจะแรง",
+        "en": "The car will be strong.",
+        "my": "ကားအားကောင်းလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะกระตุกและดับ",
+        "en": "Will jerk and turn off",
+        "my": "လှုပ်ပြီး ပိတ်သွားလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ควบคุมกำลังรถได้ง่าย",
+        "en": "Easy to control vehicle power",
+        "my": "မော်တော်ကားပါဝါကို ထိန်းချုပ်ရန် လွယ်ကူသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 449,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าเหยียบคลัทช์ไม่สุด ขณะเข้าเกียร์จะมีผลอย่างไร",
+    "q_en": "If you don't step on the clutch all the way What effect will it have when shifting into gear?",
+    "q_my": "Clutch ကို တောက်လျှောက်မနင်းရင် ဂီယာပြောင်းတဲ့အခါ ဘယ်လိုအကျိုးသက်ရောက်မှုရှိမလဲ။",
+    "options": [
+      {
+        "th": "ประหยัดน้ำมัน",
+        "en": "Save fuel",
+        "my": "လောင်စာဆီချွေတာပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เข้าเกียร์ง่ายขึ้น",
+        "en": "Easier to shift into gear",
+        "my": "ဂီယာပြောင်းရတာ ပိုလွယ်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ออกตัวดีขึ้นกว่าเดิม",
+        "en": "Starting out better than before",
+        "my": "အရင်ကထက် ပိုကောင်းလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้เกียร์มีเสียงดัง",
+        "en": "Make the gear noise",
+        "my": "ဂီယာကို ဆူညံအောင်လုပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 450,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การหมุนพวงมาลัยรถขณะรถจอดอยู่กับที่จะมีผลอย่างไร",
+    "q_en": "What are the effects of turning the steering wheel while the car is stationary?",
+    "q_my": "ကားရပ်နေစဉ် စတီယာရင်ဘီးလှည့်ခြင်းရဲ့ ဆိုးကျိုးတွေက ဘာတွေလဲ။",
+    "options": [
+      {
+        "th": "สิ้นเปลืองน้ำมันเชื้อเพลิง",
+        "en": "Fuel consumption",
+        "my": "လောင်စာဆီသုံးစွဲမှု",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สิ้นเปลืองน้ำมันพาวเวอร์",
+        "en": "Consuming power oil",
+        "my": "ပါဝါဆီစားသုံးခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้หมุนพวงมาลัยง่ายขึ้น",
+        "en": "Makes turning the steering wheel easier",
+        "my": "စတီယာရင်ဘီးကို လှည့်ရလွယ်ကူစေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดอกยางสึกเร็วกว่าปกติ",
+        "en": "Tire tread wears faster than normal.",
+        "my": "တာယာနင်းခြင်းသည် ပုံမှန်ထက်ပိုမြန်သည်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 451,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หลังจากขับรถผ่านบริเวณน้ำท่วม ท่านควรทดสอบระบบใดเป็นลำดับแรก",
+    "q_en": "After driving through the flooded area Which system should you test first?",
+    "q_my": "ရေမြုပ်နေတဲ့နေရာကို ဖြတ်မောင်းပြီးရင် ဘယ်စနစ်ကို အရင်စမ်းသပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ระบบไฟฟ้า",
+        "en": "Electrical system",
+        "my": "လျှပ်စစ်စနစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบสตาร์ทเครื่องยนต์",
+        "en": "Engine starting system",
+        "my": "အင်ဂျင်စတင်စနစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบเบรก",
+        "en": "Brake system",
+        "my": "ဘရိတ်စနစ်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ระบบช่วงล่าง",
+        "en": "Suspension system",
+        "my": "Suspension စနစ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 452,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ในขณะที่ขับรถอยู่ มีกลิ่นเหม็นไหม้ แอร์เริ่มไม่เย็น เครื่องยนต์เร่งไม่ขึ้นควรปฏิบัติอย่างไร",
+    "q_en": "While driving There is a burning smell. The air conditioner is starting to not cool. The engine won't accelerate. What should I do?",
+    "q_my": "ကားမောင်းနေစဉ် အနံ့ဆိုးထွက်နေသည်။ လေအေးပေးစက်က မအေးတော့ဘူး။ အင်ဂျင်က အရှိန်မတက်ဘူး။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "ลดความเร็วลงแล้วขับต่อไป",
+        "en": "Reduce your speed and keep driving.",
+        "my": "အရှိန်လျှော့ပြီး ဆက်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับต่อไปเรื่อยๆ",
+        "en": "Keep driving.",
+        "my": "ဆက်မောင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถทันทีกลางถนนห้ามเคลื่อนย้าย",
+        "en": "Immediately stop the vehicle in the middle of the road. Do not move.",
+        "my": "ကားကို လမ်းလယ်မှာ ချက်ခြင်းရပ်ပါ။ မလှုပ်နဲ့။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถในที่ปลอดภัยแล้วเรียกช่างมาตรวจเช็ค",
+        "en": "Park your car in a safe place and call a mechanic to come check it out.",
+        "my": "သင့်ကားကို လုံခြုံသောနေရာတွင် ရပ်နားပြီး စစ်ဆေးရန် စက်ပြင်ဆရာကို ခေါ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 453,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ในการถอดขั้วแบตเตอรี่ ควรถอดขั้วใดก่อน",
+    "q_en": "To remove the battery terminals Which terminal should be disconnected first?",
+    "q_my": "ဘက်ထရီစက်များကို ဖယ်ရှားရန် မည်သည့် terminal ကို ဦးစွာ ဖြုတ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขั้วบวก",
+        "en": "Anode",
+        "my": "Anode",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขั้วไหนก่อนก็ได้",
+        "en": "Whichever pole comes first is fine.",
+        "my": "ဘယ်တိုင်ကို အရင်ရောက်တာ ကောင်းမလဲ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทั้งสองขั้วพร้อมกัน",
+        "en": "Both terminals simultaneously",
+        "my": "terminals နှစ်ခုလုံး တပြိုင်နက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขั้วลบ",
+        "en": "Negative pole",
+        "my": "အနှုတ်တိုင်",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 454,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "สัญญาณไฟเตือนบนแผงหน้าปัดรถสีใด ที่ไม่ควรปรากฏขณะขับรถ",
+    "q_en": "What color are the warning lights on the car's dashboard? that should not appear while driving",
+    "q_my": "ကား၏ ဒက်ရှ်ဘုတ်ပေါ်ရှိ အချက်ပြမီးများသည် မည်သည့်အရောင်များ ဖြစ်သနည်း။ ကားမောင်းနေစဉ် မပေါ်သင့်ပါ။",
+    "options": [
+      {
+        "th": "สีเหลือง",
+        "en": "Yellow",
+        "my": "အဝါရောင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สีแดง",
+        "en": "Red",
+        "my": "အနီရောင်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สีฟ้า",
+        "en": "Blue",
+        "my": "အပြာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สีเขียว",
+        "en": "Green",
+        "my": "အစိမ်းရောင်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 455,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เพื่อความปลอดภัยในการขับรถช่วงฤดูฝน ควรตรวจสอบอุปกรณ์ส่วนควบสิ่งใดของรถก่อนเป็นลำดับแรก",
+    "q_en": "For safety in driving during the rainy season What equipment of the car should be checked first?",
+    "q_my": "မိုးရာသီမှာ မောင်းနှင်ရာမှာ အန္တရာယ်ကင်းဖို့ ကားရဲ့ ဘယ်ပစ္စည်းတွေကို အရင်စစ်ဆေးသင့်လဲ။",
+    "options": [
+      {
+        "th": "น้ำกลั่นแบตเตอรี่",
+        "en": "Distilled battery water",
+        "my": "ရေစက်ဘက်ထရီရေ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ที่ปัดน้ำฝน",
+        "en": "Windshield wiper",
+        "my": "လေကာမှန် wiper",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตรวจเช็คประตูหน้าต่างรถ",
+        "en": "Check car doors and windows",
+        "my": "ကားတံခါးနှင့် ပြတင်းပေါက်များကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำในหม้อน้ำ",
+        "en": "Water in the radiator",
+        "my": "ရေတိုင်ကီထဲတွင် ရေ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 456,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "รถที่ขับมาด้วยความเร็วสูงแล้วเหยียบเบรกอย่างกะทันหัน (รถไม่ใช้เบรก ABS) จะมีผลอย่างไร",
+    "q_en": "A car driving at high speed suddenly slams on the brakes. (The car does not use ABS brakes.) What will be the effect?",
+    "q_my": "အရှိန်ပြင်းပြင်း မောင်းနှင်လာတဲ့ ကားတစ်စီးက ဘရိတ်ကို ရုတ်တရက် ဆောင့်တိုက်ပါတယ်။ (ကားသည် ABS ဘရိတ်ကို အသုံးမပြုပါ။) မည်သို့အကျိုးသက်ရောက်မည်နည်း။",
+    "options": [
+      {
+        "th": "จะหยุดรถได้ตามระยะที่กำหนด",
+        "en": "The car will be able to stop within the specified distance.",
+        "my": "ကားသည် သတ်မှတ်ထားသော အကွာအဝေးအတွင်း ရပ်တန့်နိုင်မည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ล้อจะล็อค และรถจะหยุดทันที",
+        "en": "The wheels will lock and the vehicle will stop immediately.",
+        "my": "ဘီးများ လော့ခ်ကျသွားပြီး ကားသည် ချက်ချင်းရပ်သွားမည်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ล้อจะล็อค และรถจะหมุน",
+        "en": "The wheels will lock and the car will spin.",
+        "my": "ဘီးတွေ သော့ခတ်ပြီး ကားက လှည့်သွားလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "รถจะค่อยๆ ชะลอความเร็วลง",
+        "en": "The car will gradually slow down.",
+        "my": "ကားက တဖြည်းဖြည်း နှေးလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 457,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ขณะขับรถยางรถแตก จะมีอาการอย่างไร",
+    "q_en": "While driving, a car tire broke. What are the symptoms?",
+    "q_my": "ကားမောင်းနေရင်း ကားတာယာကွဲသွားတယ်။ လက္ခဏာတွေက ဘာတွေလဲ။",
+    "options": [
+      {
+        "th": "รถหยุดกะทันหัน",
+        "en": "The car stopped suddenly",
+        "my": "ကားက ရုတ်တရက် ရပ်သွားတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พวงมาลัยรถจะไร้น้ำหนัก",
+        "en": "The car's steering wheel is weightless.",
+        "my": "ကား၏စတီယာရင်ဘီးသည် အလေးချိန်ကင်းသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรกจะไม่ทำงาน",
+        "en": "The brakes will not work.",
+        "my": "ဘရိတ်တွေ အလုပ်မလုပ်ပါဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พวงมาลัยจะหนัก รถจะเอียง",
+        "en": "The steering wheel becomes heavy and the car tilts.",
+        "my": "စတီယာရင်ဘီးက လေးလံလာပြီး ကားက တိမ်းစောင်းသွားတယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 458,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ในขณะที่กำลังขับรถ ถ้าฝากระโปรงหน้ารถเปิด ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "While driving If the hood of the car is open What should the driver do?",
+    "q_my": "ကားမောင်းနေစဉ် ကားအဖုံးပွင့်နေပါက ယာဉ်မောင်း ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "หักเลี้ยวรถเข้าข้างทางทันที เพื่อปิดฝากระโปรงให้เรียบร้อย",
+        "en": "Immediately swerve the car onto the side of the road. To close the hood properly",
+        "my": "ကားကို အမြန်လမ်းဘေးသို့ တွန်းချလိုက်သည်။ အဖုံးကို စနစ်တကျပိတ်ရန်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรกกะทันหัน",
+        "en": "Sudden braking",
+        "my": "ရုတ်တရက် ဘရိတ်အုပ်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดความเร็วแล้วจอดข้างทาง เพื่อปิดฝากระโปรงให้เรียบร้อย",
+        "en": "Reduce your speed and park on the side of the road. To close the hood properly",
+        "my": "အရှိန်လျှော့ပြီး လမ်းဘေးမှာ ရပ်ပါ။ အဖုံးကို စနစ်တကျပိတ်ရန်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบคันเร่งให้มิดเพื่อฝากระโปรงจะได้กระแทกปิด",
+        "en": "Depress the gas pedal fully so that the hood can slam shut.",
+        "my": "အဖုံးပိတ်နိုင်စေရန် ဓာတ်ငွေ့နင်းအား အပြည့်နှိမ့်ချပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 459,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจสอบว่าเข็มขัดนิรภัยยังใช้งานได้ดีหรือไม่ ควรตรวจสอบอย่างไร",
+    "q_en": "Checking to see if the seat belt is still working properly. How should I check?",
+    "q_my": "ထိုင်ခုံခါးပတ်သည် ကောင်းမွန်စွာအလုပ်လုပ်ခြင်း ရှိ၊ မရှိ စစ်ဆေးခြင်း ဘယ်လိုစစ်ဆေးရမလဲ။",
+    "options": [
+      {
+        "th": "ดูว่าเข็มขัดมียี่ห้อหรือไม่",
+        "en": "See if the belt has a brand or not.",
+        "my": "ခါးပတ်တွင် အမှတ်တံဆိပ်ပါရှိ၊ မရှိကို ကြည့်ရှုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "กระตุกดึงสายเข็มขัดอย่างเร็ว แล้วสายเข็มขัดต้องล็อค",
+        "en": "Quickly tug on the belt. Then the belt must be locked.",
+        "my": "ခါးပတ်ကို အမြန်ဆွဲလိုက်သည်။ ပြီးရင် ခါးပတ်ကို သော့ခတ်ထားရပါမယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ต้องมีสีเข้มๆ",
+        "en": "Must have a dark color.",
+        "my": "အနက်ရောင်ရှိရမည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดูว่าเป็นของใหม่หรือไม่",
+        "en": "See if it's new or not.",
+        "my": "အသစ်ဟုတ်၊ မဟုတ် ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 460,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การเข้าเกียร์ถอยหลังขณะรถยังไม่หยุดนิ่งมีผลเสียอย่างไร",
+    "q_en": "What are the negative effects of shifting into reverse gear while the car is still stationary?",
+    "q_my": "ကားရပ်ထားစဉ် ဂီယာပြောင်းပြန်ပြောင်းခြင်းရဲ့ ဆိုးကျိုးတွေက ဘာတွေလဲ။",
+    "options": [
+      {
+        "th": "เข้าเกียร์ยากและทำให้เกียร์เสียเร็วกว่าปกติ",
+        "en": "Difficulty shifting into gear and causing the transmission to fail faster than normal.",
+        "my": "ဂီယာပြောင်းရာတွင် ခက်ခဲပြီး ဂီယာအား ပုံမှန်ထက် ပိုမြန်စေပါသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้น้ำมันเกียร์หมดเร็ว",
+        "en": "Makes the gear oil run out quickly.",
+        "my": "ဂီယာဆီ အမြန်ကုန်စေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่มีผลต่อส่วนใดของรถ",
+        "en": "It does not affect any part of the car.",
+        "my": "ကား၏ မည်သည့်အစိတ်အပိုင်းကိုမျှ မထိခိုက်စေပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์กินน้ำมันเครื่อง",
+        "en": "The engine consumes engine oil.",
+        "my": "အင်ဂျင်က အင်ဂျင်ဆီလောင်တယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 461,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดเป็นการสตาร์ทเครื่องยนต์ที่ถูกต้อง",
+    "q_en": "Which is the correct way to start the engine?",
+    "q_my": "အင်ဂျင်စတင်ရန် ဘယ်နည်းက မှန်ကန်သနည်း။",
+    "options": [
+      {
+        "th": "เหยียบคลัทช์-สตาร์ทเครื่องยนต์",
+        "en": "Push the clutch - start the engine.",
+        "my": "clutch ကိုတွန်းပါ - အင်ဂျင်ကိုစတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขึ้นเบรกมือ-ปลดเกียร์ว่าง -ปิดอุปกรณ์ไฟฟ้า-เหยียบคลัทช์-สตาร์ทเครื่องยนต์",
+        "en": "Put on the handbrake - shift into neutral. - Turn off electrical equipment - step on the clutch - start the engine",
+        "my": "လက်ဘရိတ်ကိုတပ်ပါ - ကြားနေသို့ပြောင်းပါ။ - လျှပ်စစ်ပစ္စည်းများကိုပိတ်ပါ - ကလစ်ကိုလှမ်းဆွဲပါ - အင်ဂျင်ကိုစတင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ปลดเบรกมือ-ปิดอุปกรณ์ไฟฟ้า-สตาร์ทเครื่องยนต์",
+        "en": "Release the handbrake - turn off electrical equipment - start the engine.",
+        "my": "လက်ဘရိတ်ကို လွှတ်ပါ - လျှပ်စစ်ပစ္စည်းများကို ပိတ်ပါ - အင်ဂျင်ကို စတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปลดเกียร์ว่าง-ขึ้นเบรกมือ-สตาร์ทเครื่องยนต์",
+        "en": "Put the gear in neutral - put on the handbrake - start the engine.",
+        "my": "ဂီယာကို ဘက်မလိုက်ဘဲထားပါ - လက်ဘရိတ်ကိုတပ်ပါ - အင်ဂျင်ကိုစတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 462,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เพราะเหตุใดรถจึงลื่นไถลได้ง่ายขณะฝนตกใหม่ๆ",
+    "q_en": "Why do cars easily slip and slide during fresh rain?",
+    "q_my": "မိုးရာသီမှာ ကားတွေ ဘာကြောင့် လွယ်လွယ်နဲ့ ချော်လဲကျရတာလဲ။",
+    "options": [
+      {
+        "th": "ถนนคอนกรีตดูดซับน้ำฝนได้เป็นอย่างดี",
+        "en": "Concrete roads absorb rainwater very well.",
+        "my": "ကွန်ကရစ်လမ်းများသည် မိုးရေကို ကောင်းစွာစုပ်ယူပါသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ฝนตกทำให้ถนนชำรุดเป็นหลุมเป็นบ่อ",
+        "en": "The rain caused the road to become damaged and potholed.",
+        "my": "မိုးရွာသွန်းမှုကြောင့် လမ်းများပျက်စီးကာ ရွှံ့နစ်သွားခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำฝนจะชะล้างถนนให้สะอาด",
+        "en": "Rainwater will wash the roads clean.",
+        "my": "မိုးရေတွေက လမ်းတွေကို သန့်ရှင်းစေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำฝนจะกลายเป็นแผ่นฟิล์มรองรับระหว่างยางกับพื้นถนน",
+        "en": "Rainwater turns into a protective film between the tires and the road surface.",
+        "my": "မိုးရေသည် တာယာနှင့် လမ်းမျက်နှာပြင်ကြားတွင် အကာအကွယ်ဖလင်အဖြစ် ပြောင်းလဲသွားသည်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 463,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เพื่อความปลอดภัยเมื่อออกรถเคลื่อนที่ไปข้างหน้าได้ประมาณ 3-4 เมตร ควรทดสอบอะไรเป็นอันดับแรก",
+    "q_en": "For safety when moving the car forward about 3-4 meters, what should be tested first?",
+    "q_my": "ဘေးကင်းစေရန်အတွက် ကားကို ရှေ့သို့ ၃-၄ မီတာခန့် ရွေ့သောအခါ ဘာကို အရင်စမ်းသပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ทดสอบไฟสูง",
+        "en": "High beam test",
+        "my": "မြင့်မားသောအလင်းစမ်းသပ်မှု",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทดสอบระบบเบรก",
+        "en": "Brake system test",
+        "my": "ဘရိတ်စနစ်စမ်းသပ်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทดสอบไฟฟ้า",
+        "en": "Electrical test",
+        "my": "လျှပ်စစ်စမ်းသပ်မှု",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทดสอบสัญญาณแตร",
+        "en": "Horn signal test",
+        "my": "ဟွန်းအချက်ပြစမ်းသပ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 464,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดเป็นการเตรียมความพร้อมของรถก่อนขับรถ",
+    "q_en": "Which is the preparation of the car before driving?",
+    "q_my": "ကားမမောင်းခင် ဘယ်အရာက ပြင်ဆင်ထားလဲ။",
+    "options": [
+      {
+        "th": "ดูหนังสือแผนที่ทางหลวงแผ่นดิน",
+        "en": "Look at the national highway map book.",
+        "my": "အမျိုးသားလမ်းမကြီး မြေပုံစာအုပ်ကို ကြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจสภาพอากาศ",
+        "en": "Check the weather",
+        "my": "ရာသီဥတုကိုစစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจแรงดันลมยาง,เบรก,น้ำมันหล่อลื่น",
+        "en": "Check tire pressure, brakes, lubricant",
+        "my": "တာယာဖိအား၊ ဘရိတ်၊ ချောဆီတို့ကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ต่อใบอนุญาตขับรถ",
+        "en": "Renew your driver's license",
+        "my": "သင့်ယာဉ်မောင်းလိုင်စင်ကို သက်တမ်းတိုးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 465,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หลังจากขับรถลุยน้ำ ผ้าเบรกเปียกมีวิธีแก้ไขให้แห้งได้อย่างไร",
+    "q_en": "After driving through water How can we fix wet brake pads and keep them dry?",
+    "q_my": "ရေဖြတ်မောင်းပြီးနောက် စိုစွတ်နေသော ဘရိတ်အုပ်များကို မည်သို့ပြုပြင်ပြီး ခြောက်သွေ့အောင်ထားနိုင်မည်နည်း။",
+    "options": [
+      {
+        "th": "ขับรถให้เร็วๆ",
+        "en": "Drive quickly.",
+        "my": "မြန်မြန်မောင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถช้าๆ เหยียบเบรกเบาๆ แล้วปล่อยหลายๆ ครั้ง",
+        "en": "Drive slowly, step on the brakes lightly. then release several times",
+        "my": "ဖြည်းဖြည်းမောင်းပါ၊ ဘရိတ်ကို ပေါ့ပေါ့တန်တန် မောင်းပါ။ ပြီးရင် အကြိမ်ပေါင်းများစွာ လွှတ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เหยียบเบรกแรงๆ",
+        "en": "Step on the brakes hard.",
+        "my": "ဘရိတ်ကို ပြင်းပြင်းထန်ထန် နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถเข้าเกียร์ว่างและเร่งเครื่องยนต์ไว้สัก 10 นาที",
+        "en": "Put the car in neutral and rev the engine for 10 minutes.",
+        "my": "ကားကို ဘက်မလိုက်ဘဲ အင်ဂျင်ကို 10 မိနစ်ခန့် နှပ်ထားပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 466,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ขณะขับรถเครื่องยนต์เกิดความร้อนสูง ควรปฏิบัติอย่างไร",
+    "q_en": "While driving, the engine overheats. What should I do?",
+    "q_my": "ကားမောင်းနေစဉ် အင်ဂျင်အပူလွန်ကဲသည်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "หยุดรถที่ปลอดภัย แล้วปล่อยให้เครื่องเย็นก่อน",
+        "en": "Stop the car safely Then let the machine cool first.",
+        "my": "ကားကို ဘေးကင်းစွာရပ်ပြီးနောက် စက်ကို အရင်အေးအောင်ထားပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "หยุดรถที่ปลอดภัย แล้วเปิดฝาหม้อน้ำ เติมน้ำทันที",
+        "en": "Stop the car safely Then open the radiator cap and add water immediately.",
+        "my": "ကားကို ဘေးကင်းစွာရပ်ပြီး ရေတိုင်ကီထုပ်ကိုဖွင့်ပြီး ရေချက်ချင်းထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถที่ปลอดภัย เอาน้ำเย็นมาราดเครื่องยนต์",
+        "en": "Stop the car safely Take cold water and pour it over the engine.",
+        "my": "ကားကို ဘေးကင်းစွာရပ်ပြီး ရေအေးယူကာ အင်ဂျင်ပေါ် လောင်းချပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถที่ปลอดภัย แล้วเอาน้ำมาราดเครื่องยนต์",
+        "en": "Stop the car safely Then pour water on the engine.",
+        "my": "ကားကို ဘေးကင်းစွာရပ်ပြီး အင်ဂျင်ပေါ်ရေလောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 467,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ลมยางล้อหน้าอ่อน จะมีผลต่อการขับขี่อย่างไร",
+    "q_en": "Weak front tire pressure How will it affect driving?",
+    "q_my": "ရှေ့တာယာဖိအား အားနည်းပါက မောင်းနှင်မှုအပေါ် မည်သို့အကျိုးသက်ရောက်နိုင်မည်နည်း။",
+    "options": [
+      {
+        "th": "เวลานั่งรู้สึกเหมือนรถจะกระตุกอยู่ตลอดเวลา",
+        "en": "When sitting, it feels like the car is jerking all the time.",
+        "my": "ထိုင်တဲ့အခါ ကားက တချိန်လုံး တုန်နေသလို ခံစားရတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ประหยัดยางแต่เปลืองน้ำมัน",
+        "en": "Saves on tires but wastes fuel.",
+        "my": "တာယာကို သက်သာစေသော်လည်း လောင်စာဆီ ဖြုန်းတီးသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางล้อหน้าสึกหรอ และรถกินน้ำมันมากขึ้น",
+        "en": "Front tire wear and the car consumes more fuel",
+        "my": "ရှေ့တာယာ ဟောင်းနွမ်းပြီး ကားက ဆီစား ပိုပါတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ประหยัดน้ำมันแต่เปลืองยาง",
+        "en": "Saves gas but wastes tires.",
+        "my": "ဓာတ်ငွေ့ကို သက်သာစေသော်လည်း တာယာများကို ဖြုန်းတီးသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 468,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจลมยางควรตรวจเมื่อใด",
+    "q_en": "When should you check tire pressure?",
+    "q_my": "တာယာဖိအားကို ဘယ်အချိန်မှာ စစ်ဆေးသင့်လဲ။",
+    "options": [
+      {
+        "th": "ตรวจเมื่อไรก็ได้",
+        "en": "You can check at any time.",
+        "my": "အချိန်မရွေး စစ်ဆေးနိုင်ပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะที่ยางยังเย็นอยู่",
+        "en": "While the tires are still cool",
+        "my": "တာယာများ အေးနေချိန်တွင်၊",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขณะที่บรรทุกของหนัก",
+        "en": "While carrying heavy items",
+        "my": "လေးလံသောပစ္စည်းများကို သယ်ဆောင်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะวิ่งใช้งานแล้วประมาณ 2 ชั่วโมง",
+        "en": "While running, it has been used for about 2 hours.",
+        "my": "လည်ပတ်နေစဉ် ၂ နာရီခန့် အသုံးပြုခဲ့သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 469,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าขั้วแบตเตอรี่มีคราบกรด วิธีการใดเป็นการแก้ไขที่ดีที่สุด",
+    "q_en": "If the battery terminals have acid stains What is the best way to fix it?",
+    "q_my": "ဘက်ထရီအိုးများတွင် အက်ဆစ်အစွန်းအထင်းများရှိနေပါက ၎င်းကိုပြုပြင်ရန် အကောင်းဆုံးနည်းလမ်းမှာ အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "ใช้น้ำส้มสายชูล้าง",
+        "en": "Use vinegar to wash.",
+        "my": "ဆေးကြောရန် ရှာလကာရည်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้น้ำมะนาวล้าง",
+        "en": "Use lemon juice to wash.",
+        "my": "လက်ဆေးဖို့ သံပုရာရည်ကို သုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้น้ำอุ่นล้างและทาจาระบี",
+        "en": "Use warm water to wash and grease.",
+        "my": "ရေနွေးနွေးလေးနဲ့ ဆေးကြောပြီး အဆီပြန်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้น้ำกลั่นล้าง",
+        "en": "Use distilled water to wash.",
+        "my": "ဆေးကြောရန် ရေပေါင်းရေကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 470,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การเติมน้ำในหม้อพักน้ำควรเติมให้อยู่ในระดับใด",
+    "q_en": "To what level should water be added to the reservoir?",
+    "q_my": "ရေလှောင်ကန်ထဲကို ရေဘယ်လောက်ထည့်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เติมให้อยู่ระหว่างระดับสูงสุดและต่ำสุด",
+        "en": "Fill it between the highest and lowest levels.",
+        "my": "အမြင့်ဆုံးနှင့် အနိမ့်ဆုံးအဆင့်ကြားတွင် ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เติมให้ถึงฝาปิด",
+        "en": "Fill it up to the lid.",
+        "my": "အဖုံးအထိဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมให้ต่ำกว่าระดับต่ำสุด",
+        "en": "Fill it below the minimum level.",
+        "my": "အနိမ့်ဆုံးအဆင့်အောက်တွင် ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมให้สูงกว่าระดับสูงสุด",
+        "en": "Fill it above the maximum level.",
+        "my": "အမြင့်ဆုံးအဆင့်ထက် ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 471,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ท่านควรเติมน้ำมันเชื้อเพลิงรถเครื่องยนต์เบนซินอย่างไร",
+    "q_en": "How should you refuel your gasoline engine car?",
+    "q_my": "မင်းရဲ့ ဓာတ်ဆီအင်ဂျင်ကားကို ဘယ်လိုဆီဖြည့်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เติมน้ำมันที่มีค่าออกเทนตามที่ระบุไว้ในคู่มือรถ",
+        "en": "Fill with gas with the octane rating specified in your vehicle's manual.",
+        "my": "သင့်ကား၏လက်စွဲတွင်ဖော်ပြထားသော octane အဆင့်သတ်မှတ်ချက်ဖြင့် ဓာတ်ငွေ့ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เติมสูงกว่าค่าที่กำหนดเพื่อป้องกันเครื่องยนต์เสียหาย",
+        "en": "Fill higher than the specified value to prevent engine damage.",
+        "my": "အင်ဂျင်ပျက်စီးခြင်းမှ ကာကွယ်ရန် သတ်မှတ်ထားသော တန်ဖိုးထက် ပိုမိုမြင့်မားသော ဖြည့်သွင်းမှု။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมค่าที่ต่ำกว่าค่าที่กำหนดเพื่อความประหยัด",
+        "en": "Add a value lower than the specified value to save money.",
+        "my": "ငွေစုရန် သတ်မှတ်ထားသော တန်ဖိုးထက် နိမ့်သောတန်ဖိုးကို ထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมค่าเท่าใดก็ได้ตามความสะดวก",
+        "en": "Add any value as per your convenience.",
+        "my": "သင်အဆင်ပြေသည့်အတိုင်း မည်သည့်တန်ဖိုးကိုမဆို ထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 472,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เหตุใดจึงไม่ควรเติมน้ำในถังพักหม้อน้ำให้เต็มถัง",
+    "q_en": "Why shouldn't the radiator tank be filled with water?",
+    "q_my": "ရေတိုင်ကီကို ရေတိုင်ကီကို ဘာကြောင့် ရေမဖြည့်သင့်တာလဲ။",
+    "options": [
+      {
+        "th": "เพราะ น้ำในหม้อน้ำจะร้อนมากยิ่งขึ้น",
+        "en": "Because the water in the radiator will become even hotter.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် ရေတိုင်ကီအတွင်းရှိ ရေသည် ပိုပူလာလိမ့်မည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะ จะทำให้หม้อน้ำเป็นสนิมมากยิ่งขึ้น",
+        "en": "Because it will make the radiator rust even more.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် ရေတိုင်ကီကို သံချေးပိုတက်စေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพราะ สำรองเนื้อที่การขยายตัวของน้ำเมื่อเกิดความร้อน",
+        "en": "Because it reserves the space for expansion of water when heat occurs.",
+        "my": "အဘယ်ကြောင့်ဆိုသော် အပူဖြစ်ပေါ်လာသောအခါတွင် ရေကို ချဲ့ထွင်ရန် နေရာလွတ်ကို သိမ်းဆည်းထားသောကြောင့် ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพราะ จะทำให้เครื่องยนต์ชำรุด",
+        "en": "Because it will damage the engine.",
+        "my": "အင်ဂျင်ကို ပျက်စီးစေသောကြောင့်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 473,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ภายหลังออกรถไปประมาณ 3 ถึง 4 เมตร ควรทดสอบระบบใด",
+    "q_en": "After leaving the vehicle approximately 3 to 4 meters, which system should be tested?",
+    "q_my": "မီတာမှ 4 မီတာခန့်အကွာမှထွက်ခွာပြီးနောက် မည်သည့်စနစ်အား စမ်းသပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ปรับกระจกมองข้าง",
+        "en": "Adjust the side mirror",
+        "my": "ဘေးမှန်ကို ချိန်ညှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบเบรก",
+        "en": "Brake system",
+        "my": "ဘရိတ်စနစ်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไฟเลี้ยว",
+        "en": "Turn signal",
+        "my": "အချက်ပြလှည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปรับกระจกมองหลัง",
+        "en": "Adjust rearview mirror",
+        "my": "နောက်ကြည့်မှန်ချိန်ညှိ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 474,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ยางมีหน้าที่อย่างไร",
+    "q_en": "What is the function of rubber?",
+    "q_my": "ရော်ဘာရဲ့လုပ်ဆောင်ချက်ကဘာလဲ။",
+    "options": [
+      {
+        "th": "ระบายความร้อน",
+        "en": "Cooling",
+        "my": "အအေးခံခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ช่วยยึดเกาะถนนไม่ให้ลื่นไถล",
+        "en": "Helps hold the road and prevent it from slipping.",
+        "my": "လမ်းချော်ခြင်းမှ ကာကွယ်ရန် ကူညီပေးသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ตัดต่อเครื่องยนต์",
+        "en": "Engine editing",
+        "my": "အင်ဂျင်တည်းဖြတ်ခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้รถมีกำลังขับเคลื่อน",
+        "en": "Make the car have driving power",
+        "my": "ကားကို မောင်းနှင်နိုင်စွမ်းရှိပါစေ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 475,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าระดับน้ำมันเครื่องยนต์ต่ำเกินไปจะมีผลอย่างไร",
+    "q_en": "What are the effects if the engine oil level is too low?",
+    "q_my": "အင်ဂျင်ဆီ ပမာဏ နည်းလွန်းရင် ဘယ်လို အကျိုးသက်ရောက်မှုတွေ ရှိလဲ။",
+    "options": [
+      {
+        "th": "ทำให้ชิ้นส่วนของเครื่องยนต์สึกหรออย่างรวดเร็ว",
+        "en": "This causes engine parts to wear out quickly.",
+        "my": "ယင်းကြောင့် အင်ဂျင်အစိတ်အပိုင်းများ လျင်မြန်စွာ ယိုယွင်းပျက်စီးစေသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ประหยัดน้ำมันเชื้อเพลิง",
+        "en": "Save fuel",
+        "my": "လောင်စာဆီချွေတာပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องแรงสตาร์ทติดง่าย",
+        "en": "Powerful engine, easy to start",
+        "my": "အားကောင်းသောအင်ဂျင်၊ စတင်ရန်လွယ်ကူသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยืดอายุการทำงานของชิ้นส่วนเครื่องยนต์",
+        "en": "Extends the life of engine parts",
+        "my": "အင်ဂျင်အစိတ်အပိုင်းများ၏ သက်တမ်းကို တိုးစေသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 476,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เมื่อท่านใช้เบรกแล้วรถเคลื่อนที่ไปด้านใดด้านหนึ่ง ควรปฏิบัติอย่างไร",
+    "q_en": "When you apply the brakes, the car moves to one side. What should I do?",
+    "q_my": "ဘရိတ်ကို အုပ်လိုက်သောအခါ ကားသည် တစ်ဖက်သို့ ရွေ့သွားသည်။ ကျွန်တော်ဘာလုပ်သင့်သလဲ?",
+    "options": [
+      {
+        "th": "เปลี่ยนเกียร์และเหยียบเบรกขึ้นลง",
+        "en": "Change gear and step on the brake.",
+        "my": "ဂီယာပြောင်းပြီး ဘရိတ်ကို နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจสอบระบบเบรกโดยเร็วที่สุด",
+        "en": "Check the brake system as soon as possible.",
+        "my": "ဘရိတ်စနစ်ကို အမြန်ဆုံးစစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้เบรกมือร่วมด้วย",
+        "en": "Use the handbrake as well.",
+        "my": "လက်ဘရိတ်ကိုလည်း အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพิ่มความดันของลมยาง",
+        "en": "Increase tire pressure",
+        "my": "တာယာဖိအားကို တိုးပေးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 477,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "วิธียืดอายุการใช้งานของผ้าเบรกควรทำอย่างไร",
+    "q_en": "How to extend the life of the brake pads?",
+    "q_my": "ဘရိတ်အုပ်တွေရဲ့ သက်တမ်းကို ဘယ်လို သက်တမ်းတိုးမလဲ။",
+    "options": [
+      {
+        "th": "ควรกะระยะในการหยุดรถและเบรกอย่างนุ่มนวล",
+        "en": "You should estimate the distance to stop the car and brake gently.",
+        "my": "ကားရပ်ရန် အကွာအဝေးကို ခန့်မှန်းပြီး ညင်သာစွာ ဘရိတ်အုပ်သင့်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ควรใช้เบรกมือและเบรกเท้าพร้อมกันเมื่อต้องการหยุดรถ",
+        "en": "The handbrake and foot brake should be used simultaneously when stopping the vehicle.",
+        "my": "ယာဉ်ကိုရပ်သည့်အခါ လက်ဘရိတ်နှင့် ခြေဘရိတ်ကို တစ်ပြိုင်နက် အသုံးပြုသင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรเบรกแบบกระชั้นชิด",
+        "en": "You should brake closely.",
+        "my": "အနီးကပ် ဘရိတ်အုပ်သင့်တယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรเบรกและหมุนพวงมาลัยไปทางซ้ายและขวาเล็กน้อย",
+        "en": "You should brake and turn the steering wheel slightly left and right.",
+        "my": "ဘရိတ်အုပ်ပြီး စတီယာရင်ကို ဘယ်ညာ အနည်းငယ်ကွေ့သင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 478,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดคือวิธีป้องกันไม่ให้เครื่องยนต์ร้อนจัด",
+    "q_en": "What is the method to prevent the engine from overheating?",
+    "q_my": "အင်ဂျင်အပူလွန်ကဲခြင်းမှ ကာကွယ်ရန်နည်းလမ်းမှာ အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "เปลี่ยนพัดลมให้แรงขึ้น",
+        "en": "Change the fan to a stronger one.",
+        "my": "ပန်ကာကို ပိုအားကောင်းအောင် ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมยางรถยนต์ให้มากกว่าปกติ",
+        "en": "Fill your car tires more than usual.",
+        "my": "သင့်ကားတာယာကို ပုံမှန်ထက် ပိုဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตรวจระดับน้ำในหม้อน้ำก่อนใช้งานทุกครั้ง",
+        "en": "Check the water level in the radiator before every use.",
+        "my": "အသုံးမပြုမီ ရေတိုင်ကီအတွင်းရှိ ရေပမာဏကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดเครื่องปรับอากาศรถยนต์ให้แรง",
+        "en": "Turn on the car's air conditioner.",
+        "my": "ကား၏လေအေးပေးစက်ကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 479,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การเติมลมยาง ควรปฏิบัติอย่างไร",
+    "q_en": "How should I inflate tires?",
+    "q_my": "တာယာတွေကို ဘယ်လိုလေဖြည့်ရမလဲ။",
+    "options": [
+      {
+        "th": "เติมเท่าไหร่ก็ได้",
+        "en": "You can add as much as you want.",
+        "my": "ကြိုက်သလောက်ထည့်လို့ရပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปฏิบัติตามคู่มือการใช้รถ",
+        "en": "Follow the car user manual.",
+        "my": "ကားအသုံးပြုသူလမ်းညွှန်ကို လိုက်နာပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "คาดคะเนด้วยสายตา",
+        "en": "Guess with your eyes",
+        "my": "မင်းမျက်လုံးနဲ့ ခန့်မှန်းကြည့်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้วิธีเคาะแล้วฟังเสียงยาง",
+        "en": "Use the knocking method and listen for the sound of the tires.",
+        "my": "ခေါက်နည်းကိုသုံး၍ တာယာသံကို နားထောင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 480,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจเช็กแบตเตอรี่แบบง่ายๆ ว่ามีไฟปกติหรือไม่ กระทำได้อย่างไร",
+    "q_en": "Simple battery check whether there is normal power or not How can I do it?",
+    "q_my": "ရိုးရှင်းသောဘက်ထရီအား ပုံမှန်ပါဝါရှိ၊ မရှိ စစ်ဆေးရန် မည်သို့လုပ်ဆောင်နိုင်မည်နည်း။",
+    "options": [
+      {
+        "th": "เหยียบคลัตช์และเข้าเกียร์ให้ครบ",
+        "en": "Depress the clutch and shift into full gear.",
+        "my": "clutch ကိုနှိမ့်ချပြီး ဂီယာအပြည့်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บีบแตรและฟังเสียงว่าปกติหรือเบาลง",
+        "en": "Honk the horn and listen to see if the sound normalizes or softens.",
+        "my": "ဟွန်းကို ဟွန်းတီးပြီး အသံကို ပုံမှန်ဖြစ်စေခြင်း သို့မဟုတ် ပျော့သွားခြင်း ရှိမရှိကို ကြည့်ရှုနားထောင်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ออกรถ 2-3 เมตรแล้วทดสอบเบรก",
+        "en": "Leave the car 2-3 meters and test the brakes.",
+        "my": "ကားကို 2-3 မီတာအကွာတွင်ထားခဲ့ကာ ဘရိတ်ကိုစမ်းသပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หมุนพวงมาลัยไปด้านซ้ายและขวา",
+        "en": "Turn the steering wheel left and right.",
+        "my": "စတီယာရင်ကို ဘယ်ညာ လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 481,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "อุปกรณ์ใดที่ไม่มีส่วนช่วยเพิ่มประสิทธิภาพในการทำงานของเบรกรถ",
+    "q_en": "Which equipment does not help increase the efficiency of the car's brakes?",
+    "q_my": "ကားဘရိတ်၏ စွမ်းဆောင်ရည်ကို မြှင့်တင်ရန် မည်သည့်ကိရိယာကမှ မကူညီနိုင်ပါ။",
+    "options": [
+      {
+        "th": "ระบบช่วงล่าง",
+        "en": "Suspension system",
+        "my": "Suspension စနစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เกียร์",
+        "en": "Gear",
+        "my": "ဂီယာ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางรถยนต์",
+        "en": "Car tires",
+        "my": "ကားတာယာများ",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พวงมาลัย",
+        "en": "Steering wheel",
+        "my": "စတီယာရင်ဘီး",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 482,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดเป็นการตรวจเช็กและบำรุงรักษาอุปกรณ์รถยนต์ที่ไม่ถูกต้อง",
+    "q_en": "Which of the following is incorrect checking and maintenance of car equipment?",
+    "q_my": "အောက်ဖော်ပြပါများထဲမှ မည်သည့်အရာသည် ကားပစ္စည်းကိရိယာများကို စစ်ဆေးခြင်းနှင့် ပြုပြင်ထိန်းသိမ်းမှု မှားယွင်းနေသနည်း။",
+    "options": [
+      {
+        "th": "เติมน้ำบาดาลในถังหม้อพักน้ำ",
+        "en": "Fill the reservoir tank with groundwater.",
+        "my": "ရေလှောင်ကန်ကို မြေအောက်ရေဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ควรใช้น้ำกลั่นเติมลงในแบตเตอรี่",
+        "en": "You should use distilled water to fill the battery.",
+        "my": "ဘက်ထရီအားဖြည့်ရန် ပေါင်းခံရေကို အသုံးပြုသင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ควรตรวจสอบการรัดตรึงของหัวขั้วแบตเตอรี่ให้มีสภาพพร้อมใช้งานเสมอ",
+        "en": "The battery terminal clamps should always be checked to ensure they are ready for use.",
+        "my": "အသုံးပြုရန်အတွက် အဆင်သင့်ဖြစ်ကြောင်း သေချာစေရန် ဘက်ထရီ terminal clamps များကို အမြဲစစ်ဆေးသင့်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เติมน้ำมันเครื่องโดยเติมให้อยู่ระดับบนเสมอ",
+        "en": "Always add engine oil to the top level.",
+        "my": "အင်ဂျင်ဆီ အမြဲထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 483,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เมื่อเห็นกลุ่มควันจากห้องเครื่องขณะขับรถ ผู้ขับรถควรปฏิบัติอย่างไร",
+    "q_en": "When seeing smoke from the engine compartment while driving What should the driver do?",
+    "q_my": "ကားမောင်းနေစဉ် အင်ဂျင်ခန်းမှ မီးခိုးငွေ့များ တွေ့ပါက ယာဉ်မောင်း ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ขับรถลงแม่น้ำข้างทาง",
+        "en": "Driving down the river on the side of the road",
+        "my": "ကားလမ်းဘေး မြစ်ကမ်းစပ်က ဆင်းတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แจ้งกู้ภัยทางหลวง",
+        "en": "Notify highway rescue",
+        "my": "အမြန်လမ်း ကယ်ဆယ်ရေးစခန်းသို့ အကြောင်းကြားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ตั้งสติและขับรถจอดข้างทาง",
+        "en": "Stay calm and drive to the side of the road.",
+        "my": "စိတ်အေးအေးထားပြီး လမ်းဘေးကို မောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดและสละรถทันที",
+        "en": "Park and abandon your vehicle immediately.",
+        "my": "ရပ်နားပြီး သင့်ကားကို ချက်ချင်းရပ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 484,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ฝาปิดจุ๊บลมยางมีประโยชน์อย่างไร",
+    "q_en": "What are the benefits of tire pressure caps?",
+    "q_my": "Tyre Pressure Caps တွေရဲ့ အကျိုးကျေးဇူးတွေက ဘာတွေလဲ။",
+    "options": [
+      {
+        "th": "ป้องกันการขโมยยาง",
+        "en": "Prevent tire theft",
+        "my": "တာယာခိုးယူခြင်းမှကာကွယ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ป้องกันไม่ให้ใครมาเติมลม",
+        "en": "Prevent anyone from adding air.",
+        "my": "မည်သူ့ကိုမျှ လေထည့်ခြင်းမှ တားမြစ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ป้องกันลมรั่วซึมและสิ่งสกปรกต่างๆ",
+        "en": "Prevents air leaks and various dirt.",
+        "my": "လေယိုစိမ့်ခြင်းနှင့် ဖုန်မျိုးစုံကို ကာကွယ်ပေးသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ป้องกันยางแตก",
+        "en": "Prevents tire cracking",
+        "my": "တာယာကွဲအက်ခြင်းကို ကာကွယ်ပေးသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 485,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าเติมลมยางแข็งเกินไป จะมีผลกับยางอย่างไร",
+    "q_en": "If the tire is too inflated How will it affect the tires?",
+    "q_my": "တာယာအရမ်းဖောင်းနေရင် တာယာကို ဘယ်လိုထိခိုက်မလဲ။",
+    "options": [
+      {
+        "th": "การขับขี่จะนุ่มนวลขึ้น",
+        "en": "Driving will be smoother.",
+        "my": "မောင်းနှင်မှု ချောမွေ့လာမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดอกยางตรงกลางจะสึกหรอเร็วกว่าปกติ",
+        "en": "The center tread of a tire will wear faster than normal.",
+        "my": "တာယာ၏အလယ်ဗဟိုနင်းသည် ပုံမှန်ထက် ပိုမြန်သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้สิ้นเปลืองน้ำมันเชื้อเพลิง",
+        "en": "Causing wastage of fuel",
+        "my": "လောင်စာဆီ အလေအလွင့်ဖြစ်စေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ดอกยางด้านข้างจะสึกเร็วกว่าปกติ",
+        "en": "The tread on the side of the tire will wear faster than normal.",
+        "my": "တာယာ၏ဘေးတွင် နင်းခြင်းသည် ပုံမှန်ထက် ပိုမြန်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 486,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจสอบระดับน้ำมันเครื่องในเครื่องยนต์ ควรตรวจสอบเมื่อใด",
+    "q_en": "Checking the oil level in the engine When should I check?",
+    "q_my": "အင်ဂျင်အတွင်း ဆီ Level စစ်ဆေးခြင်းကို ဘယ်အချိန်မှာ စစ်ဆေးရမလဲ။",
+    "options": [
+      {
+        "th": "ขณะที่จอดรถบนเนิน",
+        "en": "While parking on a hill",
+        "my": "တောင်ကုန်းပေါ်တွင် ကားရပ်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หลังดับเครื่องยนต์ทันที",
+        "en": "Immediately after turning off the engine",
+        "my": "အင်ဂျင်ပိတ်ပြီးတာနဲ့ ချက်ခြင်းပါပဲ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขณะที่เครื่องยนต์ยังเย็นอยู่",
+        "en": "While the engine is still cool",
+        "my": "အင်ဂျင်အေးနေချိန်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขณะที่เครื่องยนต์ทำงาน",
+        "en": "While the engine is running",
+        "my": "အင်ဂျင်လည်ပတ်နေစဉ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 487,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หากน้ำหล่อเย็นในระบบเครื่องยนต์ไม่เพียงพอสำหรับการระบายความร้อน จะส่งผลอย่างไร",
+    "q_en": "If the coolant in the engine system is not sufficient for cooling What will be the effect?",
+    "q_my": "အင်ဂျင်စနစ်အတွင်း coolant သည် အအေးခံရန် မလုံလောက်ပါက မည်သို့အကျိုးသက်ရောက်မည်နည်း။",
+    "options": [
+      {
+        "th": "น้ำมันหมด",
+        "en": "Out of gas",
+        "my": "ဓာတ်ငွေ့ထွက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หัวเทียนดับ",
+        "en": "Spark plug goes out",
+        "my": "Spark plug ထွက်လာတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์อุณหภูมิสูงผิดปกติ",
+        "en": "The engine temperature is abnormally high.",
+        "my": "အင်ဂျင်အပူချိန်က ပုံမှန်ထက် မြင့်နေတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่มีข้อใดถูก",
+        "en": "There is no correct answer.",
+        "my": "အဖြေမှန်မရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 488,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่สาเหตุที่ทำให้เครื่องยนต์ร้อนจัด",
+    "q_en": "Which is not a cause of engine overheating?",
+    "q_my": "အင်ဂျင်အပူလွန်ကဲခြင်း၏ အကြောင်းအရင်းမှာ မည်သည့်အရာမှ မဟုတ်ပါ။",
+    "options": [
+      {
+        "th": "น้ำมันเครื่องแห้ง",
+        "en": "Dry engine oil",
+        "my": "အင်ဂျင်ဆီခြောက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำในหม้อน้ำแห้ง",
+        "en": "The water in the radiator is dry.",
+        "my": "ရေတိုင်ကီထဲက ရေတွေက ခြောက်သွေ့နေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำกลั่นแบตเตอรี่แห้ง",
+        "en": "Distilled water, dry battery",
+        "my": "ပေါင်းခံရေ၊ ဘက်ထရီခြောက်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สายพานพัดลมขาด",
+        "en": "Broken fan belt",
+        "my": "ပန်ကာကြိုးကျိုး",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 489,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้คือประโยชน์สูงสุดของการใช้เกียร์ต่ำในขณะลงทางลาดชัน",
+    "q_en": "Which of the following is the greatest benefit of using a low gear while going downhill?",
+    "q_my": "အောက်ဖော်ပြပါများထဲမှ မည်သည့်အရာသည် ကုန်းဆင်းတွင် ဂီယာနိမ့်သုံးခြင်း၏ အကြီးမားဆုံး အကျိုးကျေးဇူးဖြစ်သည်။",
+    "options": [
+      {
+        "th": "ช่วยประหยัดน้ำมัน",
+        "en": "Helps save fuel",
+        "my": "လောင်စာဆီ သက်သာစေပါတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เพื่อเป็นการหน่วงความเร็วของรถ",
+        "en": "In order to slow down the speed of the car",
+        "my": "ကား၏အရှိန်ကို နှေးကွေးစေရန်၊",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เพิ่มการทรงตัวของรถ",
+        "en": "Increase the balance of the car",
+        "my": "ကား၏လက်ကျန်ကိုတိုးစေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ลดการสึกหรอของผ้าเบรก",
+        "en": "Reduce wear and tear on brake pads.",
+        "my": "ဘရိတ်အုပ်များပေါ်ရှိ စုတ်ပြဲခြင်းနှင့် မျက်ရည်ယိုခြင်းကို လျှော့ချပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 490,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หากเข็มวัดอุณหภูมิสูงจนถึงตัว H หมายความว่าอย่างไร",
+    "q_en": "If the temperature gauge needle reaches the letter H, what does it mean?",
+    "q_my": "အပူချိန်တိုင်းကိရိယာ အပ်သည် အက္ခရာ H သို့ ရောက်ပါက၊ ၎င်းသည် အဘယ်အရာကို ဆိုလိုသနည်း။",
+    "options": [
+      {
+        "th": "ระบบระบายความร้อนอยู่ในระดับดีมาก",
+        "en": "The cooling system is at a very good level.",
+        "my": "အအေးပေးစနစ်သည် အလွန်ကောင်းမွန်သော အဆင့်တွင်ရှိသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เกิดความผิดปกติในระบบระบายความร้อน",
+        "en": "An abnormality has occurred in the cooling system.",
+        "my": "အအေးခံစနစ်တွင် မူမမှန်မှုတစ်ခု ဖြစ်ပွားခဲ့သည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ระบบระบายความร้อนเสีย",
+        "en": "Broken cooling system",
+        "my": "ကျိုးပဲ့နေသော အအေးပေးစနစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระดับปกติ",
+        "en": "Normal level",
+        "my": "ပုံမှန်အဆင့်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หม้อน้ำรถยนต์มีหน้าที่อะไร",
+    "q_en": "What is the function of a car radiator?",
+    "q_my": "ကားရေတိုင်ကီရဲ့ လုပ်ဆောင်ချက်က ဘာလဲ။",
+    "options": [
+      {
+        "th": "ทำให้ประหยัดน้ำมัน",
+        "en": "It saves fuel.",
+        "my": "၎င်းသည်လောင်စာဆီသက်သာစေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบายความร้อนของเครื่องยนต์",
+        "en": "Engine cooling",
+        "my": "အင်ဂျင်အအေးခံခြင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้รถวิ่งเร็วขึ้น",
+        "en": "Make the car run faster",
+        "my": "ကားကို မြန်မြန်ပြေးပါစေ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบายความร้อนในห้องผู้โดยสาร",
+        "en": "Cooling in the passenger room",
+        "my": "ခရီးသည်ခန်းထဲမှာ အအေးခံတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 492,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าเติมลมยางอ่อนเกินไป จะมีผลกับยางอย่างไร",
+    "q_en": "If the tire pressure is too low How will it affect the tires?",
+    "q_my": "တာယာဖိအားနည်းလွန်းရင် တာယာကို ဘယ်လိုထိခိုက်နိုင်မလဲ။",
+    "options": [
+      {
+        "th": "ดอกยางตรงกลางจะสึกเร็วกว่าปกติ",
+        "en": "The center tread of the tire will wear faster than normal.",
+        "my": "တာယာ၏အလယ်ဗဟိုနင်းသည် ပုံမှန်ထက် ပိုမြန်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้ดอกยางทางด้านข้างทั้งสองสึกหรอ",
+        "en": "This causes the tire tread on both sides to wear out.",
+        "my": "ယင်းကြောင့် တာယာနှစ်ဖက်လုံးရှိ နင်းအား ဟောင်းနွမ်းသွားစေသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "การขับขี่จะแข็งกระด้าง",
+        "en": "Driving becomes stiff.",
+        "my": "မောင်းနှင်မှု တင်းမာလာသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้กินน้ำมันน้อยลง",
+        "en": "Makes it consume less oil",
+        "my": "ဆီစားသုံးမှုနည်းစေသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 493,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจสอบลมยางข้อใดปลอดภัยที่สุด",
+    "q_en": "Which tire pressure check is the safest?",
+    "q_my": "ဘယ်တာယာပေါင်ချိန်ကို စစ်ဆေးတာက အန္တရာယ်အကင်းဆုံးလဲ။",
+    "options": [
+      {
+        "th": "เดือนละครั้ง",
+        "en": "Once a month",
+        "my": "တစ်လတစ်ကြိမ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทุกครั้งก่อนใช้งาน",
+        "en": "Every time before use",
+        "my": "အသုံးမပြုမီအချိန်တိုင်း",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "สัปดาห์ละครั้ง",
+        "en": "Once a week",
+        "my": "တစ်ပတ်တစ်ကြိမ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "วันละครั้ง",
+        "en": "Once a day",
+        "my": "တစ်နေ့တစ်ကြိမ်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 494,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เหตุใดจึงไม่ควรเปิดฝาหม้อน้ำทันที เมื่อพบว่าเครื่องยนต์ร้อนจัด",
+    "q_en": "Why shouldn't the radiator cap be opened immediately? When the engine is found to be very hot",
+    "q_my": "ရေတိုင်ကီအဖုံးကို ဘာကြောင့် ချက်ချင်းမဖွင့်သင့်တာလဲ။ အင်ဂျင်က အရမ်းပူနေတာ တွေ့ရတယ်။",
+    "options": [
+      {
+        "th": "เครื่องยนต์จะดับ",
+        "en": "The engine will turn off.",
+        "my": "အင်ဂျင်ပိတ်သွားမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์อาจจะระเบิด",
+        "en": "The engine may explode.",
+        "my": "အင်ဂျင်ပေါက်ကွဲနိုင်သည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์มีแรงดันสูง น้ำร้อนอาจพุ่งขึ้นมา",
+        "en": "The engine has high pressure. Hot water may surge up.",
+        "my": "အင်ဂျင်တွင် ဖိအားမြင့်သည်။ ရေနွေးက တက်လာနိုင်တယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เครื่องยนต์มีเสียงดัง",
+        "en": "The engine is noisy.",
+        "my": "အင်ဂျင်က ဆူညံနေတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 495,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อบกพร่องใดที่เป็นสาเหตุทำให้หน้ายางของรถสึกหรอ",
+    "q_en": "What defect causes the tire tread of a vehicle to wear out?",
+    "q_my": "ယာဉ်၏ တာယာနင်းမှု မည်သည် ချို့ယွင်းချက် ဖြစ်စေသနည်း။",
+    "options": [
+      {
+        "th": "กระปุกเกียร์บกพร่อง",
+        "en": "Defective gearbox",
+        "my": "ဂီယာဘောက်စ်ချို့ယွင်းခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบเบรกบกพร่อง",
+        "en": "Defective braking system",
+        "my": "ချို့ယွင်းနေသော ဘရိတ်စနစ်",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ระบบปล่อยควันเสียบกพร่อง",
+        "en": "Defective exhaust system",
+        "my": "အိတ်ဇောစနစ် ချို့ယွင်းနေသည်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบบไฟฟ้าบกพร่อง",
+        "en": "Defective electrical system",
+        "my": "လျှပ်စစ်စနစ် ချို့ယွင်းခြင်း။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 496,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "สิ่งใดต่อไปนี้มีผลทำให้รถเปลืองน้ำมัน",
+    "q_en": "Which of the following affects the car's fuel consumption?",
+    "q_my": "အောက်ဖော်ပြပါများထဲမှ မည်သည့်အရာများသည် ကား၏ဆီစားသုံးမှုအပေါ် သက်ရောက်မှုရှိသနည်း။",
+    "options": [
+      {
+        "th": "เปิดไฟหน้าในขณะขับรถ",
+        "en": "Turn on your headlights while driving.",
+        "my": "ကားမောင်းနေစဉ် သင့်ရှေ့မီးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "บรรทุกน้ำหนักเกินกว่าที่กำหนด",
+        "en": "Carrying more weight than specified",
+        "my": "သတ်မှတ်ထားသည့် အလေးချိန်ထက် ပိုတင်ဆောင်ခြင်း။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับด้วยความเร็วคงที่",
+        "en": "Drive at a constant speed",
+        "my": "အရှိန်အဟုန်ဖြင့် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระยะการปรับเบรกปกติ",
+        "en": "Normal brake adjustment distance",
+        "my": "ပုံမှန်ဘရိတ်ချိန်ညှိမှုအကွာအဝေး",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 497,
+    "category": "vehicle_maintenance",
+    "image": "/exam_images/maintenance/1000000000403.webp",
+    "q_th": "ภาพนี้แสดงว่าเครื่องยนต์มีอาการอย่างไร",
+    "q_en": "This picture shows how the engine behaves.",
+    "q_my": "ဤပုံသည် အင်ဂျင်၏ ပြုမူပုံကို ပြသည်။",
+    "options": [
+      {
+        "th": "ไม่มีข้อใดถูก",
+        "en": "There is no correct answer.",
+        "my": "အဖြေမှန်မရှိပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์เย็นจัด",
+        "en": "The engine is very cold.",
+        "my": "အင်ဂျင်က အရမ်းအေးတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องร้อนจัด (Over Heat)",
+        "en": "The machine is very hot (Over Heat)",
+        "my": "စက်က အရမ်းပူ (Over Heat)၊",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เครื่องยนต์อุณหภูมิปกติ",
+        "en": "Engine temperature normal",
+        "my": "အင်ဂျင်အပူချိန် ပုံမှန်ဖြစ်သည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 498,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดไม่ใช่สาเหตุของการสตาร์ทรถไม่ติด",
+    "q_en": "Which is not a cause of the car not starting?",
+    "q_my": "ကားစမတက်ရတဲ့ အကြောင်းအရင်းက ဘယ်ဟာလဲ။",
+    "options": [
+      {
+        "th": "สายพานหย่อน",
+        "en": "The belt is slack.",
+        "my": "ခါးပတ်က မလျော့ဘူး။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "มอเตอร์สตาร์ทเสีย",
+        "en": "The starter motor is broken.",
+        "my": "starter motor ပျက်သွားပါပြီ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำมันเชื้อเพลิงหมด",
+        "en": "Out of fuel",
+        "my": "လောင်စာဆီထဲက",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขั้วแบตเตอรี่หลวม",
+        "en": "Loose battery terminals",
+        "my": "ဘက်ထရီ terminals များ ဖြည်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 499,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้จะทำให้เกิดการสิ้นเปลืองเชื้อเพลิงมากที่สุด",
+    "q_en": "Which of the following will cause the greatest fuel consumption?",
+    "q_my": "အောက်ဖော်ပြပါများထဲမှ မည်သည့်အရာသည် လောင်စာဆီသုံးစွဲမှု အများဆုံးဖြစ်စေမည်နည်း။",
+    "options": [
+      {
+        "th": "การใช้เกียร์สูงเป็นเวลานาน",
+        "en": "Using high gear for a long time",
+        "my": "မြင့်မားသောဂီယာကိုအချိန်အကြာကြီးအသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การเหยียบเบรกและคันเร่งอย่างรุนแรง",
+        "en": "Severely pressing the brake and accelerator",
+        "my": "ဘရိတ်နှင့် အရှိန်မြှင့်စက်ကို ပြင်းထန်စွာ နှိပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "การควบคุมพวงมาลัยที่ไม่ดี",
+        "en": "Poor steering control",
+        "my": "စတီယာရင် ထိန်းချုပ်မှု ညံ့ဖျင်းခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "การเร่งความเร็วช่วงทางโค้ง",
+        "en": "Acceleration during curves",
+        "my": "ကွေ့ကောက်နေစဉ် အရှိန်",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 500,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หากท่านตรวจพบว่าท่อน้ำมันเริ่มมีรอยน้ำมันซึมออกมาท่านควรทำอย่างไร",
+    "q_en": "If you detect that the oil pipe begins to have oil leaks, what should you do?",
+    "q_my": "ဆီပိုက်မှာ ဆီယိုစိမ့်နေတာတွေ့ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ใช้เทปรัดให้แน่นขึ้น",
+        "en": "Use tape to tighten it.",
+        "my": "တင်းကျပ်ရန် တိပ်ကိုသုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "สลับท่อไปไว้ในท่อแรงดันต่ำ",
+        "en": "Switch the pipe to a low pressure pipe.",
+        "my": "ပိုက်ကို low pressure pipe သို့ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำการเปลี่ยนท่อใหม่",
+        "en": "Change a new pipe",
+        "my": "ပိုက်အသစ်ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ไปได้จนกว่าจะพบรอยหยดของน้ำมัน",
+        "en": "You can use it until you find a drop of oil.",
+        "my": "ဆီတစ်စက်တွေ့တဲ့အထိ သုံးလို့ရတယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 501,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หากท่านเติมน้ำมันผิดประเภทควรปฏิบัติอย่างไร",
+    "q_en": "If you fill up with the wrong type of fuel, what should you do?",
+    "q_my": "လောင်စာ အမျိုးအစား မှားပြီး ဖြည့်ရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "เติมชนิดที่ถูกเข้าไปเพื่อทำให้เจือจาง",
+        "en": "Add the correct type to dilute.",
+        "my": "မှေးမှိန်ရန် မှန်ကန်သော အမျိုးအစားကို ထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับไปถ้ามีผลต่อเครื่องยนต์ค่อยถ่ายออก",
+        "en": "Drive on and if it affects the engine then drain it out.",
+        "my": "မောင်းနှင်ပြီး အင်ဂျင်ကို ထိခိုက်မိပါက ရေထုတ်လိုက်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับไปให้หมดถังแล้วเติมชนิดที่ถูกเข้าไป",
+        "en": "Empty the tank and fill it with the correct type.",
+        "my": "အိုးကို ဗလာကျင်းပြီး မှန်ကန်သော အမျိုးအစားဖြင့် ဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำการเปลี่ยนถ่ายออกทันที",
+        "en": "Make the transfer immediately.",
+        "my": "ချက်ချင်းလွှဲပြောင်းပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 502,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "หากพบว่ารถของท่านเกิดท่อน้ำมันรั่วท่านควรทำอย่างไร",
+    "q_en": "If you find that your car has a leaking fuel pipe, what should you do?",
+    "q_my": "သင့်ကားတွင် လောင်စာဆီပိုက်ပေါက်နေသည်ကို တွေ့ရှိပါက သင်ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "นำขวดมารองน้ำมันที่รั่วและขับต่อไป",
+        "en": "Take a bottle to catch the leaking oil and keep driving.",
+        "my": "ပေါက်နေတဲ့ဆီတွေကို ဖမ်းဖို့ ပုလင်းတစ်လုံးယူပြီး ဆက်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เทปรัดและขับไปหาช่าง",
+        "en": "Use tape and drive to the mechanic.",
+        "my": "တိပ်သုံးပြီး စက်ပြင်ဆရာထံ မောင်းသွားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ไม่ควรขับรถต่อไปเนื่องจากอาจเกิดไฟไหม้ได้",
+        "en": "Do not drive further as there may be a fire hazard.",
+        "my": "မီးဘေးအန္တရာယ်ရှိနိုင်သောကြောင့် ကားမမောင်းပါနှင့်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ขับไปหาศูนย์บริการเพื่อทำการซ่อม",
+        "en": "Drive to a service center for repairs.",
+        "my": "ပြုပြင်ရန်အတွက် ဝန်ဆောင်မှုစင်တာသို့ မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 503,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เพราะเหตุใดจึงไม่ควรใช้เบรกอย่างต่อเนื่องเป็นเวลานานในขณะขับขี่ลงทางลาดชัน",
+    "q_en": "Why should you not use the brakes continuously for long periods of time while driving downhill?",
+    "q_my": "ကုန်းဆင်းကားမောင်းနေစဉ် ဘရိတ်ကို အချိန်အကြာကြီး အဆက်မပြတ် အဘယ်ကြောင့် မသုံးသင့်သနည်း။",
+    "options": [
+      {
+        "th": "จะทำให้รถเคลื่อนตัวได้ช้า",
+        "en": "It will cause the car to move slowly.",
+        "my": "ကားကို ဖြည်းညှင်းစွာ ရွေ့လျားစေပါလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้ผ้าเบรกไหม้",
+        "en": "It will cause the brake pads to burn.",
+        "my": "ဘရိတ် pads တွေကို လောင်ကျွမ်းစေပါလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จะทำให้เสียเวลาในการเดินทาง",
+        "en": "Will waste time traveling.",
+        "my": "ခရီးသွားရင် အချိန်ဖြုန်းမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้เปลืองน้ำมัน",
+        "en": "It will waste oil.",
+        "my": "ဆီဖြုန်းတီးမယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 504,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เมื่อระดับน้ำในแบตเตอรี่อยู่ในระดับต่ำ ควรเติมด้วยน้ำอะไร",
+    "q_en": "When the water level in the battery is low What water should I fill it with?",
+    "q_my": "ဘက္ထရီမှာ ရေနည်းနေတဲ့အခါ ဘယ်ရေဖြည့်ရမလဲ။",
+    "options": [
+      {
+        "th": "น้ำยาหล่อเย็น",
+        "en": "Coolant",
+        "my": "coolant",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำกลั่น",
+        "en": "Distilled water",
+        "my": "ပေါင်းခံရေ",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "น้ำกรด",
+        "en": "Acid",
+        "my": "အက်ဆစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "น้ำมันเครื่อง",
+        "en": "Engine oil",
+        "my": "အင်ဂျင်ဆီ",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 505,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าปรากฏสัญลักษณ์เตือนเครื่องยนต์ร้อนจัดไม่ควรปฏิบัติอย่างไร",
+    "q_en": "If a warning symbol appears showing the engine overheating, what should you not do?",
+    "q_my": "အင်ဂျင်အပူလွန်ကဲမှုကို ပြသသည့် သတိပေးသင်္ကေတတစ်ခု ပေါ်လာပါက သင်ဘာလုပ်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "เติมน้ำในถังหม้อพักน้ำเมื่อเครื่องยนต์เย็นลง",
+        "en": "Fill the reservoir tank with water when the engine is cool.",
+        "my": "အင်ဂျင်အေးနေချိန်တွင် ရေလှောင်ကန်ကို ရေဖြည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เอาน้ำราดลงไปที่เครื่องยนต์จะทำให้เครื่องยนต์เย็น",
+        "en": "Pouring water over the engine will keep it cool.",
+        "my": "အင်ဂျင်ကို ရေလောင်းပေးခြင်းဖြင့် အင်ဂျင်အေးစေပါသည်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดฝากระโปรงเพื่อระบายความร้อน",
+        "en": "Open the hood to release heat.",
+        "my": "အပူကိုထုတ်ရန် ဘူးကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ปิดแอร์ เปิดหน้าต่างและจอดรถ",
+        "en": "Turn off the air conditioner, open the window and park the car.",
+        "my": "လေအေးပေးစက်ပိတ်၊ ပြတင်းပေါက်ဖွင့်ပြီး ကားကိုရပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 506,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "กรณีเกิดรถเสียไม่สามารถเคลื่อนย้ายได้ ผู้ขับขี่ต้องปฏิบัติสิ่งใดเป็นอันดับแรก",
+    "q_en": "In the event of a vehicle breakdown, it cannot be moved. What must the driver do first?",
+    "q_my": "ယာဉ်ပျက်ကျပါက ရွှေ့၍မရပါ။ ယာဉ်မောင်းက ဘာအရင်လုပ်ရမလဲ။",
+    "options": [
+      {
+        "th": "แจ้งประกันภัยรถยนต์",
+        "en": "Notify car insurance",
+        "my": "ကားအာမခံအကြောင်းကြားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แจ้งกู้ภัย",
+        "en": "Notify rescue",
+        "my": "ကယ်တင်ရန်အကြောင်းကြားပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "แจ้งตำรวจ",
+        "en": "Report it to the police.",
+        "my": "ရဲကို သတင်းပို့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ให้สัญญาณเพื่อเตือนให้รถอื่นทราบ",
+        "en": "Give a signal to warn other vehicles.",
+        "my": "အခြားယာဉ်များကို သတိပေးရန် အချက်ပြပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 507,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าเครื่องยนต์ดับขณะกำลังเคลื่อนที่ออกจากทางลาดชัน ท่านควรปฏิบัติอย่างไรเป็นอันดับแรก",
+    "q_en": "If the engine stops while moving off a slope What should you do first?",
+    "q_my": "တောင်စောင်းတစ်ခုမှ ရွေ့လျားနေစဉ် အင်ဂျင်ရပ်တန့်သွားပါက သင်ဘာကို ဦးစွာလုပ်ဆောင်သင့်သနည်း။",
+    "options": [
+      {
+        "th": "ติดเครื่องใหม่",
+        "en": "Restart the engine",
+        "my": "အင်ဂျင်ကို ပြန်လည်စတင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉิน",
+        "en": "Turn on emergency lights",
+        "my": "အရေးပေါ်မီးများဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปลี่ยนไปเข้าเกียร์ว่าง",
+        "en": "Change into neutral gear.",
+        "my": "neutral gear သို့ပြောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำการเบรกทันทีเพื่อไม่ให้รถไหล",
+        "en": "Apply the brakes immediately to prevent the vehicle from rolling.",
+        "my": "ယာဉ်မလှုပ်မရအောင် ဘရိတ်ကို ချက်ခြင်းတပ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 508,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การหมุนพวงมาลัยในขณะที่รถหยุดนิ่งจะส่งผลเสียแก่ส่วนใดของรถ",
+    "q_en": "Turning the steering wheel while the vehicle is stationary will cause damage to which part of the vehicle?",
+    "q_my": "ယာဉ်ရပ်နေစဉ် စတီယာရင်ဘီးကို လှည့်ခြင်းသည် ယာဉ်၏ ဘယ်အစိတ်အပိုင်းကို ပျက်စီးစေသနည်း။",
+    "options": [
+      {
+        "th": "กระปุกเกียร์",
+        "en": "Gearbox",
+        "my": "ဂီယာဘောက်စ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เบรก",
+        "en": "Brake",
+        "my": "ဘရိတ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์",
+        "en": "Engine",
+        "my": "အင်ဂျင်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางรถ",
+        "en": "Car tires",
+        "my": "ကားတာယာများ",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 509,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ถ้าไม่ปลดล็อกเบรกมือเมื่อเคลื่อนรถจะมีอาการอย่างไร",
+    "q_en": "If the handbrake is not unlocked when moving the vehicle, what will the symptoms be?",
+    "q_my": "ကားကိုရွှေ့တဲ့အခါ လက်ဘရိတ်ကို လော့ခ်မဖွင့်ရင် ဘယ်လိုလက္ခဏာတွေဖြစ်မလဲ။",
+    "options": [
+      {
+        "th": "เมื่อรถเคลื่อนตัวจะรู้สึกว่ารถออกตัวเร็วขึ้น",
+        "en": "When the car moves, it will feel like the car is pulling away faster.",
+        "my": "ကားရွေ့သွားတဲ့အခါ ကားက ပိုမြန်သွားသလို ခံစားရပါလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อหมุนพวงมาลัยจะรู้สึกหนัก",
+        "en": "When turning the steering wheel, it feels heavy.",
+        "my": "စတီယာရင်ကို ကွေ့လိုက်တဲ့အခါ လေးလံသွားသလို ခံစားရတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องยนต์มีอาการสะดุด",
+        "en": "The engine is stumbling.",
+        "my": "အင်ဂျင်က တုန်နေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เมื่อรถเคลื่อนตัวจะรู้สึกว่ารถเร่งความเร็วไม่ขึ้น",
+        "en": "When the car moves, it feels like the car is not accelerating.",
+        "my": "ကားရွေ့သွားတဲ့အခါ ကားက အရှိန်မတက်သလို ခံစားရတယ်။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 510,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เมื่อรถของท่านเสียบริเวณกลางถนน ท่านควรปฏิบัติอย่างไร",
+    "q_en": "When your car breaks down in the middle of the road What should you do?",
+    "q_my": "လမ်းလယ်မှာ ကားပျက်သွားရင် ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "ก่อกองไฟข้างทางในกรณีที่รถของท่านเสียเวลากลางคืน",
+        "en": "Make a bonfire on the side of the road in case your car is lost at night.",
+        "my": "ညဘက်ဆို ကားပျောက်သွားရင် လမ်းဘေးမှာ မီးစလုပ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดไฟฉุกเฉินและนำรถจอดเข้าข้างทาง",
+        "en": "Turn on your emergency lights and pull the car to the side of the road.",
+        "my": "အရေးပေါ်မီးများဖွင့်ပြီး ကားကို လမ်းဘေးသို့ ဆွဲချပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถทิ้งไว้กลางถนน",
+        "en": "Leave your car in the middle of the road.",
+        "my": "သင့်ကားကို လမ်းလယ်တွင် ထားခဲ့ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "นำสัญลักษณ์รูปสามเหลี่ยมมาไว้ท้ายรถของท่าน",
+        "en": "Put the triangle symbol in the back of your car.",
+        "my": "သင့်ကားနောက်ဘက်တွင် တြိဂံသင်္ကေတကို ထည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 511,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดเป็นขั้นตอนการตรวจเช็กและเติมระดับน้ำมันหล่อลื่นเครื่องยนต์ ที่ถูกต้อง",
+    "q_en": "Which is the correct procedure for checking and adding the engine lubricant level?",
+    "q_my": "အင်ဂျင်ချောဆီအဆင့်ကို စစ်ဆေးခြင်းနှင့် ပေါင်းထည့်ခြင်းအတွက် မှန်ကန်သောနည်းလမ်းမှာ အဘယ်နည်း။",
+    "options": [
+      {
+        "th": "จอดรถบนพื้นราบ เช็กน้ำมันขณะยังไม่ติดเครื่อง หรือดับเครื่องยนต์อย่างน้อย 10 นาที",
+        "en": "Park the car on level ground. Check the oil while the engine is not started. Or turn off the engine for at least 10 minutes.",
+        "my": "ကြမ်းပြင်ပေါ်တွင် ကားကို ရပ်ပါ။ အင်ဂျင်မစတင်မီ ဆီစစ်ပါ။ သို့မဟုတ် အင်ဂျင်ကို အနည်းဆုံး 10 မိနစ်ခန့် ပိတ်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จอดรถบนพื้นราบ เช็กน้ำมันหลังดับเครื่องยนต์ทันที",
+        "en": "Park the car on level ground. Check the oil immediately after turning off the engine.",
+        "my": "ကြမ်းပြင်ပေါ်တွင် ကားကို ရပ်ပါ။ အင်ဂျင်ပိတ်ပြီးတာနဲ့ ဆီစစ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถบนพื้นราบ เช็กน้ำมันขณะยังติดเครื่องยนต์ หรือดับเครื่องยนต์ทันที",
+        "en": "Park the car on level ground. Check the oil while the engine is still running. or immediately turn off the engine",
+        "my": "ကြမ်းပြင်ပေါ်တွင် ကားကို ရပ်ပါ။ အင်ဂျင်လည်ပတ်နေချိန်တွင် ဆီစစ်ပါ။ သို့မဟုတ် အင်ဂျင်ကိုချက်ချင်းပိတ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จอดรถบนพื้นราบ เช็กน้ำมันขณะยังติดเครื่องยนต์อยู่",
+        "en": "Park the car on level ground. Check the oil while the engine is still running.",
+        "my": "ကြမ်းပြင်ပေါ်တွင် ကားကို ရပ်ပါ။ အင်ဂျင်လည်ပတ်နေချိန်တွင် ဆီစစ်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 512,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดคือหน้าที่ของน้ำมันเครื่องยนต์",
+    "q_en": "What is the function of engine oil?",
+    "q_my": "အင်ဂျင်ဆီရဲ့ လုပ်ဆောင်ချက်က ဘာလဲ။",
+    "options": [
+      {
+        "th": "หล่อลื่นชิ้นส่วนที่เคลื่อนที่เพื่อลดการสึกหรอ",
+        "en": "Lubricate moving parts to reduce wear.",
+        "my": "ရွေ့လျားနေသော အစိတ်အပိုင်းများကို ချောဆီလိမ်းပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ระบายความร้อนออกจากหม้อน้ำ",
+        "en": "Cooling from the radiator",
+        "my": "ရေတိုင်ကီမှ အအေးခံခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำความสะอาดหม้อน้ำ",
+        "en": "Clean the radiator",
+        "my": "ရေတိုင်ကီကို သန့်ရှင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ระบายความร้อนจากผ้าเบรก",
+        "en": "Cools heat from the brake pads",
+        "my": "ဘရိတ် pads များမှ အပူများကို အေးစေပါသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 513,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การตรวจเช็คระดับน้ำมันหล่อลื่นในเครื่องยนต์ ตรวจเช็คที่อุปกรณ์ส่วนใดของเครื่องยนต์",
+    "q_en": "Checking the lubricant level in the engine Check which part of the engine?",
+    "q_my": "အင်ဂျင်အတွင်းရှိ ချောဆီအဆင့်ကို စစ်ဆေးခြင်း အင်ဂျင်၏ မည်သည့်အစိတ်အပိုင်းကို စစ်ဆေးသနည်း။",
+    "options": [
+      {
+        "th": "กรองน้ำมันเครื่อง",
+        "en": "Engine oil filter",
+        "my": "အင်ဂျင်ဆီစစ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ฝาเติมน้ำมันเครื่อง",
+        "en": "Engine oil filler cap",
+        "my": "အင်ဂျင်ဆီဖြည့်ထုပ်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ก้านวัดน้ำมันเครื่อง",
+        "en": "Oil dipstick",
+        "my": "ဆီထည့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "อ่างน้ำมันเครื่อง",
+        "en": "Engine oil pan",
+        "my": "အင်ဂျင်ဆီဒယ်အိုး",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 514,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใดต่อไปนี้ รถจะสิ้นเปลืองเชื้อเพลิงมาก",
+    "q_en": "Which of the following? The car will consume a lot of fuel.",
+    "q_my": "အောက်ပါတို့ထဲမှ ဘယ်ဟာလဲ။ ကားက လောင်စာဆီ အများကြီး လောင်လိမ့်မယ်။",
+    "options": [
+      {
+        "th": "ใช้ยางรถที่มีลมยางน้อยเกินไป",
+        "en": "Using tires that are under-inflated",
+        "my": "ဖောင်းနေသော တာယာများကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ใช้ยางรถที่มีลมยางมากเกินไป",
+        "en": "Using over-inflated tires",
+        "my": "ဖောင်းလွန်းသောတာယာများကို အသုံးပြုခြင်း။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ยางรถที่ต่างยี่ห้อกัน",
+        "en": "Use different brands of tires.",
+        "my": "တာယာတံဆိပ်အမျိုးမျိုးကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้ยางรถใหม่",
+        "en": "Use new tires",
+        "my": "တာယာအသစ်သုံးပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 515,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "จะเกิดอะไรขึ้นเมื่อล้อรถอยู่ในสภาวะที่ไม่สมดุล",
+    "q_en": "What happens when the wheels of a car are out of balance?",
+    "q_my": "ကားဘီးတွေ ဟန်ချက်မညီရင် ဘာဖြစ်မလဲ။",
+    "options": [
+      {
+        "th": "พวงมาลัยจะเกิดการสั่น",
+        "en": "The steering wheel will vibrate.",
+        "my": "စတီယာရင် တုန်ခါသွားမယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เบรกจะใช้ไม่ได้",
+        "en": "The brakes won't work.",
+        "my": "ဘရိတ်တွေ အလုပ်မလုပ်ဘူး။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "พวงมาลัยจะดึงไปยังด้านใดด้านหนึ่ง",
+        "en": "The steering wheel pulls to one side.",
+        "my": "စတီယာရင်ဘီးက တစ်ဖက်ကိုဆွဲတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ยางรถจะแบน",
+        "en": "The car tire will go flat.",
+        "my": "ကားတာယာက ပြားသွားလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 516,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ไม่ควรเปิดฝาหม้อน้ำในกรณีใด",
+    "q_en": "Under no circumstances should you open the radiator cap.",
+    "q_my": "ဘယ်လိုအခြေအနေမျိုးမှာမှ ရေတိုင်ကီအဖုံးကို ဖွင့်သင့်တယ်။",
+    "options": [
+      {
+        "th": "เครื่องร้อนจัด",
+        "en": "The machine is very hot.",
+        "my": "စက်က အရမ်းပူတယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "เปิดตอนเช้าขณะยังไม่ติดเครื่องยนต์",
+        "en": "Open in the morning while the engine is not yet started.",
+        "my": "အင်ဂျင်မဖွင့်ရသေးချိန်မှာ မနက်မိုးလင်းရင်ဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เครื่องเย็น",
+        "en": "Cool machine",
+        "my": "အအေးခံစက်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เปิดถังพักสำรองหม้อน้ำเพื่อเติมน้ำ",
+        "en": "Open the radiator reserve tank to add water.",
+        "my": "ရေထည့်ရန် ရေတိုင်ကီအရံတိုင်ကီကိုဖွင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 517,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ข้อใด ไม่ใช่การขับรถอย่างปลอดภัยและประหยัดพลังงาน",
+    "q_en": "Which is not a safe and energy-efficient way to drive?",
+    "q_my": "ဘယ်ဟာက ဘေးကင်းပြီး စွမ်းအင်သက်သာတဲ့ မောင်းနှင်မှုမျိုးမဟုတ်လဲ။",
+    "options": [
+      {
+        "th": "ไม่ควรติดเครื่องยนต์ระหว่างจอดรถคอย",
+        "en": "The engine should not be turned on while waiting.",
+        "my": "စောင့်ဆိုင်းနေစဉ် အင်ဂျင်ကို မဖွင့်သင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถด้วยความเร็วที่เหมาะสม",
+        "en": "Drive at a reasonable speed.",
+        "my": "သင့်လျော်သောအရှိန်ဖြင့် မောင်းနှင်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "เร่งเครื่องยนต์ก่อนออกรถ",
+        "en": "Accelerate the engine before starting the car.",
+        "my": "ကားမစတင်မီ အင်ဂျင်ကို အရှိန်မြှင့်ပါ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ไม่บรรทุกของเกินพิกัด",
+        "en": "Do not overload the load.",
+        "my": "ဝန်ပိုမချပါနဲ့။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 518,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ไดสตาร์ททำหน้าที่อะไร",
+    "q_en": "What does the starter do?",
+    "q_my": "စတင်သူဘာလုပ်သလဲ။",
+    "options": [
+      {
+        "th": "ทำให้เครื่องยนต์ติด",
+        "en": "Make the engine start",
+        "my": "အင်ဂျင်ကိုစတင်ပါစေ။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ทำให้ระบบเบรกทำงานดีขึ้น",
+        "en": "Makes the braking system work better",
+        "my": "ဘရိတ်စနစ်ကို ပိုကောင်းစေတယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้หมุนพวงมาลัยได้ดี",
+        "en": "Makes you turn the steering wheel well",
+        "my": "စတီယာရင်ကို ကောင်းစွာကွေ့နိုင်စေသည်",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ทำให้แอร์ในรถเย็นขึ้น",
+        "en": "Makes the air conditioner in the car cooler.",
+        "my": "ကားရှိ လေအေးပေးစက်ကို အေးမြစေသည်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 519,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "ในขณะขับรถ ยางรถแตกหรือระเบิด ผู้ขับขี่ควรปฏิบัติอย่างไร",
+    "q_en": "While driving, a tire bursts or explodes. What should the driver do?",
+    "q_my": "ကားမောင်းနေစဉ်၊ တာယာကွဲခြင်း သို့မဟုတ် ပေါက်ကွဲခြင်း။ ယာဉ်မောင်းက ဘာလုပ်သင့်လဲ။",
+    "options": [
+      {
+        "th": "หมุนพวงมาลัยอย่างรวดเร็วเพื่อหลบเข้าข้างทาง",
+        "en": "Turn the steering wheel quickly to pull over to the side of the road.",
+        "my": "လမ်းဘေးဘက်သို့ ဆွဲတင်ရန် စတီယာရင်ကို အမြန်လှည့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "รีบเหยียบเบรกให้เร็วที่สุด",
+        "en": "Hurry and step on the brakes as quickly as possible.",
+        "my": "မြန်မြန်ပြီး ဘရိတ်ကို တတ်နိုင်သမျှ မြန်မြန်နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "คุมสติ บังคับพวงมาลัย ลดความเร็วลงและไม่ควรเหยียบเบรกกะทันหัน",
+        "en": "Control your mind and control the steering wheel. Reduce your speed and do not brake suddenly.",
+        "my": "သင့်စိတ်ကို ထိန်းချုပ်ပြီး စတီယာရင်ကို ထိန်းချုပ်ပါ။ အရှိန်လျှော့ပြီး ရုတ်တရက် ဘရိတ်မတိုက်ပါနဲ့။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "ปลดเกียร์ว่างแล้วรีบเหยียบเบรก",
+        "en": "Put the gear in neutral and quickly step on the brake.",
+        "my": "ဂီယာကို ဘက်မလိုက်ဘဲ ဘရိတ်ပေါ် အမြန်နင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 520,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "การขับขี่บนทางลาดชันผู้ขับขี่ไม่ควรใช้เบรกอย่างต่อเนื่องเป็นเวลานานเพราะเหตุใด",
+    "q_en": "Driving on a steep slope, why should a driver not continuously apply the brakes for a long time?",
+    "q_my": "မတ်စောက်သော တောင်စောင်းတွင် မောင်းနှင်သူသည် အဘယ်ကြောင့် အချိန်အကြာကြီး ဘရိတ်ကို အဆက်မပြတ် မသုံးသင့်သနည်း။",
+    "options": [
+      {
+        "th": "จะทำให้เร่งเครื่องได้ช้า",
+        "en": "It will cause the engine to accelerate slowly.",
+        "my": "အင်ဂျင်ကို ဖြည်းညှင်းစွာ အရှိန်မြှင့်ပေးပါလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้ผ้าเบรกไหม้",
+        "en": "It will cause the brake pads to burn.",
+        "my": "ဘရိတ် pads တွေကို လောင်ကျွမ်းစေပါလိမ့်မယ်။",
+        "image": null,
+        "isCorrect": true
+      },
+      {
+        "th": "จะทำให้เปลืองน้ำมัน",
+        "en": "It will waste oil.",
+        "my": "ဆီဖြုန်းတီးမယ်။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "จะทำให้รถไหล",
+        "en": "Will make the car flow",
+        "my": "ကားစီးလာမယ်။",
+        "image": null,
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 521,
+    "category": "vehicle_maintenance",
+    "image": null,
+    "q_th": "เมื่อท่านขับรถผ่านถนนที่มีน้ำท่วมขังแล้ว ท่านควรปฏิบัติอย่างไร",
+    "q_en": "When you drive through a road that is flooded. What should you do?",
+    "q_my": "ရေလျှံနေတဲ့လမ်းကို ဖြတ်မောင်းတဲ့အခါ။ ဘာလုပ်သင့်လဲ?",
+    "options": [
+      {
+        "th": "หยุดรถ ตรวจสอบยาง",
+        "en": "Stop the car and check the tires.",
+        "my": "ကားကိုရပ်ပြီး တာယာတွေကို စစ်ဆေးပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ขับรถให้เร็วขึ้นเพื่อให้ผ้าเบรกแห้ง",
+        "en": "Drive faster to dry the brake pads.",
+        "my": "ဘရိတ်အုပ်များကိုခြောက်သွေ့စေရန် မြန်မြန်မောင်းပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "หยุดรถ รอผ้าเบรกให้แห้ง",
+        "en": "Stop the car and wait for the brake pads to dry.",
+        "my": "ကားရပ်ပြီး ဘရိတ်အုပ်များ ခြောက်သွားအောင် စောင့်ပါ။",
+        "image": null,
+        "isCorrect": false
+      },
+      {
+        "th": "ใช้เท้าแตะเบรกเพื่อให้ผ้าเบรกแห้งเร็ว",
+        "en": "Use your foot to touch the brakes to dry the brake pads quickly.",
+        "my": "ဘရိတ်အုပ်များကို အမြန်ခြောက်သွေ့စေရန် ဘရိတ်ကိုထိရန် သင့်ခြေထောက်ကို အသုံးပြုပါ။",
+        "image": null,
+        "isCorrect": true
+      }
+    ]
   }
 ]
