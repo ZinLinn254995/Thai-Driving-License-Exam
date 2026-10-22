@@ -337,12 +337,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="text-xs sm:text-sm text-amber-950 font-myanmar space-y-1">
           <p className="font-semibold text-amber-900">
             {lang === 'en'
-              ? 'Official DLT Exam Standard: 45 out of 50 correct answers (90%) required to pass.'
+              ? 'Practice target: 45 correct answers out of 50 (90%). Check current requirements with the Department of Land Transport.'
               : 'ထိုင်း DLT စာမေးပွဲ စည်းကမ်းချက် - စုစုပေါင်း ၅၀ မေးခွန်းအနက် ၄၅ မှတ် (၉၀%) ရရှိမှ အောင်မြင်မည်။'}
           </p>
           <p className="text-amber-800 text-xs">
             {lang === 'en'
-              ? 'Each exam draws 50 randomized questions with official diagrams and standardized answer choices.'
+              ? 'Each test selects up to 50 random questions from this practice bank.'
               : 'မေးခွန်းအားလုံးတွင် ထိုင်းစာ သို့မဟုတ် အင်္ဂလိပ်စာကို အဓိကကြီးကြီးပြသထားပြီး မြန်မာစာကို အောက်မှ သေးသေးဖြင့် ဘာသာပြန်ပြသပေးပါသည်။'}
           </p>
         </div>
@@ -358,7 +358,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Sparkles size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                {lang === 'en' ? 'Recommended for Learning' : 'Recommended · အကြံပြုထားသည်'}
+                {lang === 'en' ? 'Good for Learning' : 'Recommended · အကြံပြုထားသည်'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
@@ -394,7 +394,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Clock size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                {lang === 'en' ? 'Official Exam Format' : 'Official Standard · စာမေးပွဲအစစ်ပုံစံ'}
+                {lang === 'en' ? 'Timed Practice' : 'Official Standard · စာမေးပွဲအစစ်ပုံစံ'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">

@@ -8,6 +8,7 @@ interface QuizViewProps {
   questions: QuizQuestion[];
   mode: ExamMode;
   lang: LanguageMode;
+  showMyanmar: boolean;
   onFinishExam: (answers: UserAnswer[]) => void;
   onExit: () => void;
   bookmarkedIds: number[];
@@ -20,6 +21,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   questions,
   mode,
   lang,
+  showMyanmar,
   onFinishExam,
   onExit,
   bookmarkedIds,
@@ -317,36 +319,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
         {/* Question Text */}
         <div className="space-y-1.5 pt-1">
-          {lang === 'th_my' ? (
-            <div>
-              {/* Thai Primary Large */}
-              <h2 className="text-base sm:text-xl font-bold font-thai text-slate-900 leading-snug">
-                {currentQ.q_th}
-              </h2>
-              {/* Myanmar Subtitle Small */}
-              <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">
-                {currentQ.q_my}
-              </p>
-            </div>
-          ) : lang === 'en_my' ? (
-            <div>
-              {/* English Primary Large */}
-              <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
-                {currentQ.q_en}
-              </h2>
-              {/* Myanmar Subtitle Small */}
-              <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">
-                {currentQ.q_my}
-              </p>
-            </div>
-          ) : (
-            <div>
-              {/* English Only */}
-              <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
-                {currentQ.q_en}
-              </h2>
-            </div>
-          )}
+          {<>
+            <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">{currentQ.q_en}</h2>
+            {showMyanmar && <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">{currentQ.q_my}</p>}
+          </>}
         </div>
 
         {/* Options List */}
@@ -414,36 +390,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   )}
 
                   {/* Primary text with language mode */}
-                  {lang === 'th_my' ? (
-                    <div>
-                      {/* Thai Primary Large */}
-                      <div className="font-thai font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.th}
-                      </div>
-                      {/* Myanmar Subtitle Small */}
-                      <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">
-                        {option.my}
-                      </div>
-                    </div>
-                  ) : lang === 'en_my' ? (
-                    <div>
-                      {/* English Primary Large */}
-                      <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.en}
-                      </div>
-                      {/* Myanmar Subtitle Small */}
-                      <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">
-                        {option.my}
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      {/* English Only */}
-                      <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.en}
-                      </div>
-                    </div>
-                  )}
+                  {<>
+                    <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">{option.en}</div>
+                    {showMyanmar && <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">{option.my}</div>}
+                  </>}
                 </div>
 
                 {/* Instant Feedback Status Icon */}
@@ -488,10 +438,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   {lang === 'en' ? 'Correct choice: ' : 'အဖြေမှန်မှာ: '}
                   <span className="font-bold text-emerald-700">
                     {OPTION_LETTERS[currentQ.options.findIndex((o) => o.isCorrect)]}.{' '}
-                    {lang === 'th_my'
-                      ? currentQ.options.find((o) => o.isCorrect)?.th
-                      : currentQ.options.find((o) => o.isCorrect)?.en}{' '}
-                    {lang !== 'en' && (
+                    {currentQ.options.find((o) => o.isCorrect)?.en}{' '}
+                    {showMyanmar && (
                       <span className="font-normal text-slate-600 font-myanmar">
                         ({currentQ.options.find((o) => o.isCorrect)?.my})
                       </span>

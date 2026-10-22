@@ -27,16 +27,11 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'quiz' | 'result' | 'study' | 'history'>('home');
   const [studyInitialCategory, setStudyInitialCategory] = useState<ExamTopicFilter>('all');
 
-  // Language Modes: 'th_my' (Thai + Myanmar), 'en_my' (English + Myanmar), 'en' (English only)
-  const [lang, setLang] = useState<LanguageMode>(() => {
-    try {
-      const saved = localStorage.getItem('thai_drive_lang');
-      if (saved === 'en_my' || saved === 'en') return saved;
-      // Prefer English + Myanmar for new users and migrate the legacy Thai + Myanmar preference.
-      return 'en_my';
-    } catch {
-      return 'en_my';
-    }
+  // Keep the interface in English and let learners reveal Myanmar translations.
+  const lang: LanguageMode = 'en';
+  const [showMyanmar, setShowMyanmar] = useState(() => {
+    try { return localStorage.getItem('thai_drive_show_myanmar') === 'true'; }
+    catch { return false; }
   });
 
   const [soundEnabled, setSoundEnabled] = useState(sounds.enabled);
@@ -61,11 +56,12 @@ export default function App() {
     setExamHistory(getExamHistory());
   }, []);
 
-  const handleLanguageChange = (newLang: LanguageMode) => {
-    setLang(newLang);
-    try {
-      localStorage.setItem('thai_drive_lang', newLang);
-    } catch {}
+  const handleToggleMyanmar = () => {
+    setShowMyanmar((previous) => {
+      const next = !previous;
+      try { localStorage.setItem('thai_drive_show_myanmar', String(next)); } catch {}
+      return next;
+    });
   };
 
   const handleToggleSound = () => {
@@ -163,7 +159,7 @@ export default function App() {
   };
 
   const handleClearHistory = () => {
-    if (window.confirm('ဖြေဆိုမှတ်တမ်းအားလုံးကို ဖျက်ပစ်ရန် သေချာပါသလား။')) {
+    if (window.confirm('Clear all exam history? This cannot be undone.')) {
       try {
         localStorage.removeItem('thai_drive_exam_history');
         setExamHistory([]);
@@ -175,8 +171,8 @@ export default function App() {
     <div className="min-h-screen bg-[#f4f3ee] text-[#19241e] flex flex-col font-sans selection:bg-[#f2b705] selection:text-black">
       {/* App Header */}
       <Header
-        lang={lang}
-        setLang={handleLanguageChange}
+        showMyanmar={showMyanmar}
+        onToggleMyanmar={handleToggleMyanmar}
         soundEnabled={soundEnabled}
         onToggleSound={handleToggleSound}
         currentView={currentView}
@@ -193,6 +189,7 @@ export default function App() {
         {currentView === 'home' && (
           <HomeView
             lang={lang}
+            showMyanmar={showMyanmar}
             totalQuestions={QUESTIONS_BANK.length}
             signsCount={signsCount}
             lawsCount={lawsCount}
@@ -214,6 +211,7 @@ export default function App() {
             questions={quizQuestions}
             mode={quizMode}
             lang={lang}
+            showMyanmar={showMyanmar}
             onFinishExam={handleFinishExam}
             onExit={() => setCurrentView('home')}
             bookmarkedIds={bookmarkedIds}
@@ -226,6 +224,7 @@ export default function App() {
             questions={quizQuestions}
             answers={quizResults}
             lang={lang}
+            showMyanmar={showMyanmar}
             totalQuestions={QUESTIONS_BANK.length}
             onRetakeNew={() => handleStartExam(quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
@@ -238,6 +237,7 @@ export default function App() {
           <StudyView
             questions={QUESTIONS_BANK}
             lang={lang}
+            showMyanmar={showMyanmar}
             bookmarkedIds={bookmarkedIds}
             onToggleBookmark={handleToggleBookmark}
             initialCategory={studyInitialCategory}
@@ -257,11 +257,7 @@ export default function App() {
       {/* Footer */}
       <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>
-            {lang === 'en'
-              ? `Thai Driving License Question Bank (${QUESTIONS_BANK.length} Questions across 5 Study Categories)`
-              : `ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ${toMyanmarNumber(QUESTIONS_BANK.length)} ပုဒ် (ဆိုင်းဘုတ်၊ ဥပဒေ၊ Safe Driving၊ Maintenance၊ Accident Prediction)`}
-          </div>
+          <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
             <span className="text-[#0b5d3b] font-bold">DLT Pass: 90% (45/50)</span>
             <span>·</span>

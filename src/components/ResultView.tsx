@@ -7,6 +7,7 @@ interface ResultViewProps {
   questions: QuizQuestion[];
   answers: UserAnswer[];
   lang: LanguageMode;
+  showMyanmar: boolean;
   totalQuestions?: number;
   onRetakeNew: () => void;
   onRetakeMistakes: (mistakeQuestionIds: number[]) => void;
@@ -217,31 +218,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                         </div>
 
                         {/* Question text */}
-                        {lang === 'th_my' ? (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold font-thai text-slate-900 leading-snug">
-                              {question.q_th}
-                            </h4>
-                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                              {question.q_my}
-                            </p>
-                          </div>
-                        ) : lang === 'en_my' ? (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                              {question.q_en}
-                            </h4>
-                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                              {question.q_my}
-                            </p>
-                          </div>
-                        ) : (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                              {question.q_en}
-                            </h4>
-                          </div>
-                        )}
+                        {<>
+                          <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">{question.q_en}</h4>
+                          {showMyanmar && <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">{question.q_my}</p>}
+                        </>}
                       </div>
 
                       {/* Correct Answer Box */}
@@ -256,9 +236,9 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           </div>
                         )}
                         <div className="font-semibold text-emerald-900 text-sm">
-                          {lang === 'th_my' ? correctOpt?.th : correctOpt?.en}
+                          {correctOpt?.en}
                         </div>
-                        {lang !== 'en' && (
+                        {showMyanmar && (
                           <div className="text-xs text-emerald-700 font-myanmar">
                             {correctOpt?.my}
                           </div>
@@ -278,7 +258,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                             </div>
                           )}
                           <div className="line-through text-red-900 font-medium text-sm">
-                            {lang === 'th_my' ? wrongOpt.th : wrongOpt.en}
+                            {wrongOpt.en}
                           </div>
                           {lang !== 'en' && (
                             <div className="text-xs text-red-700 font-myanmar">

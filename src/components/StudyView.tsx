@@ -7,6 +7,7 @@ import { toMyanmarNumber } from '../utils/helpers';
 interface StudyViewProps {
   questions: QuestionItem[];
   lang: LanguageMode;
+  showMyanmar: boolean;
   bookmarkedIds: number[];
   onToggleBookmark: (questionId: number) => void;
   initialCategory?: string;
@@ -17,6 +18,7 @@ const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
 export const StudyView: React.FC<StudyViewProps> = ({
   questions,
   lang,
+  showMyanmar,
   bookmarkedIds,
   onToggleBookmark,
   initialCategory
@@ -53,15 +55,14 @@ export const StudyView: React.FC<StudyViewProps> = ({
       const q = searchQuery.toLowerCase().trim();
       list = list.filter((item) => {
         const matchesNum = String(item.id) === q || toMyanmarNumber(item.id) === q;
-        const matchesBurmese = item.q_my.toLowerCase().includes(q) || item.options.some((o) => o.my.toLowerCase().includes(q));
-        const matchesThai = item.q_th.toLowerCase().includes(q) || item.options.some((o) => o.th.toLowerCase().includes(q));
+        const matchesBurmese = showMyanmar && (item.q_my.toLowerCase().includes(q) || item.options.some((o) => o.my.toLowerCase().includes(q)));
         const matchesEnglish = item.q_en.toLowerCase().includes(q) || item.options.some((o) => o.en.toLowerCase().includes(q));
-        return matchesNum || matchesBurmese || matchesThai || matchesEnglish;
+        return matchesNum || matchesBurmese || matchesEnglish;
       });
     }
 
     return list;
-  }, [questions, categoryFilter, bookmarkedIds, searchQuery]);
+  }, [questions, categoryFilter, bookmarkedIds, searchQuery, showMyanmar]);
 
   return (
     <div className="max-w-3xl mx-auto space-y-5">
@@ -183,8 +184,8 @@ export const StudyView: React.FC<StudyViewProps> = ({
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={
               lang === 'en'
-                ? 'Search by keywords, sign title, or question number...'
-                : 'မေးခွန်း၊ ဥပဒေ၊ နံပါတ် စသည်ဖြင့် ရှာဖွေပါ (Search in Thai, English, or Myanmar)...'
+                ? 'Search questions or question numbers...'
+                : 'Search questions or question numbers...'
             }
             className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0b5d3b]/30 focus:border-[#0b5d3b] bg-slate-50/50"
           />
@@ -292,31 +293,10 @@ export const StudyView: React.FC<StudyViewProps> = ({
                   {/* Question and Options */}
                   <div className="flex-1 space-y-3 w-full">
                     {/* Question text */}
-                    {lang === 'th_my' ? (
-                      <div>
-                        <h3 className="font-bold text-sm sm:text-base text-slate-900 font-thai leading-snug">
-                          {q.q_th}
-                        </h3>
-                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                          {q.q_my}
-                        </p>
-                      </div>
-                    ) : lang === 'en_my' ? (
-                      <div>
-                        <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">
-                          {q.q_en}
-                        </h3>
-                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                          {q.q_my}
-                        </p>
-                      </div>
-                    ) : (
-                      <div>
-                        <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">
-                          {q.q_en}
-                        </h3>
-                      </div>
-                    )}
+                    {<>
+                        <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">{q.q_en}</h3>
+                        {showMyanmar && <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">{q.q_my}</p>}
+                      </>}
 
                     {/* 4 Choices with Correct Answer highlighted */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -353,31 +333,10 @@ export const StudyView: React.FC<StudyViewProps> = ({
                                   </div>
                                 )}
 
-                                {lang === 'th_my' ? (
-                                  <div>
-                                    <div className="font-thai font-semibold leading-tight text-slate-900">
-                                      {opt.th}
-                                    </div>
-                                    <div className="font-myanmar text-[11px] text-slate-500 leading-tight mt-0.5">
-                                      {opt.my}
-                                    </div>
-                                  </div>
-                                ) : lang === 'en_my' ? (
-                                  <div>
-                                    <div className="font-semibold leading-tight text-slate-900">
-                                      {opt.en}
-                                    </div>
-                                    <div className="font-myanmar text-[11px] text-slate-500 leading-tight mt-0.5">
-                                      {opt.my}
-                                    </div>
-                                  </div>
-                                ) : (
-                                  <div>
-                                    <div className="font-semibold leading-tight text-slate-900">
-                                      {opt.en}
-                                    </div>
-                                  </div>
-                                )}
+                                {<>
+                                    <div className="font-semibold leading-tight text-slate-900">{opt.en}</div>
+                                    {showMyanmar && <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">{opt.my}</div>}
+                                  </>}
                               </div>
 
                               {opt.isCorrect && (
