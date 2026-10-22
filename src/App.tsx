@@ -259,7 +259,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>
             {lang === 'en'
-              ? `Thai Driving License Question Bank (${QUESTIONS_BANK.length} Questions across 5 Official Categories)`
+              ? `Thai Driving License Question Bank (${QUESTIONS_BANK.length} Questions across 5 Study Categories)`
               : `ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ${toMyanmarNumber(QUESTIONS_BANK.length)} ပုဒ် (ဆိုင်းဘုတ်၊ ဥပဒေ၊ Safe Driving၊ Maintenance၊ Accident Prediction)`}
           </div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
