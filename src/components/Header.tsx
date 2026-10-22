@@ -53,24 +53,10 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Controls: 3 Language Modes & Sound */}
+          {/* Language Modes & Sound */}
           <div className="flex items-center gap-2 justify-between sm:justify-end">
-            {/* The 3 Language Modes: Thai + Myanmar, English + Myanmar, English Only */}
+            {/* Supported modes: English + Myanmar and English only */}
             <div className="flex items-center bg-[#074028] p-0.5 sm:p-1 rounded-xl border border-white/10 text-xs font-semibold overflow-x-auto">
-              <button
-                type="button"
-                onClick={() => setLang('th_my')}
-                className={`px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1 whitespace-nowrap ${
-                  lang === 'th_my'
-                    ? 'bg-[#f2b705] text-[#19241e] font-black shadow-xs'
-                    : 'text-[#cfe9da] hover:text-white'
-                }`}
-                title="ไทย (Thai) + မြန်မာ (Myanmar)"
-              >
-                <span>🇹🇭 ไทย</span>
-                <span className="opacity-70 text-[10px] hidden xs:inline">+ မြန်မာ</span>
-              </button>
-
               <button
                 type="button"
                 onClick={() => setLang('en_my')}
