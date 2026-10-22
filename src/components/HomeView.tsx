@@ -54,7 +54,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </h1>
             <p className="text-sm sm:text-base text-[#cfe9da] font-myanmar leading-relaxed">
               {lang === 'en'
-                ? `Official exam preparation bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
+                ? `Practice question bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
                 : `ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving၊ ယာဉ်ထိန်းသိမ်းရေး နှင့် မတော်တဆမှု ကြိုတင်ခန့်မှန်းခြင်း မေးခွန်းများ (${toMyanmarNumber(totalQuestions)} ခု)`}
             </p>
           </div>
