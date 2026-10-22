@@ -31,10 +31,11 @@ export default function App() {
   const [lang, setLang] = useState<LanguageMode>(() => {
     try {
       const saved = localStorage.getItem('thai_drive_lang');
-      if (saved === 'en_my' || saved === 'th_my' || saved === 'en') return saved;
-      return 'th_my';
+      if (saved === 'en_my' || saved === 'en') return saved;
+      // Prefer English + Myanmar for new users and migrate the legacy Thai + Myanmar preference.
+      return 'en_my';
     } catch {
-      return 'th_my';
+      return 'en_my';
     }
   });
 
