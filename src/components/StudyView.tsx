@@ -75,8 +75,8 @@ export const StudyView: React.FC<StudyViewProps> = ({
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
             {lang === 'en'
-              ? `Traffic Signs (${signsCount}), Traffic Laws (${lawsCount}), Safe Driving (${safeDrivingCount}), Vehicle Maintenance (${maintenanceCount}), and Accident Prediction (${accidentCount}) with verified correct answers.`
-              : `Traffic Signs (${toMyanmarNumber(signsCount)})၊ Traffic Laws (${toMyanmarNumber(lawsCount)})၊ Safe Driving (${toMyanmarNumber(safeDrivingCount)})၊ Maintenance (${toMyanmarNumber(maintenanceCount)}) နှင့် Accident Prediction (${toMyanmarNumber(accidentCount)}) မေးခွန်းနှင့် အဖြေမှန်များ`}
+              ? `Traffic Signs (${signsCount}), Traffic Laws (${lawsCount}), Safe Driving (${safeDrivingCount}), Vehicle Maintenance (${maintenanceCount}), and Accident Prediction (${accidentCount}) with answers.`
+              : `Traffic Signs (${toMyanmarNumber(signsCount)})၊ Traffic Laws (${toMyanmarNumber(lawsCount)})၊ Safe Driving (${toMyanmarNumber(safeDrivingCount)})၊ Maintenance (${toMyanmarNumber(maintenanceCount)}) နှင့် Accident Prediction (${toMyanmarNumber(accidentCount)}) မေးခွန်းနှင့် အဖြေများ`}
           </p>
         </div>
 
