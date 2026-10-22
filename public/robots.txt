@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thai-driving-license-exam.vercel.app/sitemap.xml
