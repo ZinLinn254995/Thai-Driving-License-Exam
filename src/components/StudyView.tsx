@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers, Car, Wrench } from 'lucide-react';
+import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers, Car, Wrench, AlertTriangle } from 'lucide-react';
 import { QuestionItem } from '../data/questions';
 import { LanguageMode, QuestionCategory } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
@@ -22,14 +22,15 @@ export const StudyView: React.FC<StudyViewProps> = ({
   initialCategory
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState<'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance' | 'bookmarked'>(
-    (initialCategory as 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance') || 'all'
+  const [categoryFilter, setCategoryFilter] = useState<'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance' | 'accident_prediction' | 'bookmarked'>(
+    (initialCategory as 'all' | 'traffic_signs' | 'traffic_laws' | 'safe_driving' | 'vehicle_maintenance' | 'accident_prediction') || 'all'
   );
 
   const signsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_signs').length, [questions]);
   const lawsCount = useMemo(() => questions.filter((q) => q.category === 'traffic_laws').length, [questions]);
   const safeDrivingCount = useMemo(() => questions.filter((q) => q.category === 'safe_driving').length, [questions]);
   const maintenanceCount = useMemo(() => questions.filter((q) => q.category === 'vehicle_maintenance').length, [questions]);
+  const accidentCount = useMemo(() => questions.filter((q) => q.category === 'accident_prediction').length, [questions]);
 
   const filteredQuestions = useMemo(() => {
     let list = questions;
@@ -42,6 +43,8 @@ export const StudyView: React.FC<StudyViewProps> = ({
       list = list.filter((q) => q.category === 'safe_driving');
     } else if (categoryFilter === 'vehicle_maintenance') {
       list = list.filter((q) => q.category === 'vehicle_maintenance');
+    } else if (categoryFilter === 'accident_prediction') {
+      list = list.filter((q) => q.category === 'accident_prediction');
     } else if (categoryFilter === 'bookmarked') {
       list = list.filter((q) => bookmarkedIds.includes(q.id));
     }
@@ -69,7 +72,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             မေးခွန်း {toMyanmarNumber(questions.length)} ခုလုံး လေ့လာဖတ်ရှုရန်
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
-            Traffic Signs ({toMyanmarNumber(signsCount)})၊ Traffic Laws ({toMyanmarNumber(lawsCount)})၊ Safe Driving ({toMyanmarNumber(safeDrivingCount)}) နှင့် Maintenance ({toMyanmarNumber(maintenanceCount)}) မေးခွန်းနှင့် အဖြေမှန်များ
+            Traffic Signs ({toMyanmarNumber(signsCount)})၊ Traffic Laws ({toMyanmarNumber(lawsCount)})၊ Safe Driving ({toMyanmarNumber(safeDrivingCount)})၊ Maintenance ({toMyanmarNumber(maintenanceCount)}) နှင့် Accident Prediction ({toMyanmarNumber(accidentCount)}) မေးခွန်းနှင့် အဖြေမှန်များ
           </p>
         </div>
 
@@ -138,6 +141,19 @@ export const StudyView: React.FC<StudyViewProps> = ({
           >
             <Wrench size={13} className="text-purple-700" />
             <span>Maintenance ({maintenanceCount})</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setCategoryFilter('accident_prediction')}
+            className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
+              categoryFilter === 'accident_prediction'
+                ? 'bg-white text-rose-900 shadow-xs font-bold'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <AlertTriangle size={13} className="text-rose-700" />
+            <span>Accident ({accidentCount})</span>
           </button>
 
           <button
@@ -212,6 +228,11 @@ export const StudyView: React.FC<StudyViewProps> = ({
                       <span className="text-[11px] font-bold text-purple-800 bg-purple-50 px-2 py-0.5 rounded-md border border-purple-200 flex items-center gap-1">
                         <Wrench size={12} />
                         <span>Vehicle maintenance</span>
+                      </span>
+                    ) : q.category === 'accident_prediction' ? (
+                      <span className="text-[11px] font-bold text-rose-800 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200 flex items-center gap-1">
+                        <AlertTriangle size={12} />
+                        <span>Accident prediction</span>
                       </span>
                     ) : (
                       <span className="text-[11px] font-bold text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200 flex items-center gap-1">

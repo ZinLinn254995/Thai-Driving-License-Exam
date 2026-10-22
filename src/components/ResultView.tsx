@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale } from 'lucide-react';
+import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, UserAnswer, LanguageMode } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
 
@@ -175,6 +175,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           ) : question.category === 'vehicle_maintenance' ? (
                             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
                               Maintenance
+                            </span>
+                          ) : question.category === 'accident_prediction' ? (
+                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
+                              Accident Prediction
                             </span>
                           ) : (
                             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
