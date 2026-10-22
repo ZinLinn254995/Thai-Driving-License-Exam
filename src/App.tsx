@@ -275,6 +275,15 @@ export default function App() {
             </a>
           </div>
         </div>
+        <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
+          <a href="/about.html" className="underline hover:text-slate-900">About</a>
+          <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
+          <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
+          <a href="/contact.html" className="underline hover:text-slate-900">Contact / Report an issue</a>
+        </nav>
+        <p className="mt-2 px-4 text-[10px] text-slate-500 font-sans">
+          Independent study resource; not affiliated with Thailand’s Department of Land Transport.
+        </p>
       </footer>
     </div>
   );
