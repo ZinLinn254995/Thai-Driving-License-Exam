@@ -7,6 +7,7 @@ interface ResultViewProps {
   questions: QuizQuestion[];
   answers: UserAnswer[];
   lang: LanguageMode;
+  totalQuestions?: number;
   onRetakeNew: () => void;
   onRetakeMistakes: (mistakeQuestionIds: number[]) => void;
   onNavigateStudy: () => void;
@@ -19,6 +20,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   questions,
   answers,
   lang,
+  totalQuestions = 598,
   onRetakeNew,
   onRetakeMistakes,
   onNavigateStudy,
@@ -73,10 +75,20 @@ export const ResultView: React.FC<ResultViewProps> = ({
           {/* Pass / Fail Status Text */}
           <div className="space-y-0.5">
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
-              {passed ? 'ဂုဏ်ယူပါသည်! စာမေးပွဲ အောင်မြင်ပါသည်' : 'မအောင်မြင်သေးပါ၊ ထပ်မံကြိုးစားပါ'}
+              {lang === 'en'
+                ? passed
+                  ? 'Congratulations! You Passed the Exam'
+                  : 'Did Not Pass — Keep Practicing!'
+                : passed
+                ? 'ဂုဏ်ယူပါသည်! စာမေးပွဲ အောင်မြင်ပါသည်'
+                : 'မအောင်မြင်သေးပါ၊ ထပ်မံကြိုးစားပါ'}
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
-              {passed
+              {lang === 'en'
+                ? passed
+                  ? 'Score of 90% or higher meets the official Thailand DLT license requirements.'
+                  : 'Official Thai driving license exam requires at least 45 out of 50 correct answers (90%).'
+                : passed
                 ? 'ထိုင်းယာဉ်မောင်းလိုင်စင် သတ်မှတ်ချက် (၉၀% နှင့်အထက်) ပြည့်မီပါသည်။'
                 : 'ထိုင်းယာဉ်မောင်းလိုင်စင်အတွက် ၄၅ မှတ် (၉၀%) အနည်းဆုံး လိုအပ်ပါသည်။'}
             </p>
@@ -92,7 +104,9 @@ export const ResultView: React.FC<ResultViewProps> = ({
           className="py-3.5 px-4 rounded-xl bg-[#f2b705] hover:bg-[#e0a800] active:scale-95 text-slate-950 font-bold flex items-center justify-center gap-2 shadow-sm transition-all text-xs sm:text-sm"
         >
           <RotateCcw size={17} />
-          <span>နောက်ထပ် ကျပန်း ၅၀ ဖြေဆိုမည်</span>
+          <span>
+            {lang === 'en' ? 'Retake Another 50 Questions' : 'နောက်ထပ် ကျပန်း ၅၀ ဖြေဆိုမည်'}
+          </span>
         </button>
 
         {mistakes.length > 0 && (
@@ -102,7 +116,11 @@ export const ResultView: React.FC<ResultViewProps> = ({
             className="py-3.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-900 active:scale-95 text-white font-bold flex items-center justify-center gap-2 shadow-sm transition-all text-xs sm:text-sm"
           >
             <AlertCircle size={17} />
-            <span>မှားခဲ့သော မေးခွန်းများ ({mistakes.length}) သာ ပြန်ဖြေမည်</span>
+            <span>
+              {lang === 'en'
+                ? `Retake Mistake Questions Only (${mistakes.length})`
+                : `မှားခဲ့သော မေးခွန်းများ (${mistakes.length}) သာ ပြန်ဖြေမည်`}
+            </span>
           </button>
         )}
 
@@ -112,7 +130,11 @@ export const ResultView: React.FC<ResultViewProps> = ({
           className="py-3 px-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold flex items-center justify-center gap-2 transition-colors text-xs sm:text-sm"
         >
           <BookOpen size={16} />
-          <span>၁၉၁ ခုလုံး လေ့လာဖတ်ရှုမည်</span>
+          <span>
+            {lang === 'en'
+              ? `Study All ${totalQuestions} Questions`
+              : `မေးခွန်း ${toMyanmarNumber(totalQuestions)} ခုလုံး လေ့လာဖတ်ရှုမည်`}
+          </span>
         </button>
 
         <button
@@ -120,7 +142,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
           onClick={onGoHome}
           className="py-3 px-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold flex items-center justify-center gap-2 transition-colors text-xs sm:text-sm"
         >
-          <span>ပင်မစာမျက်နှာသို့ (Home)</span>
+          <span>{lang === 'en' ? 'Return to Home' : 'ပင်မစာမျက်နှာသို့ (Home)'}</span>
         </button>
       </div>
 
@@ -130,14 +152,18 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <div>
               <h3 className="font-bold text-slate-900 text-base font-myanmar">
-                မှားယွင်းခဲ့သော မေးခွန်းများ ပြန်လည်စစ်ဆေးရန် ({mistakes.length} ခု)
+                {lang === 'en'
+                  ? `Review Mistake Questions (${mistakes.length})`
+                  : `မှားယွင်းခဲ့သော မေးခွန်းများ ပြန်လည်စစ်ဆေးရန် (${mistakes.length} ခု)`}
               </h3>
               <p className="text-xs text-slate-500 font-myanmar">
-                အဖြေမှန်များကို ဂရုပြုမှတ်သားပါ (Thai/Eng ကြီးကြီးနှင့် Myanmar Subtitle)
+                {lang === 'en'
+                  ? 'Review the verified correct answers below to prepare for your test'
+                  : 'အဖြေမှန်များကို ဂရုပြုမှတ်သားပါ'}
               </p>
             </div>
             <span className="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-full border border-red-200">
-              {mistakes.length} Mistakes
+              {mistakes.length} {lang === 'en' ? 'Mistakes' : 'ခု မှားခဲ့သည်'}
             </span>
           </div>
 
@@ -190,11 +216,20 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           </span>
                         </div>
 
-                        {/* Large Primary Text with Myanmar Subtitle */}
+                        {/* Question text */}
                         {lang === 'th_my' ? (
                           <div>
                             <h4 className="text-sm sm:text-base font-bold font-thai text-slate-900 leading-snug">
                               {question.q_th}
+                            </h4>
+                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
+                              {question.q_my}
+                            </p>
+                          </div>
+                        ) : lang === 'en_my' ? (
+                          <div>
+                            <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                              {question.q_en}
                             </h4>
                             <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
                               {question.q_my}
@@ -205,9 +240,6 @@ export const ResultView: React.FC<ResultViewProps> = ({
                             <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                               {question.q_en}
                             </h4>
-                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                              {question.q_my}
-                            </p>
                           </div>
                         )}
                       </div>
@@ -216,7 +248,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                       <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-950 text-xs space-y-1">
                         <div className="flex items-center gap-1 font-bold text-emerald-800 font-myanmar">
                           <CheckCircle2 size={14} />
-                          <span>အဖြေမှန် (Correct Answer):</span>
+                          <span>{lang === 'en' ? 'Correct Answer:' : 'အဖြေမှန် (Correct Answer):'}</span>
                         </div>
                         {correctOpt?.image && (
                           <div className="p-1 bg-white rounded border border-emerald-200 inline-block">
@@ -226,9 +258,11 @@ export const ResultView: React.FC<ResultViewProps> = ({
                         <div className="font-semibold text-emerald-900 text-sm">
                           {lang === 'th_my' ? correctOpt?.th : correctOpt?.en}
                         </div>
-                        <div className="text-xs text-emerald-700 font-myanmar">
-                          {correctOpt?.my}
-                        </div>
+                        {lang !== 'en' && (
+                          <div className="text-xs text-emerald-700 font-myanmar">
+                            {correctOpt?.my}
+                          </div>
+                        )}
                       </div>
 
                       {/* User's Wrong Choice Box */}
@@ -236,7 +270,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                         <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-950 text-xs space-y-1">
                           <div className="flex items-center gap-1 font-bold text-red-800 font-myanmar">
                             <XCircle size={14} />
-                            <span>သင်ရွေးချယ်ခဲ့သောအဖြေ (Your Pick):</span>
+                            <span>{lang === 'en' ? 'Your Choice:' : 'သင်ရွေးချယ်ခဲ့သောအဖြေ (Your Pick):'}</span>
                           </div>
                           {wrongOpt.image && (
                             <div className="p-1 bg-white rounded border border-red-200 inline-block">
@@ -246,13 +280,15 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           <div className="line-through text-red-900 font-medium text-sm">
                             {lang === 'th_my' ? wrongOpt.th : wrongOpt.en}
                           </div>
-                          <div className="text-xs text-red-700 font-myanmar">
-                            {wrongOpt.my}
-                          </div>
+                          {lang !== 'en' && (
+                            <div className="text-xs text-red-700 font-myanmar">
+                              {wrongOpt.my}
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <div className="text-xs text-slate-400 italic">
-                          (မဖြေဆိုခဲ့ပါ - Skipped)
+                          {lang === 'en' ? '(Question skipped)' : '(မဖြေဆိုခဲ့ပါ - Skipped)'}
                         </div>
                       )}
                     </div>
@@ -265,9 +301,13 @@ export const ResultView: React.FC<ResultViewProps> = ({
       ) : (
         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-900 font-myanmar space-y-1">
           <Award size={32} className="text-emerald-700 mx-auto" />
-          <h3 className="font-bold text-lg">အမှတ်ပြည့် ၅၀/၅၀ ရရှိပါသည်!</h3>
+          <h3 className="font-bold text-lg">
+            {lang === 'en' ? 'Perfect Score: 50 / 50!' : 'အမှတ်ပြည့် ၅၀/၅၀ ရရှိပါသည်!'}
+          </h3>
           <p className="text-xs text-emerald-700">
-            တစ်ချက်မှ မမှားဘဲ အပြည့်အဝ မှန်ကန်စွာ ဖြေဆိုနိုင်ခဲ့ပါသည်။
+            {lang === 'en'
+              ? 'Outstanding! You answered every single question correctly without any mistakes.'
+              : 'တစ်ချက်မှ မမှားဘဲ အပြည့်အဝ မှန်ကန်စွာ ဖြေဆိုနိုင်ခဲ့ပါသည်။'}
           </p>
         </div>
       )}

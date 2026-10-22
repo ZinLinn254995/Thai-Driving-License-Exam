@@ -18,7 +18,8 @@ import {
   toggleBookmark,
   getExamHistory,
   saveExamHistory,
-  ExamHistoryItem
+  ExamHistoryItem,
+  toMyanmarNumber
 } from './utils/helpers';
 import { sounds } from './utils/sound';
 
@@ -26,11 +27,11 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'quiz' | 'result' | 'study' | 'history'>('home');
   const [studyInitialCategory, setStudyInitialCategory] = useState<ExamTopicFilter>('all');
 
-  // The 2 Language Modes: 'th_my' (Thai + Myanmar) and 'en_my' (English + Myanmar)
+  // Language Modes: 'th_my' (Thai + Myanmar), 'en_my' (English + Myanmar), 'en' (English only)
   const [lang, setLang] = useState<LanguageMode>(() => {
     try {
       const saved = localStorage.getItem('thai_drive_lang');
-      if (saved === 'en_my' || saved === 'th_my') return saved;
+      if (saved === 'en_my' || saved === 'th_my' || saved === 'en') return saved;
       return 'th_my';
     } catch {
       return 'th_my';
@@ -183,6 +184,7 @@ export default function App() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         bookmarksCount={bookmarkedIds.length}
+        totalQuestions={QUESTIONS_BANK.length}
       />
 
       {/* Main Content Area */}
@@ -223,6 +225,7 @@ export default function App() {
             questions={quizQuestions}
             answers={quizResults}
             lang={lang}
+            totalQuestions={QUESTIONS_BANK.length}
             onRetakeNew={() => handleStartExam(quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
             onNavigateStudy={() => setCurrentView('study')}
@@ -243,6 +246,7 @@ export default function App() {
         {currentView === 'history' && (
           <HistoryView
             history={examHistory}
+            lang={lang}
             onClearHistory={handleClearHistory}
             onStartExam={() => handleStartExam('instant', 'all')}
           />
@@ -253,7 +257,9 @@ export default function App() {
       <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>
-            ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ၁၉၁ ပုဒ် (Traffic Signs 117 + Traffic Laws 74)
+            {lang === 'en'
+              ? `Thai Driving License Question Bank (${QUESTIONS_BANK.length} Questions across 5 Official Categories)`
+              : `ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ${toMyanmarNumber(QUESTIONS_BANK.length)} ပုဒ် (ဆိုင်းဘုတ်၊ ဥပဒေ၊ Safe Driving၊ Maintenance၊ Accident Prediction)`}
           </div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
             <span className="text-[#0b5d3b] font-bold">DLT Pass: 90% (45/50)</span>

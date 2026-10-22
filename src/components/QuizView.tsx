@@ -160,16 +160,28 @@ export const QuizView: React.FC<QuizViewProps> = ({
               type="button"
               onClick={onExit}
               className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition-colors"
-              title="Exit exam"
+              title={lang === 'en' ? 'Exit exam' : 'စာမေးပွဲမှ ထွက်မည်'}
             >
-              ← ထွက်မည်
+              {lang === 'en' ? '← Exit' : '← ထွက်မည်'}
             </button>
             <span>
-              မေးခွန်း{' '}
-              <strong className="text-[#0b5d3b] text-base">
-                {toMyanmarNumber(currentIndex + 1)}
-              </strong>{' '}
-              / {toMyanmarNumber(questions.length)}
+              {lang === 'en' ? (
+                <>
+                  Question{' '}
+                  <strong className="text-[#0b5d3b] text-base">
+                    {currentIndex + 1}
+                  </strong>{' '}
+                  of {questions.length}
+                </>
+              ) : (
+                <>
+                  မေးခွန်း{' '}
+                  <strong className="text-[#0b5d3b] text-base">
+                    {toMyanmarNumber(currentIndex + 1)}
+                  </strong>{' '}
+                  / {toMyanmarNumber(questions.length)}
+                </>
+              )}
             </span>
           </div>
 
@@ -187,8 +199,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
               </div>
             ) : (
               <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
-                <span>ရမှတ်:</span>
-                <span className="text-sm font-extrabold">{toMyanmarNumber(correctCount)}</span>
+                <span>{lang === 'en' ? 'Score:' : 'ရမှတ်:'}</span>
+                <span className="text-sm font-extrabold">
+                  {lang === 'en' ? correctCount : toMyanmarNumber(correctCount)}
+                </span>
               </div>
             )}
 
@@ -196,7 +210,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               type="button"
               onClick={() => setShowGridModal(true)}
               className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
-              title="မေးခွန်းဇယား (Question Palette)"
+              title={lang === 'en' ? 'Question Navigator' : 'မေးခွန်းဇယား (Question Palette)'}
             >
               <Grid size={16} />
             </button>
@@ -214,7 +228,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
       {/* Main Question Card */}
       <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm space-y-4">
-        {/* Header: Category Badge and Actions */}
+
+        {/* Flag & Bookmark header */}
         <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
           <div className="flex items-center gap-2">
             {currentQ.category === 'traffic_signs' ? (
@@ -261,7 +276,15 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 title="Flag question"
               >
                 <Flag size={14} className={isFlagged ? 'fill-current text-amber-600' : ''} />
-                <span>{isFlagged ? 'မှတ်ထားပြီး' : 'မှတ်ထားရန်'}</span>
+                <span>
+                  {lang === 'en'
+                    ? isFlagged
+                      ? 'Flagged'
+                      : 'Flag'
+                    : isFlagged
+                    ? 'မှတ်ထားပြီး'
+                    : 'မှတ်ထားရန်'}
+                </span>
               </button>
             )}
 
@@ -292,7 +315,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           </div>
         )}
 
-        {/* Question Text: PRIMARY LARGE (Thai or English) with MYANMAR SUBTITLE BELOW */}
+        {/* Question Text */}
         <div className="space-y-1.5 pt-1">
           {lang === 'th_my' ? (
             <div>
@@ -305,7 +328,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 {currentQ.q_my}
               </p>
             </div>
-          ) : (
+          ) : lang === 'en_my' ? (
             <div>
               {/* English Primary Large */}
               <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
@@ -316,10 +339,17 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 {currentQ.q_my}
               </p>
             </div>
+          ) : (
+            <div>
+              {/* English Only */}
+              <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
+                {currentQ.q_en}
+              </h2>
+            </div>
           )}
         </div>
 
-        {/* Options List: PRIMARY LARGE (Thai or English) with MYANMAR SUBTITLE BELOW */}
+        {/* Options List */}
         <div className="space-y-2.5 pt-2">
           {currentQ.options.map((option, optIdx) => {
             const isSelected = selectedIndex === optIdx;
@@ -383,7 +413,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     </div>
                   )}
 
-                  {/* Primary text (Thai or English) in large font, Myanmar sub below */}
+                  {/* Primary text with language mode */}
                   {lang === 'th_my' ? (
                     <div>
                       {/* Thai Primary Large */}
@@ -395,7 +425,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         {option.my}
                       </div>
                     </div>
-                  ) : (
+                  ) : lang === 'en_my' ? (
                     <div>
                       {/* English Primary Large */}
                       <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
@@ -404,6 +434,13 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       {/* Myanmar Subtitle Small */}
                       <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">
                         {option.my}
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      {/* English Only */}
+                      <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
+                        {option.en}
                       </div>
                     </div>
                   )}
@@ -440,23 +477,25 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 <XCircle size={20} className="text-red-600" />
               )}
             </div>
-            <div className="font-myanmar space-y-1">
+            <div className="space-y-1">
               <div className="font-bold">
                 {currentQ.options[selectedIndex]?.isCorrect
-                  ? 'အဖြေမှန်ကန်ပါသည်! (Correct)'
-                  : 'အဖြေမှားယွင်းပါသည်! (Incorrect)'}
+                  ? (lang === 'en' ? 'Correct Answer!' : 'အဖြေမှန်ကန်ပါသည်! (Correct)')
+                  : (lang === 'en' ? 'Incorrect Answer!' : 'အဖြေမှားယွင်းပါသည်! (Incorrect)')}
               </div>
               {!currentQ.options[selectedIndex]?.isCorrect && (
                 <div className="text-xs text-slate-800">
-                  အဖြေမှန်မှာ:{' '}
+                  {lang === 'en' ? 'Correct choice: ' : 'အဖြေမှန်မှာ: '}
                   <span className="font-bold text-emerald-700">
                     {OPTION_LETTERS[currentQ.options.findIndex((o) => o.isCorrect)]}.{' '}
                     {lang === 'th_my'
                       ? currentQ.options.find((o) => o.isCorrect)?.th
                       : currentQ.options.find((o) => o.isCorrect)?.en}{' '}
-                    <span className="font-normal text-slate-600">
-                      ({currentQ.options.find((o) => o.isCorrect)?.my})
-                    </span>
+                    {lang !== 'en' && (
+                      <span className="font-normal text-slate-600 font-myanmar">
+                        ({currentQ.options.find((o) => o.isCorrect)?.my})
+                      </span>
+                    )}
                   </span>
                 </div>
               )}
@@ -477,7 +516,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
             }`}
           >
             <ArrowLeft size={16} />
-            <span>ရှေ့သို့</span>
+            <span>{lang === 'en' ? 'Previous' : 'ရှေ့သို့'}</span>
           </button>
 
           {mode === 'instant' ? (
@@ -491,7 +530,15 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   : 'bg-slate-100 text-slate-400 cursor-not-allowed'
               }`}
             >
-              <span>{currentIndex + 1 === questions.length ? 'ရလဒ်ကြည့်မည်' : 'နောက်တစ်ခု'}</span>
+              <span>
+                {lang === 'en'
+                  ? currentIndex + 1 === questions.length
+                    ? 'View Results'
+                    : 'Next Question'
+                  : currentIndex + 1 === questions.length
+                  ? 'ရလဒ်ကြည့်မည်'
+                  : 'နောက်တစ်ခု'}
+              </span>
               <ArrowRight size={16} />
             </button>
           ) : (
@@ -501,14 +548,22 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 onClick={() => setShowConfirmModal(true)}
                 className="px-3 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 border border-slate-200"
               >
-                ပြီးဆုံးမည်
+                {lang === 'en' ? 'Finish Exam' : 'ပြီးဆုံးမည်'}
               </button>
               <button
                 type="button"
                 onClick={handleNext}
                 className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0b5d3b] hover:bg-[#08482e] text-white font-bold text-xs sm:text-sm shadow-xs transition-all"
               >
-                <span>{currentIndex + 1 === questions.length ? 'အဖြေတင်မည်' : 'ရှေ့ဆက်မည်'}</span>
+                <span>
+                  {lang === 'en'
+                    ? currentIndex + 1 === questions.length
+                      ? 'Submit Exam'
+                      : 'Next Question'
+                    : currentIndex + 1 === questions.length
+                    ? 'အဖြေတင်မည်'
+                    : 'ရှေ့ဆက်မည်'}
+                </span>
                 <ArrowRight size={16} />
               </button>
             </div>
@@ -522,7 +577,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col">
             <div className="flex items-center justify-between border-b pb-2">
               <h3 className="font-bold text-slate-900 text-base font-myanmar">
-                မေးခွန်းများသို့ ကူးပြောင်းရန် (Question Navigator)
+                {lang === 'en'
+                  ? 'Question Navigator (Palette)'
+                  : 'မေးခွန်းများသို့ ကူးပြောင်းရန် (Question Navigator)'}
               </h3>
               <button
                 type="button"
@@ -537,15 +594,17 @@ export const QuizView: React.FC<QuizViewProps> = ({
             <div className="flex items-center gap-3 text-[11px] font-semibold text-slate-600">
               <span className="flex items-center gap-1">
                 <span className="w-3 h-3 rounded-full bg-emerald-600 inline-block" />
-                ဖြေဆိုပြီး ({answeredCount})
+                {lang === 'en' ? `Answered (${answeredCount})` : `ဖြေဆိုပြီး (${answeredCount})`}
               </span>
               <span className="flex items-center gap-1">
                 <span className="w-3 h-3 rounded-full bg-amber-400 inline-block" />
-                မှတ်သားထား ({flaggedIds.length})
+                {lang === 'en' ? `Flagged (${flaggedIds.length})` : `မှတ်သားထား (${flaggedIds.length})`}
               </span>
               <span className="flex items-center gap-1">
                 <span className="w-3 h-3 rounded-full bg-slate-200 inline-block" />
-                မဖြေရသေး ({questions.length - answeredCount})
+                {lang === 'en'
+                  ? `Unanswered (${questions.length - answeredCount})`
+                  : `မဖြေရသေး (${questions.length - answeredCount})`}
               </span>
             </div>
 
@@ -594,7 +653,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               onClick={() => setShowGridModal(false)}
               className="w-full py-2.5 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs hover:bg-slate-200 transition-colors"
             >
-              ပိတ်မည် (Close)
+              {lang === 'en' ? 'Close' : 'ပိတ်မည် (Close)'}
             </button>
           </div>
         </div>
@@ -609,11 +668,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
             </div>
             <div>
               <h3 className="font-bold text-slate-900 text-lg font-myanmar">
-                စာမေးပွဲ အဖြေလွှာ တင်သွင်းမည်လား။
+                {lang === 'en'
+                  ? 'Submit Exam Answers?'
+                  : 'စာမေးပွဲ အဖြေလွှာ တင်သွင်းမည်လား။'}
               </h3>
               <p className="text-xs text-slate-600 font-myanmar mt-1">
-                မေးခွန်း {questions.length} အနက် {toMyanmarNumber(answeredCount)} ခု ဖြေဆိုထားပြီး{' '}
-                {toMyanmarNumber(questions.length - answeredCount)} ခု မဖြေဆိုရသေးပါ။
+                {lang === 'en'
+                  ? `You have answered ${answeredCount} of ${questions.length} questions. ${questions.length - answeredCount} remain unanswered.`
+                  : `မေးခွန်း ${questions.length} အနက် ${toMyanmarNumber(answeredCount)} ခု ဖြေဆိုထားပြီး ${toMyanmarNumber(questions.length - answeredCount)} ခု မဖြေဆိုရသေးပါ။`}
               </p>
             </div>
 
@@ -623,14 +685,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 onClick={() => setShowConfirmModal(false)}
                 className="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs"
               >
-                ပြန်စစ်ဆေးမည်
+                {lang === 'en' ? 'Review Questions' : 'ပြန်စစ်ဆေးမည်'}
               </button>
               <button
                 type="button"
                 onClick={handleSubmitExam}
                 className="flex-1 py-2.5 rounded-xl bg-[#0b5d3b] hover:bg-[#08482e] text-white font-bold text-xs"
               >
-                အဖြေတင်မည် (Submit)
+                {lang === 'en' ? 'Submit Exam' : 'အဖြေတင်မည် (Submit)'}
               </button>
             </div>
           </div>

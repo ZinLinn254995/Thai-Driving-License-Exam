@@ -1,6 +1,6 @@
 // Type definitions for Thai Driving Test App
 
-export type LanguageMode = 'th_my' | 'en_my';
+export type LanguageMode = 'th_my' | 'en_my' | 'en';
 
 export type ExamMode = 'instant' | 'timed';
 

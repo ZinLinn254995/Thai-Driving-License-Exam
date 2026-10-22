@@ -69,10 +69,14 @@ export const StudyView: React.FC<StudyViewProps> = ({
       <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs space-y-4">
         <div>
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-myanmar">
-            မေးခွန်း {toMyanmarNumber(questions.length)} ခုလုံး လေ့လာဖတ်ရှုရန်
+            {lang === 'en'
+              ? `Study All ${questions.length} Exam Questions`
+              : `မေးခွန်း ${toMyanmarNumber(questions.length)} ခုလုံး လေ့လာဖတ်ရှုရန်`}
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
-            Traffic Signs ({toMyanmarNumber(signsCount)})၊ Traffic Laws ({toMyanmarNumber(lawsCount)})၊ Safe Driving ({toMyanmarNumber(safeDrivingCount)})၊ Maintenance ({toMyanmarNumber(maintenanceCount)}) နှင့် Accident Prediction ({toMyanmarNumber(accidentCount)}) မေးခွန်းနှင့် အဖြေမှန်များ
+            {lang === 'en'
+              ? `Traffic Signs (${signsCount}), Traffic Laws (${lawsCount}), Safe Driving (${safeDrivingCount}), Vehicle Maintenance (${maintenanceCount}), and Accident Prediction (${accidentCount}) with verified correct answers.`
+              : `Traffic Signs (${toMyanmarNumber(signsCount)})၊ Traffic Laws (${toMyanmarNumber(lawsCount)})၊ Safe Driving (${toMyanmarNumber(safeDrivingCount)})၊ Maintenance (${toMyanmarNumber(maintenanceCount)}) နှင့် Accident Prediction (${toMyanmarNumber(accidentCount)}) မေးခွန်းနှင့် အဖြေမှန်များ`}
           </p>
         </div>
 
@@ -83,12 +87,12 @@ export const StudyView: React.FC<StudyViewProps> = ({
             onClick={() => setCategoryFilter('all')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'all'
-                ? 'bg-white text-slate-900 shadow-xs'
+                ? 'bg-white text-slate-900 shadow-xs font-bold'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             <Layers size={13} />
-            <span>အားလုံး ({questions.length})</span>
+            <span>{lang === 'en' ? `All (${questions.length})` : `အားလုံး (${questions.length})`}</span>
           </button>
 
           <button
@@ -101,7 +105,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <ShieldCheck size={13} className="text-emerald-700" />
-            <span>Signs ({signsCount})</span>
+            <span>{lang === 'en' ? `Signs (${signsCount})` : `Signs (${signsCount})`}</span>
           </button>
 
           <button
@@ -114,7 +118,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Scale size={13} className="text-blue-700" />
-            <span>Laws ({lawsCount})</span>
+            <span>{lang === 'en' ? `Laws (${lawsCount})` : `Laws (${lawsCount})`}</span>
           </button>
 
           <button
@@ -127,7 +131,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Car size={13} className="text-amber-700" />
-            <span>Safe ({safeDrivingCount})</span>
+            <span>{lang === 'en' ? `Safe (${safeDrivingCount})` : `Safe (${safeDrivingCount})`}</span>
           </button>
 
           <button
@@ -140,7 +144,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Wrench size={13} className="text-purple-700" />
-            <span>Maintenance ({maintenanceCount})</span>
+            <span>{lang === 'en' ? `Maintenance (${maintenanceCount})` : `Maintenance (${maintenanceCount})`}</span>
           </button>
 
           <button
@@ -153,7 +157,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <AlertTriangle size={13} className="text-rose-700" />
-            <span>Accident ({accidentCount})</span>
+            <span>{lang === 'en' ? `Accident (${accidentCount})` : `Accident (${accidentCount})`}</span>
           </button>
 
           <button
@@ -166,7 +170,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
             }`}
           >
             <Bookmark size={13} className={bookmarkedIds.length > 0 ? 'fill-current text-amber-500' : ''} />
-            <span>မှတ်သားထား ({bookmarkedIds.length})</span>
+            <span>{lang === 'en' ? `Bookmarks (${bookmarkedIds.length})` : `မှတ်သားထား (${bookmarkedIds.length})`}</span>
           </button>
         </div>
 
@@ -177,7 +181,11 @@ export const StudyView: React.FC<StudyViewProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="မေးခွန်း၊ ဥပဒေ၊ နံပါတ် စသည်ဖြင့် ရှာဖွေပါ (Search in Thai, English, or Myanmar)..."
+            placeholder={
+              lang === 'en'
+                ? 'Search by keywords, sign title, or question number...'
+                : 'မေးခွန်း၊ ဥပဒေ၊ နံပါတ် စသည်ဖြင့် ရှာဖွေပါ (Search in Thai, English, or Myanmar)...'
+            }
             className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0b5d3b]/30 focus:border-[#0b5d3b] bg-slate-50/50"
           />
           {searchQuery && (
@@ -195,8 +203,17 @@ export const StudyView: React.FC<StudyViewProps> = ({
       {/* Results Count */}
       <div className="flex items-center justify-between text-xs font-semibold text-slate-600 px-1">
         <span>
-          ရှာဖွေတွေ့ရှိသော မေးခွန်း:{' '}
-          <strong className="text-slate-900 font-bold">{toMyanmarNumber(filteredQuestions.length)}</strong> ခု
+          {lang === 'en' ? (
+            <>
+              Found questions:{' '}
+              <strong className="text-slate-900 font-bold">{filteredQuestions.length}</strong>
+            </>
+          ) : (
+            <>
+              ရှာဖွေတွေ့ရှိသော မေးခွန်း:{' '}
+              <strong className="text-slate-900 font-bold">{toMyanmarNumber(filteredQuestions.length)}</strong> ခု
+            </>
+          )}
         </span>
       </div>
 
@@ -274,11 +291,20 @@ export const StudyView: React.FC<StudyViewProps> = ({
 
                   {/* Question and Options */}
                   <div className="flex-1 space-y-3 w-full">
-                    {/* Question text: Large Primary Text with Myanmar Subtitle */}
+                    {/* Question text */}
                     {lang === 'th_my' ? (
                       <div>
                         <h3 className="font-bold text-sm sm:text-base text-slate-900 font-thai leading-snug">
                           {q.q_th}
+                        </h3>
+                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
+                          {q.q_my}
+                        </p>
+                      </div>
+                    ) : lang === 'en_my' ? (
+                      <div>
+                        <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">
+                          {q.q_en}
                         </h3>
                         <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
                           {q.q_my}
@@ -289,9 +315,6 @@ export const StudyView: React.FC<StudyViewProps> = ({
                         <h3 className="font-bold text-sm sm:text-base text-slate-900 leading-snug">
                           {q.q_en}
                         </h3>
-                        <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                          {q.q_my}
-                        </p>
                       </div>
                     )}
 
@@ -314,7 +337,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                                   opt.isCorrect
                                     ? 'bg-emerald-600 text-white'
                                     : 'bg-slate-200 text-slate-600'
-                                }`}
+                                  }`}
                               >
                                 {letter}
                               </span>
@@ -339,13 +362,19 @@ export const StudyView: React.FC<StudyViewProps> = ({
                                       {opt.my}
                                     </div>
                                   </div>
-                                ) : (
+                                ) : lang === 'en_my' ? (
                                   <div>
                                     <div className="font-semibold leading-tight text-slate-900">
                                       {opt.en}
                                     </div>
                                     <div className="font-myanmar text-[11px] text-slate-500 leading-tight mt-0.5">
                                       {opt.my}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div>
+                                    <div className="font-semibold leading-tight text-slate-900">
+                                      {opt.en}
                                     </div>
                                   </div>
                                 )}
@@ -367,9 +396,13 @@ export const StudyView: React.FC<StudyViewProps> = ({
         ) : (
           <div className="bg-white rounded-2xl p-8 text-center text-slate-500 font-myanmar border border-slate-200">
             <BookOpen size={32} className="mx-auto text-slate-300 mb-2" />
-            <p className="font-bold text-slate-700">ရှာမတွေ့ပါ</p>
+            <p className="font-bold text-slate-700">
+              {lang === 'en' ? 'No Questions Found' : 'ရှာမတွေ့ပါ'}
+            </p>
             <p className="text-xs text-slate-500 mt-1">
-              ရှာဖွေမှုစကားလုံး အစားထိုး၍ ပြန်လည်စစ်ဆေးကြည့်ပါ။
+              {lang === 'en'
+                ? 'Try a different keyword or reset the category filter.'
+                : 'ရှာဖွေမှုစကားလုံး အစားထိုး၍ ပြန်လည်စစ်ဆေးကြည့်ပါ။'}
             </p>
           </div>
         )}

@@ -36,7 +36,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   return (
     <div className="space-y-6">
       {/* Official Sign Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-[#0b5d3b] text-white p-6 sm:p-7 shadow-lg border-4 border-white outline-4 outline-[#0b5d3b]">
+      <div className="relative overflow-hidden rounded-2xl bg-[#0b5d3b] text-white p-5 sm:p-7 shadow-lg border-4 border-white outline-4 outline-[#0b5d3b]">
         {/* Highway sign bolts decoration */}
         <div className="absolute top-2.5 left-2.5 w-2 h-2 rounded-full bg-slate-300 border border-slate-600 shadow-inner" />
         <div className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-slate-300 border border-slate-600 shadow-inner" />
@@ -53,7 +53,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
               Thai Driving License Practice
             </h1>
             <p className="text-sm sm:text-base text-[#cfe9da] font-myanmar leading-relaxed">
-              ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving၊ ယာဉ်ထိန်းသိမ်းရေး နှင့် မတော်တဆမှု ကြိုတင်ခန့်မှန်းခြင်း မေးခွန်းများ ({toMyanmarNumber(totalQuestions)} ခု)
+              {lang === 'en'
+                ? `Official exam preparation bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
+                : `ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving၊ ယာဉ်ထိန်းသိမ်းရေး နှင့် မတော်တဆမှု ကြိုတင်ခန့်မှန်းခြင်း မေးခွန်းများ (${toMyanmarNumber(totalQuestions)} ခု)`}
             </p>
           </div>
 
@@ -63,17 +65,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 {totalQuestions}
               </div>
               <div className="text-[11px] font-semibold text-white/90 mt-1">
-                မေးခွန်းစုစုပေါင်း
+                {lang === 'en' ? 'Total Questions' : 'မေးခွန်းစုစုပေါင်း'}
               </div>
               <div className="text-[9px] text-[#cfe9da]">
-                Total Bank
+                5 Categories
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Categories Overview Pills */}
+      {/* Categories Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
         {/* Category 1: Signs */}
         <div 
@@ -89,10 +91,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 1
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                ป้ายและเครื่องหมายจราจร
+                {lang === 'en' ? 'Traffic Signs' : 'ป้ายและเครื่องหมายจราจร'}
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Traffic Signs & Markings ({toMyanmarNumber(signsCount)} ခု)
+                {lang === 'en'
+                  ? `Signs & Markings (${signsCount})`
+                  : `Traffic Signs (${toMyanmarNumber(signsCount)} ခု)`}
               </div>
             </div>
           </div>
@@ -115,10 +119,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 2
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                กฎหมายว่าด้วยการจราจรทางบก
+                {lang === 'en' ? 'Traffic Laws' : 'กฎหมายว่าด้วยการจราจรทางบก'}
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Traffic Laws ({toMyanmarNumber(lawsCount)} ခု)
+                {lang === 'en'
+                  ? `Traffic Laws (${lawsCount})`
+                  : `Traffic Laws (${toMyanmarNumber(lawsCount)} ခု)`}
               </div>
             </div>
           </div>
@@ -141,10 +147,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 3
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                การขับขี่อย่างปลอดภัย
+                {lang === 'en' ? 'Safe Driving' : 'การขับขี่อย่างปลอดภัย'}
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Safe Driving ({toMyanmarNumber(safeDrivingCount)} ခု)
+                {lang === 'en'
+                  ? `Safe Driving (${safeDrivingCount})`
+                  : `Safe Driving (${toMyanmarNumber(safeDrivingCount)} ခု)`}
               </div>
             </div>
           </div>
@@ -167,10 +175,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 4
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                การบำรุงรักษารถ
+                {lang === 'en' ? 'Maintenance' : 'การบำรุงรักษารถ'}
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Vehicle Maintenance ({toMyanmarNumber(maintenanceCount)} ခု)
+                {lang === 'en'
+                  ? `Maintenance (${maintenanceCount})`
+                  : `Vehicle Maintenance (${toMyanmarNumber(maintenanceCount)} ခု)`}
               </div>
             </div>
           </div>
@@ -193,10 +203,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 5
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                การคาดการณ์อุบัติเหตุ
+                {lang === 'en' ? 'Accident Prediction' : 'การคาดการณ์อุบัติเหตุ'}
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                Accident Prediction ({toMyanmarNumber(accidentPredictionCount)} ခု)
+                {lang === 'en'
+                  ? `Hazard Prediction (${accidentPredictionCount})`
+                  : `Accident Prediction (${toMyanmarNumber(accidentPredictionCount)} ခု)`}
               </div>
             </div>
           </div>
@@ -212,11 +224,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="flex items-center gap-2">
             <Layers size={18} className="text-[#0b5d3b]" />
             <h3 className="font-bold text-slate-900 text-sm sm:text-base font-myanmar">
-              ဖြေဆိုလိုသော ကဏ္ဍ ရွေးချယ်ပါ (Select Exam Scope)
+              {lang === 'en'
+                ? 'Select Exam Scope (Category Filter)'
+                : 'ဖြေဆိုလိုသော ကဏ္ဍ ရွေးချယ်ပါ (Select Exam Scope)'}
             </h3>
           </div>
           <span className="text-xs text-slate-500 font-medium">
-            ကျပန်း ၅၀ ခု ရွေးထုတ်မည်
+            {lang === 'en' ? '50 questions randomly drawn' : 'ကျပန်း ၅၀ ခု ရွေးထုတ်မည်'}
           </span>
         </div>
 
@@ -230,9 +244,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 : 'border-slate-200 hover:border-slate-300 text-slate-700'
             }`}
           >
-            <div className="font-bold">အားလုံး (All Topics)</div>
+            <div className="font-bold">{lang === 'en' ? 'All Topics' : 'အားလုံး (All)'}</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              {toMyanmarNumber(totalQuestions)} ခုလုံးထဲမှ ကျပန်း ၅၀
+              {lang === 'en'
+                ? `Random 50 of ${totalQuestions}`
+                : `${toMyanmarNumber(totalQuestions)} ခုလုံးထဲမှ ကျပန်း ၅၀`}
             </div>
           </button>
 
@@ -247,7 +263,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Traffic Signs</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ဆိုင်းဘုတ် {toMyanmarNumber(signsCount)} ခု
+              {lang === 'en' ? `${signsCount} questions` : `ဆိုင်းဘုတ် ${toMyanmarNumber(signsCount)} ခု`}
             </div>
           </button>
 
@@ -262,7 +278,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Traffic Laws</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ဥပဒေ {toMyanmarNumber(lawsCount)} ခု
+              {lang === 'en' ? `${lawsCount} questions` : `ဥပဒေ ${toMyanmarNumber(lawsCount)} ခု`}
             </div>
           </button>
 
@@ -277,7 +293,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Safe Driving</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              {toMyanmarNumber(safeDrivingCount)} ခု
+              {lang === 'en' ? `${safeDrivingCount} questions` : `${toMyanmarNumber(safeDrivingCount)} ခု`}
             </div>
           </button>
 
@@ -292,7 +308,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Maintenance</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              ယာဉ်ထိန်းသိမ်းမှု ({toMyanmarNumber(maintenanceCount)} ခု)
+              {lang === 'en' ? `${maintenanceCount} questions` : `ယာဉ်ထိန်းသိမ်းမှု (${toMyanmarNumber(maintenanceCount)} ခု)`}
             </div>
           </button>
 
@@ -307,7 +323,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <div className="font-bold">Accident Prediction</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
-              မတော်တဆမှုခန့်မှန်း ({toMyanmarNumber(accidentPredictionCount)} ခု)
+              {lang === 'en' ? `${accidentPredictionCount} questions` : `မတော်တဆမှုခန့်မှန်း (${toMyanmarNumber(accidentPredictionCount)} ခု)`}
             </div>
           </button>
         </div>
@@ -320,10 +336,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
         <div className="text-xs sm:text-sm text-amber-950 font-myanmar space-y-1">
           <p className="font-semibold text-amber-900">
-            ထိုင်း DLT စာမေးပွဲ စည်းကမ်းချက် - စုစုပေါင်း ၅၀ မေးခွန်းအနက် ၄၅ မှတ် (၉၀%) ရရှိမှ အောင်မြင်မည်။
+            {lang === 'en'
+              ? 'Official DLT Exam Standard: 45 out of 50 correct answers (90%) required to pass.'
+              : 'ထိုင်း DLT စာမေးပွဲ စည်းကမ်းချက် - စုစုပေါင်း ၅၀ မေးခွန်းအနက် ၄၅ မှတ် (၉၀%) ရရှိမှ အောင်မြင်မည်။'}
           </p>
           <p className="text-amber-800 text-xs">
-            မေးခွန်းအားလုံးတွင် ထိုင်းစာ သို့မဟုတ် အင်္ဂလိပ်စာကို အဓိကကြီးကြီးပြသထားပြီး မြန်မာစာကို အောက်မှ သေးသေးဖြင့် ဘာသာပြန်ပြသပေးပါသည်။
+            {lang === 'en'
+              ? 'Each exam draws 50 randomized questions with official diagrams and standardized answer choices.'
+              : 'မေးခွန်းအားလုံးတွင် ထိုင်းစာ သို့မဟုတ် အင်္ဂလိပ်စာကို အဓိကကြီးကြီးပြသထားပြီး မြန်မာစာကို အောက်မှ သေးသေးဖြင့် ဘာသာပြန်ပြသပေးပါသည်။'}
           </p>
         </div>
       </div>
@@ -338,17 +358,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Sparkles size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                Recommended · အကြံပြုထားသည်
+                {lang === 'en' ? 'Recommended for Learning' : 'Recommended · အကြံပြုထားသည်'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
-              လေ့ကျင့်ရေး မုဒ် (ကျပန်း ၅၀)
+              {lang === 'en' ? 'Practice Mode (50 Random)' : 'လေ့ကျင့်ရေး မုဒ် (ကျပန်း ၅၀)'}
             </h2>
             <div className="text-xs text-slate-500 font-medium mt-0.5">
               Practice Mode · Instant Feedback
             </div>
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
-              တစ်ခုဖြေဆိုတိုင်း အဖြေမှန်/မှားနှင့် ဘာသာပြန်ချက်ကို ချက်ချင်းပြသပေးမည်။ လေ့ကျင့်မှတ်သားရန် အကောင်းဆုံးဖြစ်သည်။
+              {lang === 'en'
+                ? 'Instant feedback after each question with immediate right/wrong answer highlights. Best for step-by-step study.'
+                : 'တစ်ခုဖြေဆိုတိုင်း အဖြေမှန်/မှားနှင့် ဘာသာပြန်ချက်ကို ချက်ချင်းပြသပေးမည်။ လေ့ကျင့်မှတ်သားရန် အကောင်းဆုံးဖြစ်သည်။'}
             </p>
           </div>
 
@@ -358,7 +380,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
             className="mt-5 w-full py-3 px-4 rounded-xl bg-[#f2b705] hover:bg-[#e0a800] active:scale-[0.99] text-slate-950 font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
           >
             <Play size={17} className="fill-current" />
-            <span>လေ့ကျင့်မှု စတင်မည် (Instant Feedback)</span>
+            <span>
+              {lang === 'en' ? 'Start Practice (Instant Feedback)' : 'လေ့ကျင့်မှု စတင်မည် (Instant Feedback)'}
+            </span>
           </button>
         </div>
 
@@ -370,17 +394,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Clock size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                Official Standard · စာမေးပွဲအစစ်ပုံစံ
+                {lang === 'en' ? 'Official Exam Format' : 'Official Standard · စာမေးပွဲအစစ်ပုံစံ'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
-              စာမေးပွဲ အစစ်အမှန် မုဒ် (ကျပန်း ၅၀)
+              {lang === 'en' ? 'Real Exam Simulation (50 Random)' : 'စာမေးပွဲ အစစ်အမှန် မုဒ် (ကျပန်း ၅၀)'}
             </h2>
             <div className="text-xs text-slate-500 font-medium mt-0.5">
               Real Exam Simulation · 60 Mins Timer
             </div>
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
-              အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ အောင်/ရှုံး ရမှတ်စာရင်းပြသမည်။
+              {lang === 'en'
+                ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and pass/fail verdict upon submit.'
+                : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ အောင်/ရှုံး ရမှတ်စာရင်းပြသမည်။'}
             </p>
           </div>
 
@@ -390,7 +416,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
             className="mt-5 w-full py-3 px-4 rounded-xl bg-[#0b5d3b] hover:bg-[#08482e] active:scale-[0.99] text-white font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
           >
             <Clock size={17} />
-            <span>စာမေးပွဲစစ်ဆေးမည် (Exam Simulation)</span>
+            <span>
+              {lang === 'en' ? 'Start Exam Simulation (60m)' : 'စာမေးပွဲစစ်ဆေးမည် (Exam Simulation)'}
+            </span>
           </button>
         </div>
       </div>
@@ -403,10 +431,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           <div>
             <h3 className="font-bold text-slate-900">
-              မေးခွန်း {toMyanmarNumber(totalQuestions)} ခုလုံး လေ့လာဖတ်ရှုရန် (Study Bank)
+              {lang === 'en'
+                ? `Full Question Bank Study (${totalQuestions} Questions)`
+                : `မေးခွန်း ${toMyanmarNumber(totalQuestions)} ခုလုံး လေ့လာဖတ်ရှုရန် (Study Bank)`}
             </h3>
             <p className="text-xs text-slate-600 font-myanmar">
-              ဆိုင်းဘုတ် ({toMyanmarNumber(signsCount)}) + ဥပဒေ ({toMyanmarNumber(lawsCount)}) + Safe Driving ({toMyanmarNumber(safeDrivingCount)}) + Maintenance ({toMyanmarNumber(maintenanceCount)}) ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။
+              {lang === 'en'
+                ? `Browse all ${totalQuestions} questions across Traffic Signs (${signsCount}), Laws (${lawsCount}), Safe Driving (${safeDrivingCount}), Maintenance (${maintenanceCount}), and Accident Prediction (${accidentPredictionCount}) with correct answers.`
+                : `ဆိုင်းဘုတ် (${toMyanmarNumber(signsCount)}) + ဥပဒေ (${toMyanmarNumber(lawsCount)}) + Safe Driving (${toMyanmarNumber(safeDrivingCount)}) + Maintenance (${toMyanmarNumber(maintenanceCount)}) + Accident Prediction (${toMyanmarNumber(accidentPredictionCount)}) ခုလုံးကို အဖြေမှန်များနှင့်တကွ ရှာဖွေလေ့လာနိုင်ပါသည်။`}
             </p>
           </div>
         </div>
@@ -414,9 +446,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <button
           type="button"
           onClick={() => onNavigateStudy()}
-          className="px-4 py-2.5 rounded-xl border-2 border-[#0b5d3b] text-[#0b5d3b] hover:bg-[#0b5d3b] hover:text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap"
+          className="px-4 py-2.5 rounded-xl border-2 border-[#0b5d3b] text-[#0b5d3b] hover:bg-[#0b5d3b] hover:text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors whitespace-nowrap shrink-0"
         >
-          <span>{toMyanmarNumber(totalQuestions)} ခုလုံး ကြည့်ရှုမည်</span>
+          <span>
+            {lang === 'en' ? `Browse All ${totalQuestions}` : `${toMyanmarNumber(totalQuestions)} ခုလုံး ကြည့်ရှုမည်`}
+          </span>
           <ArrowRight size={15} />
         </button>
       </div>
@@ -426,7 +460,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
-              className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm ${
+              className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm shrink-0 ${
                 latestAttempt.passed ? 'bg-emerald-600' : 'bg-red-600'
               }`}
             >
@@ -434,12 +468,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <div>
               <div className="text-xs font-semibold text-slate-500">
-                နောက်ဆုံးဖြေဆိုခဲ့သော ရလဒ် ({latestAttempt.date})
+                {lang === 'en'
+                  ? `Latest Attempt (${latestAttempt.date})`
+                  : `နောက်ဆုံးဖြေဆိုခဲ့သော ရလဒ် (${latestAttempt.date})`}
               </div>
               <div className="font-bold text-sm text-slate-900 font-myanmar">
-                ရမှတ်: {latestAttempt.score} / {latestAttempt.total} ·{' '}
+                {lang === 'en' ? 'Score: ' : 'ရမှတ်: '}
+                {lang === 'en' ? latestAttempt.score : toMyanmarNumber(latestAttempt.score)} /{' '}
+                {lang === 'en' ? latestAttempt.total : toMyanmarNumber(latestAttempt.total)} ·{' '}
                 <span className={latestAttempt.passed ? 'text-emerald-700 font-bold' : 'text-red-700 font-bold'}>
-                  {latestAttempt.passed ? 'အောင်မြင်ခဲ့သည် ✔' : 'မအောင်မြင်သေးပါ ✘'}
+                  {latestAttempt.passed
+                    ? (lang === 'en' ? 'Passed ✔' : 'အောင်မြင်ခဲ့သည် ✔')
+                    : (lang === 'en' ? 'Did not pass ✘' : 'မအောင်မြင်သေးပါ ✘')}
                 </span>
               </div>
             </div>
@@ -449,7 +489,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             onClick={() => onStartExam('instant', 'all')}
             className="text-xs font-bold text-[#0b5d3b] hover:underline"
           >
-            ထပ်မံဖြေဆိုရန် →
+            {lang === 'en' ? 'Retake Exam →' : 'ထပ်မံဖြေဆိုရန် →'}
           </button>
         </div>
       )}
@@ -457,7 +497,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* Source Citation */}
       <div className="text-center pt-2 text-[11px] text-slate-500 font-myanmar leading-relaxed space-y-1">
         <div>
-          မေးခွန်းရင်းမြစ်များ:{' '}
+          {lang === 'en' ? 'Question Sources: ' : 'မေးခွန်းရင်းမြစ်များ: '}
           <a
             href="https://thaidriveexam.com/article-1000000000015"
             target="_blank"
@@ -466,14 +506,41 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             Traffic Signs (117)
           </a>{' '}
-          &{' '}
+          ·{' '}
           <a
             href="https://thaidriveexam.com/article-1000000000016"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#0b5d3b] hover:underline font-sans font-medium"
           >
-            Traffic Laws (74)
+            Laws (74)
+          </a>{' '}
+          ·{' '}
+          <a
+            href="https://thaidriveexam.com/article-1000000000022"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0b5d3b] hover:underline font-sans font-medium"
+          >
+            Safe Driving (249)
+          </a>{' '}
+          ·{' '}
+          <a
+            href="https://thaidriveexam.com/article-1000000000017"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0b5d3b] hover:underline font-sans font-medium"
+          >
+            Maintenance (81)
+          </a>{' '}
+          ·{' '}
+          <a
+            href="https://thaidriveexam.com/article-1000000000023"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0b5d3b] hover:underline font-sans font-medium"
+          >
+            Accident (77)
           </a>
         </div>
       </div>
