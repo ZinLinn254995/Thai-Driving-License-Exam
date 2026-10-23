@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Bookmark, Flag, CheckCircle2, XCircle, ArrowLeft, ArrowRight, Clock, HelpCircle, Grid, X, ShieldCheck, Scale, Car, Wrench, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, LanguageMode, ExamMode, UserAnswer } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
@@ -34,6 +34,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes for 50 questions
   const [showGridModal, setShowGridModal] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const submitExamRef = useRef<() => void>(() => {});
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentQ = questions[currentIndex];
   const isBookmarked = bookmarkedIds.includes(currentQ.id);
@@ -41,21 +43,40 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const isRevealed = revealedQuestions[currentIndex];
   const selectedIndex = userAnswers[currentIndex];
 
+  const handleSubmitExam = useCallback(() => {
+    const answers: UserAnswer[] = questions.map((q, idx) => {
+      const selected = userAnswers[idx];
+      const isCorrect = selected !== undefined ? q.options[selected]?.isCorrect : false;
+      return {
+        questionId: q.id,
+        selectedOptionIndex: selected !== undefined ? selected : -1,
+        isCorrect
+      };
+    });
+    onFinishExam(answers);
+  }, [questions, userAnswers, onFinishExam]);
+
+  // Keep the timer callback pointed at the latest answers without restarting the interval.
+  submitExamRef.current = handleSubmitExam;
+
   // Timer for Timed Exam mode
   useEffect(() => {
     if (mode !== 'timed') return;
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          handleSubmitExam();
-          return 0;
-        }
-        return prev - 1;
-      });
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => Math.max(0, prev - 1));
     }, 1000);
-    return () => clearInterval(timer);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+      timerRef.current = null;
+    };
   }, [mode]);
+
+  useEffect(() => {
+    if (mode !== 'timed' || timeLeft !== 0) return;
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = null;
+    submitExamRef.current();
+  }, [mode, timeLeft]);
 
   // Option selection handler
   const handleSelectOption = useCallback((optionIndex: number) => {
@@ -92,7 +113,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
         setShowConfirmModal(true);
       }
     }
-  }, [currentIndex, questions.length, mode]);
+  }, [currentIndex, questions.length, mode, handleSubmitExam]);
 
   const handlePrev = useCallback(() => {
     if (currentIndex > 0) {
@@ -106,18 +127,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
     );
   };
 
-  const handleSubmitExam = () => {
-    const answers: UserAnswer[] = questions.map((q, idx) => {
-      const selected = userAnswers[idx];
-      const isCorrect = selected !== undefined ? q.options[selected]?.isCorrect : false;
-      return {
-        questionId: q.id,
-        selectedOptionIndex: selected !== undefined ? selected : -1,
-        isCorrect
-      };
-    });
-    onFinishExam(answers);
-  };
+
 
   // Keyboard shortcut support
   useEffect(() => {
