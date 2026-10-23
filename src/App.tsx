@@ -213,6 +213,14 @@ export default function App() {
         onToggleSound={handleToggleSound}
         currentView={currentView}
         onNavigate={(view) => {
+          // Leaving a timed exam discards the in-progress attempt, so ask before unmounting it.
+          if (
+            currentView === 'quiz' &&
+            quizMode === 'timed' &&
+            !window.confirm('Leave this timed exam? Your current answers will not be saved.')
+          ) {
+            return;
+          }
           setCurrentView(view);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}

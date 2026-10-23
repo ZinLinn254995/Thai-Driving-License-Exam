@@ -46,3 +46,22 @@ test('timed practice shows a timer and confirms before final submission', async 
 
   await expect(page.getByText(/Practice Target Reached|Keep Practicing/)).toBeVisible();
 });
+
+test('timed exam warns before leaving through the main navigation', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Start Timed Practice (60m)' }).click();
+
+  page.once('dialog', async (dialog) => {
+    expect(dialog.message()).toContain('Leave this timed exam?');
+    await dialog.dismiss();
+  });
+  await page.getByRole('button', { name: /Question Bank/ }).click();
+  await expect(page.getByRole('timer', { name: /Time remaining:/ })).toBeVisible();
+
+  page.once('dialog', async (dialog) => {
+    expect(dialog.message()).toContain('Your current answers will not be saved');
+    await dialog.accept();
+  });
+  await page.getByRole('button', { name: /Question Bank/ }).click();
+  await expect(page.getByRole('heading', { name: /Study All .* Exam Questions/ })).toBeVisible();
+});
