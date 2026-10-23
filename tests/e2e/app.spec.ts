@@ -19,7 +19,7 @@ test('mobile learner can navigate a quiz, submit an answer, view results, and sa
 
   await expect(page.getByText(/Question\s+1\s+of\s+\d+/)).toBeVisible();
   await page.getByTitle('Question Navigator').click();
-  await expect(page.getByRole('dialog', { name: 'Question Navigator' })).toBeVisible();
+  await expect(page.getByRole('dialog', { name: /Question Navigator/ })).toBeVisible();
   await page.getByRole('button', { name: /Go to question 50/ }).click();
 
   await expect(page.getByText(/Question\s+50\s+of\s+\d+/)).toBeVisible();
