@@ -109,19 +109,20 @@ export function getBookmarks(): number[] {
   }
 }
 
-export function toggleBookmark(questionId: number): boolean {
+export function toggleBookmark(questionId: number): boolean | null {
+  // null means the requested change could not be persisted.
+  if (!Number.isSafeInteger(questionId) || questionId <= 0) return null;
+
   try {
     const bookmarks = getBookmarks();
-    let updated: number[];
     const isBookmarked = bookmarks.includes(questionId);
-    if (isBookmarked) {
-      updated = bookmarks.filter((id) => id !== questionId);
-    } else {
-      updated = [...bookmarks, questionId];
-    }
+    const updated = isBookmarked
+      ? bookmarks.filter((id) => id !== questionId)
+      : [...bookmarks, questionId];
+
     localStorage.setItem(STORAGE_KEY_BOOKMARKS, JSON.stringify(updated));
     return !isBookmarked;
   } catch {
-    return false;
+    return null;
   }
 }
