@@ -141,6 +141,15 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // Keyboard shortcut support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Let keyboard users dismiss an open dialog without accidentally triggering quiz shortcuts.
+      if (e.key === 'Escape') {
+        if (showExitConfirmModal) setShowExitConfirmModal(false);
+        else if (showConfirmModal) setShowConfirmModal(false);
+        else if (showGridModal) setShowGridModal(false);
+        else return;
+        e.preventDefault();
+        return;
+      }
       if (showGridModal || showConfirmModal || showExitConfirmModal) return;
 
       // Do not let quiz shortcuts interfere with text entry or browser/system shortcuts.
