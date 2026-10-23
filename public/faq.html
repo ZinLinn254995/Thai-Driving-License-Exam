@@ -26,7 +26,7 @@
   </style>
 </head>
 <body>
-<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html" aria-current="page">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a></nav></header>
+<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html" aria-current="page">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a><button id="myanmar-toggle" type="button" aria-pressed="false" style="border:1px solid rgba(255,255,255,.55);border-radius:8px;background:#074028;color:white;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer">Show Myanmar</button></nav></header>
 <main>
   <article>
     <h1>Frequently Asked Questions</h1>
@@ -43,7 +43,7 @@
 
     <h2>Can I read questions in English and Myanmar?</h2>
     <p>The main interface and original practice wording are in English. Use the <strong>Show Myanmar</strong> button to reveal Myanmar (Burmese) translations for supported quiz questions and answer choices. This feature is intended to help Myanmar-speaking learners understand the material while practising English; it does not turn the site into an official bilingual exam resource. Translations are learning aids and may not capture every nuance. If an English question and its translation seem inconsistent, do not assume either version is authoritative—verify the underlying rule and report the issue through the <a href="/contact.html">Contact page</a>.</p>
-<p lang="my">ဤ Website တွင် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို ပိုနားလည်ရန် <strong>Show Myanmar</strong> ခလုတ်ကို နှိပ်ကာ မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။ ဘာသာပြန်သည် လေ့လာရာတွင် အထောက်အကူပြုရန်ဖြစ်ပြီး တရားဝင်စာမေးပွဲနှင့် တစ်ထပ်တည်းဖြစ်ကြောင်း အာမခံခြင်းမဟုတ်ပါ။</p>
+<p lang="my" hidden>ဤ Website တွင် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို ပိုနားလည်ရန် <strong>Show Myanmar</strong> ခလုတ်ကို နှိပ်ကာ မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။ ဘာသာပြန်သည် လေ့လာရာတွင် အထောက်အကူပြုရန်ဖြစ်ပြီး တရားဝင်စာမေးပွဲနှင့် တစ်ထပ်တည်းဖြစ်ကြောင်း အာမခံခြင်းမဟုတ်ပါ။</p>
 
     <h2>Does the website save my progress?</h2>
     <p>The current app stores supported preferences, bookmarks, and recent practice history in browser storage on your device. These records may not transfer to another browser or device, and clearing the site's browser data may remove them. On a shared device, other people using the same browser profile may be able to see saved information. Read the <a href="/privacy.html">Privacy Policy</a> for more detail.</p>
@@ -67,5 +67,30 @@
   </article>
 </main>
 <footer>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</footer>
+
+<script>
+(() => {
+  const key = 'thai_drive_show_myanmar';
+  const button = document.getElementById('myanmar-toggle');
+  const translations = document.querySelectorAll('[lang="my"]');
+  if (!button) return;
+  const readPreference = () => {
+    try { return localStorage.getItem(key) === 'true'; }
+    catch { return false; }
+  };
+  const update = (enabled) => {
+    translations.forEach((item) => { item.hidden = !enabled; });
+    button.setAttribute('aria-pressed', String(enabled));
+    button.textContent = enabled ? 'Hide Myanmar' : 'Show Myanmar';
+  };
+  button.addEventListener('click', () => {
+    const enabled = !readPreference();
+    try { localStorage.setItem(key, String(enabled)); } catch {}
+    update(enabled);
+  });
+  update(readPreference());
+})();
+</script>
+
 </body>
 </html>
