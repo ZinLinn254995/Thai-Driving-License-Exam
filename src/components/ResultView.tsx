@@ -21,6 +21,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   questions,
   answers,
   lang,
+  showMyanmar,
   totalQuestions = 598,
   onRetakeNew,
   onRetakeMistakes,
