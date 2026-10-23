@@ -87,3 +87,15 @@ test('timed exam exit button confirms leaving and allows continuing safely', asy
   await expect(page.getByRole('heading', { name: 'Thai Driving License Practice' })).toBeVisible();
   await expect(page.getByRole('timer', { name: /Time remaining:/ })).toHaveCount(0);
 });
+
+test('mobile learner can open a category card using native button controls', async ({ page }) => {
+  await page.goto('/');
+
+  const trafficSignsCard = page.getByRole('button', { name: 'Study Traffic Signs (117 questions)' });
+  await expect(trafficSignsCard).toBeVisible();
+  await trafficSignsCard.focus();
+  await page.keyboard.press('Enter');
+
+  await expect(page.getByRole('heading', { name: /Study All .* Exam Questions/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: /Traffic Signs/ })).toBeVisible();
+});
