@@ -45,11 +45,18 @@ export function getExamHistory(): ExamHistoryItem[] {
         typeof record.date === 'string' &&
         typeof record.score === 'number' &&
         Number.isFinite(record.score) &&
+        Number.isInteger(record.score) &&
+        record.score >= 0 &&
         typeof record.total === 'number' &&
         Number.isFinite(record.total) &&
+        Number.isInteger(record.total) &&
         record.total > 0 &&
+        record.score <= record.total &&
         typeof record.percentage === 'number' &&
         Number.isFinite(record.percentage) &&
+        Number.isInteger(record.percentage) &&
+        record.percentage >= 0 &&
+        record.percentage <= 100 &&
         typeof record.passed === 'boolean' &&
         (record.mode === 'timed' || record.mode === 'instant')
       );
@@ -93,7 +100,7 @@ export function getBookmarks(): number[] {
     if (!Array.isArray(parsed)) return [];
 
     return [...new Set(parsed.filter(
-      (id): id is number => typeof id === 'number' && Number.isSafeInteger(id)
+      (id): id is number => typeof id === 'number' && Number.isSafeInteger(id) && id > 0
     ))];
   } catch {
     return [];
