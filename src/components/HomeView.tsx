@@ -37,7 +37,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
   return (
     <div className="space-y-6">
-      {/* Official Sign Banner */}
+      {/* Independent practice introduction banner */}
       <div className="relative overflow-hidden rounded-2xl bg-[#0b5d3b] text-white p-5 sm:p-7 shadow-lg border-4 border-white outline-4 outline-[#0b5d3b]">
         {/* Highway sign bolts decoration */}
         <div className="absolute top-2.5 left-2.5 w-2 h-2 rounded-full bg-slate-300 border border-slate-600 shadow-inner" />
@@ -393,7 +393,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </button>
         </div>
 
-        {/* Mode 2: Real Exam Simulation */}
+        {/* Mode 2: Timed Exam Practice */}
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -401,14 +401,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Clock size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                {lang === 'en' ? 'Timed Practice' : 'Official Standard · စာမေးပွဲအစစ်ပုံစံ'}
+                {lang === 'en' ? 'Timed Practice' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
-              {lang === 'en' ? 'Real Exam Simulation (50 Random)' : 'စာမေးပွဲ အစစ်အမှန် မုဒ် (ကျပန်း ၅၀)'}
+              {lang === 'en' ? 'Timed Exam Practice (50 Random)' : 'အချိန်ကန့်သတ် စာမေးပွဲလေ့ကျင့်မှု (ကျပန်း ၅၀)'}
             </h2>
             <div className="text-xs text-slate-500 font-medium mt-0.5">
-              Real Exam Simulation · 60 Mins Timer
+              Timed Practice · 60-Minute Timer
             </div>
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
               {lang === 'en'
@@ -424,7 +424,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <Clock size={17} />
             <span>
-              {lang === 'en' ? 'Start Exam Simulation (60m)' : 'စာမေးပွဲစစ်ဆေးမည် (Exam Simulation)'}
+              {lang === 'en' ? 'Start Timed Practice (60m)' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု စတင်မည် (၆၀ မိနစ်)'}
             </span>
           </button>
         </div>

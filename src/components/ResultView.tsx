@@ -31,7 +31,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   const total = questions.length;
   const correctCount = answers.filter((a) => a.isCorrect).length;
   const percentage = Math.round((correctCount / total) * 100);
-  const passed = percentage >= 90; // Official Thai DLT pass criteria: 90% (45/50)
+  const passed = percentage >= 90; // Practice target: 90%; verify current official requirements with Thailand's DLT.
 
   // Find mistake questions
   const mistakes = answers
@@ -50,7 +50,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
-      {/* Official Result Banner */}
+      {/* Practice result banner */}
       <div
         className={`rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg border-4 border-white outline-4 relative overflow-hidden ${
           passed
@@ -61,7 +61,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         <div className="space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
             {passed ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-            <span>{passed ? 'Official Standard: Passed' : 'Official Standard: Failed'}</span>
+            <span>{passed ? 'Practice Target Reached' : 'Keep Practicing'}</span>
           </div>
 
           {/* Big Score */}
@@ -88,8 +88,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
               {lang === 'en'
                 ? passed
-                  ? 'Score of 90% or higher meets the official Thailand DLT license requirements.'
-                  : 'Official Thai driving license exam requires at least 45 out of 50 correct answers (90%).'
+                  ? 'You reached this practice tool’s 90% target. Check current requirements with Thailand’s Department of Land Transport.'
+                  : 'This practice tool uses a 90% target (45 out of 50). Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
                 : passed
                 ? 'ထိုင်းယာဉ်မောင်းလိုင်စင် သတ်မှတ်ချက် (၉၀% နှင့်အထက်) ပြည့်မီပါသည်။'
                 : 'ထိုင်းယာဉ်မောင်းလိုင်စင်အတွက် ၄၅ မှတ် (၉၀%) အနည်းဆုံး လိုအပ်ပါသည်။'}
