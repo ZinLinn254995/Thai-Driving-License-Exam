@@ -262,6 +262,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs font-semibold">
           <button
             type="button"
+            aria-pressed={selectedTopic === 'all'}
             onClick={() => setSelectedTopic('all')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'all'
@@ -279,6 +280,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'traffic_signs'}
             onClick={() => setSelectedTopic('traffic_signs')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'traffic_signs'
@@ -294,6 +296,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'traffic_laws'}
             onClick={() => setSelectedTopic('traffic_laws')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'traffic_laws'
@@ -309,6 +312,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'safe_driving'}
             onClick={() => setSelectedTopic('safe_driving')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'safe_driving'
@@ -324,6 +328,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'vehicle_maintenance'}
             onClick={() => setSelectedTopic('vehicle_maintenance')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'vehicle_maintenance'
@@ -339,6 +344,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'accident_prediction'}
             onClick={() => setSelectedTopic('accident_prediction')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'accident_prediction'
