@@ -341,6 +341,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'
               }`}
               title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+              aria-label={isBookmarked ? 'Remove question bookmark' : 'Bookmark question'}
+              aria-pressed={isBookmarked}
             >
               <Bookmark size={16} className={isBookmarked ? 'fill-current' : ''} />
             </button>
