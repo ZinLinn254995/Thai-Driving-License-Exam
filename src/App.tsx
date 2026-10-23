@@ -193,7 +193,9 @@ export default function App() {
       try {
         localStorage.removeItem('thai_drive_exam_history');
         setExamHistory([]);
-      } catch {}
+      } catch {
+        window.alert('Could not clear practice history from browser storage. Check your browser settings and try again.');
+      }
     }
   };
 
