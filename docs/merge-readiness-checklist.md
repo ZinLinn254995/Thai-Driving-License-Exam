@@ -1,6 +1,6 @@
 # Merge readiness: website quality and release preparation
 
-This checklist prioritizes learner safety, content quality, accessibility, reliability, SEO, and release readiness. Google AdSense integration is not a project goal. Monetization is undecided and no advertising platform should be built unless the user explicitly changes that direction. This checklist does not authorize merging this branch into `main`.
+This checklist covers app quality, accessibility, reliability, SEO, and release readiness only. Question/answer content, translations, traffic-sign-to-image matching, and asset licensing are explicitly reserved for a separate data-audit branch and are not tasks for this branch. Google AdSense integration is not a project goal; monetization is undecided and no advertising platform should be built unless the user explicitly changes that direction. This checklist does not authorize merging this branch into `main`.
 
 ## Current implementation state
 
@@ -8,13 +8,14 @@ This checklist prioritizes learner safety, content quality, accessibility, relia
 - [x] Remove AdSense-specific environment variables from `.env.example`.
 - [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head; the current Vercel check is failing with the build-rate-limit restriction, and no successful build is confirmed.
 - [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
+- [ ] Review the full branch diff before merge: GitHub currently reports this branch as 141 commits ahead of `main`; confirm the final file-level diff contains only intended app-quality changes.
 - [ ] Complete phone-sized smoke testing on the intended public domain.
 - [x] Add a safe empty-question fallback so an empty quiz pool does not dereference a missing current question.
 - [x] Guard option selection and keyboard shortcuts against missing questions or out-of-range option indexes.
 - [x] Prevent the global Enter shortcut from advancing a quiz a second time when a focused button already handles Enter natively.
 - [x] Reject saved history entries when the percentage or practice-target flag contradicts the stored score/total.
 - [ ] Run automated/manual edge-case verification for empty quiz input, timer/submit races, and score/result handling when answer and question counts differ.
-- [ ] Finish the traffic-sign question-to-image match and asset-license audit before merging or publishing changes to the question bank.
+- [x] Keep question/answer data, translations, traffic-sign image mapping, and image assets outside this app-quality branch; audit them on a separate branch as requested.
 - [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
 - [x] Review FAQ and privacy disclosures against the current no-ads, no-subscription implementation; revisit only if the actual project scope changes.
 
@@ -47,5 +48,5 @@ This checklist prioritizes learner safety, content quality, accessibility, relia
 
 - Do not merge into `main` without explicit approval.
 - Do not claim advertising, subscriptions, or Premium are available unless the user explicitly chooses that model and the complete implementation is tested.
-- Do not change question, answer, translation, or traffic-sign data during unrelated advertising work.
+- Keep this branch limited to app quality; do not change question/answer data, translations, traffic-sign image mappings, or image assets. Those belong to the separate data-audit branch.
 - Avoid unnecessary Vercel deployments; validate the branch before requesting a single deliberate deployment.
