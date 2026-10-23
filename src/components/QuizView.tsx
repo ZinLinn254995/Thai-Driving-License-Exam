@@ -418,6 +418,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 type="button"
                 disabled={mode === 'instant' && isRevealed}
                 onClick={() => handleSelectOption(optIdx)}
+                aria-pressed={isSelected}
                 className={btnClasses}
               >
                 {/* Option Letter Badge */}
