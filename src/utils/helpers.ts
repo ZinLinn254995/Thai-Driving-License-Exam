@@ -31,7 +31,29 @@ const STORAGE_KEY_BOOKMARKS = 'thai_drive_bookmarks';
 export function getExamHistory(): ExamHistoryItem[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_HISTORY);
-    return raw ? JSON.parse(raw) : [];
+    if (!raw) return [];
+
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+
+    // Ignore malformed entries so one damaged local record cannot break the History view.
+    return parsed.filter((item): item is ExamHistoryItem => {
+      if (!item || typeof item !== 'object') return false;
+      const record = item as Partial<ExamHistoryItem>;
+      return (
+        typeof record.id === 'string' &&
+        typeof record.date === 'string' &&
+        typeof record.score === 'number' &&
+        Number.isFinite(record.score) &&
+        typeof record.total === 'number' &&
+        Number.isFinite(record.total) &&
+        record.total > 0 &&
+        typeof record.percentage === 'number' &&
+        Number.isFinite(record.percentage) &&
+        typeof record.passed === 'boolean' &&
+        (record.mode === 'timed' || record.mode === 'instant')
+      );
+    }).slice(0, 30);
   } catch {
     return [];
   }
@@ -65,7 +87,14 @@ export function saveExamHistory(item: Omit<ExamHistoryItem, 'id' | 'date'>): Exa
 export function getBookmarks(): number[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_BOOKMARKS);
-    return raw ? JSON.parse(raw) : [];
+    if (!raw) return [];
+
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+
+    return [...new Set(parsed.filter(
+      (id): id is number => typeof id === 'number' && Number.isSafeInteger(id)
+    ))];
   } catch {
     return [];
   }
