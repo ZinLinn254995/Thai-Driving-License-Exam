@@ -139,17 +139,34 @@ export default function App() {
     }
   };
 
-  // Finish exam handler
+  // Finish exam handler: score only answers that match the active question set.
   const handleFinishExam = (answers: UserAnswer[]) => {
-    setQuizResults(answers);
-    const correctCount = answers.filter((a) => a.isCorrect).length;
-    const total = answers.length;
+    if (quizQuestions.length === 0) return;
+
+    const normalizedAnswers: UserAnswer[] = quizQuestions.map((question, index) => {
+      const answer = answers[index];
+      const matchesQuestion = answer?.questionId === question.id;
+      const selectedOptionIndex = matchesQuestion ? answer.selectedOptionIndex : -1;
+      const selectedOption = selectedOptionIndex >= 0
+        ? question.options[selectedOptionIndex]
+        : undefined;
+
+      return {
+        questionId: question.id,
+        selectedOptionIndex: selectedOption ? selectedOptionIndex : -1,
+        isCorrect: selectedOption?.isCorrect === true
+      };
+    });
+
+    setQuizResults(normalizedAnswers);
+    const correctCount = normalizedAnswers.filter((answer) => answer.isCorrect).length;
+    const total = quizQuestions.length;
     const percentage = Math.round((correctCount / total) * 100);
     const passed = percentage >= 90;
 
     sounds.playComplete(passed);
 
-    // Save to history
+    // Save the normalized result so history and the result screen use the same score.
     saveExamHistory({
       score: correctCount,
       total,
