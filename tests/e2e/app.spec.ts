@@ -33,3 +33,16 @@ test('mobile learner can navigate a quiz, submit an answer, view results, and sa
   await expect(page.getByRole('heading', { name: 'Practice Score History' })).toBeVisible();
   await expect(page.getByText('Attempts', { exact: true })).toBeVisible();
 });
+
+test('timed practice shows a timer and confirms before final submission', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Start Timed Practice (60m)' }).click();
+
+  await expect(page.getByRole('timer', { name: /Time remaining:/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Finish Exam' }).click();
+  const confirmation = page.getByRole('dialog', { name: 'Submit Exam Answers?' });
+  await expect(confirmation).toBeVisible();
+  await confirmation.getByRole('button', { name: 'Submit Exam' }).click();
+
+  await expect(page.getByText(/Practice Target Reached|Keep Practicing/)).toBeVisible();
+});
