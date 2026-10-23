@@ -590,8 +590,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
       {/* Grid Navigator Modal (Questions 1..50 palette) */}
       {showGridModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
-          <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="question-navigator-title">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-md w-full p-4 sm:p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="question-navigator-title">
             <div className="flex items-center justify-between border-b pb-2">
               <h3 id="question-navigator-title" className="font-bold text-slate-900 text-base font-myanmar">
                 {lang === 'en'
@@ -627,16 +627,16 @@ export const QuizView: React.FC<QuizViewProps> = ({
             </div>
 
             {/* Grid of Questions */}
-            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2 overflow-y-auto py-2">
+            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2.5 overflow-y-auto px-1.5 py-3">
               {questions.map((q, idx) => {
                 const isAns = userAnswers[idx] !== undefined;
                 const isFlag = flaggedIds.includes(q.id);
                 const isCur = currentIndex === idx;
 
                 let cls =
-                  'h-10 rounded-xl font-bold text-xs flex items-center justify-center relative transition-transform active:scale-90 ';
+                  'h-11 box-border rounded-xl font-bold text-xs flex items-center justify-center relative transition-transform active:scale-95 focus-visible:outline-none ';
                 if (isCur) {
-                  cls += 'ring-2 ring-[#0b5d3b] ring-offset-1 ';
+                  cls += 'z-10 ring-2 ring-[#0b5d3b] ring-offset-2 ring-offset-white shadow-sm ';
                 }
 
                 if (isAns) {
