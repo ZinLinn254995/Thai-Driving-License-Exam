@@ -286,6 +286,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                     }`}
                     title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
                     aria-label={isBookmarked ? 'Remove question bookmark' : 'Bookmark question'}
+                    aria-pressed={isBookmarked}
                   >
                     <Bookmark size={16} className={isBookmarked ? 'fill-current' : ''} />
                   </button>
