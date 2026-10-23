@@ -4,7 +4,7 @@ This checklist prioritizes learner safety, content quality, accessibility, relia
 
 ## Current implementation state
 
-- [x] Remove the Google AdSense component and setup guide.
+- [x] Remove the former Google AdSense component and setup guide.
 - [x] Remove AdSense-specific environment variables from `.env.example`.
 - [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head; the current Vercel check is failing with the build-rate-limit restriction, and no successful build is confirmed.
 - [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
@@ -35,7 +35,7 @@ This checklist prioritizes learner safety, content quality, accessibility, relia
 - [x] Align result score and mistake lists with the actual question IDs so stale/mismatched answer entries cannot inflate the score or cause a missing-question crash.
 - [x] Normalize final quiz answers against the active question set and recompute correctness from each selected option before showing/saving the result.
 - [x] Remove the unrelated `thaidriveexam.com` footer link so the UI does not point away from the configured production domain.
-- [x] Correct the FAQ's stale AdSense claim: it now states that no ads are currently shown and the provider-neutral ad placements render nothing.
+- [x] Update the FAQ and privacy policy to reflect the current no-ads, no-subscription scope.
 
 ## Monetization scope
 
