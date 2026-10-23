@@ -55,7 +55,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
       const q = searchQuery.toLowerCase().trim();
       list = list.filter((item) => {
         const matchesNum = String(item.id) === q || toMyanmarNumber(item.id) === q;
-        const matchesBurmese = showMyanmar && (item.q_my.toLowerCase().includes(q) || item.options.some((o) => o.my.toLowerCase().includes(q)));
+        const matchesBurmese = showMyanmar && ((item.q_my ?? '').toLowerCase().includes(q) || item.options.some((o) => (o.my ?? '').toLowerCase().includes(q)));
         const matchesEnglish = item.q_en.toLowerCase().includes(q) || item.options.some((o) => o.en.toLowerCase().includes(q));
         return matchesNum || matchesBurmese || matchesEnglish;
       });
