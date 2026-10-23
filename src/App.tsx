@@ -260,7 +260,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">DLT Pass: 90% (45/50)</span>
+            <span className="text-[#0b5d3b] font-bold">Practice Target: 90% (45/50)</span>
             <span>·</span>
             <a
               href="https://thaidriveexam.com"
@@ -273,6 +273,7 @@ export default function App() {
           </div>
         </div>
         <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
+          <a href="/study-guide.html" className="underline hover:text-slate-900">Study Guide</a>
           <a href="/about.html" className="underline hover:text-slate-900">About</a>
           <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
           <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
