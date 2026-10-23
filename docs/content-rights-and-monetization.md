@@ -1,4 +1,4 @@
-# Content rights and monetization readiness review
+# Content rights and publication readiness review
 
 ## Why this review matters
 
@@ -10,7 +10,7 @@ A useful practice website needs accurate learning material that it has the right
 - Treat this document as a review checklist only; it is not evidence that rights have been cleared.
 - Keep changes to UI, accessibility, navigation, documentation, and configuration separate from question-bank changes.
 
-## Before enabling first-party advertising or Premium
+## Before publishing or considering any commercial use
 
 - [ ] Make a source inventory for each question bank, answer explanation, and image collection.
 - [ ] For third-party material, locate written permission, a license that covers this use, or other reliable evidence that reproduction is allowed.
@@ -18,10 +18,10 @@ A useful practice website needs accurate learning material that it has the right
 - [ ] Do not assume that a publicly accessible government page or a source that allows practice use also allows copying or commercial use. Check the applicable terms.
 - [ ] For traffic-sign images, record the exact image source and license for each asset. Verify that the license permits website publication and commercial use, and comply with attribution/share-alike requirements where applicable.
 - [ ] Check that any translation or adaptation is permitted and that it does not misrepresent the source.
-- [ ] If permission cannot be established, flag the item for a rights-holder/legal review before monetization. Do not silently substitute or delete it during this current phase.
+- [ ] If permission cannot be established, flag the item for a rights-holder/legal review before relying on or commercially using it. Do not silently substitute or delete it during this current phase.
 - [ ] Keep copies or records of licenses and permission correspondence outside the public repository if they contain private information.
 - [ ] Ensure the site offers meaningful original value: clear study guidance, helpful feedback, accessible navigation, useful topic organization, and transparent limitations—not just a republished question list.
-- [ ] Recheck the public pages, privacy disclosures, applicable consent requirements, and first-party ad placements against the actual production configuration before enabling ads.
+- [ ] Before any future revenue model is selected, recheck public pages, privacy disclosures, applicable requirements, and the actual production configuration. Do not build or enable monetization before that decision.
 
 ## Current known risk
 
