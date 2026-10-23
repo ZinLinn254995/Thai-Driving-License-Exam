@@ -25,6 +25,7 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Reject malformed history records with impossible score/percentage ranges and reject non-positive bookmark IDs.
 - [x] Keep bookmark UI state unchanged when browser storage rejects a bookmark change; show a clear message instead of pretending the change was saved.
 - [x] Notify learners when practice results cannot be persisted to browser history instead of returning a fabricated success-shaped history item.
+- [x] Show a clear error if browser storage prevents clearing practice history; keep the visible history unchanged on failure.
 - [x] Make history cards wrap long status labels and constrain content width on narrow screens; manual phone-sized smoke testing is still required.
 - [x] Prevent duplicate exam completion from rapid repeated submission or a timer/submit race.
 - [x] Guard result percentage calculation against an empty result set.
