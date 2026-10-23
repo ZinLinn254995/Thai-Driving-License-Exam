@@ -1,8 +1,8 @@
-# Content rights and AdSense readiness review
+# Content rights and monetization readiness review
 
 ## Why this review matters
 
-A useful practice website needs accurate learning material that it has the right to publish. A source credit or link is not, by itself, permission to reproduce another site's questions, explanations, photographs, or illustrations. AdSense approval is not guaranteed by having technical ad support or policy pages.
+A useful practice website needs accurate learning material that it has the right to publish. A source credit or link is not, by itself, permission to reproduce another site's questions, explanations, photographs, or illustrations. Having technical ad support or policy pages does not establish permission to monetize content.
 
 ## Preserve the question bank during this phase
 
@@ -10,7 +10,7 @@ A useful practice website needs accurate learning material that it has the right
 - Treat this document as a review checklist only; it is not evidence that rights have been cleared.
 - Keep changes to UI, accessibility, navigation, documentation, and configuration separate from question-bank changes.
 
-## Before applying for AdSense
+## Before enabling first-party advertising or Premium
 
 - [ ] Make a source inventory for each question bank, answer explanation, and image collection.
 - [ ] For third-party material, locate written permission, a license that covers this use, or other reliable evidence that reproduction is allowed.
@@ -21,11 +21,11 @@ A useful practice website needs accurate learning material that it has the right
 - [ ] If permission cannot be established, flag the item for a rights-holder/legal review before monetization. Do not silently substitute or delete it during this current phase.
 - [ ] Keep copies or records of licenses and permission correspondence outside the public repository if they contain private information.
 - [ ] Ensure the site offers meaningful original value: clear study guidance, helpful feedback, accessible navigation, useful topic organization, and transparent limitations—not just a republished question list.
-- [ ] Recheck the public pages, privacy disclosures, consent requirements, and ad placements against the actual production configuration before enabling ads.
+- [ ] Recheck the public pages, privacy disclosures, applicable consent requirements, and first-party ad placements against the actual production configuration before enabling ads.
 
 ## Current known risk
 
-The public About page says that the question bank includes material sourced from https://thaidriveexam.com/. The page correctly notes that source credit does not establish reproduction permission. Permission or license status has **not** been verified by this checklist, so treat it as an unresolved risk rather than as cleared.
+The public About page says that the question bank includes material sourced from https://thaidriveexam.com/. Source credit does not establish reproduction permission. Permission or license status has **not** been verified by this checklist, so treat it as an unresolved risk rather than as cleared.
 
 ## Review outcome template
 
