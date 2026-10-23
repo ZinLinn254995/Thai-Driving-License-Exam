@@ -1,7 +1,6 @@
 # Traffic-sign and question-bank audit — 2026-10-23
 
 ## Scope reviewed
-- Branch: `work/adsense-readiness-audit`
 - Data file: `src/data/questions.ts`
 - The bank declares 598 questions: 117 traffic-signs-and-markings, 74 traffic-laws, 249 safe-driving, 81 vehicle-maintenance, and 77 accident-prediction.
 - The first 117 traffic-sign questions point to `/exam_images/q_001.webp` through `/exam_images/q_117.webp`.
@@ -28,7 +27,7 @@ These are review flags, not proof that the images are wrong; a simple sign image
 2. Mark ambiguous or conflicting answers for authoritative review instead of guessing.
 3. Replace only confirmed mismatches with verified, appropriately licensed assets; retain each asset's source and license in an attribution inventory.
 4. Review English and Myanmar translations together after correcting the source meaning.
-5. Resolve question/image reuse rights before enabling first-party advertising or other monetization. A source URL or attribution is not a substitute for permission.
+5. Resolve question/image reuse rights before publishing or reusing material on this website. A source URL or attribution is not a substitute for permission.
 6. Run a local production build and a browser pass through Study, Practice, Timed Exam, Results, History, and the Myanmar toggle before considering the audit complete.
 
 ## Visual spot-check of flagged assets (2026-10-23)
