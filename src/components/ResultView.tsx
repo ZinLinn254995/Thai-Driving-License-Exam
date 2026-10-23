@@ -2,7 +2,7 @@ import React from 'react';
 import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, UserAnswer, LanguageMode } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
-import { AdSenseAd } from './AdSenseAd';
+import { AdSlot } from './AdSlot';
 
 interface ResultViewProps {
   questions: QuizQuestion[];
@@ -141,7 +141,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         </button>
       </div>
 
-      <AdSenseAd slot={import.meta.env.VITE_ADSENSE_RESULT_SLOT} />
+      <AdSlot placement="result" />
 
       {/* Review Mistakes Section */}
       {mistakes.length > 0 ? (
