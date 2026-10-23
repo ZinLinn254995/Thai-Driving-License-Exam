@@ -1,5 +1,5 @@
 import React from 'react';
-import { History, Award, CheckCircle2, XCircle, Trash2, RotateCcw, ArrowRight } from 'lucide-react';
+import { History, Award, CheckCircle2, XCircle, Trash2, RotateCcw, ArrowRight, Eye } from 'lucide-react';
 import { ExamHistoryItem, toMyanmarNumber } from '../utils/helpers';
 import { LanguageMode } from '../types';
 
@@ -9,6 +9,7 @@ interface HistoryViewProps {
   showMyanmar: boolean;
   onClearHistory: () => void;
   onStartExam: () => void;
+  onViewDetails: (item: ExamHistoryItem) => void;
 }
 
 export const HistoryView: React.FC<HistoryViewProps> = ({
@@ -16,7 +17,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
   lang = 'en',
   showMyanmar,
   onClearHistory,
-  onStartExam
+  onStartExam,
+  onViewDetails
 }) => {
   const totalAttempts = history.length;
   const targetReachedAttempts = history.filter((h) => h.passed).length;
@@ -141,6 +143,15 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                 </div>
               </div>
 
+              <div className="flex shrink-0 items-center gap-1">
+              <button
+                type="button"
+                onClick={() => onViewDetails(item)}
+                disabled={!item.questions?.length || !item.answers}
+                className="p-2 text-[#0b5d3b] hover:bg-emerald-50 rounded-lg transition-colors disabled:text-slate-300 disabled:hover:bg-transparent"
+                title={item.questions?.length && item.answers ? (lang === 'en' ? 'View result details' : 'ရလဒ်အသေးစိတ်ကြည့်ရန်') : (lang === 'en' ? 'Details not available for this older attempt' : 'ဤမှတ်တမ်း၏ အသေးစိတ် မရှိပါ')}
+                aria-label={lang === 'en' ? 'View result details' : 'ရလဒ်အသေးစိတ်ကြည့်ရန်'}
+              ><Eye size={17} /></button>
               <button
                 type="button"
                 onClick={onStartExam}
@@ -149,6 +160,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               >
                 <RotateCcw size={16} />
               </button>
+              </div>
             </div>
           ))
         ) : (
