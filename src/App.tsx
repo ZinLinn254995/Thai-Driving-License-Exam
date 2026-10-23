@@ -113,6 +113,7 @@ export default function App() {
       };
     });
 
+    setSelectedHistoryItem(null);
     setQuizQuestions(preparedQuestions);
     setQuizMode(mode);
     setQuizResults([]);
