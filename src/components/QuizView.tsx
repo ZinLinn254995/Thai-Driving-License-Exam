@@ -151,6 +151,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
         e.altKey || e.ctrlKey || e.metaKey
       ) return;
 
+      // Enter already activates a focused button natively; do not also advance via the global shortcut.
+      if (e.key === 'Enter' && target?.closest('button, a, [role="button"]')) return;
+
       if (e.key === '1' || e.key === 'a' || e.key === 'A') handleSelectOption(0);
       else if (e.key === '2' || e.key === 'b' || e.key === 'B') handleSelectOption(1);
       else if (e.key === '3' || e.key === 'c' || e.key === 'C') handleSelectOption(2);
