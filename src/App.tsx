@@ -269,7 +269,7 @@ export default function App() {
             showMyanmar={showMyanmar}
             mode={selectedHistoryItem?.mode ?? quizMode}
             totalQuestions={QUESTIONS_BANK.length}
-            onRetakeNew={() => handleStartExam(quizMode, 'all')}
+            onRetakeNew={() => handleStartExam(selectedHistoryItem?.mode ?? quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
             onNavigateStudy={() => setCurrentView('study')}
             onGoHome={() => {
