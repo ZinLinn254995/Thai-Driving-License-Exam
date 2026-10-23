@@ -51,3 +51,24 @@ test('published information pages do not contain broken root-relative links', ()
     }
   }
 });
+
+test('homepage, robots.txt, and sitemap agree on the production origin', () => {
+  const homepage = readFileSync(join(root, 'index.html'), 'utf8');
+  const robots = readPublicPage('robots.txt');
+  const sitemap = readPublicPage('sitemap.xml');
+
+  assert.ok(
+    homepage.includes(`<link rel="canonical" href="${productionOrigin}/"`),
+    'homepage canonical should match the production origin'
+  );
+  assert.ok(robots.includes(`Sitemap: ${productionOrigin}/sitemap.xml`), 'robots.txt should advertise the production sitemap');
+
+  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\\/loc>/g)].map((match) => match[1]);
+  assert.ok(sitemapUrls.includes(`${productionOrigin}/`), 'sitemap should include the homepage');
+  for (const file of publishedPages) {
+    assert.ok(sitemapUrls.includes(`${productionOrigin}/${file}`), `sitemap should include ${file}`);
+  }
+  for (const url of sitemapUrls) {
+    assert.ok(url.startsWith(productionOrigin + '/'), `sitemap URL should use the production origin: ${url}`);
+  }
+});
