@@ -57,7 +57,9 @@ export function getExamHistory(): ExamHistoryItem[] {
         Number.isInteger(record.percentage) &&
         record.percentage >= 0 &&
         record.percentage <= 100 &&
+        record.percentage === Math.round((record.score / record.total) * 100) &&
         typeof record.passed === 'boolean' &&
+        record.passed === (record.percentage >= 90) &&
         (record.mode === 'timed' || record.mode === 'instant')
       );
     }).slice(0, 30);
