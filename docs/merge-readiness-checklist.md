@@ -8,13 +8,13 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 - [x] Remove AdSense-specific environment variables from `.env.example`.
 - [ ] Verify a reproducible dependency install and TypeScript check on the exact branch head. Vercel reported a successful check on the previous reviewed head, but that does not prove the separate TypeScript check or a clean reproducible install.
 - [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
-- [ ] Review the full branch diff before merge: GitHub reported this branch as 143 commits ahead of `main` at the latest comparison; confirm the final file-level diff contains only intended app-quality changes.
+- [ ] Review the full branch diff before merge: GitHub reports this branch ahead of `main`; confirm the final file-level diff contains only intended app-quality changes.
 - [ ] Complete phone-sized smoke testing on the intended public domain, including English-only and English + Myanmar modes, quiz completion, result review, bookmarks, and history.
 - [x] Add a safe empty-question fallback so an empty quiz pool does not dereference a missing current question.
 - [x] Guard option selection and keyboard shortcuts against missing questions or out-of-range option indexes.
 - [x] Prevent the global Enter shortcut from advancing a quiz a second time when a focused button already handles Enter natively.
 - [x] Reject saved history entries when the percentage or practice-target flag contradicts the stored score/total.
-- [ ] Add or choose a lightweight automated test approach, then verify empty quiz input, timer/submit races, invalid answer indexes, and score/result handling when answer and question counts differ. No test script/framework is currently declared in `package.json`.
+- [ ] Run the newly added lightweight Node test suite (`npm test`) and fix any failures. The suite currently covers history validation, bookmark persistence/validation, number conversion, and shuffle behavior; UI-level quiz edge cases and timer/submit races still need additional verification.
 - [x] Keep question/answer data, translations, traffic-sign image mapping, and image assets outside this app-quality branch; audit them on a separate branch as requested.
 - [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
 - [x] Review FAQ and privacy disclosures against the current no-ads, no-subscription implementation; revisit only if the actual project scope changes.
