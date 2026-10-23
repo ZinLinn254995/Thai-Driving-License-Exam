@@ -11,7 +11,9 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Document the proposed first-party ad platform contract and Premium entitlement requirements.
 - [x] Keep the question bank and traffic-sign assets out of scope for this ad-platform transition.
 - [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head; the current Vercel check is failing with the build-rate-limit restriction, and no successful build is confirmed.
+- [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
 - [ ] Complete phone-sized smoke testing on the intended public domain.
+- [ ] Test malformed/empty quiz input defensively and verify score/result handling when answer and question counts differ.
 - [ ] Review all traffic-sign image correctness and licensing separately (intentionally deferred until after the user's merge).
 - [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
 - [ ] Review privacy disclosures against actual data collection and future ad behavior.
