@@ -32,7 +32,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   const total = questions.length;
   const correctCount = answers.filter((a) => a.isCorrect).length;
   const percentage = Math.round((correctCount / total) * 100);
-  const passed = percentage >= 90; // Practice target: 90%; verify current official requirements with Thailand's DLT.
+  const targetReached = percentage >= 90; // This is a site practice target, not an official exam pass result.
 
   // Find mistake questions
   const mistakes = answers
@@ -54,15 +54,15 @@ export const ResultView: React.FC<ResultViewProps> = ({
       {/* Practice result banner */}
       <div
         className={`rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg border-4 border-white outline-4 relative overflow-hidden ${
-          passed
+          targetReached
             ? 'bg-[#0b5d3b] outline-[#0b5d3b]'
             : 'bg-[#b3261e] outline-[#b3261e]'
         }`}
       >
         <div className="space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
-            {passed ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-            <span>{passed ? 'Practice Target Reached' : 'Keep Practicing'}</span>
+            {targetReached ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
+            <span>{targetReached ? 'Practice Target Reached' : 'Keep Practicing'}</span>
           </div>
 
           {/* Big Score */}
@@ -79,21 +79,21 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <div className="space-y-0.5">
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
               {lang === 'en'
-                ? passed
-                  ? 'Congratulations! You Passed the Exam'
-                  : 'Did Not Pass — Keep Practicing!'
-                : passed
-                ? 'ဂုဏ်ယူပါသည်! စာမေးပွဲ အောင်မြင်ပါသည်'
-                : 'မအောင်မြင်သေးပါ၊ ထပ်မံကြိုးစားပါ'}
+                ? targetReached
+                  ? 'Great work! You reached the practice target.'
+                  : 'Keep going—review your mistakes and try again.'
+                : targetReached
+                ? 'ကောင်းပါတယ်။ လေ့ကျင့်မှု ရည်မှန်းချက်ကို ပြည့်မီပါပြီ။'
+                : 'ဆက်လက်လေ့ကျင့်ပြီး မှားခဲ့သောမေးခွန်းများကို ပြန်လည်လေ့လာပါ။'}
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
               {lang === 'en'
-                ? passed
-                  ? 'You reached this practice tool’s 90% target. Check current requirements with Thailand’s Department of Land Transport.'
-                  : 'This practice tool uses a 90% target (45 out of 50). Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
-                : passed
-                ? 'ထိုင်းယာဉ်မောင်းလိုင်စင် သတ်မှတ်ချက် (၉၀% နှင့်အထက်) ပြည့်မီပါသည်။'
-                : 'ထိုင်းယာဉ်မောင်းလိုင်စင်အတွက် ၄၅ မှတ် (၉၀%) အနည်းဆုံး လိုအပ်ပါသည်။'}
+                ? targetReached
+                  ? 'You reached this website’s 90% practice target. This is not an official exam result; check current requirements with Thailand’s Department of Land Transport.'
+                  : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
+                : targetReached
+                ? 'ဤဝက်ဘ်ဆိုက်၏ လေ့ကျင့်မှု ရည်မှန်းချက် ၉၀% ကို ပြည့်မီပါပြီ။ ဤရလဒ်သည် တရားဝင်စာမေးပွဲရလဒ် မဟုတ်ပါ။ လက်ရှိသတ်မှတ်ချက်များကို ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဌာနထံ စစ်ဆေးပါ။'
+                : 'ဤဝက်ဘ်ဆိုက်၏ လေ့ကျင့်မှု ရည်မှန်းချက် ၉၀% မပြည့်မီသေးပါ။ တရားဝင်စာမေးပွဲ သတ်မှတ်ချက်များ ကွာခြားနိုင်သဖြင့် ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဌာနထံ စစ်ဆေးပါ။'}
             </p>
           </div>
         </div>
