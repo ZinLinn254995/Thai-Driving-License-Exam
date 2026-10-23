@@ -209,6 +209,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="flex items-center gap-2">
             {mode === 'timed' ? (
               <div
+                role="timer"
+                aria-label={`${lang === 'en' ? 'Time remaining' : 'အချိန်ကျန်' }: ${formatTime(timeLeft)}`}
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${
                   timeLeft < 300
                     ? 'bg-red-100 text-red-700 animate-pulse'
