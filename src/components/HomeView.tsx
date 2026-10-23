@@ -15,6 +15,7 @@ interface HomeViewProps {
   onStartExam: (mode: ExamMode, topic: ExamTopicFilter) => void;
   onNavigateStudy: (filterCategory?: ExamTopicFilter) => void;
   recentHistory: ExamHistoryItem[];
+  onViewHistoryDetails: (item: ExamHistoryItem) => void;
   bookmarkedCount: number;
 }
 
@@ -30,6 +31,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onStartExam,
   onNavigateStudy,
   recentHistory,
+  onViewHistoryDetails,
   bookmarkedCount
 }) => {
   const [selectedTopic, setSelectedTopic] = useState<ExamTopicFilter>('all');
@@ -501,7 +503,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
       {/* Latest Score Card if available */}
       {latestAttempt && (
-        <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between">
+        <div
+          role={latestAttempt.questions?.length && latestAttempt.answers ? 'button' : undefined}
+          tabIndex={latestAttempt.questions?.length && latestAttempt.answers ? 0 : undefined}
+          onClick={() => { if (latestAttempt.questions?.length && latestAttempt.answers) onViewHistoryDetails(latestAttempt); }}
+          onKeyDown={(event) => {
+            if ((event.key === 'Enter' || event.key === ' ') && latestAttempt.questions?.length && latestAttempt.answers) {
+              event.preventDefault();
+              onViewHistoryDetails(latestAttempt);
+            }
+          }}
+          className={`bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between gap-3 ${latestAttempt.questions?.length && latestAttempt.answers ? 'cursor-pointer hover:border-emerald-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600' : ''}`}
+        >
           <div className="flex items-center gap-3">
             <div
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm shrink-0 ${
@@ -530,7 +543,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
           <button
             type="button"
-            onClick={() => onStartExam('instant', 'all')}
+            onClick={(event) => { event.stopPropagation(); onStartExam('instant', 'all'); }}
             className="text-xs font-bold text-[#0b5d3b] hover:underline"
           >
             {lang === 'en' ? 'Retake Exam →' : 'ထပ်မံဖြေဆိုရန် →'}
