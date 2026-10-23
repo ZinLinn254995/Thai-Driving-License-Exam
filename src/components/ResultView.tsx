@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, UserAnswer, LanguageMode } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
+import { AdSenseAd } from './AdSenseAd';
 
 interface ResultViewProps {
   questions: QuizQuestion[];
@@ -147,6 +148,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <span>{lang === 'en' ? 'Return to Home' : 'ပင်မစာမျက်နှာသို့ (Home)'}</span>
         </button>
       </div>
+
+      <AdSenseAd slot={import.meta.env.VITE_ADSENSE_RESULT_SLOT} />
 
       {/* Review Mistakes Section */}
       {mistakes.length > 0 ? (
