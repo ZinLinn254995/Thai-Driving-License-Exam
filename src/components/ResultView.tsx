@@ -80,12 +80,12 @@ export const ResultView: React.FC<ResultViewProps> = ({
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
               {targetReached
                 ? 'Great work! You reached the practice target.'
-                : 'Keep going—review your mistakes and try again.'
+                : 'Keep going—review your mistakes and try again.'}
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
               {targetReached
                 ? 'You reached this website’s 90% practice target. This is not an official exam result; check current requirements with Thailand’s Department of Land Transport.'
-                : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
+                : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'}
             </p>
           </div>
         </div>
