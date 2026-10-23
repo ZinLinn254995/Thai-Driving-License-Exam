@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale, AlertTriangle } from 'lucide-react';
-import { QuizQuestion, UserAnswer, LanguageMode } from '../types';
+import { QuizQuestion, UserAnswer, LanguageMode, ExamMode, QuestionCategory } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
 
 interface ResultViewProps {
@@ -8,6 +8,7 @@ interface ResultViewProps {
   answers: UserAnswer[];
   lang: LanguageMode;
   showMyanmar: boolean;
+  mode: ExamMode;
   totalQuestions?: number;
   onRetakeNew: () => void;
   onRetakeMistakes: (mistakeQuestionIds: number[]) => void;
@@ -22,6 +23,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   answers,
   lang,
   showMyanmar,
+  mode,
   totalQuestions = 598,
   onRetakeNew,
   onRetakeMistakes,
@@ -35,7 +37,29 @@ export const ResultView: React.FC<ResultViewProps> = ({
     return count + (answer?.questionId === question.id && answer.isCorrect ? 1 : 0);
   }, 0);
   const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
-  const targetReached = percentage >= 90; // This is a site practice target, not an official exam pass result.
+  const targetReached = percentage >= 90; // Site practice target only; not an official pass mark.
+  const answeredCount = questions.reduce((count, question, index) => {
+    const answer = answers[index];
+    return count + (answer?.questionId === question.id && answer.selectedOptionIndex >= 0 ? 1 : 0);
+  }, 0);
+  const unansweredCount = total - answeredCount;
+  const incorrectCount = answeredCount - correctCount;
+  const categories: { id: QuestionCategory; label: string }[] = [
+    { id: 'traffic_signs', label: 'Traffic Signs' },
+    { id: 'traffic_laws', label: 'Traffic Laws' },
+    { id: 'safe_driving', label: 'Safe Driving' },
+    { id: 'vehicle_maintenance', label: 'Vehicle Maintenance' },
+    { id: 'accident_prediction', label: 'Accident Prediction' }
+  ];
+  const categoryResults = categories.map((category) => {
+    const items = questions.filter((question) => question.category === category.id);
+    const correct = items.reduce((count, question) => {
+      const index = questions.findIndex((item) => item.id === question.id);
+      const answer = answers[index];
+      return count + (answer?.questionId === question.id && answer.isCorrect ? 1 : 0);
+    }, 0);
+    return { ...category, total: items.length, correct, percentage: items.length ? Math.round(correct / items.length * 100) : 0 };
+  }).filter((category) => category.total > 0);
 
   // Find mistake questions
   const mistakes = questions
@@ -55,6 +79,17 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
+      {/* Mode label */}
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Results</p>
+          <h1 className="text-xl sm:text-2xl font-black text-slate-900">{mode === 'timed' ? 'Timed Exam Results' : 'Practice Results'}</h1>
+        </div>
+        <span className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${mode === 'timed' ? 'bg-amber-100 text-amber-900' : 'bg-emerald-100 text-emerald-900'}`}>
+          {mode === 'timed' ? 'Timed Exam · 60 min limit' : 'Practice Mode'}
+        </span>
+      </div>
+
       {/* Practice result banner */}
       <div
         className={`rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg border-4 border-white outline-4 relative overflow-hidden ${
@@ -94,6 +129,30 @@ export const ResultView: React.FC<ResultViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Clear score breakdown: answered, incorrect, and unanswered are separate */}
+      <section aria-labelledby="score-breakdown-title" className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm space-y-3">
+        <h3 id="score-breakdown-title" className="font-bold text-slate-900">Score Breakdown</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="rounded-xl bg-slate-50 p-3"><p className="text-xs text-slate-500">Total</p><p className="text-2xl font-black text-slate-900">{total}</p></div>
+          <div className="rounded-xl bg-emerald-50 p-3"><p className="text-xs text-emerald-800">Correct</p><p className="text-2xl font-black text-emerald-800">{correctCount}</p></div>
+          <div className="rounded-xl bg-red-50 p-3"><p className="text-xs text-red-800">Incorrect</p><p className="text-2xl font-black text-red-800">{incorrectCount}</p></div>
+          <div className="rounded-xl bg-amber-50 p-3"><p className="text-xs text-amber-900">Unanswered</p><p className="text-2xl font-black text-amber-900">{unansweredCount}</p></div>
+        </div>
+        <p className="text-xs leading-relaxed text-slate-500">Accuracy is calculated from all questions in this attempt. Unanswered questions are counted separately from incorrect answers.</p>
+      </section>
+
+      {/* Performance by category */}
+      <section aria-labelledby="category-results-title" className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm space-y-4">
+        <div><h3 id="category-results-title" className="font-bold text-slate-900">Performance by Category</h3><p className="text-xs text-slate-500 mt-1">Use this breakdown to choose what to study next.</p></div>
+        <div className="space-y-4">
+          {categoryResults.map((category) => <div key={category.id}>
+            <div className="flex items-center justify-between gap-3 text-sm mb-1.5"><span className="font-semibold text-slate-700">{category.label}</span><span className="font-bold text-slate-900">{category.correct}/{category.total} · {category.percentage}%</span></div>
+            <div className="h-2.5 rounded-full bg-slate-100 overflow-hidden" role="progressbar" aria-label={category.label} aria-valuemin={0} aria-valuemax={100} aria-valuenow={category.percentage}><div className="h-full rounded-full bg-[#0b5d3b] transition-all" style={{ width: `${category.percentage}%` }} /></div>
+          </div>)}
+        </div>
+        {categoryResults.length > 0 && <p className="rounded-lg bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">Study suggestion: start with <strong>{[...categoryResults].sort((a, b) => a.percentage - b.percentage)[0].label}</strong>, your lowest-scoring category in this attempt. A category with few questions may not represent your overall ability.</p>}
+      </section>
 
       {/* Action Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -153,17 +212,17 @@ export const ResultView: React.FC<ResultViewProps> = ({
             <div>
               <h3 className="font-bold text-slate-900 text-base font-myanmar">
                 {lang === 'en'
-                  ? `Review Mistake Questions (${mistakes.length})`
+                  ? `Review Incorrect & Unanswered Questions (${mistakes.length})`
                   : `မှားယွင်းခဲ့သော မေးခွန်းများ ပြန်လည်စစ်ဆေးရန် (${mistakes.length} ခု)`}
               </h3>
               <p className="text-xs text-slate-500 font-myanmar">
                 {lang === 'en'
-                  ? 'Review the answers shown below, and check important rules against trusted official guidance.'
+                  ? 'Incorrect and unanswered questions are listed here separately. Review the correct answer and verify important rules with trusted official guidance.'
                   : 'အဖြေမှန်များကို ဂရုပြုမှတ်သားပါ'}
               </p>
             </div>
             <span className="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-full border border-red-200">
-              {mistakes.length} {lang === 'en' ? 'Mistakes' : 'ခု မှားခဲ့သည်'}
+              {mistakes.length} {lang === 'en' ? 'To Review' : 'ခု ပြန်လေ့လာရန်'}
             </span>
           </div>
 
@@ -174,7 +233,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
               return (
                 <div key={question.id} className={idx > 0 ? 'pt-6' : ''}>
-                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  <div className="mb-2 inline-flex rounded-full px-2.5 py-1 text-[11px] font-bold bg-slate-100 text-slate-700">{selectedIdx < 0 ? 'Unanswered' : 'Incorrect'}</div>\n                  <div className="flex flex-col sm:flex-row gap-4 items-start">
                     {/* Question Image if present */}
                     {question.image && (
                       <div className="w-24 h-24 sm:w-28 sm:h-28 bg-slate-50 rounded-xl border border-slate-100 p-2 flex items-center justify-center shrink-0">
