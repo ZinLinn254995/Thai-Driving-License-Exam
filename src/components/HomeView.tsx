@@ -50,7 +50,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="space-y-1.5">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f2b705] text-[#19241e] text-xs font-black tracking-wide uppercase">
               <ShieldCheck size={13} />
-              <span>Thai Driving License Exam 2026</span>
+              <span>Independent Practice Resource</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
               Thai Driving License Practice
