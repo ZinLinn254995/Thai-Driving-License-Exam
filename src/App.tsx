@@ -237,6 +237,13 @@ export default function App() {
               setCurrentView('study');
             }}
             recentHistory={examHistory}
+            onViewHistoryDetails={(item) => {
+              if (item.questions?.length && item.answers) {
+                setSelectedHistoryItem(item);
+                setCurrentView('history');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
             bookmarkedCount={bookmarkedIds.length}
           />
         )}
@@ -267,7 +274,7 @@ export default function App() {
             onNavigateStudy={() => setCurrentView('study')}
             onGoHome={() => {
               if (selectedHistoryItem) setSelectedHistoryItem(null);
-              else setCurrentView('home');
+              setCurrentView('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
