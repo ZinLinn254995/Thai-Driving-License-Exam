@@ -36,6 +36,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [showExitConfirmModal, setShowExitConfirmModal] = useState(false);
   const submitExamRef = useRef<() => void>(() => {});
+  const submissionStartedRef = useRef(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentQ = questions[currentIndex];
@@ -45,6 +46,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const selectedIndex = userAnswers[currentIndex];
 
   const handleSubmitExam = useCallback(() => {
+    // Prevent a double tap or timer/submit race from recording the same attempt twice.
+    if (submissionStartedRef.current || questions.length === 0) return;
+    submissionStartedRef.current = true;
     const answers: UserAnswer[] = questions.map((q, idx) => {
       const selected = userAnswers[idx];
       const isCorrect = selected !== undefined ? q.options[selected]?.isCorrect : false;
