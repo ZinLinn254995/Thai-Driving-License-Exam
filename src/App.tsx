@@ -71,6 +71,11 @@ export default function App() {
 
   const handleToggleBookmark = (questionId: number) => {
     const isNowBookmarked = toggleBookmark(questionId);
+    if (isNowBookmarked === null) {
+      window.alert('Could not save this bookmark in browser storage. Check your browser settings and try again.');
+      return;
+    }
+
     setBookmarkedIds((prev) =>
       isNowBookmarked ? [...prev, questionId] : prev.filter((id) => id !== questionId)
     );
