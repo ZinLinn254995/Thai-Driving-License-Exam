@@ -78,6 +78,35 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </div>
 
+      {/* Make the site's English-first, Myanmar-supported purpose clear to visitors and reviewers. */}
+      <section
+        aria-labelledby="language-support-heading"
+        className="rounded-2xl border border-emerald-200 bg-white p-4 sm:p-5 shadow-sm"
+      >
+        <div className="flex items-start gap-3">
+          <div className="shrink-0 rounded-xl bg-emerald-50 p-2.5 text-[#0b5d3b]" aria-hidden="true">
+            <BookOpen size={22} />
+          </div>
+          <div className="min-w-0">
+            <h2 id="language-support-heading" className="text-base sm:text-lg font-extrabold text-slate-900">
+              English Practice with Myanmar Translations
+            </h2>
+            <p className="mt-1 text-sm leading-relaxed text-slate-700 font-myanmar">
+              ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး
+              မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို နားလည်ရန် မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။
+              အင်္ဂလိပ်စာကို အဓိကထားလေ့လာပြီး လိုအပ်သည့်အခါ မြန်မာဘာသာပြန်ဖြင့် အထောက်အကူယူပါ။
+            </p>
+            <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              English is the main study language. Use the Myanmar translation control in the header for additional understanding support. This is an independent practice aid, not an official exam or government service.
+            </p>
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 border border-emerald-100">
+              <span aria-hidden="true">✓</span>
+              English questions · Optional Myanmar translations
+            </div>
+          </div>
+        </div>
+      </section>
+
       <AdSenseAd slot={import.meta.env.VITE_ADSENSE_HOME_SLOT} />
 
       {/* Categories Overview Cards */}
