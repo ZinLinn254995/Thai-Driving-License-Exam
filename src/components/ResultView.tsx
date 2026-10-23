@@ -233,7 +233,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
               return (
                 <div key={question.id} className={idx > 0 ? 'pt-6' : ''}>
-                  <div className="mb-2 inline-flex rounded-full px-2.5 py-1 text-[11px] font-bold bg-slate-100 text-slate-700">{selectedIdx < 0 ? 'Unanswered' : 'Incorrect'}</div>\n                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  <div className="mb-2 inline-flex rounded-full px-2.5 py-1 text-[11px] font-bold bg-slate-100 text-slate-700">{selectedIdx < 0 ? 'Unanswered' : 'Incorrect'}</div>
+                  <div className="flex flex-col sm:flex-row gap-4 items-start">
                     {/* Question Image if present */}
                     {question.image && (
                       <div className="w-24 h-24 sm:w-28 sm:h-28 bg-slate-50 rounded-xl border border-slate-100 p-2 flex items-center justify-center shrink-0">
