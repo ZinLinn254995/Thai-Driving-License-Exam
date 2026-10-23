@@ -52,6 +52,8 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 
 - [x] Add automated checks for the homepage canonical, `robots.txt` sitemap declaration, and sitemap URLs (homepage plus six published informational pages). CI run [40040594631](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40040594631) passed lockfile generation, TypeScript, unit tests, mobile browser smoke tests, and production build.
 
+- [x] Lazy-load the quiz, results, study, and history screens so they are split into separate browser chunks. CI run [40040951812](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40040951812) passed TypeScript, all 9 unit tests, all 6 mobile browser smoke tests, and production build. The main JS chunk decreased from 1,341.03 kB (261.41 kB gzip) to 1,290.65 kB (252.15 kB gzip); the large-chunk warning remains, so performance optimization is partial rather than complete.
+
 ## Release safeguards
 
 - Do not merge into `main` without explicit approval.
