@@ -14,6 +14,7 @@ This checklist covers general site-quality work and the transition from the form
 - [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
 - [ ] Complete phone-sized smoke testing on the intended public domain.
 - [x] Add a safe empty-question fallback so an empty quiz pool does not dereference a missing current question.
+- [x] Guard option selection and keyboard shortcuts against missing questions or out-of-range option indexes.
 - [x] Reject saved history entries when the percentage or practice-target flag contradicts the stored score/total.
 - [ ] Run automated/manual edge-case verification for empty quiz input, timer/submit races, and score/result handling when answer and question counts differ.
 - [ ] Review all traffic-sign image correctness and licensing separately (intentionally deferred until after the user's merge).
