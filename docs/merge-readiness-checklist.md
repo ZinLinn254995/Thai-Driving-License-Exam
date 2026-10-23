@@ -14,9 +14,9 @@ This checklist prioritizes learner safety, content quality, accessibility, relia
 - [x] Prevent the global Enter shortcut from advancing a quiz a second time when a focused button already handles Enter natively.
 - [x] Reject saved history entries when the percentage or practice-target flag contradicts the stored score/total.
 - [ ] Run automated/manual edge-case verification for empty quiz input, timer/submit races, and score/result handling when answer and question counts differ.
-- [ ] Review all traffic-sign image correctness and licensing separately (intentionally deferred until after the user's merge).
+- [ ] Finish the traffic-sign question-to-image match and asset-license audit before merging or publishing changes to the question bank.
 - [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
-- [ ] Review privacy disclosures against actual data collection and remove assumptions about planned monetization.
+- [x] Review FAQ and privacy disclosures against the current no-ads, no-subscription implementation; revisit only if the actual project scope changes.
 
 ## Branch audit fixes completed
 
