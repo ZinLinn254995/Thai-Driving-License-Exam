@@ -83,9 +83,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* Categories Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
         {/* Category 1: Signs */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Traffic Signs (${signsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_signs')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_signs'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
@@ -111,9 +115,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 2: Laws */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Traffic Laws (${lawsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_laws')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_laws'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
@@ -139,9 +147,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 3: Safe Driving */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Safe Driving (${safeDrivingCount} questions)`}
           onClick={() => onNavigateStudy('safe_driving')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('safe_driving'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
@@ -167,9 +179,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 4: Vehicle Maintenance */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Vehicle Maintenance (${maintenanceCount} questions)`}
           onClick={() => onNavigateStudy('vehicle_maintenance')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('vehicle_maintenance'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
@@ -195,9 +211,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 5: Accident Prediction */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Accident Prediction (${accidentPredictionCount} questions)`}
           onClick={() => onNavigateStudy('accident_prediction')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('accident_prediction'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-rose-100 text-rose-800 flex items-center justify-center shrink-0">
@@ -406,7 +426,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
               {lang === 'en'
-                ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and pass/fail verdict upon submit.'
+                ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and your practice-target status after you submit. (This is not an official exam result.)'
                 : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ အောင်/ရှုံး ရမှတ်စာရင်းပြသမည်။'}
             </p>
           </div>
@@ -479,8 +499,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 {lang === 'en' ? latestAttempt.total : toMyanmarNumber(latestAttempt.total)} ·{' '}
                 <span className={latestAttempt.passed ? 'text-emerald-700 font-bold' : 'text-red-700 font-bold'}>
                   {latestAttempt.passed
-                    ? (lang === 'en' ? 'Passed ✔' : 'အောင်မြင်ခဲ့သည် ✔')
-                    : (lang === 'en' ? 'Did not pass ✘' : 'မအောင်မြင်သေးပါ ✘')}
+                    ? (lang === 'en' ? 'Practice target reached ✔' : 'လေ့ကျင့်မှုပန်းတိုင် ပြည့်မီ ✔')
+                    : (lang === 'en' ? 'Below practice target ✘' : 'လေ့ကျင့်မှုပန်းတိုင် မပြည့်မီသေး ✘')}
                 </span>
               </div>
             </div>
