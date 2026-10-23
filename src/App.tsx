@@ -172,7 +172,7 @@ export default function App() {
     sounds.playComplete(passed);
 
     // Save the normalized result so history and the result screen use the same score.
-    saveExamHistory({
+    const savedHistory = saveExamHistory({
       score: correctCount,
       total,
       percentage,
@@ -180,6 +180,9 @@ export default function App() {
       mode: quizMode
     });
     setExamHistory(getExamHistory());
+    if (!savedHistory) {
+      window.alert('Your result is ready, but this browser could not save it to practice history. Check your browser storage settings if you want future attempts to be saved.');
+    }
 
     setCurrentView('result');
     window.scrollTo({ top: 0, behavior: 'smooth' });
