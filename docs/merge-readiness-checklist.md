@@ -10,10 +10,18 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Keep placements outside active quiz questions, answer options, and timed controls.
 - [x] Document the proposed first-party ad platform contract and Premium entitlement requirements.
 - [x] Keep the question bank and traffic-sign assets out of scope for this ad-platform transition.
-- [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head.
+- [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head; the current Vercel check is failing with the build-rate-limit restriction, and no successful build is confirmed.
 - [ ] Complete phone-sized smoke testing on the intended public domain.
-- [ ] Review all traffic-sign image correctness and licensing separately.
-- [ ] Review canonical URLs, sitemap, and privacy disclosures against the actual production domain.
+- [ ] Review all traffic-sign image correctness and licensing separately (intentionally deferred until after the user's merge).
+- [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
+- [ ] Review privacy disclosures against actual data collection and future ad behavior.
+
+## Branch audit fixes completed
+
+- [x] Reject malformed history records with impossible score/percentage ranges and reject non-positive bookmark IDs.
+- [x] Prevent duplicate exam completion from rapid repeated submission or a timer/submit race.
+- [x] Guard result percentage calculation against an empty result set.
+- [x] Remove the unrelated `thaidriveexam.com` footer link so the UI does not point away from the configured production domain.
 
 ## Before enabling first-party ads
 
