@@ -10,23 +10,27 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  lockfile:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/work/adsense-readiness-audit'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
+    permissions:
+      contents: write
     steps:
-      - name: Check out source
+      - name: Check out working branch
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
-      - name: Commit generated lockfile on the working branch
-        if: github.event_name == 'push' && github.ref == 'refs/heads/work/adsense-readiness-audit'
+      - name: Generate lockfile without running package scripts
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Commit generated lockfile
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -37,14 +41,24 @@ jobs:
           else
             echo "package-lock.json is unchanged"
           fi
-      - name: Upload generated dependency lockfile for review
-        uses: actions/upload-artifact@v4
+
+  build:
+    needs: lockfile
+    if: always() && (needs.lockfile.result == 'success' || needs.lockfile.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
         with:
-          name: generated-package-lock
-          path: package-lock.json
-          if-no-files-found: error
-          retention-days: 3
-      - name: Verify reproducible clean install
+          ref: ${{ github.event_name == 'push' && github.ref == 'refs/heads/work/adsense-readiness-audit' && 'work/adsense-readiness-audit' || github.sha }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies from lockfile
         run: npm ci --no-audit --no-fund
       - name: TypeScript check
         run: npm run lint
