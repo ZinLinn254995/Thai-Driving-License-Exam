@@ -30,6 +30,7 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Align result score and mistake lists with the actual question IDs so stale/mismatched answer entries cannot inflate the score or cause a missing-question crash.
 - [x] Normalize final quiz answers against the active question set and recompute correctness from each selected option before showing/saving the result.
 - [x] Remove the unrelated `thaidriveexam.com` footer link so the UI does not point away from the configured production domain.
+- [x] Correct the FAQ's stale AdSense claim: it now states that no ads are currently shown and the provider-neutral ad placements render nothing.
 
 ## Before enabling first-party ads
 
