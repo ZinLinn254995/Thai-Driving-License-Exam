@@ -6,10 +6,10 @@ This integration is deliberately inactive until the real publisher ID and ad-uni
 
 Add these environment variables in the Vercel project settings for the intended deployment environment:
 
-- `VITE_ADSENSE_CLIENT_ID`: the publisher ID supplied by AdSense, in the `ca-pub-...` format.
-- `VITE_ADSENSE_HOME_SLOT`: ad-unit slot ID created in AdSense for the home page.
-- `VITE_ADSENSE_STUDY_SLOT`: ad-unit slot ID created in AdSense for the study page.
-- `VITE_ADSENSE_RESULT_SLOT`: ad-unit slot ID created in AdSense for the result page.
+- VITE_ADSENSE_CLIENT_ID: the publisher ID supplied by AdSense, in the ca-pub-... format.
+- VITE_ADSENSE_HOME_SLOT: ad-unit slot ID created in AdSense for the home page.
+- VITE_ADSENSE_STUDY_SLOT: ad-unit slot ID created in AdSense for the study page.
+- VITE_ADSENSE_RESULT_SLOT: ad-unit slot ID created in AdSense for the result page.
 
 The values are public client-side configuration, not secrets. Do not guess or invent IDs. Leave them blank until the real values are available. Rebuild/redeploy after changing Vercel environment variables.
 
@@ -23,13 +23,14 @@ The values are public client-side configuration, not secrets. Do not guess or in
 
 ## Before enabling ads
 
-1. Apply for and receive approval from Google AdSense for the exact site/domain.
-2. Use only the publisher and slot IDs issued by the AdSense account.
-3. Check Google AdSense site ownership/verification instructions and the account's current policy status.
-4. Publish a valid `ads.txt` entry using the exact seller details supplied by AdSense. Do not publish a placeholder `ads.txt`.
-5. Confirm consent-management requirements for every audience/region served; use a Google-certified CMP where Google requires one.
-6. Review the live privacy policy against the actual ad settings and consent flow.
-7. Test on mobile and desktop, check for layout shifts, and confirm that no ad appears in the active quiz flow.
-8. Keep the original question bank unchanged and verify its file hashes before/after unrelated UI work if data-integrity proof is required.
+1. Review [the content rights and AdSense readiness checklist](./content-rights-and-adsense-readiness.md). In particular, source credit alone does not establish permission to republish third-party questions or images.
+2. Apply for and receive approval from Google AdSense for the exact site/domain.
+3. Use only the publisher and slot IDs issued by the AdSense account.
+4. Check Google AdSense site ownership/verification instructions and the account's current policy status.
+5. Publish a valid ads.txt entry using the exact seller details supplied by AdSense. Do not publish a placeholder ads.txt.
+6. Confirm consent-management requirements for every audience/region served; use a Google-certified CMP where Google requires one.
+7. Review the live privacy policy against the actual ad settings and consent flow.
+8. Test on mobile and desktop, check for layout shifts, and confirm that no ad appears in the active quiz flow.
+9. Keep the original question bank unchanged and verify its file hashes before/after unrelated UI work if data-integrity proof is required.
 
 Code readiness is not AdSense approval. The site must also satisfy Google's content, rights, navigation, and policy requirements.
