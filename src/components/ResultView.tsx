@@ -30,17 +30,22 @@ export const ResultView: React.FC<ResultViewProps> = ({
   onGoHome
 }) => {
   const total = questions.length;
-  const correctCount = answers.filter((a) => a.isCorrect).length;
+  // Count only answers aligned with the displayed question set; stale or malformed entries must not inflate scores.
+  const correctCount = questions.reduce((count, question, index) => {
+    const answer = answers[index];
+    return count + (answer?.questionId === question.id && answer.isCorrect ? 1 : 0);
+  }, 0);
   const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
   const targetReached = percentage >= 90; // This is a site practice target, not an official exam pass result.
 
   // Find mistake questions
-  const mistakes = answers
-    .map((a, idx) => {
-      if (!a.isCorrect) {
+  const mistakes = questions
+    .map((question, idx) => {
+      const answer = answers[idx];
+      if (answer?.questionId !== question.id || !answer.isCorrect) {
         return {
-          question: questions[idx],
-          selectedIdx: a.selectedOptionIndex
+          question,
+          selectedIdx: answer?.questionId === question.id ? answer.selectedOptionIndex : -1
         };
       }
       return null;
