@@ -427,7 +427,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
               {lang === 'en'
                 ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and your practice-target status after you submit. (This is not an official exam result.)'
-                : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ အောင်/ရှုံး ရမှတ်စာရင်းပြသမည်။'}
+                : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ ရမှတ်နှင့် လေ့ကျင့်မှုပန်းတိုင် အခြေအနေကို ပြသမည်။'}
             </p>
           </div>
 
