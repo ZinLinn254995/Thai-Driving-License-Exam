@@ -78,6 +78,11 @@ export default function App() {
 
   // Helper to start an exam with 50 random questions from selected pool
   const startExamWithItems = useCallback((items: QuestionItem[], mode: ExamMode) => {
+    if (items.length === 0) {
+      window.alert('No questions are available for this topic yet. Please choose another topic.');
+      return;
+    }
+
     // Select up to 50 items randomly
     const shuffledBank = shuffleArray(items);
     const selected = shuffledBank.slice(0, 50);
