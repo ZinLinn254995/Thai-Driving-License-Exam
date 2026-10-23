@@ -146,3 +146,14 @@ A read-only recursive Git tree inventory of commit `0026c49357e5ed2fa8e826987000
 
 This is a **file-presence inventory only**, not proof that every question references the correct file, that all referenced paths load in the deployed app, or that the assets are licensed for reuse. The extra JPG files are not assumed to be question assets. Next verification should compare the actual image paths used by the question records against the tracked file tree and inspect each uncertain visual match. No assets or question mappings were changed.
 
+### Question-image path integrity check (2026-10-24)
+
+A read-only scan of the current question source's `image` fields compared all non-null image paths with files in the recursive repository tree.
+
+- **193** non-null image-field references were found across the source (including image fields on nested objects, not just the main question record).
+- All **193 unique paths** resolve to tracked files under `public/` after normalizing the leading slash.
+- **0 missing referenced image paths** were found by this check.
+- No repeated non-null path strings were found in those image fields.
+
+This confirms repository path presence only. It does not prove that the image depicts the sign/scenario intended by its question, that it renders correctly in every deployed route, or that its rights are cleared. Visual/semantic matching and licensing remain separate checks. No source mappings or image files were changed.
+
