@@ -25,17 +25,42 @@
   </style>
 </head>
 <body>
-<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html" aria-current="page">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a></nav></header>
+<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html" aria-current="page">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a><button id="myanmar-toggle" type="button" aria-pressed="false" style="border:1px solid rgba(255,255,255,.55);border-radius:8px;background:#074028;color:white;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer">Show Myanmar</button></nav></header>
 <main>
 <h1>About Thai Drive Exam</h1>
 <p>Thai Drive Exam is an independent practice website intended to help learners review road signs, traffic laws, safe driving, vehicle maintenance, and accident-prevention topics before studying for a Thai driving licence test.</p>
 <p>The site provides English-first practice questions with optional Myanmar (Burmese) translations to help Myanmar-speaking learners understand the wording of questions and answer choices while preparing for a Thai driving licence test. Learners can practise in English and reveal the Myanmar translation when they need extra support.</p>
-<p>မြန်မာဘာသာစကားဖြင့် အထောက်အကူလိုအပ်သူများအတွက် အင်္ဂလိပ်မေးခွန်းများကို လေ့ကျင့်ဖြေဆိုရင်း မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ရန် ရည်ရွယ်ထားပါသည်။ ဘာသာပြန်သည် လေ့လာရာတွင် အထောက်အကူဖြစ်စေရန်ဖြစ်ပြီး တရားဝင်စာမေးပွဲစာသားဟု မဆိုလိုပါ။</p>
+<p lang="my" hidden>မြန်မာဘာသာစကားဖြင့် အထောက်အကူလိုအပ်သူများအတွက် အင်္ဂလိပ်မေးခွန်းများကို လေ့ကျင့်ဖြေဆိုရင်း မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ရန် ရည်ရွယ်ထားပါသည်။ ဘာသာပြန်သည် လေ့လာရာတွင် အထောက်အကူဖြစ်စေရန်ဖြစ်ပြီး တရားဝင်စာမေးပွဲစာသားဟု မဆိုလိုပါ။</p>
 <p>It is not operated by, approved by, or affiliated with Thailand’s Department of Land Transport (DLT), thaidriveexam.com, or any government agency.</p>
 <h2>Question sources and accuracy</h2>
 <p>The question bank includes material sourced from <a href="https://thaidriveexam.com/">thaidriveexam.com</a>, with translations and presentation changes for learners. Source credit does not itself establish permission to reproduce material. Rights and source attribution must be respected; if you own material shown here and have a concern, please use the contact page to report it.</p>
 <p>Questions, translations, images, and answer explanations may contain errors or become outdated. Use this website as a study aid, not as an official answer key. Always check current rules and official guidance before driving.</p>
 </main>
 <footer>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</footer>
+
+<script>
+(() => {
+  const key = 'thai_drive_show_myanmar';
+  const button = document.getElementById('myanmar-toggle');
+  const translations = document.querySelectorAll('[lang="my"]');
+  if (!button) return;
+  const readPreference = () => {
+    try { return localStorage.getItem(key) === 'true'; }
+    catch { return false; }
+  };
+  const update = (enabled) => {
+    translations.forEach((item) => { item.hidden = !enabled; });
+    button.setAttribute('aria-pressed', String(enabled));
+    button.textContent = enabled ? 'Hide Myanmar' : 'Show Myanmar';
+  };
+  button.addEventListener('click', () => {
+    const enabled = !readPreference();
+    try { localStorage.setItem(key, String(enabled)); } catch {}
+    update(enabled);
+  });
+  update(readPreference());
+})();
+</script>
+
 </body>
 </html>
