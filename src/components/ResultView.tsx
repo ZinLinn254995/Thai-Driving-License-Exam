@@ -31,7 +31,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 }) => {
   const total = questions.length;
   const correctCount = answers.filter((a) => a.isCorrect).length;
-  const percentage = Math.round((correctCount / total) * 100);
+  const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
   const targetReached = percentage >= 90; // This is a site practice target, not an official exam pass result.
 
   // Find mistake questions
