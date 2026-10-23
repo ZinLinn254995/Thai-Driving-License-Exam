@@ -135,6 +135,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (showGridModal || showConfirmModal || showExitConfirmModal) return;
 
+      // Do not let quiz shortcuts interfere with text entry or browser/system shortcuts.
+      const target = e.target as HTMLElement | null;
+      if (
+        target?.isContentEditable ||
+        (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) ||
+        e.altKey || e.ctrlKey || e.metaKey
+      ) return;
+
       if (e.key === '1' || e.key === 'a' || e.key === 'A') handleSelectOption(0);
       else if (e.key === '2' || e.key === 'b' || e.key === 'B') handleSelectOption(1);
       else if (e.key === '3' || e.key === 'c' || e.key === 'C') handleSelectOption(2);
