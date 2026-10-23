@@ -2,7 +2,6 @@ import React from 'react';
 import { Award, RotateCcw, AlertCircle, CheckCircle2, XCircle, ArrowRight, BookOpen, ShieldCheck, Scale, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, UserAnswer, LanguageMode } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
-import { AdSlot } from './AdSlot';
 
 interface ResultViewProps {
   questions: QuizQuestion[];
@@ -146,7 +145,6 @@ export const ResultView: React.FC<ResultViewProps> = ({
         </button>
       </div>
 
-      <AdSlot placement="result" />
 
       {/* Review Mistakes Section */}
       {mistakes.length > 0 ? (
