@@ -37,6 +37,7 @@ export default function App() {
   const [soundEnabled, setSoundEnabled] = useState(sounds.enabled);
   const [bookmarkedIds, setBookmarkedIds] = useState<number[]>([]);
   const [examHistory, setExamHistory] = useState<ExamHistoryItem[]>([]);
+  const [selectedHistoryItem, setSelectedHistoryItem] = useState<ExamHistoryItem | null>(null);
 
   // Active quiz state
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -177,7 +178,9 @@ export default function App() {
       total,
       percentage,
       passed,
-      mode: quizMode
+      mode: quizMode,
+      questions: quizQuestions,
+      answers: normalizedAnswers
     });
     setExamHistory(getExamHistory());
     if (!savedHistory) {
@@ -234,6 +237,13 @@ export default function App() {
               setCurrentView('study');
             }}
             recentHistory={examHistory}
+            onViewHistoryDetails={(item) => {
+              if (item.questions?.length && item.answers) {
+                setSelectedHistoryItem(item);
+                setCurrentView('history');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
             bookmarkedCount={bookmarkedIds.length}
           />
         )}
@@ -251,17 +261,22 @@ export default function App() {
           />
         )}
 
-        {currentView === 'result' && (
+        {(currentView === 'result' || (currentView === 'history' && selectedHistoryItem !== null)) && (
           <ResultView
-            questions={quizQuestions}
-            answers={quizResults}
+            questions={selectedHistoryItem?.questions ?? quizQuestions}
+            answers={selectedHistoryItem?.answers ?? quizResults}
             lang={lang}
             showMyanmar={showMyanmar}
+            mode={selectedHistoryItem?.mode ?? quizMode}
             totalQuestions={QUESTIONS_BANK.length}
             onRetakeNew={() => handleStartExam(quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
             onNavigateStudy={() => setCurrentView('study')}
-            onGoHome={() => setCurrentView('home')}
+            onGoHome={() => {
+              if (selectedHistoryItem) setSelectedHistoryItem(null);
+              setCurrentView('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         )}
 
@@ -276,13 +291,19 @@ export default function App() {
           />
         )}
 
-        {currentView === 'history' && (
+        {currentView === 'history' && !selectedHistoryItem && (
           <HistoryView
             history={examHistory}
             lang={lang}
             showMyanmar={showMyanmar}
             onClearHistory={handleClearHistory}
             onStartExam={() => handleStartExam('instant', 'all')}
+            onViewDetails={(item) => {
+              if (item.questions?.length && item.answers) {
+                setSelectedHistoryItem(item);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           />
         )}
       </main>

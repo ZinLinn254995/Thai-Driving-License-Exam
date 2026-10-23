@@ -1,4 +1,4 @@
-import { ExamMode } from '../types';
+import { ExamMode, QuizQuestion, UserAnswer } from '../types';
 
 const MM_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'];
 
@@ -23,6 +23,8 @@ export interface ExamHistoryItem {
   percentage: number;
   passed: boolean;
   mode: ExamMode;
+  questions?: QuizQuestion[];
+  answers?: UserAnswer[];
 }
 
 const STORAGE_KEY_HISTORY = 'thai_drive_exam_history';
@@ -60,7 +62,9 @@ export function getExamHistory(): ExamHistoryItem[] {
         record.percentage === Math.round((record.score / record.total) * 100) &&
         typeof record.passed === 'boolean' &&
         record.passed === (record.percentage >= 90) &&
-        (record.mode === 'timed' || record.mode === 'instant')
+        (record.mode === 'timed' || record.mode === 'instant') &&
+        (record.questions === undefined || Array.isArray(record.questions)) &&
+        (record.answers === undefined || Array.isArray(record.answers))
       );
     }).slice(0, 30);
   } catch {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { History, Award, CheckCircle2, XCircle, Trash2, RotateCcw, ArrowRight } from 'lucide-react';
+import { History, Trash2, RotateCcw, ArrowRight } from 'lucide-react';
 import { ExamHistoryItem, toMyanmarNumber } from '../utils/helpers';
 import { LanguageMode } from '../types';
 
@@ -9,6 +9,7 @@ interface HistoryViewProps {
   showMyanmar: boolean;
   onClearHistory: () => void;
   onStartExam: () => void;
+  onViewDetails: (item: ExamHistoryItem) => void;
 }
 
 export const HistoryView: React.FC<HistoryViewProps> = ({
@@ -16,7 +17,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
   lang = 'en',
   showMyanmar,
   onClearHistory,
-  onStartExam
+  onStartExam,
+  onViewDetails
 }) => {
   const totalAttempts = history.length;
   const targetReachedAttempts = history.filter((h) => h.passed).length;
@@ -97,7 +99,16 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           history.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3"
+              role={item.questions?.length && item.answers ? 'button' : undefined}
+              tabIndex={item.questions?.length && item.answers ? 0 : undefined}
+              onClick={() => { if (item.questions?.length && item.answers) onViewDetails(item); }}
+              onKeyDown={(event) => {
+                if ((event.key === 'Enter' || event.key === ' ') && item.questions?.length && item.answers) {
+                  event.preventDefault();
+                  onViewDetails(item);
+                }
+              }}
+              className={`bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3 ${item.questions?.length && item.answers ? 'cursor-pointer hover:border-emerald-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600' : ''}`}
             >
               <div className="flex min-w-0 flex-1 items-start gap-3">
                 <div
@@ -141,14 +152,16 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                 </div>
               </div>
 
+              <div className="flex shrink-0 items-center gap-1">
               <button
                 type="button"
-                onClick={onStartExam}
+                onClick={(event) => { event.stopPropagation(); onStartExam(); }}
                 className="shrink-0 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
                 title={lang === 'en' ? 'Retake exam' : 'စာမေးပွဲ ပြန်ဖြေမည်'}
               >
                 <RotateCcw size={16} />
               </button>
+              </div>
             </div>
           ))
         ) : (
