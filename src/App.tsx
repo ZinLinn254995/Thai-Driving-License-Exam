@@ -248,6 +248,7 @@ export default function App() {
           <HistoryView
             history={examHistory}
             lang={lang}
+            showMyanmar={showMyanmar}
             onClearHistory={handleClearHistory}
             onStartExam={() => handleStartExam('instant', 'all')}
           />
