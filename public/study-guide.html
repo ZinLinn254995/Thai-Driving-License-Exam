@@ -26,7 +26,7 @@
   </style>
 </head>
 <body>
-<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html" aria-current="page">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a></nav></header>
+<header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html" aria-current="page">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html">Contact</a><button id="myanmar-toggle" type="button" aria-pressed="false" style="border:1px solid rgba(255,255,255,.55);border-radius:8px;background:#074028;color:white;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer">Show Myanmar</button></nav></header>
 <main>
   <article>
     <h1>How to Study for the Thai Driving Test</h1>
@@ -47,7 +47,7 @@
 
     <h2>5. Make English and Myanmar translations work together</h2>
     <p>Read the English question first, then reveal the Myanmar translation when it helps clarify the meaning. Compare both versions rather than relying only on memorized phrasing. If the translation appears inconsistent with the question, treat it as a possible content issue and report it through the Contact page instead of guessing.</p>
-<p lang="my">လေ့ကျင့်ရာတွင် အင်္ဂလိပ်မေးခွန်းကို အရင်ဖတ်ပါ။ နားမလည်သည့်အခါ Show Myanmar ကိုဖွင့်ပြီး မြန်မာဘာသာပြန်ဖြင့် အဓိပ္ပာယ်ကို နားလည်အောင်လုပ်ပါ။ ဘာသာပြန်ကို အလွတ်ကျက်ရုံမဟုတ်ဘဲ မေးခွန်းရဲ့ အဓိကသဘောတရားကို နားလည်ဖို့ အသုံးပြုပါ။ ဘာသာပြန်နဲ့ အင်္ဂလိပ်စာ မကိုက်ညီသလို ထင်ရပါက မခန့်မှန်းဘဲ Contact စာမျက်နှာမှ အကြောင်းကြားပါ။</p>
+<p lang="my" hidden>လေ့ကျင့်ရာတွင် အင်္ဂလိပ်မေးခွန်းကို အရင်ဖတ်ပါ။ နားမလည်သည့်အခါ Show Myanmar ကိုဖွင့်ပြီး မြန်မာဘာသာပြန်ဖြင့် အဓိပ္ပာယ်ကို နားလည်အောင်လုပ်ပါ။ ဘာသာပြန်ကို အလွတ်ကျက်ရုံမဟုတ်ဘဲ မေးခွန်းရဲ့ အဓိကသဘောတရားကို နားလည်ဖို့ အသုံးပြုပါ။ ဘာသာပြန်နဲ့ အင်္ဂလိပ်စာ မကိုက်ညီသလို ထင်ရပါက မခန့်မှန်းဘဲ Contact စာမျက်နှာမှ အကြောင်းကြားပါ။</p>
 
     <h2>6. Study in short, repeatable sessions</h2>
     <ul>
@@ -66,5 +66,30 @@
   </article>
 </main>
 <footer>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</footer>
+
+<script>
+(() => {
+  const key = 'thai_drive_show_myanmar';
+  const button = document.getElementById('myanmar-toggle');
+  const translations = document.querySelectorAll('[lang="my"]');
+  if (!button) return;
+  const readPreference = () => {
+    try { return localStorage.getItem(key) === 'true'; }
+    catch { return false; }
+  };
+  const update = (enabled) => {
+    translations.forEach((item) => { item.hidden = !enabled; });
+    button.setAttribute('aria-pressed', String(enabled));
+    button.textContent = enabled ? 'Hide Myanmar' : 'Show Myanmar';
+  };
+  button.addEventListener('click', () => {
+    const enabled = !readPreference();
+    try { localStorage.setItem(key, String(enabled)); } catch {}
+    update(enabled);
+  });
+  update(readPreference());
+})();
+</script>
+
 </body>
 </html>
