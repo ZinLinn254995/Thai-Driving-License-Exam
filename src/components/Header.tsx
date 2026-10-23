@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ showMyanmar, onToggleMyanmar, so
               <span className="font-extrabold tracking-tight text-lg">Driving Test Practice</span>
               <span className="bg-[#f2b705] text-[#19241e] text-[10px] font-bold px-1.5 py-0.5 rounded">{totalQuestions} Questions</span>
             </span>
-            <span className="block text-xs text-[#cfe9da]">Practice for the Thai driving test</span>
+            <span className="block text-xs text-[#cfe9da]">English practice · Myanmar translations available</span>
           </span>
         </button>
         <div className="flex items-center gap-2 justify-between sm:justify-end">
