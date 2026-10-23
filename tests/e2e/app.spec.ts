@@ -5,9 +5,12 @@ test('mobile landing page toggles Myanmar translations and opens history', async
   await expect(page.getByRole('heading', { name: 'Thai Driving License Practice' })).toBeVisible();
 
   const showMyanmar = page.getByRole('button', { name: 'Show Myanmar' });
+  const categoryTranslation = page.getByText('လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ');
   await expect(showMyanmar).toHaveAttribute('aria-pressed', 'false');
+  await expect(categoryTranslation).toHaveCount(0);
   await showMyanmar.click();
   await expect(page.getByRole('button', { name: 'Hide Myanmar' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(categoryTranslation).toBeVisible();
 
   await page.getByRole('button', { name: 'History' }).click();
   await expect(page.getByRole('heading', { name: 'Practice Score History' })).toBeVisible();
