@@ -34,3 +34,21 @@ The values are public client-side configuration, not secrets. Do not guess or in
 9. Keep the original question bank unchanged and verify its file hashes before/after unrelated UI work if data-integrity proof is required.
 
 Code readiness is not AdSense approval. The site must also satisfy Google's content, rights, navigation, and policy requirements.
+
+## Pre-application smoke-test checklist (no question-bank edits)
+
+Complete these checks on the exact public domain you intend to submit to AdSense. A successful build is not a substitute for a browser test.
+
+- [ ] Open the site in a private/incognito browser window while signed out of any developer tools; confirm the intended public URL loads without a Vercel protection/login screen.
+- [ ] On a phone-sized viewport, open every top-level view and confirm content fits the screen without horizontal scrolling or controls covering one another.
+- [ ] Start a practice session, select an answer, use next/previous controls where available, and confirm feedback behaves normally.
+- [ ] Start and finish a timed exam; confirm the timer, result summary, review actions, and return-to-home action work.
+- [ ] Open Study, search by English keyword and question number, filter a topic, toggle Myanmar translations, and bookmark/unbookmark an item.
+- [ ] Open History; confirm a saved attempt appears after navigating away and returning, then test the clear-history confirmation/action deliberately.
+- [ ] Refresh the app and confirm it recovers without a blank screen or console-level runtime error.
+- [ ] Open About, Study Guide, FAQ, Privacy, Disclaimer, and Contact from the public site; confirm each page loads and its navigation links work.
+- [ ] Verify the canonical URLs and sitemap host match the exact domain being submitted; do not assume a preview URL and production URL are interchangeable.
+- [ ] Keep AdSense variables blank during functional testing unless a real publisher account and slot IDs are ready. Never test with invented IDs or click your own live ads.
+- [ ] Record the test date, browser/device, public URL, failures, and fixes. Repeat the checks after the final intended deployment.
+
+These checks intentionally do not alter question text, answers, translations, question ordering, or question-image references. If a test reveals a content-data issue, record it separately for the owner rather than changing the bank in this phase.
