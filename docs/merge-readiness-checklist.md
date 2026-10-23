@@ -45,6 +45,8 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 - [ ] Verify traffic-sign image semantics and licensing with evidence before altering any question-image mapping or replacing assets. Path existence alone does not prove that an image depicts the correct sign or that its use is permitted.
 - [ ] Check the final production deployment on an Android phone only after an approved merge and deliberate deployment; no Vercel deployment has been triggered by this branch work.
 
+- [x] Add `noindex,follow` to the legacy standalone HTML file under `public/assets/aistudio/` because it is copied to the public output but is not part of the sitemap or the current main app. This changes SEO metadata only; its question bank/content remains untouched.
+
 ## Release safeguards
 
 - Do not merge into `main` without explicit approval.
