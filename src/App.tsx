@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { lazy, Suspense, useState, useEffect, useCallback, useMemo } from 'react';
 import { QUESTIONS_BANK, QuestionItem } from './data/questions';
 import { LanguageMode, ExamMode, ExamTopicFilter, QuizQuestion, UserAnswer } from './types';
 import { Header } from './components/Header';
 import { HomeView } from './components/HomeView';
-import { QuizView } from './components/QuizView';
-import { ResultView } from './components/ResultView';
-import { StudyView } from './components/StudyView';
-import { HistoryView } from './components/HistoryView';
+const QuizView = lazy(() => import('./components/QuizView').then((module) => ({ default: module.QuizView })));
+const ResultView = lazy(() => import('./components/ResultView').then((module) => ({ default: module.ResultView })));
+const StudyView = lazy(() => import('./components/StudyView').then((module) => ({ default: module.StudyView })));
+const HistoryView = lazy(() => import('./components/HistoryView').then((module) => ({ default: module.HistoryView })));
 import {
   shuffleArray,
   getBookmarks,
@@ -230,6 +230,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-6">
+        <Suspense fallback={<div className="py-10 text-center text-sm text-slate-600" role="status">Loading practice screen…</div>}>
         {currentView === 'home' && (
           <HomeView
             lang={lang}
@@ -315,6 +316,7 @@ export default function App() {
             }}
           />
         )}
+        </Suspense>
       </main>
 
       {/* Footer */}
