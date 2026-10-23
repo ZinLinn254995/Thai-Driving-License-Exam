@@ -97,9 +97,9 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           history.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between"
+              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex min-w-0 flex-1 items-start gap-3">
                 <div
                   className={`w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm text-white shrink-0 ${
                     item.passed ? 'bg-emerald-600' : 'bg-red-600'
@@ -107,8 +107,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                 >
                   {item.percentage}%
                 </div>
-                <div>
-                  <div className="flex items-center gap-2">
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-bold text-sm text-slate-900 font-myanmar">
                       {lang === 'en'
                         ? `Score: ${item.score} / ${item.total}`
@@ -126,7 +126,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                         : item.passed ? 'လေ့ကျင့်မှုပန်းတိုင် ပြည့်မီ ✔' : 'လေ့ကျင့်မှုပန်းတိုင် မပြည့်မီ ✘'}
                     </span>
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">
+                  <div className="text-xs text-slate-500 mt-0.5 break-words">
                     {item.date} ·{' '}
                     <span className="font-myanmar">
                       {lang === 'en'
@@ -144,7 +144,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               <button
                 type="button"
                 onClick={onStartExam}
-                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+                className="shrink-0 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
                 title={lang === 'en' ? 'Retake exam' : 'စာမေးပွဲ ပြန်ဖြေမည်'}
               >
                 <RotateCcw size={16} />
