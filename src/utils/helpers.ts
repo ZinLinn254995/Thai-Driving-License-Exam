@@ -68,7 +68,7 @@ export function getExamHistory(): ExamHistoryItem[] {
   }
 }
 
-export function saveExamHistory(item: Omit<ExamHistoryItem, 'id' | 'date'>): ExamHistoryItem {
+export function saveExamHistory(item: Omit<ExamHistoryItem, 'id' | 'date'>): ExamHistoryItem | null {
   try {
     const history = getExamHistory();
     const newItem: ExamHistoryItem = {
@@ -85,11 +85,8 @@ export function saveExamHistory(item: Omit<ExamHistoryItem, 'id' | 'date'>): Exa
     localStorage.setItem(STORAGE_KEY_HISTORY, JSON.stringify(updated));
     return newItem;
   } catch {
-    return {
-      ...item,
-      id: '1',
-      date: 'Just now'
-    };
+    // Do not fabricate a successful-looking history item when storage fails.
+    return null;
   }
 }
 
