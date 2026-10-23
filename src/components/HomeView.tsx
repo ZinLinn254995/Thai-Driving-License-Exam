@@ -59,11 +59,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 ? `Practice question bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
                 : `ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving၊ ယာဉ်ထိန်းသိမ်းရေး နှင့် မတော်တဆမှု ကြိုတင်ခန့်မှန်းခြင်း မေးခွန်းများ (${toMyanmarNumber(totalQuestions)} ခု)`}
             </p>
-            {showMyanmar && lang === 'en' && (
-              <p className="text-sm text-[#e2f3e9] font-myanmar leading-relaxed">
-                ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် လမ်းဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ ဘေးကင်းစွာမောင်းနှင်ခြင်း၊ ယာဉ်ထိန်းသိမ်းခြင်းနှင့် ယာဉ်မတော်တဆမှု ကာကွယ်ရေး မေးခွန်းများကို လေ့ကျင့်ပါ။
-              </p>
-            )}
           </div>
 
           <div className="flex items-center gap-2 self-start sm:self-auto">
