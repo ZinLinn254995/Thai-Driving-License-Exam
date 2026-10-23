@@ -155,7 +155,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
               </h3>
               <p className="text-xs text-slate-500 font-myanmar">
                 {lang === 'en'
-                  ? 'Review the verified correct answers below to prepare for your test'
+                  ? 'Review the answers shown below, and check important rules against trusted official guidance.'
                   : 'အဖြေမှန်များကို ဂရုပြုမှတ်သားပါ'}
               </p>
             </div>
