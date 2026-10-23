@@ -50,6 +50,8 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 
 - [x] Add automated checks for all six published informational pages: English language metadata, title/description, index policy, H1, production canonical URL, and root-relative internal-link targets. CI run [40039084793](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40039084793) passed lockfile generation, TypeScript, unit tests, mobile browser smoke tests, and production build.
 
+- [x] Add automated checks for the homepage canonical, `robots.txt` sitemap declaration, and sitemap URLs (homepage plus six published informational pages). CI run [40040594631](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40040594631) passed lockfile generation, TypeScript, unit tests, mobile browser smoke tests, and production build.
+
 ## Release safeguards
 
 - Do not merge into `main` without explicit approval.
