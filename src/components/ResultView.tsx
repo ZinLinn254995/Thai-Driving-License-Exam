@@ -278,7 +278,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-900 font-myanmar space-y-1">
           <Award size={32} className="text-emerald-700 mx-auto" />
           <h3 className="font-bold text-lg">
-            {lang === 'en' ? 'Perfect Score: 50 / 50!' : 'အမှတ်ပြည့် ၅၀/၅၀ ရရှိပါသည်!'}
+            {lang === 'en' ? `Perfect Score: ${correctCount} / ${total}!` : `အမှတ်ပြည့် ${toMyanmarNumber(correctCount)} / ${toMyanmarNumber(total)} ရရှိပါသည်!`}
           </h3>
           <p className="text-xs text-emerald-700">
             {lang === 'en'
