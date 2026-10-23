@@ -39,14 +39,14 @@ export const Header: React.FC<HeaderProps> = ({ showMyanmar, onToggleMyanmar, so
         </div>
       </div>
       <nav aria-label="Main navigation" className="flex items-center gap-1.5 mt-2.5 pt-2 border-t border-white/10 text-xs overflow-x-auto no-scrollbar">
-        <button type="button" onClick={() => onNavigate('home')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'home' || currentView === 'quiz' || currentView === 'result' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
+        <button type="button" onClick={() => onNavigate('home')} aria-current={currentView === 'home' || currentView === 'quiz' || currentView === 'result' ? 'page' : undefined} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'home' || currentView === 'quiz' || currentView === 'result' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
           <CheckSquare size={13} /><span>Practice Test</span>
         </button>
-        <button type="button" onClick={() => onNavigate('study')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'study' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
+        <button type="button" onClick={() => onNavigate('study')} aria-current={currentView === 'study' ? 'page' : undefined} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'study' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
           <BookOpen size={13} /><span>Question Bank ({totalQuestions})</span>
           {bookmarksCount > 0 && <span className="bg-[#f2b705] text-[#19241e] text-[10px] font-bold px-1.5 py-0.2 rounded-full">{bookmarksCount}</span>}
         </button>
-        <button type="button" onClick={() => onNavigate('history')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'history' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
+        <button type="button" onClick={() => onNavigate('history')} aria-current={currentView === 'history' ? 'page' : undefined} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap ${currentView === 'history' ? 'bg-white/20 text-white font-semibold' : 'text-[#cfe9da] hover:text-white hover:bg-white/10'}`}>
           <History size={13} /><span>History</span>
         </button>
       </nav>
