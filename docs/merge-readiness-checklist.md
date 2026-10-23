@@ -29,6 +29,7 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Notify learners when practice results cannot be persisted to browser history instead of returning a fabricated success-shaped history item.
 - [x] Show a clear error if browser storage prevents clearing practice history; keep the visible history unchanged on failure.
 - [x] Expose pressed state for bookmark, timed-question flag, and sound toggle controls so assistive technology can identify their current on/off state.
+- [x] Add accessible dialog semantics and descriptive question/status labels to the quiz navigator and submission confirmation.
 - [x] Make history cards wrap long status labels and constrain content width on narrow screens; manual phone-sized smoke testing is still required.
 - [x] Prevent duplicate exam completion from rapid repeated submission or a timer/submit race.
 - [x] Guard result percentage calculation against an empty result set.
