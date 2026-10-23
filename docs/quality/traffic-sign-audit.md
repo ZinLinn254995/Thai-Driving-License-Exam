@@ -131,3 +131,18 @@ Read-only inspection of `src/data/questions.ts` on `release/readiness-audit` was
 - A normalized English-prompt scan found 10 groups sharing repeated prompt wording. The largest groups are image-dependent traffic-sign templates such as “When encountering this sign, what should the driver do?”; repeated template text is **not by itself evidence of duplicate or incorrect questions**, because the sign image and options may differ.
 - This check validates structure only. It does **not** establish that the keyed answer, Thai source wording, Myanmar translation, and referenced image semantically match, nor does it establish commercial reuse rights for any asset.
 - The exact image/question matching and rights review remain outstanding. No question, option, answer key, translation, explanation, image, or mapping was changed by this inspection.
+
+### Repository image-asset inventory (2026-10-24)
+
+A read-only recursive Git tree inventory of commit `0026c49357e5ed2fa8e82698700047f3a60fdcfe` found **197 tracked image files** across the repository. This includes:
+
+- `public/exam_images/`: **117** numbered traffic-sign images (`q_001.webp`–`q_117.webp`).
+- `public/exam_images/law/`: **34** images.
+- `public/exam_images/safe/`: **30** images.
+- `public/exam_images/accident/`: **12** images.
+- `public/exam_images/maintenance/`: **1** image.
+- `public/logo.svg`: **1** image asset.
+- Two additional JPG files outside the exam-image folders (one under `.aistudio/`, one under `public/assets/aistudio/`).
+
+This is a **file-presence inventory only**, not proof that every question references the correct file, that all referenced paths load in the deployed app, or that the assets are licensed for reuse. The extra JPG files are not assumed to be question assets. Next verification should compare the actual image paths used by the question records against the tracked file tree and inspect each uncertain visual match. No assets or question mappings were changed.
+
