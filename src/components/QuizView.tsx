@@ -573,10 +573,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
       {/* Grid Navigator Modal (Questions 1..50 palette) */}
       {showGridModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="question-navigator-title">
             <div className="flex items-center justify-between border-b pb-2">
-              <h3 className="font-bold text-slate-900 text-base font-myanmar">
+              <h3 id="question-navigator-title" className="font-bold text-slate-900 text-base font-myanmar">
                 {lang === 'en'
                   ? 'Question Navigator (Palette)'
                   : 'မေးခွန်းများသို့ ကူးပြောင်းရန် (Question Navigator)'}
@@ -584,6 +584,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               <button
                 type="button"
                 onClick={() => setShowGridModal(false)}
+                aria-label="Close question navigator"
                 className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100"
               >
                 <X size={18} />
@@ -638,6 +639,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       setShowGridModal(false);
                     }}
                     className={cls}
+                    aria-label={\`Go to question \${idx + 1}\${isAns ? ', answered' : ', unanswered'}\${isFlag ? ', flagged' : ''}\${isCur ? ', current question' : ''}\`}
                   >
                     <span>{idx + 1}</span>
                     {isFlag && (
@@ -694,13 +696,13 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
       {/* Confirm Submission Modal */}
       {showConfirmModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center" role="dialog" aria-modal="true" aria-labelledby="submit-exam-title">
             <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
               <HelpCircle size={26} />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 text-lg font-myanmar">
+              <h3 id="submit-exam-title" className="font-bold text-slate-900 text-lg font-myanmar">
                 {lang === 'en'
                   ? 'Submit Exam Answers?'
                   : 'စာမေးပွဲ အဖြေလွှာ တင်သွင်းမည်လား။'}
