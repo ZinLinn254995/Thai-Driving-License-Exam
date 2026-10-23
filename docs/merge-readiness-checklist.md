@@ -46,6 +46,7 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 - [ ] Check the final production deployment on an Android phone only after an approved merge and deliberate deployment; no Vercel deployment has been triggered by this branch work.
 
 - [x] Add `noindex,follow` to the legacy standalone HTML file under `public/assets/aistudio/` because it is copied to the public output but is not part of the sitemap or the current main app. This changes SEO metadata only; its question bank/content remains untouched.
+- [x] Audit internal links in the six published informational pages: all discovered root-relative links target the homepage or one of the published static pages; no broken internal target was found. The About page’s third-party source link is intentional and remains disclosed.
 
 ## Release safeguards
 
