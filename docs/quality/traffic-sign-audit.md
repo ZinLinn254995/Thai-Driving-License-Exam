@@ -49,3 +49,45 @@ Wikimedia Commons lists the file [Thailand road sign บ-1-1.svg](https://common
 
 ## Current status
 This is an audit note, not a claim that the image set or answers have been fully verified. No question answers or images were changed based only on filenames or file sizes.
+
+
+## User-approved review and change-control policy (2026-10-24)
+
+The repository owner explicitly requires that question-bank content remain unchanged unless they are shown the finding and approve the proposed edit first. This restriction applies even when a question, answer, translation, or image mapping appears incorrect.
+
+- Do not edit, delete, reorder, rewrite, translate, or replace any question, answer, explanation, question-to-image mapping, or related asset without prior explicit approval from the owner.
+- Findings must first be recorded here as **suspected issue**, **verified correct**, **verified incorrect**, or **unable to verify**. A small file size, visual appearance, or a mismatch suspicion is not proof by itself.
+- For a suspected/verified issue, record the question ID, exact English prompt, current answer/options and image path, evidence/reference, confidence, and proposed correction. Share the finding with the owner and wait for explicit approval before changing any data or image.
+- If evidence confirms the current content is correct, record it as **verified correct** and leave it unchanged.
+- If evidence confirms an error, record it as **verified incorrect — awaiting owner approval**. Do not fix it until approval is received.
+- Keep all review work on `release/readiness-audit`; do not merge to `main` or publish changes without explicit approval.
+
+## Review register — no question data changed
+
+The following assets are pending question-to-image comparison. Their appearance was inspected, but the matching question text was not available through the current repository file connector. Therefore none is currently classified as correct or incorrect.
+
+| Asset | Image observation only | Question match status | Data change |
+| --- | --- | --- | --- |
+| `q_006.webp` | Yellow solid line above a broken yellow line | Unable to verify — prompt/answer pair not inspected | None |
+| `q_023.webp` | Two right-pointing arrows separated by a solid white line | Unable to verify — prompt/answer pair not inspected | None |
+| `q_032.webp` | Repeating broken white lane line | Unable to verify — prompt/answer pair not inspected | None |
+| `q_042.webp` | Road/intersection edge marking with a short white line | Unable to verify — prompt/answer pair not inspected | None |
+| `q_047.webp` | Two right-pointing arrows and a broken white divider | Unable to verify — prompt/answer pair not inspected | None |
+| `q_114.webp` | Road/intersection edge marking with a broken white line | Unable to verify — prompt/answer pair not inspected | None |
+
+### Required review record for each question
+
+When the exact question is available, add one entry per question using this format:
+
+- **Question ID / image path:**
+- **Exact current English prompt and options:**
+- **Current answer / explanation (if present):**
+- **Myanmar translation (if present):**
+- **Observed finding:** suspected issue / verified correct / verified incorrect / unable to verify
+- **Evidence:** official Thai reference, page/section, URL, and relevant wording or sign identifier
+- **Reasoning and confidence:**
+- **Proposed change (if any):**
+- **Owner decision:** pending / approved / rejected
+- **Applied change:** must remain “none” until explicit approval
+
+A correction is not authorized merely because an audit entry says “verified incorrect.” Approval must come from the owner before the repository data is changed.
