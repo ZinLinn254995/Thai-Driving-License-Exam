@@ -7,6 +7,7 @@ interface ResultViewProps {
   questions: QuizQuestion[];
   answers: UserAnswer[];
   lang: LanguageMode;
+  showMyanmar: boolean;
   totalQuestions?: number;
   onRetakeNew: () => void;
   onRetakeMistakes: (mistakeQuestionIds: number[]) => void;
@@ -20,6 +21,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   questions,
   answers,
   lang,
+  showMyanmar,
   totalQuestions = 598,
   onRetakeNew,
   onRetakeMistakes,
@@ -27,17 +29,22 @@ export const ResultView: React.FC<ResultViewProps> = ({
   onGoHome
 }) => {
   const total = questions.length;
-  const correctCount = answers.filter((a) => a.isCorrect).length;
-  const percentage = Math.round((correctCount / total) * 100);
-  const passed = percentage >= 90; // Official Thai DLT pass criteria: 90% (45/50)
+  // Count only answers aligned with the displayed question set; stale or malformed entries must not inflate scores.
+  const correctCount = questions.reduce((count, question, index) => {
+    const answer = answers[index];
+    return count + (answer?.questionId === question.id && answer.isCorrect ? 1 : 0);
+  }, 0);
+  const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+  const targetReached = percentage >= 90; // This is a site practice target, not an official exam pass result.
 
   // Find mistake questions
-  const mistakes = answers
-    .map((a, idx) => {
-      if (!a.isCorrect) {
+  const mistakes = questions
+    .map((question, idx) => {
+      const answer = answers[idx];
+      if (answer?.questionId !== question.id || !answer.isCorrect) {
         return {
-          question: questions[idx],
-          selectedIdx: a.selectedOptionIndex
+          question,
+          selectedIdx: answer?.questionId === question.id ? answer.selectedOptionIndex : -1
         };
       }
       return null;
@@ -48,18 +55,18 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
-      {/* Official Result Banner */}
+      {/* Practice result banner */}
       <div
         className={`rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg border-4 border-white outline-4 relative overflow-hidden ${
-          passed
+          targetReached
             ? 'bg-[#0b5d3b] outline-[#0b5d3b]'
             : 'bg-[#b3261e] outline-[#b3261e]'
         }`}
       >
         <div className="space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
-            {passed ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-            <span>{passed ? 'Official Standard: Passed' : 'Official Standard: Failed'}</span>
+            {targetReached ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
+            <span>{targetReached ? 'Practice Target Reached' : 'Keep Practicing'}</span>
           </div>
 
           {/* Big Score */}
@@ -75,22 +82,14 @@ export const ResultView: React.FC<ResultViewProps> = ({
           {/* Pass / Fail Status Text */}
           <div className="space-y-0.5">
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
-              {lang === 'en'
-                ? passed
-                  ? 'Congratulations! You Passed the Exam'
-                  : 'Did Not Pass — Keep Practicing!'
-                : passed
-                ? 'ဂုဏ်ယူပါသည်! စာမေးပွဲ အောင်မြင်ပါသည်'
-                : 'မအောင်မြင်သေးပါ၊ ထပ်မံကြိုးစားပါ'}
+              {targetReached
+                ? 'Great work! You reached the practice target.'
+                : 'Keep going—review your mistakes and try again.'}
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
-              {lang === 'en'
-                ? passed
-                  ? 'Score of 90% or higher meets the official Thailand DLT license requirements.'
-                  : 'Official Thai driving license exam requires at least 45 out of 50 correct answers (90%).'
-                : passed
-                ? 'ထိုင်းယာဉ်မောင်းလိုင်စင် သတ်မှတ်ချက် (၉၀% နှင့်အထက်) ပြည့်မီပါသည်။'
-                : 'ထိုင်းယာဉ်မောင်းလိုင်စင်အတွက် ၄၅ မှတ် (၉၀%) အနည်းဆုံး လိုအပ်ပါသည်။'}
+              {targetReached
+                ? 'You reached this website’s 90% practice target. This is not an official exam result; check current requirements with Thailand’s Department of Land Transport.'
+                : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'}
             </p>
           </div>
         </div>
@@ -146,6 +145,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         </button>
       </div>
 
+
       {/* Review Mistakes Section */}
       {mistakes.length > 0 ? (
         <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm space-y-5">
@@ -158,7 +158,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
               </h3>
               <p className="text-xs text-slate-500 font-myanmar">
                 {lang === 'en'
-                  ? 'Review the verified correct answers below to prepare for your test'
+                  ? 'Review the answers shown below, and check important rules against trusted official guidance.'
                   : 'အဖြေမှန်များကို ဂရုပြုမှတ်သားပါ'}
               </p>
             </div>
@@ -217,31 +217,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                         </div>
 
                         {/* Question text */}
-                        {lang === 'th_my' ? (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold font-thai text-slate-900 leading-snug">
-                              {question.q_th}
-                            </h4>
-                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                              {question.q_my}
-                            </p>
-                          </div>
-                        ) : lang === 'en_my' ? (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                              {question.q_en}
-                            </h4>
-                            <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">
-                              {question.q_my}
-                            </p>
-                          </div>
-                        ) : (
-                          <div>
-                            <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                              {question.q_en}
-                            </h4>
-                          </div>
-                        )}
+                        {<>
+                          <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">{question.q_en}</h4>
+                          {showMyanmar && <p className="text-xs font-myanmar text-slate-500 leading-relaxed mt-0.5">{question.q_my}</p>}
+                        </>}
                       </div>
 
                       {/* Correct Answer Box */}
@@ -256,9 +235,9 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           </div>
                         )}
                         <div className="font-semibold text-emerald-900 text-sm">
-                          {lang === 'th_my' ? correctOpt?.th : correctOpt?.en}
+                          {correctOpt?.en}
                         </div>
-                        {lang !== 'en' && (
+                        {showMyanmar && (
                           <div className="text-xs text-emerald-700 font-myanmar">
                             {correctOpt?.my}
                           </div>
@@ -278,7 +257,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                             </div>
                           )}
                           <div className="line-through text-red-900 font-medium text-sm">
-                            {lang === 'th_my' ? wrongOpt.th : wrongOpt.en}
+                            {wrongOpt.en}
                           </div>
                           {lang !== 'en' && (
                             <div className="text-xs text-red-700 font-myanmar">
@@ -302,7 +281,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-900 font-myanmar space-y-1">
           <Award size={32} className="text-emerald-700 mx-auto" />
           <h3 className="font-bold text-lg">
-            {lang === 'en' ? 'Perfect Score: 50 / 50!' : 'အမှတ်ပြည့် ၅၀/၅၀ ရရှိပါသည်!'}
+            {lang === 'en' ? `Perfect Score: ${correctCount} / ${total}!` : `အမှတ်ပြည့် ${toMyanmarNumber(correctCount)} / ${toMyanmarNumber(total)} ရရှိပါသည်!`}
           </h3>
           <p className="text-xs text-emerald-700">
             {lang === 'en'

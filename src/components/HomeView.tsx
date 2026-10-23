@@ -5,6 +5,7 @@ import { toMyanmarNumber, ExamHistoryItem } from '../utils/helpers';
 
 interface HomeViewProps {
   lang: LanguageMode;
+  showMyanmar: boolean;
   totalQuestions: number;
   signsCount: number;
   lawsCount: number;
@@ -19,6 +20,7 @@ interface HomeViewProps {
 
 export const HomeView: React.FC<HomeViewProps> = ({
   lang,
+  showMyanmar,
   totalQuestions,
   signsCount,
   lawsCount,
@@ -35,7 +37,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
   return (
     <div className="space-y-6">
-      {/* Official Sign Banner */}
+      {/* Independent practice introduction banner */}
       <div className="relative overflow-hidden rounded-2xl bg-[#0b5d3b] text-white p-5 sm:p-7 shadow-lg border-4 border-white outline-4 outline-[#0b5d3b]">
         {/* Highway sign bolts decoration */}
         <div className="absolute top-2.5 left-2.5 w-2 h-2 rounded-full bg-slate-300 border border-slate-600 shadow-inner" />
@@ -47,14 +49,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="space-y-1.5">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f2b705] text-[#19241e] text-xs font-black tracking-wide uppercase">
               <ShieldCheck size={13} />
-              <span>Thai Driving License Exam 2026</span>
+              <span>Independent Practice Resource</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
               Thai Driving License Practice
             </h1>
             <p className="text-sm sm:text-base text-[#cfe9da] font-myanmar leading-relaxed">
               {lang === 'en'
-                ? `Official exam preparation bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
+                ? `Practice question bank with ${totalQuestions} questions covering Traffic Signs, Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction.`
                 : `ထိုင်းယာဉ်မောင်းလိုင်စင် လမ်းညွှန်ဆိုင်းဘုတ်၊ ယာဉ်စည်းကမ်း၊ Safe Driving၊ ယာဉ်ထိန်းသိမ်းရေး နှင့် မတော်တဆမှု ကြိုတင်ခန့်မှန်းခြင်း မေးခွန်းများ (${toMyanmarNumber(totalQuestions)} ခု)`}
             </p>
           </div>
@@ -75,12 +77,46 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </div>
 
+      {/* Make the site's English-first, Myanmar-supported purpose clear to visitors and reviewers. */}
+      <section
+        aria-labelledby="language-support-heading"
+        className="rounded-2xl border border-emerald-200 bg-white p-4 sm:p-5 shadow-sm"
+      >
+        <div className="flex items-start gap-3">
+          <div className="shrink-0 rounded-xl bg-emerald-50 p-2.5 text-[#0b5d3b]" aria-hidden="true">
+            <BookOpen size={22} />
+          </div>
+          <div className="min-w-0">
+            <h2 id="language-support-heading" className="text-base sm:text-lg font-extrabold text-slate-900">
+              English Practice with Myanmar Translations
+            </h2>
+            <p className="mt-1 text-sm leading-relaxed text-slate-700 font-myanmar">
+              ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး
+              မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို နားလည်ရန် မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။
+              အင်္ဂလိပ်စာကို အဓိကထားလေ့လာပြီး လိုအပ်သည့်အခါ မြန်မာဘာသာပြန်ဖြင့် အထောက်အကူယူပါ။
+            </p>
+            <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              English is the main study language. Use the Myanmar translation control in the header for additional understanding support. This is an independent practice aid, not an official exam or government service.
+            </p>
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 border border-emerald-100">
+              <span aria-hidden="true">✓</span>
+              English questions · Optional Myanmar translations
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Categories Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
         {/* Category 1: Signs */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Traffic Signs (${signsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_signs')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_signs'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
@@ -106,9 +142,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 2: Laws */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Traffic Laws (${lawsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_laws')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_laws'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
@@ -134,9 +174,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 3: Safe Driving */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Safe Driving (${safeDrivingCount} questions)`}
           onClick={() => onNavigateStudy('safe_driving')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('safe_driving'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
@@ -162,9 +206,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 4: Vehicle Maintenance */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Vehicle Maintenance (${maintenanceCount} questions)`}
           onClick={() => onNavigateStudy('vehicle_maintenance')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('vehicle_maintenance'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
@@ -190,9 +238,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         {/* Category 5: Accident Prediction */}
-        <div 
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Study Accident Prediction (${accidentPredictionCount} questions)`}
           onClick={() => onNavigateStudy('accident_prediction')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all"
+          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('accident_prediction'); } }}
+          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-rose-100 text-rose-800 flex items-center justify-center shrink-0">
@@ -230,13 +282,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </h3>
           </div>
           <span className="text-xs text-slate-500 font-medium">
-            {lang === 'en' ? '50 questions randomly drawn' : 'ကျပန်း ၅၀ ခု ရွေးထုတ်မည်'}
+            {lang === 'en' ? 'Up to 50 questions randomly drawn' : 'အများဆုံး ၅၀ ခု ကျပန်းရွေးမည်'}
           </span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs font-semibold">
           <button
             type="button"
+            aria-pressed={selectedTopic === 'all'}
             onClick={() => setSelectedTopic('all')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'all'
@@ -247,13 +300,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="font-bold">{lang === 'en' ? 'All Topics' : 'အားလုံး (All)'}</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
               {lang === 'en'
-                ? `Random 50 of ${totalQuestions}`
-                : `${toMyanmarNumber(totalQuestions)} ခုလုံးထဲမှ ကျပန်း ၅၀`}
+                ? `Up to 50 random from ${totalQuestions}`
+                : `${toMyanmarNumber(totalQuestions)} ခုထဲမှ အများဆုံး ၅၀ ခု ကျပန်းရွေးမည်`}
             </div>
           </button>
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'traffic_signs'}
             onClick={() => setSelectedTopic('traffic_signs')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'traffic_signs'
@@ -269,6 +323,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'traffic_laws'}
             onClick={() => setSelectedTopic('traffic_laws')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'traffic_laws'
@@ -284,6 +339,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'safe_driving'}
             onClick={() => setSelectedTopic('safe_driving')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'safe_driving'
@@ -299,6 +355,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'vehicle_maintenance'}
             onClick={() => setSelectedTopic('vehicle_maintenance')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'vehicle_maintenance'
@@ -314,6 +371,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
           <button
             type="button"
+            aria-pressed={selectedTopic === 'accident_prediction'}
             onClick={() => setSelectedTopic('accident_prediction')}
             className={`p-3 rounded-xl border-2 transition-all text-left flex flex-col justify-between ${
               selectedTopic === 'accident_prediction'
@@ -329,21 +387,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </div>
 
-      {/* Info Notice about 50 Questions & 90% Pass */}
+      {/* Explain the site's practice target without implying an official pass mark. */}
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
         <div className="p-2 rounded-lg bg-[#f2b705]/20 text-amber-800 shrink-0">
           <Award size={20} />
         </div>
         <div className="text-xs sm:text-sm text-amber-950 font-myanmar space-y-1">
           <p className="font-semibold text-amber-900">
-            {lang === 'en'
-              ? 'Official DLT Exam Standard: 45 out of 50 correct answers (90%) required to pass.'
-              : 'ထိုင်း DLT စာမေးပွဲ စည်းကမ်းချက် - စုစုပေါင်း ၅၀ မေးခွန်းအနက် ၄၅ မှတ် (၉၀%) ရရှိမှ အောင်မြင်မည်။'}
+            Practice target: 90% in this tool. This is not an official exam pass mark; check current requirements with Thailand’s Department of Land Transport.
           </p>
           <p className="text-amber-800 text-xs">
-            {lang === 'en'
-              ? 'Each exam draws 50 randomized questions with official diagrams and standardized answer choices.'
-              : 'မေးခွန်းအားလုံးတွင် ထိုင်းစာ သို့မဟုတ် အင်္ဂလိပ်စာကို အဓိကကြီးကြီးပြသထားပြီး မြန်မာစာကို အောက်မှ သေးသေးဖြင့် ဘာသာပြန်ပြသပေးပါသည်။'}
+            Each test selects up to 50 random questions from this practice bank.
           </p>
         </div>
       </div>
@@ -358,7 +412,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Sparkles size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                {lang === 'en' ? 'Recommended for Learning' : 'Recommended · အကြံပြုထားသည်'}
+                {lang === 'en' ? 'Good for Learning' : 'Recommended · အကြံပြုထားသည်'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
@@ -386,7 +440,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </button>
         </div>
 
-        {/* Mode 2: Real Exam Simulation */}
+        {/* Mode 2: Timed Exam Practice */}
         <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -394,19 +448,19 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <Clock size={20} />
               </span>
               <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                {lang === 'en' ? 'Official Exam Format' : 'Official Standard · စာမေးပွဲအစစ်ပုံစံ'}
+                {lang === 'en' ? 'Timed Practice' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု'}
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
-              {lang === 'en' ? 'Real Exam Simulation (50 Random)' : 'စာမေးပွဲ အစစ်အမှန် မုဒ် (ကျပန်း ၅၀)'}
+              {lang === 'en' ? 'Timed Exam Practice (Up to 50 Random)' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု (အများဆုံး ၅၀ ခု)'}
             </h2>
             <div className="text-xs text-slate-500 font-medium mt-0.5">
-              Real Exam Simulation · 60 Mins Timer
+              Timed Practice · 60-Minute Timer
             </div>
             <p className="text-xs sm:text-sm text-slate-600 font-myanmar mt-2.5 leading-relaxed">
               {lang === 'en'
-                ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and pass/fail verdict upon submit.'
-                : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ အောင်/ရှုံး ရမှတ်စာရင်းပြသမည်။'}
+                ? '60-minute strict exam timer, question flagging, and palette navigation. Final score and your practice-target status after you submit. (This is not an official exam result.)'
+                : 'အချိန် ၆၀ မိနစ်သတ်မှတ်ချက်၊ မေးခွန်းကျော်/ပြန်လှန်စစ်ဆေးနိုင်ပြီး ပြီးဆုံးမှသာ ရမှတ်နှင့် လေ့ကျင့်မှုပန်းတိုင် အခြေအနေကို ပြသမည်။'}
             </p>
           </div>
 
@@ -417,7 +471,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <Clock size={17} />
             <span>
-              {lang === 'en' ? 'Start Exam Simulation (60m)' : 'စာမေးပွဲစစ်ဆေးမည် (Exam Simulation)'}
+              {lang === 'en' ? 'Start Timed Practice (60m)' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု စတင်မည် (၆၀ မိနစ်)'}
             </span>
           </button>
         </div>
@@ -478,8 +532,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 {lang === 'en' ? latestAttempt.total : toMyanmarNumber(latestAttempt.total)} ·{' '}
                 <span className={latestAttempt.passed ? 'text-emerald-700 font-bold' : 'text-red-700 font-bold'}>
                   {latestAttempt.passed
-                    ? (lang === 'en' ? 'Passed ✔' : 'အောင်မြင်ခဲ့သည် ✔')
-                    : (lang === 'en' ? 'Did not pass ✘' : 'မအောင်မြင်သေးပါ ✘')}
+                    ? (lang === 'en' ? 'Practice target reached ✔' : 'လေ့ကျင့်မှုပန်းတိုင် ပြည့်မီ ✔')
+                    : (lang === 'en' ? 'Below practice target ✘' : 'လေ့ကျင့်မှုပန်းတိုင် မပြည့်မီသေး ✘')}
                 </span>
               </div>
             </div>

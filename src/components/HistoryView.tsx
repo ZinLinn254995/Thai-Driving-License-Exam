@@ -6,22 +6,24 @@ import { LanguageMode } from '../types';
 interface HistoryViewProps {
   history: ExamHistoryItem[];
   lang?: LanguageMode;
+  showMyanmar: boolean;
   onClearHistory: () => void;
   onStartExam: () => void;
 }
 
 export const HistoryView: React.FC<HistoryViewProps> = ({
   history,
-  lang = 'th_my',
+  lang = 'en',
+  showMyanmar,
   onClearHistory,
   onStartExam
 }) => {
   const totalAttempts = history.length;
-  const passedAttempts = history.filter((h) => h.passed).length;
-  const passRate = totalAttempts > 0 ? Math.round((passedAttempts / totalAttempts) * 100) : 0;
+  const targetReachedAttempts = history.filter((h) => h.passed).length;
+  const targetRate = totalAttempts > 0 ? Math.round((targetReachedAttempts / totalAttempts) * 100) : 0;
   const avgScore =
     totalAttempts > 0
-      ? Math.round(history.reduce((acc, h) => acc + h.score, 0) / totalAttempts)
+      ? Math.round(history.reduce((acc, h) => acc + h.percentage, 0) / totalAttempts)
       : 0;
 
   return (
@@ -30,12 +32,14 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
       <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
         <div>
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-myanmar">
-            {lang === 'en' ? 'Exam Score History' : 'စာမေးပွဲ ဖြေဆိုမှတ်တမ်းများ'}
+            {lang === 'en' ? 'Practice Score History' : 'လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ'}
+            {showMyanmar && <span className="block text-sm font-normal text-slate-600">လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ</span>}
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
             {lang === 'en'
-              ? 'Review your past exam attempts and pass rates'
-              : 'ယခင်ဖြေဆိုခဲ့သော ရလဒ်များနှင့် အောင်မြင်မှုရာခိုင်နှုန်း'}
+              ? 'Review your practice attempts and practice-target progress'
+              : 'ယခင်လေ့ကျင့်မှုရလဒ်များနှင့် ပန်းတိုင်ပြည့်မီမှု'}
+            {showMyanmar && <span className="block font-myanmar">ယခင်လေ့ကျင့်မှုရလဒ်များနှင့် ပန်းတိုင်ပြည့်မီမှု</span>}
           </p>
         </div>
 
@@ -60,28 +64,28 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               {lang === 'en' ? totalAttempts : toMyanmarNumber(totalAttempts)}
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
-              {lang === 'en' ? 'Total Tests' : 'ဖြေဆိုကြိမ်ရေ'}
+              {lang === 'en' ? 'Attempts' : 'လေ့ကျင့်ကြိမ်ရေ'}
+              {showMyanmar && <span className="block font-myanmar">လေ့ကျင့်ကြိမ်ရေ</span>}
             </div>
           </div>
 
           <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs text-center">
             <div className="text-2xl font-black text-emerald-700 leading-none">
-              {lang === 'en' ? `${passRate}%` : `${toMyanmarNumber(passRate)}%`}
+              {lang === 'en' ? `${targetRate}%` : `${toMyanmarNumber(targetRate)}%`}
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
-              {lang === 'en' ? 'Pass Rate' : 'အောင်ချက်'}
+              {lang === 'en' ? 'Practice Target Rate' : 'လေ့ကျင့်မှုပန်းတိုင်နှုန်း'}
+              {showMyanmar && <span className="block font-myanmar">လေ့ကျင့်မှုပန်းတိုင်နှုန်း</span>}
             </div>
           </div>
 
           <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs text-center">
             <div className="text-2xl font-black text-[#0b5d3b] leading-none">
-              {lang === 'en' ? avgScore : toMyanmarNumber(avgScore)}{' '}
-              <span className="text-xs text-slate-400 font-normal">
-                {lang === 'en' ? '/ 50' : '/ ၅၀'}
-              </span>
+              {lang === 'en' ? `${avgScore}%` : `${toMyanmarNumber(avgScore)}%`}
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
               {lang === 'en' ? 'Avg. Score' : 'ပျမ်းမျှရမှတ်'}
+              {showMyanmar && <span className="block font-myanmar">ပျမ်းမျှရမှတ်</span>}
             </div>
           </div>
         </div>
@@ -93,9 +97,9 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           history.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between"
+              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex min-w-0 flex-1 items-start gap-3">
                 <div
                   className={`w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm text-white shrink-0 ${
                     item.passed ? 'bg-emerald-600' : 'bg-red-600'
@@ -103,8 +107,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                 >
                   {item.percentage}%
                 </div>
-                <div>
-                  <div className="flex items-center gap-2">
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-bold text-sm text-slate-900 font-myanmar">
                       {lang === 'en'
                         ? `Score: ${item.score} / ${item.total}`
@@ -117,20 +121,20 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                           : 'bg-red-100 text-red-800'
                       }`}
                     >
-                      {item.passed
-                        ? (lang === 'en' ? 'Passed ✔' : 'အောင်မြင် ✔')
-                        : (lang === 'en' ? 'Failed ✘' : 'မအောင်သေး ✘')}
+                      {lang === 'en'
+                        ? item.passed ? 'Practice target reached ✔' : 'Below practice target ✘'
+                        : item.passed ? 'လေ့ကျင့်မှုပန်းတိုင် ပြည့်မီ ✔' : 'လေ့ကျင့်မှုပန်းတိုင် မပြည့်မီ ✘'}
                     </span>
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">
+                  <div className="text-xs text-slate-500 mt-0.5 break-words">
                     {item.date} ·{' '}
                     <span className="font-myanmar">
                       {lang === 'en'
                         ? item.mode === 'timed'
-                          ? '60-min Real Exam'
+                          ? '60-min Timed Practice'
                           : 'Instant Feedback Practice'
                         : item.mode === 'timed'
-                        ? 'အချိန်ကန့်သတ်စာမေးပွဲ'
+                        ? 'မိနစ် ၆၀ အချိန်ကန့်သတ် လေ့ကျင့်မှု'
                         : 'လေ့ကျင့်ရေးမုဒ်'}
                     </span>
                   </div>
@@ -140,7 +144,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               <button
                 type="button"
                 onClick={onStartExam}
-                className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+                className="shrink-0 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
                 title={lang === 'en' ? 'Retake exam' : 'စာမေးပွဲ ပြန်ဖြေမည်'}
               >
                 <RotateCcw size={16} />

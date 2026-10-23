@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Bookmark, Flag, CheckCircle2, XCircle, ArrowLeft, ArrowRight, Clock, HelpCircle, Grid, X, ShieldCheck, Scale, Car, Wrench, AlertTriangle } from 'lucide-react';
 import { QuizQuestion, LanguageMode, ExamMode, UserAnswer } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
@@ -8,6 +8,7 @@ interface QuizViewProps {
   questions: QuizQuestion[];
   mode: ExamMode;
   lang: LanguageMode;
+  showMyanmar: boolean;
   onFinishExam: (answers: UserAnswer[]) => void;
   onExit: () => void;
   bookmarkedIds: number[];
@@ -20,6 +21,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   questions,
   mode,
   lang,
+  showMyanmar,
   onFinishExam,
   onExit,
   bookmarkedIds,
@@ -32,34 +34,71 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes for 50 questions
   const [showGridModal, setShowGridModal] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [showExitConfirmModal, setShowExitConfirmModal] = useState(false);
+  const submitExamRef = useRef<() => void>(() => {});
+  const submissionStartedRef = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timerDeadlineRef = useRef<number | null>(null);
 
   const currentQ = questions[currentIndex];
-  const isBookmarked = bookmarkedIds.includes(currentQ.id);
-  const isFlagged = flaggedIds.includes(currentQ.id);
+  const isBookmarked = currentQ ? bookmarkedIds.includes(currentQ.id) : false;
+  const isFlagged = currentQ ? flaggedIds.includes(currentQ.id) : false;
   const isRevealed = revealedQuestions[currentIndex];
   const selectedIndex = userAnswers[currentIndex];
 
-  // Timer for Timed Exam mode
+  const handleSubmitExam = useCallback(() => {
+    // Prevent a double tap or timer/submit race from recording the same attempt twice.
+    if (submissionStartedRef.current || questions.length === 0) return;
+    submissionStartedRef.current = true;
+    const answers: UserAnswer[] = questions.map((q, idx) => {
+      const selected = userAnswers[idx];
+      const isCorrect = selected !== undefined ? q.options[selected]?.isCorrect : false;
+      return {
+        questionId: q.id,
+        selectedOptionIndex: selected !== undefined ? selected : -1,
+        isCorrect
+      };
+    });
+    onFinishExam(answers);
+  }, [questions, userAnswers, onFinishExam]);
+
+  // Keep the timer callback pointed at the latest answers without restarting the interval.
+  submitExamRef.current = handleSubmitExam;
+
+  // Use an absolute deadline so background-tab throttling does not silently extend the exam.
   useEffect(() => {
     if (mode !== 'timed') return;
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          handleSubmitExam();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
+    timerDeadlineRef.current = Date.now() + 60 * 60 * 1000;
+    const updateRemainingTime = () => {
+      const deadline = timerDeadlineRef.current;
+      if (deadline === null) return;
+      setTimeLeft(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)));
+    };
+    updateRemainingTime();
+    timerRef.current = setInterval(updateRemainingTime, 1000);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+      timerRef.current = null;
+      timerDeadlineRef.current = null;
+    };
   }, [mode]);
+
+  useEffect(() => {
+    if (mode !== 'timed' || timeLeft !== 0) return;
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = null;
+    submitExamRef.current();
+  }, [mode, timeLeft]);
 
   // Option selection handler
   const handleSelectOption = useCallback((optionIndex: number) => {
+    // Keyboard shortcuts can fire even while rendering an empty or malformed question set.
+    if (!currentQ || !Number.isInteger(optionIndex) || optionIndex < 0 || optionIndex >= currentQ.options.length) return;
     if (mode === 'instant' && isRevealed) return;
 
     const option = currentQ.options[optionIndex];
+    if (!option) return;
+
     setUserAnswers((prev) => ({
       ...prev,
       [currentIndex]: optionIndex
@@ -90,7 +129,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
         setShowConfirmModal(true);
       }
     }
-  }, [currentIndex, questions.length, mode]);
+  }, [currentIndex, questions.length, mode, handleSubmitExam]);
 
   const handlePrev = useCallback(() => {
     if (currentIndex > 0) {
@@ -104,23 +143,32 @@ export const QuizView: React.FC<QuizViewProps> = ({
     );
   };
 
-  const handleSubmitExam = () => {
-    const answers: UserAnswer[] = questions.map((q, idx) => {
-      const selected = userAnswers[idx];
-      const isCorrect = selected !== undefined ? q.options[selected]?.isCorrect : false;
-      return {
-        questionId: q.id,
-        selectedOptionIndex: selected !== undefined ? selected : -1,
-        isCorrect
-      };
-    });
-    onFinishExam(answers);
-  };
+
 
   // Keyboard shortcut support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (showGridModal || showConfirmModal) return;
+      // Let keyboard users dismiss an open dialog without accidentally triggering quiz shortcuts.
+      if (e.key === 'Escape') {
+        if (showExitConfirmModal) setShowExitConfirmModal(false);
+        else if (showConfirmModal) setShowConfirmModal(false);
+        else if (showGridModal) setShowGridModal(false);
+        else return;
+        e.preventDefault();
+        return;
+      }
+      if (showGridModal || showConfirmModal || showExitConfirmModal) return;
+
+      // Do not let quiz shortcuts interfere with text entry or browser/system shortcuts.
+      const target = e.target as HTMLElement | null;
+      if (
+        target?.isContentEditable ||
+        (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) ||
+        e.altKey || e.ctrlKey || e.metaKey
+      ) return;
+
+      // Enter already activates a focused button natively; do not also advance via the global shortcut.
+      if (e.key === 'Enter' && target?.closest('button, a, [role="button"]')) return;
 
       if (e.key === '1' || e.key === 'a' || e.key === 'A') handleSelectOption(0);
       else if (e.key === '2' || e.key === 'b' || e.key === 'B') handleSelectOption(1);
@@ -135,7 +183,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleSelectOption, handleNext, handlePrev, isRevealed, mode, showGridModal, showConfirmModal]);
+  }, [handleSelectOption, handleNext, handlePrev, isRevealed, mode, showGridModal, showConfirmModal, showExitConfirmModal]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -148,7 +196,24 @@ export const QuizView: React.FC<QuizViewProps> = ({
   ).length;
 
   const answeredCount = Object.keys(userAnswers).length;
-  const progressPercent = ((currentIndex + 1) / questions.length) * 100;
+  const progressPercent = questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0;
+
+  // Defensive fallback: an empty question pool must not crash while rendering currentQ.
+  if (questions.length === 0) {
+    return (
+      <div className="max-w-2xl mx-auto rounded-2xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm text-center space-y-4">
+        <h2 className="text-lg font-bold text-slate-900">No questions available</h2>
+        <p className="text-sm text-slate-600">This practice test cannot start because no questions were provided. Return home and choose another topic.</p>
+        <button
+          type="button"
+          onClick={onExit}
+          className="px-4 py-2.5 rounded-xl bg-[#0b5d3b] hover:bg-[#074028] text-white font-bold text-sm"
+        >
+          Return to Home
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto space-y-4">
@@ -158,7 +223,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="flex items-center gap-2">
             <button
               type="button"
-              onClick={onExit}
+              onClick={() => mode === 'timed' ? setShowExitConfirmModal(true) : onExit()}
               className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition-colors"
               title={lang === 'en' ? 'Exit exam' : 'စာမေးပွဲမှ ထွက်မည်'}
             >
@@ -188,6 +253,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="flex items-center gap-2">
             {mode === 'timed' ? (
               <div
+                role="timer"
+                aria-label={`${lang === 'en' ? 'Time remaining' : 'အချိန်ကျန်' }: ${formatTime(timeLeft)}`}
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${
                   timeLeft < 300
                     ? 'bg-red-100 text-red-700 animate-pulse'
@@ -273,7 +340,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     ? 'bg-amber-100 text-amber-800 font-bold'
                     : 'text-slate-500 hover:bg-slate-100'
                 }`}
-                title="Flag question"
+                title={isFlagged ? 'Unflag question' : 'Flag question'}
+                aria-pressed={isFlagged}
               >
                 <Flag size={14} className={isFlagged ? 'fill-current text-amber-600' : ''} />
                 <span>
@@ -297,6 +365,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'
               }`}
               title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+              aria-label={isBookmarked ? 'Remove question bookmark' : 'Bookmark question'}
+              aria-pressed={isBookmarked}
             >
               <Bookmark size={16} className={isBookmarked ? 'fill-current' : ''} />
             </button>
@@ -317,36 +387,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
         {/* Question Text */}
         <div className="space-y-1.5 pt-1">
-          {lang === 'th_my' ? (
-            <div>
-              {/* Thai Primary Large */}
-              <h2 className="text-base sm:text-xl font-bold font-thai text-slate-900 leading-snug">
-                {currentQ.q_th}
-              </h2>
-              {/* Myanmar Subtitle Small */}
-              <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">
-                {currentQ.q_my}
-              </p>
-            </div>
-          ) : lang === 'en_my' ? (
-            <div>
-              {/* English Primary Large */}
-              <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
-                {currentQ.q_en}
-              </h2>
-              {/* Myanmar Subtitle Small */}
-              <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">
-                {currentQ.q_my}
-              </p>
-            </div>
-          ) : (
-            <div>
-              {/* English Only */}
-              <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">
-                {currentQ.q_en}
-              </h2>
-            </div>
-          )}
+          {<>
+            <h2 className="text-base sm:text-xl font-bold text-slate-900 leading-snug">{currentQ.q_en}</h2>
+            {showMyanmar && <p className="text-xs sm:text-sm font-myanmar text-slate-500 leading-relaxed mt-1">{currentQ.q_my}</p>}
+          </>}
         </div>
 
         {/* Options List */}
@@ -381,6 +425,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 type="button"
                 disabled={mode === 'instant' && isRevealed}
                 onClick={() => handleSelectOption(optIdx)}
+                aria-pressed={isSelected}
                 className={btnClasses}
               >
                 {/* Option Letter Badge */}
@@ -414,36 +459,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   )}
 
                   {/* Primary text with language mode */}
-                  {lang === 'th_my' ? (
-                    <div>
-                      {/* Thai Primary Large */}
-                      <div className="font-thai font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.th}
-                      </div>
-                      {/* Myanmar Subtitle Small */}
-                      <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">
-                        {option.my}
-                      </div>
-                    </div>
-                  ) : lang === 'en_my' ? (
-                    <div>
-                      {/* English Primary Large */}
-                      <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.en}
-                      </div>
-                      {/* Myanmar Subtitle Small */}
-                      <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">
-                        {option.my}
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      {/* English Only */}
-                      <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">
-                        {option.en}
-                      </div>
-                    </div>
-                  )}
+                  {<>
+                    <div className="font-semibold text-slate-900 text-sm sm:text-base leading-snug">{option.en}</div>
+                    {showMyanmar && <div className="font-myanmar text-xs text-slate-500 leading-relaxed mt-0.5">{option.my}</div>}
+                  </>}
                 </div>
 
                 {/* Instant Feedback Status Icon */}
@@ -488,10 +507,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   {lang === 'en' ? 'Correct choice: ' : 'အဖြေမှန်မှာ: '}
                   <span className="font-bold text-emerald-700">
                     {OPTION_LETTERS[currentQ.options.findIndex((o) => o.isCorrect)]}.{' '}
-                    {lang === 'th_my'
-                      ? currentQ.options.find((o) => o.isCorrect)?.th
-                      : currentQ.options.find((o) => o.isCorrect)?.en}{' '}
-                    {lang !== 'en' && (
+                    {currentQ.options.find((o) => o.isCorrect)?.en}{' '}
+                    {showMyanmar && (
                       <span className="font-normal text-slate-600 font-myanmar">
                         ({currentQ.options.find((o) => o.isCorrect)?.my})
                       </span>
@@ -573,10 +590,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
       {/* Grid Navigator Modal (Questions 1..50 palette) */}
       {showGridModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-md w-full p-5 space-y-4 shadow-xl max-h-[85vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="question-navigator-title">
             <div className="flex items-center justify-between border-b pb-2">
-              <h3 className="font-bold text-slate-900 text-base font-myanmar">
+              <h3 id="question-navigator-title" className="font-bold text-slate-900 text-base font-myanmar">
                 {lang === 'en'
                   ? 'Question Navigator (Palette)'
                   : 'မေးခွန်းများသို့ ကူးပြောင်းရန် (Question Navigator)'}
@@ -584,6 +601,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               <button
                 type="button"
                 onClick={() => setShowGridModal(false)}
+                aria-label="Close question navigator"
                 className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100"
               >
                 <X size={18} />
@@ -638,6 +656,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       setShowGridModal(false);
                     }}
                     className={cls}
+                    aria-label={`Go to question ${idx + 1}${isAns ? ', answered' : ', unanswered'}${isFlag ? ', flagged' : ''}${isCur ? ', current question' : ''}`}
                   >
                     <span>{idx + 1}</span>
                     {isFlag && (
@@ -659,15 +678,48 @@ export const QuizView: React.FC<QuizViewProps> = ({
         </div>
       )}
 
-      {/* Confirm Submission Modal */}
-      {showConfirmModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center">
+      {/* Confirm leaving a timed exam without saving partial answers */}
+      {showExitConfirmModal && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center" role="dialog" aria-modal="true" aria-labelledby="exit-exam-title">
             <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
               <HelpCircle size={26} />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 text-lg font-myanmar">
+              <h3 id="exit-exam-title" className="font-bold text-slate-900 text-lg">Leave this exam?</h3>
+              <p className="text-xs text-slate-600 mt-1">
+                Your current answers will be lost and this attempt will not be saved to history.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowExitConfirmModal(false)}
+                className="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs"
+              >
+                Continue Exam
+              </button>
+              <button
+                type="button"
+                onClick={onExit}
+                className="flex-1 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs"
+              >
+                Leave Exam
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Confirm Submission Modal */}
+      {showConfirmModal && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center" role="dialog" aria-modal="true" aria-labelledby="submit-exam-title">
+            <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
+              <HelpCircle size={26} />
+            </div>
+            <div>
+              <h3 id="submit-exam-title" className="font-bold text-slate-900 text-lg font-myanmar">
                 {lang === 'en'
                   ? 'Submit Exam Answers?'
                   : 'စာမေးပွဲ အဖြေလွှာ တင်သွင်းမည်လား။'}

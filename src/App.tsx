@@ -27,15 +27,11 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'quiz' | 'result' | 'study' | 'history'>('home');
   const [studyInitialCategory, setStudyInitialCategory] = useState<ExamTopicFilter>('all');
 
-  // Language Modes: 'th_my' (Thai + Myanmar), 'en_my' (English + Myanmar), 'en' (English only)
-  const [lang, setLang] = useState<LanguageMode>(() => {
-    try {
-      const saved = localStorage.getItem('thai_drive_lang');
-      if (saved === 'en_my' || saved === 'th_my' || saved === 'en') return saved;
-      return 'th_my';
-    } catch {
-      return 'th_my';
-    }
+  // Keep the interface in English and let learners reveal Myanmar translations.
+  const lang: LanguageMode = 'en';
+  const [showMyanmar, setShowMyanmar] = useState(() => {
+    try { return localStorage.getItem('thai_drive_show_myanmar') === 'true'; }
+    catch { return false; }
   });
 
   const [soundEnabled, setSoundEnabled] = useState(sounds.enabled);
@@ -60,11 +56,12 @@ export default function App() {
     setExamHistory(getExamHistory());
   }, []);
 
-  const handleLanguageChange = (newLang: LanguageMode) => {
-    setLang(newLang);
-    try {
-      localStorage.setItem('thai_drive_lang', newLang);
-    } catch {}
+  const handleToggleMyanmar = () => {
+    setShowMyanmar((previous) => {
+      const next = !previous;
+      try { localStorage.setItem('thai_drive_show_myanmar', String(next)); } catch {}
+      return next;
+    });
   };
 
   const handleToggleSound = () => {
@@ -74,6 +71,11 @@ export default function App() {
 
   const handleToggleBookmark = (questionId: number) => {
     const isNowBookmarked = toggleBookmark(questionId);
+    if (isNowBookmarked === null) {
+      window.alert('Could not save this bookmark in browser storage. Check your browser settings and try again.');
+      return;
+    }
+
     setBookmarkedIds((prev) =>
       isNowBookmarked ? [...prev, questionId] : prev.filter((id) => id !== questionId)
     );
@@ -81,6 +83,11 @@ export default function App() {
 
   // Helper to start an exam with 50 random questions from selected pool
   const startExamWithItems = useCallback((items: QuestionItem[], mode: ExamMode) => {
+    if (items.length === 0) {
+      window.alert('No questions are available for this topic yet. Please choose another topic.');
+      return;
+    }
+
     // Select up to 50 items randomly
     const shuffledBank = shuffleArray(items);
     const selected = shuffledBank.slice(0, 50);
@@ -137,18 +144,35 @@ export default function App() {
     }
   };
 
-  // Finish exam handler
+  // Finish exam handler: score only answers that match the active question set.
   const handleFinishExam = (answers: UserAnswer[]) => {
-    setQuizResults(answers);
-    const correctCount = answers.filter((a) => a.isCorrect).length;
-    const total = answers.length;
+    if (quizQuestions.length === 0) return;
+
+    const normalizedAnswers: UserAnswer[] = quizQuestions.map((question, index) => {
+      const answer = answers[index];
+      const matchesQuestion = answer?.questionId === question.id;
+      const selectedOptionIndex = matchesQuestion ? answer.selectedOptionIndex : -1;
+      const selectedOption = selectedOptionIndex >= 0
+        ? question.options[selectedOptionIndex]
+        : undefined;
+
+      return {
+        questionId: question.id,
+        selectedOptionIndex: selectedOption ? selectedOptionIndex : -1,
+        isCorrect: selectedOption?.isCorrect === true
+      };
+    });
+
+    setQuizResults(normalizedAnswers);
+    const correctCount = normalizedAnswers.filter((answer) => answer.isCorrect).length;
+    const total = quizQuestions.length;
     const percentage = Math.round((correctCount / total) * 100);
     const passed = percentage >= 90;
 
     sounds.playComplete(passed);
 
-    // Save to history
-    saveExamHistory({
+    // Save the normalized result so history and the result screen use the same score.
+    const savedHistory = saveExamHistory({
       score: correctCount,
       total,
       percentage,
@@ -156,17 +180,22 @@ export default function App() {
       mode: quizMode
     });
     setExamHistory(getExamHistory());
+    if (!savedHistory) {
+      window.alert('Your result is ready, but this browser could not save it to practice history. Check your browser storage settings if you want future attempts to be saved.');
+    }
 
     setCurrentView('result');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleClearHistory = () => {
-    if (window.confirm('ဖြေဆိုမှတ်တမ်းအားလုံးကို ဖျက်ပစ်ရန် သေချာပါသလား။')) {
+    if (window.confirm('Clear all exam history? This cannot be undone.')) {
       try {
         localStorage.removeItem('thai_drive_exam_history');
         setExamHistory([]);
-      } catch {}
+      } catch {
+        window.alert('Could not clear practice history from browser storage. Check your browser settings and try again.');
+      }
     }
   };
 
@@ -174,8 +203,8 @@ export default function App() {
     <div className="min-h-screen bg-[#f4f3ee] text-[#19241e] flex flex-col font-sans selection:bg-[#f2b705] selection:text-black">
       {/* App Header */}
       <Header
-        lang={lang}
-        setLang={handleLanguageChange}
+        showMyanmar={showMyanmar}
+        onToggleMyanmar={handleToggleMyanmar}
         soundEnabled={soundEnabled}
         onToggleSound={handleToggleSound}
         currentView={currentView}
@@ -192,6 +221,7 @@ export default function App() {
         {currentView === 'home' && (
           <HomeView
             lang={lang}
+            showMyanmar={showMyanmar}
             totalQuestions={QUESTIONS_BANK.length}
             signsCount={signsCount}
             lawsCount={lawsCount}
@@ -213,6 +243,7 @@ export default function App() {
             questions={quizQuestions}
             mode={quizMode}
             lang={lang}
+            showMyanmar={showMyanmar}
             onFinishExam={handleFinishExam}
             onExit={() => setCurrentView('home')}
             bookmarkedIds={bookmarkedIds}
@@ -225,6 +256,7 @@ export default function App() {
             questions={quizQuestions}
             answers={quizResults}
             lang={lang}
+            showMyanmar={showMyanmar}
             totalQuestions={QUESTIONS_BANK.length}
             onRetakeNew={() => handleStartExam(quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
@@ -237,6 +269,7 @@ export default function App() {
           <StudyView
             questions={QUESTIONS_BANK}
             lang={lang}
+            showMyanmar={showMyanmar}
             bookmarkedIds={bookmarkedIds}
             onToggleBookmark={handleToggleBookmark}
             initialCategory={studyInitialCategory}
@@ -247,6 +280,7 @@ export default function App() {
           <HistoryView
             history={examHistory}
             lang={lang}
+            showMyanmar={showMyanmar}
             onClearHistory={handleClearHistory}
             onStartExam={() => handleStartExam('instant', 'all')}
           />
@@ -256,24 +290,24 @@ export default function App() {
       {/* Footer */}
       <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>
-            {lang === 'en'
-              ? `Thai Driving License Question Bank (${QUESTIONS_BANK.length} Questions across 5 Official Categories)`
-              : `ထိုင်းယာဉ်မောင်းလိုင်စင် မေးခွန်း ${toMyanmarNumber(QUESTIONS_BANK.length)} ပုဒ် (ဆိုင်းဘုတ်၊ ဥပဒေ၊ Safe Driving၊ Maintenance၊ Accident Prediction)`}
-          </div>
+          <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">DLT Pass: 90% (45/50)</span>
+            <span className="text-[#0b5d3b] font-bold">Practice target: 90% (not an official pass mark)</span>
             <span>·</span>
-            <a
-              href="https://thaidriveexam.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 underline"
-            >
-              thaidriveexam.com
-            </a>
+            <span className="text-slate-600">Independent practice resource</span>
           </div>
         </div>
+        <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
+          <a href="/study-guide.html" className="underline hover:text-slate-900">Study Guide</a>
+          <a href="/faq.html" className="underline hover:text-slate-900">FAQ</a>
+          <a href="/about.html" className="underline hover:text-slate-900">About</a>
+          <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
+          <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
+          <a href="/contact.html" className="underline hover:text-slate-900">Contact / Report an issue</a>
+        </nav>
+        <p className="mt-2 px-4 text-[10px] text-slate-500 font-sans">
+          Independent study resource; not affiliated with Thailand’s Department of Land Transport.
+        </p>
       </footer>
     </div>
   );
