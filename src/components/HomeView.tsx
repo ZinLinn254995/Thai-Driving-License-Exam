@@ -114,8 +114,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
       {/* Categories Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
         {/* Category 1: Signs */}
-        <div
-          role="button"
+        <button
+          type="button"
           tabIndex={0}
           aria-label={`Study Traffic Signs (${signsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_signs')}
@@ -139,11 +139,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
             {signsCount}
           </span>
-        </div>
+        </button>
 
         {/* Category 2: Laws */}
-        <div
-          role="button"
+        <button
+          type="button"
           tabIndex={0}
           aria-label={`Study Traffic Laws (${lawsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_laws')}
@@ -167,11 +167,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
             {lawsCount}
           </span>
-        </div>
+        </button>
 
         {/* Category 3: Safe Driving */}
-        <div
-          role="button"
+        <button
+          type="button"
           tabIndex={0}
           aria-label={`Study Safe Driving (${safeDrivingCount} questions)`}
           onClick={() => onNavigateStudy('safe_driving')}
@@ -195,11 +195,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
             {safeDrivingCount}
           </span>
-        </div>
+        </button>
 
         {/* Category 4: Vehicle Maintenance */}
-        <div
-          role="button"
+        <button
+          type="button"
           tabIndex={0}
           aria-label={`Study Vehicle Maintenance (${maintenanceCount} questions)`}
           onClick={() => onNavigateStudy('vehicle_maintenance')}
@@ -223,11 +223,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
             {maintenanceCount}
           </span>
-        </div>
+        </button>
 
         {/* Category 5: Accident Prediction */}
-        <div
-          role="button"
+        <button
+          type="button"
           tabIndex={0}
           aria-label={`Study Accident Prediction (${accidentPredictionCount} questions)`}
           onClick={() => onNavigateStudy('accident_prediction')}
@@ -251,7 +251,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
             {accidentPredictionCount}
           </span>
-        </div>
+        </button>
       </div>
 
       {/* Select Topic for 50-Question Exam */}
