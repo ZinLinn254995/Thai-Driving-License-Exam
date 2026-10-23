@@ -155,7 +155,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               <div className="flex shrink-0 items-center gap-1">
               <button
                 type="button"
-                onClick={onStartExam}
+                onClick={(event) => { event.stopPropagation(); onStartExam(); }}
                 className="shrink-0 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
                 title={lang === 'en' ? 'Retake exam' : 'စာမေးပွဲ ပြန်ဖြေမည်'}
               >
