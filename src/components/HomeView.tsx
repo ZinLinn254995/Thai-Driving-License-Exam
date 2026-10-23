@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Play, Sparkles, BookOpen, Clock, Award, ShieldCheck, Scale, ArrowRight, Layers, Car, Wrench, AlertTriangle } from 'lucide-react';
 import { LanguageMode, ExamMode, ExamTopicFilter } from '../types';
 import { toMyanmarNumber, ExamHistoryItem } from '../utils/helpers';
-import { AdSlot } from './AdSlot';
 
 interface HomeViewProps {
   lang: LanguageMode;
@@ -107,7 +106,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      <AdSlot placement="home" />
 
       {/* Categories Overview Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
