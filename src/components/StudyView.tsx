@@ -86,6 +86,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('all')}
+            aria-pressed={categoryFilter === 'all'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'all'
                 ? 'bg-white text-slate-900 shadow-xs font-bold'
@@ -99,6 +100,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('traffic_signs')}
+            aria-pressed={categoryFilter === 'traffic_signs'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'traffic_signs'
                 ? 'bg-white text-emerald-900 shadow-xs font-bold'
@@ -112,6 +114,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('traffic_laws')}
+            aria-pressed={categoryFilter === 'traffic_laws'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'traffic_laws'
                 ? 'bg-white text-blue-900 shadow-xs font-bold'
@@ -125,6 +128,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('safe_driving')}
+            aria-pressed={categoryFilter === 'safe_driving'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'safe_driving'
                 ? 'bg-white text-amber-900 shadow-xs font-bold'
@@ -138,6 +142,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('vehicle_maintenance')}
+            aria-pressed={categoryFilter === 'vehicle_maintenance'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'vehicle_maintenance'
                 ? 'bg-white text-purple-900 shadow-xs font-bold'
@@ -151,6 +156,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('accident_prediction')}
+            aria-pressed={categoryFilter === 'accident_prediction'}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1 ${
               categoryFilter === 'accident_prediction'
                 ? 'bg-white text-rose-900 shadow-xs font-bold'
@@ -164,6 +170,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <button
             type="button"
             onClick={() => setCategoryFilter('bookmarked')}
+            aria-pressed={categoryFilter === 'bookmarked'}
             className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-colors ${
               categoryFilter === 'bookmarked'
                 ? 'bg-white text-amber-900 shadow-xs font-bold'
@@ -180,6 +187,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
           <Search size={17} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
+            aria-label="Search questions by keyword or question number"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={
@@ -193,6 +201,8 @@ export const StudyView: React.FC<StudyViewProps> = ({
             <button
               type="button"
               onClick={() => setSearchQuery('')}
+              aria-label="Clear question search"
+              title="Clear search"
               className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
             >
               <X size={15} />
@@ -363,6 +373,16 @@ export const StudyView: React.FC<StudyViewProps> = ({
                 ? 'Try a different keyword or reset the category filter.'
                 : 'ရှာဖွေမှုစကားလုံး အစားထိုး၍ ပြန်လည်စစ်ဆေးကြည့်ပါ။'}
             </p>
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery('');
+                setCategoryFilter('all');
+              }}
+              className="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl bg-[#0b5d3b] px-4 py-2 text-sm font-bold text-white hover:bg-[#08482e] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b5d3b]"
+            >
+              Reset search and filters
+            </button>
           </div>
         )}
       </div>
