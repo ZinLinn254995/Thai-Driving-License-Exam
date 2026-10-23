@@ -118,3 +118,16 @@ Reference points used for comparison:
 - IDs **6, 32, 42, and 114** are visually consistent with the current keyed answer, subject to the caveats recorded in the table.
 - IDs **23 and 47** use similar same-direction arrows with solid versus broken white lane dividers. The English DLT driving manual supports the distinction: solid white line means no lane changes/overtaking; broken white lane divider allows a lane change only when safe. The current answer keys are supported at the core meaning, though ID 47 would be clearer if it stated the safety qualification. These are audit notes only, not permission to edit.
 - No question, answer, translation, image, or mapping was changed. No correction is proposed for immediate implementation. If a definitive mismatch is established, record the evidence and proposed change here, then ask the repository owner for explicit approval before editing any content.
+
+
+### Automated structural inventory (2026-10-24)
+
+Read-only inspection of `src/data/questions.ts` on `release/readiness-audit` was completed without changing the question bank.
+
+- Parsed **598** question records; category counts match the declared inventory: 117 traffic signs, 74 traffic laws, 249 safe driving, 81 vehicle maintenance, and 77 accident prediction.
+- All 598 records had non-empty Thai, English, and Myanmar question text and exactly four options.
+- All 598 records had exactly one option marked `isCorrect: true`.
+- **173** records reference an image asset: all 117 traffic-sign records plus 56 records in the other categories.
+- A normalized English-prompt scan found 10 groups sharing repeated prompt wording. The largest groups are image-dependent traffic-sign templates such as “When encountering this sign, what should the driver do?”; repeated template text is **not by itself evidence of duplicate or incorrect questions**, because the sign image and options may differ.
+- This check validates structure only. It does **not** establish that the keyed answer, Thai source wording, Myanmar translation, and referenced image semantically match, nor does it establish commercial reuse rights for any asset.
+- The exact image/question matching and rights review remain outstanding. No question, option, answer key, translation, explanation, image, or mapping was changed by this inspection.
