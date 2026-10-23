@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ showMyanmar, onToggleMyanmar, so
     <div className="max-w-4xl mx-auto px-4 py-2.5 sm:py-3">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 sm:gap-3">
         <button type="button" onClick={() => onNavigate('home')} className="flex items-center gap-3 text-left group select-none">
-          <span className="w-10 h-10 rounded-xl bg-[#f2b705] text-[#19241e] font-black flex items-center justify-center text-xl border-2 border-white/90 shrink-0">TH</span>
+          <img src="/logo.svg" alt="" aria-hidden="true" className="w-10 h-10 rounded-xl border-2 border-white/90 shrink-0" width="40" height="40" />
           <span>
             <span className="flex items-center gap-2">
               <span className="font-extrabold tracking-tight text-lg">Driving Test Practice</span>

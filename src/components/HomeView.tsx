@@ -127,12 +127,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 1
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                {lang === 'en' ? 'Traffic Signs' : 'ป้ายและเครื่องหมายจราจร'}
+                Traffic Signs
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                {lang === 'en'
-                  ? `Signs & Markings (${signsCount})`
-                  : `Traffic Signs (${toMyanmarNumber(signsCount)} ခု)`}
+                လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ
               </div>
             </div>
           </div>
@@ -159,12 +157,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 2
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                {lang === 'en' ? 'Traffic Laws' : 'กฎหมายว่าด้วยการจราจรทางบก'}
+                Traffic Laws
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                {lang === 'en'
-                  ? `Traffic Laws (${lawsCount})`
-                  : `Traffic Laws (${toMyanmarNumber(lawsCount)} ခု)`}
+                ယာဉ်စည်းကမ်းနှင့် လမ်းစည်းမျဉ်းများ
               </div>
             </div>
           </div>
@@ -191,12 +187,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 3
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                {lang === 'en' ? 'Safe Driving' : 'การขับขี่อย่างปลอดภัย'}
+                Safe Driving
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                {lang === 'en'
-                  ? `Safe Driving (${safeDrivingCount})`
-                  : `Safe Driving (${toMyanmarNumber(safeDrivingCount)} ခု)`}
+                ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်း
               </div>
             </div>
           </div>
@@ -223,12 +217,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 4
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                {lang === 'en' ? 'Maintenance' : 'การบำรุงรักษารถ'}
+                Vehicle Maintenance
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                {lang === 'en'
-                  ? `Maintenance (${maintenanceCount})`
-                  : `Vehicle Maintenance (${toMyanmarNumber(maintenanceCount)} ခု)`}
+                ယာဉ်ပြုပြင်ထိန်းသိမ်းခြင်း
               </div>
             </div>
           </div>
@@ -255,12 +247,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Category 5
               </div>
               <div className="font-bold text-sm text-slate-900 font-thai">
-                {lang === 'en' ? 'Accident Prediction' : 'การคาดการณ์อุบัติเหตุ'}
+                Accident Prediction
               </div>
               <div className="text-xs text-slate-600 font-myanmar">
-                {lang === 'en'
-                  ? `Hazard Prediction (${accidentPredictionCount})`
-                  : `Accident Prediction (${toMyanmarNumber(accidentPredictionCount)} ခု)`}
+                မတော်တဆမှုအန္တရာယ်ကို ကြိုတင်ခန့်မှန်းခြင်း
               </div>
             </div>
           </div>
