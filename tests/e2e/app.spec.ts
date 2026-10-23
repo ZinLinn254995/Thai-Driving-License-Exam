@@ -97,5 +97,7 @@ test('mobile learner can open a category card using native button controls', asy
   await page.keyboard.press('Enter');
 
   await expect(page.getByRole('heading', { name: /Study All .* Exam Questions/ })).toBeVisible();
-  await expect(page.getByRole('button', { name: /Traffic Signs/ })).toBeVisible();
+  const signsFilter = page.getByRole('button', { name: 'Signs (117)' });
+  await expect(signsFilter).toBeVisible();
+  await expect(signsFilter).toHaveAttribute('aria-pressed', 'true');
 });
