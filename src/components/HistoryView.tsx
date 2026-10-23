@@ -1,5 +1,5 @@
 import React from 'react';
-import { History, Award, CheckCircle2, XCircle, Trash2, RotateCcw, ArrowRight, Eye } from 'lucide-react';
+import { History, Trash2, RotateCcw, ArrowRight } from 'lucide-react';
 import { ExamHistoryItem, toMyanmarNumber } from '../utils/helpers';
 import { LanguageMode } from '../types';
 
@@ -99,7 +99,16 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           history.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3"
+              role={item.questions?.length && item.answers ? 'button' : undefined}
+              tabIndex={item.questions?.length && item.answers ? 0 : undefined}
+              onClick={() => { if (item.questions?.length && item.answers) onViewDetails(item); }}
+              onKeyDown={(event) => {
+                if ((event.key === 'Enter' || event.key === ' ') && item.questions?.length && item.answers) {
+                  event.preventDefault();
+                  onViewDetails(item);
+                }
+              }}
+              className={`bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-start sm:items-center justify-between gap-3 ${item.questions?.length && item.answers ? 'cursor-pointer hover:border-emerald-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600' : ''}`}
             >
               <div className="flex min-w-0 flex-1 items-start gap-3">
                 <div
@@ -144,14 +153,6 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               </div>
 
               <div className="flex shrink-0 items-center gap-1">
-              <button
-                type="button"
-                onClick={() => onViewDetails(item)}
-                disabled={!item.questions?.length || !item.answers}
-                className="p-2 text-[#0b5d3b] hover:bg-emerald-50 rounded-lg transition-colors disabled:text-slate-300 disabled:hover:bg-transparent"
-                title={item.questions?.length && item.answers ? (lang === 'en' ? 'View result details' : 'ရလဒ်အသေးစိတ်ကြည့်ရန်') : (lang === 'en' ? 'Details not available for this older attempt' : 'ဤမှတ်တမ်း၏ အသေးစိတ် မရှိပါ')}
-                aria-label={lang === 'en' ? 'View result details' : 'ရလဒ်အသေးစိတ်ကြည့်ရန်'}
-              ><Eye size={17} /></button>
               <button
                 type="button"
                 onClick={onStartExam}
