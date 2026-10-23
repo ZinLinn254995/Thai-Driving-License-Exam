@@ -53,12 +53,13 @@
     button.setAttribute('aria-pressed', String(enabled));
     button.textContent = enabled ? 'Hide Myanmar' : 'Show Myanmar';
   };
+  let enabled = readPreference();
   button.addEventListener('click', () => {
-    const enabled = !readPreference();
+    enabled = !enabled;
     try { localStorage.setItem(key, String(enabled)); } catch {}
     update(enabled);
   });
-  update(readPreference());
+  update(enabled);
 })();
 </script>
 
