@@ -63,7 +63,7 @@ test('homepage, robots.txt, and sitemap agree on the production origin', () => {
   );
   assert.ok(robots.includes(`Sitemap: ${productionOrigin}/sitemap.xml`), 'robots.txt should advertise the production sitemap');
 
-  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\\/loc>/g)].map((match) => match[1]);
+  const sitemapUrls = [...sitemap.matchAll(new RegExp("<loc>([^<]+)</loc>", "g"))].map((match) => match[1]);
   assert.ok(sitemapUrls.includes(`${productionOrigin}/`), 'sitemap should include the homepage');
   for (const file of publishedPages) {
     assert.ok(sitemapUrls.includes(`${productionOrigin}/${file}`), `sitemap should include ${file}`);
