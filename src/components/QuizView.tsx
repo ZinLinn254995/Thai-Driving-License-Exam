@@ -40,8 +40,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentQ = questions[currentIndex];
-  const isBookmarked = bookmarkedIds.includes(currentQ.id);
-  const isFlagged = flaggedIds.includes(currentQ.id);
+  const isBookmarked = currentQ ? bookmarkedIds.includes(currentQ.id) : false;
+  const isFlagged = currentQ ? flaggedIds.includes(currentQ.id) : false;
   const isRevealed = revealedQuestions[currentIndex];
   const selectedIndex = userAnswers[currentIndex];
 
@@ -173,7 +173,24 @@ export const QuizView: React.FC<QuizViewProps> = ({
   ).length;
 
   const answeredCount = Object.keys(userAnswers).length;
-  const progressPercent = ((currentIndex + 1) / questions.length) * 100;
+  const progressPercent = questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0;
+
+  // Defensive fallback: an empty question pool must not crash while rendering currentQ.
+  if (questions.length === 0) {
+    return (
+      <div className="max-w-2xl mx-auto rounded-2xl bg-white p-6 sm:p-8 border border-slate-200 shadow-sm text-center space-y-4">
+        <h2 className="text-lg font-bold text-slate-900">No questions available</h2>
+        <p className="text-sm text-slate-600">This practice test cannot start because no questions were provided. Return home and choose another topic.</p>
+        <button
+          type="button"
+          onClick={onExit}
+          className="px-4 py-2.5 rounded-xl bg-[#0b5d3b] hover:bg-[#074028] text-white font-bold text-sm"
+        >
+          Return to Home
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto space-y-4">
