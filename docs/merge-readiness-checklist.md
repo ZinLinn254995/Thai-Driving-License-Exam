@@ -34,6 +34,7 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Allow Escape to dismiss the active quiz dialog without letting other quiz shortcuts fire.
 - [x] Make history cards wrap long status labels and constrain content width on narrow screens; manual phone-sized smoke testing is still required.
 - [x] Prevent duplicate exam completion from rapid repeated submission or a timer/submit race.
+- [x] Calculate timed-practice remaining time from an absolute deadline so background-tab timer throttling does not silently extend the 60-minute limit.
 - [x] Guard result percentage calculation against an empty result set.
 - [x] Align result score and mistake lists with the actual question IDs so stale/mismatched answer entries cannot inflate the score or cause a missing-question crash.
 - [x] Normalize final quiz answers against the active question set and recompute correctness from each selected option before showing/saving the result.
