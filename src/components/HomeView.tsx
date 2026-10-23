@@ -92,11 +92,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <h2 id="language-support-heading" className="text-base sm:text-lg font-extrabold text-slate-900">
               English Practice with Myanmar Translations
             </h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-700 font-myanmar">
-              ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး
-              မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို နားလည်ရန် မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။
-              အင်္ဂလိပ်စာကို အဓိကထားလေ့လာပြီး လိုအပ်သည့်အခါ မြန်မာဘာသာပြန်ဖြင့် အထောက်အကူယူပါ။
-            </p>
+            {showMyanmar && (
+              <p className="mt-1 text-sm leading-relaxed text-slate-700 font-myanmar">
+                ထိုင်းယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် အင်္ဂလိပ်ဘာသာဖြင့် လေ့ကျင့်ဖြေဆိုနိုင်ပြီး
+                မေးခွန်းနှင့် အဖြေရွေးချယ်စရာများကို နားလည်ရန် မြန်မာဘာသာပြန်ကို ဖွင့်ကြည့်နိုင်ပါသည်။
+                အင်္ဂလိပ်စာကို အဓိကထားလေ့လာပြီး လိုအပ်သည့်အခါ မြန်မာဘာသာပြန်ဖြင့် အထောက်အကူယူပါ။
+              </p>
+            )}
             <p className="mt-2 text-xs sm:text-sm text-slate-600">
               English is the main study language. Use the Myanmar translation control in the header for additional understanding support. This is an independent practice aid, not an official exam or government service.
             </p>
@@ -131,9 +133,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="font-bold text-sm text-slate-900 font-thai">
                 Traffic Signs
               </div>
-              <div className="text-xs text-slate-600 font-myanmar">
-                လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ
-              </div>
+              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ</div>}
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
@@ -161,9 +161,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="font-bold text-sm text-slate-900 font-thai">
                 Traffic Laws
               </div>
-              <div className="text-xs text-slate-600 font-myanmar">
-                ယာဉ်စည်းကမ်းနှင့် လမ်းစည်းမျဉ်းများ
-              </div>
+              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ယာဉ်စည်းကမ်းနှင့် လမ်းစည်းမျဉ်းများ</div>}
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
@@ -191,9 +189,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="font-bold text-sm text-slate-900 font-thai">
                 Safe Driving
               </div>
-              <div className="text-xs text-slate-600 font-myanmar">
-                ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်း
-              </div>
+              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်း</div>}
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
@@ -221,9 +217,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="font-bold text-sm text-slate-900 font-thai">
                 Vehicle Maintenance
               </div>
-              <div className="text-xs text-slate-600 font-myanmar">
-                ယာဉ်ပြုပြင်ထိန်းသိမ်းခြင်း
-              </div>
+              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ယာဉ်ပြုပြင်ထိန်းသိမ်းခြင်း</div>}
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
@@ -251,9 +245,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="font-bold text-sm text-slate-900 font-thai">
                 Accident Prediction
               </div>
-              <div className="text-xs text-slate-600 font-myanmar">
-                မတော်တဆမှုအန္တရာယ်ကို ကြိုတင်ခန့်မှန်းခြင်း
-              </div>
+              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">မတော်တဆမှုအန္တရာယ်ကို ကြိုတင်ခန့်မှန်းခြင်း</div>}
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
