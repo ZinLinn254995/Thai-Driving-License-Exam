@@ -33,7 +33,9 @@ export const Header: React.FC<HeaderProps> = ({ showMyanmar, onToggleMyanmar, so
           </button>
           <button type="button" onClick={onToggleSound}
             className="p-2 rounded-xl bg-[#074028] hover:bg-[#063320] text-[#cfe9da] hover:text-white border border-white/10 transition-colors shrink-0"
-            title={soundEnabled ? 'Mute sound' : 'Enable sound'} aria-label={soundEnabled ? 'Mute sound' : 'Enable sound'}>
+            title={soundEnabled ? 'Mute sound' : 'Enable sound'}
+            aria-label={soundEnabled ? 'Mute sound' : 'Enable sound'}
+            aria-pressed={soundEnabled}>
             {soundEnabled ? <Volume2 size={16} /> : <VolumeX size={16} className="text-red-300" />}
           </button>
         </div>
