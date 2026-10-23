@@ -257,6 +257,7 @@ export default function App() {
             answers={quizResults}
             lang={lang}
             showMyanmar={showMyanmar}
+            mode={quizMode}
             totalQuestions={QUESTIONS_BANK.length}
             onRetakeNew={() => handleStartExam(quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
