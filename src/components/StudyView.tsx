@@ -215,7 +215,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
       <AdSenseAd slot={import.meta.env.VITE_ADSENSE_STUDY_SLOT} />
 
       {/* Results Count */}
-      <div className="flex items-center justify-between text-xs font-semibold text-slate-600 px-1">
+      <div className="flex items-center justify-between text-xs font-semibold text-slate-600 px-1" role="status" aria-live="polite" aria-atomic="true">
         <span>
           {lang === 'en' ? (
             <>
@@ -285,6 +285,7 @@ export const StudyView: React.FC<StudyViewProps> = ({
                         : 'text-slate-400 hover:bg-slate-100 hover:text-slate-600'
                     }`}
                     title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+                    aria-label={isBookmarked ? 'Remove question bookmark' : 'Bookmark question'}
                   >
                     <Bookmark size={16} className={isBookmarked ? 'fill-current' : ''} />
                   </button>
