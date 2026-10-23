@@ -91,3 +91,29 @@ When the exact question is available, add one entry per question using this form
 - **Applied change:** must remain “none” until explicit approval
 
 A correction is not authorized merely because an audit entry says “verified incorrect.” Approval must come from the owner before the repository data is changed.
+
+
+## Question-to-image review records (2026-10-24)
+
+The large source file was retrieved through its Git blob SHA after the normal file-content endpoint returned an empty body. The six exact English prompts and current keyed answers below are transcribed from `src/data/questions.ts`. This is an audit-only record: no question-bank content or image was changed.
+
+Reference points used for comparison:
+- Thailand OTP traffic-sign manuals: https://www.otp.go.th/post/view/2098
+- Thai highway traffic-marking standard drawing (Department of Highways): https://doh.go.th/uploads/tinymce/service/bid/doc_bid/STD_FOR_HIGHWAY_DESIGN_CONC_2015_EDITION2017.pdf
+- Thai traffic-marking legal definitions for stop lines and give-way lines (secondary legal-text presentation): https://lawplayer.com/th/act/ocs-%E0%B8%970006-2B-0027
+
+| Question ID / image | Exact English prompt | Current keyed answer | Current review status | Evidence and next check |
+| --- | --- | --- | --- | --- |
+| 6 / `q_006.webp` | “What does this sign / marking mean?” | “Do not cross solid line; dashed line may overtake when safe” | Unable to verify | The visible asset was described as a solid yellow line beside/above a broken yellow line. The answer is consistent with the general meaning of a solid/broken centre-line combination, but the exact orientation and side represented by the image must be confirmed before calling it verified correct. |
+| 23 / `q_023.webp` | “When encountering this sign, what must the driver do?” | “Stay in lane; no overtaking; strictly do not cross or straddle lane markings” | Unable to verify | The visible asset was described as two right-pointing arrows separated by a solid white line. Need compare the actual diagram and official marking meaning to the full answer; image appearance alone is not enough. |
+| 32 / `q_032.webp` | “When encountering this sign, what must the driver do?” | “Lanes may be changed or overtaking is permitted” | Unable to verify | The visible asset was described as a repeating broken white lane line. That can indicate a lane divider, but the actual diagram and local rule need to be confirmed before marking the answer verified correct. |
+| 42 / `q_042.webp` | “When encountering this sign, what must the driver do?” | “Stop before the stop line” | Unable to verify | The visible asset was described as an intersection/road marking with a short white line. Thai rules distinguish a solid transverse stop line from a broken transverse give-way line. Confirm the pixels show a stop line rather than a different marking. |
+| 47 / `q_047.webp` | “When encountering this sign, what should the driver do?” | “Stay in lane, no straddling, overtaking allowed” | Unable to verify | The visible asset was described as two right-pointing arrows with a broken white divider. Need verify whether the line type and arrows support the complete answer, especially the overtaking clause. |
+| 114 / `q_114.webp` | “When encountering this sign, what must the driver do?” | “Slow down; if other vehicles or pedestrians are crossing, stop before the give-way line” | Unable to verify | The visible asset was described as an intersection marking with a broken white line. Thai legal definitions describe a give-way line as a broad broken white transverse line. Confirm the actual image geometry and direction before marking this correct. |
+
+### Outcome and owner decision
+
+- The exact prompt and currently keyed answer are now recorded for all six flagged questions.
+- **No item is marked verified correct or verified incorrect yet.** The source text and broad image descriptions narrow the review, but they do not establish enough pixel-level evidence for a definitive judgement.
+- No correction is proposed for approval at this stage because the exact mismatch, if any, has not been established.
+- Next review step: visually compare each original image at full size against the exact prompt/answer and the official marking references above. If a definite mismatch is found, record the precise evidence and proposed change here, then ask the repository owner for explicit approval before editing any question, answer, translation, image, or mapping.
