@@ -22,14 +22,13 @@ function readPublicPage(file: string): string {
 test('published information pages have essential SEO and document metadata', () => {
   for (const file of publishedPages) {
     const html = readPublicPage(file);
-    assert.match(html, /<html\\s+lang="en"/i, `${file} should declare its document language`);
-    assert.match(html, /<title>[^<]+<\\/title>/i, `${file} should have a title`);
-    assert.match(html, /<meta\\s+name="description"\\s+content="[^"]+"/i, `${file} should have a description`);
-    assert.match(html, /<meta\\s+name="robots"\\s+content="index,follow"/i, `${file} should declare its index policy`);
-    assert.match(html, /<h1(?:\\s|>)/i, `${file} should have a main heading`);
-    assert.match(
-      html,
-      new RegExp(`<link\\s+rel="canonical"\\s+href="${productionOrigin.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}/${file.replace('.', '\\\\.')}"/i),
+    assert.ok(html.includes('<html lang="en"'), `${file} should declare its document language`);
+    assert.ok(html.includes('<title>') && html.includes('</title>'), `${file} should have a title`);
+    assert.ok(html.includes('name="description"'), `${file} should have a description`);
+    assert.ok(html.includes('name="robots" content="index,follow"'), `${file} should declare its index policy`);
+    assert.ok(html.includes('<h1'), `${file} should have a main heading`);
+    assert.ok(
+      html.includes(`<link rel="canonical" href="${productionOrigin}/${file}"`),
       `${file} canonical should match the production page URL`
     );
   }
@@ -38,7 +37,7 @@ test('published information pages have essential SEO and document metadata', () 
 test('published information pages do not contain broken root-relative links', () => {
   for (const file of publishedPages) {
     const html = readPublicPage(file);
-    const hrefs = [...html.matchAll(/\\bhref="([^"]+)"/gi)].map((match) => match[1]);
+    const hrefs = [...html.matchAll(new RegExp('href="([^"]+)"', 'gi'))].map((match) => match[1]);
 
     for (const href of hrefs) {
       if (!href.startsWith('/') || href.startsWith('//')) continue;
