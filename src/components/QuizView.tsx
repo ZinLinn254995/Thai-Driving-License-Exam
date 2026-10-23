@@ -38,6 +38,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const submitExamRef = useRef<() => void>(() => {});
   const submissionStartedRef = useRef(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timerDeadlineRef = useRef<number | null>(null);
 
   const currentQ = questions[currentIndex];
   const isBookmarked = currentQ ? bookmarkedIds.includes(currentQ.id) : false;
@@ -64,15 +65,21 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // Keep the timer callback pointed at the latest answers without restarting the interval.
   submitExamRef.current = handleSubmitExam;
 
-  // Timer for Timed Exam mode
+  // Use an absolute deadline so background-tab throttling does not silently extend the exam.
   useEffect(() => {
     if (mode !== 'timed') return;
-    timerRef.current = setInterval(() => {
-      setTimeLeft((prev) => Math.max(0, prev - 1));
-    }, 1000);
+    timerDeadlineRef.current = Date.now() + 60 * 60 * 1000;
+    const updateRemainingTime = () => {
+      const deadline = timerDeadlineRef.current;
+      if (deadline === null) return;
+      setTimeLeft(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)));
+    };
+    updateRemainingTime();
+    timerRef.current = setInterval(updateRemainingTime, 1000);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
       timerRef.current = null;
+      timerDeadlineRef.current = null;
     };
   }, [mode]);
 
