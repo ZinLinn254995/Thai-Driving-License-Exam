@@ -6,9 +6,9 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 
 - [x] Remove the former Google AdSense component and setup guide.
 - [x] Remove AdSense-specific environment variables from `.env.example`.
-- [x] GitHub Actions successfully completed dependency installation, TypeScript check, unit tests, and production build on branch head `33e3265bccde771e0fd866279259ec9caac0aa3d` (run: https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/39983313644). Repeat this gate after further code changes.
-- [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
-- [ ] Review the full branch diff before merge: GitHub reports this branch ahead of `main`; confirm the final file-level diff contains only intended app-quality changes.
+- [x] GitHub Actions successfully completed dependency installation, TypeScript check, unit tests, and production build on current branch head `4a7c106300e008a3f4aea131eaab9047efebfe6e` (run: https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/39989473471).
+- [ ] Add and review a genuine dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`. Do not fabricate lockfile contents.
+- [x] Reviewed the current `main...work/adsense-readiness-audit` file-level comparison: 24 changed files, with no question/answer data, translation, traffic-sign mapping, or image-asset paths in the reported diff. The branch is 151 commits ahead of `main`; review commit history/PR context carefully before any merge.
 - [ ] Complete phone-sized smoke testing on the intended public domain, including English-only and English + Myanmar modes, quiz completion, result review, bookmarks, and history.
 - [x] Add a safe empty-question fallback so an empty quiz pool does not dereference a missing current question.
 - [x] Guard option selection and keyboard shortcuts against missing questions or out-of-range option indexes.
