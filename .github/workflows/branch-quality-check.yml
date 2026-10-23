@@ -46,7 +46,7 @@ jobs:
     needs: lockfile
     if: always() && (needs.lockfile.result == 'success' || needs.lockfile.result == 'skipped')
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: read
     steps:
@@ -60,9 +60,13 @@ jobs:
           node-version: 22
       - name: Install dependencies from lockfile
         run: npm ci --no-audit --no-fund
+      - name: Install Chromium for browser tests
+        run: npx playwright install --with-deps chromium
       - name: TypeScript check
         run: npm run lint
       - name: Unit tests
         run: npm test
+      - name: Mobile browser smoke tests
+        run: npm run test:e2e
       - name: Production build
         run: npm run build
