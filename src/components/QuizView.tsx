@@ -317,7 +317,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     ? 'bg-amber-100 text-amber-800 font-bold'
                     : 'text-slate-500 hover:bg-slate-100'
                 }`}
-                title="Flag question"
+                title={isFlagged ? 'Unflag question' : 'Flag question'}
+                aria-pressed={isFlagged}
               >
                 <Flag size={14} className={isFlagged ? 'fill-current text-amber-600' : ''} />
                 <span>
