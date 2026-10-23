@@ -267,14 +267,7 @@ export default function App() {
           <div className="flex items-center gap-3 text-[11px] font-sans">
             <span className="text-[#0b5d3b] font-bold">Practice target: 90% (not an official pass mark)</span>
             <span>·</span>
-            <a
-              href="https://thaidriveexam.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-600 hover:text-slate-900 underline"
-            >
-              thaidriveexam.com
-            </a>
+            <span className="text-slate-600">Independent practice resource</span>
           </div>
         </div>
         <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
