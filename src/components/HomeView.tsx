@@ -284,7 +284,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </h3>
           </div>
           <span className="text-xs text-slate-500 font-medium">
-            {lang === 'en' ? '50 questions randomly drawn' : 'ကျပန်း ၅၀ ခု ရွေးထုတ်မည်'}
+            {lang === 'en' ? 'Up to 50 questions randomly drawn' : 'အများဆုံး ၅၀ ခု ကျပန်းရွေးမည်'}
           </span>
         </div>
 
@@ -302,8 +302,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="font-bold">{lang === 'en' ? 'All Topics' : 'အားလုံး (All)'}</div>
             <div className="text-[11px] text-slate-500 font-normal mt-0.5 font-myanmar">
               {lang === 'en'
-                ? `Random 50 of ${totalQuestions}`
-                : `${toMyanmarNumber(totalQuestions)} ခုလုံးထဲမှ ကျပန်း ၅၀`}
+                ? `Up to 50 random from ${totalQuestions}`
+                : `${toMyanmarNumber(totalQuestions)} ခုထဲမှ အများဆုံး ၅၀ ခု ကျပန်းရွေးမည်`}
             </div>
           </button>
 
@@ -454,7 +454,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </span>
             </div>
             <h2 className="text-lg font-bold text-slate-900 group-hover:text-[#0b5d3b] transition-colors">
-              {lang === 'en' ? 'Timed Exam Practice (50 Random)' : 'အချိန်ကန့်သတ် စာမေးပွဲလေ့ကျင့်မှု (ကျပန်း ၅၀)'}
+              {lang === 'en' ? 'Timed Exam Practice (Up to 50 Random)' : 'အချိန်ကန့်သတ် လေ့ကျင့်မှု (အများဆုံး ၅၀ ခု)'}
             </h2>
             <div className="text-xs text-slate-500 font-medium mt-0.5">
               Timed Practice · 60-Minute Timer
