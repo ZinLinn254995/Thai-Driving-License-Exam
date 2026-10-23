@@ -639,7 +639,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       setShowGridModal(false);
                     }}
                     className={cls}
-                    aria-label={\`Go to question \${idx + 1}\${isAns ? ', answered' : ', unanswered'}\${isFlag ? ', flagged' : ''}\${isCur ? ', current question' : ''}\`}
+                    aria-label={`Go to question ${idx + 1}${isAns ? ', answered' : ', unanswered'}${isFlag ? ', flagged' : ''}${isCur ? ', current question' : ''}`}
                   >
                     <span>{idx + 1}</span>
                     {isFlag && (
