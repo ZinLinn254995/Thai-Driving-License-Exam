@@ -34,6 +34,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes for 50 questions
   const [showGridModal, setShowGridModal] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [showExitConfirmModal, setShowExitConfirmModal] = useState(false);
   const submitExamRef = useRef<() => void>(() => {});
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -132,7 +133,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // Keyboard shortcut support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (showGridModal || showConfirmModal) return;
+      if (showGridModal || showConfirmModal || showExitConfirmModal) return;
 
       if (e.key === '1' || e.key === 'a' || e.key === 'A') handleSelectOption(0);
       else if (e.key === '2' || e.key === 'b' || e.key === 'B') handleSelectOption(1);
@@ -147,7 +148,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleSelectOption, handleNext, handlePrev, isRevealed, mode, showGridModal, showConfirmModal]);
+  }, [handleSelectOption, handleNext, handlePrev, isRevealed, mode, showGridModal, showConfirmModal, showExitConfirmModal]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -170,7 +171,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className="flex items-center gap-2">
             <button
               type="button"
-              onClick={onExit}
+              onClick={() => mode === 'timed' ? setShowExitConfirmModal(true) : onExit()}
               className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition-colors"
               title={lang === 'en' ? 'Exit exam' : 'စာမေးပွဲမှ ထွက်မည်'}
             >
@@ -613,6 +614,39 @@ export const QuizView: React.FC<QuizViewProps> = ({
             >
               {lang === 'en' ? 'Close' : 'ပိတ်မည် (Close)'}
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Confirm leaving a timed exam without saving partial answers */}
+      {showExitConfirmModal && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" role="presentation">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-xl text-center" role="dialog" aria-modal="true" aria-labelledby="exit-exam-title">
+            <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mx-auto">
+              <HelpCircle size={26} />
+            </div>
+            <div>
+              <h3 id="exit-exam-title" className="font-bold text-slate-900 text-lg">Leave this exam?</h3>
+              <p className="text-xs text-slate-600 mt-1">
+                Your current answers will be lost and this attempt will not be saved to history.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowExitConfirmModal(false)}
+                className="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs"
+              >
+                Continue Exam
+              </button>
+              <button
+                type="button"
+                onClick={onExit}
+                className="flex-1 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs"
+              >
+                Leave Exam
+              </button>
+            </div>
           </div>
         </div>
       )}
