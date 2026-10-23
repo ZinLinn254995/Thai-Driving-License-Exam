@@ -13,7 +13,9 @@ This checklist covers general site-quality work and the transition from the form
 - [ ] Run a reproducible dependency install, typecheck, and production build on the exact branch head; the current Vercel check is failing with the build-rate-limit restriction, and no successful build is confirmed.
 - [ ] Add and review a dependency lockfile before relying on repeatable CI installs; `package-lock.json` is absent from this branch, while the workflow currently uses `npm install`.
 - [ ] Complete phone-sized smoke testing on the intended public domain.
-- [ ] Test malformed/empty quiz input defensively and verify score/result handling when answer and question counts differ.
+- [x] Add a safe empty-question fallback so an empty quiz pool does not dereference a missing current question.
+- [x] Reject saved history entries when the percentage or practice-target flag contradicts the stored score/total.
+- [ ] Run automated/manual edge-case verification for empty quiz input, timer/submit races, and score/result handling when answer and question counts differ.
 - [ ] Review all traffic-sign image correctness and licensing separately (intentionally deferred until after the user's merge).
 - [x] Verify the index canonical, static-page canonicals, sitemap, and robots.txt use `https://thai-driving-license-exam.vercel.app/` consistently.
 - [ ] Review privacy disclosures against actual data collection and future ad behavior.
