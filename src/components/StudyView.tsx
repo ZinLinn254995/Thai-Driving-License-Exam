@@ -3,7 +3,6 @@ import { Search, Bookmark, CheckCircle2, BookOpen, ShieldCheck, Scale, X, Layers
 import { QuestionItem } from '../data/questions';
 import { LanguageMode, QuestionCategory } from '../types';
 import { toMyanmarNumber } from '../utils/helpers';
-import { AdSlot } from './AdSlot';
 
 interface StudyViewProps {
   questions: QuestionItem[];
@@ -212,7 +211,6 @@ export const StudyView: React.FC<StudyViewProps> = ({
         </div>
       </div>
 
-      <AdSlot placement="study" />
 
       {/* Results Count */}
       <div className="flex items-center justify-between text-xs font-semibold text-slate-600 px-1" role="status" aria-live="polite" aria-atomic="true">
