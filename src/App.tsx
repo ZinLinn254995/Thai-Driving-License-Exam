@@ -260,7 +260,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
           <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">Practice Target: 90% (45/50)</span>
+            <span className="text-[#0b5d3b] font-bold">Practice target: 90% (not an official pass mark)</span>
             <span>·</span>
             <a
               href="https://thaidriveexam.com"

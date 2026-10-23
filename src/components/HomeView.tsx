@@ -334,21 +334,17 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </div>
 
-      {/* Info Notice about 50 Questions & 90% Pass */}
+      {/* Explain the site's practice target without implying an official pass mark. */}
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
         <div className="p-2 rounded-lg bg-[#f2b705]/20 text-amber-800 shrink-0">
           <Award size={20} />
         </div>
         <div className="text-xs sm:text-sm text-amber-950 font-myanmar space-y-1">
           <p className="font-semibold text-amber-900">
-            {lang === 'en'
-              ? 'Practice target: 45 correct answers out of 50 (90%). Check current requirements with the Department of Land Transport.'
-              : 'ထိုင်း DLT စာမေးပွဲ စည်းကမ်းချက် - စုစုပေါင်း ၅၀ မေးခွန်းအနက် ၄၅ မှတ် (၉၀%) ရရှိမှ အောင်မြင်မည်။'}
+            Practice target: 90% in this tool. This is not an official exam pass mark; check current requirements with Thailand’s Department of Land Transport.
           </p>
           <p className="text-amber-800 text-xs">
-            {lang === 'en'
-              ? 'Each test selects up to 50 random questions from this practice bank.'
-              : 'မေးခွန်းအားလုံးတွင် ထိုင်းစာ သို့မဟုတ် အင်္ဂလိပ်စာကို အဓိကကြီးကြီးပြသထားပြီး မြန်မာစာကို အောက်မှ သေးသေးဖြင့် ဘာသာပြန်ပြသပေးပါသည်။'}
+            Each test selects up to 50 random questions from this practice bank.
           </p>
         </div>
       </div>

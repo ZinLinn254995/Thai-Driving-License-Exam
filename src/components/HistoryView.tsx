@@ -124,9 +124,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                           : 'bg-red-100 text-red-800'
                       }`}
                     >
-                      {item.passed
-                        ? (lang === 'en' ? 'Passed ✔' : 'အောင်မြင် ✔')
-                        : (lang === 'en' ? 'Failed ✘' : 'မအောင်သေး ✘')}
+                      {item.passed ? 'Target reached ✔' : 'Below target ✘'}
                     </span>
                   </div>
                   <div className="text-xs text-slate-500 mt-0.5">

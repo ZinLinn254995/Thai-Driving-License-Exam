@@ -78,22 +78,14 @@ export const ResultView: React.FC<ResultViewProps> = ({
           {/* Pass / Fail Status Text */}
           <div className="space-y-0.5">
             <h2 className="text-xl sm:text-2xl font-extrabold font-myanmar">
-              {lang === 'en'
-                ? targetReached
-                  ? 'Great work! You reached the practice target.'
-                  : 'Keep going—review your mistakes and try again.'
-                : targetReached
-                ? 'ကောင်းပါတယ်။ လေ့ကျင့်မှု ရည်မှန်းချက်ကို ပြည့်မီပါပြီ။'
-                : 'ဆက်လက်လေ့ကျင့်ပြီး မှားခဲ့သောမေးခွန်းများကို ပြန်လည်လေ့လာပါ။'}
+              {targetReached
+                ? 'Great work! You reached the practice target.'
+                : 'Keep going—review your mistakes and try again.'
             </h2>
             <p className="text-xs sm:text-sm text-white/90 font-myanmar">
-              {lang === 'en'
-                ? targetReached
-                  ? 'You reached this website’s 90% practice target. This is not an official exam result; check current requirements with Thailand’s Department of Land Transport.'
-                  : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
-                : targetReached
-                ? 'ဤဝက်ဘ်ဆိုက်၏ လေ့ကျင့်မှု ရည်မှန်းချက် ၉၀% ကို ပြည့်မီပါပြီ။ ဤရလဒ်သည် တရားဝင်စာမေးပွဲရလဒ် မဟုတ်ပါ။ လက်ရှိသတ်မှတ်ချက်များကို ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဌာနထံ စစ်ဆေးပါ။'
-                : 'ဤဝက်ဘ်ဆိုက်၏ လေ့ကျင့်မှု ရည်မှန်းချက် ၉၀% မပြည့်မီသေးပါ။ တရားဝင်စာမေးပွဲ သတ်မှတ်ချက်များ ကွာခြားနိုင်သဖြင့် ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဌာနထံ စစ်ဆေးပါ။'}
+              {targetReached
+                ? 'You reached this website’s 90% practice target. This is not an official exam result; check current requirements with Thailand’s Department of Land Transport.'
+                : 'You are below this website’s 90% practice target. Official exam requirements may differ; check with Thailand’s Department of Land Transport.'
             </p>
           </div>
         </div>
