@@ -23,6 +23,7 @@ This checklist covers general site-quality work and the transition from the form
 - [x] Reject malformed history records with impossible score/percentage ranges and reject non-positive bookmark IDs.
 - [x] Prevent duplicate exam completion from rapid repeated submission or a timer/submit race.
 - [x] Guard result percentage calculation against an empty result set.
+- [x] Align result score and mistake lists with the actual question IDs so stale/mismatched answer entries cannot inflate the score or cause a missing-question crash.
 - [x] Remove the unrelated `thaidriveexam.com` footer link so the UI does not point away from the configured production domain.
 
 ## Before enabling first-party ads
