@@ -85,9 +85,13 @@ export const QuizView: React.FC<QuizViewProps> = ({
 
   // Option selection handler
   const handleSelectOption = useCallback((optionIndex: number) => {
+    // Keyboard shortcuts can fire even while rendering an empty or malformed question set.
+    if (!currentQ || !Number.isInteger(optionIndex) || optionIndex < 0 || optionIndex >= currentQ.options.length) return;
     if (mode === 'instant' && isRevealed) return;
 
     const option = currentQ.options[optionIndex];
+    if (!option) return;
+
     setUserAnswers((prev) => ({
       ...prev,
       [currentIndex]: optionIndex
