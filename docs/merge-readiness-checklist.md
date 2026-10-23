@@ -36,6 +36,15 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 - [x] Normalize final quiz answers against the active question set and recompute correctness from each selected option before showing/saving the result.
 - [x] Remove the unrelated `thaidriveexam.com` footer link so the UI does not point away from the configured production domain.
 
+## Latest verification and remaining release blockers
+
+- [x] Use native HTML buttons for the five study-category cards and rely on native Enter/Space activation instead of custom keyboard handlers, avoiding duplicate navigation.
+- [x] Add a Playwright assertion for the Signs filter's accessible name and pressed state. CI run [40037034971](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40037034971) passed lockfile generation, dependency installation, TypeScript, unit tests, mobile browser smoke tests, and production build.
+- [x] Clarify the privacy policy: the legacy root-level `article_23.html` source contains a Google Analytics tag but is outside the Vite production output; do not claim it is currently published. Revisit this if deployment output changes.
+- [ ] Resolve the separate content-rights review before any public release/monetization decision. The About page attributes some material to thaidriveexam.com, but permission/license evidence remains unverified. This is not cleared by a source credit or by passing CI.
+- [ ] Verify traffic-sign image semantics and licensing with evidence before altering any question-image mapping or replacing assets. Path existence alone does not prove that an image depicts the correct sign or that its use is permitted.
+- [ ] Check the final production deployment on an Android phone only after an approved merge and deliberate deployment; no Vercel deployment has been triggered by this branch work.
+
 ## Release safeguards
 
 - Do not merge into `main` without explicit approval.
