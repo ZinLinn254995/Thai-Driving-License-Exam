@@ -116,10 +116,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Category 1: Signs */}
         <button
           type="button"
-          tabIndex={0}
           aria-label={`Study Traffic Signs (${signsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_signs')}
-          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_signs'); } }}
           className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
@@ -144,10 +142,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Category 2: Laws */}
         <button
           type="button"
-          tabIndex={0}
           aria-label={`Study Traffic Laws (${lawsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_laws')}
-          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('traffic_laws'); } }}
           className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
@@ -172,10 +168,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Category 3: Safe Driving */}
         <button
           type="button"
-          tabIndex={0}
           aria-label={`Study Safe Driving (${safeDrivingCount} questions)`}
           onClick={() => onNavigateStudy('safe_driving')}
-          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('safe_driving'); } }}
           className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
@@ -200,10 +194,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Category 4: Vehicle Maintenance */}
         <button
           type="button"
-          tabIndex={0}
           aria-label={`Study Vehicle Maintenance (${maintenanceCount} questions)`}
           onClick={() => onNavigateStudy('vehicle_maintenance')}
-          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('vehicle_maintenance'); } }}
           className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
@@ -228,10 +220,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Category 5: Accident Prediction */}
         <button
           type="button"
-          tabIndex={0}
           aria-label={`Study Accident Prediction (${accidentPredictionCount} questions)`}
           onClick={() => onNavigateStudy('accident_prediction')}
-          onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onNavigateStudy('accident_prediction'); } }}
           className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-3">
