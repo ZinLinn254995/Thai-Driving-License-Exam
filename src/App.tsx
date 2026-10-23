@@ -274,6 +274,7 @@ export default function App() {
         </div>
         <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
           <a href="/study-guide.html" className="underline hover:text-slate-900">Study Guide</a>
+          <a href="/faq.html" className="underline hover:text-slate-900">FAQ</a>
           <a href="/about.html" className="underline hover:text-slate-900">About</a>
           <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
           <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
