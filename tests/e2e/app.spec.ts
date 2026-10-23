@@ -68,3 +68,22 @@ test('timed exam warns before leaving through the main navigation', async ({ pag
   await page.getByRole('button', { name: /Question Bank/ }).click();
   await expect(page.getByRole('heading', { name: /Study All .* Exam Questions/ })).toBeVisible();
 });
+
+test('timed exam exit button confirms leaving and allows continuing safely', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Start Timed Practice (60m)' }).click();
+
+  await page.getByRole('button', { name: '← Exit' }).click();
+  const confirmation = page.getByRole('dialog', { name: 'Leave this exam?' });
+  await expect(confirmation).toBeVisible();
+  await expect(confirmation).toContainText('Your current answers will be lost and this attempt will not be saved to history.');
+
+  await confirmation.getByRole('button', { name: 'Continue Exam' }).click();
+  await expect(confirmation).toHaveCount(0);
+  await expect(page.getByRole('timer', { name: /Time remaining:/ })).toBeVisible();
+
+  await page.getByRole('button', { name: '← Exit' }).click();
+  await page.getByRole('dialog', { name: 'Leave this exam?' }).getByRole('button', { name: 'Leave Exam' }).click();
+  await expect(page.getByRole('heading', { name: 'Thai Driving License Practice' })).toBeVisible();
+  await expect(page.getByRole('timer', { name: /Time remaining:/ })).toHaveCount(0);
+});
