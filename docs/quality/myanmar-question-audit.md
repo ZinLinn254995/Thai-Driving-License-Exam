@@ -277,3 +277,15 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 419, correct option: source says high beams make the driver ahead and oncoming drivers unable to see clearly; Myanmar says they can see the road clearly, reversing the meaning.
 - ID 420, correct option: “ประคองรถเข้าข้างทาง” means guide/bring the vehicle safely to the roadside; Myanmar “ထောက်ပါ” (support/prop up) is incorrect.
 - IDs 399, 419, 420 are high-confidence correction candidates. Preserve all keys/images and wait for approval before applying.
+
+
+### Safe-driving questions IDs 421–440 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 422, stem: Thai says the accelerator pedal is stuck; Myanmar says the driver presses the accelerator, losing the “stuck pedal” condition.
+- ID 424, option 2: “traffic lane” is translated as “ချန်နယ်” (channel); standardize road-lane terminology.
+- ID 426: “ไหล่ทาง” means road shoulder; Myanmar literal “ပခုံး” means body shoulder, not road shoulder.
+- ID 428, correct option: “ไหล่ทางด้านซ้าย” is translated literally as “ဘယ်ဘက်ပခုံးပေါ်”; use road-shoulder terminology, and clarify the instruction to safely move the vehicle onto the left shoulder.
+- ID 434: “ไฟต่ำ” means low-beam headlights; Myanmar “ပါဝါနည်း” means low power, incorrect terminology.
+- ID 438, correct option: source instructs to release the accelerator/let the vehicle coast and switch on hazard lights; Myanmar is too literal (“let the car flow”) and should be clarified after approval.
+- ID 421, correct option: translation is broadly aligned, but ensure the “while the vehicle behind is overtaking you” condition is explicit.
