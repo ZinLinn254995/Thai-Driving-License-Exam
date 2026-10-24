@@ -807,3 +807,35 @@ Source-generation cleanup:
 - IDs **409 and 411** depend on images. No images were inspected in this batch; their answer keys remain unverified pending visual review.
 
 **Batch result:** IDs 406–420 reviewed. Findings recorded in audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 421–435 — 2026-10-24
+
+Compared Thai, English, and Myanmar text for IDs 421–435. Checked selected safety context against Thailand's DLT-linked English driving guide (https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf) and Thailand government safe-driving guidance (https://thailand.go.th/public/issue-focus-detail/--383). This is a language and plausibility audit; not every answer key is independently certified.
+
+High-priority safety / answer-key concerns:
+- **ID 422, keyed option 2:** The proposed response to a stuck accelerator is to use the tip of the foot to lever the pedal up. This may be difficult or unsafe depending on the vehicle and situation, and should not be taught as the sole universal response without checking the official source. The stem Myanmar says “if you happen to press the accelerator” rather than “if the accelerator pedal gets stuck,” weakening the emergency scenario. Verify source and provide safe, vehicle-appropriate emergency instructions before treating this key as validated.
+- **ID 423, keyed option 2:** The question states that blanket-assisted movement is unsuitable for a patient with a back injury. The general concern about spinal injury is sensible, but casualty movement depends on immediate danger, trained assistance and technique; the item is too categorical without its original first-aid source. Myanmar stem reads as “not suitable for patients in any area,” a malformed universal statement. Verify source before changing the key.
+- **ID 427, keyed option 2:** Intended action is to stop/yield so pedestrians can cross at a crossing. Myanmar says “stop the cars” rather than clearly directing the driver to stop their own vehicle and give way. Correct the subject/agency.
+- **ID 428, keyed option 4:** The general instruction to stay calm, move to the left shoulder if the vehicle remains drivable, and turn on hazard lights aligns with the DLT-linked guide. Myanmar “မီးမှိတ်တုတ်မှိတ်တုတ်မှိတ်တုတ်” repeats “flashing” awkwardly and the “shoulder” term is literal/body-part wording. Rewrite using natural terms for the road shoulder and hazard warning lights.
+- **ID 432, keyed option 2:** Thai says check right side mirror and rear-view mirror, signal right, and pull out when safe. English incorrectly says “Get out of the car,” and Myanmar says “ကားထဲမှ ဆင်းပါ” (get out of the car), reversing the intended manoeuvre. High-priority translation error; say move/pull away from the curb when safe, not exit the vehicle.
+- **ID 434, keyed option 2:** Thai says use low-beam headlights in heavy traffic on wet roads with water spray. English says “low power,” and Myanmar says “ပါဝါနည်း” (low power), confusing headlight setting with electrical power. Use “low-beam headlights” consistently. Verify whether the described scenario and key match the official curriculum.
+
+Other translation / question-quality findings:
+- **ID 421, keyed option 3:** The incorrect practice is overtaking while a vehicle behind is about to overtake you. Myanmar preserves the broad meaning but is awkward and could be clearer as “နောက်ကယာဉ်က သင့်ကို ကျော်တက်ရန် စတင်နေချိန်တွင် သင်က ထပ်မံကျော်တက်ခြင်း”.
+- **ID 424, keyed option 1:** Myanmar translates “traffic lanes” as generic “လမ်းများ” and “lights” without specifying the turn indicator. Say check mirrors, signal the intended lane change, and change lanes only when safe.
+- **ID 425, keyed option 2:** Blind-spot definition is broadly preserved. The Myanmar term “ကန်းကွက်” is understandable but should be standardized across the site as a vehicle blind spot / area not visible in mirrors.
+- **ID 426, stem and keyed option 3:** “ไหล่ทาง” means the road shoulder, but Myanmar/English literal phrasing (“shoulder” / “ပခုံး”) is wrong or confusing. Translate the question as asking what the road shoulder is for, and describe a vehicle breakdown as “ကားပျက်သည့်အခါ”.
+- **ID 429, stem:** Literal “look over their shoulders” has been carried into Myanmar in a way that can sound like looking over the physical shoulder without explaining the blind-spot check. Keyed reason to check the vehicle blind spot is preserved.
+- **ID 430, keyed option 3:** Resting/sleeping or stretching at a rest stop is broadly preserved, but Myanmar’s second clause repeats rest rather than explicitly preserving “stretch.” Prefer clear guidance to stop in a safe place and rest/sleep before continuing if drowsy.
+- **ID 431, stem/key:** The question claims drivers should not drive parallel with a particular vehicle type and keys trucks. Myanmar follows the English, but the statement is overbroad without scenario/context (for example, prolonged driving beside a truck and blind spots). Verify the official source and clarify rather than present an absolute rule.
+- **ID 433, stem:** “Emergency vehicle with siren on and running behind” is unnatural in both English and Myanmar. Rewrite as an emergency vehicle approaching from behind with its siren sounding. Keyed action to make way is broadly preserved; don't imply an immediate lane change to the right in every road layout.
+- **ID 435, stem and keyed option 2:** Thai/English mean the driver is about to turn and sees pedestrians crossing; Myanmar reads as if the car is already turning and pedestrians are crossing. The intended instruction to wait until pedestrians have passed before turning is preserved but should be phrased naturally.
+
+Broadly aligned in this sample: ID 421 do not overtake when unsafe; ID 424 check mirrors and signal before changing lanes; ID 425 identify blind spots; ID 429 check blind spots before changing lanes; ID 430 stop and rest when drowsy; ID 433 give way to emergency vehicles; ID 435 wait for pedestrians before turning. This alignment does not certify every answer key.
+
+Source-generation cleanup:
+- **IDs 421–435:** Leading punctuation / numbering artifacts remain in stems. Reconcile raw source and compiler/cache provenance before bulk cleanup; do not patch generated JSON only.
+- No images were audited in this batch. Image-dependent context or unverified legal/first-aid claims should remain flagged until checked against the original question source and relevant diagram.
+
+**Batch result:** IDs 421–435 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
