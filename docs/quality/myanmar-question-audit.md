@@ -1410,3 +1410,21 @@ A targeted pass of the 249 records in `src/data/questions_safe_driving.json` rec
 
 ### Scope / confidence
 The negative-wording detector is only a screening aid: some matches correctly preserve negation, and awkward wording is not automatically a meaning reversal. The safe-driving file has not yet undergone complete legal/source validation, answer-key verification, or full visual review. No runtime data was edited.
+
+
+## Accident-prediction category follow-up — confirmed translation defects and pending visual checks (2026-10-25)
+
+A direct comparison of all 77 records in `src/data/questions_accident_prediction.json` confirmed these high-priority translation issues:
+
+- **Q533 — yielding mistranslated as movement toward a vehicle.** Thai `ชะลอรถเพื่อให้ทางรถกระบะ` and English “Slow down to give way to the pickup truck” mean slow down and yield to the pickup. Myanmar `ပစ်ကပ်ထရပ်ကားဆီသို့ အရှိန်လျှော့ပါ` means slow down toward the pickup and omits yielding. Candidate: `ပစ်ကပ်ထရပ်ကားကို လမ်းပေးရန် အရှိန်လျှော့ပါ။`
+- **Q533 — lane-change option confuses lane with traffic congestion.** English “Change traffic lane to the left” is translated as `ယာဉ်ကြောပိတ်ဆို့မှုကို ဘယ်ဘက်သို့ ပြောင်းပါ` (“change traffic congestion to the left”). Candidate: `ဘယ်ဘက်ယာဉ်ကြောသို့ ပြောင်းပါ။`
+- **Q535 — acceleration is translated as high speed.** English “The car in front accelerates” becomes `ရှေ့က ကားက အရှိန်ပြင်းတယ်` (“the car ahead is fast”). Candidate: `ရှေ့က ကားသည် အရှိန်မြှင့်သည်။`
+- **Q535 — bus lane wording is unnatural/unclear.** English “Bus inserted into left lane” and Myanmar `ဘတ်စ်ကားကို ဘယ်ဘက်လမ်းကြားတွင် ထည့်သွင်းထားသည်` do not clearly describe a bus merging/cutting into the left traffic lane. Candidate English: “The bus merges into the left lane.” Candidate Myanmar: `ဘတ်စ်ကားသည် ဘယ်ဘက်ယာဉ်ကြောထဲသို့ ဝင်လာသည်။` Confirm against the picture before applying.
+- **Q536 — missing negative in stem and two option-level meaning defects.** Thai/English ask which is *not* a dangerous event for Car A; Myanmar omits “not dangerous.” The option “The truck may brake suddenly” is translated as the truck's brakes may fail/burst (`ဘရိတ်ပေါက်နိုင်သည်`), and “make things fall” is rendered as `အရာတွေ ပြုတ်ကျပါစေ` (“let things fall”). Candidate stem: `ပုံထဲတွင် ဖော်ပြထားသည့်အရာများအနက် Car A အတွက် ဖြစ်လာနိုင်သည့် အန္တရာယ်မရှိသော အခြေအနေမှာ မည်သည့်အရာဖြစ်သနည်း။` Candidate option: `ထရပ်ကားသည် ရုတ်တရက် ဘရိတ်အုပ်နိုင်သည်။` Candidate option: `ကုန်တင်ကား၏ နောက်တံခါး ကောင်းစွာမပိတ်ပါက ပစ္စည်းများ ပြုတ်ကျနိုင်သည်။` English source grammar also needs editing.
+- **Q540 — opposing traffic term needs review.** Myanmar `ဆန့်ကျင်ဘက်လမ်းကြားမှ ကားများ` is ambiguous for “Cars from the opposite lane.” Candidate: `ဆန့်ကျင်ဘက်ယာဉ်ကြောမှ လာသောကားများ။` This is a wording finding only; the actual Q540 image and answer have not been visually re-verified, and no image/key mismatch is asserted.
+- **Q547 — missing negative changes the question.** Thai/English ask which is *not* the purpose of accident prediction; Myanmar asks what its purpose is. Candidate: `မတော်တဆမှုကို ကြိုတင်ခန့်မှန်းခြင်း၏ ရည်ရွယ်ချက် မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။`
+- **Q588 — missing negative changes the question.** Thai/English ask which is *not* a factor to decide before overtaking; Myanmar asks which factor should be decided. Candidate: `ကျော်တက်မောင်းနှင်မီ ဆုံးဖြတ်စဉ်းစားရန် မလိုအပ်သောအချက်မှာ မည်သည့်အရာနည်း။`
+- **Q553 — awkward option wording; technical correctness still needs source validation.** Myanmar for “Turn the steering wheel less than when turning right” reads like “reduce the steering wheel.” This is a clarity issue, not yet a confirmed answer-key error.
+
+### Limits
+This pass compares the text fields and keyed options; it does not prove that the pictured scene supports each answer. The referenced images for Q533, Q535, Q536 and Q540 still need direct visual review. No question data, translations, answer keys, image mappings, runtime code, main branch, or live deployment changed.
