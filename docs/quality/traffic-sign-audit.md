@@ -577,3 +577,32 @@ This section records what can be supported by the official Thai manuals found in
 - An official Thai police-station public-information page states that a red-and-white curb means no stopping or parking for any vehicle within the marked stretch. This supports the substance of the keyed answer.
 - Status: **rule supported; image-to-stem match remains pending** because the exact image must visibly show the red-and-white curb marking clearly enough for the user to identify it. The previous note that the image may be a generic car/curb illustration is not sufficient to call the item wrong.
 - Source: https://thamuang.kanchanaburi.police.go.th/แถบฟุตบาท-สีไหนจอดได้-สีไหนห้ามจอด/
+
+
+## Follow-up: official rule cross-check for Q67, Q109, Q111 and Q114 (2026-10-25)
+
+### Q67 — bus-lane sign: sign meaning confirmed; keyed action not yet proven
+- OTP's official traffic-sign standard identifies mandatory sign บ.49 as a bus-lane sign: the lane where it is installed is designated for buses, under section 65 of the Land Traffic Act B.E. 2522. It also discusses supplementary signs/time restrictions and road markings.
+- Q67's stem asks what the driver must do, while its keyed answer says “Do not overtake into the bus lane.” The sign definition alone does **not** establish that exact prohibition as the direct meaning of the sign.
+- Status: **question/key remains unresolved**. If the item is testing the sign's direct meaning, the keyed answer should describe a lane designated for buses. If it is testing a separate driving action, a legal/source basis for “do not overtake into the bus lane” must be documented. Do not change the answer key until the original question source/context is confirmed.
+- Official source: https://www.otp.go.th/uploads/tiny_uploads/OTPStandard/1-1-SafetyTransport01.pdf
+
+### Q109 — STOP sign / stop line rule: official rule supports stopping, image context still matters
+- DOH's official Traffic Sign Standard manual defines STOP sign บ.1 as requiring the driver to stop before the intersecting road or stop line and wait for vehicles and pedestrians on the crossing road to pass; proceed only when safe and without obstructing the intersection.
+- This supports the substance of Q109's keyed answer (“Stop and wait for crossing traffic”) **if the image shows a STOP sign / stop-line-controlled approach**. It would not be appropriate to infer that every give-way line requires a complete stop.
+- Status: **conditional source support; verify exact depicted sign/marking**.
+- Official source: https://www.doh.go.th/content/download/174663
+
+### Q111 — STOP line and give-way line must not be treated as interchangeable
+- DOH's road-marking manual describes a stop line as a solid white transverse line used with controls requiring a stop (such as a STOP sign, traffic signal, or pedestrian crossing). A give-way line is a broken white line requiring drivers to slow and give way to crossing traffic/pedestrians, proceeding when safe.
+- Q111's keyed answer combines “stop before the stop line or give-way line” with “let pedestrians cross.” The combined wording risks incorrectly applying a mandatory full stop to a give-way line in all circumstances.
+- Status: **confirmed wording precision issue**. Verify the diagram and revise the stem/key to distinguish a mandatory stop from slowing/yielding; no runtime change applied.
+- Official source: https://doh.go.th/uploads/tinymce/service/bid/doc_bid/manual5.pdf
+
+### Q114 — Myanmar translation is broader than Thai/English
+- Thai/English condition is “if other vehicles or pedestrians are crossing on the crossing road”; Myanmar currently means “if other vehicles or pedestrians are ahead/present.” The translation can instruct stopping when someone is merely present, rather than when crossing traffic triggers the stated condition.
+- Candidate meaning for a future authorized correction: “အရှိန်လျှော့ပါ။ ရှေ့ဖြတ်လမ်းပေါ်တွင် ယာဉ် သို့မဟုတ် လမ်းလျှောက်သူ ဖြတ်သန်းနေပါက လမ်းပေးမျဉ်းမတိုင်မီ ရပ်ပါ။”
+- Status: **translation discrepancy confirmed against the current Thai/English text; official rule and exact diagram still need checking before publishing a correction**.
+
+### Scope
+- This is an evidence note only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was changed.
