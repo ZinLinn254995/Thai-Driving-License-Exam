@@ -773,3 +773,37 @@ Source-generation cleanup:
 - No images were audited in this batch. This review does not certify all answer keys.
 
 **Batch result:** IDs 391–405 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 406–420 — 2026-10-24
+
+Compared Thai, English, and Myanmar wording for IDs 406–420. Checked general safe-driving context against the Thailand DLT-linked English driving guide (https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf) and Thailand government guidance on yielding to emergency vehicles (https://www.thailand.go.th/public/guide-book-detail/--383). This was a language and plausibility review, not a full independent certification of answer keys.
+
+High-priority translation / safety concerns:
+- **ID 408, keyed option 3:** The stated reason for a safe following distance behind a truck is “so the truck driver can see your vehicle in the mirror.” This may be a weak or misleading rationale: the key safety reasons include visibility, blind spots, stopping distance and reaction time. The DLT-linked guide recommends increased following distance, and ThaiHealth guidance cites truck blind spots and a four-second gap. Verify the original test source before changing the answer key.
+- **ID 409, image-dependent key:** The keyed answer says the green car goes first, but the question explicitly depends on a picture and the image was not inspected in this batch. Do not certify the key without checking the actual diagram, road priority/signals and vehicle positions.
+- **ID 410, keyed option 4:** The intended action is to yield to the approaching fire engine before turning. Myanmar translation “မီးသတ်ကား လာစောင့်ပြီးမှ အလှည့်” is unnatural and can read like waiting for the fire engine to come/wait; rewrite to clearly say wait for the fire engine to pass, then turn. The stem is also unfinished in English and Myanmar.
+- **ID 411, image-dependent key:** “Check safety on the right” is keyed as the first action when leaving a parking space. The scene/image and complete safety checks were not verified; do not treat the keyed answer as fully validated without inspecting the image and source.
+- **ID 413, keyed option 2:** Myanmar says to wait for the car ahead to move, then “ကျော်ဖြတ်မောင်းလို့ရတယ်” (“can pass/overtake”), which could be understood as overtaking rather than proceeding through the intersection once space clears. Rewrite to say proceed only when there is enough room to clear the intersection without blocking it.
+- **ID 414, keyed option 2:** “Change lanes” is mistranslated as changing “channels” (ချန်နယ်များ). Use lane/traffic-lane terminology; “turn right signal” should be phrased as using the right turn indicator, not as turning right.
+- **ID 418, stem:** “Rear-end collision” is rendered as “နောက်စေ့ကို တိုက်မိခြင်း,” which sounds like hitting the back of a head rather than a vehicle collision. Use a natural term for a collision into the rear of the vehicle ahead.
+- **ID 419, keyed option 2:** High-priority semantic reversal. English says high beams make the road less clear for the driver ahead and oncoming drivers; Myanmar says it causes a “clear view” (“ရှင်းလင်းပြတ်သားသော မြင်ကွင်း”), reversing the effect. Correct the negative/clarity wording before using this item for learning.
+- **ID 420, stem and keyed option 2:** Myanmar “ကားပျက်ကျပါက” may imply a crash/collapse rather than a vehicle breaking down. The keyed instruction “ကားကို လမ်းဘေးသို့ ထောက်ပါ” means prop/support the car toward the roadside, not maneuver/pull it over. Rewrite as safely move/pull the vehicle to the roadside and switch on hazard lights. DLT-linked guidance similarly advises parking on the shoulder/left side in a safe area and using hazard lights when broken down.
+
+Other language / question-quality findings:
+- **ID 406, stem:** “an area to improve the road surface” is an unnatural translation of a roadwork/road-surface repair area. Translate as an area where roadworks or surface repairs are underway. Keyed response to slow down and drive carefully is preserved.
+- **ID 407, option 2:** “ตรวจดูว่าถนนรองว่าง” means check whether the secondary road is clear; Myanmar “အလယ်တန်းလမ်းကို အခမဲ့စစ်ဆေးရန်” incorrectly says to check it “for free.” This distractor needs translation correction even though it is not keyed.
+- **ID 412, option 1:** Myanmar says lights “flash” when approaching, but the wording is unnatural; keyed response to allow a bus signalling to leave the stop to pull out first is preserved. Verify the exact legal context before presenting it as a universal priority rule.
+- **ID 415, keyed option 1:** Thai/English mean slow down until the cyclist has passed the turning point/turning path. Myanmar “စက်ဘီးကွေ့ပြီးသည်အထိ” sounds like waiting until the bicycle itself turns. Clarify that the driver should slow and allow the cyclist to clear the left-turn path before turning.
+- **ID 416, keyed option 4:** The give-way instruction is broadly preserved, but “vehicles turning out” is vague without the diagram. Confirm image context before certifying the exact priority rule.
+- **ID 417, keyed option 2:** Meaning that the horn may be used when necessary to warn others in an emergency is broadly preserved. Wording should emphasize a brief warning when needed, not indiscriminate honking.
+- **ID 418, option 3:** English distractor “Braking the car that couldn't separate in time” is unclear and may be a malformed source translation; compare with the Thai original before editing.
+- **ID 420, option 3:** English says “stood up to hitchhike,” which does not faithfully convey standing in the road and waving traffic down; likely a source translation defect, not just Myanmar translation.
+
+Broadly aligned in this sample: ID 406 reduce speed at road repairs; ID 407 check for overtaking vehicles before turning right; ID 410 yield to the fire engine; ID 412 let the bus leave first; ID 415 avoid turning across a cyclist's path; ID 417 use the horn as a necessary warning; and ID 420 move a broken-down vehicle off the roadway if safe and use hazard lights. These alignments do not certify all keys.
+
+Source-generation cleanup:
+- **IDs 406–420:** Leading punctuation/numbering artifacts remain in question stems. Reconcile raw source and compiler/cache provenance before bulk cleanup; do not patch generated JSON only.
+- IDs **409 and 411** depend on images. No images were inspected in this batch; their answer keys remain unverified pending visual review.
+
+**Batch result:** IDs 406–420 reviewed. Findings recorded in audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
