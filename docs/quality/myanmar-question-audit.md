@@ -339,3 +339,12 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 598: “ถูกทุกข้อ” / “all of the above” is translated as “အားလုံးမှန်ပါတယ်,” broadly aligned, but the answer key depends on interpretation of the intersection scenario; verify source/rule separately.
 - IDs 555, 556, 558, 568 and 584 are image/scenario-dependent and need the actual images checked before confirming answer-key mappings.
 - IDs 578, 588 and 590 are high-confidence correction candidates. No changes applied pending approval.
+
+
+### Follow-up source-of-truth investigation — 2026-10-24
+
+- Inspected `scripts/compile_safe_driving.mjs`. It rebuilds IDs 192–440 from `article_22_safe_driving_raw.html` and `scripts/safe_translations_cache.json`, then writes `src/data/questions_safe_driving.json` and merges the results into `src/data/questions.json`.
+- The separate safe-driving JSON currently contains stems beginning with a stray `)` (confirmed in IDs 192–194). This is consistent with a source-extraction issue, not simply a Myanmar translation issue.
+- The merged `src/data/questions.json` and generated `src/data/questions.ts` were not readable through the GitHub file-content fetch in this pass (empty content returned for these large files). Do not infer they are empty. Runtime import/source-of-truth still needs confirmation from the app's import path and a successful retrieval of the merged records.
+- Safe next action: recover/inspect the raw HTML and translation cache, compare the generated merged records field-by-field, and then correct only verified source/translation fields. Do not regenerate the whole bank from an unverified cache, because that could overwrite prior approved fixes or alter answer keys/image mappings.
+- No question data, answer keys, images, or runtime files were changed in this follow-up. No deployment was triggered.
