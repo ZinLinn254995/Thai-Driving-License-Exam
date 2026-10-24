@@ -229,3 +229,14 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 312: Thai/English ask what drivers should *not* do after the green signal; Myanmar stem asks what they should do, omitting the negation.
 - ID 319, option 3: source says to use high beams to express thanks; translation is literal, but this driving etiquette advice should be fact-checked separately before publication.
 - IDs 271–320 continue to show fragmented source English; where Thai is clear, use it as the semantic reference and do not copy the broken English literally.
+
+
+### Safe-driving questions IDs 321–345 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 321, correct option: Thai “ชนแบบประสานงา” means a head-on collision; Myanmar “ညှိနှိုင်းနေမြဲ” is unrelated/incorrect.
+- ID 324 stem: Thai refers to a driver seeing a person standing on the sidewalk about to cross at a crossing; Myanmar says a driver sees another driver, changing who is seen.
+- ID 329, option 4: Myanmar text is truncated/incomplete (“ကားမမောင်းခင် Miss K.”); restore only after verifying full source option.
+- ID 338, option 2: Thai prohibits overtaking in a dangerous/tight area or no-overtaking zone; Myanmar wording “ကျော်တက်သည့်နေရာများတွင်” can mean “in overtaking areas,” obscuring the prohibition.
+- ID 344: Thai `ทางม้าลาย` means pedestrian/zebra crossing; Myanmar literal “မြင်းကျားလမ်းကူး” is unnatural and should use the standard pedestrian-crossing term.
+- ID 322, 326, 327, 333–335 and 342 involve emergency response, fatigue, or injured-person movement; translations are broadly readable in this sample but should be reviewed carefully for precise safety meaning. Any source/content issue must be logged separately, not silently fixed as translation.
