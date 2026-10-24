@@ -1257,7 +1257,7 @@ Review scope: reviewed the seven IDs immediately preceding the already documente
 
 ## Traffic-sign bank — IDs 75–117 (manual text review) — 2026-10-24
 
-Review scope: compared Thai stems and options against English/Myanmar wording and the current `isCorrect` markers for IDs 75–117. This was a text review only; the 43 corresponding sign/road-marking images were not all visually opened during this pass. No question data or answer keys were changed.
+Review scope: compared Thai stems and options against English/Myanmar wording and current `isCorrect` markers for IDs 75–117. The initial pass was text-only; a follow-up direct visual comparison has now covered images Q75–Q90 and recorded the results in `docs/quality/traffic-sign-audit.md`. Images Q91–Q117 remain pending direct visual comparison. No question data or answer keys were changed.
 
 - **IDs 75–80 — junction terminology:** The keyed options generally preserve left/right and major-road/side-road distinctions in Myanmar. English descriptions such as “Staggered side road junction, first on left/right” are understandable but unnatural; prefer a clear phrase such as “A minor road joins the main road, with the left/right junction appearing first” only after checking the exact sign diagram. Visual orientation remains unverified.
 - **IDs 81–83 — road narrowing/lane closure:** Keyed English and Myanmar meanings broadly match the Thai labels for narrowing and lane closure. Correct sign-to-key pairing still depends on the images, which were not visually checked in this pass.
@@ -1288,4 +1288,4 @@ Review scope: compared Thai stems and options against English/Myanmar wording an
 
 **Cross-check needed:** An earlier first-pass note grouped IDs 91–93 together as `ทางขนาน`/frontage-road terminology. The current source records show ID 91 is a lane-direction sign, while IDs 92–93 are the frontage-road questions. Reconcile that earlier note’s ID range before relying on it as a precise issue reference.
 
-**Batch result:** IDs 75–117 received a text-based manual review. No JSON, answer keys, translations, images, image mappings, runtime files, main branch, or live deployment were changed. Highest-priority translation candidates are IDs 94 and 114; image/source verification is still needed for image-dependent questions, especially IDs 84, 90–109, 111–114.
+**Batch result:** IDs 75–117 received a text-based manual review; images Q75–Q90 were subsequently opened and compared against their keyed answers. No definitive image-to-key mismatch was found in Q75–Q90. Images Q91–Q117 remain pending direct visual comparison. No JSON, answer keys, translations, images, image mappings, runtime files, main branch, or live deployment were changed. Highest-priority translation candidates are IDs 94 and 114; image/source verification remains needed for Q91–Q117, especially Q94 and Q100–Q114.
