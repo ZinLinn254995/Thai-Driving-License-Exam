@@ -1531,3 +1531,12 @@ Relevant DLT references:
 - Pending exact legal-source verification: Q135 late-tax surcharge.
 - High-priority medical-source review: Q168, Q170–Q183, especially categorical prohibitions in Q173, Q177, Q180, Q182 and Q183.
 - No question JSON, translations, answer keys, image mappings, runtime code, main branch or live deployment changed.
+
+
+## Follow-up source found — Q135 annual vehicle-tax surcharge (2026-10-25)
+
+A subsequent targeted search located a Department of Land Transport-hosted legal text reproducing the Motor Vehicle Act provision on late annual vehicle tax. It states that an owner who does not pay vehicle-use tax within the prescribed time must pay an additional **1% per month**, and any fraction of a month counts as one month. This supports the stored keyed answer “1% per month” for Q135 / source question 18. The record is therefore upgraded from “pending exact source” to **supported by a DLT-hosted legal text**; for publication-grade legal certification, the consolidated currently effective Act should still be preferred where available.
+- DLT-hosted legal text: https://legal.dlt.go.th/repository/attachments/442_55.pdf
+- Related legal-text reproduction: https://legal.dlt.go.th/gen2/app/api/legal-download.php?download=1&file=article_20190808_113355_52b211bb.pdf
+
+No question content or answer key was changed.
