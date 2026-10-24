@@ -60,3 +60,4 @@ This checklist covers app quality, accessibility, reliability, SEO, and release 
 - Do not describe any feature or service as available unless it is implemented and tested.
 - Keep this branch limited to app quality; do not change question/answer data, translations, traffic-sign image mappings, or image assets. Those belong to the separate data-audit branch.
 - Avoid unnecessary Vercel deployments; validate the branch before requesting a single deliberate deployment.
+- [x] Re-ran the full CI suite after recording the lazy-loading result in this checklist. Run [40041086025](https://github.com/ZinLinn254995/Thai-Driving-License-Exam/actions/runs/40041086025) passed lockfile generation, dependency installation, TypeScript, unit tests, mobile browser smoke tests, and production build.
