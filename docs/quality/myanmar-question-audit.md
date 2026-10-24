@@ -174,3 +174,18 @@ No data edits applied. Items to verify or polish:
 - ID 111, correct option: stop line / give-way line terms are better than the earlier “မှတ်တိုင်မျဉ်း” issue, but confirm both terms remain distinct and accurate throughout the bank.
 - ID 113, correct option: “เกาะสี” means a painted traffic island/painted area; Myanmar’s “ယာဉ်အသွားအလာခွဲခြားသည့်အမှတ်အသား” may be too general. Confirm the road marking before changing.
 - ID 117: “Rumble Strips” is translated descriptively and includes the English term; likely usable, but terminology should be consistent with the site's learner-facing glossary.
+
+
+### Safe-driving questions IDs 212–241 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 214, correct option: Thai says repeatedly press and release the brake; Myanmar says “စက်ဘီးနင်း” (pedal a bicycle), which is wrong.
+- ID 216, correct option: Thai says restart the engine; Myanmar says “အင်ဂျင်အသစ် တပ်ဆင်ပါ” (install a new engine), a clear mistranslation.
+- ID 218: image-based right-turn scenario; option 4 is broadly aligned but the image must be checked before confirming.
+- ID 221: source stems are fragmented in English and Myanmar; use the complete Thai stem as primary meaning reference, and review every option for clear left-side overtaking exceptions.
+- ID 222: source asks for the exception in which a driver may drive on the right or cross the road center; Myanmar phrasing “ဘယ်အခြေအနေမှာမှ ... မောင်းနှင်နိုင်ပါ့မလား” can read as “under what circumstances can’t they?”, so intent needs correction after approval.
+- ID 224, correct option: the Myanmar says to wait for pedestrians and vehicles from the right before turning left, but the sentence is awkward and should be clarified.
+- ID 228, correct option: “รถเสียหรือรถเกิดอุบัติเหตุ” is rendered as car breakdown or collision, broadly aligned.
+- ID 230: stem is awkward in all three languages; Myanmar option 3 is a fragment (“mobile phone while driving”) rather than a complete option. Rewrite only after source meaning is confirmed.
+- ID 238, correct option: Thai says release the accelerator and hold the steering wheel firmly; Myanmar says “အရှိန်မြှင့်ပြီး” (accelerate), reversing the instruction. Option 1 also wrongly translates “ถอนคันเร่ง” as accelerating.
+- IDs 192–241 still require a full option-by-option pass; this log records only high-confidence issues surfaced in the current sample.
