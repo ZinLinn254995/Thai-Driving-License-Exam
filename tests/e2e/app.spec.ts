@@ -1,21 +1,26 @@
 import { expect, test } from '@playwright/test';
 
-test('mobile landing page toggles Myanmar translations and opens history', async ({ page }) => {
+test('mobile landing page keeps Myanmar UI text visible independently of the question translation toggle and opens history', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'Thai Driving License Practice' })).toBeVisible();
 
-  const showMyanmar = page.getByRole('button', { name: 'Show Myanmar' });
   const categoryTranslation = page.getByText('လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ');
+  const showMyanmar = page.getByRole('button', { name: 'Show Myanmar in questions' });
   await expect(showMyanmar).toHaveAttribute('aria-pressed', 'false');
-  await expect(categoryTranslation).toHaveCount(0);
+  await expect(categoryTranslation).toBeVisible();
+
   await showMyanmar.click();
-  await expect(page.getByRole('button', { name: 'Hide Myanmar' })).toHaveAttribute('aria-pressed', 'true');
+  const hideMyanmar = page.getByRole('button', { name: 'Hide Myanmar in questions' });
+  await expect(hideMyanmar).toHaveAttribute('aria-pressed', 'true');
+  await expect(categoryTranslation).toBeVisible();
+
+  await hideMyanmar.click();
+  await expect(page.getByRole('button', { name: 'Show Myanmar in questions' })).toHaveAttribute('aria-pressed', 'false');
   await expect(categoryTranslation).toBeVisible();
 
   await page.getByRole('button', { name: 'History' }).click();
   await expect(page.getByRole('heading', { name: 'Practice Score History' })).toBeVisible();
 });
-
 test('mobile learner can navigate a quiz, submit an answer, view results, and save history', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Start Practice (Instant Feedback)' }).click();
