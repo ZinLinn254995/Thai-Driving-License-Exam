@@ -52,7 +52,9 @@
   const my = document.createElement('button'); my.type='button'; my.textContent='မြန်မာ'; my.style.cssText=style;
   group.append(en,divider,my);
   row.append(group);
-  header.querySelector('a[href="/"]').insertAdjacentElement('afterend', row);
+  const brand = nav.parentElement.querySelector('a[href="/"]');
+  if (!brand) return;
+  brand.insertAdjacentElement('afterend', row);
   const navNames = {
     '/study-guide.html':['Study Guide','လေ့လာမှု လမ်းညွှန်'],
     '/faq.html':['FAQ','မေးလေ့ရှိသော မေးခွန်းများ'],
