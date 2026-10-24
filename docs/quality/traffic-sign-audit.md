@@ -371,3 +371,9 @@ Directly opened the image assets for the listed questions in Traffic Laws and Sa
 
 ### Scope
 - Audit documentation only. No question data, answer keys, Myanmar translations, images, image mappings, main branch, or live deployment changed.
+
+
+## Official-source resolution: Q67 bus sign — mismatch confirmed (2026-10-25)
+- The official Department of Highways *คู่มือมาตรฐานป้ายจราจร* explicitly defines sign บ.49, a blue circle with a white bus pictogram, as “ช่องเดินรถที่กำหนดไว้สำหรับรถโดยสารประจำทาง” — a lane designated for buses. Source: https://doh.go.th/uploads/tinymce/service/bid/doc_bid/manual1.pdf, section 2.5.6, page 2-28; OTP official sign/manual index: https://www.otp.go.th/post/view/2098.
+- Q67 image is the same blue circular sign with a white bus pictogram. Current keyed answer “Do not overtake into the bus lane” describes a prohibition on overtaking into a lane, not the meaning of the pictured sign. **Confirmed image-to-answer mismatch.** Candidate correct meaning is “Bus lane / lane reserved for buses.” Confirm all question stem and distractors, and the Thai/Myanmar translations, in a separately authorized fix phase; do not edit runtime question data during this audit.
+- Scope: documentation only; no question JSON, answer key, translations, image assets, main branch, or live deployment changed.
