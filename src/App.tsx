@@ -321,11 +321,6 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* Compact language switcher stays fixed while navigating the app. */}
-      <div className="fixed bottom-4 right-3 z-50 inline-flex items-center gap-0.5 rounded-full border border-white/70 bg-[#074028] p-1 shadow-lg" role="group" aria-label="Choose language">
-        <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>EN</button>
-        <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
-      </div>
       <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
         <div className="mx-auto max-w-4xl px-5 py-6 sm:px-6 sm:py-7">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-8">
@@ -350,6 +345,13 @@ export default function App() {
                 <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Contact / Report an issue' : 'ဆက်သွယ်ရန် / ပြဿနာတင်ပြရန်'}</a></li>
               </ul>
             </nav>
+          </div>
+          <div className="mb-4 flex justify-end">
+            <div className="inline-flex items-center gap-0.5 rounded-full border border-emerald-100/30 bg-white/5 p-0.5" role="group" aria-label="Choose language">
+              <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>Eng</button>
+              <span aria-hidden="true" className="text-xs text-emerald-100/60">|</span>
+              <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
+            </div>
           </div>
           <div className="mt-5 border-t border-white/15 pt-4 sm:mt-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
             <p className="m-0 max-w-2xl text-xs leading-relaxed text-emerald-100/85">{siteLanguage === 'en' ? "Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark." : 'ဤဝက်ဘ်ဆိုက်သည် သီးခြားလွတ်လပ်သော လေ့ကျင့်ရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) နှင့် မသက်ဆိုင်သလို ၎င်း၏ ထောက်ခံအတည်ပြုမှုလည်း မရှိပါ။ ၉၀% လေ့ကျင့်ရမှတ်သည် တရားဝင်အောင်မှတ် မဟုတ်ပါ။'}</p>
