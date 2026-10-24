@@ -317,27 +317,48 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* Footer: concise, touch-friendly links to essential site information. */}
-      <footer className="mt-auto border-t border-slate-200/80 bg-white/90 py-4 text-center text-xs text-slate-600">
-        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="m-0">{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</p>
-          <p className="m-0 text-xs">
-            <span className="font-semibold text-[#0b5d3b]">Practice target: 90%</span>
-            <span className="mx-1.5">·</span>
-            <span>Not an official pass mark</span>
-          </p>
+      {/* Footer: compact, structured, and consistent with the site's road-sign green palette. */}
+      <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
+        <div className="mx-auto max-w-4xl px-5 py-6 sm:px-6 sm:py-7">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-8">
+            <div className="min-w-0">
+              <p className="m-0 text-base font-bold tracking-tight text-white">Driving License Practice</p>
+              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-emerald-100/90">
+                Practice for Thailand's driving licence exam at your own pace.
+              </p>
+              <p className="mt-3 inline-flex rounded-full border border-emerald-100/25 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-50">
+                {QUESTIONS_BANK.length} practice questions
+              </p>
+            </div>
+
+            <nav aria-label="Learning resources" className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">Learn</h2>
+              <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-1 p-0 sm:grid-cols-1">
+                <li><a href="/study-guide.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Study Guide</a></li>
+                <li><a href="/faq.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">FAQ</a></li>
+                <li><a href="/about.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">About</a></li>
+              </ul>
+            </nav>
+
+            <nav aria-label="Website information" className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">Information</h2>
+              <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-1 p-0 sm:grid-cols-1">
+                <li><a href="/privacy.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Privacy Policy</a></li>
+                <li><a href="/disclaimer.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Disclaimer</a></li>
+                <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Contact / Report an issue</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="mt-5 border-t border-white/15 pt-4 sm:mt-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
+            <p className="m-0 max-w-2xl text-xs leading-relaxed text-emerald-100/85">
+              Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark.
+            </p>
+            <p className="mt-3 shrink-0 text-xs text-emerald-100/70 sm:mt-0">
+              © {new Date().getFullYear()} Driving License Practice
+            </p>
+          </div>
         </div>
-        <nav aria-label="Site information" className="max-w-4xl mx-auto px-3 mt-2 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 font-sans text-xs">
-          <a href="/study-guide.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Study Guide</a>
-          <a href="/faq.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">FAQ</a>
-          <a href="/about.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">About</a>
-          <a href="/privacy.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Privacy Policy</a>
-          <a href="/disclaimer.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Disclaimer</a>
-          <a href="/contact.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Contact / Report an issue</a>
-        </nav>
-        <p className="max-w-4xl mx-auto mt-2 px-4 text-[11px] leading-relaxed text-slate-600 font-sans">
-          Independent study resource; not affiliated with Thailand’s Department of Land Transport.
-        </p>
       </footer>
     </div>
   );
