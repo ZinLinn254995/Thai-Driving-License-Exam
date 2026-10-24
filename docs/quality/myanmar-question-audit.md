@@ -189,3 +189,18 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 230: stem is awkward in all three languages; Myanmar option 3 is a fragment (“mobile phone while driving”) rather than a complete option. Rewrite only after source meaning is confirmed.
 - ID 238, correct option: Thai says release the accelerator and hold the steering wheel firmly; Myanmar says “အရှိန်မြှင့်ပြီး” (accelerate), reversing the instruction. Option 1 also wrongly translates “ถอนคันเร่ง” as accelerating.
 - IDs 192–241 still require a full option-by-option pass; this log records only high-confidence issues surfaced in the current sample.
+
+
+### Safe-driving questions IDs 242–270 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 246, option 1: “ทางบังคับเลี้ยว” means a mandatory-direction route; Myanmar “စတီယာရင်လမ်းကြောင်း” is incorrect.
+- ID 250: Thai refers to pulling out from the left shoulder, not exiting the vehicle. The English and Myanmar stems both misread this as “leaving the vehicle,” so source-language correction is needed before the stem is translated accurately.
+- ID 251: Thai/English ask which is *not* the correct way to look while driving; Myanmar asks which way is correct, omitting the negation. Option 1 itself correctly describes looking at something unrelated, but stem polarity must be corrected.
+- ID 254, option 4: “น้ำหนักบรรทุก” means load/vehicle load, but Myanmar says “ဝန်ဆောင်ခ” (service fee), incorrect.
+- ID 255, correct option: “ขอบทาง” (road edge/curb) is translated as “ကန့်လန့်ကာ” (curtain), incorrect. The instruction to angle wheels toward the curb on a downhill slope also needs a natural road-term translation.
+- ID 260, correct option: meaning is aligned, though it can be phrased more naturally.
+- ID 262: correct option is understandable; the stem is long but semantically aligned.
+- ID 264: correct option broadly aligns; wording should be made natural after the full pass.
+- ID 268: only “turn on emergency lights” is keyed correct when a vehicle catches fire in a tunnel and cannot continue. This is a possible content/answer-key safety concern, not a translation-only fix; flag for separate factual/official-source review, do not change the key in this pass.
+- ID 270: stem and options are broadly understandable, but several distractors are awkwardly translated. Preserve option meaning and key while polishing only after approval.
