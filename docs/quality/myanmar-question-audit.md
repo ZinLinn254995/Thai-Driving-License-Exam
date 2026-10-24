@@ -253,3 +253,14 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 321 head-on collision term, recorded above, remains a high-priority correction candidate.
 - ID 348: child restraint and airbag advice is safety-critical; verify source/meaning and vehicle-specific conditions before publication.
 - ID 346, 326 and related first-aid questions require a separate factual review for first-aid accuracy; translation audit should not invent or change emergency procedures.
+
+
+### Safe-driving questions IDs 371–395 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 374, stem: Thai/English ask in which situations A-pillars obstruct visibility; Myanmar is phrased as “is there a situation where ...?”, which is less direct but retains the core meaning.
+- ID 376, stem: Thai asks which is *not* the meaning of “appropriate speed”; Myanmar is convoluted and should be simplified while preserving the negative form.
+- ID 390: correct option says use the handbrake only to avoid brake-light glare during a night traffic jam. This is potentially unsafe vehicle-control advice; flag for separate factual/source verification, do not silently change the answer key.
+- ID 394, correct option: Thai “ความไม่พร้อมของผู้ขับขี่” means the driver's lack of readiness/unpreparedness; Myanmar says “ယာဉ်မောင်း၏ ကြိုတင်ပြင်ဆင်မှု” (driver preparedness), reversing the meaning.
+- ID 395: the question concerns what not to do when finding an injured person; answer “move the injured person immediately” is semantically aligned, but the entire first-aid set requires separate safety review.
+- IDs 371–395 have no approved edits; continue recording clear mismatches and safety-critical uncertainties.
