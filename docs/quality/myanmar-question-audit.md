@@ -839,3 +839,39 @@ Source-generation cleanup:
 - No images were audited in this batch. Image-dependent context or unverified legal/first-aid claims should remain flagged until checked against the original question source and relevant diagram.
 
 **Batch result:** IDs 421–435 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Vehicle-maintenance manual review — IDs 441–455 — 2026-10-24
+
+The safe-driving bank ends at ID 440; this batch begins the separate `src/data/questions_maintenance.json` bank. Compared Thai, English and Myanmar text for IDs 441–455. Checked basic vehicle-preparation points against Thailand Department of Disaster Prevention and Mitigation / government guidance on tire condition, brakes, coolant, battery and wipers: https://www.thailand.go.th/public/index.php/issue-focus-detail/------7- and https://www.prd.go.th/th/content/category/detail/id/35/iid/244478. This is a translation and plausibility audit, not a complete mechanical-safety certification.
+
+High-priority safety / source-validation concerns:
+- **ID 438, keyed option 3:** After a tire bursts, the key says to let the car roll and be ready to turn on hazard lights. The Myanmar translation “ကားကို စီးဆင်းပါစေ” is unnatural and could imply letting the vehicle drift without control. A safe answer should emphasize holding the steering wheel firmly, avoiding abrupt braking/steering, easing off the accelerator and slowing gradually in a controlled manner, then moving to a safe place when possible. Verify the original official source before changing the answer key.
+- **ID 442, keyed option 4:** Pressing the engine belt with fingers is presented as the basic tension check, but the stem omits a critical safety condition: the engine must be switched off and secured before touching a belt. This needs source validation and a clear warning; never inspect a moving belt by hand.
+- **ID 441, keyed option 1 and ID 443:** Adding distilled water is applicable to serviceable flooded lead-acid batteries that require maintenance, not all modern sealed/maintenance-free batteries. Preserve the exam's intended answer only with a note to follow the vehicle/battery manufacturer instructions; do not imply all batteries can be topped up.
+- **ID 444, keyed option 3:** The coolant reservoir level should be between the marked minimum and maximum when checked according to the owner's manual, generally with the engine cool. The key's meaning is broadly aligned but should not imply opening a hot cooling system.
+- **ID 453, keyed option 4:** Disconnecting the negative terminal first is generally correct for conventional negative-ground vehicles, but battery procedures can vary by vehicle (especially hybrids/EVs). Add manufacturer-instruction context if this is used as practical guidance.
+- **ID 454, keyed option 2:** “Red warning lights should not appear while driving” is an oversimplified generalization. Red warning indicators usually signal a potentially serious condition requiring prompt attention, but exact indicators and safe response differ by vehicle; verify original curriculum and avoid implying every red indicator has identical meaning.
+
+Translation / question-quality findings:
+- **ID 442, stem and option 2:** Stem is a fragment (“Basic inspection… How should I check?”). English option 2 invents “install a sound machine,” whereas Thai says start the engine and listen to the belt noise. Myanmar follows the incorrect English translation. This distractor is materially mistranslated and must be aligned to Thai.
+- **ID 444, keyed option 3:** Myanmar says “the high and low criteria specified beside the tank” but does not clearly say the coolant level must lie between MIN and MAX marks. Make the range explicit.
+- **ID 445, keyed option 2:** The instruction not to use the clutch while driving down a steep slope is preserved. Myanmar uses the literal “တောင်စောင်း” (mountain slope), which can be understood but is less precise than a steep downhill road; the question wording should be checked against the official manual.
+- **ID 446, stem:** “Expired tires” is not quite the same as worn/aged tires. Cracks along the sidewall/edge can be a sign of aging or damage but do not alone define every expired tire; clarify whether the question concerns aged tires or visible tire damage. Myanmar is broadly aligned.
+- **ID 447, keyed option 2:** Correctly says to use a tire-pressure gauge. Other Myanmar distractors are terse/awkward but not key-reversing.
+- **ID 448, keyed option 3:** “Clutch released quickly causes jerking and engine stall” is preserved; Myanmar “လှုပ်ပြီး ပိတ်သွား” is vague. Prefer “ကားတုန်ခါပြီး အင်ဂျင်ရပ်သွားနိုင်သည်.”
+- **ID 449, keyed option 4:** Meaning that not fully depressing the clutch can cause gear noise is preserved, but Myanmar wording “ဂီယာကို ဆူညံအောင်လုပ်ပါ” sounds like an instruction to make noise rather than an effect. Rephrase as “ဂီယာပြောင်းချိန်တွင် ဂီယာမှ ဆူညံသံထွက်နိုင်သည်.”
+- **ID 450, keyed option 4:** Tire tread wearing faster from turning the steering wheel while stationary is conveyed, but Myanmar literal “တာယာနင်းခြင်း” is unnatural; use tire tread / tread wear terminology. Verify that the intended vehicle type and steering system match the source.
+- **ID 451, keyed option 3:** Testing brakes after driving through floodwater is broadly consistent with common guidance, but the answer should not imply testing in a way that risks traffic; test gently at low speed only when safe. The stem and translations are broadly aligned.
+- **ID 452, keyed option 4:** Stop in a safe place and call a mechanic when there is a burning smell, weak acceleration and poor A/C cooling is preserved. Myanmar is understandable; the symptoms are a warning to stop safely rather than continue driving.
+- **ID 454, stem:** English and Myanmar awkwardly ask what color the dashboard warning lights are, then add that the color should not appear while driving. The intended question is likely which warning-light color indicates a serious fault; rewrite only after checking the source.
+- **ID 455, keyed option 2:** Checking the windshield wipers before rainy-season driving is preserved. Myanmar “လေကာမှန် wiper” is understandable but should use consistent windshield-wiper terminology.
+
+Broadly aligned in this sample: ID 441 use the specified level for distilled water where the battery is serviceable; ID 443 use distilled water where required; ID 444 keep coolant between the marked limits; ID 447 use a pressure gauge; ID 451 check the brakes after water exposure in a safe way; ID 452 stop safely and call a mechanic for abnormal symptoms; ID 455 check the wipers before rainy-season driving. These observations do not certify all answer keys.
+
+Source-generation / terminology notes:
+- Standardize Myanmar automotive terms for battery terminals, engine belt, clutch, tire tread, coolant reservoir, windshield wiper and warning indicator; avoid leaving English words such as “Clutch” where a consistent Burmese term can be provided.
+- No images were required or audited in this batch.
+- Do not patch generated JSON alone; reconcile source/compiler/cache provenance before changing source text or answer keys.
+
+**Batch result:** IDs 441–455 reviewed in the vehicle-maintenance bank. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
