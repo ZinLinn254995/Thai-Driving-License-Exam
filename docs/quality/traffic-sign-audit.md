@@ -353,3 +353,21 @@ Directly opened images for Q195, Q200, Q206, Q211, Q218, Q266, Q271, Q288, Q292,
 
 - No image/key contradiction is declared confirmed in this batch from image-only inspection. These notes are pending joint review with the full question stems and official rules.
 - Scope: documentation only. No question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
+
+
+## Visual audit: selected image-based questions outside Traffic Signs (2026-10-25)
+Directly opened the image assets for the listed questions in Traffic Laws and Safe Driving and compared the depicted scenario with the current English keyed answer. This is a first-pass visual consistency check, not a complete rule/legal review.
+
+### Asset provenance and consistency concerns
+- **Watermark is widespread:** the directly inspected Safe Driving assets Q195, Q200, Q206, Q211, Q288, Q292, Q296–Q299, Q304, Q314, Q318, Q328, Q409–Q413, Q415–Q416, and Q440 visibly include a “thaidriveexam.com” watermark/logo. Other traffic-sign assets Q1, Q46, and Q70 also show the same branding. Audit the provenance, reuse permission, and whether this branding is authorized before release/AdSense review; do not crop or remove watermarks without rights confirmation.
+- **Q414 — answer text has a terminology/translation defect.** English keyed answer: “Look in the side mirror and signal to turn right. and change channels when safe”. “Change channels” is not correct driving terminology; likely intended to mean change lanes when safe, but confirm against Thai source before editing. Myanmar/Thai equivalents should be checked together.
+- **Q355 — scenario/action alignment needs review.** Image shows a yellow car stopped at a green traffic light alongside a large vehicle. Keyed answer was not available in the image itself and should be checked against the exact question/options; avoid assuming the correct response from the picture alone.
+- **Q195 — image is a four-way intersection with red car approaching from the bottom, yellow car from the top, and white car entering from the right.** The keyed answer says the red car should stop to allow oncoming traffic before turning right. This is plausible only if the intended movement and priority relationship match the diagram; retain as context-sensitive and verify the stem plus Thai traffic priority rule before treating as confirmed.
+- **Q271 — image depicts a red car angled across a lane among queued vehicles, with other cars around it.** The keyed answer “Stop the car and let the car with the right turn signal on first” is not self-evident from the illustration alone. Verify the question stem and vehicle labels against the image before release.
+- **Q318 — image shows a row of parked vehicles and a red arrow pointing toward oncoming traffic/road space.** Key says parked cars may open their doors; plausible hazard concept, but ensure the arrow points to the door-opening hazard and does not suggest a different overtaking action.
+- **Q374 — image highlights the right A-pillar blind area.** Key says use extra care when entering curves and intersections. This is broader than the image’s direct lesson (A-pillar can obscure pedestrians/vehicles); consider making the specific obstruction risk explicit after checking the stem.
+- **Q440 — image shows a truck signaling right with another truck ahead/left.** Key says keep distance and wait for the large vehicle to move in a certain direction; the phrase is vague and should identify the truck’s wide turn/swinging path only if the stem supports it.
+- Q200, Q206, Q211, Q218, Q266, Q288, Q292, Q296–Q299, Q304, Q314, Q316, Q328, Q354–Q355, Q409–Q413, Q415–Q416 were visually opened; most broadly depict the maneuver or hazard in the keyed concept, but the image alone is not sufficient to verify the exact right-of-way rule without reading each stem and all options.
+
+### Scope
+- Audit documentation only. No question data, answer keys, Myanmar translations, images, image mappings, main branch, or live deployment changed.
