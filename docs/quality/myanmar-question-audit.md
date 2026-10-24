@@ -518,3 +518,35 @@ Additional wording / source-quality flags:
 Broadly aligned: ID 287’s keyed emergency-lights distractor concept; ID 292’s keyed duty to yield to pedestrians; ID 294’s keyed instruction to check for overtaking traffic before turning; and ID 299’s keyed instruction to slow down and be ready to stop. This batch is a translation/source-quality review only and does not certify the correctness of answer keys or Thai legal requirements.
 
 **Batch result:** IDs 286–300 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 301–315 — 2026-10-24
+
+Compared the Thai, English, and Myanmar stems and options for IDs 301–315. This is a documentation-only language/source review; no question data or answer keys were edited.
+
+Clear/high-priority language issues:
+- **ID 302, stem:** Thai and English ask what drivers **should not do** when driving over damaged road surfaces. Myanmar instead asks what drivers **should do**, losing the negation. The keyed high-speed option still matches the source’s negative question, but the Myanmar stem can cause a wrong interpretation.
+- **ID 304, stem:** The Thai scenario is a bus signalling right to pull out from a bus stop. English is grammatically ambiguous and Myanmar reads as if the learner should switch on their own right indicator. Reword the scenario so the bus is clearly the actor.
+- **ID 306, option 2 (keyed):** Thai/English mean a vehicle has broken down while stopped on the road shoulder. Myanmar says the vehicle “fell off” the shoulder, changing the incident.
+- **ID 308, option 2 (keyed):** The source says not to merely watch from inside the car and continue driving just because the people involved are strangers. Myanmar does not clearly preserve this action/condition, so the intended unsafe behaviour is obscured.
+- **ID 312, stem:** Thai/English ask what drivers **should not do** when the green light permits movement. Myanmar asks what drivers **should do**, reversing the question’s polarity. The keyed option is a horn-pressure behaviour, consistent with the source’s “should not” framing.
+- **ID 314, option 3:** English says to drive at the same speed and keep the lights on, but Thai says to use/flash high beams. Myanmar also loses the high-beam action. This is a distractor, but its meaning should remain faithful to the source.
+
+Source/key safety flag:
+- **ID 311, keyed option 4:** The keyed option says to leave the transmission in neutral and not use the handbrake when parking in a way that blocks other vehicles. This sounds potentially unsafe if read as general parking advice. Verify the original official question/context and authoritative Thai guidance before treating this as correct or presenting it as endorsed advice. Do not silently change the answer key based only on translation review.
+
+Other terminology and clarity issues:
+- **ID 301, stem:** Myanmar is grammatically awkward (“which drivers should not do?”), though the negative question is retained. Keyed option 1 (“honk to chase pedestrians away”) is broadly aligned with the Thai/English distractor meaning.
+- **ID 305, option 2 (keyed):** “Adjustable headrest pillow” is rendered as a generic adjustable pillow. Use a consistent technical term for a vehicle head restraint/headrest.
+- **ID 307, stem:** The return-after-holidays setup is awkwardly fragmented across English and Myanmar; the core situation (medicine prescribed that affects driving) is preserved. Keyed option 2, let someone else drive, is aligned.
+- **ID 309, stem:** English repeats “dizzy,” and Myanmar repeats the dizziness wording; simplify without changing the condition. The keyed instruction to refrain from driving when affected by medication is aligned.
+- **ID 310, stem:** The Myanmar term for head restraint is unnatural and can read like a generic “head control/restraint.” Standardize it with ID 305 and other head-restraint items.
+- **ID 313, option 1 (keyed):** The intended signal—left indicator, keep left, and reduce speed to allow a following vehicle to overtake—is broadly preserved, but the Myanmar phrase for keeping left is awkward.
+- **ID 315, stem/options:** The stem asks which direction(s) drivers must watch, while several distractor options are fragmentary or non-parallel. The keyed answer “front, back, left, right” is preserved in Myanmar.
+
+Source-generation cleanup:
+- **IDs 301–315:** Stems continue to contain leading `) ` or `၎)` artifacts. Since the JSON appears generated from another source, reconcile the source and compiler before bulk-cleaning generated output.
+
+Broadly aligned in this sample: ID 303’s keyed reminder to check safety again before crossing an unbarriered railway; ID 305/310’s intended head-restraint purpose; ID 307’s instruction to have someone else drive if prescribed medicine affects driving; ID 309’s instruction not to drive while impaired; ID 313’s overtaking courtesy signal; and ID 314’s keyed instruction to slow down and prepare to stop when a ball rolls out from between parked cars. These observations do not independently certify every answer key or Thai legal/safety rule.
+
+**Batch result:** IDs 301–315 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
