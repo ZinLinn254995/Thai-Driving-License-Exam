@@ -1294,3 +1294,9 @@ Review scope: compared Thai stems and options against English/Myanmar wording an
 ### Cross-reference: Q95 traffic-sign image/key mismatch (2026-10-24)
 - See `docs/quality/traffic-sign-audit.md` for the official-source match: the pictured symbol matches Thai Department of Highways warning sign ต.49, “end of divided road,” not “junction without traffic island ahead.”
 - Treat this as a high-priority, source-supported content correction for a later approved fix phase. Do not infer or change any runtime answer/translation during this audit-only phase.
+
+## Audit status update — visual inspection coverage complete (2026-10-25)
+- All 173 image-bearing question assets in the 598-question bank have now been opened for a first-pass visual check, including Traffic Signs Q1–Q117 and the image-bearing questions in the other categories. This closes the **direct image-opening coverage milestone**, not final verification of every image, answer key, legal rule, Myanmar translation, or asset licence.
+- Cross-reference the current source-supported findings in docs/quality/traffic-sign-audit.md, including confirmed Q67 bus-lane sign mismatch and Q540 steep-descent sign/key mismatch, plus unresolved terminology and image-provenance items.
+- **Superseded Q95 note:** earlier text in this audit claimed Q95 was a confirmed image/key mismatch. That conclusion is withdrawn after checking the official OTP manual: sign ต.49 means the divided road ends and the road ahead has no median/separator, consistent in substance with the current key “junction without traffic island ahead.” Do not change Q95 based on the earlier provisional note.
+- Audit-only boundary remains in force: no runtime JSON, answer keys, translations, images, mappings, main branch, or live deployment changed. Uncertain items are recorded for follow-up rather than guessed.
