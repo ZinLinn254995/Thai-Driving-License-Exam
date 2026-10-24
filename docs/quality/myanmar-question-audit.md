@@ -394,3 +394,25 @@ Clear or high-priority Myanmar issues:
 Broadly aligned in this sample: ID 211’s keyed yield instruction, ID 213’s adequate sleep, ID 215’s avoid hard/rapid braking in heavy rain, ID 217’s slow down/keep left, ID 219’s correct-lane U-turn when safe, and ID 220’s “do not drink alcohol before departure” answer. These checks do not independently validate the legal correctness of the answer keys.
 
 **Batch result:** IDs 211–225 reviewed; no question data edits or deployment.
+
+
+### Safe-driving manual review — IDs 226–240 — 2026-10-24
+
+Reviewed stems and all four options in the separate safe-driving JSON against Thai and English. No question data edits were made; the generated copy must be reconciled with the actual runtime bank before corrections.
+
+Clear/high-priority translation findings:
+- **ID 230, option 3 (correct):** Thai means using a mobile phone while driving; Myanmar only says “mobile phone while driving” as a noun fragment. Make it a clear action (using a mobile phone while driving).
+- **ID 233, stem:** the Thai asks about leaving too much distance from the vehicle ahead; Myanmar says the distance is too far but its sentence is awkward. More importantly, the keyed answer that it causes a traffic jam is counterintuitive and may be source/key error; verify authoritative rationale before changing the key.
+- **ID 235, option 3:** Thai/English mean parking where a no-parking sign is posted; Myanmar currently says parking in places where there is no parking sign. This reverses the meaning and is a clear translation error (though not the keyed option).
+- **ID 238, option 1:** Thai says release the accelerator, then brake to shift to a lower gear (source phrasing itself may be technically questionable). Myanmar reverses the first action to “accelerate” and also says accelerate the brake; clear meaning reversal. Verify the actual safe-driving procedure before rewriting.
+- **ID 238, option 2 (correct):** Thai says release the accelerator and hold the steering wheel firmly while keeping the vehicle steady. Myanmar reverses “release the accelerator” to “accelerate”; clear translation error in the keyed answer.
+- **ID 237, stem:** Thai is “when the vehicle breaks down”; Myanmar wording “ကားပျက်ကျရင်” can imply a crash/accident rather than a breakdown. Use a consistent vehicle-breakdown term.
+- **ID 229:** Thai describes towing a vehicle whose steering or brakes do not work; Myanmar is broadly aligned but “ဆွဲတင်” suggests lifting/hauling rather than towing. Improve terminology only after checking the exact recovery method.
+- **ID 232, option 4:** “Use the heart test” is a literal, meaningless rendering of Thai idiom “ใช้การวัดใจ”; likely a distractor, but preserve the distractor meaning as closely as possible rather than inventing a safety instruction.
+- **ID 228, option 1:** Myanmar for fog is `မှိုင်းတွေ`, an unnatural/inaccurate noun choice; use the project’s standard word for fog.
+- **ID 226, stem:** Myanmar is understandable but awkward. Keyed option “stop at least 5 metres from the railway” aligns with Thai/English text; independently verify legal/source accuracy if this bank is presented as official exam guidance.
+- **IDs 226–240, stems:** stray leading `)` / `၎)` persists, and several English stems are fragments. Do not repair in generated copy alone.
+
+Broadly aligned in this sample: ID 227’s keyed presumption of fault for fleeing, ID 228’s keyed broken-down/accident emergency-light option (wording aside), ID 230’s intended answer, ID 231’s negligence proverb, ID 232’s pedestrian-yield answer, ID 234’s high-speed driving in heavy traffic, ID 236’s not using hazard lights throughout a rainy journey, ID 239’s cracked-windshield response, and ID 240’s too-distant seat position causing difficulty controlling the vehicle. These checks do not independently validate answer-key legality or safety correctness.
+
+**Batch result:** IDs 226–240 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
