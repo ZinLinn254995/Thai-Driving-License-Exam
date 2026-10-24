@@ -5,7 +5,6 @@ import { toMyanmarNumber, ExamHistoryItem } from '../utils/helpers';
 
 interface HomeViewProps {
   lang: LanguageMode;
-  showMyanmar: boolean;
   totalQuestions: number;
   signsCount: number;
   lawsCount: number;
@@ -21,7 +20,6 @@ interface HomeViewProps {
 
 export const HomeView: React.FC<HomeViewProps> = ({
   lang,
-  showMyanmar,
   totalQuestions,
   signsCount,
   lawsCount,
