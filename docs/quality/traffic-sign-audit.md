@@ -606,3 +606,23 @@ This section records what can be supported by the official Thai manuals found in
 
 ### Scope
 - This is an evidence note only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was changed.
+
+
+## Follow-up: confirmed language/terminology defects from current records (2026-10-25)
+
+### Q414 — English and Myanmar use the wrong word for changing lanes
+- Thai keyed option says “เปลี่ยนช่องทางเมื่อปลอดภัย” (change lanes when safe).
+- Current English says “change channels when safe”; current Myanmar transliteration/loanword also says “ချန်နယ်များကို ပြောင်းပါ,” which means changing channels rather than traffic lanes.
+- Status: **confirmed translation/terminology defect**. The intended meaning is to change traffic lanes when safe. Candidate English phrase: “Check the side mirror, signal right, and change lanes when safe.” Candidate Myanmar should use a natural driving term for changing traffic lanes, not “channels.” The Myanmar wording should be reviewed by a fluent driver/translator before release. Not applied.
+
+### Q556 — “Rod” is a confirmed mistranslation of vehicle/car
+- Thai answer options use “คัน B / คัน A,” a classifier referring to vehicle B/A in context.
+- Current English says “Rod B” and “Rod A”; Myanmar repeats “ကြိမ်လုံး B/A,” which means a rod/stick rather than a vehicle.
+- Status: **confirmed translation defect**. Replace with “Vehicle B / Vehicle A” (or “Car B / Car A” if the image/source confirms these are cars); Myanmar should say “ယာဉ် B / ယာဉ် A” or the verified vehicle type. The correct option identity is not changed by this terminology fix. Not applied.
+
+### Q100 — yield meaning: translation should not restrict priority to “vehicle ahead”
+- OTP/DOH priority-sign rules describe yielding to traffic on the crossing/priority road; Q100's Myanmar correct option currently says to give priority to “the vehicle ahead.”
+- Status: **Myanmar wording is too narrow compared with the keyed Thai/English meaning**. Candidate meaning: slow down and prepare to give way to traffic on the crossing road/priority road when required. Confirm the exact warning sign depicted and preferred terminology before applying the edit. Not applied.
+
+### Change control
+- These are audit findings only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was modified.
