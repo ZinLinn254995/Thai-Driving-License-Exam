@@ -162,3 +162,15 @@ No data edits applied. Items requiring clarification:
 - ID 90, correct option: “สะพานเปิดได้” is rendered as “ဖွင့်ပိတ်နိုင်သော တံတား”; verify that this refers to a movable/opening bridge sign, not merely a bridge with a gate.
 
 Continue image-context verification for these sign questions; do not alter the key or image associations during the translation-only pass.
+
+
+### Traffic-sign questions IDs 91–117 — first-pass review
+
+No data edits applied. Items to verify or polish:
+- IDs 91–93: “ทางขนาน” is rendered with multiple Myanmar variants (“ဘေးတွဲလမ်း”, “ဘေးလမ်းမ (Frontage road)”). Standardize the term for frontage/service road after checking the sign.
+- ID 94, correct option: “ทางร่วมด้านซ้าย” rendered as “လမ်းဆုံလမ်းခွ” without clearly specifying a side road joining from the left; verify sign image and refine if needed.
+- ID 101–103: school/pedestrian/children warning options are semantically close but must be matched to the exact sign image; do not infer from text alone.
+- ID 105, correct option: “สลับกันไป” is rendered as “အလှည့်ကျမောင်းနှင်ပါ”; confirm the context means alternating one-by-one passage through a narrow section.
+- ID 111, correct option: stop line / give-way line terms are better than the earlier “မှတ်တိုင်မျဉ်း” issue, but confirm both terms remain distinct and accurate throughout the bank.
+- ID 113, correct option: “เกาะสี” means a painted traffic island/painted area; Myanmar’s “ယာဉ်အသွားအလာခွဲခြားသည့်အမှတ်အသား” may be too general. Confirm the road marking before changing.
+- ID 117: “Rumble Strips” is translated descriptively and includes the English term; likely usable, but terminology should be consistent with the site's learner-facing glossary.
