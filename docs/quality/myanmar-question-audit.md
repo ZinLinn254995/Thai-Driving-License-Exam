@@ -1289,3 +1289,8 @@ Review scope: compared Thai stems and options against English/Myanmar wording an
 **Cross-check needed:** An earlier first-pass note grouped IDs 91–93 together as `ทางขนาน`/frontage-road terminology. The current source records show ID 91 is a lane-direction sign, while IDs 92–93 are the frontage-road questions. Reconcile that earlier note’s ID range before relying on it as a precise issue reference.
 
 **Batch result:** IDs 75–117 received a text-based manual review; images Q75–Q90 were subsequently opened and compared against their keyed answers. No definitive image-to-key mismatch was found in Q75–Q90. Images Q91–Q117 remain pending direct visual comparison. No JSON, answer keys, translations, images, image mappings, runtime files, main branch, or live deployment were changed. Highest-priority translation candidates are IDs 94 and 114; image/source verification remains needed for Q91–Q117, especially Q94 and Q100–Q114.
+
+
+### Cross-reference: Q95 traffic-sign image/key mismatch (2026-10-24)
+- See `docs/quality/traffic-sign-audit.md` for the official-source match: the pictured symbol matches Thai Department of Highways warning sign ต.49, “end of divided road,” not “junction without traffic island ahead.”
+- Treat this as a high-priority, source-supported content correction for a later approved fix phase. Do not infer or change any runtime answer/translation during this audit-only phase.
