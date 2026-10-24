@@ -332,3 +332,24 @@ Images were directly opened for Q121, Q122, Q124, Q155, Q161, Q164, Q166, Q167, 
 - Traffic-sign image series Q1–Q117: directly inspected and audit notes recorded, with official-source follow-ups and corrections where available.
 - Other image-based questions: started with Q121–Q190; many additional image questions remain in Safe Driving and Accident Prediction ranges and must still be inspected before the full image audit can be called complete.
 - No question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
+
+
+## Visual audit: selected Safe Driving scenarios Q195–Q299 (2026-10-25)
+Directly opened images for Q195, Q200, Q206, Q211, Q218, Q266, Q271, Q288, Q292, Q296, Q297, Q298, and Q299 and compared the visible scene to the current keyed English answer. This is not yet a complete audit of all image-bearing Safe Driving questions.
+
+- **Asset provenance:** multiple scenes carry a visible “thaidriveexam.com” watermark/logo (including Q195, Q200, Q206, Q211, Q218, Q266, Q271, Q288, Q296–Q299). Confirm asset ownership/licensing before AdSense/public release; do not assume a watermark grants permission.
+- Q195 four-way junction: key says stop for oncoming traffic before turning right. The scene has several vehicles at an intersection but no explicit sign/signal visible; full stem and right-of-way rule must establish which vehicle moves first.
+- Q200: driver-view scene shows vehicle ahead signalling/turning right; key says slow down and give way. Broadly consistent as cautious driving, but wording “give him the go-ahead” is awkward English and should be reviewed in the language audit.
+- Q206 and Q211: intersection diagrams with vehicles turning/crossing; keys instruct yielding to the other vehicle(s). These are plausible but rely on unstated right-of-way assumptions; validate from full stem and Thai rule before marking verified.
+- Q218: green traffic signal, pedestrians at the left crossing, and a truck approaching; key says wait in a position to turn until safe. The image does not make the precise intended turn/traffic conflict entirely obvious at this resolution; retain as context-dependent until full stem is checked.
+- Q266: STOP sign and stop-line marking are clearly shown. Key says stop behind the line and move forward slowly for better visibility; plausible when visibility is obstructed, but confirm the stem actually describes limited visibility.
+- Q271: lane-changing scene with several vehicles; key says let the car with its right-turn signal go first. The image alone does not clearly show which vehicle is signalling or the relevant conflict; source/stem validation needed.
+- Q288: emergency ambulance with active lights in an intersection; key says stop and wait for the ambulance. Safety-consistent; wording should make clear to yield safely without blocking its route, rather than stopping in a hazardous position.
+- Q292: pedestrians at the crossing and double yellow curb-side lines; key says give way to pedestrians crossing. The visual shows pedestrians near the crossing but not necessarily already in the carriageway; wording may need to say slow/prepare to stop and yield when they cross or are entering.
+- Q296: large truck approaching a roundabout; key says keep distance. Broadly plausible but the image shows an entry approach rather than a clear following-distance situation; confirm the full stem.
+- Q297: vehicle waiting to enter a crossroad while traffic approaches from both sides; key says let both left and right cars go first. Need exact road-priority context and full stem to verify this unique order.
+- Q298: two vehicles travel in the same direction with a dashed lane divider and a curved path shown for the white vehicle; key selects “white car.” Image does not clearly identify the question's decision criterion without the stem; hold for text/visual joint review.
+- Q299: pedestrian crossing ahead and pedestrians walking near the crossing; key says slow down and prepare to stop. Broadly consistent with a cautious approach.
+
+- No image/key contradiction is declared confirmed in this batch from image-only inspection. These notes are pending joint review with the full question stems and official rules.
+- Scope: documentation only. No question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
