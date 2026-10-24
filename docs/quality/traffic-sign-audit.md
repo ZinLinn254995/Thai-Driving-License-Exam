@@ -670,3 +670,13 @@ This correction supersedes earlier audit notes that described “Q540” as a st
 - The steep-descent image/answer observation may refer to a different record/asset and must not be assigned to Q540 unless its exact question record and image mapping are identified.
 - Actual Q540 now needs a fresh visual review of its accident-prediction image and all options before its key can be judged.
 - This is a material correction to preserve audit accuracy. No runtime data was changed.
+
+
+## Audit correction — Q540 and Q67 status (2026-10-25)
+
+This note supersedes any older status line in this document that conflicts with the corrections below.
+
+- **Q540: withdraw “confirmed image/key mismatch.”** The actual question record ID 540 is an `accident_prediction` question, image `/exam_images/accident/1000000000535.webp`, keyed answer “Ahead the road is curved and level.” It is not the steep-descent traffic-sign item described in earlier notes. The old Q540 mismatch statement in the “Evidence discipline” paragraph above is stale and must not be used as a current finding. The actual accident-prediction image/key pair still requires direct re-review.
+- **Q67: unresolved, not confirmed wrong.** The official source confirms the sign designates a bus lane, but that fact alone does not prove the action wording “Do not overtake into the bus lane” is wrong. Retain the question as pending until the item's source/context and legal basis for the action are verified.
+- **Review process limitation:** this continuation could not reopen the raw image assets through the available GitHub/browser fetch path. Therefore it records no new visual judgement for Q540, Q533, Q535, Q536, or Q497. Do not treat the prior first-pass opening milestone as a substitute for question-by-question visual evidence.
+- No question data, answers, translations, images, mappings, runtime code, main branch, or live deployment changed.
