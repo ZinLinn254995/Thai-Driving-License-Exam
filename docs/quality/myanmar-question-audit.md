@@ -462,3 +462,31 @@ Clear/high-priority Myanmar issues:
 Broadly aligned in this sample: IDs 256–257’s keyed answer concepts, 259’s increased braking distance under heavy load, 262’s insufficient nighttime visibility, 263’s emergency-light/left-side stopping response, 266’s stop behind the line then edge forward carefully, and 270’s keyed advice to check the medicine label. This linguistic review does not independently validate every answer key or safety rule.
 
 **Batch result:** IDs 256–270 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 271–285 — 2026-10-24
+
+Compared all stems and options in IDs 271–285 across Thai, English, and Myanmar. This is a language/content audit of the generated safe-driving copy, not independent legal or technical validation. Findings recorded in this audit document only; no question data was changed.
+
+Clear/high-priority translation issues:
+- **ID 271, keyed option 4:** Thai/English instruct the yellow car to stop and let the car signaling right go first. Myanmar says to stop and “let the right indicator be turned on first,” losing the give-way action and confusing the vehicle with its signal.
+- **ID 273, stem:** Thai/English ask why a motorcyclist should look over/behind their shoulder before turning right. Myanmar reads as “look at oneself from behind,” not check behind for traffic/blind spots.
+- **ID 280, keyed option 2:** Thai/English say let vehicles already in the intersection pass first. Myanmar `အရင်ဖြတ်ကျော်ပါစေ` can read as “let them overtake/pass you” ambiguously; use wording clearly meaning allow vehicles already occupying the intersection to proceed first.
+- **ID 281, stem:** Confirmed negation reversal. Thai/English ask which is **not** a principle to follow when moving an injured person; Myanmar asks which is a principle that should be followed. The keyed option (“move immediately without assessing symptoms”) is consistent with the negative form, so the Myanmar stem currently undermines the key.
+- **ID 284, option 2 (keyed correct):** English “No” is translated as `မရှိ` (“there is none”), not a clear negative answer. Use the established yes/no negative wording such as `မဟုတ်ပါ` consistently with ID 258.
+- **ID 276, option 4:** “None” translated as `တစ်ခုမှ` (“not one/none”) is incomplete as a standalone option; normalize it to a natural “မရှိပါ” only if the option remains a “none” response, while preserving the distinction from a yes/no “No.”
+- **ID 277, stem:** Myanmar incorrectly makes the truck driver the person who must act (“what should the truck driver do?”). The question asks what **you** should do when following a truck that signals left at an intersection.
+- **ID 279, option 1:** Myanmar says bicycle users may get out of their vehicles, an unnatural rendering of getting off a bicycle. This is a distractor, but should still be corrected if the bank is being normalized.
+- **ID 282, option 3:** Thai/English say flash lights to get oncoming traffic to give way. Myanmar says to “ignite/light” the lights and has unclear phrasing; it should express flashing headlights, while this unsafe distractor must remain clearly marked incorrect.
+- **ID 285, option 3:** Myanmar `ဓာတ်ငွေ့နင်းစက်` is an unnatural literal term for the accelerator pedal; standardize to the project’s chosen term for accelerator.
+
+Additional source/content quality flags:
+- **ID 256–285 batch:** Leading `)` / `၎)` artifacts remain in question stems, indicating a generation/cleanup issue; do not patch only the generated output without reconciling its source.
+- **ID 272, option 1/2:** Both “park the car” and “stop the car” are translated identically as `ကားရပ်ပါ`; source choices are already close, but Myanmar loses the distinction between parking and stopping.
+- **ID 275, keyed option 4:** The intended rule is to use a designated U-turn point even if it is farther away. Myanmar repeats the U-turn term awkwardly but preserves the main idea.
+- **ID 283, keyed option 2:** Myanmar retains the English term “low beam” instead of a localized standard term; agree a consistent glossary for low beam/high beam before final language polish.
+- **ID 286?** No review performed beyond ID 285 in this batch.
+
+Broadly aligned in this sample: ID 274’s patience around inexperienced drivers; ID 276’s keyed warning that motion-sickness medicine can cause drowsiness/dizziness/blurred vision; ID 278’s alcohol-slowed reaction concept; ID 283’s low-beam concept when traffic is ahead/oncoming; and ID 285’s keyed instruction to hold the steering wheel firmly after a tire blowout. These alignments do not certify that each answer key or procedure is officially correct.
+
+**Batch result:** IDs 271–285 reviewed; translation and source-quality issues documented. No question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
