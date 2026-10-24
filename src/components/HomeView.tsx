@@ -118,20 +118,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           type="button"
           aria-label={`Study Traffic Signs (${signsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_signs')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+          className="bg-white p-4 min-h-[112px] rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-emerald-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
               <ShieldCheck size={20} />
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                 Category 1
               </div>
-              <div className="font-bold text-sm text-slate-900 font-thai">
+              <div className="min-h-10 flex items-center font-bold text-sm leading-5 text-slate-900 font-thai">
                 Traffic Signs
               </div>
-              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ</div>}
+              <div className="min-h-8 pt-1 text-xs leading-4 text-slate-600 font-myanmar">{showMyanmar ? "လမ်းညွှန်ဆိုင်းဘုတ်များနှင့် လမ်းအမှတ်အသားများ" : "\u00a0"}</div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
@@ -144,20 +144,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           type="button"
           aria-label={`Study Traffic Laws (${lawsCount} questions)`}
           onClick={() => onNavigateStudy('traffic_laws')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+          className="bg-white p-4 min-h-[112px] rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
               <Scale size={20} />
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                 Category 2
               </div>
-              <div className="font-bold text-sm text-slate-900 font-thai">
+              <div className="min-h-10 flex items-center font-bold text-sm leading-5 text-slate-900 font-thai">
                 Traffic Laws
               </div>
-              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ယာဉ်စည်းကမ်းနှင့် လမ်းစည်းမျဉ်းများ</div>}
+              <div className="min-h-8 pt-1 text-xs leading-4 text-slate-600 font-myanmar">{showMyanmar ? "ယာဉ်စည်းကမ်းနှင့် လမ်းစည်းမျဉ်းများ" : "\u00a0"}</div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
@@ -170,20 +170,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           type="button"
           aria-label={`Study Safe Driving (${safeDrivingCount} questions)`}
           onClick={() => onNavigateStudy('safe_driving')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+          className="bg-white p-4 min-h-[112px] rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-amber-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
               <Car size={20} />
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                 Category 3
               </div>
-              <div className="font-bold text-sm text-slate-900 font-thai">
+              <div className="min-h-10 flex items-center font-bold text-sm leading-5 text-slate-900 font-thai">
                 Safe Driving
               </div>
-              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်း</div>}
+              <div className="min-h-8 pt-1 text-xs leading-4 text-slate-600 font-myanmar">{showMyanmar ? "ဘေးကင်းလုံခြုံစွာ မောင်းနှင်ခြင်း" : "\u00a0"}</div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
@@ -196,20 +196,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           type="button"
           aria-label={`Study Vehicle Maintenance (${maintenanceCount} questions)`}
           onClick={() => onNavigateStudy('vehicle_maintenance')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+          className="bg-white p-4 min-h-[112px] rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0">
               <Wrench size={20} />
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                 Category 4
               </div>
-              <div className="font-bold text-sm text-slate-900 font-thai">
+              <div className="min-h-10 flex items-center font-bold text-sm leading-5 text-slate-900 font-thai">
                 Vehicle Maintenance
               </div>
-              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">ယာဉ်ပြုပြင်ထိန်းသိမ်းခြင်း</div>}
+              <div className="min-h-8 pt-1 text-xs leading-4 text-slate-600 font-myanmar">{showMyanmar ? "ယာဉ်ပြုပြင်ထိန်းသိမ်းခြင်း" : "\u00a0"}</div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
@@ -222,20 +222,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
           type="button"
           aria-label={`Study Accident Prediction (${accidentPredictionCount} questions)`}
           onClick={() => onNavigateStudy('accident_prediction')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+          className="bg-white p-4 min-h-[112px] rounded-xl border border-slate-200 shadow-xs flex items-center justify-between cursor-pointer hover:border-rose-300 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-lg bg-rose-100 text-rose-800 flex items-center justify-center shrink-0">
               <AlertTriangle size={20} />
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                 Category 5
               </div>
-              <div className="font-bold text-sm text-slate-900 font-thai">
+              <div className="min-h-10 flex items-center font-bold text-sm leading-5 text-slate-900 font-thai">
                 Accident Prediction
               </div>
-              {showMyanmar && <div className="text-xs text-slate-600 font-myanmar">မတော်တဆမှုအန္တရာယ်ကို ကြိုတင်ခန့်မှန်းခြင်း</div>}
+              <div className="min-h-8 pt-1 text-xs leading-4 text-slate-600 font-myanmar">{showMyanmar ? "မတော်တဆမှုအန္တရာယ်ကို ကြိုတင်ခန့်မှန်းခြင်း" : "\u00a0"}</div>
             </div>
           </div>
           <span className="text-xs font-black px-2.5 py-1 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
@@ -453,7 +453,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
       {/* Study & Bank Shortcut */}
       <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div className="flex items-center gap-3">
+        <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
           <div className="w-11 h-11 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
             <BookOpen size={22} />
           </div>
@@ -497,7 +497,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           }}
           className={`bg-white rounded-xl p-4 border border-slate-200 shadow-xs flex items-center justify-between gap-3 ${latestAttempt.questions?.length && latestAttempt.answers ? 'cursor-pointer hover:border-emerald-300 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600' : ''}`}
         >
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
             <div
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm shrink-0 ${
                 latestAttempt.passed ? 'bg-emerald-600' : 'bg-red-600'
