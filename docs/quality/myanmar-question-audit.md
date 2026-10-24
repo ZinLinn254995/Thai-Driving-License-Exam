@@ -135,3 +135,14 @@ Most sampled stems and options broadly align across Thai, English, and Myanmar. 
 - ID 8, correct option: Thai/English refer to giving way to cross traffic, while Myanmar says “ရှေ့လမ်းဆုံရှိ ... ဦးစားပေးလမ်းဖယ်ပေးပါ”; broadly aligned but the road-priority wording may be sharpened after image context review.
 - ID 13: the Thai option includes both oncoming traffic and a steep uphill ahead, which seems potentially mixed; check the sign image to ensure the correct option text matches the sign.
 - Image-dependent stems throughout IDs 1–20 use generic “this sign / from the image”; translation alone cannot validate whether the actual image and keyed answer match. Image-to-answer audit remains separate.
+
+
+### Traffic-sign questions IDs 21–45 — first-pass review
+
+No question data was edited. Translation/source concerns recorded for follow-up:
+- ID 23, correct option: “ห้ามขับรถผ่านหรือคร่อมเส้น” is rendered as “ယာဉ်ကြောစည်းမျဉ်းကို ဖြတ်ကျော်ခြင်း”; the road marking/line concept is not stated naturally and needs exact sign-context verification.
+- ID 26, option 2: Thai/English describe a height clearance below 2.50 m; Myanmar uses `လျှောက်လမ်း` (“walkway/path”), which does not clearly convey vehicle height clearance. Verify sign and rephrase.
+- ID 27, correct option: “ทางโทแยกไปทางขวา” is translated as a “လမ်းသွယ်လမ်းခွဲ”; broadly close, but road hierarchy terminology should be standardized.
+- ID 32, correct option: Myanmar says changing lanes or overtaking is permitted; confirm the sign image and Thai/English source because the wording may depend on the specific sign.
+- ID 42, correct option: `เส้นแนวหยุด` (stop line) is translated as `မှတ်တိုင်မျဉ်း`, which can mean a bus-stop line; use a road-stop-line term after confirmation.
+- IDs 21–45 are image-dependent; generic stems cannot validate the sign/image or answer-key mapping. Review the image and correct-option mapping as a separate pass.
