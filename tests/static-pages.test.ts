@@ -72,3 +72,26 @@ test('homepage, robots.txt, and sitemap agree on the production origin', () => {
     assert.ok(url.startsWith(productionOrigin + '/'), `sitemap URL should use the production origin: ${url}`);
   }
 });
+
+test('legacy standalone practice page is noindex and excluded from the sitemap', () => {
+  const legacyPath = 'assets/aistudio/Thai_Driving_Test_Practice__EN___________06cf5199.html';
+  const legacy = readPublicPage(legacyPath);
+  const sitemap = readPublicPage('sitemap.xml');
+
+  assert.ok(
+    legacy.includes('<meta name="robots" content="noindex,follow">'),
+    'legacy standalone page should not compete with the main app in search results'
+  );
+  assert.ok(
+    !sitemap.includes(`https://thai-driving-license-exam.vercel.app/${legacyPath}`),
+    'legacy standalone page should not be advertised in the sitemap'
+  );
+});
+
+test('privacy policy discloses the current browser-storage and external-font behavior', () => {
+  const privacy = readPublicPage('privacy.html');
+
+  assert.ok(privacy.includes('local storage'), 'privacy policy should disclose browser-local storage');
+  assert.ok(privacy.includes('Google Fonts'), 'privacy policy should disclose the external font service');
+  assert.ok(privacy.includes('does not include an analytics integration'), 'privacy policy should describe current analytics behavior');
+});
