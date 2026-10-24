@@ -571,3 +571,9 @@ This section records what can be supported by the official Thai manuals found in
 ### Evidence discipline
 - Q22 has official-source support; Q540 is a confirmed image/key mismatch; Q13 is only partially supported.
 - No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was modified.
+
+
+### Q14 — red-and-white curb rule: rule confirmed, image still to inspect
+- An official Thai police-station public-information page states that a red-and-white curb means no stopping or parking for any vehicle within the marked stretch. This supports the substance of the keyed answer.
+- Status: **rule supported; image-to-stem match remains pending** because the exact image must visibly show the red-and-white curb marking clearly enough for the user to identify it. The previous note that the image may be a generic car/curb illustration is not sufficient to call the item wrong.
+- Source: https://thamuang.kanchanaburi.police.go.th/แถบฟุตบาท-สีไหนจอดได้-สีไหนห้ามจอด/
