@@ -436,3 +436,64 @@ Directly opened the question images listed below and compared their visible layo
 - The official Department of Highways traffic-sign manual identifies ต.34 as “ป้ายเตือนทางลงลาดชัน” (steep descent ahead). Its meaning is to slow down and keep left; for particularly hazardous grades a supplementary “ใช้เกียร์ต่ำ” (use low gear) sign may be installed. Source: DOH traffic-sign manual, section 3.13.2, https://doh.go.th/uploads/tinymce/service/bid/doc_bid/manual1.pdf; an accessible manual extract reproduces the same description at https://fliphtml5.com/smohf/fwvn/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3/101/.
 - Q540's image depicts a steep downhill warning sign and a supplementary low-gear instruction, whereas the current keyed answer says “Ahead the road is curved and level.” This is now a **source-supported high-confidence mismatch**. Exact final correction should be checked against the question stem and all options in the authorized content-fix phase; do not alter runtime content in this audit.
 - Q14's image/key concern remains unresolved: the visual is a curbside car scene, not the standard no-stopping/no-parking symbol. It should not be considered an adequate sign-teaching image unless the full stem explains the depicted context.
+
+
+## Source-record review: high-priority wording and safety items (2026-10-25)
+
+The following records were retrieved from the branch's actual question-bank JSON files. This check confirms the current stored text and keyed option; it does not authorize runtime edits. These items are now classified as follows:
+
+### Q540 — verified incorrect, awaiting owner approval
+- **File / image:** `src/data/questions_accident_prediction.json`; `/exam_images/accident/1000000000535.webp`.
+- **Exact English stem:** “From the picture, drivers predict accidents and what they should be careful of.”
+- **Current keyed answer:** “Ahead the road is curved and level.”
+- **Evidence:** The pictured steep-descent warning sign with a supplementary low-gear plate is identified by the Department of Highways traffic-sign manual as a steep descent ahead; the current answer does not describe that hazard.
+- **Proposed action:** Recheck the image against all options and repair the question/image/answer set as a unit. Do not simply replace the answer without checking whether the image or stem was also sourced incorrectly.
+- **Confidence:** High that the current image and keyed answer conflict; exact intended option remains subject to the full source review.
+
+### Q531 — safety-critical incorrect answer, awaiting owner approval
+- **File:** `src/data/questions_accident_prediction.json`.
+- **Exact English stem:** “Which event, when predicted in advance, has the greatest risk of road accidents?”
+- **Current keyed answer:** “When you come across a three-way intersection Fix it by honking your horn and accelerating to take a turn first.”
+- **Finding:** This instructs the learner to honk and accelerate to take priority at an intersection. That is unsafe advice and is not an acceptable defensive-driving instruction.
+- **Proposed action:** Verify the Thai source and original intended option; then correct or replace the unsafe keyed answer only after owner approval. Do not infer the intended replacement from the current mistranslated English alone.
+- **Confidence:** High that the displayed keyed advice is unsafe as written; original source intent still needs validation.
+
+### Q581 — verified meaning reversal in English and Myanmar, awaiting owner approval
+- **File:** `src/data/questions_accident_prediction.json`.
+- **Exact English stem:** “Which of the following is correct for driving at night?”
+- **Current keyed option:** Thai “ขับให้ช้ากว่าปกติหรือไม่เร็วกว่าสายตาที่มองเห็น”; English “Drive slower than normal or faster than you can see.”; Myanmar “ပုံမှန်ထက် နှေးနှေး သို့မဟုတ် သင်မြင်နိုင်သည်ထက် ပိုမြန်အောင် မောင်းနှင်ပါ။”
+- **Finding:** The English and Myanmar reverse the safe-driving limit in the second clause. Night-driving advice should never tell drivers to go faster than they can see safely.
+- **Proposed action:** Check the original Thai phrase and propose an aligned rendering of “do not drive faster than you can see/stop safely”; retain current data until approval.
+- **Confidence:** High that the English/Myanmar keyed text is unsafe and contradictory; confirm exact Thai phrasing before final copy.
+
+### Q589 — likely translation/content corruption, awaiting source recovery
+- **File:** `src/data/questions_accident_prediction.json`.
+- **Current keyed Thai option:** “ใช้สายตาให้เคลื่อนไหวและไม่จดจ่ออยู่ที่จุดใดจุดหนึ่ง” (move the eyes and do not fixate on one point).
+- **Current English:** “Use your eyes to move and not focus on one point.”
+- **Current Myanmar:** “သင့်မျက်လုံးများကို ရွေ့လျားရန် အသုံးပြုပြီး အချက်တစ်ချက်ကို အာရုံစိုက်ပါ။”
+- **Finding:** Myanmar says to focus on one point, which contradicts the Thai/English. Correct the meaning only after approval; a natural candidate should express scanning the road and not staring fixedly at one point.
+- **Confidence:** High for the Thai–Myanmar contradiction; exact preferred learner wording pending review.
+
+### Q414 — verified English terminology and translation defect, awaiting owner approval
+- **File / image:** `src/data/questions_safe_driving.json`; `/exam_images/safe/1000000000524.webp`.
+- **Current keyed English:** “Look in the side mirror and signal to turn right. and change channels when safe”
+- **Current keyed Myanmar:** “ဘေးမှန်ကိုကြည့်ကာ ညာဘက်ကွေ့ရန် အချက်ပြပါ။ ဘေးကင်းသောအခါတွင် ချန်နယ်များကို ပြောင်းပါ။”
+- **Finding:** “Change channels” and “ချန်နယ်များကို ပြောင်းပါ” are not road-lane terminology. Thai source says to check the side mirror, signal right, and change lanes when safe.
+- **Proposed English:** “Check the side mirror, signal right, and change lanes when it is safe.”
+- **Proposed Myanmar:** “ဘေးကြည့်မှန်ကို စစ်ဆေးပြီး ညာဘက်အချက်ပြပါ။ ဘေးကင်းမှသာ လမ်းကြောပြောင်းပါ။”
+- **Confidence:** High for the terminology defect; verify image/stem context before final approval.
+
+### Q556 — verified translation/terminology defect, awaiting owner approval
+- **File / image:** `src/data/questions_accident_prediction.json`; `/exam_images/accident/1000000000551.webp`.
+- **Current keyed Thai:** “คัน B” (vehicle/car B in this context).
+- **Current English:** “Rod B”; **current Myanmar:** “ကြိမ်လုံး B”.
+- **Finding:** “Rod” / “ကြိမ်လုံး” is a mistranslation of the vehicle label.
+- **Proposed English:** “Vehicle B” (or “Car B” if consistent with the diagram and surrounding options).
+- **Proposed Myanmar:** “ယာဉ် B” (or “ကား B” if the diagram consistently labels cars).
+- **Confidence:** High that current translations are wrong; choose one standardized label after reviewing the image and category glossary.
+
+### Audit status after this source-record check
+- Direct visual inspection of all 173 image-bearing questions remains complete as a first-pass milestone.
+- This pass has confirmed the exact stored records for Q414, Q531, Q540, Q556, Q581, and Q589 and upgraded the above findings from informal notes to source-record-backed review items.
+- **No runtime question data, answer keys, translations, images, image mappings, main branch, or live deployment were changed.** Proposed fixes await owner approval as required by the audit policy.
+- Next: retrieve the exact Q67 traffic-sign record and its options, inspect Q14's full stem/options, then continue official-source verification of the remaining safety-critical and legal items.
