@@ -1300,3 +1300,23 @@ Review scope: compared Thai stems and options against English/Myanmar wording an
 - Cross-reference the current source-supported findings in docs/quality/traffic-sign-audit.md, including confirmed Q67 bus-lane sign mismatch and Q540 steep-descent sign/key mismatch, plus unresolved terminology and image-provenance items.
 - **Superseded Q95 note:** earlier text in this audit claimed Q95 was a confirmed image/key mismatch. That conclusion is withdrawn after checking the official OTP manual: sign ต.49 means the divided road ends and the road ahead has no median/separator, consistent in substance with the current key “junction without traffic island ahead.” Do not change Q95 based on the earlier provisional note.
 - Audit-only boundary remains in force: no runtime JSON, answer keys, translations, images, mappings, main branch, or live deployment changed. Uncertain items are recorded for follow-up rather than guessed.
+
+
+## Correction and follow-up — source/image claims and Q536 translation (2026-10-25)
+
+### Withdraw stale cross-reference claims
+- The 2026-10-25 paragraph above that labels Q67 a **confirmed bus-lane sign mismatch** is too strong and is withdrawn. The official sign catalogue supports that the blue circular sign is a bus-lane designation, but that alone does not establish the keyed driver-action wording as legally wrong. Keep Q67 open pending exact sign/action context verification.
+- The earlier cross-reference that calls Q540 a **steep-descent sign/key mismatch** is withdrawn. The current source record for ID 540 is category `accident_prediction`, image `/exam_images/accident/1000000000535.webp`, and the keyed answer is “Ahead the road is curved and level.” It is not a traffic-sign record. The answer/image pair needs direct review; do not reuse the steep-descent claim for Q540.
+
+### Confirmed Myanmar translation defect — Q536 stem
+- Source English stem: “From the picture, which is not a dangerous event that may happen to Car A?”
+- Current Myanmar stem: “ပုံထဲက ၊ ဘယ်ဟာက Car A မှာဖြစ်နိုင်လဲ ၊”
+- Finding: the Myanmar version omits the essential negative meaning “not a dangerous event,” so the task may be interpreted in the opposite direction. This is a high-priority translation defect, confirmed by direct comparison of the stored English and Myanmar text.
+- Candidate for fluent review: `ပုံထဲတွင် ဖော်ပြထားသည့်အရာများအနက် Car A အတွက် ဖြစ်လာနိုင်သည့် အန္တရာယ်မရှိသော အခြေအနေမှာ မည်သည့်အရာဖြစ်သနည်း။`
+- Q536 option-level defect: English “The truck may brake suddenly.” is currently translated as Myanmar `ထရပ်ကားသည် ရုတ်တရက် ဘရိတ်ပေါက်နိုင်သည်`, which means the brakes may fail/burst rather than the truck may brake suddenly. Candidate: `ထရပ်ကားသည် ရုတ်တရက် ဘရိတ်အုပ်နိုင်သည်။`
+- These are audit candidates only; no question data or translations were changed.
+
+### Audit boundary and next verification
+- The first-pass image-opening milestone does not mean each of the 173 assets has been matched conclusively to its exact question, answer, legal source, and reuse licence.
+- Direct visual review of Q540, Q533, Q535, Q536, and Q497 remains pending in this continuation; until the images are actually re-opened and reviewed, no new image/key conclusion should be recorded for them.
+- No question JSON, image, runtime code, main branch, or live deployment changed in this update.
