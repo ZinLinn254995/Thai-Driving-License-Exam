@@ -240,3 +240,16 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 338, option 2: Thai prohibits overtaking in a dangerous/tight area or no-overtaking zone; Myanmar wording “ကျော်တက်သည့်နေရာများတွင်” can mean “in overtaking areas,” obscuring the prohibition.
 - ID 344: Thai `ทางม้าลาย` means pedestrian/zebra crossing; Myanmar literal “မြင်းကျားလမ်းကူး” is unnatural and should use the standard pedestrian-crossing term.
 - ID 322, 326, 327, 333–335 and 342 involve emergency response, fatigue, or injured-person movement; translations are broadly readable in this sample but should be reviewed carefully for precise safety meaning. Any source/content issue must be logged separately, not silently fixed as translation.
+
+
+### Safe-driving questions IDs 346–370 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 350, correct option: “เส้นให้หยุดรถ” (stop line) is translated as “မှတ်တိုင်အနောက်” (behind the bus stop), incorrect.
+- ID 352, correct option: Thai says stay calm and get out of the vehicle immediately; Myanmar wording “ငြိမ်ငြိမ်လေးနေပြီး” could imply staying in place, so clarify that the driver should remain calm and evacuate.
+- ID 359: another question assumes opening a window to let water into a submerged vehicle to equalize pressure. This is safety-critical content and needs separate source/factual review, not an unapproved translation-only edit.
+- ID 365, correct option: Thai says slow down and be ready to stop to let the bicycle proceed first; Myanmar says prepare for the bicycle to stop, reversing the intended action.
+- ID 368, correct option: Thai asks to adjust the mirror to avoid glare; Myanmar says set it in a position that does not become dim, which is unclear and should explicitly refer to reducing glare.
+- ID 321 head-on collision term, recorded above, remains a high-priority correction candidate.
+- ID 348: child restraint and airbag advice is safety-critical; verify source/meaning and vehicle-specific conditions before publication.
+- ID 346, 326 and related first-aid questions require a separate factual review for first-aid accuracy; translation audit should not invent or change emergency procedures.
