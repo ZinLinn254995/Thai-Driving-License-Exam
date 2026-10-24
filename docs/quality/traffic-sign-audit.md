@@ -406,3 +406,27 @@ Directly opened the question images listed below and compared their visible layo
 - Q538/Q558 show a car with A/B/C labels for windshield/door/rear pillars; Q546 depicts dense community traffic; Q548 shows a pickup and roadworks barriers; Q555 shows a truck maneuvering among parked vehicles; Q561 shows a car adjacent to a truck; Q568 shows a truck in slow traffic. Their keyed concepts need stem-level review; this pass did not establish a definitive image/key mismatch for those items.
 - These assets also show “thaidriveexam.com” watermarks in most road-scene images. Check provenance and rights before release.
 - Scope: documentation only; no question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
+
+## Visual-audit milestone and current status (2026-10-25)
+
+### Coverage milestone
+- The first-pass visual audit has now opened all **173 image assets referenced by the 598-question bank**: traffic-sign assets Q1–Q117 plus all image-referenced items in Traffic Laws, Safe Driving, Vehicle Maintenance, and Accident Prediction (the remaining 56 image-bearing question records). Each image-bearing question has received a direct image inspection in this pass; some scenario images still require a stem/options-level check before a legal or answer-key conclusion can be made.
+- This milestone means **visual inspection coverage is complete**, not that all 598 questions have passed final legal, translation, licensing, and answer-key verification. Several issues remain unresolved and are listed below.
+
+### Superseding corrections to earlier provisional notes
+- **Q95:** The previous mismatch flag is withdrawn. The official OTP manual explains sign ต.49 (“สิ้นสุดทางคู่”) as a divided road ending, ahead becoming a road/junction without a median or separator. This matches the current key's driver-facing meaning “junction without traffic island ahead.” Do not change Q95 based on the earlier visual-only flag.
+- **Q59:** The previous mismatch flag is withdrawn. Official OTP/DOH manuals identify the red-up/black-down arrow sign as “give oncoming traffic priority”; the current answer “Stop and give way to oncoming traffic” is correct in substance.
+- **Q67:** Mismatch remains confirmed. DOH manual sign บ.49 is a blue circle with white bus pictogram meaning “bus lane / lane designated for buses”; current key “Do not overtake into the bus lane” does not state the pictured sign's meaning. Correct only in a separately authorized content-fix phase.
+
+### Highest-priority follow-up items after visual coverage
+1. Q14 — image depicts a curbside car, not the no-stopping/no-parking sign/rule in the key.
+2. Q22 and Q13 — image cues may not support all extra clauses in the keyed answer; verify official sign wording.
+3. Q67 — confirmed bus-lane sign/key mismatch.
+4. Q540 — image depicts a steep descent and supplementary low-gear instruction; key says “Ahead the road is curved and level.”
+5. Q109/Q114/Q111/Q100 — STOP/give-way/road-marking wording or distinction needs source-aligned correction/review.
+6. Q414 — “change channels when safe” is incorrect driving English; likely “change lanes,” pending source confirmation.
+7. Q556 — “Rod B” appears to be a typo for “Vehicle B,” pending source confirmation.
+8. Branded watermark/provenance: Q1, Q46, Q70 and many Safe Driving/scenario assets display “thaidriveexam.com.” Verify ownership/licensing and reuse permission before release; do not remove marks without rights confirmation.
+
+### Audit boundaries
+- No runtime question content, answer keys, Myanmar translations, images, mappings, main branch, or live deployment was changed. This branch contains documentation only. Image rights, exact legal-source mapping, and unresolved scenario questions remain release gates.
