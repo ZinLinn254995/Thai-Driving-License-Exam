@@ -157,3 +157,29 @@ A read-only scan of the current question source's `image` fields compared all no
 
 This confirms repository path presence only. It does not prove that the image depicts the sign/scenario intended by its question, that it renders correctly in every deployed route, or that its rights are cleared. Visual/semantic matching and licensing remain separate checks. No source mappings or image files were changed.
 
+
+
+### Direct visual comparison — traffic signs Q75–Q90 (2026-10-24)
+
+The original WebP assets for Q75–Q90 were opened from this branch and compared directly with each question's Thai/English/Myanmar options and the currently keyed option. This is a visual-semantic check of the depicted symbol against the supplied key, not independent legal certification of every sign description. No source data or assets were changed.
+
+| ID / asset | Observed image | Current keyed answer | Visual match | Notes |
+| --- | --- | --- | --- | --- |
+| 75 / `q_075.webp` | Main road with side roads joining on opposite sides; left-side branch appears first along the approach | Staggered side road junction, first on left | **Consistent** | Myanmar wording is compressed but retains left-first distinction. |
+| 76 / `q_076.webp` | Opposite staggered arrangement; right-side branch appears first | Staggered side road junction, first on right | **Consistent** | Directional counterpart to Q75. |
+| 77 / `q_077.webp` | Side road joins the main vertical road from the left | Side road joins main road from left | **Consistent** | Keyed direction matches the symbol. |
+| 78 / `q_078.webp` | Side road joins from the right | Side road joins main road from right | **Consistent** | Keyed direction matches the symbol. |
+| 79 / `q_079.webp` | Main route branches to the left at an oblique angle | Side road forks from main road on left (Y-junction) | **Broadly consistent** | Diagram depicts a left branch; the major/minor-road distinction is inferred from relative line weight/shape, so retain the Thai source wording as the authority for that distinction. |
+| 80 / `q_080.webp` | Main route branches to the right at an oblique angle | Side road forks from main road on right (Y-junction) | **Broadly consistent** | Direction matches; same caveat about interpreting major/minor status from a simplified icon. |
+| 81 / `q_081.webp` | Both sides of the road narrow ahead | Road narrows on both sides ahead | **Consistent** | Myanmar and English preserve the both-sides meaning. |
+| 82 / `q_082.webp` | Right side narrows while the left boundary remains straight | Road narrows on the right | **Consistent** | Keyed direction matches the symbol. |
+| 83 / `q_083.webp` | Straight-through lane continues; adjacent right lane is marked closed with a red bar | Right lane closed | **Consistent** | Orange temporary/work-zone style sign; option 3 is keyed and matches the blocked lane. |
+| 84 / `q_084.webp` | Vertical clearance/height symbol marked “2.5 m” | Vehicles not exceeding 2.50 m in height may pass | **Symbolically consistent** | The sign visibly shows 2.5 m height clearance. This confirms what the graphic depicts, not whether the threshold is correct for every road/location; keep the legal/source check open. |
+| 85 / `q_085.webp` | Uneven/wavy road surface | Rough, bumpy road ahead | **Consistent** | Keyed answer describes the rough surface. |
+| 86 / `q_086.webp` | Road surface with a pronounced dip | Dip in road ahead | **Consistent** | English “dip ahead” is terse; image and key are aligned. |
+| 87 / `q_087.webp` | Vehicle with curved skid marks | Slow down, beware of skidding; do not brake hard | **Consistent** | Keyed safety advice matches the skid-warning symbol. |
+| 88 / `q_088.webp` | Vehicle with stones/debris flying from the road surface | Risk of flying loose stones ahead | **Consistent** | Distinct from Q89’s falling-rocks-from-slope symbol. |
+| 89 / `q_089.webp` | Rock face/cliff with rocks falling onto the road | Falling rocks possible ahead | **Consistent** | Keyed answer matches the falling-rock hazard. |
+| 90 / `q_090.webp` | Opening bridge over water, with bridge leaves raised | Opening bridge ahead | **Consistent** | Image depicts an opening/drawbridge warning symbol. |
+
+**Batch result:** Q75–Q90 visually compared; no definitive image-to-key mismatch found in this batch. This does not mean every legal nuance or translation is fully validated. Continue with Q91–Q117, prioritizing directional/road-marking symbols and the previously flagged translation issues at Q94 and Q114. No question JSON, translations, answer keys, image files, image mappings, runtime code, main branch, or live deployment changed.
