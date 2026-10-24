@@ -26,6 +26,15 @@ import { sounds } from './utils/sound';
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'quiz' | 'result' | 'study' | 'history'>('home');
   const [studyInitialCategory, setStudyInitialCategory] = useState<ExamTopicFilter>('all');
+  const [siteLanguage, setSiteLanguage] = useState<'en' | 'my'>(() => {
+    try { return localStorage.getItem('thai_drive_site_language') === 'my' ? 'my' : 'en'; }
+    catch { return 'en'; }
+  });
+  const toggleSiteLanguage = () => setSiteLanguage((current) => {
+    const next = current === 'en' ? 'my' : 'en';
+    try { localStorage.setItem('thai_drive_site_language', next); } catch {}
+    return next;
+  });
 
   // Keep the interface in English and let learners reveal Myanmar translations.
   const lang: LanguageMode = 'en';
@@ -317,46 +326,42 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* Footer: compact, structured, and consistent with the site's road-sign green palette. */}
+      {/* Footer: compact, bilingual navigation for the six information pages. */}
       <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
         <div className="mx-auto max-w-4xl px-5 py-6 sm:px-6 sm:py-7">
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+            <p className="m-0 text-xs font-semibold uppercase tracking-wider text-[#f2d36b]">{siteLanguage === 'en' ? 'Language / ဘာသာစကား' : 'ဘာသာစကား / Language'}</p>
+            <div className="inline-flex rounded-lg border border-emerald-100/30 bg-white/5 p-1" role="group" aria-label="Choose language">
+              <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-9 rounded-md px-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>English</button>
+              <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-9 rounded-md px-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
+            </div>
+          </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-8">
             <div className="min-w-0">
-              <p className="m-0 text-base font-bold tracking-tight text-white">Driving License Practice</p>
-              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-emerald-100/90">
-                Practice for Thailand's driving licence exam at your own pace.
-              </p>
-              <p className="mt-3 inline-flex rounded-full border border-emerald-100/25 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-50">
-                {QUESTIONS_BANK.length} practice questions
-              </p>
+              <p className="m-0 text-base font-bold tracking-tight text-white">{siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
+              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-emerald-100/90">{siteLanguage === 'en' ? "Practice for Thailand's driving licence exam at your own pace." : 'ထိုင်းနိုင်ငံ ယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် မိမိအဆင်ပြေသည့်အချိန်တွင် လေ့ကျင့်ပါ။'}</p>
+              <p className="mt-3 inline-flex rounded-full border border-emerald-100/25 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-50">{QUESTIONS_BANK.length} {siteLanguage === 'en' ? 'practice questions' : 'လေ့ကျင့်မေးခွန်း'}</p>
             </div>
-
-            <nav aria-label="Learning resources" className="min-w-0">
-              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">Learn</h2>
+            <nav aria-label={siteLanguage === 'en' ? 'Learning resources' : 'လေ့လာရန်'} className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">{siteLanguage === 'en' ? 'Learn' : 'လေ့လာရန်'}</h2>
               <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-1 p-0 sm:grid-cols-1">
-                <li><a href="/study-guide.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Study Guide</a></li>
-                <li><a href="/faq.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">FAQ</a></li>
-                <li><a href="/about.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">About</a></li>
+                <li><a href="/study-guide.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Study Guide' : 'လေ့လာမှု လမ်းညွှန်'}</a></li>
+                <li><a href="/faq.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'FAQ' : 'မေးလေ့ရှိသော မေးခွန်းများ'}</a></li>
+                <li><a href="/about.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'About' : 'ကျွန်ုပ်တို့အကြောင်း'}</a></li>
               </ul>
             </nav>
-
-            <nav aria-label="Website information" className="min-w-0">
-              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">Information</h2>
+            <nav aria-label={siteLanguage === 'en' ? 'Website information' : 'ဝက်ဘ်ဆိုက် အချက်အလက်'} className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">{siteLanguage === 'en' ? 'Information' : 'အချက်အလက်'}</h2>
               <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-1 p-0 sm:grid-cols-1">
-                <li><a href="/privacy.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Privacy Policy</a></li>
-                <li><a href="/disclaimer.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Disclaimer</a></li>
-                <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">Contact / Report an issue</a></li>
+                <li><a href="/privacy.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Privacy Policy' : 'ကိုယ်ရေးအချက်အလက် မူဝါဒ'}</a></li>
+                <li><a href="/disclaimer.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Disclaimer' : 'ရှင်းလင်းချက်နှင့် ကန့်သတ်ချက်များ'}</a></li>
+                <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Contact / Report an issue' : 'ဆက်သွယ်ရန် / ပြဿနာတင်ပြရန်'}</a></li>
               </ul>
             </nav>
           </div>
-
           <div className="mt-5 border-t border-white/15 pt-4 sm:mt-6 sm:flex sm:items-start sm:justify-between sm:gap-6">
-            <p className="m-0 max-w-2xl text-xs leading-relaxed text-emerald-100/85">
-              Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark.
-            </p>
-            <p className="mt-3 shrink-0 text-xs text-emerald-100/70 sm:mt-0">
-              © {new Date().getFullYear()} Driving License Practice
-            </p>
+            <p className="m-0 max-w-2xl text-xs leading-relaxed text-emerald-100/85">{siteLanguage === 'en' ? "Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark." : 'ဤဝက်ဘ်ဆိုက်သည် သီးခြားလွတ်လပ်သော လေ့ကျင့်ရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) နှင့် မသက်ဆိုင်သလို ၎င်း၏ ထောက်ခံအတည်ပြုမှုလည်း မရှိပါ။ ၉၀% လေ့ကျင့်ရမှတ်သည် တရားဝင်အောင်မှတ် မဟုတ်ပါ။'}</p>
+            <p className="mt-3 shrink-0 text-xs text-emerald-100/70 sm:mt-0">© {new Date().getFullYear()} {siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
           </div>
         </div>
       </footer>
