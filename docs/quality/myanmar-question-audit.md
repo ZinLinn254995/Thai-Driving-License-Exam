@@ -1358,3 +1358,14 @@ Additional confirmed translation candidate:
 - These are high-priority because negation changes which option the learner must choose. Candidate Myanmar wording is for reviewer validation, not a final certified translation.
 - The remaining records from the 249-question file were screened with text-pattern heuristics; the result is a triage list, not a complete human translation certification. False positives were not bulk-fixed.
 - No question data, answer keys, translations, image assets, image mappings, runtime code, main branch, or live deployment changed.
+
+
+## Vehicle-maintenance terminology — Q497 (2026-10-25)
+
+- **Record verified:** ID 497, category `vehicle_maintenance`, image `/exam_images/maintenance/1000000000403.webp`.
+- Thai keyed answer: `เครื่องร้อนจัด (Over Heat)` (engine overheating).
+- Current English: “The machine is very hot (Over Heat)”; current Myanmar: `စက်က အရမ်းပူ (Over Heat)၊`.
+- **Finding:** both translations use a generic “machine” rather than explicitly identifying the engine, and the English “Over Heat” is awkward/inconsistent terminology. The question stem also says “how the engine behaves,” which is unnatural.
+- Candidate English answer: “The engine is overheating.”
+- Candidate Myanmar answer: `အင်ဂျင် အပူလွန်ကဲနေသည်။`
+- This is a text-based terminology/clarity finding only. The image and gauge reading still need direct visual review before confirming that the keyed answer itself is correct. No runtime data changed.
