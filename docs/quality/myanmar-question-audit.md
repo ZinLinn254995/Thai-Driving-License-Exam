@@ -289,3 +289,14 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 434: “ไฟต่ำ” means low-beam headlights; Myanmar “ပါဝါနည်း” means low power, incorrect terminology.
 - ID 438, correct option: source instructs to release the accelerator/let the vehicle coast and switch on hazard lights; Myanmar is too literal (“let the car flow”) and should be clarified after approval.
 - ID 421, correct option: translation is broadly aligned, but ensure the “while the vehicle behind is overtaking you” condition is explicit.
+
+
+### Vehicle-maintenance questions IDs 466–490 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 472 stem repeats “radiator tank” twice in Myanmar; the source asks why the reservoir should not be filled completely. Remove the duplicated phrase and keep the expansion-space meaning.
+- ID 473 stem: Thai asks which system to test after the vehicle has moved about 3–4 meters; Myanmar says “after leaving from a distance of 3 to 4 meters,” making the action unclear. Clarify that the vehicle is moved forward that distance.
+- ID 482, option 4: Thai says fill engine oil to the upper mark/level; Myanmar only says to add engine oil always, omitting the specified level.
+- ID 469, correct option: “จาระบี” means grease; Myanmar “အဆီပြန်ပါ” is too general and could mean apply oil. Use the appropriate grease term after approval.
+- IDs 466, 468, 470, 475–479, 483, 485–490 are broadly aligned in this sample, though terminology should be standardized for engine coolant, reservoir, oil level and tyre tread.
+- Safety note: opening a hot radiator cap/filling coolant is represented as an incorrect distractor in ID 466; preserve the key but verify the learning explanation in a separate factual review.
