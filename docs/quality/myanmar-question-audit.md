@@ -734,3 +734,42 @@ Source-generation cleanup:
 Broadly aligned in this sample: ID 377 use turn signals for turns; ID 378 reduce speed when it feels too fast; ID 380 slow and observe near crossings; ID 384 keep extra following distance at night; ID 386 avoid hazard lights throughout rain; and ID 389 switch the engine off while refuelling. This language review does not certify every answer key.
 
 **Batch result:** IDs 376–390 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 391–405 — 2026-10-24
+
+Compared Thai, English, and Myanmar for IDs 391–405. Checked general context against Thailand's DLT-linked English driving guide and WHO pedestrian-safety evidence. References: https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf and WHO pedestrian safety report https://iris.who.int/bitstream/handle/10665/367419/9789240072497-eng.pdf?sequence=1.
+
+High-priority safety / answer-key concerns:
+- **ID 391, keyed option 1:** Says to give way to the vehicle on the right that is already in the roundabout. DLT guidance says drivers should yield to vehicles already in the roundabout; the question/key's extra “on the right” condition may be misleading or too narrow. Verify the exact Thai exam curriculum and ensure it does not contradict the general rule.
+- **ID 395, keyed option 2:** “Move the injured person immediately” is the action that should not be done. The intended key is sensible as a general first-aid rule, but the other translations/options are awkward and the item should state the exception clearly: move a casualty only if necessary to protect them from immediate danger or as required for lifesaving care; do not move casually where spinal injury may be suspected.
+- **ID 399, stem/key polarity:** Thai asks which is **not** a result of speeding; the keyed option says “can stop the car in time,” a positive outcome. Myanmar stem drops the negative and asks what result occurs because of speeding, reversing the question polarity. High-priority correction candidate; do not change the JSON until source/compiler origin is reconciled.
+- **ID 400, keyed option 3:** Claims a pedestrian hit at 30 km/h is likely to be injured but not killed. This risks implying survival is assured. WHO evidence indicates survival is highly likely at around 30 km/h but fatality risk is not zero; the key/distractors should avoid a deterministic promise and must be checked against the official test source.
+- **ID 401, keyed option 3:** “Overtaking is strictly prohibited” when a car ahead stops at an unsignalized intersection on a clear road may be the intended safe answer, but it is absolute and the scenario is under-specified. Verify against the original official source before asserting this as a universal legal rule.
+- **ID 404, keyed option 1:** Thai says strong wind may blow a motorcyclist in front of the car. Myanmar “လွင့်စင်သွားနိုင်သည်” can sound like being flung away rather than blown/drifted into the vehicle's path. Meaning is approximately conveyed but needs more natural and precise phrasing.
+
+Translation / question-quality issues:
+- **ID 392, keyed option 1:** Thai's “continue following behind” in a situation where the rider's direction is unclear is translated simply as “drive behind,” omitting the safety implication to keep a safe distance and avoid overtaking.
+- **ID 393, stem:** Thai asks which action a driver should *not* do around a cyclist. Myanmar asks what the driver *should* do, reversing the negative. Keyed option 3 (honking to say hello) remains a negative action, so the polarity mismatch is important.
+- **ID 394, keyed option 2:** “Driver's unpreparedness” is translated as “the driver's preparation,” omitting the negative/unprepared state and reversing the concept. The question's claim that this is the single factor with the greatest effect is also broad and needs source verification.
+- **ID 396, keyed option 3:** “High and low beams” is rendered as “high and low rows/levels,” an unnatural literal translation; standardize to headlights/high beam/low beam terminology.
+- **ID 397, stem:** Both English and Myanmar end with an unfinished “you must…” prompt. Keyed advice not to drive after taking drowsiness-causing medicine is preserved.
+- **ID 398, keyed option 4:** Myanmar makes the mirror check an awkward “let's look in the mirror” phrase and does not clearly say to check side and rear mirrors for blind spots before overtaking.
+- **ID 400, option 3:** Myanmar says the pedestrian may be injured “but will not die,” stronger and more categorical than English's “likely”; revise to avoid guarantee.
+- **ID 402, keyed option 4:** Myanmar conveys caution and readiness to stop, but loses the explicit “be more careful” part somewhat.
+- **ID 403, stem:** English/Myanmar are awkward and omit the “when you notice” structure. Keyed instruction to continue behind and not overtake is preserved.
+- **ID 405, keyed option 3:** Thai says stop and wait for main-road traffic and pedestrians to pass first. Myanmar wording says to stop the cars on the main road, changing who must stop; correct to yielding/waiting for traffic and pedestrians.
+
+Other broadly aligned items:
+- ID 396's keyed answer to test brakes after driving through water is conveyed.
+- ID 397's caution against driving after sedating medicine is conveyed.
+- ID 398's intention to check mirrors and blind spots before overtaking is present but needs more natural Myanmar.
+- ID 402's instruction to approach parked vehicles cautiously and be ready to stop is broadly preserved.
+- ID 403's instruction not to overtake a vehicle whose right indicator remains on is preserved.
+- ID 405's intended give-way rule is present but the subject/agency is mistranslated.
+
+Source-generation cleanup:
+- **IDs 391–405:** Leading parenthesis / Myanmar numbering artifacts remain in stems. Reconcile source/compiler provenance before bulk cleanup; do not patch only the generated JSON.
+- No images were audited in this batch. This review does not certify all answer keys.
+
+**Batch result:** IDs 391–405 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
