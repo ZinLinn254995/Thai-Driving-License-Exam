@@ -2,7 +2,7 @@
 
 ## Why this review matters
 
-A useful practice website needs accurate learning material that it has the right to publish. A source credit or link is not, by itself, permission to reproduce another site's questions, explanations, photographs, or illustrations. Having technical ad support or policy pages does not establish permission to monetize content.
+A useful practice website needs accurate learning material that it has the right to publish. A source credit or link is not, by itself, permission to reproduce another site's questions, explanations, photographs, or illustrations. Technical configuration and policy pages do not establish permission to republish content.
 
 ## Preserve the question bank during this phase
 
@@ -10,7 +10,7 @@ A useful practice website needs accurate learning material that it has the right
 - Treat this document as a review checklist only; it is not evidence that rights have been cleared.
 - Keep changes to UI, accessibility, navigation, documentation, and configuration separate from question-bank changes.
 
-## Before publishing or considering any commercial use
+## Before publishing material on this website
 
 - [ ] Make a source inventory for each question bank, answer explanation, and image collection.
 - [ ] For third-party material, locate written permission, a license that covers this use, or other reliable evidence that reproduction is allowed.
@@ -21,7 +21,7 @@ A useful practice website needs accurate learning material that it has the right
 - [ ] If permission cannot be established, flag the item for a rights-holder/legal review before relying on or commercially using it. Do not silently substitute or delete it during this current phase.
 - [ ] Keep copies or records of licenses and permission correspondence outside the public repository if they contain private information.
 - [ ] Ensure the site offers meaningful original value: clear study guidance, helpful feedback, accessible navigation, useful topic organization, and transparent limitations—not just a republished question list.
-- [ ] Before any future revenue model is selected, recheck public pages, privacy disclosures, applicable requirements, and the actual production configuration. Do not build or enable monetization before that decision.
+- [ ] Before enabling any new third-party service, recheck public pages, privacy disclosures, applicable requirements, and the actual production configuration.
 
 ## Current known risk
 

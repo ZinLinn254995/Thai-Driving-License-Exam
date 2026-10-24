@@ -21,12 +21,12 @@
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
     header{background:var(--green);color:white;padding:22px 18px}header a{color:white}main{max-width:820px;margin:24px auto;padding:26px;background:white;border:1px solid #dbe3dc;border-radius:16px}
     h1{line-height:1.2}h2{margin-top:28px;font-size:1.2rem}p,li{color:#29362f}a{color:#0b5d3b;overflow-wrap:anywhere}.muted{color:var(--muted);font-size:.9rem}
-    nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}footer{max-width:820px;margin:0 auto;padding:0 18px 28px;color:var(--muted);font-size:.9rem}
+    nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}.language-row{display:inline-flex;align-items:center;vertical-align:middle;justify-content:flex-start;width:auto;max-width:100%;margin:0 0 0 10px}.language-switch{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:#074028;white-space:nowrap}@media(max-width:480px){header{padding:18px 14px}nav{gap:8px}nav a{font-size:.9rem}.language-row{margin-left:8px}.language-switch{padding:2px}}footer{max-width:820px;margin:0 auto;padding:0 18px 28px;color:var(--muted);font-size:.9rem}
   </style>
 </head>
 <body>
 <header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html" aria-current="page">Disclaimer</a><a href="/contact.html">Contact</a></nav></header>
-<main>
+<main id="main-en">
 <h1>Study Disclaimer</h1>
 <p>Thai Drive Exam is an independent educational practice tool. It is not an official government website and is not affiliated with or endorsed by Thailand’s Department of Land Transport (DLT) or thaidriveexam.com.</p>
 <p>Practice questions and translations are provided for learning and revision only. We do not guarantee that every question, translation, image, answer, exam format, pass threshold, or rule is complete, current, or identical to the actual test.</p>
@@ -34,6 +34,65 @@
 <h2>External material</h2>
 <p>Some practice material is sourced from third-party study material. A source link or acknowledgement is not a statement of government approval and does not by itself establish reproduction rights.</p>
 </main>
-<footer>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</footer>
+<main id="main-my" lang="my" hidden><h1>လေ့လာရေး ရှင်းလင်းချက်</h1><p>Thai Drive Exam သည် သီးခြားလွတ်လပ်သော ပညာရေးနှင့် လေ့ကျင့်ရေးကိရိယာဖြစ်ပါသည်။ ၎င်းသည် အစိုးရဝက်ဘ်ဆိုက် မဟုတ်သလို ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) သို့မဟုတ် thaidriveexam.com က ထောက်ခံထားခြင်းလည်း မရှိပါ။</p><p>မေးခွန်းများနှင့် ဘာသာပြန်များကို လေ့လာရေးအတွက်သာ ပေးထားပါသည်။ မေးခွန်း၊ ဘာသာပြန်၊ ပုံ၊ အဖြေ၊ စာမေးပွဲပုံစံ၊ အောင်မှတ် သို့မဟုတ် စည်းမျဉ်းများအားလုံး ပြည့်စုံ၊ လက်ရှိနှင့် တရားဝင်စာမေးပွဲနှင့် တူညီကြောင်း အာမမခံပါ။</p><p>ယာဉ်စည်းကမ်းနှင့် လိုင်စင်လုပ်ထုံးလုပ်နည်းများ ပြောင်းလဲနိုင်ပါသည်။ လက်ရှိအချက်အလက်များကို သက်ဆိုင်ရာ ထိုင်းအာဏာပိုင်များထံ စစ်ဆေးပြီး မောင်းနှင်မှု သို့မဟုတ် ဥပဒေဆိုင်ရာ ဆုံးဖြတ်ချက်များအတွက် ဤဝက်ဘ်ဆိုက်တစ်ခုတည်းကို မမှီခိုပါနှင့်။ လေ့ကျင့်မှုရလဒ်သည် တရားဝင်စာမေးပွဲအောင်မြင်မှု သို့မဟုတ် လိုင်စင်ရရှိမှုကို အာမမခံပါ။</p><h2>ပြင်ပအကြောင်းအရာများ</h2><p>လေ့ကျင့်ရေးအကြောင်းအရာအချို့သည် ပြင်ပအရင်းအမြစ်များမှ ရရှိထားနိုင်ပါသည်။ ရင်းမြစ်လင့်ခ် သို့မဟုတ် အသိအမှတ်ပြုဖော်ပြချက်သည် အစိုးရ၏ ထောက်ခံမှုဟု မဆိုလိုသလို ပြန်လည်ထုတ်ဝေခွင့်ရှိကြောင်းလည်း အလိုအလျောက် မသတ်မှတ်ပါ။</p></main>
+<footer><span data-footer-en>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</span><span data-footer-my hidden>သီးခြားလွတ်လပ်သော လေ့လာရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန သို့မဟုတ် အစိုးရအဖွဲ့အစည်းတစ်ခုခုနှင့် မသက်ဆိုင်ပါ။</span></footer>
+
+<script>
+(() => {
+  const key = 'thai_drive_site_language';
+  const nav = document.querySelector('header nav');
+  if (!nav) return;
+  const style = 'border:0;border-radius:999px;background:transparent;color:white;padding:4px 8px;font:inherit;font-size:.75rem;font-weight:700;cursor:pointer;min-height:28px;line-height:1.2';
+  const row = document.createElement('div');
+  row.className = 'language-row';
+  const group = document.createElement('span');
+  group.className = 'language-switch';
+  group.setAttribute('role','group');
+  group.setAttribute('aria-label','Choose language');
+  const en = document.createElement('button'); en.type='button'; en.textContent='Eng'; en.style.cssText=style;
+  const divider = document.createElement('span'); divider.textContent='|'; divider.setAttribute('aria-hidden','true'); divider.style.cssText='font-size:.75rem;color:rgba(255,255,255,.7)';
+  const my = document.createElement('button'); my.type='button'; my.textContent='မြန်မာ'; my.style.cssText=style;
+  group.append(en,divider,my);
+  row.append(group);
+  const brand = nav.parentElement.querySelector('a[href="/"]');
+  if (!brand) return;
+  brand.insertAdjacentElement('afterend', row);
+  const navNames = {
+    '/study-guide.html':['Study Guide','လေ့လာမှု လမ်းညွှန်'],
+    '/faq.html':['FAQ','မေးလေ့ရှိသော မေးခွန်းများ'],
+    '/about.html':['About','ကျွန်ုပ်တို့အကြောင်း'],
+    '/privacy.html':['Privacy','ကိုယ်ရေးအချက်အလက် မူဝါဒ'],
+    '/disclaimer.html':['Disclaimer','ရှင်းလင်းချက်'],
+    '/contact.html':['Contact','ဆက်သွယ်ရန်']
+  };
+  const links = Array.from(nav.querySelectorAll('a'));
+  links.forEach(a => {
+    const pair = navNames[new URL(a.href).pathname];
+    if (pair) { a.dataset.en = pair[0]; a.dataset.my = pair[1]; }
+  });
+  const titles = {"လေ့လာရေး ရှင်းလင်းချက်": "လေ့လာရေး ရှင်းလင်းချက်"};
+  const apply = lang => {
+    const isMy = lang === 'my';
+    document.documentElement.lang = isMy ? 'my' : 'en';
+    document.getElementById('main-en').hidden = isMy;
+    document.getElementById('main-my').hidden = !isMy;
+    links.forEach(a => { if (a.dataset.en) a.textContent = isMy ? a.dataset.my : a.dataset.en; });
+    document.querySelectorAll('[data-footer-en]').forEach(el => el.hidden = isMy);
+    document.querySelectorAll('[data-footer-my]').forEach(el => el.hidden = !isMy);
+    en.setAttribute('aria-pressed', String(!isMy));
+    my.setAttribute('aria-pressed', String(isMy));
+    en.style.background = isMy ? '#074028' : '#f2b705';
+    en.style.color = isMy ? 'white' : '#19241e';
+    my.style.background = isMy ? '#f2b705' : '#074028';
+    my.style.color = isMy ? '#19241e' : 'white';
+    try { localStorage.setItem(key, lang); } catch {}
+  };
+  en.addEventListener('click', () => apply('en'));
+  my.addEventListener('click', () => apply('my'));
+  let initial = 'en';
+  try { initial = localStorage.getItem(key) === 'my' ? 'my' : 'en'; } catch {}
+  apply(initial);
+})();
+</script>
 </body>
 </html>

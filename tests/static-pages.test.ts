@@ -1,0 +1,97 @@
+import assert from 'node:assert/strict';
+import { existsSync, readFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { test } from 'node:test';
+
+const root = process.cwd();
+const publicDir = join(root, 'public');
+const productionOrigin = 'https://thai-driving-license-exam.vercel.app';
+const publishedPages = [
+  'about.html',
+  'contact.html',
+  'disclaimer.html',
+  'faq.html',
+  'privacy.html',
+  'study-guide.html'
+];
+
+function readPublicPage(file: string): string {
+  return readFileSync(join(publicDir, file), 'utf8');
+}
+
+test('published information pages have essential SEO and document metadata', () => {
+  for (const file of publishedPages) {
+    const html = readPublicPage(file);
+    assert.ok(html.includes('<html lang="en"'), `${file} should declare its document language`);
+    assert.ok(html.includes('<title>') && html.includes('</title>'), `${file} should have a title`);
+    assert.ok(html.includes('name="description"'), `${file} should have a description`);
+    assert.ok(html.includes('name="robots" content="index,follow"'), `${file} should declare its index policy`);
+    assert.ok(html.includes('<h1'), `${file} should have a main heading`);
+    assert.ok(
+      html.includes(`<link rel="canonical" href="${productionOrigin}/${file}"`),
+      `${file} canonical should match the production page URL`
+    );
+  }
+});
+
+test('published information pages do not contain broken root-relative links', () => {
+  for (const file of publishedPages) {
+    const html = readPublicPage(file);
+    const hrefs = [...html.matchAll(new RegExp('href="([^"]+)"', 'gi'))].map((match) => match[1]);
+
+    for (const href of hrefs) {
+      if (!href.startsWith('/') || href.startsWith('//')) continue;
+      const pathname = decodeURIComponent(href.split(/[?#]/, 1)[0]);
+      const target = pathname === '/' ? join(root, 'index.html') : resolve(publicDir, `.${pathname}`);
+      assert.ok(
+        target === join(root, 'index.html') || target.startsWith(publicDir + '/') || target === publicDir,
+        `${file} link escapes the public directory: ${href}`
+      );
+      assert.ok(existsSync(target), `${file} has a missing internal link target: ${href}`);
+    }
+  }
+});
+
+test('homepage, robots.txt, and sitemap agree on the production origin', () => {
+  const homepage = readFileSync(join(root, 'index.html'), 'utf8');
+  const robots = readPublicPage('robots.txt');
+  const sitemap = readPublicPage('sitemap.xml');
+
+  assert.ok(
+    homepage.includes(`<link rel="canonical" href="${productionOrigin}/"`),
+    'homepage canonical should match the production origin'
+  );
+  assert.ok(robots.includes(`Sitemap: ${productionOrigin}/sitemap.xml`), 'robots.txt should advertise the production sitemap');
+
+  const sitemapUrls = [...sitemap.matchAll(new RegExp("<loc>([^<]+)</loc>", "g"))].map((match) => match[1]);
+  assert.ok(sitemapUrls.includes(`${productionOrigin}/`), 'sitemap should include the homepage');
+  for (const file of publishedPages) {
+    assert.ok(sitemapUrls.includes(`${productionOrigin}/${file}`), `sitemap should include ${file}`);
+  }
+  for (const url of sitemapUrls) {
+    assert.ok(url.startsWith(productionOrigin + '/'), `sitemap URL should use the production origin: ${url}`);
+  }
+});
+
+test('legacy standalone practice page is noindex and excluded from the sitemap', () => {
+  const legacyPath = 'assets/aistudio/Thai_Driving_Test_Practice__EN___________06cf5199.html';
+  const legacy = readPublicPage(legacyPath);
+  const sitemap = readPublicPage('sitemap.xml');
+
+  assert.ok(
+    legacy.includes('<meta name="robots" content="noindex,follow">'),
+    'legacy standalone page should not compete with the main app in search results'
+  );
+  assert.ok(
+    !sitemap.includes(`https://thai-driving-license-exam.vercel.app/${legacyPath}`),
+    'legacy standalone page should not be advertised in the sitemap'
+  );
+});
+
+test('privacy policy discloses the current browser-storage and external-font behavior', () => {
+  const privacy = readPublicPage('privacy.html');
+
+  assert.ok(privacy.includes('local storage'), 'privacy policy should disclose browser-local storage');
+  assert.ok(privacy.includes('Google Fonts'), 'privacy policy should disclose the external font service');
+  assert.ok(privacy.includes('does not include an analytics integration'), 'privacy policy should describe current analytics behavior');
+});

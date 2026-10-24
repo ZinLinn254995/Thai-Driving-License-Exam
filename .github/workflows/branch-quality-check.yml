@@ -3,7 +3,7 @@ name: Branch quality check
 on:
   push:
     branches:
-      - work/adsense-readiness-audit
+      - release/readiness-audit
   pull_request:
     branches:
       - main
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   lockfile:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/work/adsense-readiness-audit'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/release/readiness-audit'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -53,7 +53,7 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'push' && github.ref == 'refs/heads/work/adsense-readiness-audit' && 'work/adsense-readiness-audit' || github.sha }}
+          ref: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release/readiness-audit' && 'release/readiness-audit' || github.sha }}
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:

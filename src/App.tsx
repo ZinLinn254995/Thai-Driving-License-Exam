@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { lazy, Suspense, useState, useEffect, useCallback, useMemo } from 'react';
 import { QUESTIONS_BANK, QuestionItem } from './data/questions';
 import { LanguageMode, ExamMode, ExamTopicFilter, QuizQuestion, UserAnswer } from './types';
 import { Header } from './components/Header';
 import { HomeView } from './components/HomeView';
-import { QuizView } from './components/QuizView';
-import { ResultView } from './components/ResultView';
-import { StudyView } from './components/StudyView';
-import { HistoryView } from './components/HistoryView';
+const QuizView = lazy(() => import('./components/QuizView').then((module) => ({ default: module.QuizView })));
+const ResultView = lazy(() => import('./components/ResultView').then((module) => ({ default: module.ResultView })));
+const StudyView = lazy(() => import('./components/StudyView').then((module) => ({ default: module.StudyView })));
+const HistoryView = lazy(() => import('./components/HistoryView').then((module) => ({ default: module.HistoryView })));
 import {
   shuffleArray,
   getBookmarks,
@@ -26,6 +26,10 @@ import { sounds } from './utils/sound';
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'quiz' | 'result' | 'study' | 'history'>('home');
   const [studyInitialCategory, setStudyInitialCategory] = useState<ExamTopicFilter>('all');
+  const [siteLanguage, setSiteLanguage] = useState<'en' | 'my'>(() => {
+    try { return localStorage.getItem('thai_drive_site_language') === 'my' ? 'my' : 'en'; }
+    catch { return 'en'; }
+  });
 
   // Keep the interface in English and let learners reveal Myanmar translations.
   const lang: LanguageMode = 'en';
@@ -113,6 +117,7 @@ export default function App() {
       };
     });
 
+    setSelectedHistoryItem(null);
     setQuizQuestions(preparedQuestions);
     setQuizMode(mode);
     setQuizResults([]);
@@ -212,6 +217,14 @@ export default function App() {
         onToggleSound={handleToggleSound}
         currentView={currentView}
         onNavigate={(view) => {
+          // Leaving a timed exam discards the in-progress attempt, so ask before unmounting it.
+          if (
+            currentView === 'quiz' &&
+            quizMode === 'timed' &&
+            !window.confirm('Leave this timed exam? Your current answers will not be saved.')
+          ) {
+            return;
+          }
           setCurrentView(view);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
@@ -221,10 +234,10 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-6">
+        <Suspense fallback={<div className="py-10 text-center text-sm text-slate-600" role="status">Loading practice screen…</div>}>
         {currentView === 'home' && (
           <HomeView
             lang={lang}
-            showMyanmar={showMyanmar}
             totalQuestions={QUESTIONS_BANK.length}
             signsCount={signsCount}
             lawsCount={lawsCount}
@@ -269,7 +282,7 @@ export default function App() {
             showMyanmar={showMyanmar}
             mode={selectedHistoryItem?.mode ?? quizMode}
             totalQuestions={QUESTIONS_BANK.length}
-            onRetakeNew={() => handleStartExam(quizMode, 'all')}
+            onRetakeNew={() => handleStartExam(selectedHistoryItem?.mode ?? quizMode, 'all')}
             onRetakeMistakes={handleRetakeMistakes}
             onNavigateStudy={() => setCurrentView('study')}
             onGoHome={() => {
@@ -295,7 +308,6 @@ export default function App() {
           <HistoryView
             history={examHistory}
             lang={lang}
-            showMyanmar={showMyanmar}
             onClearHistory={handleClearHistory}
             onStartExam={() => handleStartExam('instant', 'all')}
             onViewDetails={(item) => {
@@ -306,29 +318,45 @@ export default function App() {
             }}
           />
         )}
+        </Suspense>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
-        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
-          <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">Practice target: 90% (not an official pass mark)</span>
-            <span>·</span>
-            <span className="text-slate-600">Independent practice resource</span>
+      <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
+        <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-7 lg:grid-cols-[1.25fr_0.85fr_1.2fr] lg:gap-10">
+            <div className="min-w-0 sm:col-span-2 lg:col-span-1">
+              <div className="mb-3 inline-flex items-center gap-0.5 self-start rounded-full border border-emerald-100/30 bg-white/5 p-0.5" role="group" aria-label="Choose language">
+                <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>Eng</button>
+                <span aria-hidden="true" className="text-xs text-emerald-100/60">|</span>
+                <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
+              </div>
+              <p className="m-0 text-base font-bold tracking-tight text-white">{siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
+              <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-emerald-100/90">{siteLanguage === 'en' ? "Practice for Thailand's driving licence exam at your own pace." : 'ထိုင်းနိုင်ငံ ယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် မိမိအဆင်ပြေသည့်အချိန်တွင် လေ့ကျင့်ပါ။'}</p>
+              <p className="mt-3 inline-flex rounded-full border border-emerald-100/25 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-50">{QUESTIONS_BANK.length} {siteLanguage === 'en' ? 'practice questions' : 'လေ့ကျင့်မေးခွန်း'}</p>
+            </div>
+            <nav aria-label={siteLanguage === 'en' ? 'Learning resources' : 'လေ့လာရန်'} className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">{siteLanguage === 'en' ? 'Learn' : 'လေ့လာရန်'}</h2>
+              <ul className="m-0 grid list-none grid-cols-1 gap-y-1 p-0">
+                <li><a href="/study-guide.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Study Guide' : 'လေ့လာမှု လမ်းညွှန်'}</a></li>
+                <li><a href="/faq.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'FAQ' : 'မေးလေ့ရှိသော မေးခွန်းများ'}</a></li>
+                <li><a href="/about.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'About' : 'ကျွန်ုပ်တို့အကြောင်း'}</a></li>
+              </ul>
+            </nav>
+            <nav aria-label={siteLanguage === 'en' ? 'Website information' : 'ဝက်ဘ်ဆိုက် အချက်အလက်'} className="min-w-0">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">{siteLanguage === 'en' ? 'Information' : 'အချက်အလက်'}</h2>
+              <ul className="m-0 grid list-none grid-cols-1 gap-y-1 p-0">
+                <li><a href="/privacy.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Privacy Policy' : 'ကိုယ်ရေးအချက်အလက် မူဝါဒ'}</a></li>
+                <li><a href="/disclaimer.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Disclaimer' : 'ရှင်းလင်းချက်နှင့် ကန့်သတ်ချက်များ'}</a></li>
+                <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Contact / Report an issue' : 'ဆက်သွယ်ရန် / ပြဿနာတင်ပြရန်'}</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="mt-7 border-t border-white/15 pt-4 sm:mt-8 sm:flex sm:items-start sm:justify-between sm:gap-8">
+            <p className="m-0 max-w-2xl break-words text-xs leading-relaxed text-emerald-100/85">{siteLanguage === 'en' ? "Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark." : 'ဤဝက်ဘ်ဆိုက်သည် သီးခြားလွတ်လပ်သော လေ့ကျင့်ရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) နှင့် မသက်ဆိုင်သလို ၎င်း၏ ထောက်ခံအတည်ပြုမှုလည်း မရှိပါ။ ၉၀% လေ့ကျင့်ရမှတ်သည် တရားဝင်အောင်မှတ် မဟုတ်ပါ။'}</p>
+            <p className="mt-3 shrink-0 text-xs leading-relaxed text-emerald-100/70 sm:mt-0 sm:text-right">© {new Date().getFullYear()} {siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
           </div>
         </div>
-        <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
-          <a href="/study-guide.html" className="underline hover:text-slate-900">Study Guide</a>
-          <a href="/faq.html" className="underline hover:text-slate-900">FAQ</a>
-          <a href="/about.html" className="underline hover:text-slate-900">About</a>
-          <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
-          <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
-          <a href="/contact.html" className="underline hover:text-slate-900">Contact / Report an issue</a>
-        </nav>
-        <p className="mt-2 px-4 text-[10px] text-slate-500 font-sans">
-          Independent study resource; not affiliated with Thailand’s Department of Land Transport.
-        </p>
       </footer>
     </div>
   );
