@@ -550,3 +550,39 @@ Source-generation cleanup:
 Broadly aligned in this sample: ID 303’s keyed reminder to check safety again before crossing an unbarriered railway; ID 305/310’s intended head-restraint purpose; ID 307’s instruction to have someone else drive if prescribed medicine affects driving; ID 309’s instruction not to drive while impaired; ID 313’s overtaking courtesy signal; and ID 314’s keyed instruction to slow down and prepare to stop when a ball rolls out from between parked cars. These observations do not independently certify every answer key or Thai legal/safety rule.
 
 **Batch result:** IDs 301–315 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 316–330 — 2026-10-24
+
+Compared Thai, English, and Myanmar wording for IDs 316–330. This batch has several image-dependent items; the JSON text alone does not contain their diagrams. No question data, keys, or images were changed.
+
+Clear/high-priority language issues:
+- **ID 321, keyed option 4:** Thai `ชนแบบประสานงา` means a head-on collision. English “a coordinated collision” and Myanmar `ညှိနှိုင်းနေမြဲ` do not convey a collision head-on; this is a substantial translation error in the keyed answer.
+- **ID 324, stem and option 4:** The stem’s Myanmar grammar makes the person on the sidewalk sound like the driver rather than a pedestrian preparing to cross. Option 4 is also badly garbled and does not clearly express overtaking a vehicle stopped to let pedestrians cross. The keyed option 3’s intended action—signal the vehicle behind and stop at the crossing—is broadly preserved, but the translation needs careful rewriting.
+- **ID 329, option 3 (keyed):** Thai/English describe a person receiving an injectable diabetes medicine and therefore stopping driving. Myanmar says the medicine was injected “for him” and then he stopped, obscuring the subject/action. Because this is medication and fitness-to-drive content, preserve the source meaning and verify the intended medical context rather than improvising advice.
+- **ID 320, option 4:** English “No” is translated as Myanmar `မရှိ` (“there is none/does not exist”), not a natural yes/no response. Standardize negative replies as `မဟုတ်ပါ` where the option means “No.”
+- **ID 322, stem and option 2:** English/ Myanmar stem is fragmented (“while driving home…”), and option 2 changes from waiting briefly and then slowly driving home to a past-tense statement. The keyed option 4—wait until physically ready to drive—is broadly aligned.
+- **ID 327, option 2 (keyed):** The intended action is to slow down and increase the gap from the vehicle ahead so there is enough stopping distance when another vehicle follows too closely. Myanmar wording around “stopping distance” is unnatural and could be read as an already-stopped distance; clarify that this means maintaining enough space to stop safely.
+
+Image/source verification flags:
+- **ID 316:** Image-based traffic interaction; the text says a yellow car wants to go straight while another vehicle blocks its path. The keyed “stop and wait” answer cannot be fully validated without the diagram and right-of-way context.
+- **ID 318:** Image-based road-position question. The keyed warning that parked cars may open their doors is plausible from the text, but the gray car’s exact position and arrow are needed to confirm the intended hazard.
+- **ID 328:** Image-based interaction between a white car signalling right and a red car. The keyed “slow down” answer cannot be fully checked without the diagram and surrounding traffic context.
+
+Safety/source flags:
+- **ID 326:** The keyed answer is to contact emergency assistance after securing the scene and checking the engine is off. The other options include moving an injured person or giving them something to drink, both potentially unsafe as general advice. Verify the official source and keep the question from implying unnecessary movement or oral intake for a seriously injured person.
+- **ID 323, keyed option 3:** The intended advice for an emergency stop in an ABS-equipped car is to press the brake firmly/fully. The Thai/English says quickly and fully; Myanmar’s “quickly and fully” is broadly aligned but could imply a sudden jab rather than firm sustained pressure. Confirm against current vehicle-manufacturer/road-safety guidance before finalizing the instructional wording.
+- **ID 330, stem/key:** The negative question asks which action does **not** help reduce blind spots; the keyed “install high-performance brakes” is logically consistent with the source, while the mirror adjustment and correct seating-position options do help visibility. This is a logic/meaning check, not independent validation of every option.
+
+Other terminology and clarity issues:
+- **ID 317:** Myanmar uses a literal “curve/line” phrase for a road bend; normalize the project’s term for a curve. The keyed instruction to reduce speed before entering a curve is preserved.
+- **ID 319:** The stem is awkward in both English and Myanmar. The keyed distractor “turn on high beams to show thanks” is preserved as the behaviour not to do; avoid making high-beam flashing sound like an endorsed courtesy signal.
+- **ID 325, option 3:** Myanmar makes the warning to people in the area sound like an official announcement; the source says give a warning signal to people nearby. This is a distractor, but should be translated faithfully.
+- **ID 330, stem:** “Blind spots” is rendered literally as “blind spots” and may be understandable, but the glossary should use one consistent driver-visibility term.
+
+Source-generation cleanup:
+- **IDs 316–330:** Leading `) ` / `၎)` artifacts remain. Reconcile generated data with the source/compiler before attempting a bulk cleanup.
+
+Broadly aligned in this sample: ID 317’s keyed instruction to slow before a curve; ID 320’s keyed “yes, because alcohol slows reactions”; ID 322’s keyed instruction to wait until fit to drive; ID 323’s intended firm emergency braking with ABS; ID 325’s instruction to slow down and increase caution near a school crossing; and ID 327’s principle of increasing the following gap when tailgated. These language observations do not certify every answer key, image-dependent priority decision, or medical/legal rule.
+
+**Batch result:** IDs 316–330 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
