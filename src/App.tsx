@@ -321,16 +321,13 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* Footer: compact, bilingual navigation for the six information pages. */}
+      {/* Compact language switcher stays fixed while navigating the app. */}
+      <div className="fixed bottom-4 right-3 z-50 inline-flex items-center gap-0.5 rounded-full border border-white/70 bg-[#074028] p-1 shadow-lg" role="group" aria-label="Choose language">
+        <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>EN</button>
+        <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
+      </div>
       <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
         <div className="mx-auto max-w-4xl px-5 py-6 sm:px-6 sm:py-7">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <p className="m-0 text-xs font-semibold uppercase tracking-wider text-[#f2d36b]">{siteLanguage === 'en' ? 'Language / ဘာသာစကား' : 'ဘာသာစကား / Language'}</p>
-            <div className="inline-flex rounded-lg border border-emerald-100/30 bg-white/5 p-1" role="group" aria-label="Choose language">
-              <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-9 rounded-md px-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>English</button>
-              <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-9 rounded-md px-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
-            </div>
-          </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-[1.2fr_1fr_1fr] sm:gap-8">
             <div className="min-w-0">
               <p className="m-0 text-base font-bold tracking-tight text-white">{siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
