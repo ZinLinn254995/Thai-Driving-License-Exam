@@ -666,3 +666,38 @@ Source-generation cleanup:
 Broadly aligned in this sample: ID 347's keyed warning against speeding to beat darkness; ID 349's rationale that motorcycles can be hard to see; ID 352's intended instruction to leave a burning vehicle; ID 355's check-surroundings-before-moving rule; ID 356's voluntary compliance with traffic rules; and ID 358's safe following distance. This language review does not certify every key or image-dependent question.
 
 **Batch result:** IDs 346–360 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 361–375 — 2026-10-24
+
+Compared Thai, English, and Myanmar for IDs 361–375. Used the Thailand Department of Land Transport-linked public safe-driving guide as general context; this does not certify every individual answer key. Reference: https://thailand.go.th/public/issue-focus-detail/--383 and DLT guide https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf.
+
+High-priority translation / meaning issues:
+- **ID 363, stem:** Thai/English describe a large vehicle signalling left while moving gradually to the right. Myanmar omits/obscures the vehicle's gradual movement to the right and the subject structure, which is essential to the scenario. Keyed answer to keep a safe distance is preserved.
+- **ID 365, stem and keyed option 1:** Thai says the bicycle wheel is protruding from a parked car, suggesting a cyclist may emerge. Myanmar says the bicycle wheel is “broken/punctured” (ဘီးပေါက်နေသည်) and option 1 reads as preparing for the bicycle to stop, rather than slowing and preparing to stop to let the bicycle pass. Clear scenario and action error.
+- **ID 366, stem:** Thai asks in which situation one should not attempt to overtake a bicycle; English/Myanmar say “under no circumstances,” incorrectly making it an absolute ban. The keyed option “while turning left” remains plausible but the question wording needs to retain the conditional form.
+- **ID 367, keyed option 4:** The statement says high beams can be used while following a vehicle because they do not affect the vehicle ahead. Myanmar says “when running behind the car” and retains the false claim, but the wording is awkward. Keep it clearly as the incorrect statement; do not make it sound like endorsed advice.
+- **ID 368, keyed option 1:** Thai says adjust the mirror to a position that does not dazzle/glare the driver. Myanmar “မှိန်မသွားစေမယ့်” means roughly “does not become dim,” missing the glare/being dazzled meaning.
+- **ID 371, stem:** Thai asks for polite/courteous behaviour while on the road. Myanmar turns this into an incomplete statement rather than a question.
+- **ID 372, stem and keyed option 1:** Thai says an obstacle blocks the left lane while oncoming traffic approaches. Myanmar stem makes it sound as though a car merely passes by. Keyed option Myanmar says wait for “traffic congestion” to pass, not oncoming vehicles, losing the right-of-way situation.
+- **ID 373, option 4:** Thai/English say bicycles/motorcycles may not notice that you intend to turn. Myanmar changes this to “don't want to look at the bicycle/motorcycle,” which is a different meaning.
+- **ID 374, stem:** The Myanmar question becomes an awkward statement about whether A-pillars obstruct visibility rather than asking which situations cause obstruction. Keyed answer “curves and intersections” is aligned.
+- **ID 375, keyed option 3:** Thai means other drivers may think the vehicle is travelling fast; Myanmar says “make other drivers understand that the car is driving fast,” an awkward but recognizable statement. Preserve it as the incorrect claim.
+
+Other language / source issues:
+- **ID 361, stem:** English and Myanmar retain a leading parenthesis artifact and the English stem is grammatically awkward. The keyed low gear plus gentle braking concept is present; exact downhill-braking guidance should be checked against vehicle/official guidance before presenting as universal.
+- **ID 362, option 1 (keyed):** Myanmar's “မှားယွင်းစွာ မောင်းနှင်နေသည့်” is understandable for erratic driving, but “အနီးကပ်အကွာအဝေးတွင် ချဉ်းကပ်ခြင်း သို့မဟုတ် မကျော်ပါနှင့်” is unnatural. Intended safe distance / avoid close overtaking is preserved.
+- **ID 364, stem:** The English/ Myanmar question is awkwardly phrased; keyed option 2 preserves the collision-prevention intent but is a fragment rather than a natural explanation.
+- **ID 369, stem:** English and Myanmar are understandable but repetitive. Keyed option 1, reduce speed when rain starts, is preserved and aligns with general safe-driving advice.
+- **ID 370, options 1 and 2:** Myanmar translations are fragments and do not make the comparison between overtaking time and distance natural. Keyed option 3 (more time and distance when speeds are similar) is preserved.
+- **ID 371, option 2 (keyed):** Meaning “do not use the horn to chase pedestrians away” is broadly preserved.
+- **ID 372, options 2–4:** Unsafe intent is mostly preserved, though wording is fragmented.
+- **ID 375, stem:** “at all times” in the emergency-light question is an awkward framing; keyed distractor intent is retained. Keep emergency lights from being taught as a substitute for turn indicators.
+
+General source cleanup:
+- **IDs 361–375:** Leading parenthesis / Myanmar numbering artifacts remain in generated question text. Reconcile source/compiler provenance before bulk cleanup; do not patch only the generated JSON.
+- **IDs 361–375:** No images inspected in this batch; this is not a certification of source material or answer keys.
+
+Broadly aligned in this sample: ID 362's keyed advice to slow and keep distance from an erratic driver; ID 363's safe following distance; ID 366's left-turn overtaking hazard; ID 369's reduced speed in rain; ID 373's small-vehicle visibility rationale; and ID 374's A-pillar visibility issue. This language review does not certify every answer key.
+
+**Batch result:** IDs 361–375 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
