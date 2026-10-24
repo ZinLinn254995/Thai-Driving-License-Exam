@@ -297,3 +297,16 @@ Images were opened directly from `public/exam_images/q_001.webp` through `q_045.
 - Authoritative evidence: OTP official PDF https://www.otp.go.th/uploads/tiny_uploads/OTPStandard/1-1-SafetyTransport01.pdf (search extract section 3.23.2); OTP standards index https://www.otp.go.th/post/view/2098.
 - Therefore, **Q95 should not be treated as a confirmed image/key mismatch**. Earlier notes in this document that called Q95 a high-confidence mismatch or suggested “end of divided road” contradicting “junction without traffic island” are superseded by this correction. The concept “end of divided road” is the sign name; its stated driver-facing meaning is indeed that the road ahead becomes a junction/road without a traffic island/divider. Keep a note to reconcile terminology if needed, but do not change the current key on the basis of the earlier mistaken assessment.
 - Scope: documentation only. No runtime data, answer keys, translations, images, mappings, main branch, or live deployment changed.
+
+
+## Official-source resolution: Q59 (and cross-check of Q67) — 2026-10-25
+
+### Q59 — current answer confirmed; remove the mismatch flag
+- The official OTP traffic-sign manual, section 2.2.3 “ป้ายให้รถสวนทางมาก่อน,” describes the exact symbol: circular white sign with red border, red upward arrow on the left, black downward arrow on the right. It requires drivers to stop at the sign and wait for oncoming traffic to pass. The current keyed answer “Stop and give way to oncoming traffic” and Thai answer are therefore correct in substance. The prior visual-only concern that the sign showed no STOP instruction was incorrect: the sign itself carries the mandatory stop-and-wait meaning even without a separate octagonal STOP sign.
+- Official source: https://www.otp.go.th/uploads/tiny_uploads/OTPStandard/1-1-SafetyTransport01.pdf (section 2.2.3); Department of Highways manual https://www.doh.go.th/content/download/174663 (section 2.3.3, sign บ.3).
+- Status: Q59 is **not a confirmed mismatch**. Consider only a minor clarity improvement to English (“Stop at the sign and wait for oncoming traffic to pass”) and Myanmar, if needed, in a separately authorized fix phase; do not change runtime data during this audit.
+
+### Q67 — bus-lane symbol is likely correctly interpreted as a lane designation, not an overtaking prohibition
+- Official Thai traffic-sign regulation text identifies “ช่องเดินรถประจำทาง” (bus lane) as a lane designated for buses (sign บ.49). Q67's image is a blue circular sign with a bus pictogram, while the current answer says “Do not overtake into the bus lane.” That answer describes a maneuver prohibition rather than what the symbol itself denotes. This is a **likely image-to-key mismatch** pending confirmation that the specific image is indeed the standard bus-lane sign and not a contextual sign used alongside a separate rule.
+- Official source for the sign meaning: https://lawplayer.com/th/article/pythainlp_579fece4bc124c0b/p0-0011 (item บ.49). The OTP and DOH manuals should be used to verify the exact standard pictogram before changing content.
+- Scope: documentation only. No question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
