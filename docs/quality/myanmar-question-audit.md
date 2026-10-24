@@ -490,3 +490,31 @@ Additional source/content quality flags:
 Broadly aligned in this sample: ID 274’s patience around inexperienced drivers; ID 276’s keyed warning that motion-sickness medicine can cause drowsiness/dizziness/blurred vision; ID 278’s alcohol-slowed reaction concept; ID 283’s low-beam concept when traffic is ahead/oncoming; and ID 285’s keyed instruction to hold the steering wheel firmly after a tire blowout. These alignments do not certify that each answer key or procedure is officially correct.
 
 **Batch result:** IDs 271–285 reviewed; translation and source-quality issues documented. No question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 286–300 — 2026-10-24
+
+Compared all question stems and options across Thai, English, and Myanmar. No question data or answer keys were edited. Some items involve legal or emergency guidance and are flagged for source verification rather than treated as validated advice.
+
+Clear/high-priority language issues:
+- **ID 287, option 4:** Thai/English mean “do not overtake at close range / too closely.” Myanmar `အရမ်းမလွန်ပါဘူး` does not convey overtaking and reads roughly like “not too much”; the distractor meaning is lost.
+- **ID 288, stem and option 3:** Stem loses the clear situation structure and the reference to the ambulance approaching from the right. Option 3’s Myanmar says to warn “the ambulance that you must go first,” but source option says the driver uses the horn to tell the ambulance they will go first. The keyed option 2 (“stop and wait for the ambulance”) is broadly aligned.
+- **ID 289, stem:** Myanmar has a malformed instruction (“turn left ... go onto the main road”) and obscures the intended setup of turning left from a minor road onto a main road while a truck approaches from the right.
+- **ID 290, stem:** Myanmar makes it sound as though cars are “included” in the gap rather than another car cutting into the following distance behind the truck. The keyed option 3, increase the following distance again, is broadly aligned.
+- **ID 293, stem:** Thai says slow-moving traffic; English and Myanmar incorrectly turn this into a “bus lane.” This changes the scenario.
+- **ID 295, stem/options:** The question’s premise and keyed option describe opening the window so water enters the car to equalize pressure after entering water. This is high-risk emergency guidance and should not be presented as an endorsed procedure without authoritative, current emergency-safety verification. Treat as a **source/key safety flag**, not merely a translation fix.
+- **ID 300, keyed option 3:** Thai/English mean tailgating and honking to pressure the vehicle ahead on an expressway. Myanmar says something like driving behind “the scene” and repeats the horn awkwardly; rewrite to clearly mean following too closely and honking to pressure the driver ahead.
+- **ID 286, option 1:** English says the child wears a seat belt “with an adult”; Myanmar reproduces that ambiguous wording. This is a child passenger-safety/legal question; verify the current Thai rule and proper restraint recommendation before normalizing it. Do not infer that sharing one adult seat belt is safe.
+- **ID 298:** Image-based question (“which car must give way”) cannot be validated from the text-only record. Need the associated diagram/image and road-priority context before confirming the keyed white car.
+- **ID 297:** Also image-dependent: T-junction layout and priority context are not visible in this JSON record. The answer “give way to both right and left” must be checked against the actual image and applicable rule.
+
+Additional wording / source-quality flags:
+- **ID 291, stem/options:** Short fragments are understandable, but the English and Myanmar options are list fragments; normalize to parallel noun phrases during a controlled language pass.
+- **ID 294, stem:** Myanmar phrase about turning right from the main road to the minor road is awkward, but keyed option 2 (“check whether a vehicle is about to overtake”) is preserved.
+- **ID 296, stem:** “a small roundabout” is translated as a small circle, and “driving on the right while signalling left” should be clarified; keyed option 3 (keep distance) is translated correctly.
+- **ID 299, stem:** Myanmar omits some “from the picture / entering the crossing area” structure but retains the pedestrian-crossing scenario. Keyed answer 3 (slow down and prepare to stop) is aligned.
+- **ID 286–300 stems:** Leading `)` / `၎)` artifacts remain, reinforcing the need to reconcile the generated JSON with its actual source before any bulk cleanup.
+
+Broadly aligned: ID 287’s keyed emergency-lights distractor concept; ID 292’s keyed duty to yield to pedestrians; ID 294’s keyed instruction to check for overtaking traffic before turning; and ID 299’s keyed instruction to slow down and be ready to stop. This batch is a translation/source-quality review only and does not certify the correctness of answer keys or Thai legal requirements.
+
+**Batch result:** IDs 286–300 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
