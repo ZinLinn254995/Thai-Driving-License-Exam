@@ -125,3 +125,13 @@ High-confidence semantic mismatches to prioritize:
 - ID 551 option translates road-incident victims as “ဒုက္ခသည်များ,” which means refugees/displaced people rather than accident victims.
 
 Other potential negation flags from automated screening are not confirmed until manually checked; do not bulk-edit from the screening list. Continue manually reviewing every question stem and all four options, and separately check image-dependent questions against the associated image.
+
+
+### Traffic-sign questions IDs 1–20 — first-pass translation review
+
+Most sampled stems and options broadly align across Thai, English, and Myanmar. No data edits applied. Uncertain/review items:
+- ID 2, option 2: Thai `ให้ใช้ความเร็ว` is vague and English says “Minimum speed limit applies,” while Myanmar says “drive at the prescribed speed.” Confirm the sign image and intended legal meaning before revising.
+- ID 6, correct option: “solid line” is translated as `မျဉ်းဖြောင့်အပိတ်`, an awkward/unclear road-marking term; verify whether it should explicitly mean a solid continuous line that must not be crossed.
+- ID 8, correct option: Thai/English refer to giving way to cross traffic, while Myanmar says “ရှေ့လမ်းဆုံရှိ ... ဦးစားပေးလမ်းဖယ်ပေးပါ”; broadly aligned but the road-priority wording may be sharpened after image context review.
+- ID 13: the Thai option includes both oncoming traffic and a steep uphill ahead, which seems potentially mixed; check the sign image to ensure the correct option text matches the sign.
+- Image-dependent stems throughout IDs 1–20 use generic “this sign / from the image”; translation alone cannot validate whether the actual image and keyed answer match. Image-to-answer audit remains separate.
