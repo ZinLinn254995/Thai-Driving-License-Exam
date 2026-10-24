@@ -373,3 +373,24 @@ Other reviewed items:
 - ID 210’s keyed option 1 is broadly aligned with Thai; minor wording polish may be useful.
 
 **Batch result:** IDs 199–210 reviewed at stem-and-option level; no runtime/question data edits. These findings are recorded for correction once the actual combined runtime source can be retrieved and updated without overwriting approved work.
+
+
+### Safe-driving manual review — IDs 211–225 — 2026-10-24
+
+Reviewed stems and all four options in the separate safe-driving JSON against Thai and English. No question data edits were made; these records are generated and must be reconciled with the runtime bank before correction.
+
+Clear or high-priority Myanmar issues:
+- **ID 212, stem:** “လေ့ကျင့်ခန်း clutch ကို ချိတ်ဆက်” style literal loanword wording is understandable but technically awkward. The Thai describes lightly riding/engaging the clutch while driving through water; confirm the intended technique with a reliable driving source before rewriting because the safety instruction is technical.
+- **ID 214, correct option 2:** Myanmar says “စက်ဘီးနင်းပြီး ဘရိတ်ကို တလှည့်စီ လွှတ်ပါ” (pedaling a bicycle) for alternating brake pedal application/release. This is a clear translation error; use brake-specific terminology.
+- **ID 216, correct option 3:** Thai/English says step on the brake, pull the handbrake, shift to neutral, and restart the engine. English “install a new engine” is clearly mistranslated, while Myanmar currently also says “install a new engine.” This option is marked correct in the data, so the source instruction itself must be checked against an authoritative safety source before treating the procedure as correct.
+- **ID 218, option 4 (correct):** Meaning is broadly aligned, but Myanmar phrase “ထိုသို့ပြုလုပ်ရန် ဘေးကင်းသည့်အခါတွင်...” is unnatural. Can be polished after image/scenario review.
+- **ID 221, option 2:** Myanmar describes another vehicle passing on the left while on a bridge, but is phrased as if the other vehicle is on the left rather than the driver overtaking it on the left. Meaning/agent is unclear.
+- **ID 222, stem:** Myanmar sentence structure reverses/obscures the exception (“ဘယ်အခြေအနေမှာမှ ညာဖက်ကို မောင်းနှင်နိုင်ပါ့မလား”), making the legal question hard to understand. Rephrase from Thai after confirming exact scope.
+- **ID 223, option 1 (marked correct):** Thai says “100 metres from the level/flat area at the foot of the bridge,” but the rule and wording are unusual; verify the original source/legal rule before changing either text or answer key.
+- **ID 224, option 4 (correct):** Myanmar wording repeats “stop and wait” in a way that obscures the actual action: yield to pedestrians crossing and traffic approaching from the right before proceeding left. Correct the translation after verifying the sign and traffic context.
+- **ID 225, stem:** Thai “ถนนรอง” means a secondary/minor road in this context; Myanmar “အလယ်တန်းလမ်း” means something like a middle/secondary-level road and is not natural road terminology. Standardize road hierarchy terms after checking the project glossary.
+- **IDs 211–225, stems:** leading ) / ၎) artifacts persist. Do not clean these in the generated copy alone.
+
+Broadly aligned in this sample: ID 211’s keyed yield instruction, ID 213’s adequate sleep, ID 215’s avoid hard/rapid braking in heavy rain, ID 217’s slow down/keep left, ID 219’s correct-lane U-turn when safe, and ID 220’s “do not drink alcohol before departure” answer. These checks do not independently validate the legal correctness of the answer keys.
+
+**Batch result:** IDs 211–225 reviewed; no question data edits or deployment.
