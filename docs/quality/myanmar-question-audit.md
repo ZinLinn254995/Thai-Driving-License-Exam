@@ -1397,3 +1397,16 @@ A targeted check of all 81 records in `src/data/questions_maintenance.json` foun
 ### Status
 - The 81-record file has had an initial text/negative-wording sweep. It has not yet received a full technical validation of every maintenance answer or image.
 - No question data, answer keys, translations, images, mappings, runtime code, main branch, or live deployment changed.
+
+
+## Safe-driving category follow-up — confirmed meaning and terminology defects (2026-10-25)
+
+A targeted pass of the 249 records in `src/data/questions_safe_driving.json` reconfirmed earlier negative-stem findings and identified these additional high-risk items:
+
+- **Q399 — missing negative changes the task.** Thai and English ask which is *not* a result of speeding; Myanmar asks which result is caused by speeding. The keyed answer is “Can stop the car in time,” which is meant to be the exception. Candidate stem: `အရှိန်ဖြင့် မောင်းနှင်ခြင်းကြောင့် ဖြစ်ပေါ်လာသည့် ရလဒ် မဟုတ်သောအရာမှာ မည်သည့်အရာနည်း။`
+- **Q222 — exception/polarity is unclear and may be reversed.** Thai and English ask under which exception a driver may drive on the right or cross the roadway centre despite the usual left-side rule. Myanmar wording `ဘယ်အခြေအနေမှာမှ ညာဖက်ကို မောင်းနှင်နိုင်ပါ့မလား` reads like “under what circumstances can’t [one] drive right?” and does not clearly preserve the exception. Candidate for fluent review: `ယာဉ်မောင်းသည် ပုံမှန်အားဖြင့် လမ်း၏ဘယ်ဘက်တွင် မောင်းနှင်ရမည်။ မည်သည့်အခြေအနေတွင် ညာဘက်သို့ မောင်းနှင်ခြင်း သို့မဟုတ် လမ်းအလယ်မျဉ်းကို ကျော်မောင်းခြင်း ခွင့်ပြုနိုင်သနည်း။`
+- **Q414 — “lane” mistranslated as “channel.”** The English key itself says “change channels when safe,” and Myanmar says `ချန်နယ်များကို ပြောင်းပါ`. Thai clearly refers to changing traffic lanes after checking the side mirror and signaling right. The English and Myanmar should both use the traffic-lane meaning. Candidate EN: “Check the side mirror, signal right, and change lanes when safe.” Candidate MY: `ဘေးမှန်ကိုကြည့်ပြီး ညာဘက်ကွေ့ရန် အချက်ပြပါ။ ဘေးကင်းသည့်အခါ ယာဉ်ကြောပြောင်းပါ။`
+- **Q251, Q281, Q302, Q312, Q393 and other negative-stem cases** remain high-priority items from the previous full-bank screen; this follow-up did not apply any proposed translations.
+
+### Scope / confidence
+The negative-wording detector is only a screening aid: some matches correctly preserve negation, and awkward wording is not automatically a meaning reversal. The safe-driving file has not yet undergone complete legal/source validation, answer-key verification, or full visual review. No runtime data was edited.
