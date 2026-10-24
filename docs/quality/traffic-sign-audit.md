@@ -659,3 +659,14 @@ This section records what can be supported by the official Thai manuals found in
 
 ### Change control
 - All above are audit findings only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment changed.
+
+
+## Important correction: Q540 record/image identity (2026-10-25)
+
+This correction supersedes earlier audit notes that described “Q540” as a steep-descent traffic-sign question.
+
+- A fresh read of the actual src/data/questions.json record shows question ID 540 is in category accident_prediction, uses image /exam_images/accident/1000000000535.webp, and its keyed answer is “Ahead the road is curved and level.”
+- Therefore, the earlier claim that question ID 540 uses a steep-descent sign image and is a confirmed image/key mismatch was caused by conflating the question ID with a separately numbered traffic-sign image asset. **Withdraw the Q540 steep-descent mismatch claim.**
+- The steep-descent image/answer observation may refer to a different record/asset and must not be assigned to Q540 unless its exact question record and image mapping are identified.
+- Actual Q540 now needs a fresh visual review of its accident-prediction image and all options before its key can be judged.
+- This is a material correction to preserve audit accuracy. No runtime data was changed.
