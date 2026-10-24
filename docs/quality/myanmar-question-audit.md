@@ -626,3 +626,43 @@ Source-generation cleanup:
 Broadly aligned in this sample: ID 331’s keyed instruction to reduce speed when a large truck overtakes; ID 332’s advice not to obstruct a lawful overtake; ID 334’s duty to stop for a pedestrian crossing; ID 337’s context-dependent definition of safe speed; and ID 344’s instruction to prepare to stop for a wheelchair user at a crossing. Language review and the public guide do not certify every answer key, image-dependent context, maintenance statement, or medical rule.
 
 **Batch result:** IDs 331–345 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 346–360 — 2026-10-24
+
+Compared Thai, English, and Myanmar wording for IDs 346–360. Checked relevant general guidance against the Thai Road Traffic Act's amber-light rule (Section 22) and public Thai first-aid guidance for an unconscious casualty. These references help identify source/key concerns but do not certify every item. Sources: https://www.thailawyers.in.th/code-of-laws/พระราชบัญญัติจราจรทางบก and https://sites.google.com/nfe.go.th/dole-utt-22021/หน่วยการเรียนรู้-11-การปฐมพยาบาล/เรื่องที่-2-วิธีการปฐมพยาบาลกรณีต่าง-ๆ.
+
+Clear/high-priority language issues:
+- **ID 348, stem (source mismatch):** Thai says a child restraint that faces toward the vehicle seat/back (rear-facing). English calls it “forward-facing” and Myanmar says “ရှေ့မျက်နှာစာ” (front-facing), so the two translations reverse the restraint orientation. The keyed option says disable the airbag; this is only a narrow condition for a rear-facing restraint in a front seat and must be checked against the vehicle manual. Prefer a rear seat for a child restraint when available; do not present airbag deactivation as a universal instruction.
+- **ID 350, keyed option 1:** Thai law says an amber/yellow traffic light means prepare to stop behind the stop line, except a driver who has already crossed the line may proceed. Myanmar translates the stop line as “မှတ်တိုင်” (bus stop/station), not a stop line. The option also states a definite stop without the source's exception. Correct terminology and preserve the legal nuance after checking the official source.
+- **ID 353, stem:** Thai asks how to prevent an accident when someone is crossing the road. English and Myanmar split the scenario into an incomplete sentence. The keyed concept—reduce speed—is preserved, but the stem should be a complete question.
+- **ID 357, stem:** Thai/English ask what behaviour should be followed while on the road/in traffic; Myanmar says “လမ်းမှာ လျှောက်ရမယ့် အကျင့်” which implies walking on the road, not road-user/driving behaviour. Keyed speed-limit and traffic-sign compliance is broadly preserved.
+- **ID 359, source/key safety concern:** The question asks which action is incorrect when a car falls into water, with “try to start the engine” keyed. However, option 1 recommends rolling down a window to let water in to equalize pressure, an oversimplified potentially dangerous escape instruction; the question may contain more than one questionable option. Do not endorse that advice without checking authoritative vehicle-emergency guidance and revising the question/key as needed.
+- **ID 360, keyed option 3:** Thai says to let some vehicles exit the alley, alternating with vehicles going straight. Myanmar only says to open the way for cars leaving the alley and then trails off with “cars going straight”; it loses the alternating/turn-taking rule.
+- **ID 346, option 2:** English “crime scene” is inappropriate for the general road-incident scene in Thai; Myanmar follows the crime-scene framing. It is a distractor, but should still be translated faithfully.
+- **ID 351, option 2:** Myanmar is an awkward present/past-tense fragment rather than a clear instruction to check mirrors periodically.
+- **ID 354:** This is image-dependent (“from the picture”). The keyed right-indicator/overtake-when-safe answer is broadly plausible, but cannot be certified without inspecting the actual picture and its traffic context.
+- **ID 358, option 1:** Myanmar translates high beams as “အမြင့်တန်းတွေ,” a literal, unclear term. Standardize to the project's clear term for high-beam headlights; the distractor's meaning should remain “keep high beams on all night.”
+- **ID 360, stem:** English and Myanmar describe the alley situation in broken fragments and do not clearly establish that the learner is driving straight past a side street while many vehicles wait to emerge.
+
+Safety/source verification flags:
+- **ID 346, keyed option 1:** “Check whether breathing is normal” is a useful initial check but incomplete as full first aid for an unconscious casualty. Thai first-aid guidance calls for checking responsiveness and breathing, calling emergency medical services (1669), and CPR if the person is unresponsive and not breathing normally; suspected head/neck/back injury requires care to limit movement. Keep the quiz's concise intended answer distinct from comprehensive real-world emergency instructions.
+- **ID 348:** Verify the exact child-seat orientation, vehicle-specific airbag warning, and official curriculum source before altering the answer key.
+- **ID 350:** Section 22 of the Thai Road Traffic Act says prepare to stop at the stop line on amber, except if already past the line. The current keyed option's wording is overabsolute; verify official legal text and preserve the exception.
+- **ID 359:** Reassess the whole item, not just Myanmar translation, because its non-keyed “let water in to equalize pressure” instruction may be unsafe or incomplete and could make the single-answer key ambiguous.
+
+Other wording and answer-key observations:
+- **ID 347, option 1:** Myanmar splits the “familiarize yourself with a vehicle you have never driven before” idea into two fragments. The keyed high-speed-to-arrive-before-dark option is faithfully marked as the unsafe choice.
+- **ID 349, keyed option 3:** The small/difficult-to-notice motorcycle concept is preserved; “ပြေးဆွဲ” is not natural wording for motorcycles moving in traffic.
+- **ID 352, keyed option 2:** “Stay calm and get out of the car immediately” is broadly conveyed. Review the broader fire-response source if this item is later used as authoritative guidance.
+- **ID 355, keyed option 4:** Checking surrounding traffic and proceeding only when safe is broadly aligned.
+- **ID 356, stem:** Myanmar wording is grammatically awkward and the “avoiding risky behaviour” clause is detached. Keyed option 4, voluntarily following traffic rules without waiting for police enforcement, is broadly preserved.
+- **ID 358, keyed option 2:** Safe following distance sufficient to stop in time is preserved.
+- **ID 360, distractors 1, 2 and 4:** Their unsafe intent is broadly preserved, but Myanmar wording should be made complete and clear while retaining them as incorrect options.
+
+Source-generation cleanup:
+- **IDs 346–360:** Leading “) ” / “၎)” artifacts remain in source/generated content. Reconcile source/compiler provenance before bulk cleanup; do not edit only the generated JSON.
+
+Broadly aligned in this sample: ID 347's keyed warning against speeding to beat darkness; ID 349's rationale that motorcycles can be hard to see; ID 352's intended instruction to leave a burning vehicle; ID 355's check-surroundings-before-moving rule; ID 356's voluntary compliance with traffic rules; and ID 358's safe following distance. This language review does not certify every key or image-dependent question.
+
+**Batch result:** IDs 346–360 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
