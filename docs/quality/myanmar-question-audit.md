@@ -1338,3 +1338,23 @@ A rule-based screening pass compared English and Myanmar text in all 77 records 
 - The 77-record screening did **not** automatically change any translations or keys. It surfaces candidates from text patterns only; some matches may be acceptable in context and must be reviewed rather than bulk-replaced.
 - No image/key correctness is inferred from this text-only pass. Q533, Q535, Q536, and Q540 image review remains pending.
 - No runtime question data, answer keys, translations, image assets, image mappings, main branch, or live deployment changed.
+
+
+## Safe-driving translation screening — high-priority negative questions (2026-10-25)
+
+A text-screening pass reviewed all 249 records in `src/data/questions_safe_driving.json`, then manually compared the Thai, English, Myanmar stems and options for the highest-risk matches. The following Myanmar stems clearly lose or weaken the negative instruction in the English/Thai source and should be treated as high-priority review items:
+
+- **Q251 — missing “not.”** Thai asks which is *not* the correct way to look while driving; English says “Which is not the correct way…?” Myanmar currently asks which way is correct. This reverses the task. Candidate: `ကားမောင်းနေစဉ် မှန်ကန်သော ကြည့်ရှုနည်း မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။`
+- **Q281 — missing “not.”** Thai/English ask which is *not* a principle to follow when transporting a patient; Myanmar asks which principle should be followed. Candidate: `လူနာကို ရွှေ့ပြောင်းသယ်ယူရာတွင် လိုက်နာသင့်သော စည်းမျဉ်း မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။`
+- **Q302 — missing “not.”** Thai/English ask what drivers should *not* do on damaged road surfaces; Myanmar asks what they should do. Candidate: `လမ်းမျက်နှာပြင် ပျက်စီးနေသည့်နေရာကို ဖြတ်မောင်းရပါက ယာဉ်မောင်းသည် မည်သည့်အရာကို မလုပ်သင့်သနည်း။`
+- **Q312 — missing “not.”** Thai/English ask what drivers should *not* do when the light turns green; Myanmar asks what they should do. Candidate: `မီးစိမ်းပြ၍ မောင်းနှင်ခွင့်ရသည့်အခါ ယာဉ်မောင်းသည် မည်သည့်အရာကို မလုပ်သင့်သနည်း။`
+- **Q393 — missing “not.”** Thai/English ask what the driver should *not* do when meeting a cyclist; Myanmar asks what the driver should do. Candidate: `စက်ဘီးစီးသူနှင့် တွေ့သည့်အခါ ယာဉ်မောင်းသည် မည်သည့်အရာကို မလုပ်သင့်သနည်း။`
+- **Q399 — missing “not.”** Thai/English ask which is *not* a result of driving at speed; Myanmar asks which result occurs. Candidate: `အရှိန်ဖြင့် မောင်းနှင်ခြင်းကြောင့် ဖြစ်ပေါ်လာသည့် ရလဒ် မဟုတ်သောအရာမှာ မည်သည့်အရာနည်း။`
+
+Additional confirmed translation candidate:
+- **Q300, option “Drive on the left or give way to emergency vehicles.”** Myanmar says give way “toward” emergency vehicles (`အရေးပေါ်ယာဉ်များဆီသို့ လမ်းပေးပါ`), which is directionally awkward and does not clearly express yielding to them. Candidate meaning: `ဘယ်ဘက်ကပ်မောင်းပါ သို့မဟုတ် အရေးပေါ်ယာဉ်များကို လမ်းပေးပါ။`
+
+### Severity and safeguards
+- These are high-priority because negation changes which option the learner must choose. Candidate Myanmar wording is for reviewer validation, not a final certified translation.
+- The remaining records from the 249-question file were screened with text-pattern heuristics; the result is a triage list, not a complete human translation certification. False positives were not bulk-fixed.
+- No question data, answer keys, translations, image assets, image mappings, runtime code, main branch, or live deployment changed.
