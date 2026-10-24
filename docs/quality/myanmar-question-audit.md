@@ -108,3 +108,20 @@ A later fetch through GitHub's Contents API successfully retrieved `src/data/que
 - Maintenance IDs 453–465: ID 453 uses “Anode” for the positive terminal in English while the Thai option is “positive terminal”; verify terminology against the Thai source and do not use “anode” as a casual substitute. ID 454 English is fragmented but Thai is clear; Myanmar question repeats the fragmented structure. ID 455 “windshield wiper” option is translated with an untranslated “wiper” loanword, which may be acceptable but needs consistent wording. IDs 458 and 459 have awkward verb phrasing in options; ID 460's stem incorrectly describes the car as still stationary, while Thai says it has not fully stopped—verify the intended state before revising. These are proposed review items only.
 - Accident-prediction IDs 534–551: many stems/options in English are fragments; prefer the Thai source when its meaning is clear, and mark the item uncertain when the Thai itself is unclear or image context is necessary. ID 545 contains corrupted counting text (“တစ်ထောင်တစ်ထောင်...”) in Myanmar and needs a careful translation of the three-second following-distance rule. ID 547 Myanmar stem asks “what is the purpose” while Thai/English asks which option is not a purpose (negation mismatch). ID 549 option “ด้านบน” / “top” rendered as “ထိပ်တန်း” is not natural for spatial direction; use an accurate directional term only after context confirmation. ID 551’s option about helping victims translates “ผู้ประสบเหตุ” as “ဒုက္ခသည်များ” (refugees/displaced people), which is incorrect in a road-incident context.
 - The combined bank also has translation concerns on IDs 414 and 424 where “lane” is translated as “ချန်နယ်”; ID 201 has a stem negation mismatch; ID 207 option “ผู้ขับขี่” is rendered as “မြင်းစီးသူ”; all remain unedited pending approval.
+
+
+### Combined 598-question bank: wider screening notes
+
+A broad screening of the combined bank identified likely review candidates, but automated keyword/negation checks produce false positives and are **not** accepted as translation decisions. These candidates must be read against Thai and English individually.
+
+High-confidence semantic mismatches to prioritize:
+- ID 201: source asks which driving behavior is unsafe; Myanmar says which behavior is safe (negation reversed).
+- ID 207 option “ผู้ขับขี่” is translated as “မြင်းစီးသူ” (horse rider), incorrect in a road-traffic question.
+- ID 414 and ID 424 use “ချန်နယ်” for traffic lane in Myanmar options; replace with appropriate road-lane terminology after review.
+- ID 536: Thai/English asks which event is *not* dangerous for Car A; Myanmar appears to ask only “which could happen to Car A,” omitting the negation and question meaning.
+- ID 547: source asks which is *not* the purpose of accident prediction; Myanmar asks what the purpose is, omitting the negation.
+- ID 588: source asks which is *not* a factor to decide before overtaking; Myanmar asks which factor should be decided, reversing the question intent.
+- ID 549 option “ด้านบน” / “top” translated as “ထိပ်တန်း” is not an appropriate spatial-position term.
+- ID 551 option translates road-incident victims as “ဒုက္ခသည်များ,” which means refugees/displaced people rather than accident victims.
+
+Other potential negation flags from automated screening are not confirmed until manually checked; do not bulk-edit from the screening list. Continue manually reviewing every question stem and all four options, and separately check image-dependent questions against the associated image.
