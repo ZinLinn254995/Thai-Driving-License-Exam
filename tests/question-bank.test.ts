@@ -26,8 +26,8 @@ test('question bank records have unique IDs, complete language fields, and one c
     );
 
     for (const option of question.options) {
-      assert.ok(option.text_en?.trim(), `question ${question.id} has an option without English text`);
-      assert.ok(option.text_my?.trim(), `question ${question.id} has an option without Myanmar text`);
+      assert.ok(option.en?.trim(), `question ${question.id} has an option without English text`);
+      assert.ok(option.my?.trim(), `question ${question.id} has an option without Myanmar text`);
     }
   }
 });
