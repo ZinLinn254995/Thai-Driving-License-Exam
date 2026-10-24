@@ -541,3 +541,33 @@ This pass retrieved the actual question records and all four answer options from
 - This pass reviewed actual stems, keyed options, and Myanmar strings for the eight records above.
 - No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment changed.
 - Statuses are deliberately separated into confirmed mismatch, likely issue, and pending source verification; do not report all eight as confirmed errors.
+
+
+## Official-source cross-check follow-up (2026-10-25)
+
+This section records what can be supported by the official Thai manuals found in this pass. It does not change runtime question content.
+
+### Q22 — narrow bridge: key supported by official manual
+- Official source: Thailand Office of Transport and Traffic Policy and Planning (OTP), *Traffic Sign Standards*, section 3.6, “Narrow Bridge” (ป้ายเตือนสะพานแคบ).
+- The manual says the road ahead has a narrow bridge where opposing vehicles cannot pass conveniently, and advises slowing down and watching for oncoming traffic from the other side of the bridge.
+- This directly supports the substance of Q22's keyed Thai/English/Myanmar answer. Status: **source-supported; prior concern about the key is withdrawn**, subject to confirming the image is the standard narrow-bridge sign.
+- Source: https://www.otp.go.th/uploads/tiny_uploads/OTPStandard/1-1-SafetyTransport01.pdf
+
+### Q540 — steep descent sign: confirmed answer/image mismatch
+- Official Department of Highways (DOH) manual section 3.13.2 identifies sign ต.34 as “steep descent ahead”; it advises drivers to slow down and keep left, and says a “use low gear” supplementary sign should accompany particularly hazardous grades.
+- The recorded Q540 image is the steep-descent sign with an 8% grade and low-gear supplementary plate, while its keyed answer says “Ahead the road is curved and level.” These meanings do not match.
+- Status: **confirmed high-priority mismatch**. Keep the item out of any “verified/correct” claim until its stem, options, and key are corrected against the source. No correction has been applied in this documentation-only commit.
+- Source: https://doh.go.th/uploads/tinymce/service/bid/doc_bid/manual1.pdf
+- Related DOH manual index: https://www.doh.go.th/content/201
+
+### Q13 — steep uphill sign: partial support only
+- The question's key includes both “steep uphill ahead” and “watch for oncoming traffic.” The steep-uphill sign supports the grade warning, but the sign alone does not establish an oncoming-traffic warning.
+- Status: **partially supported; verify the full image/context and the source question before accepting the extra clause**. Do not label the whole key confirmed based only on the sign graphic.
+
+### Q14 and Q67 — still unresolved
+- Q14: the rule for a red-and-white curb and the visible content of the exact image still need to be checked together. Do not treat the earlier visual description as proof that the marking is absent.
+- Q67: the official bus-lane sign definition and the item's action-oriented wording are different questions. Need a source for the claimed prohibition on overtaking into the bus lane before deciding whether the answer is wrong; no mismatch is confirmed in this pass.
+
+### Evidence discipline
+- Q22 has official-source support; Q540 is a confirmed image/key mismatch; Q13 is only partially supported.
+- No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was modified.
