@@ -416,3 +416,25 @@ Clear/high-priority translation findings:
 Broadly aligned in this sample: ID 227’s keyed presumption of fault for fleeing, ID 228’s keyed broken-down/accident emergency-light option (wording aside), ID 230’s intended answer, ID 231’s negligence proverb, ID 232’s pedestrian-yield answer, ID 234’s high-speed driving in heavy traffic, ID 236’s not using hazard lights throughout a rainy journey, ID 239’s cracked-windshield response, and ID 240’s too-distant seat position causing difficulty controlling the vehicle. These checks do not independently validate answer-key legality or safety correctness.
 
 **Batch result:** IDs 226–240 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 241–255 — 2026-10-24
+
+Reviewed stems and all four options in the separate safe-driving JSON against Thai and English. No question data edits were made; the generated copy must be reconciled with the actual runtime bank before corrections.
+
+Clear/high-priority Myanmar issues:
+- **ID 246, option 1 (keyed correct):** Thai `ทางบังคับเลี้ยว` means a road/route where the direction of travel is compulsory (mandatory turn/direction), but English “Steering path” and Myanmar “စတီယာရင်လမ်းကြောင်း” are literal and misleading. Verify the exact road-sign concept before revising the answer wording.
+- **ID 250, stem:** Thai refers to pulling out from the left road shoulder; English says “leaving the vehicle” and Myanmar likewise suggests leaving/exiting a vehicle, not moving off from the shoulder. This changes the driving scenario and is a clear source/translation mismatch.
+- **ID 251, stem:** confirmed negation reversal. Thai and English ask which is *not* the correct way to look while driving; Myanmar asks which way *is* correct. This is a high-priority meaning error because the correct answer is the distractor about looking at irrelevant things.
+- **ID 254, option 4:** Thai/English mean payload/load weight; Myanmar `ဝန်ဆောင်ခ` means service charge/fee. Clear vocabulary mismatch (not the keyed option).
+- **ID 255, option 1 (keyed correct):** Thai `ขอบทาง` is the road edge/curb; Myanmar `ကန့်လန့်ကာ` means a curtain/barrier-like object, not a curb. Clear terminology error in the correct answer.
+- **ID 255, option 4:** Thai says straight and parallel to the curb/sidewalk; Myanmar translates this as parallel to an intersection or roadside, losing the intended reference.
+- **ID 241, option 1 (correct):** Myanmar `အရန်ကူး` is an unnatural literal term for reversing; prefer the established project term for reversing a vehicle.
+- **ID 245, option 1 (correct):** the Myanmar sentence can read as driving the car in front at a suitable distance, rather than driving slowly behind it at a safe following distance. Clarify subject and following distance.
+- **ID 247, option 2 (correct):** meaning is understandable but phrasing is incomplete/unnatural; standardize as use a low gear when going both uphill and downhill, subject to source-rule verification.
+- **ID 248, option 4:** Thai refers to taking methamphetamine; Myanmar uses a broad transliteration “amphetamine.” The distinction may matter for accuracy; verify whether the source term should be preserved or generalized.
+- **IDs 241–255, stems:** leading ) / ၎) artifacts persist. ID 250 additionally has a material scene-description mismatch. Do not clean the generated copy alone.
+
+Broadly aligned in this sample: IDs 242–243 (low gear), 244 (reduce speed while revving slightly as described by the source), 248 (rest adequately), 249 (driver), 252 (increased load weight), and 253 (do not use the handbrake while driving downhill). The technical advice in IDs 244 and 247 has not been independently verified against an authoritative driving source.
+
+**Batch result:** IDs 241–255 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
