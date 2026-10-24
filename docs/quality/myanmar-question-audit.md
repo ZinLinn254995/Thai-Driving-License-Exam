@@ -1320,3 +1320,21 @@ Review scope: compared Thai stems and options against English/Myanmar wording an
 - The first-pass image-opening milestone does not mean each of the 173 assets has been matched conclusively to its exact question, answer, legal source, and reuse licence.
 - Direct visual review of Q540, Q533, Q535, Q536, and Q497 remains pending in this continuation; until the images are actually re-opened and reviewed, no new image/key conclusion should be recorded for them.
 - No question JSON, image, runtime code, main branch, or live deployment changed in this update.
+
+
+## Accident-prediction translation screening — batch A (2026-10-25)
+
+A rule-based screening pass compared English and Myanmar text in all 77 records in `src/data/questions_accident_prediction.json`. This is a triage pass, not a substitute for a fluent human review. It identified the following high-confidence candidates for manual correction:
+
+- **Q533, option “Change traffic lane to the left.”** Myanmar currently says `ယာဉ်ကြောပိတ်ဆို့မှုကို ဘယ်ဘက်သို့ ပြောင်းပါ။`, which refers to changing/moving traffic congestion rather than changing driving lanes. Candidate meaning: `ဘယ်ဘက်ယာဉ်ကြောသို့ ပြောင်းပါ။` (confirm consistent preferred term for traffic lane before release).
+- **Q535, option “The car in front accelerates.”** Myanmar `ရှေ့က ကားက အရှိန်ပြင်းတယ်။` means the car ahead is fast/high-speed, not that it accelerates. Candidate meaning: `ရှေ့က ကားသည် အရှိန်မြှင့်သည်။`
+- **Q536, option “The back door of the truck may not close properly. make things fall.”** Myanmar `အရာတွေ ပြုတ်ကျပါစေ` reads like “let things fall,” not the intended consequence that goods may fall out. Candidate meaning: `ကုန်တင်ကား၏ နောက်တံခါး ကောင်းစွာမပိတ်ပါက ပစ္စည်းများ ပြုတ်ကျနိုင်သည်။` The English source sentence itself also needs grammar cleanup before translation is finalized.
+- **Q531, scenario option “When you see a curve, there may be a car rushing into the lane. Fixed by reducing speed.”** The Myanmar text translates the awkward English fairly literally and ends with a phrase equivalent to “fixed by reducing speed.” This is not ready for publication: review the original Thai and image/context, rewrite the English scenario into a clear driver-safety statement, then translate it. Do not guess the intended action from this English sentence alone.
+- **Q535, correct option “Bus inserted into left lane.”** Both English and Myanmar are unnatural and describe a bus as if it were placed into a lane. Recheck the original Thai `รถบัสแทรกเลนซ้าย` and the scene; a likely candidate is “The bus merges/cuts into the left lane,” but the exact verb should follow what the image depicts.
+- **Q540, option “Cars from the opposite lane.”** Myanmar `ဆန့်ကျင်ဘက်လမ်းကြားမှ ကားများ` uses a term that can mean a lane/road alley rather than the opposing direction of traffic. Candidate meaning: `ဆန့်ကျင်ဘက်ယာဉ်ကြောမှ လာသောကားများ။` Check terminology against the app's glossary and image context.
+- **Q567, options describing buses changing lanes/cutting in.** The Myanmar uses `လမ်းကြား` repeatedly for traffic lanes. This is a consistency candidate; check against the preferred road-safety term across the entire question bank before making global replacements.
+
+### Scope and confidence
+- The 77-record screening did **not** automatically change any translations or keys. It surfaces candidates from text patterns only; some matches may be acceptable in context and must be reviewed rather than bulk-replaced.
+- No image/key correctness is inferred from this text-only pass. Q533, Q535, Q536, and Q540 image review remains pending.
+- No runtime question data, answer keys, translations, image assets, image mappings, main branch, or live deployment changed.
