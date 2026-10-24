@@ -217,3 +217,15 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 294: “ทางรอง” is translated as “အလယ်တန်းလမ်း” (middle/secondary-level road), which is unnatural for a minor/side road; standardize after confirming the road-hierarchy terminology.
 - ID 295: source asks about opening a window to let water into a submerged car to equalize pressure. This is safety-critical advice and needs separate factual/source review; do not silently revise the answer key during translation audit.
 - ID 271, 281 and 293 are clear translation/source mismatch candidates; hold for approval and preserve answer keys until explicitly authorized.
+
+
+### Safe-driving questions IDs 296–320 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 297, correct option is image-dependent; verify the intersection illustration before treating the right-of-way answer as confirmed.
+- ID 306, correct option: Thai says a vehicle has broken down on the road shoulder; Myanmar says the car has fallen off the shoulder, changing the event.
+- ID 308, correct option: source text appears to recommend staying in the car and leaving if the accident victims are strangers. This is a potentially unsafe/content-quality issue; flag for factual/source review rather than changing translation or answer key silently.
+- ID 311: stem asks what to do when parking blocks other cars, but keyed option says shift to neutral and do not use the handbrake. This appears contradictory/possibly corrupted source or answer-key content; mark uncertain for separate review.
+- ID 312: Thai/English ask what drivers should *not* do after the green signal; Myanmar stem asks what they should do, omitting the negation.
+- ID 319, option 3: source says to use high beams to express thanks; translation is literal, but this driving etiquette advice should be fact-checked separately before publication.
+- IDs 271–320 continue to show fragmented source English; where Thai is clear, use it as the semantic reference and do not copy the broken English literally.
