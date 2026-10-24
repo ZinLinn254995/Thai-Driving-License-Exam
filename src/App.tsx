@@ -323,15 +323,13 @@ export default function App() {
 
       <footer className="mt-auto border-t-4 border-[#f2b705] bg-[#123b2b] text-white">
         <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-          <div className="mb-5 flex justify-end border-b border-white/10 pb-4 sm:mb-6 sm:pb-5">
-            <div className="inline-flex items-center gap-0.5 rounded-full border border-emerald-100/30 bg-white/5 p-0.5" role="group" aria-label="Choose language">
-              <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>Eng</button>
-              <span aria-hidden="true" className="text-xs text-emerald-100/60">|</span>
-              <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-7 lg:grid-cols-[1.25fr_0.85fr_1.2fr] lg:gap-10">
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-7 lg:grid-cols-[1.25fr_0.85fr_1.2fr] lg:gap-10">
             <div className="min-w-0 sm:col-span-2 lg:col-span-1">
+              <div className="mb-3 inline-flex items-center gap-0.5 self-start rounded-full border border-emerald-100/30 bg-white/5 p-0.5" role="group" aria-label="Choose language">
+                <button type="button" onClick={() => { setSiteLanguage('en'); try { localStorage.setItem('thai_drive_site_language', 'en'); } catch {} }} aria-pressed={siteLanguage === 'en'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'en' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>Eng</button>
+                <span aria-hidden="true" className="text-xs text-emerald-100/60">|</span>
+                <button type="button" onClick={() => { setSiteLanguage('my'); try { localStorage.setItem('thai_drive_site_language', 'my'); } catch {} }} aria-pressed={siteLanguage === 'my'} className={`min-h-7 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${siteLanguage === 'my' ? 'bg-[#f2b705] text-[#19241e]' : 'text-white hover:bg-white/10'}`}>မြန်မာ</button>
+              </div>
               <p className="m-0 text-base font-bold tracking-tight text-white">{siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
               <p className="mt-1.5 max-w-xs text-sm leading-relaxed text-emerald-100/90">{siteLanguage === 'en' ? "Practice for Thailand's driving licence exam at your own pace." : 'ထိုင်းနိုင်ငံ ယာဉ်မောင်းလိုင်စင် စာမေးပွဲအတွက် မိမိအဆင်ပြေသည့်အချိန်တွင် လေ့ကျင့်ပါ။'}</p>
               <p className="mt-3 inline-flex rounded-full border border-emerald-100/25 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-50">{QUESTIONS_BANK.length} {siteLanguage === 'en' ? 'practice questions' : 'လေ့ကျင့်မေးခွန်း'}</p>
@@ -346,7 +344,7 @@ export default function App() {
             </nav>
             <nav aria-label={siteLanguage === 'en' ? 'Website information' : 'ဝက်ဘ်ဆိုက် အချက်အလက်'} className="min-w-0">
               <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-[#f2d36b]">{siteLanguage === 'en' ? 'Information' : 'အချက်အလက်'}</h2>
-              <ul className="m-0 grid list-none grid-cols-2 gap-x-3 gap-y-1 p-0 sm:grid-cols-1">
+              <ul className="m-0 grid list-none grid-cols-1 gap-y-1 p-0">
                 <li><a href="/privacy.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Privacy Policy' : 'ကိုယ်ရေးအချက်အလက် မူဝါဒ'}</a></li>
                 <li><a href="/disclaimer.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Disclaimer' : 'ရှင်းလင်းချက်နှင့် ကန့်သတ်ချက်များ'}</a></li>
                 <li><a href="/contact.html" className="inline-flex min-h-9 items-center rounded-sm py-1 text-sm text-emerald-50 underline decoration-emerald-100/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-white">{siteLanguage === 'en' ? 'Contact / Report an issue' : 'ဆက်သွယ်ရန် / ပြဿနာတင်ပြရန်'}</a></li>
@@ -354,8 +352,8 @@ export default function App() {
             </nav>
           </div>
 
-          <div className="mt-6 border-t border-white/15 pt-4 sm:mt-7 sm:flex sm:items-start sm:justify-between sm:gap-8">
-            <p className="m-0 max-w-2xl text-xs leading-relaxed text-emerald-100/85">{siteLanguage === 'en' ? "Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark." : 'ဤဝက်ဘ်ဆိုက်သည် သီးခြားလွတ်လပ်သော လေ့ကျင့်ရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) နှင့် မသက်ဆိုင်သလို ၎င်း၏ ထောက်ခံအတည်ပြုမှုလည်း မရှိပါ။ ၉၀% လေ့ကျင့်ရမှတ်သည် တရားဝင်အောင်မှတ် မဟုတ်ပါ။'}</p>
+          <div className="mt-7 border-t border-white/15 pt-4 sm:mt-8 sm:flex sm:items-start sm:justify-between sm:gap-8">
+            <p className="m-0 max-w-2xl break-words text-xs leading-relaxed text-emerald-100/85">{siteLanguage === 'en' ? "Independent practice resource. Not affiliated with or endorsed by Thailand's Department of Land Transport (DLT). The 90% practice target is not an official pass mark." : 'ဤဝက်ဘ်ဆိုက်သည် သီးခြားလွတ်လပ်သော လေ့ကျင့်ရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန (DLT) နှင့် မသက်ဆိုင်သလို ၎င်း၏ ထောက်ခံအတည်ပြုမှုလည်း မရှိပါ။ ၉၀% လေ့ကျင့်ရမှတ်သည် တရားဝင်အောင်မှတ် မဟုတ်ပါ။'}</p>
             <p className="mt-3 shrink-0 text-xs leading-relaxed text-emerald-100/70 sm:mt-0 sm:text-right">© {new Date().getFullYear()} {siteLanguage === 'en' ? 'Driving License Practice' : 'ယာဉ်မောင်းလိုင်စင် လေ့ကျင့်ရေး'}</p>
           </div>
         </div>
