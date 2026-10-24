@@ -1458,3 +1458,25 @@ The remaining law-bank items need authoritative, item-by-item checking before be
 - The 74-record pass did not automatically change any answer, translation or legal fact.
 - The question bank still needs full authoritative legal-source verification, plus direct image/key verification for image-based items. A text comparison alone cannot certify a driving-law answer.
 - No question JSON, answer keys, translations, images, image mappings, runtime code, main branch, or live deployment changed.
+
+
+## Traffic-law category — follow-up on ticket deadlines and alcohol law (2026-10-25)
+
+### High-priority current-law clarification
+
+- **Q123 / source question 6 — traffic-ticket payment deadline is stated as a universal “7 days.”** The Thai and Myanmar wording are aligned with each other, but the stored legal fact may be stale or overgeneralized. The Royal Thai Police's official ticket-payment portal says payment must be made within the due date specified on the ticket; it does not state that every ticket universally has a seven-day deadline. Treat the keyed “7 days” as **needs current-law/source confirmation**, not as verified. Candidate rewrite should refer to the deadline specified on the ticket unless an authoritative current regulation for this exact exam question establishes a fixed number of days.
+  - Official Royal Thai Police ticket portal: https://ticket-warning.police.go.th/
+- **Q127 / source question 10 — 50 mg% is not a universal limit for every driver.** The current stem asks broadly about drivers who have consumed alcohol, and the keyed answer is “not exceeding 50 mg%.” Thai government sources describe a stricter **20 mg% BAC threshold** for specified groups, including drivers under 20, provisional-licence holders, and drivers without a valid licence or using a licence that does not cover the vehicle; 50 mg% applies to other drivers. The question must identify the intended driver category or explicitly test the general-driver threshold. This is a content-scope issue in the source/English wording, not a Myanmar-only translation defect.
+  - Thai Government Public Relations Department: https://thailand.prd.go.th/en/content/category/detail/id/52/iid/326520
+  - Royal Thai Police ticket portal for Q123: https://ticket-warning.police.go.th/
+
+### Verified items in this follow-up
+
+- **Q137 / source question 20 — helmet exemption:** the keyed answer “monks and novices” is supported by the wording of Road Traffic Act section 122, which provides an exception for monks, novices and certain other traditional religious head coverings. This item is not flagged as a confirmed defect. The current rule should still be explained narrowly; it is not a general exemption for ordinary passengers.
+  - Legal text reference: https://lawplayer.com/th/article/pythainlp_e90826510885a30f/p0-0128
+- **Q141 / source question 24 — vehicle transfer notification within 15 days:** the answer is supported by Motor Vehicle Act section 17, which requires the transferor and transferee to notify the registrar within 15 days from the transfer. Not a confirmed defect.
+  - Legal text reference: https://lawplayer.com/th/article/pythainlp_9f3d7a1b96082a48/p0-0018
+
+### Still open
+
+The 74-question law category is not fully certified. Other penalties, deadlines, medical eligibility statements and image-based right-of-way/parking answers require item-by-item source verification. The current findings are documentation-only; no question content or answer key has been changed, and no deployment was made.
