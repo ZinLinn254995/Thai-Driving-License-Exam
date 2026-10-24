@@ -204,3 +204,16 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 264: correct option broadly aligns; wording should be made natural after the full pass.
 - ID 268: only “turn on emergency lights” is keyed correct when a vehicle catches fire in a tunnel and cannot continue. This is a possible content/answer-key safety concern, not a translation-only fix; flag for separate factual/official-source review, do not change the key in this pass.
 - ID 270: stem and options are broadly understandable, but several distractors are awkwardly translated. Preserve option meaning and key while polishing only after approval.
+
+
+### Safe-driving questions IDs 271–295 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 271, correct option: Thai says stop and let the vehicle signalling right proceed first; Myanmar says stop and turn on the right indicator, changing the action.
+- ID 273: stem “look over/behind yourself” is awkward in Myanmar; better to express checking the rear blind spot, without implying looking at one's own body.
+- ID 275, correct option: wording “always make a U-turn at the U-turn point even if far away” is unusual but matches the source; flag for content/answer-key verification, not a translation-only change.
+- ID 281: Thai/English ask which is *not* a principle for moving an injured person; Myanmar asks which principle should be followed, omitting the negation.
+- ID 293: Thai refers to changing lanes in slow-moving traffic; English and Myanmar specify a “bus lane,” which is not in the Thai stem. Treat as source-language inconsistency and confirm intent before editing.
+- ID 294: “ทางรอง” is translated as “အလယ်တန်းလမ်း” (middle/secondary-level road), which is unnatural for a minor/side road; standardize after confirming the road-hierarchy terminology.
+- ID 295: source asks about opening a window to let water into a submerged car to equalize pressure. This is safety-critical advice and needs separate factual/source review; do not silently revise the answer key during translation audit.
+- ID 271, 281 and 293 are clear translation/source mismatch candidates; hold for approval and preserve answer keys until explicitly authorized.
