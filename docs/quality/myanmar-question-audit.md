@@ -327,3 +327,15 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 574, correct option: Thai says check side mirrors, rear-view mirror and blind spots before changing lanes; Myanmar says “နောက်ပြတင်းပေါက်” (rear window) instead of rear-view mirror.
 - ID 572 uses “ทางรอง” translated as “အလယ်တန်းလမ်းကြောင်း”; standardize to minor/side road terminology.
 - IDs 555, 556, 558 and 568 depend on images; translation text alone cannot validate the answer key or scenario.
+
+
+### Accident-prediction questions IDs 576–598 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 578, correct option: Thai “ตั้งลำ” means straighten/align the vehicle after the U-turn; Myanmar says “သင့်လှေကို အမြန်တပ်ဆင်ပါ” (quickly set up your boat), clearly wrong vehicle term.
+- ID 579: “flashing yellow light” is rendered as repeated “မှိတ်တုတ်မှိတ်တုတ်” phrases; simplify to a clear flashing yellow signal. Option 3 again uses “မှတ်တိုင်မျဉ်း” for the stop line, which is incorrect/ambiguous.
+- ID 588 stem: Thai/English ask which is *not* a factor to decide before overtaking; Myanmar asks which factor should be decided, omitting the negative.
+- ID 590, correct option: Thai says lateral clearance gives room to maneuver/avoid hazards without causing an accident; Myanmar currently says it gives the driver room to “practice” and then describes danger, which is unclear and semantically incorrect.
+- ID 598: “ถูกทุกข้อ” / “all of the above” is translated as “အားလုံးမှန်ပါတယ်,” broadly aligned, but the answer key depends on interpretation of the intersection scenario; verify source/rule separately.
+- IDs 555, 556, 558, 568 and 584 are image/scenario-dependent and need the actual images checked before confirming answer-key mappings.
+- IDs 578, 588 and 590 are high-confidence correction candidates. No changes applied pending approval.
