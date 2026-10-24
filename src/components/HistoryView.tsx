@@ -15,7 +15,7 @@ interface HistoryViewProps {
 export const HistoryView: React.FC<HistoryViewProps> = ({
   history,
   lang = 'en',
-  showMyanmar,
+  // Myanmar interface translations are always visible; the toggle is for question content only.
   onClearHistory,
   onStartExam,
   onViewDetails
