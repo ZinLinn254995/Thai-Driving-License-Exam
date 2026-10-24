@@ -701,3 +701,36 @@ General source cleanup:
 Broadly aligned in this sample: ID 362's keyed advice to slow and keep distance from an erratic driver; ID 363's safe following distance; ID 366's left-turn overtaking hazard; ID 369's reduced speed in rain; ID 373's small-vehicle visibility rationale; and ID 374's A-pillar visibility issue. This language review does not certify every answer key.
 
 **Batch result:** IDs 361–375 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 376–390 — 2026-10-24
+
+Compared Thai, English, and Myanmar for IDs 376–390. Used the Department of Land Transport-linked public safe-driving guide as general context, not as certification of every individual answer key: https://thailand.go.th/public/issue-focus-detail/--383 and https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf.
+
+High-priority translation / meaning issues:
+- **ID 376, stem:** Thai asks which is *not* the meaning of “appropriate speed.” English grammar is broken and Myanmar combines the negative with “most correct,” making the task difficult to understand. Keyed option 3 (speed based on personal satisfaction) is preserved as the incorrect definition.
+- **ID 382, stem:** Thai asks what road users should predict in addition to other vehicles' movements. English/Myanmar turn this into a repetitive, fragmented “forecasting technique” sentence. Keyed option 1 (predict how road users will move) is preserved.
+- **ID 383, stem:** “Road island” in Myanmar is translated literally as an island in the middle of the road. Better use the established term for a central median/divider. Keyed answer says stop without the front of the vehicle entering the opposing lane; broadly preserved.
+- **ID 385, stem:** Thai says reversing into a secondary/minor road. Myanmar says “အလယ်တန်းလမ်း” (middle/secondary-grade road), which is not a natural road term. Keyed give-way to pedestrians is preserved.
+- **ID 387, stem:** Thai specifically says a *flashing* yellow light beneath a school-area warning sign. English/Myanmar omit or obscure the flashing state. Keyed answer to slow until certain no children are crossing is preserved.
+- **ID 388, stem:** Thai says you stopped to eat at a restaurant that serves alcohol before a long drive. Myanmar wording reads as though you did not eat at the restaurant, changing the scenario. Keyed answer not to drink alcohol is clear.
+- **ID 390, stem:** Thai/English ask how to avoid brake lights dazzling drivers behind in nighttime congestion. Myanmar says the brake lights should not “become dim” for drivers behind, missing the glare/dazzling concept. The keyed answer “use only the handbrake” is context-dependent and should be verified against the official curriculum/vehicle guidance before presenting as universal; do not teach it as a general replacement for safe braking.
+
+Other wording / answer observations:
+- **ID 377, stem:** “Providing correct signal lights when driving into an intersection” is a fragment, not a natural question. Keyed option 1 (signal before left/right turns) is aligned; option 4 should remain a clearly incorrect distractor—hazard lights are not a substitute for turn signals when proceeding straight.
+- **ID 378, keyed option 2:** Meaning to slow down to a safe speed is preserved.
+- **ID 379, keyed option 1:** “Slow down and look left-right” is preserved, but Myanmar is an imperative fragment; make the instruction natural when editing.
+- **ID 380, keyed option 1:** Slow down and observe both directions near a pedestrian crossing is broadly aligned. Ensure the negative scenario (“no one is crossing at the moment”) does not imply speeding up.
+- **ID 381, stem and keyed option 2:** Situation is a motorcycle overtaking while oncoming traffic approaches. Myanmar stem is awkward but recognizable; keyed response to reduce speed, keep left and leave space is preserved. Review the exact safe response with official source before rewriting as a universal manoeuvre.
+- **ID 384, keyed option 4:** Keeping a larger following distance at night is preserved. Other distractors are recognizable, though “Drive” remains in English in option 2.
+- **ID 386, stem:** Myanmar says “which road is unsafe” rather than “which is not a safe way to drive in rain.” Keyed answer not to leave hazard lights on throughout rainfall is preserved and aligns with general advice against unnecessary hazard-light use while moving.
+- **ID 389, option 3:** Thai/English say keep the engine running; Myanmar says “install the engine,” not “leave the engine running.” Keyed option 1 (turn off engine while refuelling) is clear.
+- **ID 390, other options:** Terms for handbrake and foot brake are understandable, but the question's safety context/key still needs independent validation.
+
+Source-generation cleanup:
+- **IDs 376–390:** Leading parenthesis / Myanmar numbering artifacts remain in stems. Reconcile source/compiler provenance before bulk cleanup; do not patch only the generated JSON.
+- No image-dependent items were explicitly flagged in this batch; no claim is made that every source/key has been independently validated.
+
+Broadly aligned in this sample: ID 377 use turn signals for turns; ID 378 reduce speed when it feels too fast; ID 380 slow and observe near crossings; ID 384 keep extra following distance at night; ID 386 avoid hazard lights throughout rain; and ID 389 switch the engine off while refuelling. This language review does not certify every answer key.
+
+**Batch result:** IDs 376–390 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, main branch, or deployment changed.
