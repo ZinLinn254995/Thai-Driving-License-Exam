@@ -314,3 +314,16 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 506: first step for an immovable breakdown is to warn other traffic; Myanmar “အချက်ပြပါ” is vague and should explicitly say warn approaching vehicles.
 - ID 511, correct option: broadly aligned but “บนพื้นราบ” should be “level ground,” not just a flat floor; terminology can be polished.
 - ID 521, correct option: meaning is broadly aligned, but clarify “lightly apply/tap the brake repeatedly” if that matches the intended source.
+
+
+### Accident-prediction questions IDs 552–575 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 553, correct option: Thai says turn the steering wheel less than for a right turn; Myanmar is understandable but should state the comparison explicitly and naturally.
+- ID 556, options: Thai refers to vehicle B/A; Myanmar uses “ကြိမ်လုံး B/A” (rod/pole), clearly wrong vehicle terminology.
+- ID 558 options: A/B/C/D pillar blind spots are translated inconsistently and some are garbled (“ကန်းတိုင်”); preserve the pillar letter but use a clear vehicle-pillar/blind-spot term. Image context required.
+- ID 564: side-mirror adjustment options are understandable, but wording around fractions of mirror area can be standardized; verify key and image/context before changing.
+- ID 570, correct option: Myanmar sentence is incomplete after “အခြားယာဉ်များနှင့် အကွာအဝေးကို ထိန်းသိမ်းနိုင်သည်”; complete it to express the benefit at any driving speed after approval.
+- ID 574, correct option: Thai says check side mirrors, rear-view mirror and blind spots before changing lanes; Myanmar says “နောက်ပြတင်းပေါက်” (rear window) instead of rear-view mirror.
+- ID 572 uses “ทางรอง” translated as “အလယ်တန်းလမ်းကြောင်း”; standardize to minor/side road terminology.
+- IDs 555, 556, 558 and 568 depend on images; translation text alone cannot validate the answer key or scenario.
