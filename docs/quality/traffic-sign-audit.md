@@ -430,3 +430,9 @@ Directly opened the question images listed below and compared their visible layo
 
 ### Audit boundaries
 - No runtime question content, answer keys, Myanmar translations, images, mappings, main branch, or live deployment was changed. This branch contains documentation only. Image rights, exact legal-source mapping, and unresolved scenario questions remain release gates.
+
+
+## Official-source confirmation: Q540 steep descent (2026-10-25)
+- The official Department of Highways traffic-sign manual identifies ต.34 as “ป้ายเตือนทางลงลาดชัน” (steep descent ahead). Its meaning is to slow down and keep left; for particularly hazardous grades a supplementary “ใช้เกียร์ต่ำ” (use low gear) sign may be installed. Source: DOH traffic-sign manual, section 3.13.2, https://doh.go.th/uploads/tinymce/service/bid/doc_bid/manual1.pdf; an accessible manual extract reproduces the same description at https://fliphtml5.com/smohf/fwvn/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3/101/.
+- Q540's image depicts a steep downhill warning sign and a supplementary low-gear instruction, whereas the current keyed answer says “Ahead the road is curved and level.” This is now a **source-supported high-confidence mismatch**. Exact final correction should be checked against the question stem and all options in the authorized content-fix phase; do not alter runtime content in this audit.
+- Q14's image/key concern remains unresolved: the visual is a curbside car scene, not the standard no-stopping/no-parking symbol. It should not be considered an adequate sign-teaching image unless the full stem explains the depicted context.
