@@ -6,7 +6,6 @@ import { LanguageMode } from '../types';
 interface HistoryViewProps {
   history: ExamHistoryItem[];
   lang?: LanguageMode;
-  showMyanmar: boolean;
   onClearHistory: () => void;
   onStartExam: () => void;
   onViewDetails: (item: ExamHistoryItem) => void;
@@ -15,7 +14,6 @@ interface HistoryViewProps {
 export const HistoryView: React.FC<HistoryViewProps> = ({
   history,
   lang = 'en',
-  // Myanmar interface translations are always visible; the toggle is for question content only.
   onClearHistory,
   onStartExam,
   onViewDetails
