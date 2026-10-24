@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ showMyanmar, onToggleMyanmar, so
         <div className="flex items-center gap-2 justify-between sm:justify-end">
           <button type="button" onClick={onToggleMyanmar} aria-pressed={showMyanmar}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#074028] hover:bg-[#063320] border border-white/10 text-xs font-semibold transition-colors">
-            <Languages size={15} />{showMyanmar ? 'Hide Myanmar' : 'Show Myanmar'}
+            <Languages size={15} />{showMyanmar ? 'Hide Myanmar in questions' : 'Show Myanmar in questions'}
           </button>
           <button type="button" onClick={onToggleSound}
             className="p-2 rounded-xl bg-[#074028] hover:bg-[#063320] text-[#cfe9da] hover:text-white border border-white/10 transition-colors shrink-0"
