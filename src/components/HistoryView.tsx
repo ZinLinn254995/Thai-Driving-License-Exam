@@ -29,8 +29,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
   return (
     <div className="max-w-2xl mx-auto space-y-5">
       {/* Header Card */}
-      <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
-        <div>
+      <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-myanmar">
             {lang === 'en' ? 'Practice Score History' : 'လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ'}
             <span className="block text-sm font-normal text-slate-600">လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ</span>
@@ -47,7 +47,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           <button
             type="button"
             onClick={onClearHistory}
-            className="flex items-center gap-1 text-xs text-red-600 hover:text-red-700 hover:bg-red-50 p-2 rounded-xl transition-colors font-medium"
+            className="self-start sm:self-auto shrink-0 min-h-10 inline-flex items-center justify-center gap-1 text-xs text-red-600 hover:text-red-700 hover:bg-red-50 px-3 py-2 rounded-xl transition-colors font-medium border border-red-100"
             title={lang === 'en' ? 'Clear all history' : 'မှတ်တမ်းအားလုံး ဖျက်မည်'}
           >
             <Trash2 size={14} />
@@ -58,8 +58,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
 
       {/* Summary Cards */}
       {totalAttempts > 0 && (
-        <div className="grid grid-cols-3 gap-3">
-          <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs text-center">
+        <div className="grid grid-cols-1 min-[360px]:grid-cols-3 gap-3">
+          <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs text-center min-w-0">
             <div className="text-2xl font-black text-slate-900 leading-none">
               {lang === 'en' ? totalAttempts : toMyanmarNumber(totalAttempts)}
             </div>
