@@ -1369,3 +1369,17 @@ Additional confirmed translation candidate:
 - Candidate English answer: “The engine is overheating.”
 - Candidate Myanmar answer: `အင်ဂျင် အပူလွန်ကဲနေသည်။`
 - This is a text-based terminology/clarity finding only. The image and gauge reading still need direct visual review before confirming that the keyed answer itself is correct. No runtime data changed.
+
+
+## Full-bank negative-wording sweep — additional confirmed high-risk records (2026-10-25)
+
+The primary 598-record `src/data/questions.json` bank was parsed via its Git blob and scanned for English negative stems whose Myanmar text may omit the negative. This automated sweep is only a triage aid; the following records were then checked directly against Thai, English, Myanmar, and the stored answer options:
+
+- **Q498 — negative stem lost and keyed option meaning reversed.** Thai asks which is *not* a cause of the car failing to start; English says “Which is not a cause…?” Myanmar asks only “what is the cause?” In addition, the Thai keyed option `สายพานหย่อน` means the belt is slack, while Myanmar `ခါးပတ်က မလျော့ဘူး` says the belt is *not* loose. Both issues can change the expected answer. Candidate stem: `ကားစက်နှိုးမရခြင်း၏ အကြောင်းရင်း မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။`; candidate keyed option: `ခါးပတ် လျော့နေခြင်း။`
+- **Q505 — missing “should not do.”** Thai/English ask what the driver should *not* do when the engine-overheating warning appears; Myanmar asks what the driver should do, omitting the negative. Candidate: `အင်ဂျင်အပူလွန်ကဲကြောင်း သတိပေးသင်္ကေတ ပေါ်လာပါက မည်သည့်အရာကို မလုပ်သင့်သနည်း။`
+- **Q547 — missing “not.”** Thai/English ask which is *not* the purpose of accident prediction; Myanmar asks what its purpose is. Candidate: `မတော်တဆမှုကို ကြိုတင်ခန့်မှန်းခြင်း၏ ရည်ရွယ်ချက် မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။`
+- **Q588 — missing “not.”** Thai/English ask which is *not* a factor to decide before overtaking; Myanmar asks which factor should be decided. Candidate: `ကျော်တက်မောင်းနှင်မီ ဆုံးဖြတ်စဉ်းစားရန် မလိုအပ်သောအချက်မှာ မည်သည့်အရာနည်း။`
+
+These join the previously documented high-priority Q251, Q281, Q302, Q312, Q393 and Q399 negative-stem defects. This is not yet a complete human review of all 598 records; other records flagged by the automated scan must be checked individually to separate real defects from false positives.
+
+No question JSON, answers, translations, images, mappings, runtime code, main branch, or live deployment changed.
