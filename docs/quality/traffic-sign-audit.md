@@ -274,3 +274,11 @@ Images were opened directly from `public/exam_images/q_001.webp` through `q_045.
 
 ### Scope and safety
 - Documentation only: no question data, answer keys, Myanmar translations, images, mappings, main branch, or live deployment changed.
+
+
+### Additional visual audit: Q46–Q60 (2026-10-24)
+- **Q59 — high-priority sign/answer mismatch.** The image shows a red upward arrow beside a dark downward arrow inside a circular sign: the conventional meaning is priority over oncoming traffic / oncoming traffic must give way, not “Stop and give way to oncoming traffic.” The image contains no STOP instruction. Confirm the exact Thai sign label in the official sign manual, then correct the keyed English/Myanmar/Thai content and any distractors only in an authorized fix phase.
+- **Q47 — lane-marking image is underspecified for the keyed answer.** The image shows two directional arrows and a dashed lane divider; keyed answer says “Stay in lane, no straddling, overtaking allowed.” The dashed line generally indicates a permitted lane change when safe, but “stay in lane/no straddling” may not be the precise meaning of this graphic. Match to the official Thai road-marking manual before release.
+- **Q46 — branded/watermarked illustration.** The rumble-strip graphic visibly contains a “thaidriveexam.com” watermark/logo. The key (“Rumble strips”) broadly matches the pictured road marking, but provenance/licensing and removal/replacement with a properly licensed source asset should be resolved.
+- Q48 no overtaking, Q49 no right U-turn, Q50 no left U-turn, Q51 no right turn, Q52 no changing to right lane, Q53 no right turn/U-turn, Q54 no motor vehicles, Q55 no trucks, Q56 no motorcycles or motor vehicles, Q57 no parking, Q58 50 km/h limit, and Q60 mandatory one-way left are broadly consistent with the visible symbols in this visual pass.
+- Scope remains documentation only: no question data, answer keys, translations, images, mappings, main branch, or live deployment changed.
