@@ -1238,3 +1238,18 @@ Review scope: compared Thai source, English and Myanmar text/options, and curren
 Source cross-check: Licence eligibility and restrictions for medical conditions, disability, hearing/speech impairment and adapted vehicles must be checked against current DLT rules. The audit did not establish official evidence for the blanket restrictions implied by IDs 178–187. Do not publish these as verified legal rules until their current criteria are confirmed.
 
 **Law-bank status:** IDs 118–191 have now been reviewed in text batches. No question JSON, answer keys, images, runtime files, main branch, or deployment changed. High-priority follow-up: IDs 178, 180, 183, 185 and 187; visual verification required for IDs 184, 186, 188, 189 and 190.
+
+
+## Safe-driving bank — IDs 192–198 (gap-fill review)
+
+Review scope: reviewed the seven IDs immediately preceding the already documented safe-driving batches beginning at ID 199. Compared Thai source, English and Myanmar stems/options and current `isCorrect` markers.
+
+- **ID 192 — corrupted stem prefix and terminology:** Thai/English/Myanmar all begin with an unexplained “)” and the English stem is a fragment. The keyed instruction to signal before overtaking or changing lanes is sound. English “overtake the machine” and Myanmar “စက်ကို ... ကျော်” mistranslate a vehicle as a machine; option 3’s “change channels” is also wrong for changing lanes. Repair the source stem and use consistent “lane/ယာဉ်ကြော” terminology.
+- **ID 193, keyed option 1:** Parking at an intersection is the intended incorrect behavior; reducing speed at roundabouts, pedestrian crossings and constricted areas is generally sensible. Myanmar is broadly aligned. English/Myanmar stem still begins with an unexplained “)” and should be cleaned.
+- **ID 194, keyed option 3:** Rushing to work is not a valid reason to turn on headlights; heavy rain, smoke or poor visibility are valid reasons to use lights. The key is plausible. Stem begins with an unexplained “)” and English phrasing “incorrect turning on” is ungrammatical.
+- **ID 195, keyed option 3 — image-dependent:** The key says Car A should stop/yield to oncoming traffic before turning right. The image `/exam_images/safe/1000000000007.webp` was not visually inspected, so the scene/key match is not verified. Myanmar option 3 translates oncoming traffic as “traffic congestion,” which is inaccurate; use “ဆန့်ကျင်ဘက်မှ လာနေသောယာဉ်များ.”
+- **ID 196, keyed option 4:** A secure, controlled grip with all fingers is the intended answer. The question’s advice should not be interpreted as gripping as tightly as possible; maintain a firm but relaxed grip and use a safe steering technique. Myanmar is broadly aligned, but the stem has a stray “၎)” prefix and option 4 wording is awkward.
+- **ID 197, keyed option 3:** Following the legally applicable speed limit is the correct general principle. The stem begins with an unexplained “)” and English/Myanmar distractors are literal/awkward (“duck to the left,” “install high beams”). Clean the stem and revise distractors if the source is later edited.
+- **ID 198 — legal rule may be overgeneralized:** The key says motorcycles must use the leftmost lane. This may depend on road markings, signs, vehicle class and applicable Thai traffic rules; do not present it as an unconditional rule for every road. Verify the current legal basis and clarify the road context. Myanmar is aligned with the key.
+
+**Batch result:** IDs 192–198 reviewed. No question JSON, answer keys, images, runtime files, main branch, or deployment changed. Highest-priority follow-up: ID 198 needs legal verification; ID 195 needs direct image inspection.
