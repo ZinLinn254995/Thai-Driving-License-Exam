@@ -222,3 +222,22 @@ The original assets Q91–Q117 were opened and compared against their Thai/Engli
 **Highest-priority findings from Q91–Q117:** Q95 appears to conflict with the keyed phrase “without traffic island” because the image shows a central island/divider; verify source and mapping before any edit. Q109 should state that a STOP sign requires a complete stop, not only a stop when cross-traffic is visible. Q94 and Q114 have the previously identified Myanmar meaning-loss/broadening issues. Q100, Q104, and Q111 need wording/context checks. No fixes have been applied pending source verification and owner approval.
 
 **Traffic-sign visual review status:** Q75–Q117 (43 images) have now been opened and compared with the current keyed options. This is not a claim that every legal nuance or image licence has been verified. The audit branch contains documentation updates only; main, runtime code, question JSON, answer keys, image assets/mappings, and the live deployment remain untouched.
+
+
+### Official-source follow-up — priority/road-marking questions (2026-10-24)
+
+Checked Thai regulatory references after the visual pass:
+
+- The Thai Ministry of Transport / Office of Transport and Traffic Policy and Planning lists official traffic-sign manuals, including manuals for intersection signs and traffic signals: https://www.otp.go.th/post/view/2098
+- The Thai highway traffic-sign regulation text describes the STOP sign as requiring a stop before the crossing road or stop line, and the GIVE WAY sign as requiring yielding to vehicles or pedestrians on the crossing road before proceeding safely: https://lawplayer.com/th/act/ocs-%E0%B8%970006-2B-0027/section/chapter-1
+- The same regulation’s road-marking section describes a give-way line as a broken white transverse line requiring drivers to slow and yield to vehicles or pedestrians on the crossing road; it distinguishes this from the stop line and pedestrian crossing: https://lawplayer.com/th/act/ocs-%E0%B8%970006-2B-0027/section/chapter-2
+
+Implications for the current question bank:
+
+1. **Q109 is a confirmed content-risk candidate.** The current image is a STOP-sign scene, but the keyed English says “Stop and wait for crossing traffic,” which may imply stopping is conditional on seeing traffic. The regulation states that the STOP sign requires stopping before the crossing road or stop line, then waiting for crossing traffic/pedestrians to pass when present. Recommend revising the explanation to explicitly say “Come to a complete stop at the stop line; yield to crossing traffic/pedestrians, then proceed only when safe.” Do not change runtime data in this documentation-only audit phase.
+2. **Q114 is a confirmed Myanmar precision issue.** The English conditional refers to vehicles/pedestrians crossing, while Myanmar currently says they merely “are present/ahead.” Recommended Myanmar meaning: “အရှိန်လျှော့ပါ။ ရှေ့ဖြတ်လမ်းပေါ်တွင် ယာဉ် သို့မဟုတ် လမ်းလျှောက်သူ ဖြတ်သန်းနေပါက လမ်းပေးမျဉ်းမတိုင်မီ ရပ်ပါ။” This is a candidate wording, not yet applied.
+3. **Q111 requires a careful rewrite/source match.** The image shows several transverse lines, including a broken line and solid line(s), while the keyed option bundles “stop line or give-way line” and a pedestrian-crossing duty. Official descriptions distinguish stop lines, give-way lines, and pedestrian crossings; verify the intended Thai diagram and question before changing the answer.
+4. **Q100’s core keyed meaning is supported.** The official definition of GIVE WAY applies to vehicles or pedestrians on the crossing road, not only to a vehicle directly ahead. The English is a short “prepare to yield” paraphrase; Myanmar can be broadened from “give priority to the vehicle ahead” to “give way to vehicles/pedestrians on the priority/crossing road when required.”
+5. **Q95 remains unresolved.** The current symbol appears to show a divided route/central island, while the keyed answer says “junction without traffic island.” The official manuals index confirms that intersection-sign manuals exist, but the exact official diagram for this particular symbol has not yet been positively matched. Keep it flagged; do not guess or change the answer key.
+
+This is a documentation-only source review. No runtime content was modified. Treat the LawPlayer regulation pages as an accessible transcription of the regulation and prefer the official manuals/legal gazette for final sign-by-sign certification.
