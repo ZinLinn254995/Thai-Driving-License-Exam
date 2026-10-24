@@ -319,7 +319,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                           <div className="line-through text-red-900 font-medium text-sm">
                             {wrongOpt.en}
                           </div>
-                          {lang !== 'en' && (
+                          {showMyanmar && (
                             <div className="text-xs text-red-700 font-myanmar">
                               {wrongOpt.my}
                             </div>
