@@ -497,3 +497,47 @@ The following records were retrieved from the branch's actual question-bank JSON
 - This pass has confirmed the exact stored records for Q414, Q531, Q540, Q556, Q581, and Q589 and upgraded the above findings from informal notes to source-record-backed review items.
 - **No runtime question data, answer keys, translations, images, image mappings, main branch, or live deployment were changed.** Proposed fixes await owner approval as required by the audit policy.
 - Next: retrieve the exact Q67 traffic-sign record and its options, inspect Q14's full stem/options, then continue official-source verification of the remaining safety-critical and legal items.
+
+
+## Follow-up: stem/options-level review of Q13, Q14, Q22, Q67, Q100, Q109, Q111, Q114 (2026-10-25)
+
+This pass retrieved the actual question records and all four answer options from `src/data/questions.json` at audit branch head `8c1672a40fbb87c9a7c34df8c60b3ea074348d1b`. The data below is review evidence only; no runtime records were changed.
+
+### Q14 — refine the earlier image concern
+- The actual English stem is **“What does the red-and-white curb marking mean?”** and the keyed Thai answer is “ห้ามหยุดห้ามจอดรถทุกชนิด”; English: “No stopping and no parking for all types of vehicles.”
+- This is more specific than the prior note, which described the scene as a curbside car without explaining that the question explicitly asks about the curb marking. Therefore the previous conclusion that the image necessarily fails to show the claimed rule is **not fully established from the earlier note alone**. Re-open the actual image at full resolution and check whether the red-and-white curb marking is visibly present and legible. If it is absent or unclear, replace/remove the image; if clearly depicted, retain the image but verify the rule against an official Thai source.
+- Myanmar key: “မည်သည့်ယာဉ်မျှ လုံးဝမရပ်ရ၊ ယာဉ်မရပ်နားရ”. Check whether the distinction between stopping and parking is naturally and precisely conveyed.
+
+### Q13 — exact keyed option
+- Stem: “When encountering this sign, what should the driver do?”
+- Keyed Thai option combines slowing down, watching for oncoming traffic, and “ทางข้างหน้าเป็นทางขึ้นลาดชัน” (steep uphill ahead). English and Myanmar reproduce both the oncoming-traffic warning and uphill meaning.
+- The image was previously described as a steep-uphill grade sign marked 8%. The uphill clause is consistent with that description; the extra oncoming-traffic clause is not proven by the grade symbol alone. Inspect the full image and official sign/lesson source before deciding whether the keyed option combines a general driver action with the sign meaning or adds unsupported content. Status: **needs source/stem validation; not a confirmed wrong answer**.
+
+### Q22 — exact keyed option
+- Keyed Thai option says to slow down and watch for vehicles coming from the other side of the bridge; English and Myanmar convey the same idea.
+- Prior visual notes describe a narrow-bridge image. A narrow bridge can create a reason to watch for opposing traffic, but the image alone does not prove that the official sign meaning specifically says “oncoming traffic from the other side.” Verify the exact Thai sign class and source text. Status: **plausibility concern, not a confirmed mismatch**.
+
+### Q67 — question asks for driver action, not only sign naming
+- Actual stem: “When encountering this sign, what must the driver do?” Keyed Thai: “ห้ามแซงล้ำเข้าไปในช่องเดินรถประจำทาง”; English: “Do not overtake into the bus lane”; Myanmar: “ဘတ်စ်ကားသီးသန့်လမ်းကြောအတွင်းသို့ ကျော်တက်ဝင်ရောက်ခြင်းမပြုရ”.
+- The DOH sign manual defines the blue bus pictogram sign บ.49 as a lane designated for buses. That confirms the **sign's designation**, but by itself it does not establish that the keyed driver-action statement is legally wrong in every context. The prior “mismatch confirmed” conclusion should therefore be treated as **overstated pending the exact legal/source context of this exam item**. Verify whether the item is testing the legal consequence of the bus-lane sign or asking the sign's direct meaning. If the latter, the key should state “bus lane / lane designated for buses”; if the former, cite the specific rule/source supporting the no-overtaking instruction. Do not change the answer key yet.
+
+### Q100 — keyed wording precision
+- Keyed Thai: “slow down and prepare to yield when reaching the GIVE WAY sign”; English: “Slow down, prepare to yield at yield sign”; Myanmar currently says to give priority to the vehicle ahead when reaching the sign.
+- Myanmar narrows the priority recipient to “the vehicle ahead,” while the English is broader. Recommended Myanmar meaning should refer generally to yielding to traffic on the priority/crossing road as required, not exclusively the vehicle directly ahead. Validate final phrasing against the official sign definition.
+
+### Q109 — STOP-line / give-way context
+- The keyed Thai says stop and wait for traffic on the crossing road to pass; English says “Stop and wait for crossing traffic.” Myanmar says to stop and let crossing vehicles go first.
+- The prior concern about conditional stopping remains valid as a teaching-precision issue: if the image shows a STOP sign, the explanation should make clear that a complete stop is required at the stop line/before the crossing road, and yielding to crossing traffic follows. If the image instead focuses on a give-way marking/line, the exact rule differs. Confirm the actual image and Thai source before rewriting the key.
+
+### Q111 — distinction between line types and pedestrian crossing
+- Keyed Thai combines stopping before a stop line or give-way line with letting pedestrians cross first; English and Myanmar carry the same combined instruction.
+- The image reportedly contains multiple transverse markings. Confirm that the depicted line type(s) and pedestrian-crossing context actually support the combined answer. Official definitions for stop lines, give-way lines, and pedestrian crossings must not be collapsed into one universal rule. Status: **requires diagram/source match**.
+
+### Q114 — Myanmar condition broadened
+- Keyed Thai and English make stopping conditional on other vehicles or pedestrians crossing in front; Myanmar currently says “if there are other vehicles or pedestrians ahead,” which is broader and may imply stopping when they are merely present.
+- Recommended Myanmar meaning: “အရှိန်လျှော့ပါ။ ရှေ့ဖြတ်လမ်းပေါ်တွင် ယာဉ် သို့မဟုတ် လမ်းလျှောက်သူ ဖြတ်သန်းနေပါက လမ်းပေးမျဉ်းမတိုင်မီ ရပ်ပါ။” This is a candidate translation for later authorized correction, not applied.
+
+### Audit status / boundaries
+- This pass reviewed actual stems, keyed options, and Myanmar strings for the eight records above.
+- No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment changed.
+- Statuses are deliberately separated into confirmed mismatch, likely issue, and pending source verification; do not report all eight as confirmed errors.
