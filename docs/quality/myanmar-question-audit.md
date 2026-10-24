@@ -1428,3 +1428,33 @@ A direct comparison of all 77 records in `src/data/questions_accident_prediction
 
 ### Limits
 This pass compares the text fields and keyed options; it does not prove that the pictured scene supports each answer. The referenced images for Q533, Q535, Q536 and Q540 still need direct visual review. No question data, translations, answer keys, image mappings, runtime code, main branch, or live deployment changed.
+
+
+## Traffic-law category — terminology and current-law review (2026-10-25)
+
+A structured pass compared all **74 records** in `src/data/questions_law.json` across Thai, English, Myanmar and keyed options. This was a text review, not a full verification of all legal facts or diagrams.
+
+### Confirmed terminology/clarity item
+
+- **Q127 / source question 10 — breath-alcohol wording versus BAC units.** Thai asks how much alcohol measured in exhaled breath must not exceed; the English says “breath alcohol concentration,” while the answer choices are expressed as `mg%`, the conventional blood-alcohol concentration unit. Current Thai government guidance describes breathalyzer results as being converted using a coefficient and compared against blood-alcohol thresholds; for general drivers the threshold is 50 mg%, while specified groups (including under-20 and temporary-license holders) have a 20 mg% threshold. The current stem therefore risks teaching that the device's raw breath reading itself is measured in mg% or that 50 mg% applies to every driver. Candidate English clarification: “What blood-alcohol concentration (BAC) threshold is used for a general driver when breath-test results are converted to the BAC standard?” Candidate Myanmar should convey that the value is the converted BAC standard, not the raw breath reading. Do not alter the keyed 50 mg% option until the intended exam scope and the source question are confirmed.
+  - Thai government source: https://thailand.go.th/public/issue-focus-detail/----2567--2?hl=en
+  - Thai Government Public Relations Department: https://thailand.prd.go.th/en/content/category/detail/id/52/iid/326520
+
+### Legal facts checked against current public sources
+
+- **Q128 / source question 11 — six-month renewal window:** the stored answer “6 months” is consistent with the Department of Land Transport's published rule that a personal driving licence can be renewed up to six months before expiry. This item is supported by the available DLT source, not a defect: https://legal.dlt.go.th/gen2/article/541
+- **Q120 / source question 3 — 80 km/h in Bangkok, Pattaya and municipal/community areas for ordinary private cars:** the reviewed 2021 speed regulation text gives 80 km/h for ordinary cars in those areas, with different limits for specified vehicle types. This answer is plausible for the question as written, but it should be kept tied to the stated road area and vehicle class rather than generalized to all Thai roads: https://lawplayer.com/th/act/ocs-%E0%B8%880003-2B-0032
+
+### Follow-up required — not yet confirmed as wrong
+
+The remaining law-bank items need authoritative, item-by-item checking before being described as correct or incorrect. Priority includes:
+- **Q127 and Q134:** alcohol thresholds and penalties, taking account of the 2024 rule that uses a 20 mg% threshold for specified driver groups and 50 mg% for other drivers.
+- **Q137, Q139–Q142, Q123–Q125:** helmet exemptions, no-licence penalties, temporary-licence validity, vehicle transfer/notification deadlines and inspection ages.
+- **Q173–Q183:** medical-condition and disability eligibility statements. Absolute wording such as “in any case” should be checked against current licensing rules and not treated as medical advice.
+- **Image-based law questions** (including Q119, Q121–Q122, Q126, Q133, Q143 and later image-option records): confirm the actual diagrams and right-of-way/parking situation before validating the stored answer key.
+
+### Scope and safeguards
+
+- The 74-record pass did not automatically change any answer, translation or legal fact.
+- The question bank still needs full authoritative legal-source verification, plus direct image/key verification for image-based items. A text comparison alone cannot certify a driving-law answer.
+- No question JSON, answer keys, translations, images, image mappings, runtime code, main branch, or live deployment changed.
