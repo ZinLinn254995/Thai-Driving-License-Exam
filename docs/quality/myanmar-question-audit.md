@@ -1383,3 +1383,17 @@ The primary 598-record `src/data/questions.json` bank was parsed via its Git blo
 These join the previously documented high-priority Q251, Q281, Q302, Q312, Q393 and Q399 negative-stem defects. This is not yet a complete human review of all 598 records; other records flagged by the automated scan must be checked individually to separate real defects from false positives.
 
 No question JSON, answers, translations, images, mappings, runtime code, main branch, or live deployment changed.
+
+
+## Vehicle-maintenance translation pass — confirmed additional defects (2026-10-25)
+
+A targeted check of all 81 records in `src/data/questions_maintenance.json` found these high-priority items after direct Thai/English/Myanmar comparison:
+
+- **Q481 — question scope changes.** Thai and English ask which equipment does *not* help improve braking performance. Myanmar `မည်သည့်ကိရိယာကမှ မကူညီနိုင်ပါ` means “no equipment can help,” a universal claim rather than asking which single item does not help. Candidate: `ကားဘရိတ်၏ လုပ်ဆောင်နိုင်စွမ်းကို မြှင့်တင်ရာတွင် အထောက်အကူမပြုသည့် ကိရိယာမှာ မည်သည့်အရာနည်း။`
+- **Q498 — confirmed, repeated high-priority defect.** The stem omits “not,” and the keyed option translates “The belt is slack” as `ခါးပတ်က မလျော့ဘူး` (“the belt is not loose”). This reverses both the question and a key option. Already documented in the full-bank sweep; this pass confirms the Thai source also matches the intended negative question and slack-belt wording.
+- **Q505 — confirmed missing negative.** Thai and English ask what one should *not* do if the engine-overheating warning appears; Myanmar asks what one should do. Already documented in the full-bank sweep; confirmed directly against Thai.
+- **Q482 — wording/clarity candidate, not a confirmed meaning reversal.** The Myanmar stem is grammatically awkward. More importantly, the keyed English option “Fill the reservoir tank with groundwater” and Thai `เติมน้ำบาดาลในถังหม้อพักน้ำ` should be checked against a reliable vehicle-maintenance source; do not change the answer key based only on this translation audit.
+
+### Status
+- The 81-record file has had an initial text/negative-wording sweep. It has not yet received a full technical validation of every maintenance answer or image.
+- No question data, answer keys, translations, images, mappings, runtime code, main branch, or live deployment changed.
