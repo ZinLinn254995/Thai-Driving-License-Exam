@@ -42,14 +42,14 @@
   const key = 'thai_drive_site_language';
   const nav = document.querySelector('header nav');
   if (!nav) return;
-  const style = 'border:1px solid rgba(255,255,255,.55);border-radius:8px;background:#074028;color:white;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer;min-height:36px';
+  const style = 'border:1px solid rgba(255,255,255,.55);border-radius:999px;background:#074028;color:white;padding:4px 8px;font:inherit;font-size:.75rem;font-weight:700;cursor:pointer;min-height:28px;line-height:1.2';
   const group = document.createElement('span');
   group.setAttribute('role','group');
   group.setAttribute('aria-label','Choose language / ဘာသာစကားရွေးချယ်ရန်');
-  group.style.cssText='display:inline-flex;gap:6px;flex-wrap:wrap';
-  const en = document.createElement('button'); en.type='button'; en.textContent='English'; en.style.cssText=style;
+  group.style.cssText='position:fixed;right:12px;bottom:16px;z-index:1000;display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid rgba(255,255,255,.65);border-radius:999px;background:#074028;box-shadow:0 3px 14px rgba(0,0,0,.22)';
+  const en = document.createElement('button'); en.type='button'; en.textContent='EN'; en.style.cssText=style;
   const my = document.createElement('button'); my.type='button'; my.textContent='မြန်မာ'; my.style.cssText=style;
-  group.append(en,my); nav.append(group);
+  group.append(en,my); document.body.append(group);
   const navNames = {
     '/study-guide.html':['Study Guide','လေ့လာမှု လမ်းညွှန်'],
     '/faq.html':['FAQ','မေးလေ့ရှိသော မေးခွန်းများ'],
