@@ -1253,3 +1253,39 @@ Review scope: reviewed the seven IDs immediately preceding the already documente
 - **ID 198 — legal rule may be overgeneralized:** The key says motorcycles must use the leftmost lane. This may depend on road markings, signs, vehicle class and applicable Thai traffic rules; do not present it as an unconditional rule for every road. Verify the current legal basis and clarify the road context. Myanmar is aligned with the key.
 
 **Batch result:** IDs 192–198 reviewed. No question JSON, answer keys, images, runtime files, main branch, or deployment changed. Highest-priority follow-up: ID 198 needs legal verification; ID 195 needs direct image inspection.
+
+
+## Traffic-sign bank — IDs 75–117 (manual text review) — 2026-10-24
+
+Review scope: compared Thai stems and options against English/Myanmar wording and the current `isCorrect` markers for IDs 75–117. This was a text review only; the 43 corresponding sign/road-marking images were not all visually opened during this pass. No question data or answer keys were changed.
+
+- **IDs 75–80 — junction terminology:** The keyed options generally preserve left/right and major-road/side-road distinctions in Myanmar. English descriptions such as “Staggered side road junction, first on left/right” are understandable but unnatural; prefer a clear phrase such as “A minor road joins the main road, with the left/right junction appearing first” only after checking the exact sign diagram. Visual orientation remains unverified.
+- **IDs 81–83 — road narrowing/lane closure:** Keyed English and Myanmar meanings broadly match the Thai labels for narrowing and lane closure. Correct sign-to-key pairing still depends on the images, which were not visually checked in this pass.
+- **ID 84 — 2.50 m height limit:** English and Myanmar both convey that vehicles no higher than 2.50 m may pass. The precise threshold and sign depicted need official-source/image confirmation before treating the numeric value as verified.
+- **IDs 85–89 — road hazards:** Keyed translations are broadly aligned for rough road, dip, skidding/slippery conditions, loose stones and falling rocks. ID 86’s English “dip ahead” is terse; “a dip in the road ahead” is clearer. Images were not visually checked here.
+- **ID 90 — opening bridge:** Myanmar “ဖွင့်ပိတ်နိုင်သော တံတား” describes a bridge that can open/close, broadly consistent with an opening bridge. Verify that the image is specifically the opening-bridge warning sign.
+- **ID 91 — lane-direction sign:** The keyed answer is “Change lane according to the sign symbol”; translation is broadly aligned, but image matching is unverified.
+- **IDs 92–93 — frontage/service road terminology:** Thai uses `ทางขนาน`. Myanmar varies between “ဘေးတွဲလမ်း” and “ဘေးလမ်းမ (Frontage road),” so standardize the learner-facing term after confirming the exact road context. ID 92 means frontage-road traffic should prepare to enter the main road; ID 93 means main-road traffic should prepare to exit to the frontage road.
+- **ID 94 — side road joins from left:** English is explicit. Myanmar says “a junction/intersection is ahead on the left” but does not clearly state that a side road joins from the left; this is a likely loss of meaning. Verify the sign image before proposing a precise replacement.
+- **ID 95 — junction without a traffic island:** Myanmar conveys a junction without a central island and keeping left; broadly aligned.
+- **IDs 96–97 — U-turn location:** Myanmar preserves the left/right U-turn location; exact sign pairing still requires visual confirmation.
+- **IDs 98–100 — oncoming traffic, signals and yield:** Keyed translations are broadly aligned. ID 100’s “prepare to yield at the yield sign” is a reasonable rendering, but it should not imply yielding only to the vehicle directly ahead; the actual right-of-way context depends on the sign and intersection.
+- **IDs 101–103 — pedestrian/school/hazard warnings:** The keyed meanings are broadly aligned with the Thai. ID 102’s Myanmar omits the explicit “ahead” cue, and its child-warning wording is less specific than the English. These three are image-dependent and their exact sign/answer pairings remain unverified.
+- **ID 104 — direction change ahead:** English and Myanmar broadly convey following the indicated direction; image match remains unverified.
+- **ID 105 — alternating traffic:** Thai “สลับกันไป” means taking turns/alternating passage. Myanmar “အလှည့်ကျမောင်းနှင်ပါ” is plausible, but the exact instruction depends on the depicted sign/context; not visually confirmed.
+- **ID 106 — curve direction:** Keyed option says a curve ahead to the right; Myanmar matches. Confirm the image distinguishes a normal curve from a sharp/hairpin curve.
+- **ID 107 — expressway starts:** Myanmar “အမြန်လမ်းအစ” broadly matches “Expressway starts”; confirm the image is the expressway-start sign.
+- **ID 108 — pedestrian crossing:** Keyed answer says slow down and stop for pedestrians. Myanmar is broadly aligned, but whether this sign specifically mandates stopping must be checked against the sign and current rules; do not infer from the generic stem alone.
+- **ID 109 — give-way line/intersection scenario:** Keyed answer says stop and wait for crossing traffic. Myanmar conveys yielding to vehicles crossing the road, but the image was not visually inspected, so the answer key is not confirmed.
+- **ID 110 — solid edge line:** “Road edge line” / “လမ်းဘေးမျဉ်း” is aligned.
+- **ID 111 — stop line/give-way line:** Myanmar accurately distinguishes the stop line and give-way line terms better than the earlier literal wording. The stem combines stopping before either line with letting pedestrians cross; confirm the image and applicable control before treating the full rule as universally applicable.
+- **ID 112 — winding road starts right:** Keyed English and Myanmar preserve the instruction to keep left and watch for a winding road beginning to the right; visual match remains unverified.
+- **ID 113 — safety zone/painted island:** Myanmar’s “ယာဉ်အသွားအလာခွဲခြားသည့်အမှတ်အသား” is generic and may not clearly communicate a painted traffic island/painted safety zone. Verify the road marking and then standardize the specific term.
+- **ID 114 — give-way line (translation concern):** English says stop before the give-way line if other vehicles or pedestrians are **crossing**. Myanmar says if other vehicles or pedestrians are **present/ahead** (“ရှိပါက”), which broadens the condition and may change the instruction. This is a likely translation refinement candidate; preserve the answer key pending image/source confirmation.
+- **ID 115 — unguarded railway crossing:** Keyed translation “slow down and prepare to stop” is aligned. Image not inspected; text stem itself is understandable.
+- **ID 116 — falling-rock warning:** English and Myanmar correctly advise slowing down and driving with extra caution; broadly aligned.
+- **ID 117 — rumble strips:** English “Drive with caution” and Myanmar “သတိထား၍ မောင်းနှင်ပါ” are broadly aligned with the keyed Thai. “Rumble Strips” should be defined consistently in the learner-facing glossary; image match remains unverified.
+
+**Cross-check needed:** An earlier first-pass note grouped IDs 91–93 together as `ทางขนาน`/frontage-road terminology. The current source records show ID 91 is a lane-direction sign, while IDs 92–93 are the frontage-road questions. Reconcile that earlier note’s ID range before relying on it as a precise issue reference.
+
+**Batch result:** IDs 75–117 received a text-based manual review. No JSON, answer keys, translations, images, image mappings, runtime files, main branch, or live deployment were changed. Highest-priority translation candidates are IDs 94 and 114; image/source verification is still needed for image-dependent questions, especially IDs 84, 90–109, 111–114.
