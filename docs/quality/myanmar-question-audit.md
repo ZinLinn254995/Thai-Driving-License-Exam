@@ -146,3 +146,19 @@ No question data was edited. Translation/source concerns recorded for follow-up:
 - ID 32, correct option: Myanmar says changing lanes or overtaking is permitted; confirm the sign image and Thai/English source because the wording may depend on the specific sign.
 - ID 42, correct option: `เส้นแนวหยุด` (stop line) is translated as `မှတ်တိုင်မျဉ်း`, which can mean a bus-stop line; use a road-stop-line term after confirmation.
 - IDs 21–45 are image-dependent; generic stems cannot validate the sign/image or answer-key mapping. Review the image and correct-option mapping as a separate pass.
+
+
+### Traffic-sign questions IDs 46–90 — first-pass review
+
+No data edits applied. Items requiring clarification:
+- ID 46, correct option: “เส้นชะลอความเร็ว” / speed-reduction markings is rendered as “အရှိန်လျှော့ရန် အမှတ်အသားမျဉ်းများ”; likely understandable, but confirm it refers to transverse speed-reduction markings rather than generic lines.
+- ID 52, correct option: Thai/English prohibit changing into the right lane; Myanmar “ညာဘက်လမ်းကြောင်းသို့ မကူးရ” is understandable but should be standardized with the chosen lane-change terminology.
+- ID 55, correct option: Thai specifically prohibits trucks of all kinds from entering; Myanmar “ကုန်တင်ယာဉ်များ” is concise and broadly aligned, but verify it retains the “all kinds / entering and exiting” scope.
+- ID 57: distinguish “no parking” from “no stopping” consistently. Current option 3 means no parking, option 4 means no stopping; review sign imagery to ensure the answer key matches.
+- ID 66, correct option: Myanmar says drivers must keep left around the roundabout and yield to vehicles already inside; broadly aligned, but traffic-flow wording should be checked against the Thai rule/sign.
+- ID 70, correct option: the Thai refers to the hatched box area and permits stopping only while waiting to turn right; Myanmar is broadly aligned but the exact exception should be checked against the marking illustration.
+- IDs 75–80: technical terms for minor/major roads joining or branching in T/Y shapes are understandable but inconsistent/awkward in Myanmar. Standardize only after reviewing the sign diagrams and Thai road-hierarchy terms.
+- ID 87, correct option: Thai says be careful about skidding and do not brake hard; Myanmar is aligned, but “ဘရိတ်ကို ပြင်းထန်စွာ မနင်းပါနှင့်” may be polished for naturalness.
+- ID 90, correct option: “สะพานเปิดได้” is rendered as “ဖွင့်ပိတ်နိုင်သော တံတား”; verify that this refers to a movable/opening bridge sign, not merely a bridge with a gate.
+
+Continue image-context verification for these sign questions; do not alter the key or image associations during the translation-only pass.
