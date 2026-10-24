@@ -300,3 +300,17 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 469, correct option: “จาระบี” means grease; Myanmar “အဆီပြန်ပါ” is too general and could mean apply oil. Use the appropriate grease term after approval.
 - IDs 466, 468, 470, 475–479, 483, 485–490 are broadly aligned in this sample, though terminology should be standardized for engine coolant, reservoir, oil level and tyre tread.
 - Safety note: opening a hot radiator cap/filling coolant is represented as an incorrect distractor in ID 466; preserve the key but verify the learning explanation in a separate factual review.
+
+
+### Vehicle-maintenance questions IDs 491–521 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 498, option 1: Thai “สายพานหย่อน” means a loose/slack belt; Myanmar says “the belt is not loose,” reversing the meaning.
+- ID 505 stem: Thai/English ask what should *not* be done when an engine-overheating warning appears; Myanmar asks what should be done, omitting the negative. The keyed option says pouring water on the engine, which should also be safety-reviewed.
+- ID 513, correct option: Thai “ก้านวัดน้ำมันเครื่อง” means the engine-oil dipstick; Myanmar says “ဆီထည့်ပါ” (add oil), incorrect.
+- ID 514, correct option: Thai “ยางรถที่มีลมยางน้อยเกินไป” means tyres with too little air/underinflated; Myanmar says “ဖောင်းနေသော တာယာများ” (inflated tyres), reversing the meaning.
+- ID 516 stem: Thai/English prohibit opening the radiator cap when the engine is very hot; Myanmar asks when one should open it, reversing the instruction.
+- ID 501, correct option: Thai says drain/remove the wrong fuel immediately; Myanmar says “ချက်ချင်းလွှဲပြောင်းပါ” (transfer immediately), unclear. Clarify the fuel-drain action after approval.
+- ID 506: first step for an immovable breakdown is to warn other traffic; Myanmar “အချက်ပြပါ” is vague and should explicitly say warn approaching vehicles.
+- ID 511, correct option: broadly aligned but “บนพื้นราบ” should be “level ground,” not just a flat floor; terminology can be polished.
+- ID 521, correct option: meaning is broadly aligned, but clarify “lightly apply/tap the brake repeatedly” if that matches the intended source.
