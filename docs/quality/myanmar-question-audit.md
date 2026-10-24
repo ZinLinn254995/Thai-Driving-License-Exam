@@ -264,3 +264,16 @@ No data edits applied. High-confidence issues and uncertainties:
 - ID 394, correct option: Thai “ความไม่พร้อมของผู้ขับขี่” means the driver's lack of readiness/unpreparedness; Myanmar says “ယာဉ်မောင်း၏ ကြိုတင်ပြင်ဆင်မှု” (driver preparedness), reversing the meaning.
 - ID 395: the question concerns what not to do when finding an injured person; answer “move the injured person immediately” is semantically aligned, but the entire first-aid set requires separate safety review.
 - IDs 371–395 have no approved edits; continue recording clear mismatches and safety-critical uncertainties.
+
+
+### Safe-driving questions IDs 396–420 — first-pass review
+
+No data edits applied. High-confidence issues and uncertainties:
+- ID 399: Thai/English ask which is *not* a result of speeding; Myanmar asks what result speeding causes, omitting the negative.
+- ID 404, correct option: Thai says the motorcycle rider may be blown in front of the car by strong wind; Myanmar says “လွင့်စင်သွားနိုင်သည်,” which is vague and should explicitly describe being blown into the car's path.
+- ID 408, correct option: source says the safe gap lets the truck driver see your vehicle in the mirror; Myanmar is understandable but awkward.
+- ID 411: Thai/English ask what to do first when pulling out of a parking space; Myanmar contains a stray `)` after “as shown in the picture.” Remove only after approval/normalization.
+- ID 414 options 2 and 4: “lane” is translated as “ချန်နယ်”; use consistent road-lane terminology.
+- ID 419, correct option: source says high beams make the driver ahead and oncoming drivers unable to see clearly; Myanmar says they can see the road clearly, reversing the meaning.
+- ID 420, correct option: “ประคองรถเข้าข้างทาง” means guide/bring the vehicle safely to the roadside; Myanmar “ထောက်ပါ” (support/prop up) is incorrect.
+- IDs 399, 419, 420 are high-confidence correction candidates. Preserve all keys/images and wait for approval before applying.
