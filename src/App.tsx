@@ -30,11 +30,6 @@ export default function App() {
     try { return localStorage.getItem('thai_drive_site_language') === 'my' ? 'my' : 'en'; }
     catch { return 'en'; }
   });
-  const toggleSiteLanguage = () => setSiteLanguage((current) => {
-    const next = current === 'en' ? 'my' : 'en';
-    try { localStorage.setItem('thai_drive_site_language', next); } catch {}
-    return next;
-  });
 
   // Keep the interface in English and let learners reveal Myanmar translations.
   const lang: LanguageMode = 'en';
