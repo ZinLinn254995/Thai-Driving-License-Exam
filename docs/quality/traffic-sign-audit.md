@@ -569,7 +569,7 @@ This section records what can be supported by the official Thai manuals found in
 - Q67: the official bus-lane sign definition and the item's action-oriented wording are different questions. Need a source for the claimed prohibition on overtaking into the bus lane before deciding whether the answer is wrong; no mismatch is confirmed in this pass.
 
 ### Evidence discipline
-- Q22 has official-source support; Q540 is a confirmed image/key mismatch; Q13 is only partially supported.
+- Q22 has official-source support; Q540's earlier mismatch claim is withdrawn pending direct image review; Q13 is only partially supported.
 - No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was modified.
 
 
