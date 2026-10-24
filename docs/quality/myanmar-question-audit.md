@@ -348,3 +348,28 @@ No data edits applied. High-confidence issues and uncertainties:
 - The merged `src/data/questions.json` and generated `src/data/questions.ts` were not readable through the GitHub file-content fetch in this pass (empty content returned for these large files). Do not infer they are empty. Runtime import/source-of-truth still needs confirmation from the app's import path and a successful retrieval of the merged records.
 - Safe next action: recover/inspect the raw HTML and translation cache, compare the generated merged records field-by-field, and then correct only verified source/translation fields. Do not regenerate the whole bank from an unverified cache, because that could overwrite prior approved fixes or alter answer keys/image mappings.
 - No question data, answer keys, images, or runtime files were changed in this follow-up. No deployment was triggered.
+
+
+### Safe-driving manual review — IDs 199–210 — 2026-10-24
+
+Reviewed each stem and all four options in the separate safe-driving JSON against the Thai and English fields. No question data was changed because the merged runtime source could not be retrieved through the connector and the separate JSON is a generated/stale copy.
+
+High-confidence Myanmar translation corrections to carry forward into the runtime source:
+- **ID 199, option 1 (correct):** Thai asks to honk several times before reaching the curve. English is fragmented (“The time before the curve”), and Myanmar is garbled (“ဟွန်း အကြိမ်ကြိမ် ဟွန်း။ မျဉ်းကွေး မရောက်မီအချိန်”). Rebuild from Thai as a natural instruction to sound the horn several times before the curve, but confirm whether this is intentionally the keyed “should not do” answer.
+- **ID 201, stem:** confirmed negation reversal. Thai “ไม่ปลอดภัย” and English “unsafe” mean “not safe”; Myanmar currently asks which behavior is safe. Must preserve the negative/unsafe meaning.
+- **ID 202, option 1:** Thai/English say driving astride the lane divider; Myanmar “လမ်းဆုံလမ်းခွကို ဖယ်ထားပါ” instead reads like moving away from an intersection. Clear semantic mismatch.
+- **ID 203, option 2:** Thai/English describe moving the vehicle involved in the incident; Myanmar reads as moving the vehicle to the incident scene. Direction/meaning is wrong, although this is not the keyed answer.
+- **ID 207, option 3 (correct):** Thai “ผู้ขับขี่” means a vehicle driver/operator in this road-safety context; English says “rider”; Myanmar “မြင်းစီးသူ” means horse rider. Clear mismatch; use a road-vehicle driver term.
+- **ID 208:** Myanmar uses literal “high beam/high beams” loan wording rather than natural, consistent headlight terminology. Meaning is mostly recoverable; standardize only after selecting the project-wide term.
+- **ID 209, stem:** Thai specifies two or more traffic lanes in the same direction and asks what a motorcycle rider must do. Myanmar repeatedly uses “လမ်းသွယ်” (small side road/alley) instead of lane; terminology mismatch.
+- **ID 210, option 2:** English is fragmented; Myanmar changes the instruction into a past-tense statement (“then stopped the car immediately”). The source option is an instruction to stay calm, turn on hazard lights, and stop immediately. Non-keyed option, but still needs translation correction.
+- **IDs 199–210, stems generally:** the leading ) or ၎) artifacts and fragmented English stems are inherited from the separate generated JSON. Do not remove punctuation or reconstruct missing text by guesswork until compared with the merged bank/source HTML.
+
+Other reviewed items:
+- ID 200’s correct option (“slow down and give way”) is broadly aligned in Myanmar.
+- ID 204’s correct option “every person” is aligned.
+- ID 205’s correct option (adjust speed to the curve/turn) is broadly aligned.
+- ID 206’s correct option conveys that the left-turning vehicle should yield to the vehicle turning from the right; the Myanmar wording is awkward but broadly aligned.
+- ID 210’s keyed option 1 is broadly aligned with Thai; minor wording polish may be useful.
+
+**Batch result:** IDs 199–210 reviewed at stem-and-option level; no runtime/question data edits. These findings are recorded for correction once the actual combined runtime source can be retrieved and updated without overwriting approved work.
