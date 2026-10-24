@@ -35,13 +35,13 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
         <div>
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-myanmar">
             {lang === 'en' ? 'Practice Score History' : 'လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ'}
-            {showMyanmar && <span className="block text-sm font-normal text-slate-600">လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ</span>}
+            <span className="block text-sm font-normal text-slate-600">လေ့ကျင့်မှု ရမှတ်မှတ်တမ်းများ</span>
           </h2>
           <p className="text-xs text-slate-500 font-myanmar">
             {lang === 'en'
               ? 'Review your practice attempts and practice-target progress'
               : 'ယခင်လေ့ကျင့်မှုရလဒ်များနှင့် ပန်းတိုင်ပြည့်မီမှု'}
-            {showMyanmar && <span className="block font-myanmar">ယခင်လေ့ကျင့်မှုရလဒ်များနှင့် ပန်းတိုင်ပြည့်မီမှု</span>}
+            <span className="block font-myanmar">ယခင်လေ့ကျင့်မှုရလဒ်များနှင့် ပန်းတိုင်ပြည့်မီမှု</span>
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
               {lang === 'en' ? 'Attempts' : 'လေ့ကျင့်ကြိမ်ရေ'}
-              {showMyanmar && <span className="block font-myanmar">လေ့ကျင့်ကြိမ်ရေ</span>}
+              <span className="block font-myanmar">လေ့ကျင့်ကြိမ်ရေ</span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
               {lang === 'en' ? 'Practice Target Rate' : 'လေ့ကျင့်မှုပန်းတိုင်နှုန်း'}
-              {showMyanmar && <span className="block font-myanmar">လေ့ကျင့်မှုပန်းတိုင်နှုန်း</span>}
+              <span className="block font-myanmar">လေ့ကျင့်မှုပန်းတိုင်နှုန်း</span>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
             </div>
             <div className="text-[11px] text-slate-500 font-myanmar mt-1">
               {lang === 'en' ? 'Avg. Score' : 'ပျမ်းမျှရမှတ်'}
-              {showMyanmar && <span className="block font-myanmar">ပျမ်းမျှရမှတ်</span>}
+              <span className="block font-myanmar">ပျမ်းမျှရမှတ်</span>
             </div>
           </div>
         </div>
