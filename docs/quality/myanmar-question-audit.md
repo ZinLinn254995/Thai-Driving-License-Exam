@@ -586,3 +586,43 @@ Source-generation cleanup:
 Broadly aligned in this sample: ID 317’s keyed instruction to slow before a curve; ID 320’s keyed “yes, because alcohol slows reactions”; ID 322’s keyed instruction to wait until fit to drive; ID 323’s intended firm emergency braking with ABS; ID 325’s instruction to slow down and increase caution near a school crossing; and ID 327’s principle of increasing the following gap when tailgated. These language observations do not certify every answer key, image-dependent priority decision, or medical/legal rule.
 
 **Batch result:** IDs 316–330 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 331–345 — 2026-10-24
+
+Compared Thai, English, and Myanmar wording for IDs 331–345. Cross-checked general safety principles against a Department of Land Transport-linked public driving guide: keep left/pass right, give way to emergency vehicles, avoid excessive speed, do not drink and drive; and the sample exam guide says following distance should allow a safe stop and drivers should signal before changing lanes/overtaking. See https://www.thailand.go.th/public/issue-focus-detail/--383 and https://safedrivedlt.com/wp-content/uploads/2025/06/Driving-EN-010468_compressed.pdf. These references do not validate every item/key below. No question data, keys, or images were changed.
+
+Clear/high-priority language issues:
+- **ID 335, stem and option 4 (keyed):** The Thai describes carrying an injured person on four interlocked hands as a seat/litter, or using a chair. Myanmar mistranslates the “litter” concept as a pile of rubbish and confuses the hand/seat structure. The keyed option’s intended patient—leg injury, conscious, able to use both arms—is broadly present but should be rewritten by a competent translator.
+- **ID 338, option 4 (keyed):** Thai/English mean cutting back in immediately to the left in front of the vehicle just overtaken. Myanmar says to cut “from the front to the left” and does not clearly convey dangerously cutting in front. Preserve the unsafe behaviour clearly as the “should not do” answer.
+- **ID 339, option 4 (keyed):** Thai/English mean driving mindfully, strictly following traffic discipline, and showing courtesy/consideration. Myanmar repeats “manners/behaviour” and loses the full sense of consideration for others.
+- **ID 343, stem and option 4 (keyed):** The stem is malformed in Myanmar and does not clearly say a driver is making a U-turn into your lane. Option 4’s instruction to slow down and give way is broadly preserved but phrasing is awkward.
+- **ID 344, stem:** Myanmar uses a literal “zebra crossing” phrase and awkwardly structures the wheelchair user as being “there”; it should clearly describe a driver approaching/entering a pedestrian crossing and seeing a wheelchair user waiting to cross.
+- **ID 345, option 2:** English source is already broken/illogical; Myanmar follows the confusing idea of “in order for an accident to happen.” Do not polish this into an endorsed instruction; preserve as an obviously incorrect distractor or review the source.
+- **ID 341, options 1–3:** Myanmar accurately repeats broad discriminatory/overgeneralized claims that people with diabetes, nearsightedness, or HIV cannot drive. These are distractors, but should not be presented elsewhere as true general medical/legal facts. Keep the keyed option’s symptom-based wording distinct and verify current Thai licensing rules before treating this as official medical eligibility guidance.
+
+Safety/source verification flags:
+- **ID 333, keyed option 1:** The source says two helpers moving an unconscious injured person is appropriate. This can be unsafe as generalized first-aid advice because unnecessary movement may worsen injury, especially suspected spinal injury. Verify the official curriculum/source and add context before endorsing this as a real-world instruction.
+- **ID 335:** Same first-aid transport topic. A hand-seat or chair carry should not be treated as generally safe for an injured person without checking injury type and official first-aid guidance.
+- **ID 342, keyed option 2:** The general idea of leaving a larger gap behind a truck for visibility before overtaking is plausible, but the source’s wording “for the best visibility” is broad. The distractor about accelerating to overtake around blind curves is clearly unsafe; do not rewrite it to sound acceptable.
+- **ID 340, keyed option 1:** The source says not to mix lubricating oil into fuel. This may depend on engine type and manufacturer instructions; verify the exact engine/vehicle context before presenting it as a universal maintenance rule.
+- **ID 341, keyed option 4:** The source says a person with high blood pressure should not drive when symptoms appear. This is a broad health-related claim; retain symptom-based caution and verify the official curriculum, avoiding diagnosis or blanket restrictions.
+- **ID 329 reviewed previously:** This batch does not resolve the medical context around injectable diabetes medication; keep that earlier source-verification flag open.
+
+Other wording and answer-key observations:
+- **ID 331, keyed option 3:** “Reduce speed” is correctly conveyed. The stem is slightly awkward but understandable.
+- **ID 332, keyed option 3:** The meaning—maintain safe spacing and allow the following vehicle to overtake—is preserved.
+- **ID 334, keyed option 3:** Stop and allow a disabled pedestrian to cross is preserved. Ensure respectful, consistent wording for “person with a disability.”
+- **ID 336, keyed option 4:** The meaning is “when your vehicle breaks down or is involved in an accident”; Myanmar says the car “collapses/falls,” which is inaccurate.
+- **ID 337, keyed option 1:** Definition of safe speed based on road, weather, and traffic conditions and not endangering others is broadly preserved.
+- **ID 340, option 4:** The source says 95-octane fuel cannot replace 91-octane fuel, which may not be universally true across vehicles/fuel specifications. Verify manufacturer/fuel guidance before treating this as a general fact.
+- **ID 342, option 4:** English/Thai describe overtaking quickly near a blind curve; Myanmar preserves an unsafe meaning but has an unnatural “blind spots” phrase. Keep clearly incorrect.
+- **ID 344, keyed option 2:** “Prepare to stop” is translated accurately.
+- **ID 345, keyed option 1:** The precaution-first concept is present, though the Myanmar wording is stiff.
+
+Source-generation cleanup:
+- **IDs 331–345:** Leading `) ` / `၎)` artifacts remain. Reconcile generated data with the source/compiler before bulk cleanup.
+
+Broadly aligned in this sample: ID 331’s keyed instruction to reduce speed when a large truck overtakes; ID 332’s advice not to obstruct a lawful overtake; ID 334’s duty to stop for a pedestrian crossing; ID 337’s context-dependent definition of safe speed; and ID 344’s instruction to prepare to stop for a wheelchair user at a crossing. Language review and the public guide do not certify every answer key, image-dependent context, maintenance statement, or medical rule.
+
+**Batch result:** IDs 331–345 reviewed. Findings added to audit notes only; no question JSON, answer keys, images, runtime files, `main` branch, or deployment changed.
