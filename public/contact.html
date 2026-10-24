@@ -26,12 +26,64 @@
 </head>
 <body>
 <header><a href="/" style="text-decoration:none;font-weight:800">Thai Drive Exam</a><nav aria-label="Site navigation"><a href="/study-guide.html">Study Guide</a><a href="/faq.html">FAQ</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a><a href="/contact.html" aria-current="page">Contact</a></nav></header>
-<main>
+<main id="main-en">
 <h1>Contact and Report an Issue</h1>
 <p>To report an incorrect traffic-sign image, a question or answer issue, a translation problem, an accessibility concern, or a privacy/copyright concern, please open an issue in the project repository.</p>
 <p><a href="https://github.com/ZinLinn254995/Thai-Driving-License-Exam/issues">Open a GitHub issue for Thai Drive Exam</a></p>
 <p>Please include the question number or page URL and describe the problem. Do not post private personal information in a public issue. If the repository’s issue tracker is unavailable, check the project page for another contact method.</p>
 </main>
-<footer>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</footer>
+<main id="main-my" lang="my" hidden><h1>ဆက်သွယ်ရန်နှင့် ပြဿနာတင်ပြရန်</h1><p>လမ်းဆိုင်းဘုတ်ပုံ မှားယွင်းခြင်း၊ မေးခွန်း သို့မဟုတ် အဖြေပြဿနာ၊ ဘာသာပြန်အမှား၊ အသုံးပြုရလွယ်ကူမှုဆိုင်ရာ ပြဿနာ၊ ကိုယ်ရေးအချက်အလက် သို့မဟုတ် မူပိုင်ခွင့်ဆိုင်ရာ စိုးရိမ်ချက်များကို project repository တွင် issue တင်၍ အကြောင်းကြားနိုင်ပါသည်။</p><p><a href="https://github.com/ZinLinn254995/Thai-Driving-License-Exam/issues">Thai Drive Exam အတွက် GitHub issue တင်ရန်</a></p><p>ဖြစ်နိုင်ပါက မေးခွန်းနံပါတ် သို့မဟုတ် စာမျက်နှာ URL ကို ထည့်ပြီး ပြဿနာကို ရှင်းပြပါ။ အများမြင်နိုင်သော issue ဖြစ်သောကြောင့် ကိုယ်ရေးကိုယ်တာအချက်အလက် မတင်ပါနှင့်။ Issue tracker ကို အသုံးမပြုနိုင်ပါက project စာမျက်နှာတွင် အခြားဆက်သွယ်နည်းရှိမရှိ စစ်ဆေးပါ။</p></main>
+<footer><span data-footer-en>Independent study resource. Not affiliated with Thailand’s Department of Land Transport or any government agency.</span><span data-footer-my hidden>သီးခြားလွတ်လပ်သော လေ့လာရေးအရင်းအမြစ်ဖြစ်ပြီး ထိုင်းနိုင်ငံ ကုန်းလမ်းပို့ဆောင်ရေးဦးစီးဌာန သို့မဟုတ် အစိုးရအဖွဲ့အစည်းတစ်ခုခုနှင့် မသက်ဆိုင်ပါ။</span></footer>
+
+<script>
+(() => {
+  const key = 'thai_drive_site_language';
+  const nav = document.querySelector('header nav');
+  if (!nav) return;
+  const style = 'border:1px solid rgba(255,255,255,.55);border-radius:8px;background:#074028;color:white;padding:6px 10px;font:inherit;font-size:.85rem;cursor:pointer;min-height:36px';
+  const group = document.createElement('span');
+  group.setAttribute('role','group');
+  group.setAttribute('aria-label','Choose language / ဘာသာစကားရွေးချယ်ရန်');
+  group.style.cssText='display:inline-flex;gap:6px;flex-wrap:wrap';
+  const en = document.createElement('button'); en.type='button'; en.textContent='English'; en.style.cssText=style;
+  const my = document.createElement('button'); my.type='button'; my.textContent='မြန်မာ'; my.style.cssText=style;
+  group.append(en,my); nav.append(group);
+  const navNames = {
+    '/study-guide.html':['Study Guide','လေ့လာမှု လမ်းညွှန်'],
+    '/faq.html':['FAQ','မေးလေ့ရှိသော မေးခွန်းများ'],
+    '/about.html':['About','ကျွန်ုပ်တို့အကြောင်း'],
+    '/privacy.html':['Privacy','ကိုယ်ရေးအချက်အလက် မူဝါဒ'],
+    '/disclaimer.html':['Disclaimer','ရှင်းလင်းချက်'],
+    '/contact.html':['Contact','ဆက်သွယ်ရန်']
+  };
+  const links = Array.from(nav.querySelectorAll('a'));
+  links.forEach(a => {
+    const pair = navNames[new URL(a.href).pathname];
+    if (pair) { a.dataset.en = pair[0]; a.dataset.my = pair[1]; }
+  });
+  const titles = {"ဆက်သွယ်ရန်နှင့် ပြဿနာတင်ပြရန်": "ဆက်သွယ်ရန်နှင့် ပြဿနာတင်ပြရန်"};
+  const apply = lang => {
+    const isMy = lang === 'my';
+    document.documentElement.lang = isMy ? 'my' : 'en';
+    document.getElementById('main-en').hidden = isMy;
+    document.getElementById('main-my').hidden = !isMy;
+    links.forEach(a => { if (a.dataset.en) a.textContent = isMy ? a.dataset.my : a.dataset.en; });
+    document.querySelectorAll('[data-footer-en]').forEach(el => el.hidden = isMy);
+    document.querySelectorAll('[data-footer-my]').forEach(el => el.hidden = !isMy);
+    en.setAttribute('aria-pressed', String(!isMy));
+    my.setAttribute('aria-pressed', String(isMy));
+    en.style.background = isMy ? '#074028' : '#f2b705';
+    en.style.color = isMy ? 'white' : '#19241e';
+    my.style.background = isMy ? '#f2b705' : '#074028';
+    my.style.color = isMy ? '#19241e' : 'white';
+    try { localStorage.setItem(key, lang); } catch {}
+  };
+  en.addEventListener('click', () => apply('en'));
+  my.addEventListener('click', () => apply('my'));
+  let initial = 'en';
+  try { initial = localStorage.getItem(key) === 'my' ? 'my' : 'en'; } catch {}
+  apply(initial);
+})();
+</script>
 </body>
 </html>
