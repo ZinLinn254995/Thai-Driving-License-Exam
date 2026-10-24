@@ -1480,3 +1480,54 @@ The remaining law-bank items need authoritative, item-by-item checking before be
 ### Still open
 
 The 74-question law category is not fully certified. Other penalties, deadlines, medical eligibility statements and image-based right-of-way/parking answers require item-by-item source verification. The current findings are documentation-only; no question content or answer key has been changed, and no deployment was made.
+
+
+## Traffic-law category — penalty, inspection-age and medical-eligibility follow-up (2026-10-25)
+
+This follow-up checks the current legal scope of the stored answers. Findings below are documentation-only; they do not change question data or answer keys.
+
+### Penalties and vehicle inspection
+
+- **Q134 / source question 17 — drink-driving penalty:** the keyed penalty (imprisonment up to one year, a fine of THB 5,000–20,000, or both) matches published Thai government / Senate summaries for the ordinary first-offence penalty. However, the stem does not say “first offence,” and repeat offences within two years carry substantially higher penalties. Treat the answer as **supported for a first offence, but the question scope is incomplete** unless the source curriculum explicitly intends the first-offence rule. The alcohol threshold itself also varies by driver category; do not imply one BAC limit applies to everyone.
+  - Thai Senate summary: https://www.senate.go.th/view/386/News/Latest/248/TH-TH.html
+  - Thai Government PRD threshold guidance: https://thailand.prd.go.th/en/content/category/detail/id/52/iid/326520
+- **Q139 / source question 22 — driving without a licence:** the keyed maximum of one month’s imprisonment or a fine up to THB 1,000, or both, is supported by Motor Vehicle Act section 64 as reproduced with attribution to the Office of the Council of State. This is not flagged as a confirmed answer defect. Be careful not to conflate “no licence” with driving a vehicle class not covered by the licence, which may involve a different legal issue.
+  - Legal reference: https://lawplayer.com/th/article/pythainlp_7ee39f450847b669/p0-0092
+- **Q140 / source question 23 — temporary private driving licence validity:** the keyed answer “2 years” is supported by the Department of Land Transport’s licensing regulation materials, which describe the temporary private licence as valid for two years. Not flagged as a confirmed defect.
+  - DLT legal regulation: https://legal.dlt.go.th/gen2/article/515
+- **Q142 / source question 25 and Q136 / source question 19 — vehicle-inspection age:** current DLT e-service guidance says private cars and private trucks in the listed categories require inspection when they are **over 7 years** from first registration, and motorcycles when **over 5 years**. The stored keys (7 years for cars; 5 years for motorcycles) match the commonly taught thresholds, but the Thai wording “ครบกี่ปี” (“reaches how many years”) may be read as exactly at the threshold rather than older than it. Review the wording against the official syllabus before editing; this is a precision/wording caveat, not a confirmed wrong answer.
+  - Official DLT e-service: https://eservice.dlt.go.th/esvapp/esv/ebk/condition/index.jsf
+- **Q135 / source question 18 — late annual vehicle-tax surcharge of 1% per month:** Thai, English and Myanmar are aligned, but this pass did not locate a sufficiently direct current primary legal source for the exact calculation and any cap/rounding conditions. Mark **pending authoritative verification**, not verified or disproved.
+
+### Medical-condition and disability items — high-risk overgeneralization review
+
+The following records contain broad medical statements. They should not be treated as medical advice or as proof that a diagnosis automatically disqualifies a person from every licence category. The DLT licensing framework requires a medical certificate, provides for licence conditions for some applicants with disabilities, and includes specific assessment criteria; therefore, categorical “in any case” claims need an explicit current rule or authoritative medical/licensing source.
+
+- **Q168 / source question 51 — coronary artery disease:** keyed “should avoid” is advice-like wording rather than a clearly stated legal eligibility rule. Needs a reliable medical/licensing source and clearer scope.
+- **Q170 / source question 53 — irregular heartbeat:** the keyed conditional answer (“yes, if no symptoms affect vehicle control”) is more qualified than a blanket prohibition, but still needs a reliable medical source.
+- **Q171 / source question 54 — physical disability and licence eligibility:** the keyed answer is broadly consistent with the framework that considers whether a disability prevents safe driving and may impose individual licence conditions. Do not reduce this to an automatic diagnosis-based exclusion.
+- **Q172 / source question 55 — loss of one eye:** the keyed “yes” is conditional on an ophthalmologist confirming normal vision. DLT materials include specific visual assessment criteria for a person blind in one eye; verify the exact standard and any licence conditions before treating this as fully validated.
+- **Q173 / source question 56 — epilepsy:** “No, in any case” is an absolute claim and is **not validated by the sources reviewed in this pass**. Requires current DLT/medical rule verification before publication as a universal prohibition.
+- **Q174 / source question 57 — diabetes:** the keyed answer is conditional on absence of fainting/vehicle-control risks, but the condition and wording need authoritative medical/licensing validation.
+- **Q175 / source question 58 — impaired vision in one eye:** “private vehicles only” needs confirmation against the current DLT visual standards and any licence restrictions; not verified in this pass.
+- **Q176 / source question 59 — a person unable to speak:** keyed “yes” is not independently verified here; ensure the question does not confuse speech impairment with hearing impairment or other driving-relevant functional requirements.
+- **Q177 / source question 60 — previous heart surgery or myocardial ischemia:** “No, in any case” is broad and not validated by the sources reviewed. Requires current medical/licensing guidance; do not present it as a universal rule without a specific authoritative basis.
+- **Q178 / source question 61 — gingivitis:** the keyed answer is a simple contrast option, but the question’s “which disease permits driving?” format is medically simplistic. Confirm it is an authentic source-bank question and not a substitute for individual fitness assessment.
+- **Q179 / source question 62 — loss of right arm:** the keyed answer requires demonstrating control of the vehicle to the official. DLT rules permit individual licence conditions for applicants with physical disabilities, so this is plausible in principle; the precise assessment/vehicle adaptations still require source confirmation.
+- **Q180 / source question 63 — muscle weakness:** “No, in any case” is absolute and not validated by the sources reviewed. Needs current medical/licensing guidance.
+- **Q181 / source question 64 — chest pain suspected to be heart-related:** the safe-driving recommendation not to drive during possible acute cardiac symptoms is reasonable as immediate safety advice, but “No, in any case” should not be presented as a permanent legal eligibility rule. The item needs clearer temporal scope and an authoritative health source.
+- **Q182 / source question 65 — brain cancer:** seizure risk may be relevant, but “no” based on diagnosis alone is overbroad unless a current rule specifically supports it. Needs medical/licensing source verification.
+- **Q183 / source question 66 — Parkinson’s disease:** the keyed “No” is diagnosis-based and lacks severity/function context. Requires authoritative medical/licensing verification before it can be treated as a universal rule.
+
+Relevant DLT references:
+- Licensing regulation (including application/renewal requirements): https://legal.dlt.go.th/gen2/article/515
+- DLT licensing procedure/assessment regulation: https://legal.dlt.go.th/gen2/article/538
+- DLT assessment notice mentioning specific criteria for applicants blind in one eye: https://legal.dlt.go.th/repository/attachments/475_2020120301.pdf
+
+### Status and safeguards
+
+- Confirmed supported within stated scope: Q134 first-offence penalty; Q139 no-licence penalty; Q140 temporary licence validity.
+- Supported threshold, but wording precision needs review: Q136 motorcycle inspection age; Q142 car inspection age.
+- Pending exact legal-source verification: Q135 late-tax surcharge.
+- High-priority medical-source review: Q168, Q170–Q183, especially categorical prohibitions in Q173, Q177, Q180, Q182 and Q183.
+- No question JSON, translations, answer keys, image mappings, runtime code, main branch or live deployment changed.
