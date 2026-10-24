@@ -317,25 +317,25 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-auto border-t border-slate-200/80 bg-white/70 py-4 text-center text-xs text-slate-500 font-myanmar">
+      {/* Footer: concise, touch-friendly links to essential site information. */}
+      <footer className="mt-auto border-t border-slate-200/80 bg-white/90 py-4 text-center text-xs text-slate-600">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div>{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</div>
-          <div className="flex items-center gap-3 text-[11px] font-sans">
-            <span className="text-[#0b5d3b] font-bold">Practice target: 90% (not an official pass mark)</span>
-            <span>·</span>
-            <span className="text-slate-600">Independent practice resource</span>
-          </div>
+          <p className="m-0">{`Driving License Practice · ${QUESTIONS_BANK.length} Questions`}</p>
+          <p className="m-0 text-xs">
+            <span className="font-semibold text-[#0b5d3b]">Practice target: 90%</span>
+            <span className="mx-1.5">·</span>
+            <span>Not an official pass mark</span>
+          </p>
         </div>
-        <nav aria-label="Site information" className="max-w-4xl mx-auto px-4 mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 font-sans text-[11px]">
-          <a href="/study-guide.html" className="underline hover:text-slate-900">Study Guide</a>
-          <a href="/faq.html" className="underline hover:text-slate-900">FAQ</a>
-          <a href="/about.html" className="underline hover:text-slate-900">About</a>
-          <a href="/privacy.html" className="underline hover:text-slate-900">Privacy</a>
-          <a href="/disclaimer.html" className="underline hover:text-slate-900">Disclaimer</a>
-          <a href="/contact.html" className="underline hover:text-slate-900">Contact / Report an issue</a>
+        <nav aria-label="Site information" className="max-w-4xl mx-auto px-3 mt-2 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 font-sans text-xs">
+          <a href="/study-guide.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Study Guide</a>
+          <a href="/faq.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">FAQ</a>
+          <a href="/about.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">About</a>
+          <a href="/privacy.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Privacy Policy</a>
+          <a href="/disclaimer.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Disclaimer</a>
+          <a href="/contact.html" className="inline-flex min-h-10 items-center rounded-md px-2 underline underline-offset-4 decoration-slate-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Contact / Report an issue</a>
         </nav>
-        <p className="mt-2 px-4 text-[10px] text-slate-500 font-sans">
+        <p className="max-w-4xl mx-auto mt-2 px-4 text-[11px] leading-relaxed text-slate-600 font-sans">
           Independent study resource; not affiliated with Thailand’s Department of Land Transport.
         </p>
       </footer>
