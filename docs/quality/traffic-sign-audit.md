@@ -626,3 +626,36 @@ This section records what can be supported by the official Thai manuals found in
 
 ### Change control
 - These are audit findings only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment was modified.
+
+
+## Follow-up: Thai legal definition and scenario-language findings (2026-10-25)
+
+### Q95 — earlier mismatch concern narrowed after checking the regulation text
+- The Thai ministerial regulation published in the Royal Gazette defines warning sign ต.49 “สิ้นสุดทางคู่” as: the road ahead becomes a junction/road without a median or other separator between opposing directions; drivers should keep left.
+- Q95's keyed Thai phrase “ทางร่วมไม่มีเกาะ” corresponds closely to that legal definition. This means the key phrase is **not inherently wrong**; the remaining issue is whether the actual Q95 graphic is the official ต.49 sign and whether the English “junction without traffic island” accurately conveys “end of divided road.”
+- Status: **text supported by the regulation; exact image-to-sign identification still needs final comparison**. The previous note treating the central-island appearance as a likely contradiction is downgraded, not treated as confirmed error.
+- Official Royal Gazette / DOH-hosted regulation PDF: https://network.doh.go.th/km-web/storage/km/articles/กฎกระทรวง-ป้ายจราจร%202563_20220614151840.pdf
+
+### Q100 — Myanmar correct option is too specific
+- Current keyed Thai says prepare to give way when reaching the give-way sign; English says “prepare to yield at yield sign.” Myanmar says “give priority to the vehicle ahead.”
+- The Myanmar wording narrows the recipient to a vehicle directly ahead, which is not stated in the Thai/English key.
+- Status: **confirmed translation scope mismatch**. Candidate meaning: “အရှိန်လျှော့ပါ။ လမ်းပေးဆိုင်းဘုတ်သို့ ရောက်သည့်အခါ လမ်းပေးရန် အသင့်ပြင်ပါ။” This preserves the current key's wording without introducing a new recipient. Not applied.
+
+### Q94 — side-road warning translation loses the side/direction detail
+- Correct Thai/English says a side road joins from the left ahead; Myanmar currently says a side junction/branch is ahead, omitting “from the left.”
+- Status: **confirmed translation information loss**. Candidate meaning: “အရှိန်လျှော့ပြီး သတိထားမောင်းနှင်ပါ။ ရှေ့ဘက် ဘယ်ဘက်မှ လမ်းခွဲတစ်ခု ပေါင်းဝင်လာမည်။” Confirm sign terminology with a fluent Myanmar road-safety translator before release. Not applied.
+
+### Q533 — “give way” mistranslated as moving toward the pickup
+- Thai correct option says “ชะลอรถเพื่อให้ทางรถกระบะ” (slow down to give way to the pickup truck). English says “Slow down to give way to the pickup truck.” Myanmar says “ပစ်ကပ်ထရပ်ကားဆီသို့ အရှိန်လျှော့ပါ” (slow down toward the pickup truck), losing the yielding action.
+- Status: **confirmed Myanmar translation error**. Candidate meaning: “ပစ်ကပ်ထရပ်ကားကို လမ်းပေးရန် အရှိန်လျှော့ပါ။” Not applied.
+
+### Q535 — English and Myanmar scenario wording is unclear
+- Thai keyed option “รถบัสแทรกเลนซ้าย” means a bus cuts/merges into the left lane. Current English “Bus inserted into left lane” is unnatural; Myanmar “ဘတ်စ်ကားကို ဘယ်ဘက်လမ်းကြားတွင် ထည့်သွင်းထားသည်” reads as someone placing a bus into a lane, not a driving event.
+- Status: **confirmed clarity/translation issue**, but check the image and original scenario source before deciding whether the intended event is “bus merges into the left lane” or “bus cuts in.” Not applied.
+
+### Q536 — Myanmar question stem does not express the English task
+- English asks “which is not a dangerous event that may happen to Car A?” Myanmar currently reads roughly “in the picture, which can happen to Car A?” and loses the negative “not dangerous” criterion.
+- Status: **confirmed high-priority question-stem translation error** because it can reverse how the learner chooses an answer. Candidate meaning: “ပုံအရ ကား A အတွက် ဖြစ်လာနိုင်သည့် အန္တရာယ်ရှိသော အခြေအနေ မဟုတ်သည့်အရာမှာ မည်သည့်အရာနည်း။” Have a fluent reviewer validate naturalness before publishing. Not applied.
+
+### Change control
+- All above are audit findings only. No question JSON, answer key, translation, image, image mapping, runtime code, main branch, or live deployment changed.
