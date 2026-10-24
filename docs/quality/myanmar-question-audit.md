@@ -438,3 +438,27 @@ Clear/high-priority Myanmar issues:
 Broadly aligned in this sample: IDs 242–243 (low gear), 244 (reduce speed while revving slightly as described by the source), 248 (rest adequately), 249 (driver), 252 (increased load weight), and 253 (do not use the handbrake while driving downhill). The technical advice in IDs 244 and 247 has not been independently verified against an authoritative driving source.
 
 **Batch result:** IDs 241–255 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
+
+
+### Safe-driving manual review — IDs 256–270 — 2026-10-24
+
+Reviewed stems and all four options in the separate safe-driving JSON against Thai and English. No question data edits were made; this generated copy still needs reconciliation with the runtime bank before edits.
+
+Clear/high-priority Myanmar issues:
+- **ID 258, option 3:** English answer is “No”; Myanmar `မရှိ` means “there is none/does not exist,” not a clear yes/no response. Translate as an unambiguous “မဟုတ်ပါ” (or the project’s standard “မဟုတ်ပါဘူး”). Keyed option 4 (“Yes”) is rendered as `ဟုတ်ကဲ့` and is understandable.
+- **ID 260, stem/options:** The stem is broadly aligned. Option 4’s source says overtaking may be allowed when the vehicle ahead signals left and slows down; Myanmar is broadly aligned, though the wording could be clearer. Option 1 is the keyed incorrect behavior and its Myanmar meaning is aligned.
+- **ID 261, stem:** Thai asks which factor does not need to be considered when assessing an accident; Myanmar says “what does not need to be considered” but is phrased as “nothing needs to be considered,” which may imply no factors at all. Clarify the singular choice structure.
+- **ID 264, option 2 (keyed correct):** Myanmar is aligned with the source’s instruction to drive slowly while applying the brakes gradually. However, this is technical advice for water-affected brakes and should be checked against an authoritative safety source before publication as guidance.
+- **ID 268, correct option 4:** Source marks “turn on emergency lights” as the answer for a vehicle fire inside a tunnel when it cannot continue. Myanmar accurately translates that option, but the keyed response appears incomplete as emergency advice; verify the full official procedure before presenting this as the sole correct action.
+- **ID 269, option 4 (correct):** Thai/English say older pedestrians may misjudge vehicle speed. Myanmar’s phrase `ယာဉ်၏အရှိန်ကို လွဲမှားစေနိုင်` can read as the elderly person causing the vehicle’s speed to be wrong, rather than misjudging it. Rephrase to explicitly say they may misjudge how fast the vehicle is approaching.
+- **ID 270, option 2:** The English source is fragmented (“Drive for a short distance. To observe…”); Myanmar follows that unsafe/unclear advice. It is a distractor, not the keyed answer, but should not be rewritten into endorsed guidance without reviewing source intent.
+- **ID 256, option 4:** English source has a malformed/illogical explanation about driving fast to avoid being rear-ended; Myanmar faithfully reflects the confusion. Keep as a flagged source-quality issue rather than guessing at intended text.
+- **ID 257, option 4:** Thai/English refer to overtaking on the left; Myanmar “ဘယ်ဘက်ခြမ်းက ယာဉ်မောင်းတွေကို မကျော်ပါနဲ့” literally says do not overtake drivers on the left side. It is understandable but should be normalized to “do not overtake on the left” after checking the applicable Thai road rule.
+- **ID 259, stem:** Myanmar says “heavy vehicle” rather than “vehicle carrying a heavy load.” The intended load-weight scenario should be made explicit.
+- **ID 265, option 2:** Myanmar second-person pronouns and agent are confused; the source describes flashing lights and overtaking, but the option is not keyed. Clarify the actor if retaining this distractor.
+- **ID 267, option 2:** The English is a fragment and Myanmar says the brakes stop the car, rather than giving the driver an instruction to brake/stop. It is a distractor but should be grammatically aligned.
+- **IDs 256–270, stems:** leading `)` / `၎)` artifacts persist in the generated records. Do not remove them in the generated copy alone.
+
+Broadly aligned in this sample: IDs 256–257’s keyed answer concepts, 259’s increased braking distance under heavy load, 262’s insufficient nighttime visibility, 263’s emergency-light/left-side stopping response, 266’s stop behind the line then edge forward carefully, and 270’s keyed advice to check the medicine label. This linguistic review does not independently validate every answer key or safety rule.
+
+**Batch result:** IDs 256–270 reviewed; findings recorded only. No question data, answer keys, images, runtime files, main branch, or deployment changed.
