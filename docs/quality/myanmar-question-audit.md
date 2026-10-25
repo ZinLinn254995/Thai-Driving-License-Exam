@@ -1568,3 +1568,18 @@ This pass located more authoritative material for some medical/disability questi
 ### Scope and safeguards
 
 This pass reviewed official DLT and Department of Disease Control material and a reproduced DLT disability-licensing regulation. It has not established the complete current legal position for every condition, and it does not validate every keyed option. No question JSON, translations, answer keys, image mappings, runtime code, main branch or live deployment changed.
+
+
+## Current licence-renewal procedure update — 2025 ministerial amendment and DLT guidance (2026-10-25)
+
+A further check found a later official rule that should be considered when auditing any question or explanatory page about licence renewal and fitness tests. This is a procedural update; it does **not** by itself settle the separate medical-eligibility answers in Q168–Q183.
+
+- The Royal Gazette published the Ministerial Regulation on Driving Licence Applications and Renewals (No. 2), B.E. 2568 (2025), on 5 September 2025. It takes effect 180 days after publication. It amends the renewal procedure so that applicants **over 55 years old** or whose licence has been expired **for more than one year** must undergo the specified physical-fitness tests; the amended process also addresses electronic renewal applications.
+  - Royal Gazette PDF: https://ratchakitcha.soc.go.th/documents/84596.pdf
+  - Document catalogue record: https://sciinfo.dss.go.th/products/detail/1275/4
+- In June 2026, the Department of Land Transport publicly clarified the current fitness-test procedure: colour-vision testing applies to first-time applicants, not renewals; renewal applicants aged 55 or younger whose licence has not expired for more than one year are exempt from the foot-reaction test but still undergo the stated near/far-depth and wide-field vision checks; applicants over 55 or whose licence has expired for more than one year continue to take the foot-reaction and specified vision tests.
+  - Department of Public Relations carrying the DLT announcement (20 June 2026): https://narathiwat.prd.go.th/th/content/category/detail/id/9/iid/514537
+- **Audit consequence:** any question or site guide that says all renewals require the same set of fitness tests, or that colour-vision testing is required for every renewal, needs to be checked against this newer procedure. Do not infer from these renewal-test exemptions that a person with a medical condition is automatically eligible; medical-certificate and safe-driving requirements remain a separate issue.
+- **Scope note:** this is a source-backed legal/procedure update, not a claim that a specific question-bank record has already been identified as wrong. The question stems and answer options about renewal still need a direct record-by-record comparison before proposing a content edit.
+
+No question content or answer key was changed. This audit note was added on the audit branch only; no runtime code, image mapping, main branch, or live deployment was changed.
