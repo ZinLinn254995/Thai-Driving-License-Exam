@@ -1540,3 +1540,31 @@ A subsequent targeted search located a Department of Land Transport-hosted legal
 - Related legal-text reproduction: https://legal.dlt.go.th/gen2/app/api/legal-download.php?download=1&file=article_20190808_113355_52b211bb.pdf
 
 No question content or answer key was changed.
+
+
+## Medical eligibility follow-up — official DLT and public-health sources (2026-10-25)
+
+This pass located more authoritative material for some medical/disability questions. It narrows several earlier findings but does **not** certify the whole medical-question set.
+
+### Findings supported by official-source wording
+
+- **Q173 / source question 56 — epilepsy:** the keyed Myanmar/English answer says “No, in any case.” The Department of Disease Control (Ministry of Public Health) says epilepsy can pose a driving danger when seizures are **not controlled**, and discusses a medical certificate under the Medical Council's standard form. This does not support the question's blanket wording that every person with epilepsy is prohibited in every circumstance. Mark this as a **confirmed overgeneralization in the current answer wording**; revise only after checking the current Medical Council form and DLT assessment requirements. Do not infer that every person with epilepsy is fit to drive.
+  - Department of Disease Control: https://www.ddc.moph.go.th/brc/news.php?deptcode=brc&news=22002
+  - Thai Medical Council standard medical certificate: https://tmc.or.th/download/Medical_Certificate_EN%20%2813-5-64%29.pdf
+- **Q172 / source question 55 — loss of one eye:** the DLT disability-licensing regulation expressly provides an assessment path for a person blind in one eye, including visual-acuity/visual-field checks, an ophthalmologist’s report, and licence conditions. The keyed “Yes, if an ophthalmologist confirms normal vision” is directionally consistent that driving is not automatically prohibited, but is **incomplete** because “normal vision” alone does not convey the full criteria. Candidate source-faithful direction: “May be eligible if the DLT’s required vision tests and specialist documentation are satisfied; licence conditions may apply.” Confirm the exact exam curriculum before editing the quiz.
+  - DLT disability-licensing regulation (text reproduction): https://lawplayer.com/th/act/pythainlp_a5503516cb799fc5
+- **Q171 / source question 54 and Q179 / source question 62 — physical disability:** the DLT disability-licensing regulation provides for an individual assessment of whether the applicant can safely control the vehicle, and can specify restrictions or adapted-vehicle conditions. These records should not imply that a diagnosis or limb loss automatically determines eligibility. Q179’s keyed answer requiring demonstration of vehicle control is broadly consistent with that framework, but the exact procedure and any adaptation requirements still need to match the official exam source.
+  - DLT disability-licensing regulation: https://lawplayer.com/th/act/pythainlp_a5503516cb799fc5
+- **General rule for Q168–Q183:** the DLT’s 2021 licensing procedure requires a medical certificate under the Medical Council’s standard. The certificate asks the physician to assess whether a disease or condition could be dangerous while driving. This is a clinical fitness assessment, not evidence that every diagnosis listed in this question bank is automatically a permanent legal bar.
+  - DLT licensing procedure: https://legal.dlt.go.th/gen2/article/538
+  - Medical Council certificate: https://tmc.or.th/download/Medical_Certificate_EN%20%2813-5-64%29.pdf
+
+### Items still not certified
+
+- **Q168 coronary artery disease, Q170 irregular heartbeat, Q174 diabetes, Q175 vision impairment in one eye, Q176 speech impairment, Q177 prior heart surgery/myocardial ischemia, Q178 gingivitis, Q180 muscle weakness, Q181 chest pain suspected to be cardiac, Q182 brain cancer, Q183 Parkinson’s disease:** available general medical-certificate rules do not determine each answer. These require condition-specific authoritative medical guidance or the exact official examination syllabus. Avoid diagnosis-only absolute statements; distinguish an immediate “do not drive while symptomatic” safety instruction from a permanent licence-eligibility rule.
+- **Q172:** criteria are more specific than the existing answer states; do not silently simplify them to “normal vision.”
+- No clinical advice is being offered here. This is a content-accuracy audit of quiz statements.
+
+### Scope and safeguards
+
+This pass reviewed official DLT and Department of Disease Control material and a reproduced DLT disability-licensing regulation. It has not established the complete current legal position for every condition, and it does not validate every keyed option. No question JSON, translations, answer keys, image mappings, runtime code, main branch or live deployment changed.
