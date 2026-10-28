@@ -38,8 +38,9 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 
 ### Q129 — parking distance
 - Current keyed answer is no more than 25 cm from the curb.
-- Existing audit note associates this with Land Traffic Act B.E. 2522, section 54, but the cited page is not an official government publication: https://lawplayer.com/th/act/pythainlp_f36542870dba846f
-- Status: **Prior supporting reference exists; primary official legal text still preferred for final verification.**
+- Primary-source follow-up: a copy of the Road Traffic Act B.E. 2522 hosted on a Royal Thai Police metropolitan-station website reproduces section 54, requiring the left side of the vehicle to be parallel and close to the curb/road shoulder at a distance **not exceeding 25 centimetres** (subject to the statutory exceptions in that section): https://chanasongkhram.metro.police.go.th/pdf/%E0%B8%81%E0%B8%A1/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4-%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%ก-2522.pdf
+- Finding: **the 25 cm value is supported by the text of section 54**. The question's short wording omits the left-side/parallel positioning and exceptions, but its numeric answer matches the cited law.
+- Status: **Answer value supported; no content change made.**
 
 ### Q132 — “most common cause” of accidents
 - Thai and English stems make a broad superlative claim; speeding is keyed as the answer.
@@ -48,17 +49,21 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 
 ### Q134 — drink-driving penalty
 - The stem asks the penalty when alcohol exceeds the legal limit; the keyed option gives imprisonment up to one year or a 5,000–20,000 baht fine, or both.
-- The stem does not state first offence, repeat offence, injury/death, or other circumstances. This pass did not establish the current primary statutory text for all relevant scenarios.
-- Status: **Penalty context incomplete; current statutory applicability still needs primary-source verification.**
+- The stem does not state first offence, repeat offence, injury/death, or other circumstances. A Royal Thai Police-hosted explanation of the 2022 Road Traffic Act amendment describes first-offence penalties as imprisonment up to 1 year and/or a 5,000–20,000 baht fine, while repeat offending within two years has a higher penalty: https://ratchasan.chachoengsao.police.go.th/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%9A/
+- This supports the keyed penalty as a **first-offence summary**, but the question does not say first offence and does not clarify aggravated circumstances (such as causing injury or death). The cited page is a police-hosted explanation, not the consolidated statutory text itself.
+- Status: **Partially corroborated; question context is incomplete and primary statutory wording still needs checking.** Do not change without approval.
 
 ### Q146 — positioning before a left turn
-- Existing audit note links the 30 m answer to section 51, while acknowledging that the stem is a simplified teaching summary.
-- The existing cited law page is not an official government publication: https://lawplayer.com/th/act/pythainlp_f36542870dba846f
-- Status: **Prior supporting reference exists; primary official legal text and exact applicability remain to be confirmed.**
+- Section 51 of the Road Traffic Act is commonly associated with giving a turn signal in advance; the police-hosted Act copy found in this pass did not establish that a driver must move into the left lane specifically 30 metres before turning left. The 30 m figure may have been conflated with the separate requirement to signal before turning.
+- The current question asks about **lane positioning**, not clearly about signalling. The current evidence does not establish that its exact claim is supported by section 51.
+- Status: **Potential legal-concept mismatch; exact 30 m lane-positioning requirement remains unverified.** Do not change the answer key without further primary-source checking.
 
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127 has a clear question/measurement-unit mismatch, but its correct replacement is not established.
 - Q125: an official DLT-hosted law supports a 15-day notice period for **ownership transfer**, but not the current “moving/relocating” wording; this is a likely source/terminology mismatch requiring further tracing.
-- Q132, Q134, Q129, and Q146 remain open as described above.
+- Q129: section 54 text hosted by a Royal Thai Police station supports the 25 cm answer value.
+- Q134: the first-offence penalty is corroborated by a police-hosted explanation, but the question lacks offence context and needs statutory-text checking.
+- Q146: possible confusion between 30 m advance signalling and lane positioning; exact claim remains unverified.
+- Q132 remains open as described above.
 - This addendum records findings only. No quiz content or answer key was changed.
