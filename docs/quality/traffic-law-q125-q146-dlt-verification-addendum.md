@@ -44,8 +44,10 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 
 ### Q132 — “most common cause” of accidents
 - Thai and English stems make a broad superlative claim; speeding is keyed as the answer.
-- No dataset, geography, time period, or official statistical source was verified in this pass.
-- Status: **Unverified statistical generalization.**
+- Official ThaiHealth Foundation (สสส.) reporting on Thailand's 2024 Songkran “seven dangerous days” says speeding accounted for 41.49% of recorded crashes, ahead of drink-driving (22.7%) and cutting in too closely (18.1%): https://www.thaihealth.or.th/%E0%B8%A3%E0%B8%93%E0%B8%A3%E0%B8%87%E0%B8%84%E0%B9%8C-%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%82%E0%B8%B1%E0%B8%9A-%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%86%E0%B8%B2%E0%B8%95%E0%B8%81%E0%B8%A3/
+- ThaiHealth reporting on the New Year 2025 holiday period also identifies speeding as the largest reported cause share (38.90%), followed by drink-driving (23.16%) and cutting in too closely (17.96%): https://www.thaihealth.or.th/p/0pkAS2pWR
+- Finding: these sources support speeding as the leading **reported cause during the specified holiday monitoring periods**, but do not prove that it is the single most common cause for all Thai road crashes across all periods and datasets. The quiz stem is broader than the evidence.
+- Status: **Supported in defined holiday-period statistics; overgeneralized as written.** Do not change the stem or answer key without approval.
 
 ### Q134 — drink-driving penalty
 - The stem asks the penalty when alcohol exceeds the legal limit; the keyed option gives imprisonment up to one year or a 5,000–20,000 baht fine, or both.
@@ -65,5 +67,5 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q129: section 54 text hosted by a Royal Thai Police station supports the 25 cm answer value.
 - Q134: the first-offence penalty is corroborated by a police-hosted explanation, but the question lacks offence context and needs statutory-text checking.
 - Q146: possible confusion between 30 m advance signalling and lane positioning; exact claim remains unverified.
-- Q132 remains open as described above.
+- Q132: speeding is the leading reported cause in the specific Songkran 2024 and New Year 2025 holiday statistics found, but the quiz's unqualified “most common” claim is broader than those sources support.
 - This addendum records findings only. No quiz content or answer key was changed.
