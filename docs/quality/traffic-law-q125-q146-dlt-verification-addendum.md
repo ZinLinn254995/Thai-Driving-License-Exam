@@ -32,8 +32,9 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 ### Q125 — `การย้ายรถ`
 - Current Thai wording literally refers to moving/relocating a vehicle and notifying the registrar within how many days.
 - English “moving/transferring” and Myanmar “ယာဉ်ပြောင်းရွှေ့” can conflate relocation with ownership transfer.
-- No authoritative source establishing the intended procedure and the 15-day period was confirmed in this pass.
-- Status: **Uncertain — source and legal procedure still required.**
+- New official-source check: a DLT-hosted copy of the Land Transport Act B.E. 2522 states in section 82 that the transferor and transferee of a registered vehicle must notify the registrar within 15 days **from the date of transfer**: https://gps.dlt.go.th/wp-content/uploads/2025/01/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87-%E0%B8%9E.%E0%B8%A8.-2522.pdf
+- That 15-day rule is for **ownership transfer** (`วันโอน`), not enough to prove the current stem's `การย้ายรถ` (“moving/relocating a vehicle”) wording. The Thai stem may be using the wrong procedure term, while English “transferring” risks implying ownership transfer.
+- Status: **Evidence narrows the issue but does not validate the current question as written.** Keep 15 days as a possible answer only for an ownership-transfer question; do not change stem, translation, or key without approval.
 
 ### Q129 — parking distance
 - Current keyed answer is no more than 25 cm from the curb.
@@ -58,5 +59,6 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127 has a clear question/measurement-unit mismatch, but its correct replacement is not established.
-- Q125, Q132, Q134, Q129, and Q146 remain open as described above.
+- Q125: an official DLT-hosted law supports a 15-day notice period for **ownership transfer**, but not the current “moving/relocating” wording; this is a likely source/terminology mismatch requiring further tracing.
+- Q132, Q134, Q129, and Q146 remain open as described above.
 - This addendum records findings only. No quiz content or answer key was changed.
