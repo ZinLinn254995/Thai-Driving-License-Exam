@@ -1,4 +1,4 @@
-# Traffic-law audit addendum — traffic-law source checks (Q125–Q152)
+# Traffic-law audit addendum — traffic-law source checks (Q125–Q153)
 
 Branch: `audit/myanmar-question-verification` only  
 Scope: documentation-only evidence follow-up. No question data, answer keys, translations, or images changed.
@@ -107,6 +107,14 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Finding: **the principle that a driver's action follows the controlling officer's instruction is supported**. The question's scenario depends on the officer actually authorizing that specific manoeuvre; it is not a general right to ignore signs independently.
 - Status: **Answer supported with scenario caveat.** No question data changed.
 
+
+### Q153 — rear cargo projection limit
+- Thai stem is broad: “When carrying cargo, what must the driver comply with?” The keyed answer says a load may project no more than **2.50 metres beyond the rear**.
+- Ministerial Regulation No. 4 (B.E. 2522) under the Road Traffic Act sets that 2.50 m limit for specified vehicles, including cars, trailers, school buses, trucks, and passenger-carrying vehicles. For other vehicle types listed in the same regulation, the permitted rear projection can be only **0.50 m**: https://lawplayer.com/th/act/ocs-%E0%B8%970006-2B-0034
+- Road Traffic Act section 15 separately requires a red light at night or red flag by day on cargo extending beyond the vehicle body, visible at least 150 metres; that marking rule does not itself make 2.50 m permissible for every vehicle: https://deka.in.th/laws/%E0%B8%880003-1b-0001/15
+- Finding: **2.50 m is supported only for the regulation's specified vehicle categories**, while the question gives no vehicle category. The keyed option may be intended for a car/truck, but as written the question overgeneralizes.
+- Status: **Conditional answer; vehicle-category caveat required.** Do not change question data without approval.
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -119,4 +127,5 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q149: answer is directionally consistent with road markings, but safe overtaking and all other restrictions still apply.
 - Q150: public parks is the likely intended choice by exclusion; section 14 does not grant blanket permission to sound the horn in parks.
 - Q151: 90 km/h is supported as a general-road default outside listed urban/community areas, but designated highways and posted signs can have different limits.
-- Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.
+- Q153: the 2.50 m rear-load projection limit applies to specified vehicle categories; the question does not identify the vehicle type.\n- This addendum records findings only. No quiz content or answer key was changed.
