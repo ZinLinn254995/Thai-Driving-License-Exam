@@ -1,4 +1,4 @@
-# Traffic-law audit addendum — traffic-law source checks (Q125–Q155)
+# Traffic-law audit addendum — traffic-law source checks (Q125–Q160)
 
 Branch: `audit/myanmar-question-verification` only  
 Scope: documentation-only evidence follow-up. No question data, answer keys, translations, or images changed.
@@ -128,6 +128,36 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - The keyed answer is vehicle ข (the red car). Without an authoritative source for the original diagram's intended road layout, I cannot confidently confirm that key from the image alone.
 - Status: **Image viewed; answer-key interpretation remains uncertain due to ambiguous road layout/marking.** No image, answer key, or question data changed. Keep flagged for later source/context review.
 
+### Q156 — seat-belt exemption
+- Thai stem asks who is exempt from wearing a seat belt. The keyed option says people exempted for medical reasons.
+- Road Traffic Act section 123, as amended, says a driver or passenger with a health reason that prevents wearing a seat belt is exempt from that requirement, but must use an alternative means of protection in an accident. The same section separately requires child restraints for children aged six or under and protection for passengers no taller than 135 cm: https://deka.in.th/laws/%E0%B8%880003-1b-0001/123
+- Finding: **the medical/health exemption is supported**, but “medical reasons” is broad; the statutory condition is that the health reason makes wearing the belt impossible, and alternative protection is still required.
+- Status: **Answer supported with important qualification.** No question data changed.
+
+### Q157 — yellow traffic light
+- Thai stem asks what to do when the signal turns yellow. The keyed option advises gently braking to warn traffic behind and preparing to stop.
+- Road Traffic Act section 22(1) says an amber/yellow light requires the driver to prepare to stop behind the stop line, except where the vehicle has already passed the stop line, in which case it may proceed: https://lawplayer.com/th/article/ocs-%E0%B8%880003-1B-0001/m-22
+- Finding: the keyed answer includes preparing to stop, but the instruction to brake gently to warn vehicles behind is not the statutory rule and could be unsafe if applied regardless of following distance/road conditions. The legal rule centres on preparing to stop and the stop-line exception.
+- Status: **Potential answer wording/concept mismatch; flag for later approved content review.** No question data changed.
+
+### Q158 — high blood pressure while taking medication
+- Thai stem asks whether a person with high blood pressure who is taking medication may drive; keyed answer is “can.”
+- The stem provides no information about blood-pressure control, symptoms, complications, medication side effects, or a clinician's assessment. The retrieved traffic-law materials do not establish a blanket rule that every person taking hypertension medication may drive in every circumstance.
+- Finding: Myanmar translation closely matches the Thai/English wording, but **the medical safety answer is overgeneralized and cannot be validated as an unconditional rule from the evidence checked**. This is a medical-fitness question, not one resolved simply by the traffic-law text.
+- Status: **Uncertain / medically overbroad; do not alter without a verified authoritative source and approval.** No question data changed.
+
+### Q159 — vehicle registration requirements
+- Thai stem asks what characteristics a vehicle must have to be registered. The keyed option requires complete/correct equipment and passing a vehicle inspection.
+- This wording combines two separate ideas: legally required vehicle equipment/condition and inspection requirements that vary by vehicle category and circumstances (for example, periodic inspection before annual tax for vehicles over specified ages). The DLT's e-service explains periodic inspection thresholds for particular vehicle categories: https://eservice.dlt.go.th/esvapp/esv/ebk/condition/index.jsf
+- Finding: required equipment and roadworthiness are relevant, but **the claim that every vehicle to be registered must first pass the same inspection is too broad without distinguishing first registration, transfer, and periodic inspection**.
+- Status: **Partially supported; registration scenario and vehicle category are underspecified.** No question data changed.
+
+### Q160 — overtaking across a solid line
+- Thai stem asks which overtaking manoeuvre a driver should avoid; keyed option is overtaking in a solid-line zone.
+- Road Traffic Act section 46 prohibits overtaking in specified dangerous/restricted circumstances, and section 21 requires drivers to follow traffic signs and markings. A solid centre line marks a restriction on crossing/overtaking under the applicable road-marking rules: https://lawplayer.com/th/act/ocs-%E0%B8%880003-1B-0001/m-46
+- Finding: **the keyed answer is consistent with the general prohibition on overtaking across a solid line**. Exact application still depends on the marking type and any legally applicable exception.
+- Status: **Answer supported in general; no data changed.**
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -143,4 +173,9 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.
 - Q153: the 2.50 m rear-load projection limit applies to specified vehicle categories; the question does not identify the vehicle type.
 - Q154: section 35 supports keeping a slow-moving vehicle as close to the left edge as practicable.
-- Q155: the diagram was visually reviewed; vehicle B is keyed correct, but the line/lane layout is ambiguous and the answer key remains unconfirmed.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q155: the diagram was visually reviewed; vehicle B is keyed correct, but the line/lane layout is ambiguous and the answer key remains unconfirmed.
+- Q156: health-based seat-belt exemption is supported only where the health condition prevents wearing a belt; alternative protection remains required.
+- Q157: yellow means prepare to stop, except after crossing the stop line; the keyed answer adds a potentially overgeneralized braking instruction.
+- Q158: blanket permission for a medicated hypertension patient to drive is not validated; medical fitness depends on individual condition and effects.
+- Q159: required equipment/roadworthiness is relevant, but the inspection requirement varies by registration scenario and vehicle category.
+- Q160: avoiding overtaking across a solid line is generally supported; marking type and exceptions matter.\n- This addendum records findings only. No quiz content or answer key was changed.
