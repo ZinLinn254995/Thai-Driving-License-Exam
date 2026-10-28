@@ -24,10 +24,10 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Status: **Answer value supported with wording/category caveat; do not edit without approval.**
 
 ### Q127 — breath alcohol wording and answer units
-- Thai stem explicitly asks about alcohol measured in exhaled breath.
-- The answer choices use `มิลลิกรัมเปอร์เซ็น` / `mg%`, a blood-alcohol concentration style unit, and the keyed answer is 50 mg%.
-- DLT legal material located during this pass mentions a 50 mg% blood-alcohol threshold in a draft legal document, but that does not resolve the stem/options unit mismatch or establish the applicable breath-test conversion for this question: https://legal.dlt.go.th/repository/attachments/486_2021083002.pdf
-- Status: **Confirmed internal wording/unit mismatch; correct threshold and intended measurement method remain unverified.** Do not change the key or wording yet.
+- Thai stem asks about alcohol detected by measuring exhaled breath, while the options express the result as `มิลลิกรัมเปอร์เซ็น` / `mg%` (blood-alcohol-equivalent units); the keyed answer is 50 mg%.
+- A police-hosted copy of the ministerial regulation on testing drivers for alcohol states that the breath-test device reads the blood-alcohol level in mg%, and that breath results are converted using a coefficient of 2,000. It also states the general blood-test threshold is **over 50 mg%**, with breath results compared against that blood-alcohol standard: https://sichon.nakhonsithammarat.police.go.th/wp-content/uploads/2024/02/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3.pdf
+- This means the `mg%` choices are not necessarily a technical unit error: the regulation reports a blood-alcohol-equivalent result from breath testing. However, the stem's phrasing “maximum permissible” and the answer “50 mg%” are imprecise because the general rule is **over 50 mg% is deemed intoxicated**, not “must not exceed 50” in a way that clarifies the boundary; special categories can have lower thresholds. The exact applicability to the source question's intended driver category should be checked.
+- Status: **Measurement method clarified; wording/boundary and driver-category caveats remain.** Do not change the key or wording without approval.
 
 ### Q125 — `การย้ายรถ`
 - Current Thai wording literally refers to moving/relocating a vehicle and notifying the registrar within how many days.
@@ -62,7 +62,7 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
-- Q127 has a clear question/measurement-unit mismatch, but its correct replacement is not established.
+- Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
 - Q125: an official DLT-hosted law supports a 15-day notice period for **ownership transfer**, but not the current “moving/relocating” wording; this is a likely source/terminology mismatch requiring further tracing.
 - Q129: section 54 text hosted by a Royal Thai Police station supports the 25 cm answer value.
 - Q134: the first-offence penalty is corroborated by a police-hosted explanation, but the question lacks offence context and needs statutory-text checking.
