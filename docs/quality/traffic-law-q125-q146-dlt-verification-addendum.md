@@ -33,9 +33,10 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 ### Q125 — `การย้ายรถ`
 - Current Thai wording literally refers to moving/relocating a vehicle and notifying the registrar within how many days.
 - English “moving/transferring” and Myanmar “ယာဉ်ပြောင်းရွှေ့” can conflate relocation with ownership transfer.
-- New official-source check: a DLT-hosted copy of the Land Transport Act B.E. 2522 states in section 82 that the transferor and transferee of a registered vehicle must notify the registrar within 15 days **from the date of transfer**: https://gps.dlt.go.th/wp-content/uploads/2025/01/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87-%E0%B8%9E.%E0%B8%A8.-2522.pdf
-- That 15-day rule is for **ownership transfer** (`วันโอน`), not enough to prove the current stem's `การย้ายรถ` (“moving/relocating a vehicle”) wording. The Thai stem may be using the wrong procedure term, while English “transferring” risks implying ownership transfer.
-- Status: **Evidence narrows the issue but does not validate the current question as written.** Keep 15 days as a possible answer only for an ownership-transfer question; do not change stem, translation, or key without approval.
+- Stronger DLT legal-source check: the DLT legal repository contains the Road Traffic Act B.E. 2522 text stating that when a vehicle is moved to another locality, the owner must notify the registrar within 15 days from the date of moving. This is distinct from the separate 15-day rule for registered-vehicle ownership transfer: https://legal.dlt.go.th/repository/attachments/428_41.pdf
+- The DLT repository also contains the vehicle-registration/tax regulation with a dedicated “การย้ายรถ” (vehicle relocation/transfer to another locality) procedure, supporting that this is a recognized registration process rather than necessarily a sale/ownership transfer: https://legal.dlt.go.th/gen2/app/api/legal-download.php?file=article_20231019_151015_ca929310.pdf
+- Finding: the 15-day answer is supported for the Thai stem's intended meaning of moving a vehicle to another locality. The English `moving/transferring` remains ambiguous because “transferring a vehicle” can be read as ownership transfer; the Myanmar wording is broadly compatible with relocation but could be made more precise in a future approved translation pass.
+- Status: **15-day answer supported; English wording ambiguity remains.** Do not change question data or translation without approval.
 
 ### Q129 — parking distance
 - Current keyed answer is no more than 25 cm from the curb.
@@ -64,7 +65,7 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
-- Q125: an official DLT-hosted law supports a 15-day notice period for **ownership transfer**, but not the current “moving/relocating” wording; this is a likely source/terminology mismatch requiring further tracing.
+- Q125: DLT legal sources support notifying the registrar within 15 days when moving a vehicle to another locality; the English “moving/transferring” remains ambiguous with ownership transfer.
 - Q129: section 54 text hosted by a Royal Thai Police station supports the 25 cm answer value.
 - Q134: the first-offence penalty is corroborated by a police-hosted explanation, but the question lacks offence context and needs statutory-text checking.
 - Q146: possible confusion between 30 m advance signalling and lane positioning; exact claim remains unverified.
