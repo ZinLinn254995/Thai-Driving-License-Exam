@@ -79,6 +79,20 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Finding: **the 60 m answer is supported**. English “within what distance” is slightly awkward but the meaning matches the statutory visibility threshold; no Myanmar mismatch identified in this pass.
 - Status: **Answer value supported.** No question data changed.
 
+
+### Q149 — where overtaking is permitted
+- Thai stem asks which area allows overtaking; keyed answer is a road surface with markings that permit overtaking.
+- Road Traffic Act section 47 prohibits overtaking across the marked centre line or in areas marked as dangerous / requiring caution, with a narrow obstruction-related exception. The official-law text surfaced via the Council of State legal-data source is reproduced here: https://lawplayer.com/th/act/ocs-%E0%B8%880003-1B-0001/section/title-3.chapter-2
+- Finding: the keyed choice is directionally consistent with obeying road markings, but the law does not mean that any marking itself grants permission; overtaking must also be safe and not prohibited by other rules (including section 46 restrictions).
+- Status: **Likely supported, but wording simplifies the legal conditions.** No question data changed.
+
+### Q150 — where the horn may be used
+- Thai stem asks where a sound/horn signal may be used; options include government offices, public parks, schools, and hospitals. The key selects **public parks**.
+- Road Traffic Act section 14 says the horn may be used only when necessary or to prevent an accident, and prolonged or excessive repeated sounding is prohibited: https://lawplayer.com/th/article/ocs-%E0%B8%880003-1B-0001/m-14
+- The Act also specifically prohibits sounding the horn when entering a hospital or educational institution area, and using the horn to hurry other vehicles (section 43-related prohibitions as reproduced in the statute): https://arnon.site/law/act-traffic-2522?ch=19
+- Finding: among the listed options, **public parks is the most plausible intended answer by exclusion**, but the stem misleadingly sounds as if the horn is generally permitted there. The general legal rule is necessity / accident prevention, not “horns are allowed in parks.”
+- Status: **Answer plausible by exclusion; question wording is overbroad and should be logged for a future approved content review.** No question data changed.
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -87,4 +101,6 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q134: the basic drink-driving penalty is corroborated by the Act's section 160 ter in a police-hosted English translation and by a Senate explanatory page; repeat/aggravated offence context remains absent from the stem.
 - Q146: possible confusion between 30 m advance signalling and lane positioning; exact claim remains unverified.
 - Q132: speeding is the leading reported cause in the specific Songkran 2024 and New Year 2025 holiday statistics found, but the quiz's unqualified “most common” claim is broader than those sources support.
-- Q147: section 11 supports the 150 m figure as a visibility threshold for turning on lights; the question's framing is broader than the statute's exact wording.\n- Q148: section 46(3) supports the 60 m overtaking restriction under fog/rain/dust/smoke conditions.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q147: section 11 supports the 150 m figure as a visibility threshold for turning on lights; the question's framing is broader than the statute's exact wording.\n- Q148: section 46(3) supports the 60 m overtaking restriction under fog/rain/dust/smoke conditions.
+- Q149: answer is directionally consistent with road markings, but safe overtaking and all other restrictions still apply.
+- Q150: public parks is the likely intended choice by exclusion; section 14 does not grant blanket permission to sound the horn in parks.\n- This addendum records findings only. No quiz content or answer key was changed.
