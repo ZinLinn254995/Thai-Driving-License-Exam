@@ -1,4 +1,4 @@
-# Traffic-law audit addendum — traffic-law source checks (Q125–Q148)
+# Traffic-law audit addendum — traffic-law source checks (Q125–Q152)
 
 Branch: `audit/myanmar-question-verification` only  
 Scope: documentation-only evidence follow-up. No question data, answer keys, translations, or images changed.
@@ -93,6 +93,20 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Finding: among the listed options, **public parks is the most plausible intended answer by exclusion**, but the stem misleadingly sounds as if the horn is generally permitted there. The general legal rule is necessity / accident prevention, not “horns are allowed in parks.”
 - Status: **Answer plausible by exclusion; question wording is overbroad and should be logged for a future approved content review.** No question data changed.
 
+
+### Q151 — private-car speed outside municipal areas
+- Thai stem asks the maximum speed for a private car outside Bangkok, Pattaya, or municipal areas; keyed answer is **90 km/h**.
+- The 2021 ministerial regulation on speed for driving on roadways sets a 90 km/h limit for “other vehicles” outside Bangkok, Pattaya, city/large-town municipalities, and communities under its general-road rule. But separate rules permit higher limits on designated divided highways with a median, and posted signs also matter: https://lawplayer.com/th/act/ocs-%E0%B8%970006-2B-0032
+- The Office of the Council of State's official site lists the separate 2021 ministerial regulation for specified national/rural highways, where certain passenger cars can have higher limits: https://www.ocs.go.th/searchlaw/law-index/item/13786
+- Finding: **90 km/h is supported as a general-road default outside the listed urban/community areas**, but the question's broad wording does not distinguish ordinary roads from designated highways or posted limits.
+- Status: **Answer conditionally supported; road-type caveat needed.** No question data changed.
+
+### Q152 — traffic officer permits a U-turn despite a sign
+- Thai stem describes an intersection with a no-U-turn sign where a traffic officer expressly permits the U-turn; keyed answer says follow the officer's instruction.
+- Road Traffic Act section 26 states that when the traffic officer controlling a road gives a different traffic signal for safety or convenience, drivers must follow that signal: https://www.royalthaipolice.go.th/downloads/laws/laws_03_05-07.pdf
+- Finding: **the principle that a driver's action follows the controlling officer's instruction is supported**. The question's scenario depends on the officer actually authorizing that specific manoeuvre; it is not a general right to ignore signs independently.
+- Status: **Answer supported with scenario caveat.** No question data changed.
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -103,4 +117,6 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q132: speeding is the leading reported cause in the specific Songkran 2024 and New Year 2025 holiday statistics found, but the quiz's unqualified “most common” claim is broader than those sources support.
 - Q147: section 11 supports the 150 m figure as a visibility threshold for turning on lights; the question's framing is broader than the statute's exact wording.\n- Q148: section 46(3) supports the 60 m overtaking restriction under fog/rain/dust/smoke conditions.
 - Q149: answer is directionally consistent with road markings, but safe overtaking and all other restrictions still apply.
-- Q150: public parks is the likely intended choice by exclusion; section 14 does not grant blanket permission to sound the horn in parks.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q150: public parks is the likely intended choice by exclusion; section 14 does not grant blanket permission to sound the horn in parks.
+- Q151: 90 km/h is supported as a general-road default outside listed urban/community areas, but designated highways and posted signs can have different limits.
+- Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.\n- This addendum records findings only. No quiz content or answer key was changed.
