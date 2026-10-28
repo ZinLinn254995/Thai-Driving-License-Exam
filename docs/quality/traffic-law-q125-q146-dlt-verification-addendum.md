@@ -1,4 +1,4 @@
-# Traffic-law audit addendum — traffic-law source checks (Q125–Q154)
+# Traffic-law audit addendum — traffic-law source checks (Q125–Q155)
 
 Branch: `audit/myanmar-question-verification` only  
 Scope: documentation-only evidence follow-up. No question data, answer keys, translations, or images changed.
@@ -122,6 +122,12 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Finding: **the keyed answer is supported** by section 35. The stem is simplified but does not appear to change the intended rule.
 - Status: **Answer supported.** No question data changed.
 
+### Q155 — overtaking diagram (visual review)
+- The question stem explicitly depends on image `/exam_images/law/1000000000269.webp`; the image was fetched and visually reviewed in this audit pass.
+- Visual observation: a yellow car labelled ก and a motorcycle appear on the left side of a yellow dashed line, while a red car labelled ข appears on the right side. The diagram does not clearly establish from its labels alone whether the two sides are same-direction lanes or opposing traffic, and the lane/centre-line convention is not explained in the stem.
+- The keyed answer is vehicle ข (the red car). Without an authoritative source for the original diagram's intended road layout, I cannot confidently confirm that key from the image alone.
+- Status: **Image viewed; answer-key interpretation remains uncertain due to ambiguous road layout/marking.** No image, answer key, or question data changed. Keep flagged for later source/context review.
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -136,4 +142,5 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q151: 90 km/h is supported as a general-road default outside listed urban/community areas, but designated highways and posted signs can have different limits.
 - Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.
 - Q153: the 2.50 m rear-load projection limit applies to specified vehicle categories; the question does not identify the vehicle type.
-- Q154: section 35 supports keeping a slow-moving vehicle as close to the left edge as practicable.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q154: section 35 supports keeping a slow-moving vehicle as close to the left edge as practicable.
+- Q155: the diagram was visually reviewed; vehicle B is keyed correct, but the line/lane layout is ambiguous and the answer key remains unconfirmed.\n- This addendum records findings only. No quiz content or answer key was changed.
