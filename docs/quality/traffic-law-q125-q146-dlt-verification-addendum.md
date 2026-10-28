@@ -1,4 +1,4 @@
-# Traffic-law audit addendum — traffic-law source checks (Q125–Q153)
+# Traffic-law audit addendum — traffic-law source checks (Q125–Q154)
 
 Branch: `audit/myanmar-question-verification` only  
 Scope: documentation-only evidence follow-up. No question data, answer keys, translations, or images changed.
@@ -115,6 +115,13 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Finding: **2.50 m is supported only for the regulation's specified vehicle categories**, while the question gives no vehicle category. The keyed option may be intended for a car/truck, but as written the question overgeneralizes.
 - Status: **Conditional answer; vehicle-category caveat required.** Do not change question data without approval.
 
+
+### Q154 — driving slowly / slower than surrounding traffic
+- Thai stem asks how a driver should behave when travelling at low speed; keyed answer is to drive close to the left edge of the road.
+- Road Traffic Act section 35 states that a vehicle moving slowly, or slower than other vehicles travelling in the same direction, must be driven as close to the left edge as practicable. The Royal Thai Police-hosted English translation reproduces the same rule: https://royalthaipolice.go.th/downloads/laws/laws_03_05-07.pdf
+- Finding: **the keyed answer is supported** by section 35. The stem is simplified but does not appear to change the intended rule.
+- Status: **Answer supported.** No question data changed.
+
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
@@ -128,4 +135,5 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 - Q150: public parks is the likely intended choice by exclusion; section 14 does not grant blanket permission to sound the horn in parks.
 - Q151: 90 km/h is supported as a general-road default outside listed urban/community areas, but designated highways and posted signs can have different limits.
 - Q152: section 26 supports following the controlling traffic officer's different signal, provided the officer actually authorizes the manoeuvre.
-- Q153: the 2.50 m rear-load projection limit applies to specified vehicle categories; the question does not identify the vehicle type.\n- This addendum records findings only. No quiz content or answer key was changed.
+- Q153: the 2.50 m rear-load projection limit applies to specified vehicle categories; the question does not identify the vehicle type.
+- Q154: section 35 supports keeping a slow-moving vehicle as close to the left edge as practicable.\n- This addendum records findings only. No quiz content or answer key was changed.
