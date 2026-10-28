@@ -53,21 +53,38 @@ Scope: documentation-only evidence follow-up. No question data, answer keys, tra
 
 ### Q134 — drink-driving penalty
 - The stem asks the penalty when alcohol exceeds the legal limit; the keyed option gives imprisonment up to one year or a 5,000–20,000 baht fine, or both.
-- The stem does not state first offence, repeat offence, injury/death, or other circumstances. A Royal Thai Police-hosted explanation of the 2022 Road Traffic Act amendment describes first-offence penalties as imprisonment up to 1 year and/or a 5,000–20,000 baht fine, while repeat offending within two years has a higher penalty: https://ratchasan.chachoengsao.police.go.th/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%9A/
-- This supports the keyed penalty as a **first-offence summary**, but the question does not say first offence and does not clarify aggravated circumstances (such as causing injury or death). The cited page is a police-hosted explanation, not the consolidated statutory text itself.
-- Status: **Partially corroborated; question context is incomplete and primary statutory wording still needs checking.** Do not change without approval.
+- The stem does not state first offence, repeat offence, injury/death, or other circumstances. The Road Traffic Act English text hosted by a Royal Thai Police station reproduces section 160 ter: a section 43(2) drink-driving offence carries imprisonment up to 1 year or a 5,000–20,000 baht fine, or both; where injury or death results, separate higher penalty ranges apply: https://chonburi.tourist.police.go.th/wp-content/uploads/2025/04/6.1-ROAD-TRAFFIC-ACT-B.E.25221979-1.pdf
+- Thailand's Senate public information page also summarizes the standard section 160 ter penalty and higher penalties for injury/death and repeat offences: https://www.senate.go.th/view/386/News/Latest/248/TH-TH.html
+- Finding: the keyed penalty is supported as the **standard/basic offence penalty**, but the question does not clarify repeat offence or aggravated circumstances (such as causing injury or death). The English PDF is a police-hosted translation, and the Senate page is an explanatory summary rather than the official consolidated Thai statutory text.
+- Status: **Penalty value corroborated; question context caveat remains.** Do not change without approval.
 
 ### Q146 — positioning before a left turn
-- Section 51 of the Road Traffic Act is commonly associated with giving a turn signal in advance; the police-hosted Act copy found in this pass did not establish that a driver must move into the left lane specifically 30 metres before turning left. The 30 m figure may have been conflated with the separate requirement to signal before turning.
-- The current question asks about **lane positioning**, not clearly about signalling. The current evidence does not establish that its exact claim is supported by section 51.
-- Status: **Potential legal-concept mismatch; exact 30 m lane-positioning requirement remains unverified.** Do not change the answer key without further primary-source checking.
+- Thai stem asks how many metres before a left turn the driver should be in the left-turn lane; keyed answer is **at least 30 metres**.
+- The Road Traffic Act B.E. 2522, section 51(1)(ข), explicitly states that where the road is divided into lanes and a traffic sign permits a left turn, the driver must use the lane designated for left-turning vehicles at least 30 metres before reaching the turn. The same section separately addresses the leftmost bus-lane case: https://lawplayer.com/th/article/ocs-%E0%B8%880003-1B-0001/m-51
+- A Royal Thai Police-hosted English translation likewise renders section 51 as requiring the left-turn lane at least 30 metres before the turning point where the stated lane/sign conditions apply: https://wangnamkhiao.nakhonratchasima.police.go.th/wp-content/uploads/2024/03/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%81-%E0%B8%9E.%E0%B8%A8.-%E0%B9%92%E0%B5%95%E0%B5%92%E0%B9%92eng.pdf
+- Finding: the **30 m answer is supported** for the law's stated multi-lane/sign conditions. The quiz stem is simplified because it omits those conditions, so it may read as an unconditional rule for every left turn.
+- Status: **Answer value supported; stem omits legal context.** No question data changed.
+
+
+### Q147 — lights visible at 150 metres
+- Thai stem asks how far a vehicle's front or rear lights must be visible to other vehicles; keyed answer is **150 metres**.
+- Road Traffic Act B.E. 2522, section 11, states that when illumination is insufficient to see people, vehicles, or obstacles clearly within a distance of at least 150 metres, the driver must turn on the prescribed lights: https://laksong.metro.police.go.th/api-console/public/media/a46c4c2c695fe181be951770868789091.pdf
+- Finding: the **150 m figure is supported**, but section 11 is specifically a visibility/insufficient-illumination trigger for turning on lights, not a general standalone requirement that headlights or taillights must always be visible to other vehicles at that distance. The quiz stem paraphrases the statute imprecisely.
+- Status: **Numeric value supported; stem's framing needs caution.** No question data changed.
+
+### Q148 — overtaking when visibility is below 60 metres
+- Thai stem asks when fog, dust, rain, or smoke prevents seeing the road ahead within what distance; keyed answer is **60 metres**.
+- Road Traffic Act B.E. 2522, section 46(3), prohibits overtaking when fog, rain, dust, or smoke makes it impossible to see the road ahead for 60 metres: https://lawplayer.com/th/article/ocs-%E0%B8%880003-1B-0001/m-46
+- A Royal Thai Police-hosted English translation states the same 60-metre restriction in section 46(3): https://klangyai.udonthani.police.go.th/images/laws/laws_03_05-07.pdf
+- Finding: **the 60 m answer is supported**. English “within what distance” is slightly awkward but the meaning matches the statutory visibility threshold; no Myanmar mismatch identified in this pass.
+- Status: **Answer value supported.** No question data changed.
 
 ## Overall result
 - Official DLT source directly supports the **over 5 years** motorcycle and **over 7 years** listed private-car inspection thresholds. The quiz stems' “ครบกี่ปี” wording is imprecise at the exact threshold.
 - Q127: official police-hosted regulation clarifies that breath testing can report blood-alcohol-equivalent mg% using a conversion coefficient of 2,000; the original concern is now a wording/boundary/category caveat rather than a confirmed unit error.
 - Q125: DLT legal sources support notifying the registrar within 15 days when moving a vehicle to another locality; the English “moving/transferring” remains ambiguous with ownership transfer.
 - Q129: section 54 text hosted by a Royal Thai Police station supports the 25 cm answer value.
-- Q134: the first-offence penalty is corroborated by a police-hosted explanation, but the question lacks offence context and needs statutory-text checking.
+- Q134: the basic drink-driving penalty is corroborated by the Act's section 160 ter in a police-hosted English translation and by a Senate explanatory page; repeat/aggravated offence context remains absent from the stem.
 - Q146: possible confusion between 30 m advance signalling and lane positioning; exact claim remains unverified.
 - Q132: speeding is the leading reported cause in the specific Songkran 2024 and New Year 2025 holiday statistics found, but the quiz's unqualified “most common” claim is broader than those sources support.
-- This addendum records findings only. No quiz content or answer key was changed.
+- Q147: section 11 supports the 150 m figure as a visibility threshold for turning on lights; the question's framing is broader than the statute's exact wording.\n- Q148: section 46(3) supports the 60 m overtaking restriction under fog/rain/dust/smoke conditions.\n- This addendum records findings only. No quiz content or answer key was changed.
